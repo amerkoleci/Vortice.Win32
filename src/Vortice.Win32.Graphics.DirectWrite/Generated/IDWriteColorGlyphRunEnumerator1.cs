@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xDA, 0x86, 0x5F, 0x7C,
 				0xA1, 0xC7,
 				0x05, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 				0xFE,
 				0x5A,
 				0x35
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -21,7 +21,7 @@ public unsafe partial struct IWICBitmapClipper : IWICBitmapClipper.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x03, 0xCF, 0xFB, 0xE4,
 				0x3D, 0x22,
 				0x81, 0x4E,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICBitmapClipper : IWICBitmapClipper.Interface, IN
 				0x6D,
 				0xD1,
 				0xB5
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

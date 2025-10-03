@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11DepthStencilState : ID3D11DepthStencilState.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xFB, 0x3E, 0x82, 0x03,
 				0x8F, 0x8D,
 				0x1C, 0x4E,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11DepthStencilState : ID3D11DepthStencilState.I
 				0xCB,
 				0xFD,
 				0xF1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

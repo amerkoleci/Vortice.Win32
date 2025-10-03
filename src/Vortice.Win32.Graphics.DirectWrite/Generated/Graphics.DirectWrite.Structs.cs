@@ -1062,6 +1062,31 @@ public partial struct PaintElement
 			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SOLID_GLYPH::color"]/*' />
 			public PaintColor color;
 		}
+		public partial struct PAINT_SWEEP_GRADIENT
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::extendMode"]/*' />
+			public uint extendMode;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::gradientStopCount"]/*' />
+			public uint gradientStopCount;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::centerX"]/*' />
+			public float centerX;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::centerY"]/*' />
+			public float centerY;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::startAngle"]/*' />
+			public float startAngle;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::endAngle"]/*' />
+			public float endAngle;
+		}
+		public partial struct PAINT_LAYERS
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LAYERS::childCount"]/*' />
+			public uint childCount;
+		}
 		public partial struct PAINT_COLOR_GLYPH
 		{
 			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_COLOR_GLYPH::glyphIndex"]/*' />
@@ -1095,31 +1120,6 @@ public partial struct PaintElement
 
 			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::y2"]/*' />
 			public float y2;
-		}
-		public partial struct PAINT_LAYERS
-		{
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LAYERS::childCount"]/*' />
-			public uint childCount;
-		}
-		public partial struct PAINT_SWEEP_GRADIENT
-		{
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::extendMode"]/*' />
-			public uint extendMode;
-
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::gradientStopCount"]/*' />
-			public uint gradientStopCount;
-
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::centerX"]/*' />
-			public float centerX;
-
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::centerY"]/*' />
-			public float centerY;
-
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::startAngle"]/*' />
-			public float startAngle;
-
-			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::endAngle"]/*' />
-			public float endAngle;
 		}
 	}
 }

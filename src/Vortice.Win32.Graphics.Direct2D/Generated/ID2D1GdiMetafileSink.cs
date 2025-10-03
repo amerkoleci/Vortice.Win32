@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : ID2D1GdiMetafileSink.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x26, 0x73, 0x23, 0x82,
 				0x11, 0x81,
 				0x7C, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : ID2D1GdiMetafileSink.Interfa
 				0x55,
 				0x64,
 				0xFE
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

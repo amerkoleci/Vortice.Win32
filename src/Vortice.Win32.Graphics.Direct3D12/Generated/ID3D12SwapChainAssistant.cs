@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : ID3D12SwapChainAssistant
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xB6, 0x64, 0xDF, 0xF1,
 				0xFD, 0x57,
 				0xCD, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : ID3D12SwapChainAssistant
 				0xB4,
 				0x5C,
 				0x8F
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

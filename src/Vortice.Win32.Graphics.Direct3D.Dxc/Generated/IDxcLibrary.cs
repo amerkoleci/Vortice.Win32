@@ -20,7 +20,7 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xC7, 0x4D, 0x20, 0xE5,
 				0x8C, 0xD1,
 				0x3C, 0x4C,
@@ -32,7 +32,7 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 				0x98,
 				0x0F,
 				0xE7
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -134,7 +134,7 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
+	public HResult GetBlobAsWide(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[12]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 		HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(12)]
-		HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
+		HResult GetBlobAsWide(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
 	}
 }
 

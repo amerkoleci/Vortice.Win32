@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xDA, 0xEB, 0x8D, 0xA0,
 				0x58, 0x32,
 				0xA4, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 				0xFE,
 				0x93,
 				0xB1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

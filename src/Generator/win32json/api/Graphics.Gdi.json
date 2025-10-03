@@ -3691,6 +3691,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DISPLAYCONFIG_PATH_BOOST_REFRESH_RATE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DISPLAYCONFIG_PATH_VALID_FLAGS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -8700,6 +8707,20 @@
 			,{"Name":"DISPLAYCONFIG_COLOR_ENCODING_YCBCR422","Value":2}
 			,{"Name":"DISPLAYCONFIG_COLOR_ENCODING_YCBCR420","Value":3}
 			,{"Name":"DISPLAYCONFIG_COLOR_ENCODING_INTENSITY","Value":4}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DISPLAYCONFIG_ADVANCED_COLOR_MODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DISPLAYCONFIG_ADVANCED_COLOR_MODE_SDR","Value":0}
+			,{"Name":"DISPLAYCONFIG_ADVANCED_COLOR_MODE_WCG","Value":1}
+			,{"Name":"DISPLAYCONFIG_ADVANCED_COLOR_MODE_HDR","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -15958,10 +15979,10 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"DFC_TYPE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"DFCS_STATE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
+			{"Name":"hdc","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lprc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"uType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"uState","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{

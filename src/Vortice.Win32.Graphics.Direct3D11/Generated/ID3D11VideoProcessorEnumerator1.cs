@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xF2, 0x17, 0x52, 0x46,
 				0x68, 0x55,
 				0xCF, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 				0x53,
 				0x1C,
 				0xA1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

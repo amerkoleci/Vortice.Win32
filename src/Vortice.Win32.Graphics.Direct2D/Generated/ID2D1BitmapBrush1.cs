@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x53, 0x3A, 0x34, 0x41,
 				0x1A, 0xE4,
 				0xA2, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 				0xBB,
 				0x62,
 				0xE5
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x9B, 0x8E, 0x44, 0xC2,
 				0x7D, 0x54,
 				0x57, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 				0xE1,
 				0xC2,
 				0xDA
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

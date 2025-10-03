@@ -1228,7 +1228,7 @@ public static class Program
         {
             string repoDir = Path.Combine(currentDir, "Vortice.Win32");
             Console.WriteLine("looking for Vortice.Win32 at '{0}'", repoDir);
-            if (Directory.Exists(repoDir))
+            if (Directory.Exists(repoDir) && !repoDir.Contains("artifacts"))
             {
                 return repoDir;
             }
@@ -1248,7 +1248,7 @@ public static class Program
     public static int Main()
     {
         string repoRoot = FindRepoRoot();
-        string rootPath = new DirectoryInfo(repoRoot).Parent!.FullName;
+        string rootPath = Path.Combine(new DirectoryInfo(repoRoot)!.FullName, "src");
         string dxgiPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Dxgi");
         string d3d9Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D9");
         string d3d11Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D11");
@@ -3328,7 +3328,7 @@ public static class Program
                 var j = "0x" + guid.Substring(28, 2).ToUpperInvariant();
                 var k = "0x" + guid.Substring(30, 2).ToUpperInvariant();
 
-                writer.WriteLine("ReadOnlySpan<byte> data = new byte[] {");
+                writer.WriteLine("ReadOnlySpan<byte> data = [");
                 writer.WriteLine($"{'\t'}{_1}, {_2}, {_3}, {_4},");
                 writer.WriteLine($"{'\t'}{_5}, {_6},");
                 writer.WriteLine($"{'\t'}{_7}, {_8},");
@@ -3340,7 +3340,7 @@ public static class Program
                 writer.WriteLine($"{'\t'}{i},");
                 writer.WriteLine($"{'\t'}{j},");
                 writer.WriteLine($"{'\t'}{k}");
-                writer.WriteLine("};");
+                writer.WriteLine("];");
                 writer.WriteLine();
 
                 writer.WriteLine("Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());");

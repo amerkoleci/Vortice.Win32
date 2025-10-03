@@ -21,7 +21,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x1F, 0x60, 0x0C, 0x2F,
 				0xC6, 0xD2,
 				0x8C, 0x46,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 				0x98,
 				0x3E,
 				0xD1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

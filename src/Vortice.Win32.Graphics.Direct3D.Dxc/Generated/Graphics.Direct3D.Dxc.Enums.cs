@@ -18,6 +18,10 @@ public enum DxcCp : uint
 	Utf16 = 1200,
 	/// <unmanaged>DXC_CP_UTF8</unmanaged>
 	Utf8 = 65001,
+	/// <unmanaged>DXC_CP_UTF32</unmanaged>
+	Utf32 = 12000,
+	/// <unmanaged>DXC_CP_WIDE</unmanaged>
+	Wide = 1200,
 }
 
 /// <unmanaged>DXC_OUT_KIND</unmanaged>
@@ -45,6 +49,16 @@ public enum DxcOutKind
 	RootSignature = 9,
 	/// <unmanaged>DXC_OUT_EXTRA_OUTPUTS</unmanaged>
 	ExtraOutputs = 10,
+	/// <unmanaged>DXC_OUT_REMARKS</unmanaged>
+	Remarks = 11,
+	/// <unmanaged>DXC_OUT_TIME_REPORT</unmanaged>
+	TimeReport = 12,
+	/// <unmanaged>DXC_OUT_TIME_TRACE</unmanaged>
+	TimeTrace = 13,
+	/// <unmanaged>DXC_OUT_LAST</unmanaged>
+	Last = 13,
+	/// <unmanaged>DXC_OUT_NUM_ENUMS</unmanaged>
+	NumEnums = 14,
 }
 /// <unmanaged>DXC_HASHFLAG</unmanaged>
 [Flags]

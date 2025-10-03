@@ -21,7 +21,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x02, 0x3A, 0x61, 0x3C,
 				0xB2, 0x34,
 				0xEA, 0x44,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 				0xC6,
 				0xFD,
 				0x6D
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

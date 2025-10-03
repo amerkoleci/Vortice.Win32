@@ -288,6 +288,13 @@
 		,"Value":-2005270428
 		,"Attrs":[]
 	}
+	,{
+		"Name":"DXGI_ERROR_SETDISPLAYMODE_REQUIRED"
+		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ValueType":"Int32"
+		,"Value":-2005270427
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[

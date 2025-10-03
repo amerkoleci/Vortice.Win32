@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x22, 0x11, 0x79, 0x06,
 				0xF0, 0xC6,
 				0x7D, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 				0x7F,
 				0x59,
 				0x54
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

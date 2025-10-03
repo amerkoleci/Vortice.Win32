@@ -21,7 +21,7 @@ public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xCD, 0xF9, 0x76, 0x47,
 				0x17, 0x95,
 				0xFA, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interfa
 				0xC5,
 				0xC6,
 				0x0C
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

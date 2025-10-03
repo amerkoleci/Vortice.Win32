@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12QueryHeap : ID3D12QueryHeap.Interface, INativ
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xAE, 0x58, 0x96, 0x0D,
 				0x45, 0xED,
 				0x9E, 0x46,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12QueryHeap : ID3D12QueryHeap.Interface, INativ
 				0x83,
 				0xCA,
 				0xB4
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

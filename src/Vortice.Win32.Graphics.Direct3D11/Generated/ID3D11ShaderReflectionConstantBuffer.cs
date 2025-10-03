@@ -19,7 +19,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x3D, 0xD6, 0x62, 0xEB,
 				0xDD, 0x93,
 				0x18, 0x43,
@@ -31,7 +31,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 				0xD3,
 				0x71,
 				0xB8
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

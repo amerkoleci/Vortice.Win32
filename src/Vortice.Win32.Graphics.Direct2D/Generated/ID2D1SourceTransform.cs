@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xDD, 0x00, 0x18, 0xDB,
 				0x34, 0x0C,
 				0xF9, 0x4C,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 				0x56,
 				0x53,
 				0xE1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

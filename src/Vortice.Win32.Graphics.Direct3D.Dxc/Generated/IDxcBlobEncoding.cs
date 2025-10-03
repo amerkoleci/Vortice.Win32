@@ -20,7 +20,7 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x24, 0xD4, 0x41, 0x72,
 				0x46, 0x26,
 				0x91, 0x41,
@@ -32,7 +32,7 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 				0x42,
 				0xFC,
 				0x68
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -1225,6 +1225,22 @@ public partial struct FeatureDataHardwareCopy
 	public Bool32 Supported;
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_APPLICATION_SPECIFIC_DRIVER_STATE"]/*' />
+/// <unmanaged>D3D12_FEATURE_DATA_APPLICATION_SPECIFIC_DRIVER_STATE</unmanaged>
+public partial struct FeatureDataApplicationSpecificDriverState
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_APPLICATION_SPECIFIC_DRIVER_STATE::Supported"]/*' />
+	public Bool32 Supported;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_BYTECODE_BYPASS_HASH_SUPPORTED"]/*' />
+/// <unmanaged>D3D12_FEATURE_DATA_BYTECODE_BYPASS_HASH_SUPPORTED</unmanaged>
+public partial struct FeatureDataBytecodeBypassHashSupported
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_BYTECODE_BYPASS_HASH_SUPPORTED::Supported"]/*' />
+	public Bool32 Supported;
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALLOCATION_INFO"]/*' />
 /// <unmanaged>D3D12_RESOURCE_ALLOCATION_INFO</unmanaged>
 public partial struct ResourceAllocationInfo
@@ -3650,6 +3666,26 @@ public partial struct IndirectArgumentDescription
 		[FieldOffset(0)]
 		public _Anonymous_e__Union._IncrementingConstant_e__Struct IncrementingConstant;
 
+		public partial struct _UnorderedAccessView_e__Struct
+		{
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_UnorderedAccessView_e__Struct::RootParameterIndex"]/*' />
+			public uint RootParameterIndex;
+		}
+		public partial struct _ConstantBufferView_e__Struct
+		{
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ConstantBufferView_e__Struct::RootParameterIndex"]/*' />
+			public uint RootParameterIndex;
+		}
+		public partial struct _VertexBuffer_e__Struct
+		{
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_VertexBuffer_e__Struct::Slot"]/*' />
+			public uint Slot;
+		}
+		public partial struct _ShaderResourceView_e__Struct
+		{
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ShaderResourceView_e__Struct::RootParameterIndex"]/*' />
+			public uint RootParameterIndex;
+		}
 		public partial struct _IncrementingConstant_e__Struct
 		{
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_IncrementingConstant_e__Struct::RootParameterIndex"]/*' />
@@ -3657,11 +3693,6 @@ public partial struct IndirectArgumentDescription
 
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_IncrementingConstant_e__Struct::DestOffsetIn32BitValues"]/*' />
 			public uint DestOffsetIn32BitValues;
-		}
-		public partial struct _ShaderResourceView_e__Struct
-		{
-			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ShaderResourceView_e__Struct::RootParameterIndex"]/*' />
-			public uint RootParameterIndex;
 		}
 		public partial struct _Constant_e__Struct
 		{
@@ -3673,21 +3704,6 @@ public partial struct IndirectArgumentDescription
 
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::Num32BitValuesToSet"]/*' />
 			public uint Num32BitValuesToSet;
-		}
-		public partial struct _UnorderedAccessView_e__Struct
-		{
-			/// <include file='../Direct3D12.xml' path='doc/member[@name="_UnorderedAccessView_e__Struct::RootParameterIndex"]/*' />
-			public uint RootParameterIndex;
-		}
-		public partial struct _VertexBuffer_e__Struct
-		{
-			/// <include file='../Direct3D12.xml' path='doc/member[@name="_VertexBuffer_e__Struct::Slot"]/*' />
-			public uint Slot;
-		}
-		public partial struct _ConstantBufferView_e__Struct
-		{
-			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ConstantBufferView_e__Struct::RootParameterIndex"]/*' />
-			public uint RootParameterIndex;
 		}
 	}
 }
@@ -4381,6 +4397,45 @@ public partial struct RaytracingGeometryAabbsDescription
 	public GpuVirtualAddressAndStride AABBs;
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_DESC</unmanaged>
+public partial struct RaytracingOpacityMicromapDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_DESC::ByteOffset"]/*' />
+	public uint ByteOffset;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_DESC::_bitfield"]/*' />
+	public uint _bitfield;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC</unmanaged>
+public partial struct RaytracingGeometryOmmLinkageDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC::OpacityMicromapIndexBuffer"]/*' />
+	public GpuVirtualAddressAndStride OpacityMicromapIndexBuffer;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC::OpacityMicromapIndexFormat"]/*' />
+	public Graphics.Dxgi.Common.Format OpacityMicromapIndexFormat;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC::OpacityMicromapBaseLocation"]/*' />
+	public uint OpacityMicromapBaseLocation;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC::OpacityMicromapArray"]/*' />
+	public ulong OpacityMicromapArray;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_TRIANGLES_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_GEOMETRY_OMM_TRIANGLES_DESC</unmanaged>
+public partial struct RaytracingGeometryOmmTrianglesDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_TRIANGLES_DESC::pTriangles"]/*' />
+	public unsafe RaytracingGeometryTrianglesDescription* pTriangles;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_OMM_TRIANGLES_DESC::pOmmLinkage"]/*' />
+	public unsafe RaytracingGeometryOmmLinkageDescription* pOmmLinkage;
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoDescription
@@ -4426,8 +4481,40 @@ public partial struct RaytracingAccelerationStructurePostbuildInfoSerializationD
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::SerializedSizeInBytes"]/*' />
 	public ulong SerializedSizeInBytes;
 
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::NumBottomLevelAccelerationStructurePointers"]/*' />
-	public ulong NumBottomLevelAccelerationStructurePointers;
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::Anonymous"]/*' />
+	public _Anonymous_e__Union Anonymous;
+
+	[UnscopedRef]
+	public ref ulong NumBottomLevelAccelerationStructurePointers
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous.NumBottomLevelAccelerationStructurePointers;
+		}
+	}
+
+	[UnscopedRef]
+	public ref ulong NumBottomLevelAccelerationStructureHeaderAndPointerListPairs
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous.NumBottomLevelAccelerationStructureHeaderAndPointerListPairs;
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
+	public partial struct _Anonymous_e__Union
+	{
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::NumBottomLevelAccelerationStructurePointers"]/*' />
+		[FieldOffset(0)]
+		public ulong NumBottomLevelAccelerationStructurePointers;
+
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::NumBottomLevelAccelerationStructureHeaderAndPointerListPairs"]/*' />
+		[FieldOffset(0)]
+		public ulong NumBottomLevelAccelerationStructureHeaderAndPointerListPairs;
+	}
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER"]/*' />
@@ -4456,6 +4543,69 @@ public partial struct SerializedRaytracingAccelerationStructureHeader
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::NumBottomLevelAccelerationStructurePointersAfterHeader"]/*' />
 	public ulong NumBottomLevelAccelerationStructurePointersAfterHeader;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1"]/*' />
+/// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1</unmanaged>
+public partial struct SerializedRaytracingAccelerationStructureHeader1
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1::DriverMatchingIdentifier"]/*' />
+	public SerializedDataDriverMatchingIdentifier DriverMatchingIdentifier;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1::SerializedSizeInBytesIncludingHeader"]/*' />
+	public ulong SerializedSizeInBytesIncludingHeader;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1::DeserializedSizeInBytes"]/*' />
+	public ulong DeserializedSizeInBytes;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1::Anonymous"]/*' />
+	public _Anonymous_e__Union Anonymous;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1::HeaderPostambleType"]/*' />
+	public SerializedRaytracingAccelerationStructureHeaderPostambleType HeaderPostambleType;
+
+	[UnscopedRef]
+	public ref uint NumBottomLevelAccelerationStructurePointersAfterHeader
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous.NumBottomLevelAccelerationStructurePointersAfterHeader;
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint NumBlocks
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous.NumBlocks;
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
+	public partial struct _Anonymous_e__Union
+	{
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::NumBottomLevelAccelerationStructurePointersAfterHeader"]/*' />
+		[FieldOffset(0)]
+		public uint NumBottomLevelAccelerationStructurePointersAfterHeader;
+
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::NumBlocks"]/*' />
+		[FieldOffset(0)]
+		public uint NumBlocks;
+	}
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SERIALIZED_BLOCK"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_SERIALIZED_BLOCK</unmanaged>
+public partial struct RaytracingSerializedBlock
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SERIALIZED_BLOCK::Type"]/*' />
+	public SerializedBlockType Type;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SERIALIZED_BLOCK::NumBlockPointersAfterHeader"]/*' />
+	public ulong NumBlockPointersAfterHeader;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_CURRENT_SIZE_DESC"]/*' />
@@ -4516,6 +4666,16 @@ public partial struct RaytracingGeometryDescription
 		}
 	}
 
+	[UnscopedRef]
+	public ref RaytracingGeometryOmmTrianglesDescription OmmTriangles
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous.OmmTriangles;
+		}
+	}
+
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
@@ -4526,7 +4686,42 @@ public partial struct RaytracingGeometryDescription
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::AABBs"]/*' />
 		[FieldOffset(0)]
 		public RaytracingGeometryAabbsDescription AABBs;
+
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::OmmTriangles"]/*' />
+		[FieldOffset(0)]
+		public RaytracingGeometryOmmTrianglesDescription OmmTriangles;
 	}
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY</unmanaged>
+public partial struct RaytracingOpacityMicromapHistogramEntry
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY::Count"]/*' />
+	public uint Count;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY::SubdivisionLevel"]/*' />
+	public uint SubdivisionLevel;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY::Format"]/*' />
+	public RaytracingOpacityMicromapFormat Format;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC</unmanaged>
+public partial struct RaytracingOpacityMicromapArrayDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC::NumOmmHistogramEntries"]/*' />
+	public uint NumOmmHistogramEntries;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC::pOmmHistogram"]/*' />
+	public unsafe RaytracingOpacityMicromapHistogramEntry* pOmmHistogram;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC::InputBuffer"]/*' />
+	public ulong InputBuffer;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC::PerOmmDescs"]/*' />
+	public GpuVirtualAddressAndStride PerOmmDescs;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS"]/*' />
@@ -4578,6 +4773,16 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 		}
 	}
 
+	[UnscopedRef]
+	public unsafe ref RaytracingOpacityMicromapArrayDescription* pOpacityMicromapArrayDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous.pOpacityMicromapArrayDesc;
+		}
+	}
+
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
@@ -4592,6 +4797,10 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ppGeometryDescs"]/*' />
 		[FieldOffset(0)]
 		public unsafe RaytracingGeometryDescription** ppGeometryDescs;
+
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::pOpacityMicromapArrayDesc"]/*' />
+		[FieldOffset(0)]
+		public unsafe RaytracingOpacityMicromapArrayDescription* pOpacityMicromapArrayDesc;
 	}
 }
 
@@ -4624,6 +4833,33 @@ public partial struct RaytracingAccelerationStructurePrebuildInfo
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::UpdateScratchDataSizeInBytes"]/*' />
 	public ulong UpdateScratchDataSizeInBytes;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_DESC</unmanaged>
+public partial struct RaytracingOpacityMicromapArrayPostbuildInfoDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_DESC::DestBuffer"]/*' />
+	public ulong DestBuffer;
+
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_DESC::InfoType"]/*' />
+	public RaytracingOpacityMicromapArrayPostbuildInfoType InfoType;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE_DESC</unmanaged>
+public partial struct RaytracingOpacityMicromapArrayPostbuildInfoCurrentSizeDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE_DESC::CurrentSizeInBytes"]/*' />
+	public ulong CurrentSizeInBytes;
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC</unmanaged>
+public partial struct RaytracingOpacityMicromapArrayPostbuildInfoToolsVisualizationDescription
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC::DecodedSizeInBytes"]/*' />
+	public ulong DecodedSizeInBytes;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE"]/*' />

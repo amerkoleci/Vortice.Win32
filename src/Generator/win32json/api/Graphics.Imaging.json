@@ -219,6 +219,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CLSID_WICJpegXLDecoder"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"fc6ceece-aef5-4a23-96ec-5984ffb486d9"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CLSID_WICJpegXLEncoder"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"0e4ecd3b-1ba6-4636-8198-56c73040964a"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"GUID_ContainerFormatBmp"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -300,6 +314,13 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"fe99ce60-f19c-433c-a3ae-00acefa9ca21"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_ContainerFormatJpegXL"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"fec14e3f-427a-4736-aae6-27ed84f69322"
 		,"Attrs":[]
 	}
 	,{
@@ -531,6 +552,20 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"e6cd0116-eeba-4161-aa85-27dd9fb3a895"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_WICPixelFormat8bppDepth"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"4c9c9f45-1d89-4e31-9bc7-69343a0dca69"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_WICPixelFormat8bppGain"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"a884022a-af13-4c16-b746-619bf618b878"
 		,"Attrs":[]
 	}
 	,{
@@ -1542,6 +1577,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"GUID_MetadataFormatJpegXLAnim"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"501c2e24-7a7d-42b2-93c7-b4f45bcc92f7"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GUID_MetadataFormatJpegXLAnimFrame"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"958ecc2c-36cb-4af9-9ea8-0b74baccfd3e"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"CLSID_WICUnknownMetadataReader"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -2095,6 +2144,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CLSID_WICHeifHDRMetadataWriter"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"b83135a2-8e7e-485e-a533-f93621dd93c8"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"CLSID_WICWebpAnimMetadataReader"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -2106,6 +2162,34 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"85a10b03-c9f6-439f-be5e-c0fbef67807c"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CLSID_WICJpegXLAnimMetadataReader"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"bf8b6eb0-37e2-4ed8-8289-be9ae31d9f03"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CLSID_WICJpegXLAnimMetadataWriter"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"39d01345-432b-44e6-afd6-f606d20a5571"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CLSID_WICJpegXLAnimFrameMetadataReader"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"9cdf50a8-8770-4fe6-aef2-d06e2c01744f"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CLSID_WICJpegXLAnimFrameMetadataWriter"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d1ce58a8-06e0-4b6f-8fc1-577560bd5ad9"
 		,"Attrs":[]
 	}
 ]
@@ -2723,6 +2807,33 @@
 		,"Scoped":false
 		,"Values":[
 			{"Name":"WICWebpAnmfFrameDuration","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WICJpegXLAnimProperties"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"WICJpegXLAnimLoopCount","Value":1}
+			,{"Name":"WICJpegXLAnimFrameTicksPerSecondNumerator","Value":2}
+			,{"Name":"WICJpegXLAnimFrameTicksPerSecondDenominator","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WICJpegXLAnimFrameProperties"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"WICJpegXLAnimFrameDurationInTicks","Value":1}
+			,{"Name":"WICJpegXLAnimFrameName","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -4274,6 +4385,31 @@
 		]
 	}
 	,{
+		"Name":"IWICBitmapSourceTransform2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"c3373fdf-6d39-4e5f-8e79-bf40c0b7ed77"
+		,"Interface":{"Kind":"ApiRef","Name":"IWICBitmapSourceTransform","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetColorContextsForPixelFormat"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pPixelFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In"]}
+					,{"Name":"cCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppIColorContexts","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"IWICColorContext","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pcActualCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"IWICPlanarBitmapSourceTransform"
 		,"Architectures":[]
 		,"Platform":"windows8.1"
@@ -4410,6 +4546,53 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"nLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IWICDisplayAdaptationControl"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"de9d91d2-70b4-4f41-836c-25fcd39626d3"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"DoesSupportChangingMaxLuminance"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pguidDstFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In"]}
+					,{"Name":"pfIsSupported","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"SetDisplayMaxLuminance"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"fLuminanceInNits","Type":{"Kind":"Native","Name":"Single"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"GetDisplayMaxLuminance"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pfLuminanceInNits","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -5378,6 +5561,21 @@
 			,{"Name":"WICPngFilterAverage","Value":4}
 			,{"Name":"WICPngFilterPaeth","Value":5}
 			,{"Name":"WICPngFilterAdaptive","Value":6}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WICHeifCompressionOption"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"WICHeifCompressionDontCare","Value":0}
+			,{"Name":"WICHeifCompressionNone","Value":1}
+			,{"Name":"WICHeifCompressionHEVC","Value":2}
+			,{"Name":"WICHeifCompressionAV1","Value":3}
 		]
 		,"IntegerBase":"Int32"
 	}

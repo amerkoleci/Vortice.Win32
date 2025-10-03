@@ -21,7 +21,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xA2, 0x33, 0xDB, 0xA9,
 				0x5F, 0xAF,
 				0xC7, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 				0x4B,
 				0x5A,
 				0xA4
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

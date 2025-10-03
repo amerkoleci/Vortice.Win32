@@ -21,7 +21,7 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform : IWICPlanarBitmapS
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xCE, 0x9C, 0xFF, 0x3A,
 				0x95, 0xBE,
 				0x03, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform : IWICPlanarBitmapS
 				0xF4,
 				0xA6,
 				0x13
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

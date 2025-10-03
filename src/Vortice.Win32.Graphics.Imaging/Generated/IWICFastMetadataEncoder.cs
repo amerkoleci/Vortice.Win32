@@ -21,7 +21,7 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x09, 0x2C, 0x4E, 0xB8,
 				0xC9, 0x78,
 				0xC4, 0x4A,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 				0x66,
 				0x3A,
 				0x2F
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

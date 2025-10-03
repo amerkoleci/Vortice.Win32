@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xE8, 0xB9, 0x74, 0x0B,
 				0xD6, 0xCD,
 				0x2F, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 				0x57,
 				0x02,
 				0x6D
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

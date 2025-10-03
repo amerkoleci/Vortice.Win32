@@ -9419,6 +9419,39 @@
 						]
 					}
 					,{
+						"Name":"PAINT_SWEEP_GRADIENT"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"extendMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"gradientStopCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"centerX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+							,{"Name":"centerY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+							,{"Name":"startAngle","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+							,{"Name":"endAngle","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"PAINT_LAYERS"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"childCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
 						"Name":"PAINT_COLOR_GLYPH"
 						,"Architectures":[]
 						,"Platform":null
@@ -9450,39 +9483,6 @@
 							,{"Name":"y1","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"x2","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"y2","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"PAINT_LAYERS"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"SizeField":""
-						,"Fields":[
-							{"Name":"childCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"PAINT_SWEEP_GRADIENT"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"SizeField":""
-						,"Fields":[
-							{"Name":"extendMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"gradientStopCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"centerX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-							,{"Name":"centerY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-							,{"Name":"startAngle","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-							,{"Name":"endAngle","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]

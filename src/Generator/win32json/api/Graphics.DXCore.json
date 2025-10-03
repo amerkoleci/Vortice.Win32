@@ -29,6 +29,48 @@
 		,"Value":"248e2800-a793-4724-abaa-23a6de1be090"
 		,"Attrs":[]
 	}
+	,{
+		"Name":"DXCORE_ADAPTER_ATTRIBUTE_D3D12_GENERIC_ML"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"b71b0d41-1088-422f-a27c-0250b7d3a988"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXCORE_ADAPTER_ATTRIBUTE_D3D12_GENERIC_MEDIA"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"8eb2c848-82f6-4b49-aa87-aecfcf0174c6"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXCORE_HARDWARE_TYPE_ATTRIBUTE_GPU"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"b69eb219-3ded-4464-979f-a00bd4687006"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXCORE_HARDWARE_TYPE_ATTRIBUTE_COMPUTE_ACCELERATOR"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"e0b195da-58ef-4a22-90f1-1f28169cab8d"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXCORE_HARDWARE_TYPE_ATTRIBUTE_NPU"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d46140c4-add7-451b-9e56-06fe8c3b58ed"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXCORE_HARDWARE_TYPE_ATTRIBUTE_MEDIA_ACCELERATOR"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"66bdb96a-050b-44c7-a4fd-d144ce0ab443"
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -55,6 +97,9 @@
 			,{"Name":"IsIntegrated","Value":12}
 			,{"Name":"IsDetachable","Value":13}
 			,{"Name":"HardwareIDParts","Value":14}
+			,{"Name":"PhysicalAdapterCount","Value":15}
+			,{"Name":"AdapterEngineCount","Value":16}
+			,{"Name":"AdapterEngineName","Value":17}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -68,6 +113,15 @@
 		,"Values":[
 			{"Name":"IsDriverUpdateInProgress","Value":0}
 			,{"Name":"AdapterMemoryBudget","Value":1}
+			,{"Name":"AdapterMemoryUsageBytes","Value":2}
+			,{"Name":"AdapterMemoryUsageByProcessBytes","Value":3}
+			,{"Name":"AdapterEngineRunningTimeMicroseconds","Value":4}
+			,{"Name":"AdapterEngineRunningTimeByProcessMicroseconds","Value":5}
+			,{"Name":"AdapterTemperatureCelsius","Value":6}
+			,{"Name":"AdapterInUseProcessCount","Value":7}
+			,{"Name":"AdapterInUseProcessSet","Value":8}
+			,{"Name":"AdapterEngineFrequencyHertz","Value":9}
+			,{"Name":"AdapterMemoryFrequencyHertz","Value":10}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -110,6 +164,51 @@
 			{"Name":"Hardware","Value":0}
 			,{"Name":"MinimumPower","Value":1}
 			,{"Name":"HighPerformance","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXCoreWorkload"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"Graphics","Value":0}
+			,{"Name":"Compute","Value":1}
+			,{"Name":"Media","Value":2}
+			,{"Name":"MachineLearning","Value":3}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXCoreRuntimeFilterFlags"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"None","Value":0}
+			,{"Name":"D3D11","Value":1}
+			,{"Name":"D3D12","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXCoreHardwareTypeFilterFlags"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"None","Value":0}
+			,{"Name":"GPU","Value":1}
+			,{"Name":"ComputeAccelerator","Value":2}
+			,{"Name":"NPU","Value":4}
+			,{"Name":"MediaAccelerator","Value":8}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -176,6 +275,201 @@
 			,{"Name":"currentUsage","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"availableForReservation","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"currentReservation","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreAdapterEngineIndex"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"physicalAdapterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"engineIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreEngineQueryInput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"adapterEngineIndex","Type":{"Kind":"ApiRef","Name":"DXCoreAdapterEngineIndex","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":[]}
+			,{"Name":"processId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreEngineQueryOutput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"runningTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"processQuerySucceeded","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreMemoryType"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"Dedicated","Value":0}
+			,{"Name":"Shared","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXCoreMemoryUsage"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"committed","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"resident","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreMemoryQueryInput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"physicalAdapterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"memoryType","Type":{"Kind":"ApiRef","Name":"DXCoreMemoryType","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreProcessMemoryQueryInput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"physicalAdapterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"memoryType","Type":{"Kind":"ApiRef","Name":"DXCoreMemoryType","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":[]}
+			,{"Name":"processId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreProcessMemoryQueryOutput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"memoryUsage","Type":{"Kind":"ApiRef","Name":"DXCoreMemoryUsage","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":[]}
+			,{"Name":"processQuerySucceeded","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreAdapterProcessSetQueryInput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"arraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"processIds","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreAdapterProcessSetQueryOutput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"processesWritten","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"processesTotal","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreEngineNamePropertyInput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"adapterEngineIndex","Type":{"Kind":"ApiRef","Name":"DXCoreAdapterEngineIndex","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":[]}
+			,{"Name":"engineNameLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"engineName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreEngineNamePropertyOutput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"engineNameLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DXCoreFrequencyQueryOutput"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"frequency","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"maxFrequency","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"maxOverclockedFrequency","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -332,6 +626,32 @@
 				,"Params":[
 					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"ppvFactory","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IDXCoreAdapter1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"a0783366-cfa3-43be-9d79-55b2da97c63c"
+		,"Interface":{"Kind":"ApiRef","Name":"IDXCoreAdapter","TargetKind":"Com","Api":"Graphics.DXCore","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetPropertyWithInput"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"property","Type":{"Kind":"ApiRef","Name":"DXCoreAdapterProperty","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":["In"]}
+					,{"Name":"inputPropertyDetailsSize","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+					,{"Name":"inputPropertyDetails","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Optional","Const"]}
+					,{"Name":"outputBufferSize","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+					,{"Name":"outputBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 				]
 			}
 		]
@@ -495,6 +815,32 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"eventCookie","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IDXCoreAdapterFactory1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"d5682e19-6d21-401c-827a-9a51a4ea35d7"
+		,"Interface":{"Kind":"ApiRef","Name":"IDXCoreAdapterFactory","TargetKind":"Com","Api":"Graphics.DXCore","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateAdapterListByWorkload"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"workload","Type":{"Kind":"ApiRef","Name":"DXCoreWorkload","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":["In"]}
+					,{"Name":"runtimeFilter","Type":{"Kind":"ApiRef","Name":"DXCoreRuntimeFilterFlags","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":["In"]}
+					,{"Name":"hardwareTypeFilter","Type":{"Kind":"ApiRef","Name":"DXCoreHardwareTypeFilterFlags","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":["In"]}
+					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"ppvAdapterList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]

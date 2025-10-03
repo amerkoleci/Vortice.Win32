@@ -309,6 +309,8 @@
 			{"Name":"DXC_CP_ACP","Value":0}
 			,{"Name":"DXC_CP_UTF16","Value":1200}
 			,{"Name":"DXC_CP_UTF8","Value":65001}
+			,{"Name":"DXC_CP_UTF32","Value":12000}
+			,{"Name":"DXC_CP_WIDE","Value":1200}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -736,7 +738,7 @@
 				]
 			}
 			,{
-				"Name":"GetBlobAsUtf16"
+				"Name":"GetBlobAsWide"
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -968,7 +970,7 @@
 					{"Name":"pData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
 					,{"Name":"size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"codePage","Type":{"Kind":"ApiRef","Name":"DXC_CP","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -984,7 +986,7 @@
 					,{"Name":"pIMalloc","Type":{"Kind":"ApiRef","Name":"IMalloc","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"codePage","Type":{"Kind":"ApiRef","Name":"DXC_CP","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -999,7 +1001,7 @@
 					{"Name":"pData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
 					,{"Name":"size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"codePage","Type":{"Kind":"ApiRef","Name":"DXC_CP","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -1013,7 +1015,7 @@
 				,"Params":[
 					{"Name":"pFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"pCodePage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXC_CP","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Optional"]}
-					,{"Name":"pBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -1051,11 +1053,11 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pBlob","Type":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf8","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf8","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
-				"Name":"GetBlobAsUtf16"
+				"Name":"GetBlobAsWide"
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1064,7 +1066,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pBlob","Type":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppBlobEncoding","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -1150,6 +1152,11 @@
 			,{"Name":"DXC_OUT_REFLECTION","Value":8}
 			,{"Name":"DXC_OUT_ROOT_SIGNATURE","Value":9}
 			,{"Name":"DXC_OUT_EXTRA_OUTPUTS","Value":10}
+			,{"Name":"DXC_OUT_REMARKS","Value":11}
+			,{"Name":"DXC_OUT_TIME_REPORT","Value":12}
+			,{"Name":"DXC_OUT_TIME_TRACE","Value":13}
+			,{"Name":"DXC_OUT_LAST","Value":13}
+			,{"Name":"DXC_OUT_NUM_ENUMS","Value":14}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -2039,6 +2046,323 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pRootSignature","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IDxcPdbUtils2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"4315d938-f369-4f93-95a2-252017cc3807"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"Load"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pPdbOrDxil","Type":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"GetSourceCount"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetSource"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetSourceName"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetLibraryPDBCount"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+				]
+			}
+			,{
+				"Name":"GetLibraryPDB"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppOutPdbUtils","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcPdbUtils2","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppLibraryName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr","Optional"]}
+				]
+			}
+			,{
+				"Name":"GetFlagCount"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetFlag"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetArgCount"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetArg"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetArgPairCount"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetArgPair"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+					,{"Name":"ppValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetDefineCount"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetDefine"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"uIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetTargetProfile"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetEntryPoint"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetMainFileName"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetHash"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetName"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobUtf16","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetVersionInfo"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppVersionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcVersionInfo","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetCustomToolchainID"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetCustomToolchainData"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetWholeDxil"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"IsFullPDB"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"IsPDBRef"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
 				]
 			}
 		]

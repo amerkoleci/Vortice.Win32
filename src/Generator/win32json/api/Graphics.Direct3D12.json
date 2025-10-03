@@ -1930,7 +1930,7 @@
 		"Name":"D3D12_PREVIEW_SDK_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":714
+		,"Value":717
 		,"Attrs":[]
 	}
 	,{
@@ -2406,7 +2406,7 @@
 		"Name":"D3D12_SDK_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":614
+		,"Value":616
 		,"Attrs":[]
 	}
 	,{
@@ -2774,6 +2774,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"D3D12_TIGHT_ALIGNMENT_MIN_COMMITTED_RESOURCE_ALIGNEMNT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4096
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D12_TIGHT_ALIGNMENT_MIN_PLACED_RESOURCE_ALIGNEMNT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
+		,"Attrs":[]
+	}
+	,{
 		"Name":"D3D12_TILED_RESOURCE_TILE_SIZE_IN_BYTES"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3012,6 +3026,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"LUID_DEFINED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
 		"Name":"D3D12_SHADER_COMPONENT_MAPPING_MASK"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3075,13 +3096,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"LUID_DEFINED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
 		"Name":"D3D12_PROTECTED_RESOURCES_SESSION_HARDWARE_PROTECTED"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -3121,6 +3135,13 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"114863bf-c386-4aee-b39d-8f0bbb062955"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CLSID_D3D12DSRDeviceFactory"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"bb6dd27e-94a9-41a6-9f1b-133772172428"
 		,"Attrs":[]
 	}
 	,{
@@ -3331,6 +3352,13 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"c9c4725f-a81a-4f56-8c5b-c51039d694fb"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D12GPUUploadHeapsOnUnsupportedOS"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"45dc51f3-767f-4588-b206-0baa2b16fbae"
 		,"Attrs":[]
 	}
 ]
@@ -4285,6 +4313,8 @@
 			,{"Name":"D3D12_FEATURE_PLACED_RESOURCE_SUPPORT_INFO","Value":51}
 			,{"Name":"D3D12_FEATURE_HARDWARE_COPY","Value":52}
 			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS21","Value":53}
+			,{"Name":"D3D12_FEATURE_APPLICATION_SPECIFIC_DRIVER_STATE","Value":56}
+			,{"Name":"D3D12_FEATURE_BYTECODE_BYPASS_HASH_SUPPORTED","Value":57}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -4952,6 +4982,7 @@
 			{"Name":"D3D12_RAYTRACING_TIER_NOT_SUPPORTED","Value":0}
 			,{"Name":"D3D12_RAYTRACING_TIER_1_0","Value":10}
 			,{"Name":"D3D12_RAYTRACING_TIER_1_1","Value":11}
+			,{"Name":"D3D12_RAYTRACING_TIER_1_2","Value":12}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5360,6 +5391,34 @@
 	}
 	,{
 		"Name":"D3D12_FEATURE_DATA_HARDWARE_COPY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Supported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_FEATURE_DATA_APPLICATION_SPECIFIC_DRIVER_STATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Supported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_FEATURE_DATA_BYTECODE_BYPASS_HASH_SUPPORTED"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -7801,6 +7860,23 @@
 		]
 	}
 	,{
+		"Name":"PFN_D3D12_CREATE_VERSIONED_ROOT_SIGNATURE_DESERIALIZER_FROM_SUBOBJECT_IN_LIBRARY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"FunctionPointer"
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSrcData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
+			,{"Name":"SrcDataSizeInBytes","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+			,{"Name":"RootSignatureSubobjectName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pRootSignatureDeserializerInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+			,{"Name":"ppRootSignatureDeserializer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
 		"Name":"D3D12_CPU_DESCRIPTOR_HANDLE"
 		,"Architectures":[]
 		,"Platform":null
@@ -8132,52 +8208,21 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_IncrementingConstant_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"SizeField":""
-						,"Fields":[
-							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"DestOffsetIn32BitValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_ShaderResourceView_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"SizeField":""
-						,"Fields":[
-							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_Constant_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"SizeField":""
-						,"Fields":[
-							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"DestOffsetIn32BitValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Num32BitValuesToSet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_UnorderedAccessView_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_ConstantBufferView_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
@@ -8205,7 +8250,7 @@
 						]
 					}
 					,{
-						"Name":"_ConstantBufferView_e__Struct"
+						"Name":"_ShaderResourceView_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
@@ -8214,6 +8259,37 @@
 						,"SizeField":""
 						,"Fields":[
 							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_IncrementingConstant_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"DestOffsetIn32BitValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_Constant_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"SizeField":""
+						,"Fields":[
+							{"Name":"RootParameterIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"DestOffsetIn32BitValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"Num32BitValuesToSet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -11569,6 +11645,7 @@
 			{"Name":"D3D12_RAYTRACING_PIPELINE_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_TRIANGLES","Value":256}
 			,{"Name":"D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_PROCEDURAL_PRIMITIVES","Value":512}
+			,{"Name":"D3D12_RAYTRACING_PIPELINE_FLAG_ALLOW_OPACITY_MICROMAPS","Value":1024}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -11877,6 +11954,7 @@
 		,"Values":[
 			{"Name":"D3D12_RAYTRACING_GEOMETRY_TYPE_TRIANGLES","Value":0}
 			,{"Name":"D3D12_RAYTRACING_GEOMETRY_TYPE_PROCEDURAL_PRIMITIVE_AABBS","Value":1}
+			,{"Name":"D3D12_RAYTRACING_GEOMETRY_TYPE_OMM_TRIANGLES","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -11893,6 +11971,8 @@
 			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_FRONT_COUNTERCLOCKWISE","Value":2}
 			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OPAQUE","Value":4}
 			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE","Value":8}
+			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OMM_2_STATE","Value":16}
+			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_DISABLE_OMMS","Value":32}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -11997,6 +12077,96 @@
 		]
 	}
 	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_TRANSPARENT","Value":-1}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_OPAQUE","Value":-2}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_TRANSPARENT","Value":-3}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_OPAQUE","Value":-4}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_STATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_TRANSPARENT","Value":0}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_OPAQUE","Value":1}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_TRANSPARENT","Value":2}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_OPAQUE","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_2_STATE","Value":1}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_4_STATE","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ByteOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"SubdivisionLevel","Offset":"0","Length":"16"},{"Kind":"NativeBitfield","Name":"Format","Offset":"16","Length":"16"}]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"OpacityMicromapIndexBuffer","Type":{"Kind":"ApiRef","Name":"D3D12_GPU_VIRTUAL_ADDRESS_AND_STRIDE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"OpacityMicromapIndexFormat","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
+			,{"Name":"OpacityMicromapBaseLocation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"OpacityMicromapArray","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_GEOMETRY_OMM_TRIANGLES_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"pTriangles","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pOmmLinkage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_OMM_LINKAGE_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -12011,6 +12181,8 @@
 			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PREFER_FAST_BUILD","Value":8}
 			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_MINIMIZE_MEMORY","Value":16}
 			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PERFORM_UPDATE","Value":32}
+			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_OMM_UPDATE","Value":64}
+			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_DISABLE_OMMS","Value":128}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -12040,6 +12212,7 @@
 		,"Values":[
 			{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL","Value":0}
 			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL","Value":1}
+			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_OPACITY_MICROMAP_ARRAY","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -12139,9 +12312,24 @@
 		,"SizeField":""
 		,"Fields":[
 			{"Name":"SerializedSizeInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"NumBottomLevelAccelerationStructurePointers","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"NumBottomLevelAccelerationStructurePointers","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+					,{"Name":"NumBottomLevelAccelerationStructureHeaderAndPointerListPairs","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
 		]
 	}
 	,{
@@ -12168,6 +12356,7 @@
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE","Value":0}
+			,{"Name":"D3D12_SERIALIZED_DATA_APPLICATION_SPECIFIC_DRIVER_STATE","Value":1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -12200,6 +12389,80 @@
 			,{"Name":"SerializedSizeInBytesIncludingHeader","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"DeserializedSizeInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"NumBottomLevelAccelerationStructurePointersAfterHeader","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_NONE","Value":0}
+			,{"Name":"D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BOTTOM_LEVEL_POINTERS","Value":0}
+			,{"Name":"D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BLOCKS","Value":-1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DriverMatchingIdentifier","Type":{"Kind":"ApiRef","Name":"D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"SerializedSizeInBytesIncludingHeader","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"DeserializedSizeInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"HeaderPostambleType","Type":{"Kind":"ApiRef","Name":"D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"NumBottomLevelAccelerationStructurePointersAfterHeader","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					,{"Name":"NumBlocks","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"D3D12_SERIALIZED_BLOCK_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_RAYTRACING_SERIALIZED_BLOCK_TYPE_OPACITY_MICROMAPS","Value":0}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_SERIALIZED_BLOCK"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"D3D12_SERIALIZED_BLOCK_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"NumBlockPointersAfterHeader","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -12260,10 +12523,44 @@
 				,"Fields":[
 					{"Name":"Triangles","Type":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 					,{"Name":"AABBs","Type":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_AABBS_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+					,{"Name":"OmmTriangles","Type":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_OMM_TRIANGLES_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
 			}
+		]
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SubdivisionLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Format","Type":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"NumOmmHistogramEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pOmmHistogram","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_HISTOGRAM_ENTRY","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"InputBuffer","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"PerOmmDescs","Type":{"Kind":"ApiRef","Name":"D3D12_GPU_VIRTUAL_ADDRESS_AND_STRIDE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
 		]
 	}
 	,{
@@ -12294,6 +12591,7 @@
 					{"Name":"InstanceDescs","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"pGeometryDescs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 					,{"Name":"ppGeometryDescs","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_GEOMETRY_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}}},"Attrs":["Const"]}
+					,{"Name":"pOpacityMicromapArrayDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 				]
 				,"NestedTypes":[
 				]
@@ -12334,6 +12632,62 @@
 		]
 	}
 	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE","Value":0}
+			,{"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DestBuffer","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"InfoType","Type":{"Kind":"ApiRef","Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"CurrentSizeInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"DecodedSizeInBytes","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"D3D12_RAY_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -12352,6 +12706,7 @@
 			,{"Name":"D3D12_RAY_FLAG_CULL_NON_OPAQUE","Value":128}
 			,{"Name":"D3D12_RAY_FLAG_SKIP_TRIANGLES","Value":256}
 			,{"Name":"D3D12_RAY_FLAG_SKIP_PROCEDURAL_PRIMITIVES","Value":512}
+			,{"Name":"D3D12_RAY_FLAG_FORCE_OMM_2_STATE","Value":1024}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -12546,6 +12901,7 @@
 			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_BEGIN_COMMAND_LIST","Value":46}
 			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_DISPATCHGRAPH","Value":47}
 			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_SETPROGRAM","Value":48}
+			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES2","Value":52}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -14769,6 +15125,155 @@
 		]
 	}
 	,{
+		"Name":"ID3D12Tools1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"e4fbc019-dd3c-43e1-8f32-7f649575f0a0"
+		,"Interface":{"Kind":"ApiRef","Name":"ID3D12Tools","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"ReserveGPUVARangesAtCreate"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pRanges","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D3D12_GPU_VIRTUAL_ADDRESS_RANGE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"uiNumRanges","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"ClearReservedGPUVARangesList"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12Tools2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"01d393c5-c9b0-42a1-958c-c26b02d4d097"
+		,"Interface":{"Kind":"ApiRef","Name":"ID3D12Tools1","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"SetApplicationSpecificDriverState"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pBlob","Type":{"Kind":"ApiRef","Name":"ID3DBlob","TargetKind":"Com","Api":"Graphics.Direct3D","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12PageableTools"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"8f1359db-d8d1-42f9-b5cf-79f4cbad0d3d"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetAllocation"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pAllocation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_GPU_VIRTUAL_ADDRESS_RANGE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12DeviceTools"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"2ea68e9c-19c3-4e47-a109-6cdadff0aca9"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"SetNextAllocationAddress"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"nextAllocationVirtualAddress","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_UNKNOWN","Value":1}
+			,{"Name":"D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_USED","Value":2}
+			,{"Name":"D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_IGNORED","Value":3}
+			,{"Name":"D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_NOT_SPECIFIED","Value":4}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"ID3D12DeviceTools1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"e30e9fc7-e641-4d6e-8a81-9dd9206ec47a"
+		,"Interface":{"Kind":"ApiRef","Name":"ID3D12DeviceTools","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetApplicationSpecificDriverState"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3DBlob","TargetKind":"Com","Api":"Graphics.Direct3D","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+			,{
+				"Name":"GetApplicationSpecificDriverBlobStatus"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+		]
+	}
+	,{
 		"Name":"D3D12_SUBRESOURCE_DATA"
 		,"Architectures":[]
 		,"Platform":null
@@ -15038,6 +15543,7 @@
 			{"Name":"D3D12_DEBUG_DEVICE_PARAMETER_FEATURE_FLAGS","Value":0}
 			,{"Name":"D3D12_DEBUG_DEVICE_PARAMETER_GPU_BASED_VALIDATION_SETTINGS","Value":1}
 			,{"Name":"D3D12_DEBUG_DEVICE_PARAMETER_GPU_SLOWDOWN_PERFORMANCE_FACTOR","Value":2}
+			,{"Name":"D3D12_DEBUG_DEVICE_PARAMETER_BYTECODE_VALIDATION_MODE","Value":3}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -15118,6 +15624,21 @@
 		]
 		,"NestedTypes":[
 		]
+	}
+	,{
+		"Name":"D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_DISABLED","Value":0}
+			,{"Name":"D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_WHEN_HASH_BYPASSED","Value":1}
+			,{"Name":"D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_ALL_BYTECODE","Value":2}
+			,{"Name":"D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE_DEFAULT","Value":1}
+		]
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID3D12DebugDevice1"
@@ -16630,7 +17151,12 @@
 			,{"Name":"D3D12_MESSAGE_ID_COMMAND_LIST_DRAW_INSTANCE_COUNT_ZERO","Value":1418}
 			,{"Name":"D3D12_MESSAGE_ID_DESCRIPTOR_HEAP_NOT_SET_BEFORE_ROOT_SIGNATURE_WITH_DIRECTLY_INDEXED_FLAG","Value":1419}
 			,{"Name":"D3D12_MESSAGE_ID_DIFFERENT_DESCRIPTOR_HEAP_SET_AFTER_ROOT_SIGNATURE_WITH_DIRECTLY_INDEXED_FLAG","Value":1420}
-			,{"Name":"D3D12_MESSAGE_ID_D3D12_MESSAGES_END","Value":1421}
+			,{"Name":"D3D12_MESSAGE_ID_APPLICATION_SPECIFIC_DRIVER_STATE_NOT_SUPPORTED","Value":1421}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_TARGET_OR_DEPTH_STENCIL_RESOUCE_NOT_INITIALIZED","Value":1422}
+			,{"Name":"D3D12_MESSAGE_ID_BYTECODE_VALIDATION_ERROR","Value":1423}
+			,{"Name":"D3D12_MESSAGE_ID_FENCE_ZERO_WAIT","Value":1424}
+			,{"Name":"D3D12_MESSAGE_ID_NON_COMMON_RESOURCE_IN_COPY_QUEUE","Value":1425}
+			,{"Name":"D3D12_MESSAGE_ID_D3D12_MESSAGES_END","Value":1426}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -17758,6 +18284,31 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_DISPATCH_GRAPH_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Const"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12DSRDeviceFactory"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"f343d1a0-afe3-439f-b13d-cd87a43b70ca"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateDSRDevice"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pD3D12Device","Type":{"Kind":"ApiRef","Name":"ID3D12Device","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
+					,{"Name":"NodeMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"ppvDSRDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]

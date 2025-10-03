@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x0A, 0xAB, 0x9B, 0xD5,
 				0xA2, 0x68,
 				0x5B, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 				0x4E,
 				0x24,
 				0x90
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

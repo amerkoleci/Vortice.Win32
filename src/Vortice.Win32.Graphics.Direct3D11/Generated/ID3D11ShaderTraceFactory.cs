@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x29, 0xD4, 0xBA, 0x1F,
 				0xAB, 0x66,
 				0xCC, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 				0x0E,
 				0x44,
 				0x59
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

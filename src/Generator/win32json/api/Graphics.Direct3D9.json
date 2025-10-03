@@ -2683,6 +2683,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"D3DSHADER_INSTRUCTION_PREDICATED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":268435456
+		,"Attrs":[]
+	}
+	,{
 		"Name":"D3DSP_DCL_USAGE_SHIFT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -10857,21 +10864,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous4_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"rhw","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvRHW","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous8_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -10882,6 +10874,21 @@
 				,"Fields":[
 					{"Name":"tv","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 					,{"Name":"dvTV","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous4_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"rhw","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvRHW","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -11124,21 +11131,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous5_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"ny","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvNY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous1_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11149,6 +11141,21 @@
 				,"Fields":[
 					{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 					,{"Name":"dvX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous5_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"ny","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvNY","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -11325,21 +11332,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous5_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"power","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvPower","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous1_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11350,6 +11342,21 @@
 				,"Fields":[
 					{"Name":"diffuse","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
 					,{"Name":"dcvDiffuse","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous5_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"power","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvPower","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]

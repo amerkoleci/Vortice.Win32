@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x62, 0xF4, 0x75, 0x27,
 				0xC1, 0xB6,
 				0x15, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 				0xA4,
 				0x97,
 				0x6D
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

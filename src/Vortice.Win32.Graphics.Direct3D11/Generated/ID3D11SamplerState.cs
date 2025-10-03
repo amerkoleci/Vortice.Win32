@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11SamplerState : ID3D11SamplerState.Interface, 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x51, 0xEA, 0x6F, 0xDA,
 				0x4C, 0x56,
 				0x87, 0x44,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11SamplerState : ID3D11SamplerState.Interface, 
 				0xB4,
 				0xE3,
 				0xA5
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

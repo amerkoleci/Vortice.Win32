@@ -21,7 +21,7 @@ public unsafe partial struct IWICProgressiveLevelControl : IWICProgressiveLevelC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x6F, 0x29, 0xAC, 0xDA,
 				0xA5, 0x7A,
 				0xBF, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICProgressiveLevelControl : IWICProgressiveLevelC
 				0x76,
 				0xF8,
 				0x91
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

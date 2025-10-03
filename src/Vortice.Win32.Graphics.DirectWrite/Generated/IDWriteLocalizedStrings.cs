@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x09, 0x62, 0x25, 0x08,
 				0x9A, 0x09,
 				0x34, 0x4B,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 				0x0E,
 				0x77,
 				0x71
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

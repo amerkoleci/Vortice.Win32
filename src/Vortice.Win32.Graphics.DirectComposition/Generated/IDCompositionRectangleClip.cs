@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x7D, 0xAD, 0x42, 0x98,
 				0xCF, 0xD9,
 				0x08, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 				0xA5,
 				0xE7,
 				0xC2
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

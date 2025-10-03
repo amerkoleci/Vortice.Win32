@@ -20,7 +20,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xD9, 0xA9, 0x05, 0xA0,
 				0xBB, 0xB8,
 				0x94, 0x45,
@@ -32,7 +32,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 				0xEC,
 				0x4D,
 				0x37
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

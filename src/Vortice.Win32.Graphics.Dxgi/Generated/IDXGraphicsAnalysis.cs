@@ -21,7 +21,7 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x14, 0x15, 0x25, 0x9F,
 				0x4D, 0x9D,
 				0x02, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 				0xB7,
 				0xD4,
 				0xB5
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xD6, 0x8E, 0x74, 0x29,
 				0x9C, 0x8C,
 				0x6A, 0x4A,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 				0x53,
 				0x89,
 				0x44
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

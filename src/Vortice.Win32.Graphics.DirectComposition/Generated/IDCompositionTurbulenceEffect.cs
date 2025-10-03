@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xDA, 0x5B, 0xA5, 0xA6,
 				0x9C, 0xC0,
 				0xF3, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 				0xC8,
 				0x97,
 				0x15
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

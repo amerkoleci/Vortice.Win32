@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x52, 0x7D, 0xDF, 0x0A,
 				0x9C, 0x92,
 				0x61, 0x4E,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 				0xDE,
 				0x66,
 				0xEF
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -193,7 +193,8 @@
 			,{"Name":"DWMWA_TEXT_COLOR","Value":36}
 			,{"Name":"DWMWA_VISIBLE_FRAME_BORDER_THICKNESS","Value":37}
 			,{"Name":"DWMWA_SYSTEMBACKDROP_TYPE","Value":38}
-			,{"Name":"DWMWA_LAST","Value":39}
+			,{"Name":"DWMWA_REDIRECTIONBITMAP_ALPHA","Value":39}
+			,{"Name":"DWMWA_LAST","Value":40}
 		]
 		,"IntegerBase":"Int32"
 	}

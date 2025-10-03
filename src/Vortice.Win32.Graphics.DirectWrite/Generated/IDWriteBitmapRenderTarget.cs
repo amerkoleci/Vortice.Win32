@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xA3, 0x32, 0x5A, 0x5E,
 				0xFF, 0x8D,
 				0x73, 0x47,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 				0xB7,
 				0x72,
 				0x67
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

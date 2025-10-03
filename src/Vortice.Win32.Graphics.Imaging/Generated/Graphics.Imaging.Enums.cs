@@ -698,6 +698,33 @@ public enum WICWebpAnmfProperties
 	FrameDuration = 1,
 }
 
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimProperties"]/*' />
+/// <unmanaged>WICJpegXLAnimProperties</unmanaged>
+public enum WICJpegXLAnimProperties
+{
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimProperties::WICJpegXLAnimLoopCount"]/*' />
+	/// <unmanaged>WICJpegXLAnimLoopCount</unmanaged>
+	LoopCount = 1,
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimProperties::WICJpegXLAnimFrameTicksPerSecondNumerator"]/*' />
+	/// <unmanaged>WICJpegXLAnimFrameTicksPerSecondNumerator</unmanaged>
+	FrameTicksPerSecondNumerator = 2,
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimProperties::WICJpegXLAnimFrameTicksPerSecondDenominator"]/*' />
+	/// <unmanaged>WICJpegXLAnimFrameTicksPerSecondDenominator</unmanaged>
+	FrameTicksPerSecondDenominator = 3,
+}
+
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimFrameProperties"]/*' />
+/// <unmanaged>WICJpegXLAnimFrameProperties</unmanaged>
+public enum WICJpegXLAnimFrameProperties
+{
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimFrameProperties::WICJpegXLAnimFrameDurationInTicks"]/*' />
+	/// <unmanaged>WICJpegXLAnimFrameDurationInTicks</unmanaged>
+	DurationInTicks = 1,
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegXLAnimFrameProperties::WICJpegXLAnimFrameName"]/*' />
+	/// <unmanaged>WICJpegXLAnimFrameName</unmanaged>
+	Name = 2,
+}
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel"]/*' />
 /// <unmanaged>WICSectionAccessLevel</unmanaged>
 public enum WICSectionAccessLevel
@@ -861,6 +888,24 @@ public enum WICPngFilterOption
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAdaptive"]/*' />
 	/// <unmanaged>WICPngFilterAdaptive</unmanaged>
 	Adaptive = 6,
+}
+
+/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifCompressionOption"]/*' />
+/// <unmanaged>WICHeifCompressionOption</unmanaged>
+public enum WICHeifCompressionOption
+{
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifCompressionOption::WICHeifCompressionDontCare"]/*' />
+	/// <unmanaged>WICHeifCompressionDontCare</unmanaged>
+	WICHeifCompressionDontCare = 0,
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifCompressionOption::WICHeifCompressionNone"]/*' />
+	/// <unmanaged>WICHeifCompressionNone</unmanaged>
+	WICHeifCompressionNone = 1,
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifCompressionOption::WICHeifCompressionHEVC"]/*' />
+	/// <unmanaged>WICHeifCompressionHEVC</unmanaged>
+	WICHeifCompressionHEVC = 2,
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifCompressionOption::WICHeifCompressionAV1"]/*' />
+	/// <unmanaged>WICHeifCompressionAV1</unmanaged>
+	WICHeifCompressionAV1 = 3,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint"]/*' />

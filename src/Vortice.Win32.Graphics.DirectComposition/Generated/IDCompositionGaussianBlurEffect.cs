@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xB7, 0xD0, 0xD4, 0x45,
 				0xD4, 0x1B,
 				0x4E, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 				0x44,
 				0x30,
 				0x33
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

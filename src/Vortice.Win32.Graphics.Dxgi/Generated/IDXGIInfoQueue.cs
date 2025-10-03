@@ -21,7 +21,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xC7, 0x41, 0x74, 0xD6,
 				0x2A, 0x67,
 				0x6F, 0x47,
@@ -33,7 +33,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 				0x49,
 				0x49,
 				0xCE
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

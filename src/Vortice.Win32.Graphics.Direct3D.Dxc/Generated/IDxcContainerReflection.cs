@@ -20,7 +20,7 @@ public unsafe partial struct IDxcContainerReflection : IDxcContainerReflection.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x26, 0x1B, 0xC2, 0xD2,
 				0x50, 0x83,
 				0xDC, 0x4B,
@@ -32,7 +32,7 @@ public unsafe partial struct IDxcContainerReflection : IDxcContainerReflection.I
 				0xF4,
 				0xC5,
 				0x4C
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

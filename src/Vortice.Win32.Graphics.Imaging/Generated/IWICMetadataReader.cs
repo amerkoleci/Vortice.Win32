@@ -21,7 +21,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x99, 0xFE, 0x04, 0x92,
 				0xFC, 0xD8,
 				0xD5, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 				0x67,
 				0xA8,
 				0x99
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

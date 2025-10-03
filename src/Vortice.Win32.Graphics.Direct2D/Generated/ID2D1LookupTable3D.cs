@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1LookupTable3D : ID2D1LookupTable3D.Interface, 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x55, 0x98, 0xDD, 0x53,
 				0xB0, 0xA3,
 				0x5B, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1LookupTable3D : ID2D1LookupTable3D.Interface, 
 				0x5E,
 				0x57,
 				0x97
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

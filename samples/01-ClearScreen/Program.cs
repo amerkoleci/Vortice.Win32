@@ -60,7 +60,7 @@ public static unsafe class Program
     private static void TestDxc()
     {
         using ComPtr<IDxcCompiler3> compiler = default;
-        DxcCreateInstance(CLSID_DxcCompiler, __uuidof<IDxcCompiler3>(), compiler.GetVoidAddressOf());
+        DxcCreateInstance(CLSID_DxcCompiler, __uuidof<IDxcCompiler3>(), (void**)compiler.GetAddressOf());
     }
 
     private static void TestWic()
@@ -98,11 +98,11 @@ public static unsafe class Program
         ThrowIfFailed(D2D1CreateFactory(FactoryType.MultiThreaded,
             __uuidof<ID2D1Factory2>(),
             default,
-            d2d1Factory2.GetVoidAddressOf()));
+             (void**)d2d1Factory2.GetAddressOf()));
 
         using ComPtr<IDWriteFactory> dwriteFactory = default;
         ThrowIfFailed(
-            DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetVoidAddressOf()));
+            DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), (void**)dwriteFactory.GetAddressOf()));
 
         using ComPtr<IDWriteTextFormat> textFormat =
             dwriteFactory.Get()->CreateTextFormat(
@@ -216,7 +216,7 @@ public static unsafe class Program
                 (IUnknown*)adapter.Get(),
                 FeatureLevel.Level_11_0,
                 __uuidof<ID3D12Device>(),
-                device.GetVoidAddressOf()
+                 (void**)device.GetAddressOf()
                 );
             ThrowIfFailed(hr);
 

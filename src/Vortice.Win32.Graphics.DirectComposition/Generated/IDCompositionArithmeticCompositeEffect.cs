@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xA8, 0xDF, 0x67, 0x3B,
 				0xDD, 0xE3,
 				0x61, 0x4E,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 				0xD7,
 				0x39,
 				0xDC
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

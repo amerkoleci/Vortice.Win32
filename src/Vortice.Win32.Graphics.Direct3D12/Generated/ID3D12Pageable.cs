@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12Pageable : ID3D12Pageable.Interface, INativeG
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xFB, 0x58, 0xEE, 0x63,
 				0x68, 0x12,
 				0x35, 0x48,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12Pageable : ID3D12Pageable.Interface, INativeG
 				0x62,
 				0xF0,
 				0xD6
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

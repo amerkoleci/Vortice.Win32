@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12ManualWriteTrackingResource : ID3D12ManualWri
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x85, 0x3B, 0xCA, 0x86,
 				0xAD, 0x49,
 				0x6E, 0x4B,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12ManualWriteTrackingResource : ID3D12ManualWri
 				0x54,
 				0x0F,
 				0x41
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

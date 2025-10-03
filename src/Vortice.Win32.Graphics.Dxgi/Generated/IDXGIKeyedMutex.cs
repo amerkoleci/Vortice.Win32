@@ -21,7 +21,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x89, 0x12, 0x8E, 0x9D,
 				0xB3, 0xD7,
 				0x5F, 0x46,
@@ -33,7 +33,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 				0x9A,
 				0xF8,
 				0x5D
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

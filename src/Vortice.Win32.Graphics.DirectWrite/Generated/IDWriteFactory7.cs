@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteFactory7 : IDWriteFactory7.Interface, INativ
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xB3, 0xE0, 0xD0, 0x35,
 				0x76, 0x90,
 				0x2E, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteFactory7 : IDWriteFactory7.Interface, INativ
 				0x8A,
 				0x06,
 				0xB4
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -20,7 +20,7 @@ public unsafe partial struct IDxcVersionInfo3 : IDxcVersionInfo3.Interface, INat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x43, 0xE8, 0x13, 0x5E,
 				0x25, 0x9D,
 				0x3C, 0x47,
@@ -32,7 +32,7 @@ public unsafe partial struct IDxcVersionInfo3 : IDxcVersionInfo3.Interface, INat
 				0xB4,
 				0x4B,
 				0x1E
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

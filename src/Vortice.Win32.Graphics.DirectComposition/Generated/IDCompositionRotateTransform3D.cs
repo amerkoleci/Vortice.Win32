@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionRotateTransform3D : IDCompositionRotat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x3F, 0xB2, 0xF5, 0xD8,
 				0x29, 0xD4,
 				0x91, 0x4A,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionRotateTransform3D : IDCompositionRotat
 				0xD7,
 				0x5B,
 				0x18
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

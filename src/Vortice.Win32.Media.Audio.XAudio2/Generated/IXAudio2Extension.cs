@@ -21,7 +21,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xBB, 0x29, 0xAC, 0x84,
 				0x19, 0xD6,
 				0xD2, 0x44,
@@ -33,7 +33,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 				0xDF,
 				0x3E,
 				0xD6
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

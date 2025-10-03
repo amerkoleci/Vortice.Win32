@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x22, 0x0A, 0x17, 0xC1,
 				0xE2, 0x3C,
 				0x66, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 				0xFC,
 				0x84,
 				0xC4
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

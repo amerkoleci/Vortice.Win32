@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x52, 0x60, 0x1E, 0xB7,
 				0xEA, 0x5A,
 				0xA3, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 				0x1F,
 				0x7E,
 				0x91
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

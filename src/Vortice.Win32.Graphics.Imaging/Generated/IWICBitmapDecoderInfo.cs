@@ -21,7 +21,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x7F, 0x00, 0xCD, 0xD8,
 				0x8F, 0xD0,
 				0x91, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 				0xF0,
 				0xE4,
 				0xB5
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

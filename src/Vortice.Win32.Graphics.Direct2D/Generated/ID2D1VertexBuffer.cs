@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x36, 0x13, 0x8B, 0x9B,
 				0xA5, 0x00,
 				0x68, 0x46,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 				0xBF,
 				0x9B,
 				0x7B
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

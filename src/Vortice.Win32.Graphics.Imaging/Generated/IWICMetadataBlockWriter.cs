@@ -21,7 +21,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x76, 0x96, 0xFB, 0x08,
 				0x44, 0xB4,
 				0xE8, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 				0x42,
 				0xBF,
 				0xF1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

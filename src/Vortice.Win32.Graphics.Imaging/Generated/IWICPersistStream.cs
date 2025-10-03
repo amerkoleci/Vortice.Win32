@@ -21,7 +21,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x40, 0x50, 0x67, 0x00,
 				0x08, 0x69,
 				0xF8, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 				0xD6,
 				0xD9,
 				0xAD
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

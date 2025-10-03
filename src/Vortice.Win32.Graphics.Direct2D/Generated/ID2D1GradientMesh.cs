@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x01, 0xE4, 0x92, 0xF2,
 				0x50, 0xC0,
 				0xDE, 0x4C,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 				0x3B,
 				0x23,
 				0xC2
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

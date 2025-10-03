@@ -21,7 +21,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x6E, 0x5A, 0xC7, 0x95,
 				0x8C, 0x3E,
 				0xC2, 0x4E,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 				0x51,
 				0xE5,
 				0x9B
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

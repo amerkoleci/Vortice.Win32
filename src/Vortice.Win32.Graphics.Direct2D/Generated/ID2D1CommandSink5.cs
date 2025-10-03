@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1CommandSink5 : ID2D1CommandSink5.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x26, 0xDD, 0x47, 0x70,
 				0xE7, 0xB1,
 				0xA7, 0x44,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1CommandSink5 : ID2D1CommandSink5.Interface, IN
 				0x14,
 				0x4F,
 				0xA8
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

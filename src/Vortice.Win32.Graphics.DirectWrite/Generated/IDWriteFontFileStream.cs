@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xFE, 0x65, 0x48, 0x6D,
 				0xB8, 0x0A,
 				0x91, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 				0x34,
 				0xA3,
 				0xE0
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

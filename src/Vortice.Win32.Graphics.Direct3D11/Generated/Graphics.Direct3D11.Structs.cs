@@ -1851,6 +1851,14 @@ public partial struct FeatureDataD3D11Options5
 	public SharedResourceTier SharedResourceTier;
 }
 
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS6"]/*' />
+/// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS6</unmanaged>
+public partial struct FeatureDataD3D11Options6
+{
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS6::ShaderAccessRestrictedResourceTier"]/*' />
+	public ShaderAccessRestrictedResourceTier ShaderAccessRestrictedResourceTier;
+}
+
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_DESC</unmanaged>
 public partial struct VideoDecoderDescription

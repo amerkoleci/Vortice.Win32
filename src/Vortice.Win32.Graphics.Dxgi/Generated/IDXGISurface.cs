@@ -21,7 +21,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x6C, 0xB5, 0xFC, 0xCA,
 				0xC3, 0x6A,
 				0x89, 0x48,
@@ -33,7 +33,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 				0xD2,
 				0x60,
 				0xEC
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

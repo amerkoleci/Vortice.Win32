@@ -21,7 +21,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xCB, 0xE9, 0xBE, 0xBE,
 				0xB0, 0x83,
 				0xCC, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 				0x5E,
 				0xAC,
 				0x96
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

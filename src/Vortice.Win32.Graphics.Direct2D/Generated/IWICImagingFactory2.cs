@@ -21,7 +21,7 @@ public unsafe partial struct IWICImagingFactory2 : IWICImagingFactory2.Interface
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x45, 0x6B, 0x81, 0x7B,
 				0x96, 0x19,
 				0x76, 0x44,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICImagingFactory2 : IWICImagingFactory2.Interface
 				0x7C,
 				0x8A,
 				0xF0
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

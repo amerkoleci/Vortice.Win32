@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : ID3D12RootSignatu
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x7B, 0x64, 0xAB, 0x34,
 				0xC8, 0x3C,
 				0xAC, 0x46,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : ID3D12RootSignatu
 				0x45,
 				0xC0,
 				0x46
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

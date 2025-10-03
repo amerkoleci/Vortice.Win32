@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteFontDownloadListener : IDWriteFontDownloadLi
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xB9, 0xE5, 0x6F, 0xB0,
 				0xEC, 0x43,
 				0x93, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteFontDownloadListener : IDWriteFontDownloadLi
 				0x72,
 				0xFD,
 				0xA7
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

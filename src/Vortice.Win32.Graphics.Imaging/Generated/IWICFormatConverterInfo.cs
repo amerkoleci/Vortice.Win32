@@ -21,7 +21,7 @@ public unsafe partial struct IWICFormatConverterInfo : IWICFormatConverterInfo.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x65, 0xFB, 0x34, 0x9F,
 				0xF4, 0x13,
 				0x15, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICFormatConverterInfo : IWICFormatConverterInfo.I
 				0xE5,
 				0x3D,
 				0x9F
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

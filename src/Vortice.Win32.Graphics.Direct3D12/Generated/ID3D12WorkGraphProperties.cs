@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x71, 0xCF, 0x5A, 0x06,
 				0x63, 0xF8,
 				0x89, 0x4B,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 				0x88,
 				0x67,
 				0x57
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

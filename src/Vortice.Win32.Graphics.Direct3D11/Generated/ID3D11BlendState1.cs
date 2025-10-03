@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11BlendState1 : ID3D11BlendState1.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xBE, 0xFA, 0x86, 0xCC,
 				0x55, 0xDA,
 				0x1D, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11BlendState1 : ID3D11BlendState1.Interface, IN
 				0x28,
 				0x77,
 				0xE9
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

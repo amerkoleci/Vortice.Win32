@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x5B, 0x4D, 0xEC, 0x10,
 				0x5A, 0x97,
 				0x89, 0x46,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 				0x0F,
 				0xE3,
 				0x33
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

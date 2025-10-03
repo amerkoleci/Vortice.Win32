@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x51, 0x1C, 0x47, 0xAE,
 				0x53, 0x5F,
 				0x24, 0x4A,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 				0x30,
 				0xB3,
 				0xF0
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

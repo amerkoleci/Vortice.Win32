@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11RasterizerState1 : ID3D11RasterizerState1.Int
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xA6, 0xD7, 0x17, 0x12,
 				0x39, 0x50,
 				0x8C, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11RasterizerState1 : ID3D11RasterizerState1.Int
 				0x6A,
 				0xFD,
 				0x6E
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

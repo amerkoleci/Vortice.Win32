@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x52, 0xCA, 0xC0, 0xF1,
 				0xA3, 0x92,
 				0x00, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 				0xEF,
 				0xD9,
 				0xD9
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

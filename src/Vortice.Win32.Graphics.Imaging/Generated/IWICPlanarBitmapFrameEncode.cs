@@ -21,7 +21,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xB8, 0xB7, 0x28, 0xF9,
 				0x21, 0x22,
 				0xC1, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 				0x97,
 				0x4D,
 				0x1A
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

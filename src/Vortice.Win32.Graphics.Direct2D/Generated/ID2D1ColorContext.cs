@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xBB, 0x20, 0x48, 0x1C,
 				0x71, 0x57,
 				0x18, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 				0x0E,
 				0xC6,
 				0x57
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

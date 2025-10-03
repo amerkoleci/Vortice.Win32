@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteNumberSubstitution : IDWriteNumberSubstituti
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xC9, 0x5C, 0x88, 0x14,
 				0xB0, 0xBA,
 				0x90, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteNumberSubstitution : IDWriteNumberSubstituti
 				0x2C,
 				0xD0,
 				0x3D
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

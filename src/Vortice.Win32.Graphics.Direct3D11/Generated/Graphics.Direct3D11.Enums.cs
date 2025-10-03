@@ -289,6 +289,9 @@ public enum ResourceMiscFlags
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_EXCLUSIVE_WRITER"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED_EXCLUSIVE_WRITER</unmanaged>
 	SharedExclusiveWriter = 2097152,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_NO_SHADER_ACCESS"]/*' />
+	/// <unmanaged>D3D11_RESOURCE_MISC_NO_SHADER_ACCESS</unmanaged>
+	NoShaderAccess = 4194304,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP"]/*' />
@@ -1094,6 +1097,9 @@ public enum Feature
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE::D3D11_FEATURE_DISPLAYABLE"]/*' />
 	/// <unmanaged>D3D11_FEATURE_DISPLAYABLE</unmanaged>
 	Displayable = 20,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE::D3D11_FEATURE_D3D11_OPTIONS6"]/*' />
+	/// <unmanaged>D3D11_FEATURE_D3D11_OPTIONS6</unmanaged>
+	Options6 = 21,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT"]/*' />
@@ -1178,6 +1184,18 @@ public enum SharedResourceTier
 	Tier3 = 3,
 }
 
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER"]/*' />
+/// <unmanaged>D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER</unmanaged>
+public enum ShaderAccessRestrictedResourceTier
+{
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER::D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER_0"]/*' />
+	/// <unmanaged>D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER_0</unmanaged>
+	Tier0 = 0,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER::D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER_1"]/*' />
+	/// <unmanaged>D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER_1</unmanaged>
+	Tier1 = 1,
+}
+
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_TYPE</unmanaged>
 public enum VideoDecoderBufferType
@@ -1209,6 +1227,9 @@ public enum VideoDecoderBufferType
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN</unmanaged>
 	FilmGrain = 8,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_HUFFMAN_TABLE"]/*' />
+	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_HUFFMAN_TABLE</unmanaged>
+	HuffmanTable = 9,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT"]/*' />
@@ -5947,6 +5968,9 @@ public enum MessageId
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TRACKED_WORKLOAD_DISJOINT_FAILURE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TRACKED_WORKLOAD_DISJOINT_FAILURE</unmanaged>
 	TrackedWorkloadDisjointFailure = 3146283,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_FORMAT_AND_WRITE_MASK_MISMATCH"]/*' />
+	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_FORMAT_AND_WRITE_MASK_MISMATCH</unmanaged>
+	DeviceDrawResourceFormatAndWriteMaskMismatch = 3146284,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS"]/*' />

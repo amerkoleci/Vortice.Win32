@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xAA, 0x4B, 0x92, 0xB7,
 				0x1B, 0x39,
 				0x2A, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 				0xD8,
 				0x67,
 				0xDC
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

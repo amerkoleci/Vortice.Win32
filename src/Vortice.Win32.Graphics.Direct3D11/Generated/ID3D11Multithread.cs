@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x00, 0x4E, 0x7E, 0x9B,
 				0x2C, 0x34,
 				0x06, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 				0xF6,
 				0x89,
 				0xF0
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

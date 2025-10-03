@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x1D, 0x47, 0xFB, 0x8E,
 				0x6C, 0x61,
 				0x49, 0x4F,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 				0x63,
 				0xFA,
 				0x51
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

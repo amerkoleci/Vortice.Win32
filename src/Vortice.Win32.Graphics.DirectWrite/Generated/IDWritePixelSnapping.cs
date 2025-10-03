@@ -21,7 +21,7 @@ public unsafe partial struct IDWritePixelSnapping : IDWritePixelSnapping.Interfa
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xDA, 0xA2, 0xF3, 0xEA,
 				0xF4, 0xEC,
 				0x24, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWritePixelSnapping : IDWritePixelSnapping.Interfa
 				0x42,
 				0x02,
 				0x4B
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

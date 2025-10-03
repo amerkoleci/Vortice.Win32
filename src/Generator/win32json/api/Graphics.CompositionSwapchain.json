@@ -217,6 +217,28 @@
 		]
 	}
 	,{
+		"Name":"IPresentationSurface2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"95609569-c5f0-47f9-8804-5345f2e2767e"
+		,"Interface":{"Kind":"ApiRef","Name":"IPresentationSurface","TargetKind":"Com","Api":"Graphics.CompositionSwapchain","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"SetIsHdrContent"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"isHdrContent","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"IPresentStatistics"
 		,"Architectures":[]
 		,"Platform":null
@@ -459,6 +481,16 @@
 					{"Name":"ppPresentationManager","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPresentationManager","TargetKind":"Com","Api":"Graphics.CompositionSwapchain","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
+		]
+	}
+	,{
+		"Name":"IPresentationFactory_SupportHdrAware"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"2bd0b885-a16f-4bd9-a59a-d073e069d416"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
 		]
 	}
 	,{

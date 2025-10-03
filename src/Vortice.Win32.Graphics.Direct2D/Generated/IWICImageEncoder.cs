@@ -21,7 +21,7 @@ public unsafe partial struct IWICImageEncoder : IWICImageEncoder.Interface, INat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xF8, 0x5B, 0xC7, 0x04,
 				0xE1, 0x3C,
 				0x3B, 0x47,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICImageEncoder : IWICImageEncoder.Interface, INat
 				0xE9,
 				0x49,
 				0x99
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

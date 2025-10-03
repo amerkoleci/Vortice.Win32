@@ -2893,6 +2893,76 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MONOCHROME"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"0685b993-3d8c-43a0-8b28-d74c2d6899a4"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MONOCHROME10"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"142a1d0f-69dd-4ec9-8591-b12ffcb91a29"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN12"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"1a72925f-0c2c-4f15-96fb-b17d1473603f"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN10_422"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"0bac4fe5-1532-4429-a854-f84de04953db"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN12_422"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"55bcac81-f311-4093-a7d0-1cbc0b849bee"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN_444"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"4008018f-f537-4b36-98cf-61af8a2c1a33"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN10_EXT"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"9cc55490-e37c-4932-8684-4920f9f6409c"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN10_444"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"0dabeffa-4458-4602-bc03-0795659d617c"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN12_444"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"9798634d-fe9d-48e5-b4da-dbec45b3df01"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_HEVC_VLD_MAIN16"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"a4fbdbb0-a113-482b-a232-635cc0697f6d"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"D3D11_DECODER_PROFILE_VP9_VLD_PROFILE0"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -2946,6 +3016,55 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"2d80bed6-9cac-4835-9e91-327bbc4f9ee8"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_MJPEG_VLD_420"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"725cb506-0c29-43c4-9440-8e9397903a04"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_MJPEG_VLD_422"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"5b77b9cd-1a35-4c30-9fd8-ef4b60c035dd"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_MJPEG_VLD_444"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"d95161f9-0d44-47e6-bcf5-1bfbfb268f97"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_MJPEG_VLD_4444"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"c91748d5-fd18-4aca-9db3-3a6634ab547d"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_JPEG_VLD_420"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"cf782c83-bef5-4a2c-87cb-6019e7b175ac"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_JPEG_VLD_422"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"f04df417-eee2-4067-a778-f35c15ab9721"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D11_DECODER_PROFILE_JPEG_VLD_444"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"4cd00e17-89ba-48ef-b9f9-edcb82713f65"
 		,"Attrs":[]
 	}
 	,{
@@ -3813,6 +3932,7 @@
 			,{"Name":"D3D11_RESOURCE_MISC_HW_PROTECTED","Value":524288}
 			,{"Name":"D3D11_RESOURCE_MISC_SHARED_DISPLAYABLE","Value":1048576}
 			,{"Name":"D3D11_RESOURCE_MISC_SHARED_EXCLUSIVE_WRITER","Value":2097152}
+			,{"Name":"D3D11_RESOURCE_MISC_NO_SHADER_ACCESS","Value":4194304}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -6045,6 +6165,7 @@
 			,{"Name":"D3D11_FEATURE_SHADER_CACHE","Value":18}
 			,{"Name":"D3D11_FEATURE_D3D11_OPTIONS5","Value":19}
 			,{"Name":"D3D11_FEATURE_DISPLAYABLE","Value":20}
+			,{"Name":"D3D11_FEATURE_D3D11_OPTIONS6","Value":21}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -6428,6 +6549,33 @@
 		,"SizeField":""
 		,"Fields":[
 			{"Name":"SharedResourceTier","Type":{"Kind":"ApiRef","Name":"D3D11_SHARED_RESOURCE_TIER","TargetKind":"Default","Api":"Graphics.Direct3D11","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER_0","Value":0}
+			,{"Name":"D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER_1","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D11_FEATURE_DATA_D3D11_OPTIONS6"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+			{"Name":"ShaderAccessRestrictedResourceTier","Type":{"Kind":"ApiRef","Name":"D3D11_SHADER_ACCESS_RESTRICTED_RESOURCE_TIER","TargetKind":"Default","Api":"Graphics.Direct3D11","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7991,6 +8139,7 @@
 			,{"Name":"D3D11_VIDEO_DECODER_BUFFER_BITSTREAM","Value":6}
 			,{"Name":"D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR","Value":7}
 			,{"Name":"D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN","Value":8}
+			,{"Name":"D3D11_VIDEO_DECODER_BUFFER_HUFFMAN_TABLE","Value":9}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -13028,7 +13177,8 @@
 			,{"Name":"D3D11_MESSAGE_ID_NO_TRACKED_WORKLOAD_SLOT_AVAILABLE","Value":3146281}
 			,{"Name":"D3D11_MESSAGE_ID_END_TRACKED_WORKLOAD_INVALID_ARG","Value":3146282}
 			,{"Name":"D3D11_MESSAGE_ID_TRACKED_WORKLOAD_DISJOINT_FAILURE","Value":3146283}
-			,{"Name":"D3D11_MESSAGE_ID_D3D11_5_MESSAGES_END","Value":3146284}
+			,{"Name":"D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_FORMAT_AND_WRITE_MASK_MISMATCH","Value":3146284}
+			,{"Name":"D3D11_MESSAGE_ID_D3D11_5_MESSAGES_END","Value":3146285}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -18272,7 +18422,7 @@
 		,"Params":[
 			{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"DriverType","Type":{"Kind":"ApiRef","Name":"D3D_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"D3D11_CREATE_DEVICE_FLAG","TargetKind":"Default","Api":"Graphics.Direct3D11","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFeatureLevels","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"D3D_FEATURE_LEVEL","TargetKind":"Default","Api":"Graphics.Direct3D","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"FeatureLevels","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}

@@ -21,7 +21,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xA4, 0x67, 0x59, 0x64,
 				0x92, 0x13,
 				0x10, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 				0x3E,
 				0x93,
 				0xFD
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

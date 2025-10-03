@@ -21,7 +21,7 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x49, 0x50, 0x75, 0x72,
 				0xF7, 0x5F,
 				0x5D, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 				0xFA,
 				0x6C,
 				0x7C
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

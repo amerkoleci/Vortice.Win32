@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x0D, 0x4C, 0xBE, 0x9D,
 				0x72, 0x35,
 				0xD9, 0x4D,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 				0x3B,
 				0xB7,
 				0x12
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

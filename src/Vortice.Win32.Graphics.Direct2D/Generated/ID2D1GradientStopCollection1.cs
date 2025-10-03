@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xF4, 0x72, 0x15, 0xAE,
 				0xD0, 0x5D,
 				0x77, 0x47,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 				0x2A,
 				0xE6,
 				0x3B
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

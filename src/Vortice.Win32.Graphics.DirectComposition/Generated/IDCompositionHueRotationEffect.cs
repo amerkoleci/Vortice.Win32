@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x20, 0xF9, 0xB9, 0x6D,
 				0x70, 0x07,
 				0x81, 0x47,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 				0xF9,
 				0xD1,
 				0x67
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12Heap1 : ID3D12Heap1.Interface, INativeGuid
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x89, 0x73, 0x2F, 0x57,
 				0x68, 0x21,
 				0xE3, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12Heap1 : ID3D12Heap1.Interface, INativeGuid
 				0x71,
 				0xBF,
 				0x6D
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

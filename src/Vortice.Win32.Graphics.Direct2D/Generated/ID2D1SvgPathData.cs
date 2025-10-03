@@ -21,7 +21,7 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xF4, 0xE4, 0x95, 0xC0,
 				0x98, 0xBB,
 				0xD6, 0x43,
@@ -33,7 +33,7 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 				0xEC,
 				0x98,
 				0x88
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

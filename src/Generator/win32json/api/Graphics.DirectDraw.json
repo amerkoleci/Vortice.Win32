@@ -11747,21 +11747,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous5_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11772,6 +11757,21 @@
 				,"Fields":[
 					{"Name":"ddpfPixelFormat","Type":{"Kind":"ApiRef","Name":"DDPIXELFORMAT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"dwFVF","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]

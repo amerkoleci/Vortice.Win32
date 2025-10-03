@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11UnorderedAccessView1 : ID3D11UnorderedAccessV
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x53, 0x61, 0x3B, 0x7B,
 				0x86, 0xA8,
 				0x44, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11UnorderedAccessView1 : ID3D11UnorderedAccessV
 				0x50,
 				0x04,
 				0x03
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -21,7 +21,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xAD, 0xF9, 0x32, 0x9B,
 				0xCC, 0xBD,
 				0xA6, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 				0x84,
 				0x57,
 				0x20
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

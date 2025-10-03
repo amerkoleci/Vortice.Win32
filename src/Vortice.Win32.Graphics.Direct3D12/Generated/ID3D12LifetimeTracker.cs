@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12LifetimeTracker : ID3D12LifetimeTracker.Inter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x36, 0x3D, 0xD0, 0x3F,
 				0xB1, 0x4E,
 				0x4A, 0x42,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12LifetimeTracker : ID3D12LifetimeTracker.Inter
 				0x8B,
 				0xA8,
 				0x13
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

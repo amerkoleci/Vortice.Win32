@@ -3,8 +3,6 @@
 // Original source is Copyright © Microsoft. All rights reserved.
 
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using static Win32.Apis;
 
 namespace Win32;
@@ -63,7 +61,7 @@ public unsafe struct ComPtr<T> : IDisposable
     /// <returns>The result of <see cref="IUnknown.QueryInterface"/> for the target type <typeparamref name="U"/>.</returns>
     /// <remarks>This method will automatically release the target COM object pointed to by <paramref name="other"/>, if any.</remarks>
     public readonly HResult As<U>(ref ComPtr<U> other)
-         where U : unmanaged, IUnknown.Interface
+        where U : unmanaged, IUnknown.Interface
     {
         U* ptr;
         HResult result = ptr_->QueryInterface(__uuidof<U>(), (void**)&ptr);
@@ -232,26 +230,13 @@ public unsafe struct ComPtr<T> : IDisposable
         return ptr_;
     }
 
-    /// <summary>
-    /// Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.
-    /// This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.
+    /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer. This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.
     /// </summary>
     /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public readonly T** GetAddressOf()
     {
         return (T**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
-    }
-
-    /// <summary>
-    /// Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <see langword="void"/> double pointer.
-    /// </summary>
-    /// <returns>The raw pointer to the input <see cref="ComPtr{T}"/> instance.</returns>
-    /// <remarks>This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.</remarks>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public unsafe void** GetVoidAddressOf()
-    {
-        return (void**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
     }
 
     /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.</summary>
@@ -270,15 +255,12 @@ public unsafe struct ComPtr<T> : IDisposable
         return GetAddressOf();
     }
 
-    /// <summary>
-    /// Releases the current COM object in use and gets the address of the <see cref="ComPtr{T}"/> instance as a void* double pointer.
-    /// This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.</summary>
-    /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
+    /// <summary>Resets the current instance by decrementing the reference count for the target COM object and setting the internal raw pointer to <see langword="null"/>.</summary>
+    /// <returns>The updated reference count for the COM object that was in use, if any.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void** ReleaseAndGetVoidAddressOf()
+    public uint Reset()
     {
-        _ = InternalRelease();
-        return GetVoidAddressOf();
+        return InternalRelease();
     }
 
     /// <summary>
@@ -294,11 +276,6 @@ public unsafe struct ComPtr<T> : IDisposable
 
         return copy;
     }
-
-    /// <summary>Resets the current instance by decrementing the reference count for the target COM object and setting the internal raw pointer to <see langword="null"/>.</summary>
-    /// <returns>The updated reference count for the COM object that was in use, if any.</returns>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public uint Reset() => InternalRelease();
 
     /// <summary>Swaps the current COM object reference with that of a given <see cref="ComPtr{T}"/> instance.</summary>
     /// <param name="r">The target <see cref="ComPtr{T}"/> instance to swap with the current one.</param>

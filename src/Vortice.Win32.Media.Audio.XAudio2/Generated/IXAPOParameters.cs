@@ -21,7 +21,7 @@ public unsafe partial struct IXAPOParameters : IXAPOParameters.Interface, INativ
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x66, 0x5C, 0xD9, 0x26,
 				0xF2, 0x80,
 				0x9A, 0x49,
@@ -33,7 +33,7 @@ public unsafe partial struct IXAPOParameters : IXAPOParameters.Interface, INativ
 				0x1C,
 				0x6D,
 				0x98
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

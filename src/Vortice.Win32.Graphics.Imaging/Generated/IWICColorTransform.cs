@@ -21,7 +21,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x4F, 0x03, 0x6F, 0xB6,
 				0xE2, 0xD0,
 				0xAB, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 				0x32,
 				0x1A,
 				0x94
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -668,6 +668,12 @@ public enum Feature
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS21"]/*' />
 	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS21</unmanaged>
 	Options21 = 53,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_APPLICATION_SPECIFIC_DRIVER_STATE"]/*' />
+	/// <unmanaged>D3D12_FEATURE_APPLICATION_SPECIFIC_DRIVER_STATE</unmanaged>
+	ApplicationSpecificDriverState = 56,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_BYTECODE_BYPASS_HASH_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_FEATURE_BYTECODE_BYPASS_HASH_SUPPORTED</unmanaged>
+	BytecodeBypassHashSupported = 57,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_MIN_PRECISION_SUPPORT"]/*' />
@@ -1151,6 +1157,9 @@ public enum RaytracingTier
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_TIER::D3D12_RAYTRACING_TIER_1_1"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_TIER_1_1</unmanaged>
 	Tier1_1 = 11,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_TIER::D3D12_RAYTRACING_TIER_1_2"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_TIER_1_2</unmanaged>
+	Tier1_2 = 12,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VARIABLE_SHADING_RATE_TIER"]/*' />
@@ -2831,6 +2840,9 @@ public enum RaytracingPipelineFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_FLAGS::D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_PROCEDURAL_PRIMITIVES"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_PROCEDURAL_PRIMITIVES</unmanaged>
 	SkipProceduralPrimitives = 512,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_FLAGS::D3D12_RAYTRACING_PIPELINE_FLAG_ALLOW_OPACITY_MICROMAPS"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_PIPELINE_FLAG_ALLOW_OPACITY_MICROMAPS</unmanaged>
+	AllowOpacityMicromaps = 1024,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_OVERRIDES_TYPE"]/*' />
@@ -2917,6 +2929,9 @@ public enum RaytracingGeometryType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TYPE::D3D12_RAYTRACING_GEOMETRY_TYPE_PROCEDURAL_PRIMITIVE_AABBS"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_GEOMETRY_TYPE_PROCEDURAL_PRIMITIVE_AABBS</unmanaged>
 	ProceduralPrimitiveAabbs = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TYPE::D3D12_RAYTRACING_GEOMETRY_TYPE_OMM_TRIANGLES"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_GEOMETRY_TYPE_OMM_TRIANGLES</unmanaged>
+	OmmTriangles = 2,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS"]/*' />
@@ -2939,6 +2954,60 @@ public enum RaytracingInstanceFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE</unmanaged>
 	ForceNonOpaque = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OMM_2_STATE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OMM_2_STATE</unmanaged>
+	ForceOmm2State = 16,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_DISABLE_OMMS"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_DISABLE_OMMS</unmanaged>
+	DisableOmms = 32,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX</unmanaged>
+public enum RaytracingOpacityMicromapSpecialIndex
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX::D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_TRANSPARENT"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_TRANSPARENT</unmanaged>
+	FullyTransparent = -1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX::D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_OPAQUE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_OPAQUE</unmanaged>
+	FullyOpaque = -2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX::D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_TRANSPARENT"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_TRANSPARENT</unmanaged>
+	FullyUnknownTransparent = -3,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX::D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_OPAQUE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_OPAQUE</unmanaged>
+	FullyUnknownOpaque = -4,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_STATE"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_STATE</unmanaged>
+public enum RaytracingOpacityMicromapState
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_STATE::D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_TRANSPARENT"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_TRANSPARENT</unmanaged>
+	Transparent = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_STATE::D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_OPAQUE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_OPAQUE</unmanaged>
+	Opaque = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_STATE::D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_TRANSPARENT"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_TRANSPARENT</unmanaged>
+	UnknownTransparent = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_STATE::D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_OPAQUE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_OPAQUE</unmanaged>
+	UnknownOpaque = 3,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT</unmanaged>
+public enum RaytracingOpacityMicromapFormat
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT::D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_2_STATE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_2_STATE</unmanaged>
+	Oc12State = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT::D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_4_STATE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_4_STATE</unmanaged>
+	Oc14State = 2,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS"]/*' />
@@ -2967,6 +3036,12 @@ public enum RaytracingAccelerationStructureBuildFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PERFORM_UPDATE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PERFORM_UPDATE</unmanaged>
 	PerformUpdate = 32,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_OMM_UPDATE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_OMM_UPDATE</unmanaged>
+	AllowOmmUpdate = 64,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_DISABLE_OMMS"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_DISABLE_OMMS</unmanaged>
+	AllowDisableOmms = 128,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE"]/*' />
@@ -3000,6 +3075,9 @@ public enum RaytracingAccelerationStructureType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL</unmanaged>
 	BottomLevel = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_OPACITY_MICROMAP_ARRAY"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_OPACITY_MICROMAP_ARRAY</unmanaged>
+	OpacityMicromapArray = 2,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT"]/*' />
@@ -3039,6 +3117,9 @@ public enum SerializedDataType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE::D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
 	/// <unmanaged>D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
 	RaytracingAccelerationStructure = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE::D3D12_SERIALIZED_DATA_APPLICATION_SPECIFIC_DRIVER_STATE"]/*' />
+	/// <unmanaged>D3D12_SERIALIZED_DATA_APPLICATION_SPECIFIC_DRIVER_STATE</unmanaged>
+	ApplicationSpecificDriverState = 1,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS"]/*' />
@@ -3060,6 +3141,42 @@ public enum DriverMatchingIdentifierStatus
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS::D3D12_DRIVER_MATCHING_IDENTIFIER_INCOMPATIBLE_TYPE"]/*' />
 	/// <unmanaged>D3D12_DRIVER_MATCHING_IDENTIFIER_INCOMPATIBLE_TYPE</unmanaged>
 	IncompatibleType = 4,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE"]/*' />
+/// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE</unmanaged>
+public enum SerializedRaytracingAccelerationStructureHeaderPostambleType
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE::D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_NONE"]/*' />
+	/// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_NONE</unmanaged>
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE::D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BOTTOM_LEVEL_POINTERS"]/*' />
+	/// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BOTTOM_LEVEL_POINTERS</unmanaged>
+	BottomLevelPointers = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE::D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BLOCKS"]/*' />
+	/// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BLOCKS</unmanaged>
+	Blocks = -1,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_BLOCK_TYPE"]/*' />
+/// <unmanaged>D3D12_SERIALIZED_BLOCK_TYPE</unmanaged>
+public enum SerializedBlockType
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_BLOCK_TYPE::D3D12_RAYTRACING_SERIALIZED_BLOCK_TYPE_OPACITY_MICROMAPS"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_SERIALIZED_BLOCK_TYPE_OPACITY_MICROMAPS</unmanaged>
+	D3D12_RAYTRACING_SERIALIZED_BLOCK_TYPE_OPACITY_MICROMAPS = 0,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TYPE"]/*' />
+/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TYPE</unmanaged>
+public enum RaytracingOpacityMicromapArrayPostbuildInfoType
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TYPE::D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE</unmanaged>
+	D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TYPE::D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION"]/*' />
+	/// <unmanaged>D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION</unmanaged>
+	D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION = 1,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAY_FLAGS"]/*' />
@@ -3100,6 +3217,9 @@ public enum RayFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAY_FLAGS::D3D12_RAY_FLAG_SKIP_PROCEDURAL_PRIMITIVES"]/*' />
 	/// <unmanaged>D3D12_RAY_FLAG_SKIP_PROCEDURAL_PRIMITIVES</unmanaged>
 	SkipProceduralPrimitives = 512,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAY_FLAGS::D3D12_RAY_FLAG_FORCE_OMM_2_STATE"]/*' />
+	/// <unmanaged>D3D12_RAY_FLAG_FORCE_OMM_2_STATE</unmanaged>
+	ForceOmm2State = 1024,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND"]/*' />
@@ -3265,6 +3385,9 @@ public enum AutoBreadcrumbOperation
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETPROGRAM"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_SETPROGRAM</unmanaged>
 	Setprogram = 48,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES2"]/*' />
+	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES2</unmanaged>
+	Processframes2 = 52,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION"]/*' />
@@ -3961,6 +4084,24 @@ public enum ShaderCacheControlFlags
 	Clear = 4,
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS"]/*' />
+/// <unmanaged>D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS</unmanaged>
+public enum ApplicationSpecificDriverBlobStatus
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS::D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_UNKNOWN"]/*' />
+	/// <unmanaged>D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_UNKNOWN</unmanaged>
+	D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_UNKNOWN = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS::D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_USED"]/*' />
+	/// <unmanaged>D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_USED</unmanaged>
+	D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_USED = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS::D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_IGNORED"]/*' />
+	/// <unmanaged>D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_IGNORED</unmanaged>
+	D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_IGNORED = 3,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS::D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_NOT_SPECIFIED"]/*' />
+	/// <unmanaged>D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_NOT_SPECIFIED</unmanaged>
+	D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_NOT_SPECIFIED = 4,
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS"]/*' />
 /// <unmanaged>D3D12_GPU_BASED_VALIDATION_FLAGS</unmanaged>
 [Flags]
@@ -4006,6 +4147,9 @@ public enum DebugDeviceParameterType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_PARAMETER_TYPE::D3D12_DEBUG_DEVICE_PARAMETER_GPU_SLOWDOWN_PERFORMANCE_FACTOR"]/*' />
 	/// <unmanaged>D3D12_DEBUG_DEVICE_PARAMETER_GPU_SLOWDOWN_PERFORMANCE_FACTOR</unmanaged>
 	GpuSlowdownPerformanceFactor = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_PARAMETER_TYPE::D3D12_DEBUG_DEVICE_PARAMETER_BYTECODE_VALIDATION_MODE"]/*' />
+	/// <unmanaged>D3D12_DEBUG_DEVICE_PARAMETER_BYTECODE_VALIDATION_MODE</unmanaged>
+	BytecodeValidationMode = 3,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE"]/*' />
@@ -4071,6 +4215,24 @@ public enum GpuBasedValidationPipelineStateCreateFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS::D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS_VALID_MASK"]/*' />
 	/// <unmanaged>D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS_VALID_MASK</unmanaged>
 	ValidMask = 7,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE"]/*' />
+/// <unmanaged>D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE</unmanaged>
+public enum DebugDeviceBytecodeValidationMode
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE::D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_DISABLED"]/*' />
+	/// <unmanaged>D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_DISABLED</unmanaged>
+	D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_DISABLED = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE::D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_WHEN_HASH_BYPASSED"]/*' />
+	/// <unmanaged>D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_WHEN_HASH_BYPASSED</unmanaged>
+	D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_WHEN_HASH_BYPASSED = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE::D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_ALL_BYTECODE"]/*' />
+	/// <unmanaged>D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_ALL_BYTECODE</unmanaged>
+	D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_ALL_BYTECODE = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE::D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE_DEFAULT"]/*' />
+	/// <unmanaged>D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE_DEFAULT</unmanaged>
+	Default = 1,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE"]/*' />
@@ -7101,6 +7263,21 @@ public enum MessageId
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DIFFERENT_DESCRIPTOR_HEAP_SET_AFTER_ROOT_SIGNATURE_WITH_DIRECTLY_INDEXED_FLAG"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DIFFERENT_DESCRIPTOR_HEAP_SET_AFTER_ROOT_SIGNATURE_WITH_DIRECTLY_INDEXED_FLAG</unmanaged>
 	DifferentDescriptorHeapSetAfterRootSignatureWithDirectlyIndexedFlag = 1420,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_APPLICATION_SPECIFIC_DRIVER_STATE_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_APPLICATION_SPECIFIC_DRIVER_STATE_NOT_SUPPORTED</unmanaged>
+	ApplicationSpecificDriverStateNotSupported = 1421,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_TARGET_OR_DEPTH_STENCIL_RESOUCE_NOT_INITIALIZED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_TARGET_OR_DEPTH_STENCIL_RESOUCE_NOT_INITIALIZED</unmanaged>
+	RenderTargetOrDepthStencilResouceNotInitialized = 1422,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_BYTECODE_VALIDATION_ERROR"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_BYTECODE_VALIDATION_ERROR</unmanaged>
+	BytecodeValidationError = 1423,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_FENCE_ZERO_WAIT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_FENCE_ZERO_WAIT</unmanaged>
+	FenceZeroWait = 1424,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_NON_COMMON_RESOURCE_IN_COPY_QUEUE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_NON_COMMON_RESOURCE_IN_COPY_QUEUE</unmanaged>
+	NonCommonResourceInCopyQueue = 1425,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS"]/*' />

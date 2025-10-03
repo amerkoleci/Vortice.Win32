@@ -21,7 +21,7 @@ public unsafe partial struct ID3D12RootSignature : ID3D12RootSignature.Interface
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x66, 0x6B, 0x4A, 0xC5,
 				0xDF, 0x72,
 				0xE8, 0x4E,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3D12RootSignature : ID3D12RootSignature.Interface
 				0x42,
 				0x92,
 				0x14
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

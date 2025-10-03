@@ -3920,6 +3920,19 @@
 		]
 	}
 	,{
+		"Name":"Version"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"V2","Value":2}
+			,{"Name":"V3","Value":3}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"GdiplusStartupParams"
 		,"Architectures":[]
 		,"Platform":null
@@ -3930,6 +3943,7 @@
 			{"Name":"GdiplusStartupDefault","Value":0}
 			,{"Name":"GdiplusStartupNoSetRound","Value":1}
 			,{"Name":"GdiplusStartupSetPSValue","Value":2}
+			,{"Name":"GdiplusStartupReserved0","Value":4}
 			,{"Name":"GdiplusStartupTransparencyMask","Value":-16777216}
 		]
 		,"IntegerBase":"Int32"

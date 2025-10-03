@@ -21,7 +21,7 @@ public unsafe partial struct IDCompositionClip : IDCompositionClip.Interface, IN
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x03, 0x37, 0xAC, 0x64,
 				0x3F, 0x9D,
 				0xEC, 0x45,
@@ -33,7 +33,7 @@ public unsafe partial struct IDCompositionClip : IDCompositionClip.Interface, IN
 				0x7A,
 				0x13,
 				0xA7
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

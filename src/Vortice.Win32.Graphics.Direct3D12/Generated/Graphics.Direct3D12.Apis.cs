@@ -561,7 +561,7 @@ public static partial class Apis
 
 	public const uint D3D12_PIXEL_ADDRESS_RANGE_BIT_COUNT = 15;
 
-	public const uint D3D12_PREVIEW_SDK_VERSION = 714;
+	public const uint D3D12_PREVIEW_SDK_VERSION = 717;
 
 	public const uint D3D12_PRE_SCISSOR_PIXEL_ADDRESS_RANGE_BIT_COUNT = 16;
 
@@ -697,7 +697,7 @@ public static partial class Apis
 
 	public const uint D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT = 2;
 
-	public const uint D3D12_SDK_VERSION = 614;
+	public const uint D3D12_SDK_VERSION = 616;
 
 	public const uint D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES = 32;
 
@@ -803,6 +803,10 @@ public static partial class Apis
 
 	public const uint D3D12_TEXTURE_DATA_PLACEMENT_ALIGNMENT = 512;
 
+	public const uint D3D12_TIGHT_ALIGNMENT_MIN_COMMITTED_RESOURCE_ALIGNEMNT = 4096;
+
+	public const uint D3D12_TIGHT_ALIGNMENT_MIN_PLACED_RESOURCE_ALIGNEMNT = 8;
+
 	public const uint D3D12_TILED_RESOURCE_TILE_SIZE_IN_BYTES = 65536;
 
 	public const uint D3D12_TRACKED_WORKLOAD_MAX_INSTANCES = 32;
@@ -871,6 +875,8 @@ public static partial class Apis
 
 	public const uint D3D12_WORK_GRAPHS_MAX_NODE_DEPTH = 32;
 
+	public const uint LUID_DEFINED = 1;
+
 	public const uint D3D12_SHADER_COMPONENT_MAPPING_MASK = 7;
 
 	public const uint D3D12_SHADER_COMPONENT_MAPPING_SHIFT = 3;
@@ -889,14 +895,12 @@ public static partial class Apis
 
 	public const uint D3D12_ANISOTROPIC_FILTERING_BIT = 64;
 
-	public const uint LUID_DEFINED = 1;
-
 	public static ref readonly Guid D3D12_PROTECTED_RESOURCES_SESSION_HARDWARE_PROTECTED
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x4E, 0x08, 0xB0, 0x62,
 				0x0E, 0xC7,
 				0xAA, 0x4D,
@@ -908,7 +912,7 @@ public static partial class Apis
 				0x5A,
 				0x04,
 				0x82
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -920,7 +924,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xEB, 0x2A, 0x35, 0xF2,
 				0x84, 0xDD,
 				0xFE, 0x49,
@@ -932,7 +936,7 @@ public static partial class Apis
 				0xCC,
 				0x1B,
 				0x4F
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -944,7 +948,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xB1, 0x16, 0x82, 0xE3,
 				0x8C, 0x3C,
 				0x33, 0x48,
@@ -956,7 +960,7 @@ public static partial class Apis
 				0x5D,
 				0x96,
 				0xC8
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -968,7 +972,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xC4, 0xBB, 0x75, 0x4A,
 				0xF4, 0x9F,
 				0xD8, 0x4A,
@@ -980,7 +984,7 @@ public static partial class Apis
 				0xDC,
 				0x5F,
 				0xF2
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -992,7 +996,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xCA, 0x6A, 0xDA, 0x7C,
 				0x3E, 0xA0,
 				0xC8, 0x49,
@@ -1004,7 +1008,7 @@ public static partial class Apis
 				0x0E,
 				0x07,
 				0xCE
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -1016,7 +1020,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xBF, 0x63, 0x48, 0x11,
 				0x86, 0xC3,
 				0xEE, 0x4A,
@@ -1028,7 +1032,31 @@ public static partial class Apis
 				0x06,
 				0x29,
 				0x55
-			};
+			];
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid CLSID_D3D12DSRDeviceFactory
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = [
+				0x7E, 0xD2, 0x6D, 0xBB,
+				0xA9, 0x94,
+				0xA6, 0x41,
+				0x9F,
+				0x1B,
+				0x13,
+				0x37,
+				0x72,
+				0x17,
+				0x24,
+				0x28
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -1044,7 +1072,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x36, 0x2E, 0x90, 0xD4,
 				0x7A, 0x75,
 				0x42, 0x49,
@@ -1056,7 +1084,7 @@ public static partial class Apis
 				0xFA,
 				0x43,
 				0xCD
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -1068,7 +1096,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x8C, 0xA9, 0x59, 0xCF,
 				0x50, 0xA9,
 				0x26, 0x43,
@@ -1080,7 +1108,7 @@ public static partial class Apis
 				0x7B,
 				0xFD,
 				0x95
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -1140,7 +1168,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x3E, 0x57, 0xF5, 0x76,
 				0x3A, 0xF1,
 				0xF5, 0x40,
@@ -1152,7 +1180,7 @@ public static partial class Apis
 				0x18,
 				0x93,
 				0x3F
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -1164,7 +1192,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x5F, 0x72, 0xC4, 0xC9,
 				0x1A, 0xA8,
 				0x56, 0x4F,
@@ -1176,7 +1204,31 @@ public static partial class Apis
 				0xD6,
 				0x94,
 				0xFB
-			};
+			];
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D12GPUUploadHeapsOnUnsupportedOS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = [
+				0xF3, 0x51, 0xDC, 0x45,
+				0x7F, 0x76,
+				0x88, 0x45,
+				0xB2,
+				0x06,
+				0x0B,
+				0xAA,
+				0x2B,
+				0x16,
+				0xFB,
+				0xAE
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -1360,6 +1412,8 @@ public static partial class Apis
 	public const Feature D3D12_FEATURE_PLACED_RESOURCE_SUPPORT_INFO = Feature.PlacedResourceSupportInfo;
 	public const Feature D3D12_FEATURE_HARDWARE_COPY = Feature.HardwareCopy;
 	public const Feature D3D12_FEATURE_D3D12_OPTIONS21 = Feature.Options21;
+	public const Feature D3D12_FEATURE_APPLICATION_SPECIFIC_DRIVER_STATE = Feature.ApplicationSpecificDriverState;
+	public const Feature D3D12_FEATURE_BYTECODE_BYPASS_HASH_SUPPORTED = Feature.BytecodeBypassHashSupported;
 	public const ShaderMinPrecisionSupport D3D12_SHADER_MIN_PRECISION_SUPPORT_NONE = ShaderMinPrecisionSupport.None;
 	public const ShaderMinPrecisionSupport D3D12_SHADER_MIN_PRECISION_SUPPORT_10_BIT = ShaderMinPrecisionSupport.P10Bit;
 	public const ShaderMinPrecisionSupport D3D12_SHADER_MIN_PRECISION_SUPPORT_16_BIT = ShaderMinPrecisionSupport.P16Bit;
@@ -1479,6 +1533,7 @@ public static partial class Apis
 	public const RaytracingTier D3D12_RAYTRACING_TIER_NOT_SUPPORTED = RaytracingTier.NotSupported;
 	public const RaytracingTier D3D12_RAYTRACING_TIER_1_0 = RaytracingTier.Tier1_0;
 	public const RaytracingTier D3D12_RAYTRACING_TIER_1_1 = RaytracingTier.Tier1_1;
+	public const RaytracingTier D3D12_RAYTRACING_TIER_1_2 = RaytracingTier.Tier1_2;
 	public const VariableShadingRateTier D3D12_VARIABLE_SHADING_RATE_TIER_NOT_SUPPORTED = VariableShadingRateTier.NotSupported;
 	public const VariableShadingRateTier D3D12_VARIABLE_SHADING_RATE_TIER_1 = VariableShadingRateTier.Tier1;
 	public const VariableShadingRateTier D3D12_VARIABLE_SHADING_RATE_TIER_2 = VariableShadingRateTier.Tier2;
@@ -1886,6 +1941,7 @@ public static partial class Apis
 	public const RaytracingPipelineFlags D3D12_RAYTRACING_PIPELINE_FLAG_NONE = RaytracingPipelineFlags.None;
 	public const RaytracingPipelineFlags D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_TRIANGLES = RaytracingPipelineFlags.SkipTriangles;
 	public const RaytracingPipelineFlags D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_PROCEDURAL_PRIMITIVES = RaytracingPipelineFlags.SkipProceduralPrimitives;
+	public const RaytracingPipelineFlags D3D12_RAYTRACING_PIPELINE_FLAG_ALLOW_OPACITY_MICROMAPS = RaytracingPipelineFlags.AllowOpacityMicromaps;
 	public const NodeOverridesType D3D12_NODE_OVERRIDES_TYPE_NONE = NodeOverridesType.None;
 	public const NodeOverridesType D3D12_NODE_OVERRIDES_TYPE_BROADCASTING_LAUNCH = NodeOverridesType.BroadcastingLaunch;
 	public const NodeOverridesType D3D12_NODE_OVERRIDES_TYPE_COALESCING_LAUNCH = NodeOverridesType.CoalescingLaunch;
@@ -1902,11 +1958,24 @@ public static partial class Apis
 	public const RaytracingGeometryFlags D3D12_RAYTRACING_GEOMETRY_FLAG_NO_DUPLICATE_ANYHIT_INVOCATION = RaytracingGeometryFlags.NoDuplicateAnyhitInvocation;
 	public const RaytracingGeometryType D3D12_RAYTRACING_GEOMETRY_TYPE_TRIANGLES = RaytracingGeometryType.Triangles;
 	public const RaytracingGeometryType D3D12_RAYTRACING_GEOMETRY_TYPE_PROCEDURAL_PRIMITIVE_AABBS = RaytracingGeometryType.ProceduralPrimitiveAabbs;
+	public const RaytracingGeometryType D3D12_RAYTRACING_GEOMETRY_TYPE_OMM_TRIANGLES = RaytracingGeometryType.OmmTriangles;
 	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_NONE = RaytracingInstanceFlags.None;
 	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_CULL_DISABLE = RaytracingInstanceFlags.TriangleCullDisable;
 	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_FRONT_COUNTERCLOCKWISE = RaytracingInstanceFlags.TriangleFrontCounterclockwise;
 	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OPAQUE = RaytracingInstanceFlags.ForceOpaque;
 	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE = RaytracingInstanceFlags.ForceNonOpaque;
+	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OMM_2_STATE = RaytracingInstanceFlags.ForceOmm2State;
+	public const RaytracingInstanceFlags D3D12_RAYTRACING_INSTANCE_FLAG_DISABLE_OMMS = RaytracingInstanceFlags.DisableOmms;
+	public const RaytracingOpacityMicromapSpecialIndex D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_TRANSPARENT = RaytracingOpacityMicromapSpecialIndex.FullyTransparent;
+	public const RaytracingOpacityMicromapSpecialIndex D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_OPAQUE = RaytracingOpacityMicromapSpecialIndex.FullyOpaque;
+	public const RaytracingOpacityMicromapSpecialIndex D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_TRANSPARENT = RaytracingOpacityMicromapSpecialIndex.FullyUnknownTransparent;
+	public const RaytracingOpacityMicromapSpecialIndex D3D12_RAYTRACING_OPACITY_MICROMAP_SPECIAL_INDEX_FULLY_UNKNOWN_OPAQUE = RaytracingOpacityMicromapSpecialIndex.FullyUnknownOpaque;
+	public const RaytracingOpacityMicromapState D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_TRANSPARENT = RaytracingOpacityMicromapState.Transparent;
+	public const RaytracingOpacityMicromapState D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_OPAQUE = RaytracingOpacityMicromapState.Opaque;
+	public const RaytracingOpacityMicromapState D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_TRANSPARENT = RaytracingOpacityMicromapState.UnknownTransparent;
+	public const RaytracingOpacityMicromapState D3D12_RAYTRACING_OPACITY_MICROMAP_STATE_UNKNOWN_OPAQUE = RaytracingOpacityMicromapState.UnknownOpaque;
+	public const RaytracingOpacityMicromapFormat D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_2_STATE = RaytracingOpacityMicromapFormat.Oc12State;
+	public const RaytracingOpacityMicromapFormat D3D12_RAYTRACING_OPACITY_MICROMAP_FORMAT_OC1_4_STATE = RaytracingOpacityMicromapFormat.Oc14State;
 	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_NONE = RaytracingAccelerationStructureBuildFlags.None;
 	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_UPDATE = RaytracingAccelerationStructureBuildFlags.AllowUpdate;
 	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_COMPACTION = RaytracingAccelerationStructureBuildFlags.AllowCompaction;
@@ -1914,6 +1983,8 @@ public static partial class Apis
 	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PREFER_FAST_BUILD = RaytracingAccelerationStructureBuildFlags.PreferFastBuild;
 	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_MINIMIZE_MEMORY = RaytracingAccelerationStructureBuildFlags.MinimizeMemory;
 	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PERFORM_UPDATE = RaytracingAccelerationStructureBuildFlags.PerformUpdate;
+	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_OMM_UPDATE = RaytracingAccelerationStructureBuildFlags.AllowOmmUpdate;
+	public const RaytracingAccelerationStructureBuildFlags D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_ALLOW_DISABLE_OMMS = RaytracingAccelerationStructureBuildFlags.AllowDisableOmms;
 	public const RaytracingAccelerationStructureCopyMode D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE_CLONE = RaytracingAccelerationStructureCopyMode.Clone;
 	public const RaytracingAccelerationStructureCopyMode D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE_COMPACT = RaytracingAccelerationStructureCopyMode.Compact;
 	public const RaytracingAccelerationStructureCopyMode D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE_VISUALIZATION_DECODE_FOR_TOOLS = RaytracingAccelerationStructureCopyMode.VisualizationDecodeForTools;
@@ -1921,6 +1992,7 @@ public static partial class Apis
 	public const RaytracingAccelerationStructureCopyMode D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE_DESERIALIZE = RaytracingAccelerationStructureCopyMode.Deserialize;
 	public const RaytracingAccelerationStructureType D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL = RaytracingAccelerationStructureType.TopLevel;
 	public const RaytracingAccelerationStructureType D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL = RaytracingAccelerationStructureType.BottomLevel;
+	public const RaytracingAccelerationStructureType D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_OPACITY_MICROMAP_ARRAY = RaytracingAccelerationStructureType.OpacityMicromapArray;
 	public const ElementsLayout D3D12_ELEMENTS_LAYOUT_ARRAY = ElementsLayout.Array;
 	public const ElementsLayout D3D12_ELEMENTS_LAYOUT_ARRAY_OF_POINTERS = ElementsLayout.ArrayOfPointers;
 	public const RaytracingAccelerationStructurePostbuildInfoType D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_COMPACTED_SIZE = RaytracingAccelerationStructurePostbuildInfoType.CompactedSize;
@@ -1928,11 +2000,18 @@ public static partial class Apis
 	public const RaytracingAccelerationStructurePostbuildInfoType D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION = RaytracingAccelerationStructurePostbuildInfoType.Serialization;
 	public const RaytracingAccelerationStructurePostbuildInfoType D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_CURRENT_SIZE = RaytracingAccelerationStructurePostbuildInfoType.CurrentSize;
 	public const SerializedDataType D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE = SerializedDataType.RaytracingAccelerationStructure;
+	public const SerializedDataType D3D12_SERIALIZED_DATA_APPLICATION_SPECIFIC_DRIVER_STATE = SerializedDataType.ApplicationSpecificDriverState;
 	public const DriverMatchingIdentifierStatus D3D12_DRIVER_MATCHING_IDENTIFIER_COMPATIBLE_WITH_DEVICE = DriverMatchingIdentifierStatus.CompatibleWithDevice;
 	public const DriverMatchingIdentifierStatus D3D12_DRIVER_MATCHING_IDENTIFIER_UNSUPPORTED_TYPE = DriverMatchingIdentifierStatus.UnsupportedType;
 	public const DriverMatchingIdentifierStatus D3D12_DRIVER_MATCHING_IDENTIFIER_UNRECOGNIZED = DriverMatchingIdentifierStatus.Unrecognized;
 	public const DriverMatchingIdentifierStatus D3D12_DRIVER_MATCHING_IDENTIFIER_INCOMPATIBLE_VERSION = DriverMatchingIdentifierStatus.IncompatibleVersion;
 	public const DriverMatchingIdentifierStatus D3D12_DRIVER_MATCHING_IDENTIFIER_INCOMPATIBLE_TYPE = DriverMatchingIdentifierStatus.IncompatibleType;
+	public const SerializedRaytracingAccelerationStructureHeaderPostambleType D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_NONE = SerializedRaytracingAccelerationStructureHeaderPostambleType.None;
+	public const SerializedRaytracingAccelerationStructureHeaderPostambleType D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BOTTOM_LEVEL_POINTERS = SerializedRaytracingAccelerationStructureHeaderPostambleType.BottomLevelPointers;
+	public const SerializedRaytracingAccelerationStructureHeaderPostambleType D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER_POSTAMBLE_TYPE_BLOCKS = SerializedRaytracingAccelerationStructureHeaderPostambleType.Blocks;
+	public const SerializedBlockType D3D12_RAYTRACING_SERIALIZED_BLOCK_TYPE_OPACITY_MICROMAPS = SerializedBlockType.D3D12_RAYTRACING_SERIALIZED_BLOCK_TYPE_OPACITY_MICROMAPS;
+	public const RaytracingOpacityMicromapArrayPostbuildInfoType D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE = RaytracingOpacityMicromapArrayPostbuildInfoType.D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_CURRENT_SIZE;
+	public const RaytracingOpacityMicromapArrayPostbuildInfoType D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION = RaytracingOpacityMicromapArrayPostbuildInfoType.D3D12_RAYTRACING_OPACITY_MICROMAP_ARRAY_POSTBUILD_INFO_TOOLS_VISUALIZATION;
 	public const RayFlags D3D12_RAY_FLAG_NONE = RayFlags.None;
 	public const RayFlags D3D12_RAY_FLAG_FORCE_OPAQUE = RayFlags.ForceOpaque;
 	public const RayFlags D3D12_RAY_FLAG_FORCE_NON_OPAQUE = RayFlags.ForceNonOpaque;
@@ -1944,6 +2023,7 @@ public static partial class Apis
 	public const RayFlags D3D12_RAY_FLAG_CULL_NON_OPAQUE = RayFlags.CullNonOpaque;
 	public const RayFlags D3D12_RAY_FLAG_SKIP_TRIANGLES = RayFlags.SkipTriangles;
 	public const RayFlags D3D12_RAY_FLAG_SKIP_PROCEDURAL_PRIMITIVES = RayFlags.SkipProceduralPrimitives;
+	public const RayFlags D3D12_RAY_FLAG_FORCE_OMM_2_STATE = RayFlags.ForceOmm2State;
 	public const HitKind D3D12_HIT_KIND_TRIANGLE_FRONT_FACE = HitKind.TriangleFrontFace;
 	public const HitKind D3D12_HIT_KIND_TRIANGLE_BACK_FACE = HitKind.TriangleBackFace;
 	public const AutoBreadcrumbOperation D3D12_AUTO_BREADCRUMB_OP_SETMARKER = AutoBreadcrumbOperation.SetMarker;
@@ -1995,6 +2075,7 @@ public static partial class Apis
 	public const AutoBreadcrumbOperation D3D12_AUTO_BREADCRUMB_OP_BEGIN_COMMAND_LIST = AutoBreadcrumbOperation.BeginCommandList;
 	public const AutoBreadcrumbOperation D3D12_AUTO_BREADCRUMB_OP_DISPATCHGRAPH = AutoBreadcrumbOperation.Dispatchgraph;
 	public const AutoBreadcrumbOperation D3D12_AUTO_BREADCRUMB_OP_SETPROGRAM = AutoBreadcrumbOperation.Setprogram;
+	public const AutoBreadcrumbOperation D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES2 = AutoBreadcrumbOperation.Processframes2;
 	public const DredVersion D3D12_DRED_VERSION_1_0 = DredVersion.V1_0;
 	public const DredVersion D3D12_DRED_VERSION_1_1 = DredVersion.V1_1;
 	public const DredVersion D3D12_DRED_VERSION_1_2 = DredVersion.V1_2;
@@ -2176,6 +2257,10 @@ public static partial class Apis
 	public const ShaderCacheControlFlags D3D12_SHADER_CACHE_CONTROL_FLAG_DISABLE = ShaderCacheControlFlags.Disable;
 	public const ShaderCacheControlFlags D3D12_SHADER_CACHE_CONTROL_FLAG_ENABLE = ShaderCacheControlFlags.Enable;
 	public const ShaderCacheControlFlags D3D12_SHADER_CACHE_CONTROL_FLAG_CLEAR = ShaderCacheControlFlags.Clear;
+	public const ApplicationSpecificDriverBlobStatus D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_UNKNOWN = ApplicationSpecificDriverBlobStatus.D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_UNKNOWN;
+	public const ApplicationSpecificDriverBlobStatus D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_USED = ApplicationSpecificDriverBlobStatus.D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_USED;
+	public const ApplicationSpecificDriverBlobStatus D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_IGNORED = ApplicationSpecificDriverBlobStatus.D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_IGNORED;
+	public const ApplicationSpecificDriverBlobStatus D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_NOT_SPECIFIED = ApplicationSpecificDriverBlobStatus.D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_NOT_SPECIFIED;
 	public const GpuBasedValidationFlags D3D12_GPU_BASED_VALIDATION_FLAGS_NONE = GpuBasedValidationFlags.None;
 	public const GpuBasedValidationFlags D3D12_GPU_BASED_VALIDATION_FLAGS_DISABLE_STATE_TRACKING = GpuBasedValidationFlags.DisableStateTracking;
 	public const ReportLiveDeviceObjectFlags D3D12_RLDO_NONE = ReportLiveDeviceObjectFlags.None;
@@ -2185,6 +2270,7 @@ public static partial class Apis
 	public const DebugDeviceParameterType D3D12_DEBUG_DEVICE_PARAMETER_FEATURE_FLAGS = DebugDeviceParameterType.FeatureFlags;
 	public const DebugDeviceParameterType D3D12_DEBUG_DEVICE_PARAMETER_GPU_BASED_VALIDATION_SETTINGS = DebugDeviceParameterType.GpuBasedValidationSettings;
 	public const DebugDeviceParameterType D3D12_DEBUG_DEVICE_PARAMETER_GPU_SLOWDOWN_PERFORMANCE_FACTOR = DebugDeviceParameterType.GpuSlowdownPerformanceFactor;
+	public const DebugDeviceParameterType D3D12_DEBUG_DEVICE_PARAMETER_BYTECODE_VALIDATION_MODE = DebugDeviceParameterType.BytecodeValidationMode;
 	public const DebugFeature D3D12_DEBUG_FEATURE_NONE = DebugFeature.None;
 	public const DebugFeature D3D12_DEBUG_FEATURE_ALLOW_BEHAVIOR_CHANGING_DEBUG_AIDS = DebugFeature.AllowBehaviorChangingDebugAids;
 	public const DebugFeature D3D12_DEBUG_FEATURE_CONSERVATIVE_RESOURCE_STATE_TRACKING = DebugFeature.ConservativeResourceStateTracking;
@@ -2200,6 +2286,10 @@ public static partial class Apis
 	public const GpuBasedValidationPipelineStateCreateFlags D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAG_FRONT_LOAD_CREATE_UNGUARDED_VALIDATION_SHADERS = GpuBasedValidationPipelineStateCreateFlags.FrontLoadCreateUnguardedValidationShaders;
 	public const GpuBasedValidationPipelineStateCreateFlags D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAG_FRONT_LOAD_CREATE_GUARDED_VALIDATION_SHADERS = GpuBasedValidationPipelineStateCreateFlags.FrontLoadCreateGuardedValidationShaders;
 	public const GpuBasedValidationPipelineStateCreateFlags D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS_VALID_MASK = GpuBasedValidationPipelineStateCreateFlags.ValidMask;
+	public const DebugDeviceBytecodeValidationMode D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_DISABLED = DebugDeviceBytecodeValidationMode.D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_DISABLED;
+	public const DebugDeviceBytecodeValidationMode D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_WHEN_HASH_BYPASSED = DebugDeviceBytecodeValidationMode.D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_WHEN_HASH_BYPASSED;
+	public const DebugDeviceBytecodeValidationMode D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_ALL_BYTECODE = DebugDeviceBytecodeValidationMode.D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_ALL_BYTECODE;
+	public const DebugDeviceBytecodeValidationMode D3D12_DEBUG_DEVICE_BYTECODE_VALIDATION_MODE_DEFAULT = DebugDeviceBytecodeValidationMode.Default;
 	public const DebugCommandListParameterType D3D12_DEBUG_COMMAND_LIST_PARAMETER_GPU_BASED_VALIDATION_SETTINGS = DebugCommandListParameterType.GpuBasedValidationSettings;
 	public const MessageCategory D3D12_MESSAGE_CATEGORY_APPLICATION_DEFINED = MessageCategory.ApplicationDefined;
 	public const MessageCategory D3D12_MESSAGE_CATEGORY_MISCELLANEOUS = MessageCategory.Miscellaneous;
@@ -3202,6 +3292,11 @@ public static partial class Apis
 	public const MessageId D3D12_MESSAGE_ID_COMMAND_LIST_DRAW_INSTANCE_COUNT_ZERO = MessageId.CommandListDrawInstanceCountZero;
 	public const MessageId D3D12_MESSAGE_ID_DESCRIPTOR_HEAP_NOT_SET_BEFORE_ROOT_SIGNATURE_WITH_DIRECTLY_INDEXED_FLAG = MessageId.DescriptorHeapNotSetBeforeRootSignatureWithDirectlyIndexedFlag;
 	public const MessageId D3D12_MESSAGE_ID_DIFFERENT_DESCRIPTOR_HEAP_SET_AFTER_ROOT_SIGNATURE_WITH_DIRECTLY_INDEXED_FLAG = MessageId.DifferentDescriptorHeapSetAfterRootSignatureWithDirectlyIndexedFlag;
+	public const MessageId D3D12_MESSAGE_ID_APPLICATION_SPECIFIC_DRIVER_STATE_NOT_SUPPORTED = MessageId.ApplicationSpecificDriverStateNotSupported;
+	public const MessageId D3D12_MESSAGE_ID_RENDER_TARGET_OR_DEPTH_STENCIL_RESOUCE_NOT_INITIALIZED = MessageId.RenderTargetOrDepthStencilResouceNotInitialized;
+	public const MessageId D3D12_MESSAGE_ID_BYTECODE_VALIDATION_ERROR = MessageId.BytecodeValidationError;
+	public const MessageId D3D12_MESSAGE_ID_FENCE_ZERO_WAIT = MessageId.FenceZeroWait;
+	public const MessageId D3D12_MESSAGE_ID_NON_COMMON_RESOURCE_IN_COPY_QUEUE = MessageId.NonCommonResourceInCopyQueue;
 	public const MessageCallbackFlags D3D12_MESSAGE_CALLBACK_FLAG_NONE = MessageCallbackFlags.None;
 	public const MessageCallbackFlags D3D12_MESSAGE_CALLBACK_IGNORE_FILTERS = MessageCallbackFlags.IgnoreFilters;
 	public const DeviceFactoryFlags D3D12_DEVICE_FACTORY_FLAG_NONE = DeviceFactoryFlags.None;

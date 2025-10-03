@@ -21,7 +21,7 @@ public unsafe partial struct IWICBitmapFlipRotator : IWICBitmapFlipRotator.Inter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x4F, 0x83, 0x09, 0x50,
 				0x6A, 0x2D,
 				0xCE, 0x41,
@@ -33,7 +33,7 @@ public unsafe partial struct IWICBitmapFlipRotator : IWICBitmapFlipRotator.Inter
 				0xF7,
 				0xA7,
 				0x82
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
