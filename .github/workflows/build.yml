@@ -21,12 +21,12 @@ jobs:
       uses: actions/checkout@v5
 
     - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         global-json-file: ./global.json
 
     - name: Pack
-      run: dotnet pack Vortice.Win32.sln --configuration Release
+      run: dotnet pack Vortice.Win32.slnx --configuration Release
 
     - name: Publish to NuGet
       if: github.event_name == 'push'

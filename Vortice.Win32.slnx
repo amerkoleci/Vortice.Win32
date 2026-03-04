@@ -1,0 +1,35 @@
+<Solution>
+  <Folder Name="/.root/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="NuGet.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Native/">
+    <Project Path="src/Vortice.D3D12MA.Native/Vortice.D3D12MA.Native.csproj" />
+    <Project Path="src/Vortice.Dxc.Native/Vortice.Dxc.Native.csproj" />
+    <Project Path="src/Vortice.Pix.Native/Vortice.Pix.Native.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/01-ClearScreen/01-ClearScreen.csproj" />
+  </Folder>
+  <Project Path="src/Generator/Generator.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.D3D12MemoryAllocator/Vortice.Win32.Graphics.D3D12MemoryAllocator.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Direct2D/Vortice.Win32.Graphics.Direct2D.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Direct3D.Dxc/Vortice.Win32.Graphics.Direct3D.Dxc.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Direct3D.Fxc/Vortice.Win32.Graphics.Direct3D.Fxc.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Direct3D11/Vortice.Win32.Graphics.Direct3D11.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Direct3D11on12/Vortice.Win32.Graphics.Direct3D11on12.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Direct3D12/Vortice.Win32.Graphics.Direct3D12.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.DirectComposition/Vortice.Win32.Graphics.DirectComposition.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.DirectWrite/Vortice.Win32.Graphics.DirectWrite.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Dxgi/Vortice.Win32.Graphics.Dxgi.csproj" />
+  <Project Path="src/Vortice.Win32.Graphics.Imaging/Vortice.Win32.Graphics.Imaging.csproj" />
+  <Project Path="src/Vortice.Win32.Media.Audio.XAudio2/Vortice.Win32.Media.Audio.XAudio2.csproj" />
+  <Project Path="src/Vortice.Win32/Vortice.Win32.csproj" />
+</Solution>
