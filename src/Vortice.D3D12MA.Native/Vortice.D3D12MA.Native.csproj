@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net4.6.1;net9.0;net10.0</TargetFrameworks>
     <Description>D3D12MemoryAllocator native libraries with C bindings</Description>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
@@ -21,8 +21,8 @@
   <ItemGroup>
     <Content Include="build\**" PackagePath="build/%(RecursiveDir)%(Filename)%(Extension)" />
     <Content Include="runtimes\**" PackagePath="runtimes/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/net10.0" />
     <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/net9.0" />
-    <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/net8.0" />
     <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/net461" />
     <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/netstandard2.0" />
   </ItemGroup>
