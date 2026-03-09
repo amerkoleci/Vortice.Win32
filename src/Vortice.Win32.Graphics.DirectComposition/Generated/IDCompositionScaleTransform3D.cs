@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics.DirectComposition;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D"]/*' />
 /// <unmanaged>IDCompositionScaleTransform3D</unmanaged>

@@ -1,11 +1,11 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Win32.Graphics.Direct3D;
-using Win32.Graphics.Dxgi.Common;
-using static Win32.Apis;
+using Vortice.Win32.Graphics.Direct3D;
+using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Apis;
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
 public static unsafe partial class ID3D12DeviceExtensions
 {

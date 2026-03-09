@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using Win32.Graphics.Direct2D.Common;
+using Vortice.Win32.Graphics.Direct2D.Common;
 
-namespace Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics.Imaging;
 
 public static partial class Apis
 {

@@ -1,7 +1,7 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Graphics.Gdi;
+namespace Vortice.Win32.Graphics.Gdi;
 
 /// <summary>
 /// The RGNDATA structure contains a header and an array of rectangles that compose a region.

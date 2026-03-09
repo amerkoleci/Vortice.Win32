@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D.Common;
+namespace Vortice.Win32.Graphics.Direct2D.Common;
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_ALPHA_MODE</unmanaged>

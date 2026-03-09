@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics.Dxgi;
 
 public static partial class Apis
 {

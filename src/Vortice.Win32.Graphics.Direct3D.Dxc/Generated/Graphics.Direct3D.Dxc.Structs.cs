@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics.Direct3D.Dxc;
 
 /// <unmanaged>DxcShaderHash</unmanaged>
 public partial struct DxcShaderHash

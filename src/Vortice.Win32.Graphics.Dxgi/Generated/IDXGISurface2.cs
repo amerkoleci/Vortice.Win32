@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics.Dxgi;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2"]/*' />
 /// <unmanaged>IDXGISurface2</unmanaged>

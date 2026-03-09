@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics.DirectWrite;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult"]/*' />
 /// <unmanaged>IDWriteAsyncResult</unmanaged>
@@ -75,7 +75,7 @@ public unsafe partial struct IDWriteAsyncResult : IDWriteAsyncResult.Interface, 
 	[VtblIndex(3)]
 	public Handle GetWaitHandle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteAsyncResult*, Handle>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
+		return ((Handle)(((delegate* unmanaged[MemberFunction]<IDWriteAsyncResult*, void*>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this))));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetResult"]/*' />

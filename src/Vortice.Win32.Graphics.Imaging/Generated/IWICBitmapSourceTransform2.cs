@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform2"]/*' />
 /// <unmanaged>IWICBitmapSourceTransform2</unmanaged>

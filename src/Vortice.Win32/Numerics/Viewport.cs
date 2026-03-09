@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Text;
 
-namespace Win32.Numerics;
+namespace Vortice.Win32.Numerics;
 
 [Serializable]
 [StructLayout(LayoutKind.Sequential, Pack = 4)]

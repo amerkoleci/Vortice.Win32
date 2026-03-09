@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics.Direct3D;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DBlob"]/*' />
 /// <unmanaged>ID3DBlob</unmanaged>
@@ -21,7 +21,7 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x08, 0xFB, 0xA5, 0x8B,
 				0x95, 0x51,
 				0xE2, 0x40,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 				0x3A,
 				0x01,
 				0x02
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

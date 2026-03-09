@@ -1,10 +1,7 @@
 ﻿// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-
-namespace Win32.Com;
+namespace Vortice.Win32.Com;
 
 [Guid("00000002-0000-0000-C000-000000000046")]
 [NativeTypeName("struct IMalloc : IUnknown")]
@@ -15,7 +12,7 @@ public unsafe partial struct IMalloc
     {
         get
         {
-            ReadOnlySpan<byte> data = new byte[] {
+            ReadOnlySpan<byte> data = [
                 0x02, 0x00, 0x00, 0x00,
                 0x00, 0x00,
                 0x00, 0x00,
@@ -27,7 +24,7 @@ public unsafe partial struct IMalloc
                 0x00,
                 0x00,
                 0x46
-            };
+            ];
 
             Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
             return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -43,7 +40,7 @@ public unsafe partial struct IMalloc
     [VtblIndex(0)]
     public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
-        return ((delegate* unmanaged[Stdcall]<ISequentialStream*, Guid*, void**, int>)(lpVtbl[0]))((ISequentialStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, Guid*, void**, int>)(lpVtbl[0]))((IMalloc*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
 
     /// <inheritdoc cref="IUnknown.AddRef" />
@@ -52,7 +49,7 @@ public unsafe partial struct IMalloc
     [return: NativeTypeName("ULONG")]
     public uint AddRef()
     {
-        return ((delegate* unmanaged[Stdcall]<ISequentialStream*, uint>)(lpVtbl[1]))((ISequentialStream*)Unsafe.AsPointer(ref this));
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, uint>)(lpVtbl[1]))((IMalloc*)Unsafe.AsPointer(ref this));
     }
 
     /// <inheritdoc cref="IUnknown.Release" />
@@ -61,28 +58,28 @@ public unsafe partial struct IMalloc
     [return: NativeTypeName("ULONG")]
     public uint Release()
     {
-        return ((delegate* unmanaged[Stdcall]<ISequentialStream*, uint>)(lpVtbl[2]))((ISequentialStream*)Unsafe.AsPointer(ref this));
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, uint>)(lpVtbl[2]))((IMalloc*)Unsafe.AsPointer(ref this));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
     public void* Alloc([NativeTypeName("SIZE_T")] nuint cb)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, nuint, void*>)(lpVtbl[3]))((IMalloc*)Unsafe.AsPointer(ref this), cb);
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, nuint, void*>)(lpVtbl[3]))((IMalloc*)Unsafe.AsPointer(ref this), cb);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
     public void* Realloc(void* pv, [NativeTypeName("SIZE_T")] nuint cb)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, nuint, void*>)(lpVtbl[4]))((IMalloc*)Unsafe.AsPointer(ref this), pv, cb);
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, void*, nuint, void*>)(lpVtbl[4]))((IMalloc*)Unsafe.AsPointer(ref this), pv, cb);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
     public void Free(void* pv)
     {
-        ((delegate* unmanaged[Stdcall]<IMalloc*, void*, void>)(lpVtbl[5]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
+        ((delegate* unmanaged[MemberFunction]<IMalloc*, void*, void>)(lpVtbl[5]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -90,20 +87,20 @@ public unsafe partial struct IMalloc
     [return: NativeTypeName("SIZE_T")]
     public nuint GetSize(void* pv)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, nuint>)(lpVtbl[6]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, void*, nuint>)(lpVtbl[6]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
     public int DidAlloc(void* pv)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, int>)(lpVtbl[7]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
+        return ((delegate* unmanaged[MemberFunction]<IMalloc*, void*, int>)(lpVtbl[7]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(8)]
     public void HeapMinimize()
     {
-        ((delegate* unmanaged[Stdcall]<IMalloc*, void>)(lpVtbl[8]))((IMalloc*)Unsafe.AsPointer(ref this));
+        ((delegate* unmanaged[MemberFunction]<IMalloc*, void>)(lpVtbl[8]))((IMalloc*)Unsafe.AsPointer(ref this));
     }
 }

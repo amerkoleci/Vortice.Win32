@@ -2,7 +2,7 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32;
+namespace Vortice.Win32;
 
 /// <summary>Provides a set of methods to supplement or replace <see cref="Unsafe" /> and <see cref="MemoryMarshal" />.</summary>
 public static unsafe class UnsafeUtilities

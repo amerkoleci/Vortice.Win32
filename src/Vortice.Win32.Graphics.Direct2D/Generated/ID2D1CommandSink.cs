@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink"]/*' />
 /// <unmanaged>ID2D1CommandSink</unmanaged>
@@ -177,25 +177,25 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public HResult DrawRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
+	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Bitmap*, Vortice.Win32.Numerics.RectF*, float, InterpolationMode, Vortice.Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Image*, Vector2*, Vortice.Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGdiMetafile"]/*' />
@@ -217,9 +217,9 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillOpacityMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
+	public HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Vortice.Win32.Numerics.RectF* destinationRectangle, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Bitmap*, ID2D1Brush*, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillGeometry"]/*' />
@@ -233,17 +233,17 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
+	public HResult FillRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::PushAxisAlignedClip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
+	public HResult PushAxisAlignedClip(Vortice.Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Vortice.Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::PushLayer"]/*' />
@@ -312,13 +312,13 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 		HResult DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
 
 		[VtblIndex(16)]
-		HResult DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+		HResult DrawRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
 
 		[VtblIndex(17)]
-		HResult DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform);
+		HResult DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform);
 
 		[VtblIndex(18)]
-		HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode);
+		HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode);
 
 		[VtblIndex(19)]
 		HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset);
@@ -327,16 +327,16 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 		HResult FillMesh(ID2D1Mesh* mesh, ID2D1Brush* brush);
 
 		[VtblIndex(21)]
-		HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle);
+		HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Vortice.Win32.Numerics.RectF* destinationRectangle, Vortice.Win32.Numerics.RectF* sourceRectangle);
 
 		[VtblIndex(22)]
 		HResult FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush);
 
 		[VtblIndex(23)]
-		HResult FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush);
+		HResult FillRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush);
 
 		[VtblIndex(24)]
-		HResult PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode);
+		HResult PushAxisAlignedClip(Vortice.Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode);
 
 		[VtblIndex(25)]
 		HResult PushLayer(LayerParameters1* layerParameters1, ID2D1Layer* layer);

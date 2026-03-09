@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics.DirectWrite;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader"]/*' />
 /// <unmanaged>IDWritePaintReader</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::SetCurrentGlyph"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetCurrentGlyph(uint glyphIndex, PaintElement* paintElement, uint structSize, Win32.Numerics.RectF** clipBox, PaintAttributes* glyphAttributes)
+	public HResult SetCurrentGlyph(uint glyphIndex, PaintElement* paintElement, uint structSize, Vortice.Win32.Numerics.RectF** clipBox, PaintAttributes* glyphAttributes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, PaintElement*, uint, Win32.Numerics.RectF**, PaintAttributes*, int>)(lpVtbl[3]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), glyphIndex, paintElement, structSize, clipBox, glyphAttributes);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, PaintElement*, uint, Vortice.Win32.Numerics.RectF**, PaintAttributes*, int>)(lpVtbl[3]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), glyphIndex, paintElement, structSize, clipBox, glyphAttributes);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::SetTextColor"]/*' />
@@ -145,7 +145,7 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetCurrentGlyph(uint glyphIndex, PaintElement* paintElement, uint structSize, Win32.Numerics.RectF** clipBox, PaintAttributes* glyphAttributes);
+		HResult SetCurrentGlyph(uint glyphIndex, PaintElement* paintElement, uint structSize, Vortice.Win32.Numerics.RectF** clipBox, PaintAttributes* glyphAttributes);
 
 		[VtblIndex(4)]
 		HResult SetTextColor(Color4* textColor);

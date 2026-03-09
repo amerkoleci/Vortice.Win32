@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
 public static unsafe partial class Apis
 {

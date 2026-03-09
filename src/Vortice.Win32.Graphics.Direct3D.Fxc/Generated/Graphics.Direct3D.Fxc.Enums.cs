@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D.Fxc;
+namespace Vortice.Win32.Graphics.Direct3D.Fxc;
 
 /// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS"]/*' />
 /// <unmanaged>D3DCOMPILER_STRIP_FLAGS</unmanaged>

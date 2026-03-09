@@ -6,7 +6,7 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Com;
+namespace Vortice.Win32.Com;
 
 [Guid("0000010C-0000-0000-C000-000000000046")]
 [NativeTypeName("struct IPersist : IUnknown")]
@@ -17,7 +17,7 @@ public unsafe partial struct IPersist : IPersist.Interface, INativeGuid
     {
         get
         {
-            ReadOnlySpan<byte> data = new byte[] {
+            ReadOnlySpan<byte> data = [
                 0x0C, 0x01, 0x00, 0x00,
                 0x00, 0x00,
                 0x00, 0x00,
@@ -29,7 +29,7 @@ public unsafe partial struct IPersist : IPersist.Interface, INativeGuid
                 0x00,
                 0x00,
                 0x46
-            };
+            ];
 
             Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
             return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

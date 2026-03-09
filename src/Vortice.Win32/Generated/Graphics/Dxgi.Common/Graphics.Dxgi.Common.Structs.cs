@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Dxgi.Common;
+namespace Vortice.Win32.Graphics.Dxgi.Common;
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL"]/*' />
 /// <unmanaged>DXGI_RATIONAL</unmanaged>

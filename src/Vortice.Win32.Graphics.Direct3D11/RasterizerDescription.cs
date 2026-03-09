@@ -1,31 +1,31 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.Direct3D11.Apis;
 
-namespace Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics.Direct3D11;
 
-public unsafe partial struct RasterizerDescription
+public partial struct RasterizerDescription
 {
     /// <summary>
     /// A built-in description with settings with settings for not culling any primitives.
     /// </summary>
-    public static readonly RasterizerDescription CullNone = new(CullMode.None, FillMode.Solid);
+    public static RasterizerDescription CullNone => new(CullMode.None, FillMode.Solid);
 
     /// <summary>
     /// A built-in description with settings for culling primitives with clockwise winding order.
     /// </summary>
-    public static readonly RasterizerDescription CullFront = new(CullMode.Front, FillMode.Solid);
+    public static RasterizerDescription CullFront => new(CullMode.Front, FillMode.Solid);
 
     /// <summary>
     /// A built-in description with settings for culling primitives with counter-clockwise winding order.
     /// </summary>
-    public static readonly RasterizerDescription CullBack = new(CullMode.Back, FillMode.Solid);
+    public static RasterizerDescription CullBack => new(CullMode.Back, FillMode.Solid);
 
     /// <summary>
     /// A built-in description with settings for not culling any primitives and wireframe fill mode.
     /// </summary>
-    public static readonly RasterizerDescription Wireframe = new(CullMode.None, FillMode.Wireframe);
+    public static RasterizerDescription Wireframe => new(CullMode.None, FillMode.Wireframe);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="RasterizerDescription"/> class.

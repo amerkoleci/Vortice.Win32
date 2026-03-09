@@ -1,10 +1,10 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Apis;
-using static Win32.StringUtilities;
+using static Vortice.Win32.Apis;
+using static Vortice.Win32.StringUtilities;
 
-namespace Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics.Dxgi;
 
 public unsafe partial struct AdapterDescription
 {

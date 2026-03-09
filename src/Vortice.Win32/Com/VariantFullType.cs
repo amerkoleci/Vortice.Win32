@@ -4,7 +4,7 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-namespace Win32.Com;
+namespace Vortice.Win32.Com;
 
 /// <summary>
 /// Type of a variant

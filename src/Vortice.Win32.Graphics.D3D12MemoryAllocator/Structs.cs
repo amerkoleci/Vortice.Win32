@@ -1,10 +1,10 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Win32.Graphics.Direct3D12;
-using Win32.Graphics.Dxgi;
+using Vortice.Win32.Graphics.Direct3D12;
+using Vortice.Win32.Graphics.Dxgi;
 
-namespace Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
 
 /// <unmanaged>D3D12MA_ALLOCATION_CALLBACKS</unmanaged>
 public unsafe partial struct AllocationCallbacks

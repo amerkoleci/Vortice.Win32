@@ -1,9 +1,9 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Win32.Graphics.Dxgi.Common;
+using Vortice.Win32.Graphics.Dxgi.Common;
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
 /// <unmanaged>D3DX12_MESH_SHADER_PIPELINE_STATE_DESC</unmanaged>
 public unsafe partial struct MeshShaderPipelineStateDescription

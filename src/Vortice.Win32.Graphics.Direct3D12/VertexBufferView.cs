@@ -1,9 +1,9 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
-public unsafe partial struct VertexBufferView
+public partial struct VertexBufferView
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="VertexBufferView"/> struct.

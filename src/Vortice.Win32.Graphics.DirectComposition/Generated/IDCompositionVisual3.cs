@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics.DirectComposition;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual3"]/*' />
 /// <unmanaged>IDCompositionVisual3</unmanaged>
@@ -161,9 +161,9 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetClip(Win32.Numerics.RectF* rect)
+	public HResult SetClip(Vortice.Win32.Numerics.RectF* rect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), rect);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, Vortice.Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), rect);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetContent" />

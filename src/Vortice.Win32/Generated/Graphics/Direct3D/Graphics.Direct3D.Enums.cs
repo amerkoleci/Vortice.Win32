@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics.Direct3D;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE"]/*' />
 /// <unmanaged>D3D_DRIVER_TYPE</unmanaged>

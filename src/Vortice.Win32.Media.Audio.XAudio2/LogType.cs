@@ -1,9 +1,9 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Media.Audio.XAudio2.Apis;
+using static Vortice.Win32.Media.Audio.XAudio2.Apis;
 
-namespace Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Media.Audio.XAudio2;
 
 [Flags]
 public enum LogType : uint

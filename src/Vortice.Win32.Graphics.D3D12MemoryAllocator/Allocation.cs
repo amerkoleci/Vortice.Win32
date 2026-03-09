@@ -1,11 +1,11 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Win32.Graphics.Direct3D12;
-using static Win32.Apis;
-using static Win32.Graphics.D3D12MemoryAllocator.Apis;
+using Vortice.Win32.Graphics.Direct3D12;
+using static Vortice.Win32.Apis;
+using static Vortice.Win32.Graphics.D3D12MemoryAllocator.Apis;
 
-namespace Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
 
 [DebuggerDisplay("{DebuggerDisplay,nq}")]
 public readonly partial struct Allocation : IEquatable<Allocation>

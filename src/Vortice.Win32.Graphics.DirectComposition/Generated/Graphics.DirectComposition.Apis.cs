@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics.DirectComposition;
 
 public static partial class Apis
 {

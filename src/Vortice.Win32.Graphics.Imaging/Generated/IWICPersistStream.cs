@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream"]/*' />
 /// <unmanaged>IWICPersistStream</unmanaged>
@@ -86,7 +86,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Com.IStream*, WICPersistOptions, Bool32, int>)(lpVtbl[9]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
 	}
 
-	public interface Interface : Win32.Com.IPersistStream.Interface
+	public interface Interface : Vortice.Win32.Com.IPersistStream.Interface
 	{
 		[VtblIndex(8)]
 		HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions);

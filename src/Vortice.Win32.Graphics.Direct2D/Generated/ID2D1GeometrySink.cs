@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using Win32.Graphics.Direct2D.Common;
+using Vortice.Win32.Graphics.Direct2D.Common;
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink"]/*' />
 /// <unmanaged>ID2D1GeometrySink</unmanaged>
@@ -72,7 +72,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void SetFillMode(Common.FillMode fillMode)
@@ -80,7 +80,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetSegmentFlags" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetSegmentFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetSegmentFlags(Common.PathSegment vertexFlags)
@@ -88,7 +88,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.BeginFigure" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.BeginFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void BeginFigure(Vector2 startPoint, Common.FigureBegin figureBegin)
@@ -96,7 +96,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Vector2, Common.FigureBegin, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddLines" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddLines" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void AddLines(Vector2* points, uint pointsCount)
@@ -104,7 +104,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddBeziers" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddBeziers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void AddBeziers(Common.BezierSegment* beziers, uint beziersCount)
@@ -112,7 +112,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.EndFigure" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.EndFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void EndFigure(Common.FigureEnd figureEnd)
@@ -120,7 +120,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
 	}
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.Close" />
+	/// <inheritdoc cref="Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.Close" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult Close()

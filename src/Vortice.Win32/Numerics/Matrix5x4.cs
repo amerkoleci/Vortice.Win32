@@ -4,7 +4,7 @@
 using System.Globalization;
 using System.Text;
 
-namespace Win32.Numerics;
+namespace Vortice.Win32.Numerics;
 
 /// <summary>
 /// Describes a 5-by-4 floating point matrix.

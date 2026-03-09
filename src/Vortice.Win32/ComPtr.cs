@@ -3,9 +3,9 @@
 // Original source is Copyright © Microsoft. All rights reserved.
 
 using System.ComponentModel;
-using static Win32.Apis;
+using static Vortice.Win32.Apis;
 
-namespace Win32;
+namespace Vortice.Win32;
 
 /// <summary>A type that allows working with pointers to COM objects more securely.</summary>
 /// <typeparam name="T">The type to wrap in the current <see cref="ComPtr{T}"/> instance.</typeparam>

@@ -1,20 +1,20 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D12.Apis;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
 public partial struct SamplerDescription
 {
-    public static readonly SamplerDescription PointWrap = new(Filter.MinMagMipPoint, TextureAddressMode.Wrap);
-    public static readonly SamplerDescription PointClamp = new(Filter.MinMagMipPoint, TextureAddressMode.Clamp);
+    public static SamplerDescription PointWrap => new(Filter.MinMagMipPoint, TextureAddressMode.Wrap);
+    public static SamplerDescription PointClamp => new(Filter.MinMagMipPoint, TextureAddressMode.Clamp);
 
-    public static readonly SamplerDescription LinearWrap = new(Filter.MinMagMipLinear, TextureAddressMode.Wrap);
-    public static readonly SamplerDescription LinearClamp = new(Filter.MinMagMipLinear, TextureAddressMode.Clamp);
+    public static SamplerDescription LinearWrap => new(Filter.MinMagMipLinear, TextureAddressMode.Wrap);
+    public static SamplerDescription LinearClamp => new(Filter.MinMagMipLinear, TextureAddressMode.Clamp);
 
-    public static readonly SamplerDescription AnisotropicWrap = new(Filter.Anisotropic, TextureAddressMode.Wrap, 0.0f, D3D12_MAX_MAXANISOTROPY);
-    public static readonly SamplerDescription AnisotropicClamp = new(Filter.Anisotropic, TextureAddressMode.Clamp, 0.0f, D3D12_MAX_MAXANISOTROPY);
+    public static SamplerDescription AnisotropicWrap => new(Filter.Anisotropic, TextureAddressMode.Wrap, 0.0f, D3D12_MAX_MAXANISOTROPY);
+    public static SamplerDescription AnisotropicClamp => new(Filter.Anisotropic, TextureAddressMode.Clamp, 0.0f, D3D12_MAX_MAXANISOTROPY);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SamplerDescription"/> struct.

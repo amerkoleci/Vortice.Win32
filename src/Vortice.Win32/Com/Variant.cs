@@ -3,7 +3,7 @@
 
 #pragma warning disable CS0169
 
-namespace Win32.Com;
+namespace Vortice.Win32.Com;
 
 /// <summary>
 /// Variant COM.

@@ -3,7 +3,7 @@
 
 using System.Text;
 
-namespace Win32;
+namespace Vortice.Win32;
 
 /// <summary>
 /// Provides a set of methods to supplement for <see cref="string" />.

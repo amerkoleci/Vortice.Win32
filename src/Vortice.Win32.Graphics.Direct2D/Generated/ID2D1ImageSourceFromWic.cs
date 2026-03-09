@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic"]/*' />
 /// <unmanaged>ID2D1ImageSourceFromWic</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::EnsureCached"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult EnsureCached(Win32.Numerics.Rect* rectangleToFill)
+	public HResult EnsureCached(Vortice.Win32.Numerics.Rect* rectangleToFill)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::TrimCache"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult TrimCache(Win32.Numerics.Rect* rectangleToPreserve)
+	public HResult TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::GetSource"]/*' />
@@ -121,10 +121,10 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	public interface Interface : ID2D1ImageSource.Interface
 	{
 		[VtblIndex(6)]
-		HResult EnsureCached(Win32.Numerics.Rect* rectangleToFill);
+		HResult EnsureCached(Vortice.Win32.Numerics.Rect* rectangleToFill);
 
 		[VtblIndex(7)]
-		HResult TrimCache(Win32.Numerics.Rect* rectangleToPreserve);
+		HResult TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve);
 
 		[VtblIndex(8)]
 		void GetSource(Graphics.Imaging.IWICBitmapSource** wicBitmapSource);

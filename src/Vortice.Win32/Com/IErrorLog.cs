@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Com;
+namespace Vortice.Win32.Com;
 
 [Guid("3127CA40-446E-11CE-8135-00AA004BB851")]
 [NativeTypeName("struct IErrorLog : IUnknown")]
@@ -12,7 +12,7 @@ public unsafe partial struct IErrorLog
     {
         get
         {
-            ReadOnlySpan<byte> data = new byte[] {
+            ReadOnlySpan<byte> data = [
                 0x40, 0xCA, 0x27, 0x31,
                 0x6E, 0x44,
                 0xCE, 0x11,
@@ -24,7 +24,7 @@ public unsafe partial struct IErrorLog
                 0x4B,
                 0xB8,
                 0x51
-            };
+            ];
 
             Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
             return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -40,7 +40,7 @@ public unsafe partial struct IErrorLog
     [VtblIndex(0)]
     public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
-        return ((delegate* unmanaged[Stdcall]<ISequentialStream*, Guid*, void**, int>)(lpVtbl[0]))((ISequentialStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
+        return ((delegate* unmanaged[MemberFunction]<IErrorLog*, Guid*, void**, int>)(lpVtbl[0]))((IErrorLog*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
 
     /// <inheritdoc cref="IUnknown.AddRef" />
@@ -49,7 +49,7 @@ public unsafe partial struct IErrorLog
     [return: NativeTypeName("ULONG")]
     public uint AddRef()
     {
-        return ((delegate* unmanaged[Stdcall]<ISequentialStream*, uint>)(lpVtbl[1]))((ISequentialStream*)Unsafe.AsPointer(ref this));
+        return ((delegate* unmanaged[MemberFunction]<IErrorLog*, uint>)(lpVtbl[1]))((IErrorLog*)Unsafe.AsPointer(ref this));
     }
 
     /// <inheritdoc cref="IUnknown.Release" />
@@ -58,13 +58,13 @@ public unsafe partial struct IErrorLog
     [return: NativeTypeName("ULONG")]
     public uint Release()
     {
-        return ((delegate* unmanaged[Stdcall]<ISequentialStream*, uint>)(lpVtbl[2]))((ISequentialStream*)Unsafe.AsPointer(ref this));
+        return ((delegate* unmanaged[MemberFunction]<IErrorLog*, uint>)(lpVtbl[2]))((IErrorLog*)Unsafe.AsPointer(ref this));
     }
 
     //[MethodImpl(MethodImplOptions.AggressiveInlining)]
     //[VtblIndex(3)]
     //public HResult AddError([NativeTypeName("LPCOLESTR")] ushort* pszPropName, EXCEPINFO* pExcepInfo)
     //{
-    //    return ((delegate* unmanaged[Stdcall]<IErrorLog*, ushort*, EXCEPINFO*, int>)(lpVtbl[3]))((IErrorLog*)Unsafe.AsPointer(ref this), pszPropName, pExcepInfo);
+    //    return ((delegate* unmanaged[MemberFunction]<IErrorLog*, ushort*, EXCEPINFO*, int>)(lpVtbl[3]))((IErrorLog*)Unsafe.AsPointer(ref this), pszPropName, pExcepInfo);
     //}
 }

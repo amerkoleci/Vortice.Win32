@@ -1,7 +1,7 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
 
 /// <unmanaged>D3D12MA_ALLOCATOR_FLAGS</unmanaged>
 [Flags]

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics.Direct3D;
 
 public static partial class Apis
 {
@@ -110,7 +110,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x22, 0x8C, 0x9B, 0x42,
 				0x88, 0x91,
 				0x0C, 0x4B,
@@ -122,7 +122,7 @@ public static partial class Apis
 				0x85,
 				0xC2,
 				0x00
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -134,7 +134,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xD8, 0x5F, 0xCA, 0x4C,
 				0x1F, 0x92,
 				0xC8, 0x42,
@@ -146,7 +146,7 @@ public static partial class Apis
 				0xA9,
 				0xB7,
 				0x41
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -158,7 +158,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xC0, 0x9D, 0x14, 0xD0,
 				0xE8, 0x90,
 				0xC8, 0x4E,
@@ -170,7 +170,7 @@ public static partial class Apis
 				0x26,
 				0x6B,
 				0xB2
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -182,7 +182,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x15, 0xDE, 0x39, 0x1B,
 				0x04, 0xEC,
 				0xAE, 0x4B,
@@ -194,7 +194,7 @@ public static partial class Apis
 				0xFC,
 				0x04,
 				0xC1
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -214,7 +214,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x4F, 0x23, 0xDC, 0xB5,
 				0xBB, 0x72,
 				0xEC, 0x4B,
@@ -226,7 +226,7 @@ public static partial class Apis
 				0xDF,
 				0x6B,
 				0x6C
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
@@ -238,7 +238,7 @@ public static partial class Apis
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0xE3, 0x29, 0x0F, 0x4C,
 				0x5F, 0x3F,
 				0x35, 0x4D,
@@ -250,7 +250,7 @@ public static partial class Apis
 				0xB6,
 				0x2C,
 				0x28
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

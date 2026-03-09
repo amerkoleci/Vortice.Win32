@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics.DirectWrite;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer1"]/*' />
 /// <unmanaged>IDWriteTextAnalyzer1</unmanaged>

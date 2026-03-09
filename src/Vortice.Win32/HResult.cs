@@ -4,7 +4,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-namespace Win32;
+namespace Vortice.Win32;
 
 public readonly partial struct HResult : IComparable, IComparable<HResult>, IEquatable<HResult>, IFormattable
 {
@@ -27,43 +27,43 @@ public readonly partial struct HResult : IComparable, IComparable<HResult>, IEqu
 
     public static bool operator >=(HResult left, HResult right) => left.Value >= right.Value;
 
-    public static implicit operator HResult(byte value) => new HResult(value);
+    public static implicit operator HResult(byte value) => new(value);
 
     public static explicit operator byte(HResult value) => (byte)(value.Value);
 
-    public static implicit operator HResult(short value) => new HResult(value);
+    public static implicit operator HResult(short value) => new(value);
 
     public static explicit operator short(HResult value) => (short)(value.Value);
 
-    public static implicit operator HResult(int value) => new HResult(value);
+    public static implicit operator HResult(int value) => new(value);
 
     public static implicit operator int(HResult value) => value.Value;
 
-    public static explicit operator HResult(long value) => new HResult(unchecked((int)(value)));
+    public static explicit operator HResult(long value) => new(unchecked((int)(value)));
 
     public static implicit operator long(HResult value) => value.Value;
 
-    public static explicit operator HResult(nint value) => new HResult(unchecked((int)(value)));
+    public static explicit operator HResult(nint value) => new(unchecked((int)(value)));
 
     public static implicit operator nint(HResult value) => value.Value;
 
-    public static implicit operator HResult(sbyte value) => new HResult(value);
+    public static implicit operator HResult(sbyte value) => new(value);
 
     public static explicit operator sbyte(HResult value) => (sbyte)(value.Value);
 
-    public static implicit operator HResult(ushort value) => new HResult(value);
+    public static implicit operator HResult(ushort value) => new(value);
 
     public static explicit operator ushort(HResult value) => (ushort)(value.Value);
 
-    public static explicit operator HResult(uint value) => new HResult(unchecked((int)(value)));
+    public static explicit operator HResult(uint value) => new(unchecked((int)(value)));
 
     public static explicit operator uint(HResult value) => (uint)(value.Value);
 
-    public static explicit operator HResult(ulong value) => new HResult(unchecked((int)(value)));
+    public static explicit operator HResult(ulong value) => new(unchecked((int)(value)));
 
     public static explicit operator ulong(HResult value) => (ulong)(value.Value);
 
-    public static explicit operator HResult(nuint value) => new HResult(unchecked((int)(value)));
+    public static explicit operator HResult(nuint value) => new(unchecked((int)(value)));
 
     public static explicit operator nuint(HResult value) => (nuint)(value.Value);
 

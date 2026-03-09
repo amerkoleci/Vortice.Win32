@@ -90,11 +90,11 @@ public static class Program
         { "Graphics.Gdi.HBITMAP", "IntPtr" },
         { "Graphics.Gdi.HPALETTE", "IntPtr" },
         { "UI.WindowsAndMessaging.HICON", "IntPtr" },
-        { "Globalization.FONTSIGNATURE", "Win32.Graphics.Gdi.FontSignature" },
-        { "Graphics.Gdi.LOGFONTA", "Win32.Graphics.Gdi.LogFontA" },
-        { "Graphics.Gdi.LOGFONTW", "Win32.Graphics.Gdi.LogFontW" },
-        { "Graphics.Gdi.RGNDATA", "Win32.Graphics.Gdi.RgnData" },
-        { "Graphics.Gdi.PALETTEENTRY", "Win32.Graphics.Gdi.PaletteEntry" },
+        { "Globalization.FONTSIGNATURE", "Vortice.Win32.Graphics.Gdi.FontSignature" },
+        { "Graphics.Gdi.LOGFONTA", "Vortice.Win32.Graphics.Gdi.LogFontA" },
+        { "Graphics.Gdi.LOGFONTW", "Vortice.Win32.Graphics.Gdi.LogFontW" },
+        { "Graphics.Gdi.RGNDATA", "Vortice.Win32.Graphics.Gdi.RgnData" },
+        { "Graphics.Gdi.PALETTEENTRY", "Vortice.Win32.Graphics.Gdi.PaletteEntry" },
 
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
@@ -111,8 +111,8 @@ public static class Program
         { "Graphics.Direct2D.Common.D2D_SIZE_F", "System.Drawing.SizeF" },
         { "Graphics.Direct2D.Common.D2D_POINT_2U", "System.Drawing.Point" },
         { "Graphics.Direct2D.Common.D2D_SIZE_U", "System.Drawing.Size" },
-        { "Graphics.Direct2D.Common.D2D_RECT_U", "Win32.Numerics.Rect" },
-        { "Graphics.Direct2D.Common.D2D_RECT_F", "Win32.Numerics.RectF" },
+        { "Graphics.Direct2D.Common.D2D_RECT_U", "Vortice.Win32.Numerics.Rect" },
+        { "Graphics.Direct2D.Common.D2D_RECT_F", "Vortice.Win32.Numerics.RectF" },
 
         { "Graphics.Imaging.WICRect", "System.Drawing.Rectangle" },
 
@@ -1248,19 +1248,19 @@ public static class Program
     public static int Main()
     {
         string repoRoot = FindRepoRoot();
-        string rootPath = Path.Combine(new DirectoryInfo(repoRoot)!.FullName, "src");
-        string dxgiPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Dxgi");
-        string d3d9Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D9");
-        string d3d11Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D11");
-        string d3d12Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D12");
-        string d3d11on12Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D11on12");
-        string dwritePath = Path.Combine(rootPath, "Vortice.Win32.Graphics.DirectWrite");
-        string wicPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Imaging");
-        string d2dPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct2D");
-        string dxcPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D.Dxc");
-        string fxcPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D.Fxc");
-        string directCompositionPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.DirectComposition");
-        string XAudio2Path = Path.Combine(rootPath, "Vortice.Win32.Media.Audio.XAudio2");
+        string rootSrcPath = Path.Combine(new DirectoryInfo(repoRoot)!.FullName, "src");
+        string dxgiPath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Dxgi");
+        string d3d9Path = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct3D9");
+        string d3d11Path = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct3D11");
+        string d3d12Path = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct3D12");
+        string d3d11on12Path = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct3D11on12");
+        string dwritePath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.DirectWrite");
+        string wicPath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Imaging");
+        string d2dPath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct2D");
+        string dxcPath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct3D.Dxc");
+        string fxcPath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.Direct3D.Fxc");
+        string directCompositionPath = Path.Combine(rootSrcPath, "Vortice.Win32.Graphics.DirectComposition");
+        string XAudio2Path = Path.Combine(rootSrcPath, "Vortice.Win32.Media.Audio.XAudio2");
 
         // Generate docs
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
@@ -1281,7 +1281,7 @@ public static class Program
             string jsonData = File.ReadAllText(finalPath);
             ApiData? api = JsonConvert.DeserializeObject<ApiData>(jsonData);
 
-            string outputPath = repoRoot;
+            string outputPath = Path.Combine(rootSrcPath, "Vortice.Win32");
             bool useSubFolders = true;
             bool cleanFolder = true;
 
@@ -1493,12 +1493,12 @@ public static class Program
         if (!generateFile)
             return;
 
-        string[] usingNamespaces = apiName == "Graphics.Imaging" ? ["Win32.Graphics.Direct2D.Common"] : [];
+        string[] usingNamespaces = apiName == "Graphics.Imaging" ? ["Vortice.Win32.Graphics.Direct2D.Common"] : [];
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Apis.cs"),
             apiName,
             docFileName,
-            $"Win32.{apiName}",
+            $"Vortice.Win32.{apiName}",
             usingNamespaces);
 
         bool needNewLine = false;
@@ -1581,7 +1581,7 @@ public static class Program
             Path.Combine(folder, $"{apiName}.Enums.cs"),
             apiName,
             docFileName,
-            $"Win32.{apiName}");
+            $"Vortice.Win32.{apiName}");
 
         bool needNewLine = false;
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.Equals("enum", StringComparison.InvariantCultureIgnoreCase)))
@@ -1637,7 +1637,7 @@ public static class Program
                         createdEnumType = apiType;
                     }
 
-                    ApiEnumValue enumValue = new ApiEnumValue
+                    ApiEnumValue enumValue = new()
                     {
                         Name = constant.Name,
                         Value = constant.Value
@@ -1662,7 +1662,7 @@ public static class Program
             Path.Combine(folder, $"{apiName}.Structs.cs"),
             apiName,
             docFileName,
-            $"Win32.{apiName}");
+            $"Vortice.Win32.{apiName}");
         needNewLine = true;
 
         // Unions
@@ -1718,7 +1718,7 @@ public static class Program
         }
 
         // Com types
-        foreach (ApiType comType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "com"))
+        foreach (ApiType comType in api.Types.Where(item => item.Kind.Equals("com", StringComparison.InvariantCultureIgnoreCase)))
         {
             if (comType.Name.StartsWith("ID3DX11"))
             {
@@ -1732,11 +1732,11 @@ public static class Program
 
             }
 
-            Dictionary<string, List<ApiType>> methodsToGenerate = new();
+            Dictionary<string, List<ApiType>> methodsToGenerate = [];
 
             // We must generate from lower to upper
-            ApiType iterateType = comType;
-            List<ApiType> typesToGenerate = new();
+            ApiType? iterateType = comType;
+            List<ApiType> typesToGenerate = [];
             while (iterateType.Interface != null
                 && iterateType.Interface.Name != "IUnknown"
                 && iterateType.Interface.Name != "IStream"
@@ -1751,9 +1751,9 @@ public static class Program
                 }
                 else
                 {
-                    var knownMethods = s_visitedComTypes.First(item => item.Key == fullTypeName).Value;
+                    Dictionary<string, List<ApiType>> knownMethods = s_visitedComTypes.First(item => item.Key == fullTypeName).Value;
 
-                    foreach (var knownMethod in knownMethods)
+                    foreach (KeyValuePair<string, List<ApiType>> knownMethod in knownMethods)
                     {
                         methodsToGenerate.Add(knownMethod.Key, knownMethod.Value);
                     }
@@ -1777,7 +1777,7 @@ public static class Program
 
                     if (methodsToGenerate.TryGetValue(type.Name, out List<ApiType>? functions) == false)
                     {
-                        functions = new List<ApiType>();
+                        functions = [];
                         methodsToGenerate.Add(type.Name, functions);
                     }
 
@@ -1793,7 +1793,7 @@ public static class Program
 
                 if (methodsToGenerate.TryGetValue(comType.Name, out List<ApiType>? functions) == false)
                 {
-                    functions = new List<ApiType>();
+                    functions = [];
                     methodsToGenerate.Add(comType.Name, functions);
                 }
 
@@ -1828,7 +1828,7 @@ public static class Program
             Path.Combine(folder, $"{apiName}.Apis.Functions.cs"),
             apiName,
             docFileName,
-            $"Win32.{apiName}");
+            $"Vortice.Win32.{apiName}");
 
         using (writer.PushBlock($"public static unsafe partial class Apis"))
         {
@@ -1981,7 +1981,7 @@ public static class Program
                 enumPrefix = knowPrefix!;
                 skipPrettify = true;
             }
-            else if(csTypeName.EndsWith("Properties"))
+            else if (csTypeName.EndsWith("Properties"))
             {
                 // WICGifImageDescriptorProperties => WICGifImageDescriptor
                 enumPrefix = csTypeName.Substring(0, csTypeName.IndexOf("Properties"));
@@ -2477,14 +2477,14 @@ public static class Program
 
         if (comType.Name == "ID2D1GeometrySink")
         {
-            namespaces.Add("Win32.Graphics.Direct2D.Common");
+            namespaces.Add("Vortice.Win32.Graphics.Direct2D.Common");
         }
 
         using CodeWriter writer = new(
             Path.Combine(folder, $"{csTypeName}.cs"),
             apiName,
             docFileName,
-            $"Win32.{apiName}",
+            $"Vortice.Win32.{apiName}",
             namespaces.ToArray()
             );
 
@@ -2610,6 +2610,11 @@ public static class Program
                         writer.WriteLine();
                     }
 
+                    if (method.Name == "GetFrameLatencyWaitableObject")
+                    {
+
+                    }
+
                     // TODO: Handle inherit
                     string returnType = GetTypeNameWithPointerCheck(api, method.ReturnType);
 
@@ -2633,9 +2638,15 @@ public static class Program
                     returnType = NormalizeTypeName(writer.Api, returnType);
 
                     string returnMarshalType = returnType;
+                    string returnCastType = string.Empty;
                     if (returnMarshalType.ToLower() == "hresult")
                     {
                         returnMarshalType = "int";
+                    }
+                    else if (returnMarshalType.ToLower() == "handle")
+                    {
+                        returnCastType = returnMarshalType;
+                        returnMarshalType = "void*";
                     }
 
                     if (useReturnAsParameter)
@@ -2651,6 +2662,7 @@ public static class Program
 
                     foreach (ApiParameter parameter in method.Params)
                     {
+
                         GetParameterSignature(api, writer, parameter,
                             $"{comType.Name}::{method.Name}",
                             out string parameterType,
@@ -2752,7 +2764,7 @@ public static class Program
                     {
                         if (docName == "ID2D1SimplifiedGeometrySink")
                         {
-                            docName = "Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink";
+                            docName = "Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink";
                         }
 
                         writer.WriteLine($"/// <inheritdoc cref=\"{docName}.{method.Name}\" />");
@@ -2792,7 +2804,22 @@ public static class Program
                         {
                             if (writeReturn)
                                 writer.Write("return ");
-                            writer.WriteLine($"((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
+
+                            if (!string.IsNullOrEmpty(returnCastType))
+                            {
+                                writer.Write($"(({returnCastType})(");
+                            }
+
+                            writer.Write($"((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString})");
+
+                            if (!string.IsNullOrEmpty(returnCastType))
+                            {
+                                writer.WriteLine("));");
+                            }
+                            else
+                            {
+                                writer.WriteLine(";");
+                            }
                         }
                     }
 
@@ -2815,7 +2842,7 @@ public static class Program
                 if (comType.Interface.Name == "IStream" ||
                     comType.Interface.Name == "IPersistStream")
                 {
-                    baseInterfacePrefix = "Win32.Com.";
+                    baseInterfacePrefix = "Vortice.Win32.Com.";
                 }
                 baseInterfaceDecl += $": {baseInterfacePrefix}{comType.Interface.Name}.Interface";
             }

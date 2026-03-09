@@ -3,7 +3,7 @@
 
 using System.ComponentModel;
 
-namespace Win32;
+namespace Vortice.Win32;
 
 public static unsafe partial class Apis
 {

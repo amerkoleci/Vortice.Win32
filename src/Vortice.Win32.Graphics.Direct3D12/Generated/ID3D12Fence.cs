@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence"]/*' />
 /// <unmanaged>ID3D12Fence</unmanaged>

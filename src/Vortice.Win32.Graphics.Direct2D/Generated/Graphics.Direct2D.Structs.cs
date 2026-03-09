@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_BITMAP_PROPERTIES</unmanaged>
@@ -140,7 +140,7 @@ public partial struct Ellipse
 public partial struct RoundedRect
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::rect"]/*' />
-	public Win32.Numerics.RectF rect;
+	public Vortice.Win32.Numerics.RectF rect;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::radiusX"]/*' />
 	public float radiusX;
@@ -180,7 +180,7 @@ public partial struct StrokeStyleProperties
 public partial struct LayerParameters
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::contentBounds"]/*' />
-	public Win32.Numerics.RectF contentBounds;
+	public Vortice.Win32.Numerics.RectF contentBounds;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::geometricMask"]/*' />
 	public unsafe ID2D1Geometry* geometricMask;
@@ -319,7 +319,7 @@ public partial struct EffectInputDescription
 	public uint inputIndex;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::inputRectangle"]/*' />
-	public Win32.Numerics.RectF inputRectangle;
+	public Vortice.Win32.Numerics.RectF inputRectangle;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION"]/*' />
@@ -347,7 +347,7 @@ public partial struct PointDescription
 public partial struct ImageBrushProperties
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_BRUSH_PROPERTIES::sourceRectangle"]/*' />
-	public Win32.Numerics.RectF sourceRectangle;
+	public Vortice.Win32.Numerics.RectF sourceRectangle;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_BRUSH_PROPERTIES::extendModeX"]/*' />
 	public ExtendMode extendModeX;
@@ -407,7 +407,7 @@ public partial struct StrokeStyleProperties1
 public partial struct LayerParameters1
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::contentBounds"]/*' />
-	public Win32.Numerics.RectF contentBounds;
+	public Vortice.Win32.Numerics.RectF contentBounds;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::geometricMask"]/*' />
 	public unsafe ID2D1Geometry* geometricMask;

@@ -14,7 +14,7 @@
     <Using Include="System.Runtime.CompilerServices" />
     <Using Include="System.Runtime.InteropServices" />
     <Using Include="System.Diagnostics.CodeAnalysis" />
-    <Using Include="Win32.Numerics" />
+    <Using Include="Vortice.Win32.Numerics" />
   </ItemGroup>
 
 </Project>

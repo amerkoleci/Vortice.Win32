@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics.DirectWrite;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection3"]/*' />
 /// <unmanaged>IDWriteFontCollection3</unmanaged>
@@ -155,7 +155,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	[VtblIndex(13)]
 	public Handle GetExpirationEvent()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, Handle>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
+		return ((Handle)(((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, void*>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this))));
 	}
 
 	public interface Interface : IDWriteFontCollection2.Interface

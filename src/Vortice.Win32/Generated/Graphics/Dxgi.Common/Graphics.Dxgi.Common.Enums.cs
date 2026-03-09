@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Dxgi.Common;
+namespace Vortice.Win32.Graphics.Dxgi.Common;
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_COLOR_SPACE_TYPE"]/*' />
 /// <unmanaged>DXGI_COLOR_SPACE_TYPE</unmanaged>

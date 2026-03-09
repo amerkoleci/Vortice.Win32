@@ -2,36 +2,36 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Numerics;
-using Win32;
-using Win32.Graphics.Direct2D;
-using Win32.Graphics.Direct3D;
-using Win32.Graphics.Direct3D.Dxc;
-using Win32.Graphics.Direct3D11;
-using Win32.Graphics.DirectWrite;
-using Win32.Graphics.Dxgi;
-using Win32.Graphics.Dxgi.Common;
-using Win32.Graphics.Imaging;
-using Win32.Graphics.Imaging.D2D;
-using Win32.Media.Audio.XAudio2;
-using static Win32.Apis;
-using static Win32.Graphics.Direct2D.Apis;
-using static Win32.Graphics.Direct3D.Dxc.Apis;
-using static Win32.Graphics.Direct3D12.Apis;
-using static Win32.Graphics.Direct3D11.Apis;
-using static Win32.Graphics.DirectWrite.Apis;
-using static Win32.Graphics.Dxgi.Apis;
-using static Win32.Graphics.Imaging.D2D.Apis;
-using static Win32.Media.Audio.XAudio2.Apis;
-using static Win32.Graphics.D3D12MemoryAllocator.Apis;
+using Vortice.Win32;
+using Vortice.Win32.Graphics.Direct2D;
+using Vortice.Win32.Graphics.Direct3D;
+using Vortice.Win32.Graphics.Direct3D.Dxc;
+using Vortice.Win32.Graphics.Direct3D11;
+using Vortice.Win32.Graphics.DirectWrite;
+using Vortice.Win32.Graphics.Dxgi;
+using Vortice.Win32.Graphics.Dxgi.Common;
+using Vortice.Win32.Graphics.Imaging;
+using Vortice.Win32.Graphics.Imaging.D2D;
+using Vortice.Win32.Media.Audio.XAudio2;
+using static Vortice.Win32.Apis;
+using static Vortice.Win32.Graphics.Direct2D.Apis;
+using static Vortice.Win32.Graphics.Direct3D.Dxc.Apis;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
+using static Vortice.Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.DirectWrite.Apis;
+using static Vortice.Win32.Graphics.Dxgi.Apis;
+using static Vortice.Win32.Graphics.Imaging.D2D.Apis;
+using static Vortice.Win32.Media.Audio.XAudio2.Apis;
+using static Vortice.Win32.Graphics.D3D12MemoryAllocator.Apis;
 
-using DWriteFactoryType = Win32.Graphics.DirectWrite.FactoryType;
-using FactoryType = Win32.Graphics.Direct2D.FactoryType;
-using FeatureLevel = Win32.Graphics.Direct3D.FeatureLevel;
-using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
-using MessageId = Win32.Graphics.Direct3D11.MessageId;
-using D3D11MessageSeverity = Win32.Graphics.Direct3D11.MessageSeverity;
-using Win32.Graphics.Direct3D12;
-using Win32.Graphics.D3D12MemoryAllocator;
+using DWriteFactoryType = Vortice.Win32.Graphics.DirectWrite.FactoryType;
+using FactoryType = Vortice.Win32.Graphics.Direct2D.FactoryType;
+using FeatureLevel = Vortice.Win32.Graphics.Direct3D.FeatureLevel;
+using InfoQueueFilter = Vortice.Win32.Graphics.Direct3D11.InfoQueueFilter;
+using MessageId = Vortice.Win32.Graphics.Direct3D11.MessageId;
+using D3D11MessageSeverity = Vortice.Win32.Graphics.Direct3D11.MessageSeverity;
+using Vortice.Win32.Graphics.Direct3D12;
+using Vortice.Win32.Graphics.D3D12MemoryAllocator;
 
 namespace ClearScreen;
 

@@ -1,10 +1,10 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Apis;
-using static Win32.Graphics.Imaging.Apis;
+using static Vortice.Win32.Apis;
+using static Vortice.Win32.Graphics.Imaging.Apis;
 
-namespace Win32.Graphics.Imaging.D2D;
+namespace Vortice.Win32.Graphics.Imaging.D2D;
 
 public static unsafe partial class Apis
 {

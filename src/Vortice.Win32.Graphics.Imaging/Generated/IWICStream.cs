@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICStream"]/*' />
 /// <unmanaged>IWICStream</unmanaged>
@@ -102,7 +102,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Com.IStream*, ulong, ulong, int>)(lpVtbl[17]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
 	}
 
-	public interface Interface : Win32.Com.IStream.Interface
+	public interface Interface : Vortice.Win32.Com.IStream.Interface
 	{
 		[VtblIndex(14)]
 		HResult InitializeFromIStream(Com.IStream* pIStream);

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics.Direct3D.Dxc;
 
 /// <unmanaged>IDxcBlobUtf16</unmanaged>
 [Guid("a3f84eab-0faa-497e-a39c-ee6ed60b2d84")]

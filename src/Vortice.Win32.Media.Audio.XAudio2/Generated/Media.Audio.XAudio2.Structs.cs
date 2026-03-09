@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Media.Audio.XAudio2;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES"]/*' />
 /// <unmanaged>XAPO_REGISTRATION_PROPERTIES</unmanaged>

@@ -4,9 +4,8 @@
 using System.Globalization;
 using System.Runtime.Intrinsics;
 using System.Text;
-using static Win32.Numerics.VectorUtilities;
 
-namespace Win32.Numerics;
+namespace Vortice.Win32.Numerics;
 
 [Serializable]
 [StructLayout(LayoutKind.Sequential, Pack = 4)]
@@ -115,20 +114,16 @@ public readonly struct Color4
     /// <param name="right">The color to compare with <paramref name="left" />.</param>
     /// <returns><c>true</c> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <c>false</c>.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static bool operator ==(Color4 left, Color4 right)
-    {
-        return CompareEqualAll(left._value, right._value);
-    }
+    public static bool operator ==(Color4 left, Color4 right) => Vector128.EqualsAll(left._value, right._value);
+    
 
     /// <summary>Compares two colors to determine equality.</summary>
     /// <param name="left">The color to compare with <paramref name="right" />.</param>
     /// <param name="right">The color to compare with <paramref name="left" />.</param>
     /// <returns><c>true</c> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <c>false</c>.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static bool operator !=(Color4 left, Color4 right)
-    {
-        return CompareNotEqualAny(left._value, right._value);
-    }
+    public static bool operator !=(Color4 left, Color4 right) => !Vector128.EqualsAll(left._value, right._value);
+    
 
     /// <inheritdoc />
     public override bool Equals(object? obj) => obj is Color4 other && Equals(other);

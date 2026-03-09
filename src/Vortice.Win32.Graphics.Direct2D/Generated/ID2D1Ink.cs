@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink"]/*' />
 /// <unmanaged>ID2D1Ink</unmanaged>
@@ -154,9 +154,9 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds)
+	public HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -189,7 +189,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 		HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
 
 		[VtblIndex(13)]
-		HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds);
+		HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds);
 	}
 }
 

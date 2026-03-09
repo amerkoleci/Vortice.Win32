@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Com;
+namespace Vortice.Win32.Com;
 
 [Guid("0C733A30-2A1C-11CE-ADE5-00AA0044773D")]
 [NativeTypeName("struct ISequentialStream : IUnknown")]
@@ -12,7 +12,7 @@ public unsafe partial struct ISequentialStream : ISequentialStream.Interface, IN
     {
         get
         {
-            ReadOnlySpan<byte> data = new byte[] {
+            ReadOnlySpan<byte> data = [
                 0x30, 0x3A, 0x73, 0x0C,
                 0x1C, 0x2A,
                 0xCE, 0x11,
@@ -24,7 +24,7 @@ public unsafe partial struct ISequentialStream : ISequentialStream.Interface, IN
                 0x44,
                 0x77,
                 0x3D
-            };
+            ];
 
             Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
             return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics.Dxgi;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS</unmanaged>

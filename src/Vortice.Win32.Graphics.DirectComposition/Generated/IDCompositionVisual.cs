@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics.DirectComposition;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual"]/*' />
 /// <unmanaged>IDCompositionVisual</unmanaged>
@@ -161,9 +161,9 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetClip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetClip(Win32.Numerics.RectF* rect)
+	public HResult SetClip(Vortice.Win32.Numerics.RectF* rect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), rect);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, Vortice.Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), rect);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetContent"]/*' />
@@ -242,7 +242,7 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 		HResult SetClip(IDCompositionClip* clip);
 
 		[VtblIndex(14)]
-		HResult SetClip(Win32.Numerics.RectF* rect);
+		HResult SetClip(Vortice.Win32.Numerics.RectF* rect);
 
 		[VtblIndex(15)]
 		HResult SetContent(IUnknown* content);

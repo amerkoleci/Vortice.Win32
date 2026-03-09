@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Media.Audio.XAudio2;
 
 public static partial class Apis
 {

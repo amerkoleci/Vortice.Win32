@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory7"]/*' />
 /// <unmanaged>ID2D1Factory7</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1Factory7 : ID2D1Factory7.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1Factory.CreateRectangleGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateRectangleGeometry(Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
+	public HResult CreateRectangleGeometry(Vortice.Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory7*, Win32.Numerics.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory7*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory7*, Vortice.Win32.Numerics.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory7*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateRoundedRectangleGeometry" />

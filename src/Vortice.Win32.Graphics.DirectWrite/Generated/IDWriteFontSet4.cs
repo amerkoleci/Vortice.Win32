@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics.DirectWrite;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet4"]/*' />
 /// <unmanaged>IDWriteFontSet4</unmanaged>
@@ -259,7 +259,7 @@ public unsafe partial struct IDWriteFontSet4 : IDWriteFontSet4.Interface, INativ
 	[VtblIndex(26)]
 	public Handle GetExpirationEvent()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet4*, Handle>)(lpVtbl[26]))((IDWriteFontSet4*)Unsafe.AsPointer(ref this));
+		return ((Handle)(((delegate* unmanaged[MemberFunction]<IDWriteFontSet4*, void*>)(lpVtbl[26]))((IDWriteFontSet4*)Unsafe.AsPointer(ref this))));
 	}
 
 	/// <inheritdoc cref="IDWriteFontSet3.GetFontSourceType" />

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch"]/*' />
 /// <unmanaged>ID2D1SpriteBatch</unmanaged>
@@ -81,25 +81,25 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::AddSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddSprites(uint spriteCount, Win32.Numerics.RectF* destinationRectangles, Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
+	public HResult AddSprites(uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, Win32.Numerics.RectF*, Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[4]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[4]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::SetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetSprites(uint startIndex, uint spriteCount, Win32.Numerics.RectF* destinationRectangles, Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
+	public HResult SetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, uint, Win32.Numerics.RectF*, Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[5]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, uint, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[5]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetSprites(uint startIndex, uint spriteCount, Win32.Numerics.RectF** destinationRectangles, Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms)
+	public HResult GetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF** destinationRectangles, Vortice.Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, uint, Win32.Numerics.RectF**, Win32.Numerics.Rect**, Color4**, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, uint, Vortice.Win32.Numerics.RectF**, Vortice.Win32.Numerics.Rect**, Color4**, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSpriteCount"]/*' />
@@ -121,13 +121,13 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult AddSprites(uint spriteCount, Win32.Numerics.RectF* destinationRectangles, Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
+		HResult AddSprites(uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
 
 		[VtblIndex(5)]
-		HResult SetSprites(uint startIndex, uint spriteCount, Win32.Numerics.RectF* destinationRectangles, Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
+		HResult SetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
 
 		[VtblIndex(6)]
-		HResult GetSprites(uint startIndex, uint spriteCount, Win32.Numerics.RectF** destinationRectangles, Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms);
+		HResult GetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF** destinationRectangles, Vortice.Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms);
 
 		[VtblIndex(7)]
 		uint GetSpriteCount();

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics.DirectWrite;
 
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE"]/*' />
@@ -1093,7 +1093,7 @@ public partial struct PaintElement
 			public uint glyphIndex;
 
 			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_COLOR_GLYPH::clipBox"]/*' />
-			public Win32.Numerics.RectF clipBox;
+			public Vortice.Win32.Numerics.RectF clipBox;
 		}
 		public partial struct PAINT_LINEAR_GRADIENT
 		{

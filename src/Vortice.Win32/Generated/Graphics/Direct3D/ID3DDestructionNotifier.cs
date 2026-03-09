@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics.Direct3D;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier"]/*' />
 /// <unmanaged>ID3DDestructionNotifier</unmanaged>
@@ -21,7 +21,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			ReadOnlySpan<byte> data = new byte[] {
+			ReadOnlySpan<byte> data = [
 				0x9A, 0xB3, 0x6E, 0xA0,
 				0xDA, 0x50,
 				0x5B, 0x42,
@@ -33,7 +33,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 				0xC2,
 				0x70,
 				0xF3
-			};
+			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));

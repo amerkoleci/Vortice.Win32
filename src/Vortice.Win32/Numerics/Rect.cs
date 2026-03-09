@@ -3,7 +3,7 @@
 
 using System.Drawing;
 
-namespace Win32.Numerics;
+namespace Vortice.Win32.Numerics;
 
 /// <summary>
 /// Defines an integer rectangle (Left, Top, Right, Bottom)

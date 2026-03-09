@@ -1,9 +1,9 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics.Direct3D11;
 
-public unsafe partial struct BufferDescription
+public partial struct BufferDescription
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="BufferDescription"/> struct.

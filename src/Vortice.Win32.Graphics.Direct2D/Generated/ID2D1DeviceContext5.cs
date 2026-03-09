@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5"]/*' />
 /// <unmanaged>ID2D1DeviceContext5</unmanaged>
@@ -177,17 +177,17 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
+	public void FillRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), rect, brush);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRoundedRectangle" />
@@ -249,25 +249,25 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1RenderTarget.FillOpacityMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
+	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Vortice.Win32.Numerics.RectF* destinationRectangle, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle)
+	public void DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, BitmapInterpolationMode, Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, Vortice.Win32.Numerics.RectF*, float, BitmapInterpolationMode, Vortice.Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawText" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Vortice.Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
@@ -409,9 +409,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1RenderTarget.PushAxisAlignedClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
+	public void PushAxisAlignedClip(Vortice.Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Vortice.Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PopAxisAlignedClip" />
@@ -612,25 +612,25 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.GetImageLocalBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
-	public HResult GetImageLocalBounds(ID2D1Image* image, Win32.Numerics.RectF** localBounds)
+	public HResult GetImageLocalBounds(ID2D1Image* image, Vortice.Win32.Numerics.RectF** localBounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[70]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), image, localBounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Image*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[70]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), image, localBounds);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetImageWorldBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
-	public HResult GetImageWorldBounds(ID2D1Image* image, Win32.Numerics.RectF** worldBounds)
+	public HResult GetImageWorldBounds(ID2D1Image* image, Vortice.Win32.Numerics.RectF** worldBounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[71]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), image, worldBounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Image*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[71]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), image, worldBounds);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetGlyphRunWorldBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Win32.Numerics.RectF** bounds)
+	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Vortice.Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetDevice" />
@@ -716,9 +716,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Image*, Vector2*, Vortice.Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGdiMetafile" />
@@ -732,9 +732,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(85)]
-	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
+	public void DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, Vortice.Win32.Numerics.RectF*, float, InterpolationMode, Vortice.Win32.Numerics.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.PushLayer" />
@@ -748,9 +748,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.InvalidateEffectInputRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
-	public HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Win32.Numerics.RectF* inputRectangle)
+	public HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Vortice.Win32.Numerics.RectF* inputRectangle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Effect*, uint, Win32.Numerics.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Effect*, uint, Vortice.Win32.Numerics.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetEffectInvalidRectangleCount" />
@@ -764,25 +764,25 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.GetEffectInvalidRectangles" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(89)]
-	public HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Win32.Numerics.RectF** rectangles, uint rectanglesCount)
+	public HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Vortice.Win32.Numerics.RectF** rectangles, uint rectanglesCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Effect*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Effect*, Vortice.Win32.Numerics.RectF**, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetEffectRequiredInputRectangles" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(90)]
-	public HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Win32.Numerics.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Win32.Numerics.RectF** requiredInputRects, uint inputCount)
+	public HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Vortice.Win32.Numerics.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Vortice.Win32.Numerics.RectF** requiredInputRects, uint inputCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Effect*, Win32.Numerics.RectF*, EffectInputDescription*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Effect*, Vortice.Win32.Numerics.RectF*, EffectInputDescription*, Vortice.Win32.Numerics.RectF**, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.FillOpacityMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(91)]
-	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
+	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Vortice.Win32.Numerics.RectF* destinationRectangle, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1Bitmap*, ID2D1Brush*, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext1.CreateFilledGeometryRealization" />
@@ -860,9 +860,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext2.GetGradientMeshWorldBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(101)]
-	public HResult GetGradientMeshWorldBounds(ID2D1GradientMesh* gradientMesh, Win32.Numerics.RectF** pBounds)
+	public HResult GetGradientMeshWorldBounds(ID2D1GradientMesh* gradientMesh, Vortice.Win32.Numerics.RectF** pBounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1GradientMesh*, Win32.Numerics.RectF**, int>)(lpVtbl[101]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), gradientMesh, pBounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1GradientMesh*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[101]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), gradientMesh, pBounds);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.DrawInk" />
@@ -884,9 +884,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext2.DrawGdiMetafile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(104)]
-	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
+	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vortice.Win32.Numerics.RectF* destinationRectangle, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1GdiMetafile*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[104]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, ID2D1GdiMetafile*, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.RectF*, void>)(lpVtbl[104]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateTransformedImageSource" />
@@ -924,9 +924,9 @@ public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext4.DrawText" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(109)]
-	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Vortice.Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[109]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, options, measuringMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext5*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[109]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, options, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext4.DrawTextLayout" />

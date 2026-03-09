@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget"]/*' />
 /// <unmanaged>ID2D1HwndRenderTarget</unmanaged>
@@ -177,17 +177,17 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
+	public void FillRectangle(Vortice.Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), rect, brush);
+		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRoundedRectangle" />
@@ -249,25 +249,25 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.FillOpacityMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
+	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Vortice.Win32.Numerics.RectF* destinationRectangle, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle)
+	public void DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, BitmapInterpolationMode, Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ID2D1Bitmap*, Vortice.Win32.Numerics.RectF*, float, BitmapInterpolationMode, Vortice.Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawText" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Vortice.Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
@@ -409,9 +409,9 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.PushAxisAlignedClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
+	public void PushAxisAlignedClip(Vortice.Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Vortice.Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PopAxisAlignedClip" />

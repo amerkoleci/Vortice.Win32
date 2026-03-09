@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D11on12;
+namespace Vortice.Win32.Graphics.Direct3D11on12;
 
 /// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>D3D11_RESOURCE_FLAGS</unmanaged>

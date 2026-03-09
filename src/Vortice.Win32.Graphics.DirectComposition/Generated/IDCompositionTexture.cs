@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics.DirectComposition;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture"]/*' />
 /// <unmanaged>IDCompositionTexture</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSourceRect(Win32.Numerics.Rect* sourceRect)
+	public HResult SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Win32.Numerics.Rect*, int>)(lpVtbl[3]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), sourceRect);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[3]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), sourceRect);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetColorSpace"]/*' />
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetSourceRect(Win32.Numerics.Rect* sourceRect);
+		HResult SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect);
 
 		[VtblIndex(4)]
 		HResult SetColorSpace(Graphics.Dxgi.Common.ColorSpaceType colorSpace);

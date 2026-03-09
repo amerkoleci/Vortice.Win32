@@ -1,11 +1,11 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D12.Apis;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
-namespace Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics.Direct3D12;
 
-public  partial struct CommandQueueDescription
+public partial struct CommandQueueDescription
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="CommandQueueDescription"/> struct.

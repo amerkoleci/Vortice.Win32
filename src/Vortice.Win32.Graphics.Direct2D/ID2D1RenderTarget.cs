@@ -1,12 +1,12 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Drawing;
-using Win32.Graphics.Direct2D.Common;
-using Win32.Graphics.Imaging;
-using Win32.Numerics;
+using Vortice.Win32.Graphics.Direct2D.Common;
+using Vortice.Win32.Graphics.Imaging;
+using Vortice.Win32.Numerics;
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 public unsafe partial struct ID2D1RenderTarget
 {

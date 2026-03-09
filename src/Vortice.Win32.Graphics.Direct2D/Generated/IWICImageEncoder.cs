@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Imaging.D2D;
+namespace Vortice.Win32.Graphics.Imaging.D2D;
 
 /// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImageEncoder"]/*' />
 /// <unmanaged>IWICImageEncoder</unmanaged>

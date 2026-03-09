@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry"]/*' />
 /// <unmanaged>ID2D1Geometry</unmanaged>
@@ -81,17 +81,17 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::GetBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetBounds(Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds)
+	public HResult GetBounds(Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Geometry*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Geometry*, Matrix3x2*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::GetWidenedBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Win32.Numerics.RectF** bounds)
+	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Vortice.Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Geometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Geometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::StrokeContainsPoint"]/*' />
@@ -185,10 +185,10 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult GetBounds(Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds);
+		HResult GetBounds(Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds);
 
 		[VtblIndex(5)]
-		HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Win32.Numerics.RectF** bounds);
+		HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Vortice.Win32.Numerics.RectF** bounds);
 
 		[VtblIndex(6)]
 		HResult StrokeContainsPoint(Vector2 point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);

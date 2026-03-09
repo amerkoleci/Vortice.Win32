@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics.Direct3D;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
 /// <unmanaged>ID3DInclude</unmanaged>

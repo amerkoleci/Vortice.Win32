@@ -4,9 +4,9 @@
 using System.Buffers;
 using System.Runtime.InteropServices.Marshalling;
 using System.Text;
-using static Win32.Apis;
+using static Vortice.Win32.Apis;
 
-namespace Win32.Graphics.Direct3D.Fxc;
+namespace Vortice.Win32.Graphics.Direct3D.Fxc;
 
 public static unsafe partial class Apis
 {

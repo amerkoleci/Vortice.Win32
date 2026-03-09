@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics.Direct3D11;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_CLASSIFICATION"]/*' />
 /// <unmanaged>D3D11_INPUT_CLASSIFICATION</unmanaged>

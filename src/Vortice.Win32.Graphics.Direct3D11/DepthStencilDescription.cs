@@ -1,36 +1,36 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.Direct3D11.Apis;
 
-namespace Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics.Direct3D11;
 
-public unsafe partial struct DepthStencilDescription
+public partial struct DepthStencilDescription
 {
     /// <summary>
     /// A built-in description with settings for not using a depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription None = new(false, DepthWriteMask.Zero);
+    public static DepthStencilDescription None => new(false, DepthWriteMask.Zero);
 
     /// <summary>
     /// A built-in description with default settings for using a depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription Default = new(true, DepthWriteMask.All);
+    public static DepthStencilDescription Default => new(true, DepthWriteMask.All);
 
     /// <summary>
     /// A built-in description with settings for enabling a read-only depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription DepthRead = new(true, DepthWriteMask.Zero);
+    public static DepthStencilDescription DepthRead => new(true, DepthWriteMask.Zero);
 
     /// <summary>
     /// A built-in description with settings for using a reverse depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription DepthReverseZ = new(true, DepthWriteMask.All, ComparisonFunction.GreaterEqual);
+    public static DepthStencilDescription DepthReverseZ => new(true, DepthWriteMask.All, ComparisonFunction.GreaterEqual);
 
     /// <summary>
     /// A built-in description with settings for enabling a read-only reverse depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription DepthReadReverseZ = new(true, DepthWriteMask.Zero, ComparisonFunction.GreaterEqual);
+    public static DepthStencilDescription DepthReadReverseZ => new(true, DepthWriteMask.Zero, ComparisonFunction.GreaterEqual);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="DepthStencilDescription"/> struct.

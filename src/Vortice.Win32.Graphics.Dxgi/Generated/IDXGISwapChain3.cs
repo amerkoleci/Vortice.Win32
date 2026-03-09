@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics.Dxgi;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
 /// <unmanaged>IDXGISwapChain3</unmanaged>
@@ -315,7 +315,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(33)]
 	public Handle GetFrameLatencyWaitableObject()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Handle>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+		return ((Handle)(((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, void*>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this))));
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.SetMatrixTransform" />
