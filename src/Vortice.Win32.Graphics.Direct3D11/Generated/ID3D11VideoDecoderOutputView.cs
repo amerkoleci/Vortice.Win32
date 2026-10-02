@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11VideoDecoderOutputView : ID3D11VideoDecoderOu
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11VideoDecoderOutputView));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11VideoDecoderOutputView);
 
 	public void** lpVtbl;
 

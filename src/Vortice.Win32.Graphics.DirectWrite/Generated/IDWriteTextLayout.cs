@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteTextLayout);
 
 	public void** lpVtbl;
 

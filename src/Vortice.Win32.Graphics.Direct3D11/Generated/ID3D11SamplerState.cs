@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11SamplerState : ID3D11SamplerState.Interface, 
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11SamplerState));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11SamplerState);
 
 	public void** lpVtbl;
 

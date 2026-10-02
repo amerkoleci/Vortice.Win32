@@ -236,7 +236,7 @@ public unsafe struct ComPtr<T> : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public readonly T** GetAddressOf()
     {
-        return (T**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
+        return (T**)Unsafe.AsPointer(in this);
     }
 
     /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.</summary>

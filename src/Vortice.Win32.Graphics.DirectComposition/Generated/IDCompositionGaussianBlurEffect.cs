@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionGaussianBlurEffect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionGaussianBlurEffect);
 
 	public void** lpVtbl;
 

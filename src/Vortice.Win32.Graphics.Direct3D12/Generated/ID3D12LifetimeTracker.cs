@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12LifetimeTracker : ID3D12LifetimeTracker.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12LifetimeTracker));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12LifetimeTracker);
 
 	public void** lpVtbl;
 

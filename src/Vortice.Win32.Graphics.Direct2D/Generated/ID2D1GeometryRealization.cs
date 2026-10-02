@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1GeometryRealization : ID2D1GeometryRealization
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GeometryRealization));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1GeometryRealization);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11RasterizerState2 : ID3D11RasterizerState2.Int
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11RasterizerState2));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11RasterizerState2);
 
 	public void** lpVtbl;
 

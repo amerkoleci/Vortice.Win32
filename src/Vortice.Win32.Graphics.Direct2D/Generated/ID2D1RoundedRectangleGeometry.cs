@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1RoundedRectangleGeometry));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1RoundedRectangleGeometry);
 
 	public void** lpVtbl;
 

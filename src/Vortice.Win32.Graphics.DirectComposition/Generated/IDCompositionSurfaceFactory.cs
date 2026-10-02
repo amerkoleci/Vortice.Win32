@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionSurfaceFactory : IDCompositionSurfaceF
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionSurfaceFactory));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionSurfaceFactory);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SvgPathData));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1SvgPathData);
 
 	public void** lpVtbl;
 

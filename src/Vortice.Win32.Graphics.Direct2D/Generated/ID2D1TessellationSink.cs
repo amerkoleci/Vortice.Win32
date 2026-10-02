@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TessellationSink));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1TessellationSink);
 
 	public void** lpVtbl;
 

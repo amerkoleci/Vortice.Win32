@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11RenderTargetView : ID3D11RenderTargetView.Int
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11RenderTargetView));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11RenderTargetView);
 
 	public void** lpVtbl;
 

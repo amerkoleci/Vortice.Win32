@@ -40,7 +40,7 @@ public unsafe partial struct IWICMetadataQueryReader : IWICMetadataQueryReader.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataQueryReader));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICMetadataQueryReader);
 
 	public void** lpVtbl;
 

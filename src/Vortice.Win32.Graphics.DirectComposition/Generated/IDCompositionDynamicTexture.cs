@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionDynamicTexture : IDCompositionDynamicT
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDynamicTexture));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionDynamicTexture);
 
 	public void** lpVtbl;
 

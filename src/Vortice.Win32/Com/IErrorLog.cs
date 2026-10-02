@@ -31,7 +31,7 @@ public unsafe partial struct IErrorLog
         }
     }
 
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IErrorLog));
+    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IErrorLog);
 
     public void** lpVtbl;
 

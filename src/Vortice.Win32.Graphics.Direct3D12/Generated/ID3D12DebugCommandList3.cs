@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12DebugCommandList3 : ID3D12DebugCommandList3.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DebugCommandList3));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12DebugCommandList3);
 
 	public void** lpVtbl;
 

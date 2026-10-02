@@ -31,7 +31,7 @@ public unsafe partial struct IStream : IStream.Interface, INativeGuid
         }
     }
 
-    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IStream));
+    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IStream);
 
     public void** lpVtbl;
 

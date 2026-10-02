@@ -39,7 +39,7 @@ public unsafe partial struct IDxcContainerBuilder : IDxcContainerBuilder.Interfa
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcContainerBuilder));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDxcContainerBuilder);
 
 	public void** lpVtbl;
 

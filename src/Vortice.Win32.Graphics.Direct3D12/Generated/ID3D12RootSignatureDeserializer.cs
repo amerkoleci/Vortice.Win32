@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : ID3D12RootSignatu
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12RootSignatureDeserializer));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12RootSignatureDeserializer);
 
 	public void** lpVtbl;
 

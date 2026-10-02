@@ -147,7 +147,7 @@ public static unsafe class ID2D1DeviceContextExtensions
         ref this TD2D1DeviceContext self, in Guid effectId, ID2D1Effect** effect)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        return self.CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in effectId)), effect);
+        return self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect);
     }
 
     public static ComPtr<ID2D1Effect> CreateEffect<TD2D1DeviceContext>(
@@ -155,7 +155,7 @@ public static unsafe class ID2D1DeviceContextExtensions
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         using ComPtr<ID2D1Effect> effect = default;
-        ThrowIfFailed(self.CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in effectId)), effect.GetAddressOf()));
+        ThrowIfFailed(self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect.GetAddressOf()));
         return effect.Move();
     }
 
@@ -262,7 +262,7 @@ public static unsafe class ID2D1DeviceContextExtensions
             return hr;
         }
 
-        hr = self.CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in CLSID_D2D1DpiCompensation)), &dpiCompensationEffect);
+        hr = self.CreateEffect((Guid*)Unsafe.AsPointer(in CLSID_D2D1DpiCompensation), &dpiCompensationEffect);
 
         if (hr.Success)
         {

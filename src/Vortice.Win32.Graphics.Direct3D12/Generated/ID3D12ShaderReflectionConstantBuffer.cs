@@ -38,7 +38,7 @@ public unsafe partial struct ID3D12ShaderReflectionConstantBuffer : ID3D12Shader
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderReflectionConstantBuffer));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12ShaderReflectionConstantBuffer);
 
 	public void** lpVtbl;
 

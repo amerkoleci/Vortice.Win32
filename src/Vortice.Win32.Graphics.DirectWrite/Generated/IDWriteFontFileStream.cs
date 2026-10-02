@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileStream));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteFontFileStream);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataBlockWriter));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICMetadataBlockWriter);
 
 	public void** lpVtbl;
 

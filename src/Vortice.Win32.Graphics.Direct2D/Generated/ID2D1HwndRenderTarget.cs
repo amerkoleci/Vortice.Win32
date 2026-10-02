@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1HwndRenderTarget));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1HwndRenderTarget);
 
 	public void** lpVtbl;
 

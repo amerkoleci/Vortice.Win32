@@ -40,7 +40,7 @@ public unsafe partial struct IWICDisplayAdaptationControl : IWICDisplayAdaptatio
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDisplayAdaptationControl));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICDisplayAdaptationControl);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12CommandSignature : ID3D12CommandSignature.Int
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12CommandSignature));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12CommandSignature);
 
 	public void** lpVtbl;
 

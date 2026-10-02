@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12Device));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12Device);
 
 	public void** lpVtbl;
 

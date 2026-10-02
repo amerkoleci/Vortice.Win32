@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteRenderingParams : IDWriteRenderingParams.Int
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRenderingParams));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteRenderingParams);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteLocalizedStrings));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteLocalizedStrings);
 
 	public void** lpVtbl;
 

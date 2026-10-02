@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11PixelShader : ID3D11PixelShader.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11PixelShader));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11PixelShader);
 
 	public void** lpVtbl;
 

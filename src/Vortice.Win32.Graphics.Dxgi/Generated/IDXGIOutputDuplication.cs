@@ -40,7 +40,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutputDuplication));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDXGIOutputDuplication);
 
 	public void** lpVtbl;
 

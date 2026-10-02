@@ -40,7 +40,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICComponentInfo));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICComponentInfo);
 
 	public void** lpVtbl;
 

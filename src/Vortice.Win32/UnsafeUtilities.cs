@@ -31,5 +31,5 @@ public static unsafe class UnsafeUtilities
     /// <returns>A pointer to the item at index zero of <paramref name="span" />.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T* GetPointer<T>(this ReadOnlySpan<T> span)
-        where T : unmanaged => (T*)Unsafe.AsPointer(ref Unsafe.AsRef(in span.GetReference()));
+        where T : unmanaged => (T*)Unsafe.AsPointer(in span.GetReference());
 }

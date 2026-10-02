@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1GdiMetafile : ID2D1GdiMetafile.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafile));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1GdiMetafile);
 
 	public void** lpVtbl;
 

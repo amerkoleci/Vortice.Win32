@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : IWICBitmapCod
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapCodecProgressNotification));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapCodecProgressNotification);
 
 	public void** lpVtbl;
 

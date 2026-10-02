@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapSourceTransform));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapSourceTransform);
 
 	public void** lpVtbl;
 

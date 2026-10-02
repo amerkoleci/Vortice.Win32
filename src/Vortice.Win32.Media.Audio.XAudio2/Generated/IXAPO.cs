@@ -40,7 +40,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAPO));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IXAPO);
 
 	public void** lpVtbl;
 

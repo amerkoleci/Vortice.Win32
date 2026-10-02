@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDelegatedInkTrail));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionDelegatedInkTrail);
 
 	public void** lpVtbl;
 

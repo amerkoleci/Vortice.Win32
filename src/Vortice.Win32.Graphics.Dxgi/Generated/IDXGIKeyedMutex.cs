@@ -40,7 +40,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIKeyedMutex));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDXGIKeyedMutex);
 
 	public void** lpVtbl;
 

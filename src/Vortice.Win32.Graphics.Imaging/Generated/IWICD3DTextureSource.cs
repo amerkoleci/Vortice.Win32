@@ -40,7 +40,7 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICD3DTextureSource));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICD3DTextureSource);
 
 	public void** lpVtbl;
 

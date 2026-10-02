@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11HullShader : ID3D11HullShader.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11HullShader));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11HullShader);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SimplifiedGeometrySink));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1SimplifiedGeometrySink);
 
 	public void** lpVtbl;
 

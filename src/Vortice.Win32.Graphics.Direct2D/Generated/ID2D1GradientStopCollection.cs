@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopColl
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GradientStopCollection));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1GradientStopCollection);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionVisual3));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionVisual3);
 
 	public void** lpVtbl;
 

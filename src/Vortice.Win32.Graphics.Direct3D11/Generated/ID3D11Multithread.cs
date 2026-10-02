@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Multithread));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11Multithread);
 
 	public void** lpVtbl;
 

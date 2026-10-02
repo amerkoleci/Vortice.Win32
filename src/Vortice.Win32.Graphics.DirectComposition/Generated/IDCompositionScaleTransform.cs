@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionScaleTransform : IDCompositionScaleTra
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionScaleTransform));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionScaleTransform);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11AuthenticatedChannel));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11AuthenticatedChannel);
 
 	public void** lpVtbl;
 

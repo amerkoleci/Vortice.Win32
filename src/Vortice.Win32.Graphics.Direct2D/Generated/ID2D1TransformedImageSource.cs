@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1TransformedImageSource : ID2D1TransformedImage
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TransformedImageSource));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1TransformedImageSource);
 
 	public void** lpVtbl;
 

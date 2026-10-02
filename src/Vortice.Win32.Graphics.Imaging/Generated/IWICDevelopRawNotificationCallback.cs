@@ -40,7 +40,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDevelopRawNotificationCallback));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICDevelopRawNotificationCallback);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDWritePixelSnapping : IDWritePixelSnapping.Interfa
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWritePixelSnapping));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWritePixelSnapping);
 
 	public void** lpVtbl;
 

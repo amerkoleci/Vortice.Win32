@@ -40,7 +40,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface, INativeGui
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory2));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDXGIFactory2);
 
 	public void** lpVtbl;
 

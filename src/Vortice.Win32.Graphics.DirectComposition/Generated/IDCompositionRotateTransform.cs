@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionRotateTransform));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionRotateTransform);
 
 	public void** lpVtbl;
 

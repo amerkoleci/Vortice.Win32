@@ -31,7 +31,7 @@ public unsafe partial struct IEnumString
         }
     }
 
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IEnumString));
+    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IEnumString);
 
     public void** lpVtbl;
 

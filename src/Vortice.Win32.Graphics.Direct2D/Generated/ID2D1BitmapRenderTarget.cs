@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1BitmapRenderTarget : ID2D1BitmapRenderTarget.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BitmapRenderTarget));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1BitmapRenderTarget);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFastMetadataEncoder));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICFastMetadataEncoder);
 
 	public void** lpVtbl;
 

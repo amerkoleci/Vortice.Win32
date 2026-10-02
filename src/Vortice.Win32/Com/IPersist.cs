@@ -36,7 +36,7 @@ public unsafe partial struct IPersist : IPersist.Interface, INativeGuid
         }
     }
 
-    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IPersist));
+    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IPersist);
 
     public void** lpVtbl;
 

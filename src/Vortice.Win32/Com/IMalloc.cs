@@ -31,7 +31,7 @@ public unsafe partial struct IMalloc
         }
     }
 
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IMalloc));
+    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IMalloc);
 
     public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionBlendEffect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionBlendEffect);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionTurbulenceEffect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionTurbulenceEffect);
 
 	public void** lpVtbl;
 

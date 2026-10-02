@@ -64,5 +64,5 @@ public unsafe partial struct ID3D11DeviceChild
         }
     }
 
-    public static Guid* D3DDebugObjectNameGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in WKPDID_D3DDebugObjectName));
+    public static Guid* D3DDebugObjectNameGuid => (Guid*)Unsafe.AsPointer(in WKPDID_D3DDebugObjectName);
 }

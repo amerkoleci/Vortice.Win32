@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1StrokeStyle));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1StrokeStyle);
 
 	public void** lpVtbl;
 

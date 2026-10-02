@@ -28,7 +28,7 @@ public static unsafe partial class Apis
     /// <typeparam name="T">The type to retrieve the GUID for.</typeparam>
     /// <returns>A <see cref="UuidOfType"/> value wrapping a pointer to the GUID data for the input type. This value can be either converted to a <see cref="Guid"/> pointer, or implicitly assigned to a <see cref="Guid"/> value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static unsafe UuidOfType __uuidof<T>(T value) // for type inference similar to C++'s __uuidof
+    public static UuidOfType __uuidof<T>(T value) // for type inference similar to C++'s __uuidof
         where T : unmanaged, INativeGuid
     {
         return new UuidOfType(T.NativeGuid);
@@ -39,7 +39,7 @@ public static unsafe partial class Apis
     /// <typeparam name="T">The type to retrieve the GUID for.</typeparam>
     /// <returns>A <see cref="UuidOfType"/> value wrapping a pointer to the GUID data for the input type. This value can be either converted to a <see cref="Guid"/> pointer, or implicitly assigned to a <see cref="Guid"/> value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static unsafe UuidOfType __uuidof<T>(T* value) // for type inference similar to C++'s __uuidof
+    public static UuidOfType __uuidof<T>(T* value) // for type inference similar to C++'s __uuidof
         where T : unmanaged, INativeGuid
     {
         return new UuidOfType(T.NativeGuid);
@@ -49,7 +49,7 @@ public static unsafe partial class Apis
     /// <typeparam name="T">The type to retrieve the GUID for.</typeparam>
     /// <returns>A <see cref="UuidOfType"/> value wrapping a pointer to the GUID data for the input type. This value can be either converted to a <see cref="Guid"/> pointer, or implicitly assigned to a <see cref="Guid"/> value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static unsafe UuidOfType __uuidof<T>()
+    public static UuidOfType __uuidof<T>()
         where T : unmanaged, INativeGuid
     {
         return new UuidOfType(T.NativeGuid);
@@ -82,30 +82,30 @@ public static unsafe partial class Apis
     public const int CLSCTX_REMOTE_SERVER = 0x10;
     public const int CLSCTX_INPROC_HANDLER16 = 0x20;
 
-    [DllImport("ole32", ExactSpelling = true)]
-    public static extern HResult CoCreateInstance(Guid* rclsid, IUnknown* pUnkOuter, uint dwClsContext, Guid* riid, void** ppv);
+    [LibraryImport("ole32")]
+    public static partial HResult CoCreateInstance(Guid* rclsid, IUnknown* pUnkOuter, uint dwClsContext, Guid* riid, void** ppv);
 
-    [DllImport("kernel32", ExactSpelling = true)]
-    public static extern Handle HeapCreate(uint flOptions, nuint dwInitialSize, nuint dwMaximumSize);
+    [LibraryImport("kernel32")]
+    public static partial Handle HeapCreate(uint flOptions, nuint dwInitialSize, nuint dwMaximumSize);
 
-    [DllImport("kernel32", ExactSpelling = true)]
-    public static extern Bool32 HeapDestroy(void* hHeap);
+    [LibraryImport("kernel32")]
+    public static partial Bool32 HeapDestroy(void* hHeap);
 
-    [DllImport("kernel32", ExactSpelling = true)]
-    public static extern void* HeapAlloc(Handle hHeap, uint dwFlags, nuint dwBytes);
+    [LibraryImport("kernel32")]
+    public static partial void* HeapAlloc(Handle hHeap, uint dwFlags, nuint dwBytes);
 
-    [DllImport("kernel32", ExactSpelling = true)]
+    [LibraryImport("kernel32")]
     [return: NativeTypeName("LPVOID")]
-    public static extern void* HeapReAlloc(Handle hHeap, uint dwFlags, void* lpMem, nuint dwBytes);
+    public static partial void* HeapReAlloc(Handle hHeap, uint dwFlags, void* lpMem, nuint dwBytes);
 
-    [DllImport("kernel32", ExactSpelling = true)]
-    public static extern Bool32 HeapFree(Handle hHeap, uint dwFlags, void* lpMem);
+    [LibraryImport("kernel32")]
+    public static partial Bool32 HeapFree(Handle hHeap, uint dwFlags, void* lpMem);
 
-    [DllImport("kernel32", ExactSpelling = true)]
-    public static extern nuint HeapSize(Handle hHeap, uint dwFlags, void* lpMem);
+    [LibraryImport("kernel32")]
+    public static partial nuint HeapSize(Handle hHeap, uint dwFlags, void* lpMem);
 
-    [DllImport("kernel32", ExactSpelling = true)]
-    public static extern Handle GetProcessHeap();
+    [LibraryImport("kernel32")]
+    public static partial Handle GetProcessHeap();
 
     public const int RDH_RECTANGLES = 1;
 }

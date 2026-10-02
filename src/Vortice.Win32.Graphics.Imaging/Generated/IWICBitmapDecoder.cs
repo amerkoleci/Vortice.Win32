@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapDecoder));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapDecoder);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface, INativeGui
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface2));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDXGISurface2);
 
 	public void** lpVtbl;
 

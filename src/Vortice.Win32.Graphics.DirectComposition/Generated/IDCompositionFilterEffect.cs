@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionFilterEffect : IDCompositionFilterEffe
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionFilterEffect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionFilterEffect);
 
 	public void** lpVtbl;
 

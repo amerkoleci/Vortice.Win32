@@ -40,7 +40,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DDestructionNotifier));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3DDestructionNotifier);
 
 	public void** lpVtbl;
 

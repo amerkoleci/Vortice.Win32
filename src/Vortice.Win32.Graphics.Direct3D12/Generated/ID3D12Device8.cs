@@ -36,11 +36,11 @@ public unsafe partial struct ID3D12Device8 : ID3D12Device8.Interface, INativeGui
 			];
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-		}
+            return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+        }
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12Device8));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12Device8);
 
 	public void** lpVtbl;
 

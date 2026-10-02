@@ -40,7 +40,7 @@ public unsafe partial struct IDXGISwapChain4 : IDXGISwapChain4.Interface, INativ
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain4));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDXGISwapChain4);
 
 	public void** lpVtbl;
 

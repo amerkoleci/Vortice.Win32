@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12ManualWriteTrackingResource : ID3D12ManualWri
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ManualWriteTrackingResource));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12ManualWriteTrackingResource);
 
 	public void** lpVtbl;
 

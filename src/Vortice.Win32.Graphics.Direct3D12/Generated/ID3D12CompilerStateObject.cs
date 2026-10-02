@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12CompilerStateObject : ID3D12CompilerStateObje
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12CompilerStateObject));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12CompilerStateObject);
 
 	public void** lpVtbl;
 

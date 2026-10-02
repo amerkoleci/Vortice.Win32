@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontDownloadQueue));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteFontDownloadQueue);
 
 	public void** lpVtbl;
 

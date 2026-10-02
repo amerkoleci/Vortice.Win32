@@ -2520,7 +2520,7 @@ public static class Program
                 WriteGuid(writer, comType.Guid, $"IID_{csTypeName}");
                 writer.WriteLine();
 
-                writer.WriteLine($"static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
+                writer.WriteLine($"static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_{csTypeName});");
                 writer.WriteLine();
             }
 

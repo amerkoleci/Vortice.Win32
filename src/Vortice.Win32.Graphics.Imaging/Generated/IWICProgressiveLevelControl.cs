@@ -40,7 +40,7 @@ public unsafe partial struct IWICProgressiveLevelControl : IWICProgressiveLevelC
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICProgressiveLevelControl));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICProgressiveLevelControl);
 
 	public void** lpVtbl;
 

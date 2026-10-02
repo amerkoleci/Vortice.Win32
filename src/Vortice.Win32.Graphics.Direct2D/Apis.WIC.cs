@@ -11,7 +11,7 @@ public static unsafe partial class Apis
     public static HResult CreateWICImagingFactory(IWICImagingFactory2** factory)
     {
         return CoCreateInstance(
-            (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in CLSID_WICImagingFactory2)),
+            (Guid*)Unsafe.AsPointer(in CLSID_WICImagingFactory2),
             null,
             CLSCTX_INPROC_SERVER,
             __uuidof<IWICImagingFactory2>(),

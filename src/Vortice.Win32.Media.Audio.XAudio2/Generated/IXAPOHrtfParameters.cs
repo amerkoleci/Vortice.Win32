@@ -40,7 +40,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAPOHrtfParameters));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IXAPOHrtfParameters);
 
 	public void** lpVtbl;
 

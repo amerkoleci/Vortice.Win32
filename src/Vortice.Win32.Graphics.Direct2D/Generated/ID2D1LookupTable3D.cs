@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1LookupTable3D : ID2D1LookupTable3D.Interface, 
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1LookupTable3D));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1LookupTable3D);
 
 	public void** lpVtbl;
 

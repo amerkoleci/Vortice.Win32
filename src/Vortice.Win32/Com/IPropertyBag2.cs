@@ -33,7 +33,7 @@ public unsafe partial struct IPropertyBag2
             return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
         }
     }
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IPropertyBag2));
+    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IPropertyBag2);
 
     public void** lpVtbl;
 

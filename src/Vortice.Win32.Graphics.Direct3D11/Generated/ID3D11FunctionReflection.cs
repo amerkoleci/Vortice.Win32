@@ -38,7 +38,7 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11FunctionReflection));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11FunctionReflection);
 
 	public void** lpVtbl;
 

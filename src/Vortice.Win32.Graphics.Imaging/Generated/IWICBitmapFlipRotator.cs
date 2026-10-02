@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapFlipRotator : IWICBitmapFlipRotator.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapFlipRotator));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapFlipRotator);
 
 	public void** lpVtbl;
 

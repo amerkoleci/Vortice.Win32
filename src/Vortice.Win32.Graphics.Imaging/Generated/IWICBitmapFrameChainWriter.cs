@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapFrameChainWriter : IWICBitmapFrameChainWr
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapFrameChainWriter));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapFrameChainWriter);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12LifetimeOwner : ID3D12LifetimeOwner.Interface
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12LifetimeOwner));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12LifetimeOwner);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget3 : IDWriteBitmapRenderTar
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteBitmapRenderTarget3));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteBitmapRenderTarget3);
 
 	public void** lpVtbl;
 

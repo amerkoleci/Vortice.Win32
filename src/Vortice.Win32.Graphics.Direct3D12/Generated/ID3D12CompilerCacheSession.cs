@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12CompilerCacheSession));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12CompilerCacheSession);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1CommandSink);
 
 	public void** lpVtbl;
 

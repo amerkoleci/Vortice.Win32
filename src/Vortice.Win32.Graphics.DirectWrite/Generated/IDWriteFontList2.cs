@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontList2));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteFontList2);
 
 	public void** lpVtbl;
 

@@ -91,7 +91,7 @@ public static unsafe partial class Apis
     public static HResult DxcCreateInstance(in Guid rclsid, Guid* riid, void** ppv)
     {
         return DxcCreateInstance(
-            (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in rclsid)),
+            (Guid*)Unsafe.AsPointer(in rclsid),
             riid,
             ppv);
     }
@@ -100,7 +100,7 @@ public static unsafe partial class Apis
     {
         return DxcCreateInstance2(
             pMalloc,
-            (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in rclsid)),
+            (Guid*)Unsafe.AsPointer(in rclsid),
             riid,
             ppv);
     }

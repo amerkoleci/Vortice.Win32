@@ -40,7 +40,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPixelFormatInfo));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICPixelFormatInfo);
 
 	public void** lpVtbl;
 

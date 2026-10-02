@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionSaturationEffect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionSaturationEffect);
 
 	public void** lpVtbl;
 

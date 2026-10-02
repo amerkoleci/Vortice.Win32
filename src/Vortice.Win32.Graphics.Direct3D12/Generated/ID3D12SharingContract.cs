@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12SharingContract));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12SharingContract);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICColorContext));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICColorContext);
 
 	public void** lpVtbl;
 

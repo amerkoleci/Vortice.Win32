@@ -38,7 +38,7 @@ public unsafe partial struct ID3DShaderCacheInstallerClient : ID3DShaderCacheIns
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DShaderCacheInstallerClient));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3DShaderCacheInstallerClient);
 
 	public void** lpVtbl;
 

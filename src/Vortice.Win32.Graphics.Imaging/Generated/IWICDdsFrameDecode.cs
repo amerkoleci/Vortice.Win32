@@ -40,7 +40,7 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDdsFrameDecode));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICDdsFrameDecode);
 
 	public void** lpVtbl;
 

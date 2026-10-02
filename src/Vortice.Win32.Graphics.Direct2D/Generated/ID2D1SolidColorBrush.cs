@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SolidColorBrush));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1SolidColorBrush);
 
 	public void** lpVtbl;
 

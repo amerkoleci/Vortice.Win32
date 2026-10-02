@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Effect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1Effect);
 
 	public void** lpVtbl;
 

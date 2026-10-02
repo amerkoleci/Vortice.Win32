@@ -40,7 +40,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICImagingFactory3));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICImagingFactory3);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1VertexBuffer));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1VertexBuffer);
 
 	public void** lpVtbl;
 

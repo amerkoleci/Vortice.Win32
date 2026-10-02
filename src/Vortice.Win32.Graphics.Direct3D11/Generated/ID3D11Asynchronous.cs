@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11Asynchronous : ID3D11Asynchronous.Interface, 
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Asynchronous));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11Asynchronous);
 
 	public void** lpVtbl;
 

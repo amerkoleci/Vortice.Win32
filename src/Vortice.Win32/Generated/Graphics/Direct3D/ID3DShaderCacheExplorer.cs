@@ -40,7 +40,7 @@ public unsafe partial struct ID3DShaderCacheExplorer : ID3DShaderCacheExplorer.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DShaderCacheExplorer));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3DShaderCacheExplorer);
 
 	public void** lpVtbl;
 

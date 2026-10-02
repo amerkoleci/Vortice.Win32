@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapClipper : IWICBitmapClipper.Interface, IN
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapClipper));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapClipper);
 
 	public void** lpVtbl;
 

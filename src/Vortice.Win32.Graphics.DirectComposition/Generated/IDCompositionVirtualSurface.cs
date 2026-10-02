@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionVirtualSurface));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionVirtualSurface);
 
 	public void** lpVtbl;
 

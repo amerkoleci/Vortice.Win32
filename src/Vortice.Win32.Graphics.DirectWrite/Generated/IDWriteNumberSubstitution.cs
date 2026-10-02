@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteNumberSubstitution : IDWriteNumberSubstituti
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteNumberSubstitution));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteNumberSubstitution);
 
 	public void** lpVtbl;
 

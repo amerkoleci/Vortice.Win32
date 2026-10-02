@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11DepthStencilState : ID3D11DepthStencilState.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11DepthStencilState));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11DepthStencilState);
 
 	public void** lpVtbl;
 

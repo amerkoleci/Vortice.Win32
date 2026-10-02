@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1RadialGradientBrush));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1RadialGradientBrush);
 
 	public void** lpVtbl;
 

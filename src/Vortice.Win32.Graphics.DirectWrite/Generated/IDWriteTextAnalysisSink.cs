@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextAnalysisSink));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteTextAnalysisSink);
 
 	public void** lpVtbl;
 

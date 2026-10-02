@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionColorMatrixEffect));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionColorMatrixEffect);
 
 	public void** lpVtbl;
 

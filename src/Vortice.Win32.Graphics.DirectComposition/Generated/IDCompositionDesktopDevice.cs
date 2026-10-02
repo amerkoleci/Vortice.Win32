@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDesktopDevice));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionDesktopDevice);
 
 	public void** lpVtbl;
 

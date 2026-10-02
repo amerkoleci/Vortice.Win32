@@ -40,7 +40,7 @@ public unsafe partial struct ID2D1Mesh : ID2D1Mesh.Interface, INativeGuid
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Mesh));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID2D1Mesh);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IWICBitmapFrameChainReader : IWICBitmapFrameChainRe
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapFrameChainReader));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICBitmapFrameChainReader);
 
 	public void** lpVtbl;
 

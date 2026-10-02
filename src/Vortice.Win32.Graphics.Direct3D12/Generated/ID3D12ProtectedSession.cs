@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ProtectedSession));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12ProtectedSession);
 
 	public void** lpVtbl;
 

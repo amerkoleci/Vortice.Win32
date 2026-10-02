@@ -40,7 +40,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStreamProvider));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICStreamProvider);
 
 	public void** lpVtbl;
 

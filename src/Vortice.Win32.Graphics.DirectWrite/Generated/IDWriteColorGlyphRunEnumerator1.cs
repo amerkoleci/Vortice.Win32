@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteColorGlyphRunEnumerator1));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteColorGlyphRunEnumerator1);
 
 	public void** lpVtbl;
 

@@ -39,7 +39,7 @@ public unsafe partial struct IDxcValidator2 : IDxcValidator2.Interface, INativeG
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcValidator2));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDxcValidator2);
 
 	public void** lpVtbl;
 

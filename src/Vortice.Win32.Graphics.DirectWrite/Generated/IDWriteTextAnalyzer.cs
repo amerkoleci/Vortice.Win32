@@ -40,7 +40,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextAnalyzer));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWriteTextAnalyzer);
 
 	public void** lpVtbl;
 

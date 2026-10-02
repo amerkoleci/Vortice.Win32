@@ -40,7 +40,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPalette));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICPalette);
 
 	public void** lpVtbl;
 

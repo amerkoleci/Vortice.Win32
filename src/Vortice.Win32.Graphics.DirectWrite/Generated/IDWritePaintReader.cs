@@ -40,7 +40,7 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWritePaintReader));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDWritePaintReader);
 
 	public void** lpVtbl;
 

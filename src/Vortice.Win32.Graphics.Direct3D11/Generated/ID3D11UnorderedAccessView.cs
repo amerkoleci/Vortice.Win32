@@ -40,7 +40,7 @@ public unsafe partial struct ID3D11UnorderedAccessView : ID3D11UnorderedAccessVi
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11UnorderedAccessView));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D11UnorderedAccessView);
 
 	public void** lpVtbl;
 

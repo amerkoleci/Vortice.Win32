@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionSkewTransform));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionSkewTransform);
 
 	public void** lpVtbl;
 

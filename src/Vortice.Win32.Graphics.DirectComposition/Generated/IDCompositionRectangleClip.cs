@@ -40,7 +40,7 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionRectangleClip));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IDCompositionRectangleClip);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct IWICFormatConverterInfo : IWICFormatConverterInfo.I
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFormatConverterInfo));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IWICFormatConverterInfo);
 
 	public void** lpVtbl;
 

@@ -40,7 +40,7 @@ public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Inter
 		}
 	}
 
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12PipelineLibrary));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_ID3D12PipelineLibrary);
 
 	public void** lpVtbl;
 
