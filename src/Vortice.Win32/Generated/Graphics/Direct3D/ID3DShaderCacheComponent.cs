@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheComponent"]/*' />
 /// <unmanaged>ID3DShaderCacheComponent</unmanaged>
@@ -105,9 +105,9 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheComponent::GetPrecompiledShaderDatabases"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetPrecompiledShaderDatabases(uint ArraySize, ShaderCachePsdbProperties* pPSDBs)
+	public HResult GetPrecompiledShaderDatabases(uint ArraySize, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, uint, ShaderCachePsdbProperties*, int>)(lpVtbl[7]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), ArraySize, pPSDBs);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, uint, D3D_SHADER_CACHE_PSDB_PROPERTIES*, int>)(lpVtbl[7]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), ArraySize, pPSDBs);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -125,7 +125,7 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 		uint GetPrecompiledShaderDatabaseCount();
 
 		[VtblIndex(7)]
-		HResult GetPrecompiledShaderDatabases(uint ArraySize, ShaderCachePsdbProperties* pPSDBs);
+		HResult GetPrecompiledShaderDatabases(uint ArraySize, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs);
 	}
 }
 

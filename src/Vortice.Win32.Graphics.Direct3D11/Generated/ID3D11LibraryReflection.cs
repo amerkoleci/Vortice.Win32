@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection"]/*' />
 /// <unmanaged>ID3D11LibraryReflection</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetDesc(LibraryDescription* pDesc)
+	public HResult GetDesc(D3D11_LIBRARY_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11LibraryReflection*, LibraryDescription*, int>)(lpVtbl[3]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11LibraryReflection*, D3D11_LIBRARY_DESC*, int>)(lpVtbl[3]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection::GetFunctionByIndex"]/*' />
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetDesc(LibraryDescription* pDesc);
+		HResult GetDesc(D3D11_LIBRARY_DESC* pDesc);
 
 		[VtblIndex(4)]
 		ID3D11FunctionReflection* GetFunctionByIndex(int FunctionIndex);

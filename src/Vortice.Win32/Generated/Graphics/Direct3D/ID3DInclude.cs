@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
 /// <unmanaged>ID3DInclude</unmanaged>
@@ -18,9 +18,9 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult Open(IncludeType IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes)
+	public HResult Open(D3D_INCLUDE_TYPE IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DInclude*, IncludeType, byte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
+		return ((delegate* unmanaged[MemberFunction]<ID3DInclude*, D3D_INCLUDE_TYPE, byte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />
@@ -34,7 +34,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult Open(IncludeType IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes);
+		HResult Open(D3D_INCLUDE_TYPE IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes);
 
 		[VtblIndex(1)]
 		HResult Close(void* pData);

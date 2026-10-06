@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout"]/*' />
 /// <unmanaged>IDWriteTextLayout</unmanaged>
@@ -73,41 +73,41 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <inheritdoc cref="IDWriteTextFormat.SetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetTextAlignment(TextAlignment textAlignment)
+	public HResult SetTextAlignment(DWRITE_TEXT_ALIGNMENT textAlignment)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, TextAlignment, int>)(lpVtbl[3]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textAlignment);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_TEXT_ALIGNMENT, int>)(lpVtbl[3]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetParagraphAlignment(ParagraphAlignment paragraphAlignment)
+	public HResult SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ParagraphAlignment, int>)(lpVtbl[4]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), paragraphAlignment);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_PARAGRAPH_ALIGNMENT, int>)(lpVtbl[4]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), paragraphAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetWordWrapping(WordWrapping wordWrapping)
+	public HResult SetWordWrapping(DWRITE_WORD_WRAPPING wordWrapping)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, WordWrapping, int>)(lpVtbl[5]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), wordWrapping);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_WORD_WRAPPING, int>)(lpVtbl[5]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), wordWrapping);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetReadingDirection(ReadingDirection readingDirection)
+	public HResult SetReadingDirection(DWRITE_READING_DIRECTION readingDirection)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ReadingDirection, int>)(lpVtbl[6]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), readingDirection);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_READING_DIRECTION, int>)(lpVtbl[6]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), readingDirection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetFlowDirection(FlowDirection flowDirection)
+	public HResult SetFlowDirection(DWRITE_FLOW_DIRECTION flowDirection)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FlowDirection, int>)(lpVtbl[7]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), flowDirection);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FLOW_DIRECTION, int>)(lpVtbl[7]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), flowDirection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetIncrementalTabStop" />
@@ -121,57 +121,57 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <inheritdoc cref="IDWriteTextFormat.SetTrimming" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetTrimming(Trimming* trimmingOptions, IDWriteInlineObject* trimmingSign)
+	public HResult SetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject* trimmingSign)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, Trimming*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_TRIMMING*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetLineSpacing" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetLineSpacing(LineSpacingMethod lineSpacingMethod, float lineSpacing, float baseline)
+	public HResult SetLineSpacing(DWRITE_LINE_SPACING_METHOD lineSpacingMethod, float lineSpacing, float baseline)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, LineSpacingMethod, float, float, int>)(lpVtbl[10]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_LINE_SPACING_METHOD, float, float, int>)(lpVtbl[10]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public TextAlignment GetTextAlignment()
+	public DWRITE_TEXT_ALIGNMENT GetTextAlignment()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, TextAlignment>)(lpVtbl[11]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_TEXT_ALIGNMENT>)(lpVtbl[11]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public ParagraphAlignment GetParagraphAlignment()
+	public DWRITE_PARAGRAPH_ALIGNMENT GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_PARAGRAPH_ALIGNMENT>)(lpVtbl[12]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public WordWrapping GetWordWrapping()
+	public DWRITE_WORD_WRAPPING GetWordWrapping()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, WordWrapping>)(lpVtbl[13]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_WORD_WRAPPING>)(lpVtbl[13]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public ReadingDirection GetReadingDirection()
+	public DWRITE_READING_DIRECTION GetReadingDirection()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_READING_DIRECTION>)(lpVtbl[14]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public FlowDirection GetFlowDirection()
+	public DWRITE_FLOW_DIRECTION GetFlowDirection()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FlowDirection>)(lpVtbl[15]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FLOW_DIRECTION>)(lpVtbl[15]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -185,17 +185,17 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <inheritdoc cref="IDWriteTextFormat.GetTrimming" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetTrimming(Trimming* trimmingOptions, IDWriteInlineObject** trimmingSign)
+	public HResult GetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject** trimmingSign)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, Trimming*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_TRIMMING*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetLineSpacing" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetLineSpacing(LineSpacingMethod* lineSpacingMethod, float* lineSpacing, float* baseline)
+	public HResult GetLineSpacing(DWRITE_LINE_SPACING_METHOD* lineSpacingMethod, float* lineSpacing, float* baseline)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, LineSpacingMethod*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_LINE_SPACING_METHOD*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontCollection" />
@@ -225,25 +225,25 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public FontWeight GetFontWeight()
+	public DWRITE_FONT_WEIGHT GetFontWeight()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FontWeight>)(lpVtbl[22]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FONT_WEIGHT>)(lpVtbl[22]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public FontStyle GetFontStyle()
+	public DWRITE_FONT_STYLE GetFontStyle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FontStyle>)(lpVtbl[23]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FONT_STYLE>)(lpVtbl[23]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public FontStretch GetFontStretch()
+	public DWRITE_FONT_STRETCH GetFontStretch()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FontStretch>)(lpVtbl[24]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FONT_STRETCH>)(lpVtbl[24]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -289,97 +289,97 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange textRange)
+	public HResult SetFontCollection(IDWriteFontCollection* fontCollection, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IDWriteFontCollection*, TextRange, int>)(lpVtbl[30]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontCollection, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IDWriteFontCollection*, DWRITE_TEXT_RANGE, int>)(lpVtbl[30]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontCollection, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetFontFamilyName(char* fontFamilyName, TextRange textRange)
+	public HResult SetFontFamilyName(char* fontFamilyName, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, DWRITE_TEXT_RANGE, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetFontWeight(FontWeight fontWeight, TextRange textRange)
+	public HResult SetFontWeight(DWRITE_FONT_WEIGHT fontWeight, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FontWeight, TextRange, int>)(lpVtbl[32]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontWeight, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FONT_WEIGHT, DWRITE_TEXT_RANGE, int>)(lpVtbl[32]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontWeight, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult SetFontStyle(FontStyle fontStyle, TextRange textRange)
+	public HResult SetFontStyle(DWRITE_FONT_STYLE fontStyle, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FontStyle, TextRange, int>)(lpVtbl[33]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStyle, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FONT_STYLE, DWRITE_TEXT_RANGE, int>)(lpVtbl[33]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStyle, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult SetFontStretch(FontStretch fontStretch, TextRange textRange)
+	public HResult SetFontStretch(DWRITE_FONT_STRETCH fontStretch, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, FontStretch, TextRange, int>)(lpVtbl[34]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStretch, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_FONT_STRETCH, DWRITE_TEXT_RANGE, int>)(lpVtbl[34]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStretch, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public HResult SetFontSize(float fontSize, TextRange textRange)
+	public HResult SetFontSize(float fontSize, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, float, TextRange, int>)(lpVtbl[35]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontSize, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, float, DWRITE_TEXT_RANGE, int>)(lpVtbl[35]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetUnderline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult SetUnderline(Bool32 hasUnderline, TextRange textRange)
+	public HResult SetUnderline(Bool32 hasUnderline, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, Bool32, TextRange, int>)(lpVtbl[36]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, Bool32, DWRITE_TEXT_RANGE, int>)(lpVtbl[36]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetStrikethrough"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange textRange)
+	public HResult SetStrikethrough(Bool32 hasStrikethrough, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, Bool32, TextRange, int>)(lpVtbl[37]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, Bool32, DWRITE_TEXT_RANGE, int>)(lpVtbl[37]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetDrawingEffect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange textRange)
+	public HResult SetDrawingEffect(IUnknown* drawingEffect, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IUnknown*, TextRange, int>)(lpVtbl[38]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IUnknown*, DWRITE_TEXT_RANGE, int>)(lpVtbl[38]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetInlineObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange textRange)
+	public HResult SetInlineObject(IDWriteInlineObject* inlineObject, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IDWriteInlineObject*, TextRange, int>)(lpVtbl[39]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), inlineObject, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IDWriteInlineObject*, DWRITE_TEXT_RANGE, int>)(lpVtbl[39]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), inlineObject, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetTypography"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult SetTypography(IDWriteTypography* typography, TextRange textRange)
+	public HResult SetTypography(IDWriteTypography* typography, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IDWriteTypography*, TextRange, int>)(lpVtbl[40]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), typography, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, IDWriteTypography*, DWRITE_TEXT_RANGE, int>)(lpVtbl[40]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), typography, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public HResult SetLocaleName(char* localeName, TextRange textRange)
+	public HResult SetLocaleName(char* localeName, DWRITE_TEXT_RANGE textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, DWRITE_TEXT_RANGE, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxWidth"]/*' />
@@ -401,113 +401,113 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
-	public HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, TextRange* textRange)
+	public HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IDWriteFontCollection**, TextRange*, int>)(lpVtbl[44]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontCollection, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IDWriteFontCollection**, DWRITE_TEXT_RANGE*, int>)(lpVtbl[44]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontCollection, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, TextRange* textRange)
+	public HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, uint*, TextRange*, int>)(lpVtbl[45]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, uint*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[45]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public HResult GetFontFamilyName(uint currentPosition, char* fontFamilyName, uint nameSize, TextRange* textRange)
+	public HResult GetFontFamilyName(uint currentPosition, char* fontFamilyName, uint nameSize, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char*, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char*, uint, DWRITE_TEXT_RANGE*, int>)(lpVtbl[46]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public HResult GetFontWeight(uint currentPosition, FontWeight* fontWeight, TextRange* textRange)
+	public HResult GetFontWeight(uint currentPosition, DWRITE_FONT_WEIGHT* fontWeight, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, FontWeight*, TextRange*, int>)(lpVtbl[47]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontWeight, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, DWRITE_FONT_WEIGHT*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[47]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontWeight, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult GetFontStyle(uint currentPosition, FontStyle* fontStyle, TextRange* textRange)
+	public HResult GetFontStyle(uint currentPosition, DWRITE_FONT_STYLE* fontStyle, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, FontStyle*, TextRange*, int>)(lpVtbl[48]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontStyle, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, DWRITE_FONT_STYLE*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[48]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontStyle, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult GetFontStretch(uint currentPosition, FontStretch* fontStretch, TextRange* textRange)
+	public HResult GetFontStretch(uint currentPosition, DWRITE_FONT_STRETCH* fontStretch, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, FontStretch*, TextRange*, int>)(lpVtbl[49]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontStretch, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, DWRITE_FONT_STRETCH*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[49]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontStretch, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public HResult GetFontSize(uint currentPosition, float* fontSize, TextRange* textRange)
+	public HResult GetFontSize(uint currentPosition, float* fontSize, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, float*, TextRange*, int>)(lpVtbl[50]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontSize, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, float*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[50]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetUnderline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, TextRange* textRange)
+	public HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, Bool32*, TextRange*, int>)(lpVtbl[51]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, hasUnderline, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, Bool32*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[51]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, hasUnderline, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetStrikethrough"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
-	public HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, TextRange* textRange)
+	public HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, Bool32*, TextRange*, int>)(lpVtbl[52]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, hasStrikethrough, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, Bool32*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[52]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, hasStrikethrough, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetDrawingEffect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, TextRange* textRange)
+	public HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IUnknown**, TextRange*, int>)(lpVtbl[53]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, drawingEffect, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IUnknown**, DWRITE_TEXT_RANGE*, int>)(lpVtbl[53]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, drawingEffect, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetInlineObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, TextRange* textRange)
+	public HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IDWriteInlineObject**, TextRange*, int>)(lpVtbl[54]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, inlineObject, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IDWriteInlineObject**, DWRITE_TEXT_RANGE*, int>)(lpVtbl[54]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, inlineObject, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetTypography"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
-	public HResult GetTypography(uint currentPosition, IDWriteTypography** typography, TextRange* textRange)
+	public HResult GetTypography(uint currentPosition, IDWriteTypography** typography, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IDWriteTypography**, TextRange*, int>)(lpVtbl[55]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, typography, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, IDWriteTypography**, DWRITE_TEXT_RANGE*, int>)(lpVtbl[55]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, typography, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
-	public HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, TextRange* textRange)
+	public HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, uint*, TextRange*, int>)(lpVtbl[56]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, uint*, DWRITE_TEXT_RANGE*, int>)(lpVtbl[56]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public HResult GetLocaleName(uint currentPosition, char* localeName, uint nameSize, TextRange* textRange)
+	public HResult GetLocaleName(uint currentPosition, char* localeName, uint nameSize, DWRITE_TEXT_RANGE* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char*, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char*, uint, DWRITE_TEXT_RANGE*, int>)(lpVtbl[57]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::Draw"]/*' />
@@ -521,33 +521,33 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLineMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
-	public HResult GetLineMetrics(LineMetrics* lineMetrics, uint maxLineCount, uint* actualLineCount)
+	public HResult GetLineMetrics(DWRITE_LINE_METRICS* lineMetrics, uint maxLineCount, uint* actualLineCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, LineMetrics*, uint, uint*, int>)(lpVtbl[59]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_LINE_METRICS*, uint, uint*, int>)(lpVtbl[59]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public HResult GetMetrics(TextMetrics* textMetrics)
+	public HResult GetMetrics(DWRITE_TEXT_METRICS* textMetrics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, TextMetrics*, int>)(lpVtbl[60]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textMetrics);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_TEXT_METRICS*, int>)(lpVtbl[60]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetOverhangMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public HResult GetOverhangMetrics(OverhangMetrics* overhangs)
+	public HResult GetOverhangMetrics(DWRITE_OVERHANG_METRICS* overhangs)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, OverhangMetrics*, int>)(lpVtbl[61]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), overhangs);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_OVERHANG_METRICS*, int>)(lpVtbl[61]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), overhangs);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetClusterMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
-	public HResult GetClusterMetrics(ClusterMetrics* clusterMetrics, uint maxClusterCount, uint* actualClusterCount)
+	public HResult GetClusterMetrics(DWRITE_CLUSTER_METRICS* clusterMetrics, uint maxClusterCount, uint* actualClusterCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ClusterMetrics*, uint, uint*, int>)(lpVtbl[62]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), clusterMetrics, maxClusterCount, actualClusterCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, DWRITE_CLUSTER_METRICS*, uint, uint*, int>)(lpVtbl[62]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), clusterMetrics, maxClusterCount, actualClusterCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::DetermineMinWidth"]/*' />
@@ -561,25 +561,25 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, HitTestMetrics* hitTestMetrics)
+	public HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, DWRITE_HIT_TEST_METRICS* hitTestMetrics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, float, float, Bool32*, Bool32*, HitTestMetrics*, int>)(lpVtbl[64]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), pointX, pointY, isTrailingHit, isInside, hitTestMetrics);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, float, float, Bool32*, Bool32*, DWRITE_HIT_TEST_METRICS*, int>)(lpVtbl[64]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), pointX, pointY, isTrailingHit, isInside, hitTestMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestTextPosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, HitTestMetrics* hitTestMetrics)
+	public HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, DWRITE_HIT_TEST_METRICS* hitTestMetrics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, Bool32, float*, float*, HitTestMetrics*, int>)(lpVtbl[65]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, isTrailingHit, pointX, pointY, hitTestMetrics);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, Bool32, float*, float*, DWRITE_HIT_TEST_METRICS*, int>)(lpVtbl[65]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, isTrailingHit, pointX, pointY, hitTestMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestTextRange"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
-	public HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, HitTestMetrics* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount)
+	public HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, DWRITE_HIT_TEST_METRICS* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, uint, float, float, DWRITE_HIT_TEST_METRICS*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
 	}
 
 	public interface Interface : IDWriteTextFormat.Interface
@@ -591,40 +591,40 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		HResult SetMaxHeight(float maxHeight);
 
 		[VtblIndex(30)]
-		HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange textRange);
+		HResult SetFontCollection(IDWriteFontCollection* fontCollection, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(31)]
-		HResult SetFontFamilyName(char* fontFamilyName, TextRange textRange);
+		HResult SetFontFamilyName(char* fontFamilyName, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(32)]
-		HResult SetFontWeight(FontWeight fontWeight, TextRange textRange);
+		HResult SetFontWeight(DWRITE_FONT_WEIGHT fontWeight, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(33)]
-		HResult SetFontStyle(FontStyle fontStyle, TextRange textRange);
+		HResult SetFontStyle(DWRITE_FONT_STYLE fontStyle, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(34)]
-		HResult SetFontStretch(FontStretch fontStretch, TextRange textRange);
+		HResult SetFontStretch(DWRITE_FONT_STRETCH fontStretch, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(35)]
-		HResult SetFontSize(float fontSize, TextRange textRange);
+		HResult SetFontSize(float fontSize, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(36)]
-		HResult SetUnderline(Bool32 hasUnderline, TextRange textRange);
+		HResult SetUnderline(Bool32 hasUnderline, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(37)]
-		HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange textRange);
+		HResult SetStrikethrough(Bool32 hasStrikethrough, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(38)]
-		HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange textRange);
+		HResult SetDrawingEffect(IUnknown* drawingEffect, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(39)]
-		HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange textRange);
+		HResult SetInlineObject(IDWriteInlineObject* inlineObject, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(40)]
-		HResult SetTypography(IDWriteTypography* typography, TextRange textRange);
+		HResult SetTypography(IDWriteTypography* typography, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(41)]
-		HResult SetLocaleName(char* localeName, TextRange textRange);
+		HResult SetLocaleName(char* localeName, DWRITE_TEXT_RANGE textRange);
 
 		[VtblIndex(42)]
 		float GetMaxWidth();
@@ -633,73 +633,73 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		float GetMaxHeight();
 
 		[VtblIndex(44)]
-		HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, TextRange* textRange);
+		HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(45)]
-		HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, TextRange* textRange);
+		HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(46)]
-		HResult GetFontFamilyName(uint currentPosition, char* fontFamilyName, uint nameSize, TextRange* textRange);
+		HResult GetFontFamilyName(uint currentPosition, char* fontFamilyName, uint nameSize, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(47)]
-		HResult GetFontWeight(uint currentPosition, FontWeight* fontWeight, TextRange* textRange);
+		HResult GetFontWeight(uint currentPosition, DWRITE_FONT_WEIGHT* fontWeight, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(48)]
-		HResult GetFontStyle(uint currentPosition, FontStyle* fontStyle, TextRange* textRange);
+		HResult GetFontStyle(uint currentPosition, DWRITE_FONT_STYLE* fontStyle, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(49)]
-		HResult GetFontStretch(uint currentPosition, FontStretch* fontStretch, TextRange* textRange);
+		HResult GetFontStretch(uint currentPosition, DWRITE_FONT_STRETCH* fontStretch, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(50)]
-		HResult GetFontSize(uint currentPosition, float* fontSize, TextRange* textRange);
+		HResult GetFontSize(uint currentPosition, float* fontSize, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(51)]
-		HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, TextRange* textRange);
+		HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(52)]
-		HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, TextRange* textRange);
+		HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(53)]
-		HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, TextRange* textRange);
+		HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(54)]
-		HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, TextRange* textRange);
+		HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(55)]
-		HResult GetTypography(uint currentPosition, IDWriteTypography** typography, TextRange* textRange);
+		HResult GetTypography(uint currentPosition, IDWriteTypography** typography, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(56)]
-		HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, TextRange* textRange);
+		HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(57)]
-		HResult GetLocaleName(uint currentPosition, char* localeName, uint nameSize, TextRange* textRange);
+		HResult GetLocaleName(uint currentPosition, char* localeName, uint nameSize, DWRITE_TEXT_RANGE* textRange);
 
 		[VtblIndex(58)]
 		HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY);
 
 		[VtblIndex(59)]
-		HResult GetLineMetrics(LineMetrics* lineMetrics, uint maxLineCount, uint* actualLineCount);
+		HResult GetLineMetrics(DWRITE_LINE_METRICS* lineMetrics, uint maxLineCount, uint* actualLineCount);
 
 		[VtblIndex(60)]
-		HResult GetMetrics(TextMetrics* textMetrics);
+		HResult GetMetrics(DWRITE_TEXT_METRICS* textMetrics);
 
 		[VtblIndex(61)]
-		HResult GetOverhangMetrics(OverhangMetrics* overhangs);
+		HResult GetOverhangMetrics(DWRITE_OVERHANG_METRICS* overhangs);
 
 		[VtblIndex(62)]
-		HResult GetClusterMetrics(ClusterMetrics* clusterMetrics, uint maxClusterCount, uint* actualClusterCount);
+		HResult GetClusterMetrics(DWRITE_CLUSTER_METRICS* clusterMetrics, uint maxClusterCount, uint* actualClusterCount);
 
 		[VtblIndex(63)]
 		HResult DetermineMinWidth(float* minWidth);
 
 		[VtblIndex(64)]
-		HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, HitTestMetrics* hitTestMetrics);
+		HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, DWRITE_HIT_TEST_METRICS* hitTestMetrics);
 
 		[VtblIndex(65)]
-		HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, HitTestMetrics* hitTestMetrics);
+		HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, DWRITE_HIT_TEST_METRICS* hitTestMetrics);
 
 		[VtblIndex(66)]
-		HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, HitTestMetrics* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount);
+		HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, DWRITE_HIT_TEST_METRICS* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount);
 	}
 }
 

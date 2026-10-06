@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class DXC
 {
 	[LibraryImport("dxcompiler.dll")]
 	public static partial HResult DxcCreateInstance(Guid* rclsid, Guid* riid, void** ppv);

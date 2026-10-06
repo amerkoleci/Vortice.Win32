@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1"]/*' />
 /// <unmanaged>IDWriteRenderingParams1</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct IDWriteRenderingParams1 : IDWriteRenderingParams1.I
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public PixelGeometry GetPixelGeometry()
+	public DWRITE_PIXEL_GEOMETRY GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams1*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams1*, DWRITE_PIXEL_GEOMETRY>)(lpVtbl[6]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public RenderingMode GetRenderingMode()
+	public DWRITE_RENDERING_MODE GetRenderingMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams1*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams1*, DWRITE_RENDERING_MODE>)(lpVtbl[7]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1::GetGrayscaleEnhancedContrast"]/*' />

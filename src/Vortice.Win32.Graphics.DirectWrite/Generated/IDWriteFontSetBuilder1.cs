@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder1"]/*' />
 /// <unmanaged>IDWriteFontSetBuilder1</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteFontSetBuilder1 : IDWriteFontSetBuilder1.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontFaceReference" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, FontProperty* properties, uint propertyCount)
+	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder1*, IDWriteFontFaceReference*, FontProperty*, uint, int>)(lpVtbl[3]))((IDWriteFontSetBuilder1*)Unsafe.AsPointer(ref this), fontFaceReference, properties, propertyCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder1*, IDWriteFontFaceReference*, DWRITE_FONT_PROPERTY*, uint, int>)(lpVtbl[3]))((IDWriteFontSetBuilder1*)Unsafe.AsPointer(ref this), fontFaceReference, properties, propertyCount);
 	}
 
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontFaceReference" />

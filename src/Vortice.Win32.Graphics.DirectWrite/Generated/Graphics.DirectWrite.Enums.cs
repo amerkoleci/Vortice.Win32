@@ -7,277 +7,277 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_TAG</unmanaged>
-public enum FontAxisTag : uint
+public enum DWRITE_FONT_AXIS_TAG : uint
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_WEIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_WEIGHT</unmanaged>
-	Weight = 1952999287,
+	DWRITE_FONT_AXIS_TAG_WEIGHT = 1952999287,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_WIDTH</unmanaged>
-	Width = 1752458359,
+	DWRITE_FONT_AXIS_TAG_WIDTH = 1752458359,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_SLANT"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_SLANT</unmanaged>
-	Slant = 1953393779,
+	DWRITE_FONT_AXIS_TAG_SLANT = 1953393779,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE</unmanaged>
-	OpticalSize = 2054385775,
+	DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE = 2054385775,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_ITALIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_ITALIC</unmanaged>
-	Italic = 1818326121,
+	DWRITE_FONT_AXIS_TAG_ITALIC = 1818326121,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE"]/*' />
 /// <unmanaged>DWRITE_MEASURING_MODE</unmanaged>
-public enum MeasuringMode
+public enum DWRITE_MEASURING_MODE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_NATURAL</unmanaged>
-	Natural = 0,
+	DWRITE_MEASURING_MODE_NATURAL = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_GDI_CLASSIC"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_GDI_CLASSIC</unmanaged>
-	GDIClassic = 1,
+	DWRITE_MEASURING_MODE_GDI_CLASSIC = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_GDI_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_GDI_NATURAL</unmanaged>
-	GDINatural = 2,
+	DWRITE_MEASURING_MODE_GDI_NATURAL = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS"]/*' />
 /// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS</unmanaged>
 [Flags]
-public enum GlyphImageFormats
+public enum DWRITE_GLYPH_IMAGE_FORMATS
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_NONE"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_NONE</unmanaged>
-	None = 0,
+	DWRITE_GLYPH_IMAGE_FORMATS_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_TRUETYPE"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_TRUETYPE</unmanaged>
-	Truetype = 1,
+	DWRITE_GLYPH_IMAGE_FORMATS_TRUETYPE = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_CFF"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_CFF</unmanaged>
-	Cff = 2,
+	DWRITE_GLYPH_IMAGE_FORMATS_CFF = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_COLR"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_COLR</unmanaged>
-	Colr = 4,
+	DWRITE_GLYPH_IMAGE_FORMATS_COLR = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_SVG"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_SVG</unmanaged>
-	Svg = 8,
+	DWRITE_GLYPH_IMAGE_FORMATS_SVG = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PNG"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_PNG</unmanaged>
-	Png = 16,
+	DWRITE_GLYPH_IMAGE_FORMATS_PNG = 16,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_JPEG"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_JPEG</unmanaged>
-	Jpeg = 32,
+	DWRITE_GLYPH_IMAGE_FORMATS_JPEG = 32,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_TIFF"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_TIFF</unmanaged>
-	Tiff = 64,
+	DWRITE_GLYPH_IMAGE_FORMATS_TIFF = 64,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8</unmanaged>
-	PremultipliedB8g8r8a8 = 128,
+	DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8 = 128,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_COLR_PAINT_TREE"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_COLR_PAINT_TREE</unmanaged>
-	ColrPaintTree = 256,
+	DWRITE_GLYPH_IMAGE_FORMATS_COLR_PAINT_TREE = 256,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_FILE_TYPE</unmanaged>
-public enum FontFileType
+public enum DWRITE_FONT_FILE_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_UNKNOWN</unmanaged>
-	Unknown = 0,
+	DWRITE_FONT_FILE_TYPE_UNKNOWN = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_CFF</unmanaged>
-	Cff = 1,
+	DWRITE_FONT_FILE_TYPE_CFF = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TRUETYPE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TRUETYPE</unmanaged>
-	Truetype = 2,
+	DWRITE_FONT_FILE_TYPE_TRUETYPE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION</unmanaged>
-	OpentypeCollection = 3,
+	DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TYPE1_PFM"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TYPE1_PFM</unmanaged>
-	Type1Pfm = 4,
+	DWRITE_FONT_FILE_TYPE_TYPE1_PFM = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TYPE1_PFB"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TYPE1_PFB</unmanaged>
-	Type1Pfb = 5,
+	DWRITE_FONT_FILE_TYPE_TYPE1_PFB = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_VECTOR"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_VECTOR</unmanaged>
-	Vector = 6,
+	DWRITE_FONT_FILE_TYPE_VECTOR = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_BITMAP"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_BITMAP</unmanaged>
-	Bitmap = 7,
+	DWRITE_FONT_FILE_TYPE_BITMAP = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION</unmanaged>
-	TruetypeCollection = 3,
+	DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_FACE_TYPE</unmanaged>
-public enum FontFaceType
+public enum DWRITE_FONT_FACE_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_CFF</unmanaged>
-	Cff = 0,
+	DWRITE_FONT_FACE_TYPE_CFF = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TRUETYPE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_TRUETYPE</unmanaged>
-	Truetype = 1,
+	DWRITE_FONT_FACE_TYPE_TRUETYPE = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION</unmanaged>
-	OpentypeCollection = 2,
+	DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TYPE1"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_TYPE1</unmanaged>
-	Type1 = 3,
+	DWRITE_FONT_FACE_TYPE_TYPE1 = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_VECTOR"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_VECTOR</unmanaged>
-	Vector = 4,
+	DWRITE_FONT_FACE_TYPE_VECTOR = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_BITMAP"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_BITMAP</unmanaged>
-	Bitmap = 5,
+	DWRITE_FONT_FACE_TYPE_BITMAP = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_UNKNOWN</unmanaged>
-	Unknown = 6,
+	DWRITE_FONT_FACE_TYPE_UNKNOWN = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_RAW_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_RAW_CFF</unmanaged>
-	RawCff = 7,
+	DWRITE_FONT_FACE_TYPE_RAW_CFF = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION</unmanaged>
-	TruetypeCollection = 2,
+	DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS"]/*' />
 /// <unmanaged>DWRITE_FONT_SIMULATIONS</unmanaged>
 [Flags]
-public enum FontSimulations
+public enum DWRITE_FONT_SIMULATIONS
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_NONE</unmanaged>
-	None = 0,
+	DWRITE_FONT_SIMULATIONS_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_BOLD</unmanaged>
-	Bold = 1,
+	DWRITE_FONT_SIMULATIONS_BOLD = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_OBLIQUE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_OBLIQUE</unmanaged>
-	Oblique = 2,
+	DWRITE_FONT_SIMULATIONS_OBLIQUE = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT"]/*' />
 /// <unmanaged>DWRITE_FONT_WEIGHT</unmanaged>
-public enum FontWeight
+public enum DWRITE_FONT_WEIGHT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_THIN"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_THIN</unmanaged>
-	Thin = 100,
+	DWRITE_FONT_WEIGHT_THIN = 100,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_EXTRA_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_EXTRA_LIGHT</unmanaged>
-	ExtraLight = 200,
+	DWRITE_FONT_WEIGHT_EXTRA_LIGHT = 200,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_ULTRA_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_ULTRA_LIGHT</unmanaged>
-	UltraLight = 200,
+	DWRITE_FONT_WEIGHT_ULTRA_LIGHT = 200,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_LIGHT</unmanaged>
-	Light = 300,
+	DWRITE_FONT_WEIGHT_LIGHT = 300,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_SEMI_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_SEMI_LIGHT</unmanaged>
-	SemiLight = 350,
+	DWRITE_FONT_WEIGHT_SEMI_LIGHT = 350,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_NORMAL</unmanaged>
-	Normal = 400,
+	DWRITE_FONT_WEIGHT_NORMAL = 400,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_REGULAR"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_REGULAR</unmanaged>
-	Regular = 400,
+	DWRITE_FONT_WEIGHT_REGULAR = 400,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_MEDIUM</unmanaged>
-	Medium = 500,
+	DWRITE_FONT_WEIGHT_MEDIUM = 500,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_DEMI_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_DEMI_BOLD</unmanaged>
-	DemiBold = 600,
+	DWRITE_FONT_WEIGHT_DEMI_BOLD = 600,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_SEMI_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_SEMI_BOLD</unmanaged>
-	SemiBold = 600,
+	DWRITE_FONT_WEIGHT_SEMI_BOLD = 600,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_BOLD</unmanaged>
-	Bold = 700,
+	DWRITE_FONT_WEIGHT_BOLD = 700,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_EXTRA_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_EXTRA_BOLD</unmanaged>
-	ExtraBold = 800,
+	DWRITE_FONT_WEIGHT_EXTRA_BOLD = 800,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_ULTRA_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_ULTRA_BOLD</unmanaged>
-	UltraBold = 800,
+	DWRITE_FONT_WEIGHT_ULTRA_BOLD = 800,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_BLACK"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_BLACK</unmanaged>
-	Black = 900,
+	DWRITE_FONT_WEIGHT_BLACK = 900,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_HEAVY"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_HEAVY</unmanaged>
-	Heavy = 900,
+	DWRITE_FONT_WEIGHT_HEAVY = 900,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_EXTRA_BLACK"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_EXTRA_BLACK</unmanaged>
-	ExtraBlack = 950,
+	DWRITE_FONT_WEIGHT_EXTRA_BLACK = 950,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_ULTRA_BLACK"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_ULTRA_BLACK</unmanaged>
-	UltraBlack = 950,
+	DWRITE_FONT_WEIGHT_ULTRA_BLACK = 950,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH"]/*' />
 /// <unmanaged>DWRITE_FONT_STRETCH</unmanaged>
-public enum FontStretch
+public enum DWRITE_FONT_STRETCH
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_UNDEFINED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_UNDEFINED</unmanaged>
-	Undefined = 0,
+	DWRITE_FONT_STRETCH_UNDEFINED = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_ULTRA_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_ULTRA_CONDENSED</unmanaged>
-	UltraCondensed = 1,
+	DWRITE_FONT_STRETCH_ULTRA_CONDENSED = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_EXTRA_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_EXTRA_CONDENSED</unmanaged>
-	ExtraCondensed = 2,
+	DWRITE_FONT_STRETCH_EXTRA_CONDENSED = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_CONDENSED</unmanaged>
-	Condensed = 3,
+	DWRITE_FONT_STRETCH_CONDENSED = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_SEMI_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_SEMI_CONDENSED</unmanaged>
-	SemiCondensed = 4,
+	DWRITE_FONT_STRETCH_SEMI_CONDENSED = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_NORMAL</unmanaged>
-	Normal = 5,
+	DWRITE_FONT_STRETCH_NORMAL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_MEDIUM</unmanaged>
-	Medium = 5,
+	DWRITE_FONT_STRETCH_MEDIUM = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_SEMI_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_SEMI_EXPANDED</unmanaged>
-	SemiExpanded = 6,
+	DWRITE_FONT_STRETCH_SEMI_EXPANDED = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_EXPANDED</unmanaged>
-	Expanded = 7,
+	DWRITE_FONT_STRETCH_EXPANDED = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_EXTRA_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_EXTRA_EXPANDED</unmanaged>
-	ExtraExpanded = 8,
+	DWRITE_FONT_STRETCH_EXTRA_EXPANDED = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_ULTRA_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_ULTRA_EXPANDED</unmanaged>
-	UltraExpanded = 9,
+	DWRITE_FONT_STRETCH_ULTRA_EXPANDED = 9,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE"]/*' />
 /// <unmanaged>DWRITE_FONT_STYLE</unmanaged>
-public enum FontStyle
+public enum DWRITE_FONT_STYLE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_NORMAL</unmanaged>
-	Normal = 0,
+	DWRITE_FONT_STYLE_NORMAL = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_OBLIQUE"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_OBLIQUE</unmanaged>
-	Oblique = 1,
+	DWRITE_FONT_STYLE_OBLIQUE = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_ITALIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_ITALIC</unmanaged>
-	Italic = 2,
+	DWRITE_FONT_STYLE_ITALIC = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INFORMATIONAL_STRING_ID"]/*' />
 /// <unmanaged>DWRITE_INFORMATIONAL_STRING_ID</unmanaged>
-public enum InformationalStringId
+public enum DWRITE_INFORMATIONAL_STRING_ID
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INFORMATIONAL_STRING_ID::DWRITE_INFORMATIONAL_STRING_NONE"]/*' />
 	/// <unmanaged>DWRITE_INFORMATIONAL_STRING_NONE</unmanaged>
@@ -358,495 +358,494 @@ public enum InformationalStringId
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE"]/*' />
 /// <unmanaged>DWRITE_FACTORY_TYPE</unmanaged>
-public enum FactoryType
+public enum DWRITE_FACTORY_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_SHARED"]/*' />
 	/// <unmanaged>DWRITE_FACTORY_TYPE_SHARED</unmanaged>
-	Shared = 0,
+	DWRITE_FACTORY_TYPE_SHARED = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_ISOLATED"]/*' />
 	/// <unmanaged>DWRITE_FACTORY_TYPE_ISOLATED</unmanaged>
-	Isolated = 1,
+	DWRITE_FACTORY_TYPE_ISOLATED = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY"]/*' />
 /// <unmanaged>DWRITE_PIXEL_GEOMETRY</unmanaged>
-public enum PixelGeometry
+public enum DWRITE_PIXEL_GEOMETRY
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_FLAT"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_FLAT</unmanaged>
-	Flat = 0,
+	DWRITE_PIXEL_GEOMETRY_FLAT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_RGB"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_RGB</unmanaged>
-	Rgb = 1,
+	DWRITE_PIXEL_GEOMETRY_RGB = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_BGR"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_BGR</unmanaged>
-	Bgr = 2,
+	DWRITE_PIXEL_GEOMETRY_BGR = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE"]/*' />
 /// <unmanaged>DWRITE_RENDERING_MODE</unmanaged>
-public enum RenderingMode
+public enum DWRITE_RENDERING_MODE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_RENDERING_MODE_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_ALIASED"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_ALIASED</unmanaged>
-	Aliased = 1,
+	DWRITE_RENDERING_MODE_ALIASED = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_GDI_CLASSIC"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_GDI_CLASSIC</unmanaged>
-	GDIClassic = 2,
+	DWRITE_RENDERING_MODE_GDI_CLASSIC = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_GDI_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_GDI_NATURAL</unmanaged>
-	GDINatural = 3,
+	DWRITE_RENDERING_MODE_GDI_NATURAL = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_NATURAL</unmanaged>
-	Natural = 4,
+	DWRITE_RENDERING_MODE_NATURAL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_NATURAL_SYMMETRIC"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_NATURAL_SYMMETRIC</unmanaged>
-	NaturalSymmetric = 5,
+	DWRITE_RENDERING_MODE_NATURAL_SYMMETRIC = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_OUTLINE"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_OUTLINE</unmanaged>
-	Outline = 6,
+	DWRITE_RENDERING_MODE_OUTLINE = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_CLEARTYPE_GDI_CLASSIC"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_CLEARTYPE_GDI_CLASSIC</unmanaged>
-	CleartypeGDIClassic = 2,
+	DWRITE_RENDERING_MODE_CLEARTYPE_GDI_CLASSIC = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_CLEARTYPE_GDI_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_CLEARTYPE_GDI_NATURAL</unmanaged>
-	CleartypeGDINatural = 3,
+	DWRITE_RENDERING_MODE_CLEARTYPE_GDI_NATURAL = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL</unmanaged>
-	CleartypeNatural = 4,
+	DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL_SYMMETRIC"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL_SYMMETRIC</unmanaged>
-	CleartypeNaturalSymmetric = 5,
+	DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL_SYMMETRIC = 5,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION"]/*' />
 /// <unmanaged>DWRITE_READING_DIRECTION</unmanaged>
-public enum ReadingDirection
+public enum DWRITE_READING_DIRECTION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION::DWRITE_READING_DIRECTION_LEFT_TO_RIGHT"]/*' />
 	/// <unmanaged>DWRITE_READING_DIRECTION_LEFT_TO_RIGHT</unmanaged>
-	LeftToRight = 0,
+	DWRITE_READING_DIRECTION_LEFT_TO_RIGHT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION::DWRITE_READING_DIRECTION_RIGHT_TO_LEFT"]/*' />
 	/// <unmanaged>DWRITE_READING_DIRECTION_RIGHT_TO_LEFT</unmanaged>
-	RightToLeft = 1,
+	DWRITE_READING_DIRECTION_RIGHT_TO_LEFT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION::DWRITE_READING_DIRECTION_TOP_TO_BOTTOM"]/*' />
 	/// <unmanaged>DWRITE_READING_DIRECTION_TOP_TO_BOTTOM</unmanaged>
-	TopToBottom = 2,
+	DWRITE_READING_DIRECTION_TOP_TO_BOTTOM = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION::DWRITE_READING_DIRECTION_BOTTOM_TO_TOP"]/*' />
 	/// <unmanaged>DWRITE_READING_DIRECTION_BOTTOM_TO_TOP</unmanaged>
-	BottomToTop = 3,
+	DWRITE_READING_DIRECTION_BOTTOM_TO_TOP = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION"]/*' />
 /// <unmanaged>DWRITE_FLOW_DIRECTION</unmanaged>
-public enum FlowDirection
+public enum DWRITE_FLOW_DIRECTION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM</unmanaged>
-	TopToBottom = 0,
+	DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP</unmanaged>
-	BottomToTop = 1,
+	DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT</unmanaged>
-	LeftToRight = 2,
+	DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT</unmanaged>
-	RightToLeft = 3,
+	DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_TEXT_ALIGNMENT</unmanaged>
-public enum TextAlignment
+public enum DWRITE_TEXT_ALIGNMENT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_LEADING"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_LEADING</unmanaged>
-	Leading = 0,
+	DWRITE_TEXT_ALIGNMENT_LEADING = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_TRAILING"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_TRAILING</unmanaged>
-	Trailing = 1,
+	DWRITE_TEXT_ALIGNMENT_TRAILING = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_CENTER"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_CENTER</unmanaged>
-	Center = 2,
+	DWRITE_TEXT_ALIGNMENT_CENTER = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_JUSTIFIED"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_JUSTIFIED</unmanaged>
-	Justified = 3,
+	DWRITE_TEXT_ALIGNMENT_JUSTIFIED = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT</unmanaged>
-public enum ParagraphAlignment
+public enum DWRITE_PARAGRAPH_ALIGNMENT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_NEAR"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_NEAR</unmanaged>
-	Near = 0,
+	DWRITE_PARAGRAPH_ALIGNMENT_NEAR = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_FAR"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_FAR</unmanaged>
-	Far = 1,
+	DWRITE_PARAGRAPH_ALIGNMENT_FAR = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_CENTER"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_CENTER</unmanaged>
-	Center = 2,
+	DWRITE_PARAGRAPH_ALIGNMENT_CENTER = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING"]/*' />
 /// <unmanaged>DWRITE_WORD_WRAPPING</unmanaged>
-public enum WordWrapping
+public enum DWRITE_WORD_WRAPPING
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WRAP"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_WRAP</unmanaged>
-	Wrap = 0,
+	DWRITE_WORD_WRAPPING_WRAP = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_NO_WRAP"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_NO_WRAP</unmanaged>
-	NoWrap = 1,
+	DWRITE_WORD_WRAPPING_NO_WRAP = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_EMERGENCY_BREAK"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_EMERGENCY_BREAK</unmanaged>
-	EmergencyBreak = 2,
+	DWRITE_WORD_WRAPPING_EMERGENCY_BREAK = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WHOLE_WORD"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_WHOLE_WORD</unmanaged>
-	WholeWord = 3,
+	DWRITE_WORD_WRAPPING_WHOLE_WORD = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_CHARACTER"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_CHARACTER</unmanaged>
-	Character = 4,
+	DWRITE_WORD_WRAPPING_CHARACTER = 4,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD"]/*' />
 /// <unmanaged>DWRITE_LINE_SPACING_METHOD</unmanaged>
-public enum LineSpacingMethod
+public enum DWRITE_LINE_SPACING_METHOD
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_LINE_SPACING_METHOD_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_UNIFORM"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_UNIFORM</unmanaged>
-	Uniform = 1,
+	DWRITE_LINE_SPACING_METHOD_UNIFORM = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_PROPORTIONAL"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_PROPORTIONAL</unmanaged>
-	Proportional = 2,
+	DWRITE_LINE_SPACING_METHOD_PROPORTIONAL = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY"]/*' />
 /// <unmanaged>DWRITE_TRIMMING_GRANULARITY</unmanaged>
-public enum TrimmingGranularity
+public enum DWRITE_TRIMMING_GRANULARITY
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_NONE"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_NONE</unmanaged>
-	None = 0,
+	DWRITE_TRIMMING_GRANULARITY_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_CHARACTER"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_CHARACTER</unmanaged>
-	Character = 1,
+	DWRITE_TRIMMING_GRANULARITY_CHARACTER = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_WORD"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_WORD</unmanaged>
-	Word = 2,
+	DWRITE_TRIMMING_GRANULARITY_WORD = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG"]/*' />
 /// <unmanaged>DWRITE_FONT_FEATURE_TAG</unmanaged>
-public enum FontFeatureTag : uint
+public enum DWRITE_FONT_FEATURE_TAG : uint
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_ALTERNATIVE_FRACTIONS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_ALTERNATIVE_FRACTIONS</unmanaged>
-	AlternativeFractions = 1668441697,
+	DWRITE_FONT_FEATURE_TAG_ALTERNATIVE_FRACTIONS = 1668441697,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS_FROM_CAPITALS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS_FROM_CAPITALS</unmanaged>
-	PetiteCapitalsFromCapitals = 1668297315,
+	DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS_FROM_CAPITALS = 1668297315,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS_FROM_CAPITALS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS_FROM_CAPITALS</unmanaged>
-	SmallCapitalsFromCapitals = 1668493923,
+	DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS_FROM_CAPITALS = 1668493923,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_ALTERNATES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_ALTERNATES</unmanaged>
-	ContextualAlternates = 1953259875,
+	DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_ALTERNATES = 1953259875,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_CASE_SENSITIVE_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_CASE_SENSITIVE_FORMS</unmanaged>
-	CaseSensitiveForms = 1702060387,
+	DWRITE_FONT_FEATURE_TAG_CASE_SENSITIVE_FORMS = 1702060387,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_GLYPH_COMPOSITION_DECOMPOSITION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_GLYPH_COMPOSITION_DECOMPOSITION</unmanaged>
-	GlyphCompositionDecomposition = 1886217059,
+	DWRITE_FONT_FEATURE_TAG_GLYPH_COMPOSITION_DECOMPOSITION = 1886217059,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_LIGATURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_LIGATURES</unmanaged>
-	ContextualLigatures = 1734962275,
+	DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_LIGATURES = 1734962275,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_CAPITAL_SPACING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_CAPITAL_SPACING</unmanaged>
-	CapitalSpacing = 1886613603,
+	DWRITE_FONT_FEATURE_TAG_CAPITAL_SPACING = 1886613603,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_SWASH"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_SWASH</unmanaged>
-	ContextualSwash = 1752658787,
+	DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_SWASH = 1752658787,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_CURSIVE_POSITIONING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_CURSIVE_POSITIONING</unmanaged>
-	CursivePositioning = 1936880995,
+	DWRITE_FONT_FEATURE_TAG_CURSIVE_POSITIONING = 1936880995,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_DEFAULT</unmanaged>
-	Default = 1953261156,
+	DWRITE_FONT_FEATURE_TAG_DEFAULT = 1953261156,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_DISCRETIONARY_LIGATURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_DISCRETIONARY_LIGATURES</unmanaged>
-	DiscretionaryLigatures = 1734962276,
+	DWRITE_FONT_FEATURE_TAG_DISCRETIONARY_LIGATURES = 1734962276,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_EXPERT_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_EXPERT_FORMS</unmanaged>
-	ExpertForms = 1953527909,
+	DWRITE_FONT_FEATURE_TAG_EXPERT_FORMS = 1953527909,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_FRACTIONS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_FRACTIONS</unmanaged>
-	Fractions = 1667330662,
+	DWRITE_FONT_FEATURE_TAG_FRACTIONS = 1667330662,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_FULL_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_FULL_WIDTH</unmanaged>
-	FullWidth = 1684633446,
+	DWRITE_FONT_FEATURE_TAG_FULL_WIDTH = 1684633446,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HALF_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HALF_FORMS</unmanaged>
-	HalfForms = 1718378856,
+	DWRITE_FONT_FEATURE_TAG_HALF_FORMS = 1718378856,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HALANT_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HALANT_FORMS</unmanaged>
-	HalantForms = 1852596584,
+	DWRITE_FONT_FEATURE_TAG_HALANT_FORMS = 1852596584,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_ALTERNATE_HALF_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_ALTERNATE_HALF_WIDTH</unmanaged>
-	AlternateHalfWidth = 1953259880,
+	DWRITE_FONT_FEATURE_TAG_ALTERNATE_HALF_WIDTH = 1953259880,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HISTORICAL_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HISTORICAL_FORMS</unmanaged>
-	HistoricalForms = 1953720680,
+	DWRITE_FONT_FEATURE_TAG_HISTORICAL_FORMS = 1953720680,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HORIZONTAL_KANA_ALTERNATES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HORIZONTAL_KANA_ALTERNATES</unmanaged>
-	HorizontalKanaAlternates = 1634626408,
+	DWRITE_FONT_FEATURE_TAG_HORIZONTAL_KANA_ALTERNATES = 1634626408,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HISTORICAL_LIGATURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HISTORICAL_LIGATURES</unmanaged>
-	HistoricalLigatures = 1734962280,
+	DWRITE_FONT_FEATURE_TAG_HISTORICAL_LIGATURES = 1734962280,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HALF_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HALF_WIDTH</unmanaged>
-	HalfWidth = 1684633448,
+	DWRITE_FONT_FEATURE_TAG_HALF_WIDTH = 1684633448,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_HOJO_KANJI_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_HOJO_KANJI_FORMS</unmanaged>
-	HojoKanjiForms = 1869246312,
+	DWRITE_FONT_FEATURE_TAG_HOJO_KANJI_FORMS = 1869246312,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_JIS04_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_JIS04_FORMS</unmanaged>
-	Jis04Forms = 875589738,
+	DWRITE_FONT_FEATURE_TAG_JIS04_FORMS = 875589738,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_JIS78_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_JIS78_FORMS</unmanaged>
-	Jis78Forms = 943157354,
+	DWRITE_FONT_FEATURE_TAG_JIS78_FORMS = 943157354,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_JIS83_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_JIS83_FORMS</unmanaged>
-	Jis83Forms = 859336810,
+	DWRITE_FONT_FEATURE_TAG_JIS83_FORMS = 859336810,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_JIS90_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_JIS90_FORMS</unmanaged>
-	Jis90Forms = 809070698,
+	DWRITE_FONT_FEATURE_TAG_JIS90_FORMS = 809070698,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_KERNING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_KERNING</unmanaged>
-	Kerning = 1852990827,
+	DWRITE_FONT_FEATURE_TAG_KERNING = 1852990827,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STANDARD_LIGATURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STANDARD_LIGATURES</unmanaged>
-	StandardLigatures = 1634167148,
+	DWRITE_FONT_FEATURE_TAG_STANDARD_LIGATURES = 1634167148,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_LINING_FIGURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_LINING_FIGURES</unmanaged>
-	LiningFigures = 1836412524,
+	DWRITE_FONT_FEATURE_TAG_LINING_FIGURES = 1836412524,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_LOCALIZED_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_LOCALIZED_FORMS</unmanaged>
-	LocalizedForms = 1818455916,
+	DWRITE_FONT_FEATURE_TAG_LOCALIZED_FORMS = 1818455916,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_MARK_POSITIONING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_MARK_POSITIONING</unmanaged>
-	MarkPositioning = 1802658157,
+	DWRITE_FONT_FEATURE_TAG_MARK_POSITIONING = 1802658157,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_MATHEMATICAL_GREEK"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_MATHEMATICAL_GREEK</unmanaged>
-	MathematicalGreek = 1802659693,
+	DWRITE_FONT_FEATURE_TAG_MATHEMATICAL_GREEK = 1802659693,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_MARK_TO_MARK_POSITIONING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_MARK_TO_MARK_POSITIONING</unmanaged>
-	MarkToMarkPositioning = 1802333037,
+	DWRITE_FONT_FEATURE_TAG_MARK_TO_MARK_POSITIONING = 1802333037,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_ALTERNATE_ANNOTATION_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_ALTERNATE_ANNOTATION_FORMS</unmanaged>
-	AlternateAnnotationForms = 1953259886,
+	DWRITE_FONT_FEATURE_TAG_ALTERNATE_ANNOTATION_FORMS = 1953259886,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_NLC_KANJI_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_NLC_KANJI_FORMS</unmanaged>
-	NlcKanjiForms = 1801677934,
+	DWRITE_FONT_FEATURE_TAG_NLC_KANJI_FORMS = 1801677934,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_OLD_STYLE_FIGURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_OLD_STYLE_FIGURES</unmanaged>
-	OldStyleFigures = 1836412527,
+	DWRITE_FONT_FEATURE_TAG_OLD_STYLE_FIGURES = 1836412527,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_ORDINALS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_ORDINALS</unmanaged>
-	Ordinals = 1852076655,
+	DWRITE_FONT_FEATURE_TAG_ORDINALS = 1852076655,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_ALTERNATE_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_ALTERNATE_WIDTH</unmanaged>
-	ProportionalAlternateWidth = 1953259888,
+	DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_ALTERNATE_WIDTH = 1953259888,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS</unmanaged>
-	PetiteCapitals = 1885430640,
+	DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS = 1885430640,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_FIGURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_FIGURES</unmanaged>
-	ProportionalFigures = 1836412528,
+	DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_FIGURES = 1836412528,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_WIDTHS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_WIDTHS</unmanaged>
-	ProportionalWidths = 1684633456,
+	DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_WIDTHS = 1684633456,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_QUARTER_WIDTHS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_QUARTER_WIDTHS</unmanaged>
-	QuarterWidths = 1684633457,
+	DWRITE_FONT_FEATURE_TAG_QUARTER_WIDTHS = 1684633457,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_REQUIRED_LIGATURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_REQUIRED_LIGATURES</unmanaged>
-	RequiredLigatures = 1734962290,
+	DWRITE_FONT_FEATURE_TAG_REQUIRED_LIGATURES = 1734962290,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_RUBY_NOTATION_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_RUBY_NOTATION_FORMS</unmanaged>
-	RubyNotationForms = 2036495730,
+	DWRITE_FONT_FEATURE_TAG_RUBY_NOTATION_FORMS = 2036495730,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_ALTERNATES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_ALTERNATES</unmanaged>
-	StylisticAlternates = 1953259891,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_ALTERNATES = 1953259891,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SCIENTIFIC_INFERIORS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SCIENTIFIC_INFERIORS</unmanaged>
-	ScientificInferiors = 1718511987,
+	DWRITE_FONT_FEATURE_TAG_SCIENTIFIC_INFERIORS = 1718511987,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS</unmanaged>
-	SmallCapitals = 1885564275,
+	DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS = 1885564275,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SIMPLIFIED_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SIMPLIFIED_FORMS</unmanaged>
-	SimplifiedForms = 1819307379,
+	DWRITE_FONT_FEATURE_TAG_SIMPLIFIED_FORMS = 1819307379,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_1"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_1</unmanaged>
-	StylisticSet1 = 825258867,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_1 = 825258867,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_2"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_2</unmanaged>
-	StylisticSet2 = 842036083,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_2 = 842036083,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_3"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_3</unmanaged>
-	StylisticSet3 = 858813299,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_3 = 858813299,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_4"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_4</unmanaged>
-	StylisticSet4 = 875590515,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_4 = 875590515,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_5"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_5</unmanaged>
-	StylisticSet5 = 892367731,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_5 = 892367731,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_6"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_6</unmanaged>
-	StylisticSet6 = 909144947,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_6 = 909144947,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_7"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_7</unmanaged>
-	StylisticSet7 = 925922163,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_7 = 925922163,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_8"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_8</unmanaged>
-	StylisticSet8 = 942699379,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_8 = 942699379,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_9"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_9</unmanaged>
-	StylisticSet9 = 959476595,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_9 = 959476595,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_10"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_10</unmanaged>
-	StylisticSet10 = 808547187,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_10 = 808547187,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_11"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_11</unmanaged>
-	StylisticSet11 = 825324403,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_11 = 825324403,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_12"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_12</unmanaged>
-	StylisticSet12 = 842101619,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_12 = 842101619,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_13"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_13</unmanaged>
-	StylisticSet13 = 858878835,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_13 = 858878835,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_14"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_14</unmanaged>
-	StylisticSet14 = 875656051,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_14 = 875656051,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_15"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_15</unmanaged>
-	StylisticSet15 = 892433267,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_15 = 892433267,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_16"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_16</unmanaged>
-	StylisticSet16 = 909210483,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_16 = 909210483,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_17"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_17</unmanaged>
-	StylisticSet17 = 925987699,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_17 = 925987699,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_18"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_18</unmanaged>
-	StylisticSet18 = 942764915,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_18 = 942764915,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_19"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_19</unmanaged>
-	StylisticSet19 = 959542131,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_19 = 959542131,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_20"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_20</unmanaged>
-	StylisticSet20 = 808612723,
+	DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_20 = 808612723,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SUBSCRIPT"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SUBSCRIPT</unmanaged>
-	Subscript = 1935832435,
+	DWRITE_FONT_FEATURE_TAG_SUBSCRIPT = 1935832435,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SUPERSCRIPT"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SUPERSCRIPT</unmanaged>
-	Superscript = 1936749939,
+	DWRITE_FONT_FEATURE_TAG_SUPERSCRIPT = 1936749939,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SWASH"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SWASH</unmanaged>
-	Swash = 1752397683,
+	DWRITE_FONT_FEATURE_TAG_SWASH = 1752397683,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_TITLING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_TITLING</unmanaged>
-	Titling = 1819568500,
+	DWRITE_FONT_FEATURE_TAG_TITLING = 1819568500,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_TRADITIONAL_NAME_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_TRADITIONAL_NAME_FORMS</unmanaged>
-	TraditionalNameForms = 1835101812,
+	DWRITE_FONT_FEATURE_TAG_TRADITIONAL_NAME_FORMS = 1835101812,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_TABULAR_FIGURES"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_TABULAR_FIGURES</unmanaged>
-	TabularFigures = 1836412532,
+	DWRITE_FONT_FEATURE_TAG_TABULAR_FIGURES = 1836412532,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_TRADITIONAL_FORMS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_TRADITIONAL_FORMS</unmanaged>
-	TraditionalForms = 1684107892,
+	DWRITE_FONT_FEATURE_TAG_TRADITIONAL_FORMS = 1684107892,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_THIRD_WIDTHS"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_THIRD_WIDTHS</unmanaged>
-	ThirdWidths = 1684633460,
+	DWRITE_FONT_FEATURE_TAG_THIRD_WIDTHS = 1684633460,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_UNICASE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_UNICASE</unmanaged>
-	Unicase = 1667853941,
+	DWRITE_FONT_FEATURE_TAG_UNICASE = 1667853941,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_VERTICAL_WRITING"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_VERTICAL_WRITING</unmanaged>
-	VerticalWriting = 1953654134,
+	DWRITE_FONT_FEATURE_TAG_VERTICAL_WRITING = 1953654134,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_VERTICAL_ALTERNATES_AND_ROTATION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_VERTICAL_ALTERNATES_AND_ROTATION</unmanaged>
-	VerticalAlternatesAndRotation = 846492278,
+	DWRITE_FONT_FEATURE_TAG_VERTICAL_ALTERNATES_AND_ROTATION = 846492278,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE_TAG::DWRITE_FONT_FEATURE_TAG_SLASHED_ZERO"]/*' />
 	/// <unmanaged>DWRITE_FONT_FEATURE_TAG_SLASHED_ZERO</unmanaged>
-	SlashedZero = 1869768058,
+	DWRITE_FONT_FEATURE_TAG_SLASHED_ZERO = 1869768058,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_SHAPES</unmanaged>
 [Flags]
-public enum ScriptShapes
+public enum DWRITE_SCRIPT_SHAPES
 {
-	None = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_SCRIPT_SHAPES_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_SCRIPT_SHAPES_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_NO_VISUAL"]/*' />
 	/// <unmanaged>DWRITE_SCRIPT_SHAPES_NO_VISUAL</unmanaged>
-	NoVisual = 1,
+	DWRITE_SCRIPT_SHAPES_NO_VISUAL = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION"]/*' />
 /// <unmanaged>DWRITE_BREAK_CONDITION</unmanaged>
-public enum BreakCondition
+public enum DWRITE_BREAK_CONDITION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_NEUTRAL"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_NEUTRAL</unmanaged>
-	Neutral = 0,
+	DWRITE_BREAK_CONDITION_NEUTRAL = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_CAN_BREAK"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_CAN_BREAK</unmanaged>
-	CanBreak = 1,
+	DWRITE_BREAK_CONDITION_CAN_BREAK = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_MAY_NOT_BREAK"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_MAY_NOT_BREAK</unmanaged>
-	MayNotBreak = 2,
+	DWRITE_BREAK_CONDITION_MAY_NOT_BREAK = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_MUST_BREAK"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_MUST_BREAK</unmanaged>
-	MustBreak = 3,
+	DWRITE_BREAK_CONDITION_MUST_BREAK = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD"]/*' />
 /// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD</unmanaged>
-public enum NumberSubstitutionMethod
+public enum DWRITE_NUMBER_SUBSTITUTION_METHOD
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE</unmanaged>
-	FromCulture = 0,
+	DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL</unmanaged>
-	Contextual = 1,
+	DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE</unmanaged>
-	None = 2,
+	DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL</unmanaged>
-	National = 3,
+	DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL</unmanaged>
-	Traditional = 4,
+	DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL = 4,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE"]/*' />
 /// <unmanaged>DWRITE_TEXTURE_TYPE</unmanaged>
-public enum TextureType
+public enum DWRITE_TEXTURE_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE::DWRITE_TEXTURE_ALIASED_1x1"]/*' />
 	/// <unmanaged>DWRITE_TEXTURE_ALIASED_1x1</unmanaged>
@@ -858,1357 +857,1357 @@ public enum TextureType
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FAMILY</unmanaged>
-public enum PanoseFamily
+public enum DWRITE_PANOSE_FAMILY
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_FAMILY_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_FAMILY_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_TEXT_DISPLAY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_TEXT_DISPLAY</unmanaged>
-	TextDisplay = 2,
+	DWRITE_PANOSE_FAMILY_TEXT_DISPLAY = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_SCRIPT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_SCRIPT</unmanaged>
-	Script = 3,
+	DWRITE_PANOSE_FAMILY_SCRIPT = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_DECORATIVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_DECORATIVE</unmanaged>
-	Decorative = 4,
+	DWRITE_PANOSE_FAMILY_DECORATIVE = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_SYMBOL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_SYMBOL</unmanaged>
-	Symbol = 5,
+	DWRITE_PANOSE_FAMILY_SYMBOL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_PICTORIAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_PICTORIAL</unmanaged>
-	Pictorial = 5,
+	DWRITE_PANOSE_FAMILY_PICTORIAL = 5,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SERIF_STYLE</unmanaged>
-public enum PanoseSerifStyle
+public enum DWRITE_PANOSE_SERIF_STYLE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_SERIF_STYLE_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_SERIF_STYLE_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_COVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_COVE</unmanaged>
-	Cove = 2,
+	DWRITE_PANOSE_SERIF_STYLE_COVE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_OBTUSE_COVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_OBTUSE_COVE</unmanaged>
-	ObtuseCove = 3,
+	DWRITE_PANOSE_SERIF_STYLE_OBTUSE_COVE = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_SQUARE_COVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_SQUARE_COVE</unmanaged>
-	SquareCove = 4,
+	DWRITE_PANOSE_SERIF_STYLE_SQUARE_COVE = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SQUARE_COVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SQUARE_COVE</unmanaged>
-	ObtuseSquareCove = 5,
+	DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SQUARE_COVE = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_SQUARE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_SQUARE</unmanaged>
-	Square = 6,
+	DWRITE_PANOSE_SERIF_STYLE_SQUARE = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_THIN"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_THIN</unmanaged>
-	Thin = 7,
+	DWRITE_PANOSE_SERIF_STYLE_THIN = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_OVAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_OVAL</unmanaged>
-	Oval = 8,
+	DWRITE_PANOSE_SERIF_STYLE_OVAL = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_EXAGGERATED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_EXAGGERATED</unmanaged>
-	Exaggerated = 9,
+	DWRITE_PANOSE_SERIF_STYLE_EXAGGERATED = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_TRIANGLE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_TRIANGLE</unmanaged>
-	Triangle = 10,
+	DWRITE_PANOSE_SERIF_STYLE_TRIANGLE = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_NORMAL_SANS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_NORMAL_SANS</unmanaged>
-	NormalSans = 11,
+	DWRITE_PANOSE_SERIF_STYLE_NORMAL_SANS = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SANS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SANS</unmanaged>
-	ObtuseSans = 12,
+	DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SANS = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_PERPENDICULAR_SANS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_PERPENDICULAR_SANS</unmanaged>
-	PerpendicularSans = 13,
+	DWRITE_PANOSE_SERIF_STYLE_PERPENDICULAR_SANS = 13,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_FLARED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_FLARED</unmanaged>
-	Flared = 14,
+	DWRITE_PANOSE_SERIF_STYLE_FLARED = 14,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_ROUNDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_ROUNDED</unmanaged>
-	Rounded = 15,
+	DWRITE_PANOSE_SERIF_STYLE_ROUNDED = 15,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_SCRIPT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_SCRIPT</unmanaged>
-	Script = 16,
+	DWRITE_PANOSE_SERIF_STYLE_SCRIPT = 16,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_PERP_SANS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_PERP_SANS</unmanaged>
-	PerpSans = 13,
+	DWRITE_PANOSE_SERIF_STYLE_PERP_SANS = 13,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_BONE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_BONE</unmanaged>
-	Bone = 8,
+	DWRITE_PANOSE_SERIF_STYLE_BONE = 8,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_WEIGHT</unmanaged>
-public enum PanoseWeight
+public enum DWRITE_PANOSE_WEIGHT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_WEIGHT_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_WEIGHT_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_VERY_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_VERY_LIGHT</unmanaged>
-	VeryLight = 2,
+	DWRITE_PANOSE_WEIGHT_VERY_LIGHT = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_LIGHT</unmanaged>
-	Light = 3,
+	DWRITE_PANOSE_WEIGHT_LIGHT = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_THIN"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_THIN</unmanaged>
-	Thin = 4,
+	DWRITE_PANOSE_WEIGHT_THIN = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BOOK"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_BOOK</unmanaged>
-	Book = 5,
+	DWRITE_PANOSE_WEIGHT_BOOK = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_MEDIUM</unmanaged>
-	Medium = 6,
+	DWRITE_PANOSE_WEIGHT_MEDIUM = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_DEMI"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_DEMI</unmanaged>
-	Demi = 7,
+	DWRITE_PANOSE_WEIGHT_DEMI = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BOLD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_BOLD</unmanaged>
-	Bold = 8,
+	DWRITE_PANOSE_WEIGHT_BOLD = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_HEAVY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_HEAVY</unmanaged>
-	Heavy = 9,
+	DWRITE_PANOSE_WEIGHT_HEAVY = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BLACK"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_BLACK</unmanaged>
-	Black = 10,
+	DWRITE_PANOSE_WEIGHT_BLACK = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_EXTRA_BLACK"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_EXTRA_BLACK</unmanaged>
-	ExtraBlack = 11,
+	DWRITE_PANOSE_WEIGHT_EXTRA_BLACK = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_NORD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_NORD</unmanaged>
-	Nord = 11,
+	DWRITE_PANOSE_WEIGHT_NORD = 11,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION"]/*' />
 /// <unmanaged>DWRITE_PANOSE_PROPORTION</unmanaged>
-public enum PanoseProportion
+public enum DWRITE_PANOSE_PROPORTION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_PROPORTION_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_PROPORTION_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_OLD_STYLE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_OLD_STYLE</unmanaged>
-	OldStyle = 2,
+	DWRITE_PANOSE_PROPORTION_OLD_STYLE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_MODERN"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_MODERN</unmanaged>
-	Modern = 3,
+	DWRITE_PANOSE_PROPORTION_MODERN = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_EVEN_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_EVEN_WIDTH</unmanaged>
-	EvenWidth = 4,
+	DWRITE_PANOSE_PROPORTION_EVEN_WIDTH = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_EXPANDED</unmanaged>
-	Expanded = 5,
+	DWRITE_PANOSE_PROPORTION_EXPANDED = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_CONDENSED</unmanaged>
-	Condensed = 6,
+	DWRITE_PANOSE_PROPORTION_CONDENSED = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_VERY_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_VERY_EXPANDED</unmanaged>
-	VeryExpanded = 7,
+	DWRITE_PANOSE_PROPORTION_VERY_EXPANDED = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_VERY_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_VERY_CONDENSED</unmanaged>
-	VeryCondensed = 8,
+	DWRITE_PANOSE_PROPORTION_VERY_CONDENSED = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_MONOSPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_MONOSPACED</unmanaged>
-	Monospaced = 9,
+	DWRITE_PANOSE_PROPORTION_MONOSPACED = 9,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST"]/*' />
 /// <unmanaged>DWRITE_PANOSE_CONTRAST</unmanaged>
-public enum PanoseContrast
+public enum DWRITE_PANOSE_CONTRAST
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_CONTRAST_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_CONTRAST_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_NONE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_NONE</unmanaged>
-	None = 2,
+	DWRITE_PANOSE_CONTRAST_NONE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_VERY_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_VERY_LOW</unmanaged>
-	VeryLow = 3,
+	DWRITE_PANOSE_CONTRAST_VERY_LOW = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_LOW</unmanaged>
-	Low = 4,
+	DWRITE_PANOSE_CONTRAST_LOW = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_MEDIUM_LOW</unmanaged>
-	MediumLow = 5,
+	DWRITE_PANOSE_CONTRAST_MEDIUM_LOW = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_MEDIUM</unmanaged>
-	Medium = 6,
+	DWRITE_PANOSE_CONTRAST_MEDIUM = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH</unmanaged>
-	MediumHigh = 7,
+	DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HIGH</unmanaged>
-	High = 8,
+	DWRITE_PANOSE_CONTRAST_HIGH = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_VERY_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_VERY_HIGH</unmanaged>
-	VeryHigh = 9,
+	DWRITE_PANOSE_CONTRAST_VERY_HIGH = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW</unmanaged>
-	HorizontalLow = 10,
+	DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM</unmanaged>
-	HorizontalMedium = 11,
+	DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH</unmanaged>
-	HorizontalHigh = 12,
+	DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_BROKEN"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_BROKEN</unmanaged>
-	Broken = 13,
+	DWRITE_PANOSE_CONTRAST_BROKEN = 13,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION"]/*' />
 /// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION</unmanaged>
-public enum PanoseStrokeVariation
+public enum DWRITE_PANOSE_STROKE_VARIATION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_STROKE_VARIATION_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_STROKE_VARIATION_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_NO_VARIATION"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_NO_VARIATION</unmanaged>
-	NoVariation = 2,
+	DWRITE_PANOSE_STROKE_VARIATION_NO_VARIATION = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_DIAGONAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_DIAGONAL</unmanaged>
-	GradualDiagonal = 3,
+	DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_DIAGONAL = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_TRANSITIONAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_TRANSITIONAL</unmanaged>
-	GradualTransitional = 4,
+	DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_TRANSITIONAL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_VERTICAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_VERTICAL</unmanaged>
-	GradualVertical = 5,
+	DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_VERTICAL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_HORIZONTAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_HORIZONTAL</unmanaged>
-	GradualHorizontal = 6,
+	DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_HORIZONTAL = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_RAPID_VERTICAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_RAPID_VERTICAL</unmanaged>
-	RapidVertical = 7,
+	DWRITE_PANOSE_STROKE_VARIATION_RAPID_VERTICAL = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_RAPID_HORIZONTAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_RAPID_HORIZONTAL</unmanaged>
-	RapidHorizontal = 8,
+	DWRITE_PANOSE_STROKE_VARIATION_RAPID_HORIZONTAL = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_INSTANT_VERTICAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_INSTANT_VERTICAL</unmanaged>
-	InstantVertical = 9,
+	DWRITE_PANOSE_STROKE_VARIATION_INSTANT_VERTICAL = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_INSTANT_HORIZONTAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_INSTANT_HORIZONTAL</unmanaged>
-	InstantHorizontal = 10,
+	DWRITE_PANOSE_STROKE_VARIATION_INSTANT_HORIZONTAL = 10,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ARM_STYLE</unmanaged>
-public enum PanoseArmStyle
+public enum DWRITE_PANOSE_ARM_STYLE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_ARM_STYLE_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_ARM_STYLE_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORIZONTAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORIZONTAL</unmanaged>
-	StraightArmsHorizontal = 2,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORIZONTAL = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_WEDGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_WEDGE</unmanaged>
-	StraightArmsWedge = 3,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_WEDGE = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERTICAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERTICAL</unmanaged>
-	StraightArmsVertical = 4,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERTICAL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_SINGLE_SERIF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_SINGLE_SERIF</unmanaged>
-	StraightArmsSingleSerif = 5,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_SINGLE_SERIF = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_DOUBLE_SERIF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_DOUBLE_SERIF</unmanaged>
-	StraightArmsDoubleSerif = 6,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_DOUBLE_SERIF = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_HORIZONTAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_HORIZONTAL</unmanaged>
-	NonstraightArmsHorizontal = 7,
+	DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_HORIZONTAL = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_WEDGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_WEDGE</unmanaged>
-	NonstraightArmsWedge = 8,
+	DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_WEDGE = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_VERTICAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_VERTICAL</unmanaged>
-	NonstraightArmsVertical = 9,
+	DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_VERTICAL = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_SINGLE_SERIF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_SINGLE_SERIF</unmanaged>
-	NonstraightArmsSingleSerif = 10,
+	DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_SINGLE_SERIF = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_DOUBLE_SERIF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_DOUBLE_SERIF</unmanaged>
-	NonstraightArmsDoubleSerif = 11,
+	DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_DOUBLE_SERIF = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORZ"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORZ</unmanaged>
-	StraightArmsHorz = 2,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORZ = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERT</unmanaged>
-	StraightArmsVert = 4,
+	DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERT = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_HORZ"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_HORZ</unmanaged>
-	BentArmsHorz = 7,
+	DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_HORZ = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_WEDGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_WEDGE</unmanaged>
-	BentArmsWedge = 8,
+	DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_WEDGE = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_VERT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_VERT</unmanaged>
-	BentArmsVert = 9,
+	DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_VERT = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_SINGLE_SERIF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_SINGLE_SERIF</unmanaged>
-	BentArmsSingleSerif = 10,
+	DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_SINGLE_SERIF = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_DOUBLE_SERIF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_DOUBLE_SERIF</unmanaged>
-	BentArmsDoubleSerif = 11,
+	DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_DOUBLE_SERIF = 11,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM"]/*' />
 /// <unmanaged>DWRITE_PANOSE_LETTERFORM</unmanaged>
-public enum PanoseLetterform
+public enum DWRITE_PANOSE_LETTERFORM
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_LETTERFORM_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_LETTERFORM_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_CONTACT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_CONTACT</unmanaged>
-	NormalContact = 2,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_CONTACT = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_WEIGHTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_WEIGHTED</unmanaged>
-	NormalWeighted = 3,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_WEIGHTED = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_BOXED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_BOXED</unmanaged>
-	NormalBoxed = 4,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_BOXED = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_FLATTENED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_FLATTENED</unmanaged>
-	NormalFlattened = 5,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_FLATTENED = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_ROUNDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_ROUNDED</unmanaged>
-	NormalRounded = 6,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_ROUNDED = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_OFF_CENTER"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_OFF_CENTER</unmanaged>
-	NormalOffCenter = 7,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_OFF_CENTER = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_NORMAL_SQUARE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_NORMAL_SQUARE</unmanaged>
-	NormalSquare = 8,
+	DWRITE_PANOSE_LETTERFORM_NORMAL_SQUARE = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_CONTACT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_CONTACT</unmanaged>
-	ObliqueContact = 9,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_CONTACT = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_WEIGHTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_WEIGHTED</unmanaged>
-	ObliqueWeighted = 10,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_WEIGHTED = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_BOXED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_BOXED</unmanaged>
-	ObliqueBoxed = 11,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_BOXED = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_FLATTENED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_FLATTENED</unmanaged>
-	ObliqueFlattened = 12,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_FLATTENED = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_ROUNDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_ROUNDED</unmanaged>
-	ObliqueRounded = 13,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_ROUNDED = 13,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_OFF_CENTER"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_OFF_CENTER</unmanaged>
-	ObliqueOffCenter = 14,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_OFF_CENTER = 14,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_OBLIQUE_SQUARE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_OBLIQUE_SQUARE</unmanaged>
-	ObliqueSquare = 15,
+	DWRITE_PANOSE_LETTERFORM_OBLIQUE_SQUARE = 15,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE"]/*' />
 /// <unmanaged>DWRITE_PANOSE_MIDLINE</unmanaged>
-public enum PanoseMidline
+public enum DWRITE_PANOSE_MIDLINE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_MIDLINE_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_MIDLINE_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_STANDARD_TRIMMED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_STANDARD_TRIMMED</unmanaged>
-	StandardTrimmed = 2,
+	DWRITE_PANOSE_MIDLINE_STANDARD_TRIMMED = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_STANDARD_POINTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_STANDARD_POINTED</unmanaged>
-	StandardPointed = 3,
+	DWRITE_PANOSE_MIDLINE_STANDARD_POINTED = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_STANDARD_SERIFED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_STANDARD_SERIFED</unmanaged>
-	StandardSerifed = 4,
+	DWRITE_PANOSE_MIDLINE_STANDARD_SERIFED = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_HIGH_TRIMMED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_HIGH_TRIMMED</unmanaged>
-	HighTrimmed = 5,
+	DWRITE_PANOSE_MIDLINE_HIGH_TRIMMED = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_HIGH_POINTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_HIGH_POINTED</unmanaged>
-	HighPointed = 6,
+	DWRITE_PANOSE_MIDLINE_HIGH_POINTED = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_HIGH_SERIFED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_HIGH_SERIFED</unmanaged>
-	HighSerifed = 7,
+	DWRITE_PANOSE_MIDLINE_HIGH_SERIFED = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_CONSTANT_TRIMMED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_CONSTANT_TRIMMED</unmanaged>
-	ConstantTrimmed = 8,
+	DWRITE_PANOSE_MIDLINE_CONSTANT_TRIMMED = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_CONSTANT_POINTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_CONSTANT_POINTED</unmanaged>
-	ConstantPointed = 9,
+	DWRITE_PANOSE_MIDLINE_CONSTANT_POINTED = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_CONSTANT_SERIFED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_CONSTANT_SERIFED</unmanaged>
-	ConstantSerifed = 10,
+	DWRITE_PANOSE_MIDLINE_CONSTANT_SERIFED = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_LOW_TRIMMED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_LOW_TRIMMED</unmanaged>
-	LowTrimmed = 11,
+	DWRITE_PANOSE_MIDLINE_LOW_TRIMMED = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_LOW_POINTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_LOW_POINTED</unmanaged>
-	LowPointed = 12,
+	DWRITE_PANOSE_MIDLINE_LOW_POINTED = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_LOW_SERIFED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_LOW_SERIFED</unmanaged>
-	LowSerifed = 13,
+	DWRITE_PANOSE_MIDLINE_LOW_SERIFED = 13,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_XHEIGHT</unmanaged>
-public enum PanoseXheight
+public enum DWRITE_PANOSE_XHEIGHT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_XHEIGHT_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_XHEIGHT_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL</unmanaged>
-	ConstantSmall = 2,
+	DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD</unmanaged>
-	ConstantStandard = 3,
+	DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE</unmanaged>
-	ConstantLarge = 4,
+	DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL</unmanaged>
-	DuckingSmall = 5,
+	DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD</unmanaged>
-	DuckingStandard = 6,
+	DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE</unmanaged>
-	DuckingLarge = 7,
+	DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_STD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_STD</unmanaged>
-	ConstantStd = 3,
+	DWRITE_PANOSE_XHEIGHT_CONSTANT_STD = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_STD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_STD</unmanaged>
-	DuckingStd = 6,
+	DWRITE_PANOSE_XHEIGHT_DUCKING_STD = 6,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND"]/*' />
 /// <unmanaged>DWRITE_PANOSE_TOOL_KIND</unmanaged>
-public enum PanoseToolKind
+public enum DWRITE_PANOSE_TOOL_KIND
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_TOOL_KIND_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_TOOL_KIND_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_FLAT_NIB"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_FLAT_NIB</unmanaged>
-	FlatNib = 2,
+	DWRITE_PANOSE_TOOL_KIND_FLAT_NIB = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT</unmanaged>
-	PressurePoint = 3,
+	DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ENGRAVED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ENGRAVED</unmanaged>
-	Engraved = 4,
+	DWRITE_PANOSE_TOOL_KIND_ENGRAVED = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_BALL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_BALL</unmanaged>
-	Ball = 5,
+	DWRITE_PANOSE_TOOL_KIND_BALL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_BRUSH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_BRUSH</unmanaged>
-	Brush = 6,
+	DWRITE_PANOSE_TOOL_KIND_BRUSH = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ROUGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ROUGH</unmanaged>
-	Rough = 7,
+	DWRITE_PANOSE_TOOL_KIND_ROUGH = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP</unmanaged>
-	FeltPenBrushTip = 8,
+	DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH</unmanaged>
-	WildBrush = 9,
+	DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH = 9,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SPACING</unmanaged>
-public enum PanoseSpacing
+public enum DWRITE_PANOSE_SPACING
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_SPACING_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_SPACING_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED</unmanaged>
-	ProportionalSpaced = 2,
+	DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_MONOSPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_MONOSPACED</unmanaged>
-	Monospaced = 3,
+	DWRITE_PANOSE_SPACING_MONOSPACED = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO</unmanaged>
-public enum PanoseAspectRatio
+public enum DWRITE_PANOSE_ASPECT_RATIO
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_ASPECT_RATIO_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_ASPECT_RATIO_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_VERY_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_VERY_CONDENSED</unmanaged>
-	VeryCondensed = 2,
+	DWRITE_PANOSE_ASPECT_RATIO_VERY_CONDENSED = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_CONDENSED</unmanaged>
-	Condensed = 3,
+	DWRITE_PANOSE_ASPECT_RATIO_CONDENSED = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_NORMAL</unmanaged>
-	Normal = 4,
+	DWRITE_PANOSE_ASPECT_RATIO_NORMAL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_EXPANDED</unmanaged>
-	Expanded = 5,
+	DWRITE_PANOSE_ASPECT_RATIO_EXPANDED = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_VERY_EXPANDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_VERY_EXPANDED</unmanaged>
-	VeryExpanded = 6,
+	DWRITE_PANOSE_ASPECT_RATIO_VERY_EXPANDED = 6,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY</unmanaged>
-public enum PanoseScriptTopology
+public enum DWRITE_PANOSE_SCRIPT_TOPOLOGY
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_DISCONNECTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_DISCONNECTED</unmanaged>
-	RomanDisconnected = 2,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_DISCONNECTED = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_TRAILING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_TRAILING</unmanaged>
-	RomanTrailing = 3,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_TRAILING = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_CONNECTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_CONNECTED</unmanaged>
-	RomanConnected = 4,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_CONNECTED = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_DISCONNECTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_DISCONNECTED</unmanaged>
-	CursiveDisconnected = 5,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_DISCONNECTED = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_TRAILING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_TRAILING</unmanaged>
-	CursiveTrailing = 6,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_TRAILING = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_CONNECTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_CONNECTED</unmanaged>
-	CursiveConnected = 7,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_CONNECTED = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_DISCONNECTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_DISCONNECTED</unmanaged>
-	BlackletterDisconnected = 8,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_DISCONNECTED = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_TRAILING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_TRAILING</unmanaged>
-	BlackletterTrailing = 9,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_TRAILING = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_CONNECTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_CONNECTED</unmanaged>
-	BlackletterConnected = 10,
+	DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_CONNECTED = 10,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM</unmanaged>
-public enum PanoseScriptForm
+public enum DWRITE_PANOSE_SCRIPT_FORM
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_SCRIPT_FORM_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_SCRIPT_FORM_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_NO_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_NO_WRAPPING</unmanaged>
-	UprightNoWrapping = 2,
+	DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_NO_WRAPPING = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_SOME_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_SOME_WRAPPING</unmanaged>
-	UprightSomeWrapping = 3,
+	DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_SOME_WRAPPING = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_MORE_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_MORE_WRAPPING</unmanaged>
-	UprightMoreWrapping = 4,
+	DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_MORE_WRAPPING = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_EXTREME_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_EXTREME_WRAPPING</unmanaged>
-	UprightExtremeWrapping = 5,
+	DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_EXTREME_WRAPPING = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_NO_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_NO_WRAPPING</unmanaged>
-	ObliqueNoWrapping = 6,
+	DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_NO_WRAPPING = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_SOME_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_SOME_WRAPPING</unmanaged>
-	ObliqueSomeWrapping = 7,
+	DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_SOME_WRAPPING = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_MORE_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_MORE_WRAPPING</unmanaged>
-	ObliqueMoreWrapping = 8,
+	DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_MORE_WRAPPING = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_EXTREME_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_EXTREME_WRAPPING</unmanaged>
-	ObliqueExtremeWrapping = 9,
+	DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_EXTREME_WRAPPING = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_NO_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_NO_WRAPPING</unmanaged>
-	ExaggeratedNoWrapping = 10,
+	DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_NO_WRAPPING = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_SOME_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_SOME_WRAPPING</unmanaged>
-	ExaggeratedSomeWrapping = 11,
+	DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_SOME_WRAPPING = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_MORE_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_MORE_WRAPPING</unmanaged>
-	ExaggeratedMoreWrapping = 12,
+	DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_MORE_WRAPPING = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_EXTREME_WRAPPING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_EXTREME_WRAPPING</unmanaged>
-	ExaggeratedExtremeWrapping = 13,
+	DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_EXTREME_WRAPPING = 13,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FINIALS</unmanaged>
-public enum PanoseFinials
+public enum DWRITE_PANOSE_FINIALS
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_FINIALS_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_FINIALS_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_NONE_NO_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_NONE_NO_LOOPS</unmanaged>
-	NoneNoLoops = 2,
+	DWRITE_PANOSE_FINIALS_NONE_NO_LOOPS = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_NONE_CLOSED_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_NONE_CLOSED_LOOPS</unmanaged>
-	NoneClosedLoops = 3,
+	DWRITE_PANOSE_FINIALS_NONE_CLOSED_LOOPS = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_NONE_OPEN_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_NONE_OPEN_LOOPS</unmanaged>
-	NoneOpenLoops = 4,
+	DWRITE_PANOSE_FINIALS_NONE_OPEN_LOOPS = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_SHARP_NO_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_SHARP_NO_LOOPS</unmanaged>
-	SharpNoLoops = 5,
+	DWRITE_PANOSE_FINIALS_SHARP_NO_LOOPS = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_SHARP_CLOSED_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_SHARP_CLOSED_LOOPS</unmanaged>
-	SharpClosedLoops = 6,
+	DWRITE_PANOSE_FINIALS_SHARP_CLOSED_LOOPS = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_SHARP_OPEN_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_SHARP_OPEN_LOOPS</unmanaged>
-	SharpOpenLoops = 7,
+	DWRITE_PANOSE_FINIALS_SHARP_OPEN_LOOPS = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_TAPERED_NO_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_TAPERED_NO_LOOPS</unmanaged>
-	TaperedNoLoops = 8,
+	DWRITE_PANOSE_FINIALS_TAPERED_NO_LOOPS = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_TAPERED_CLOSED_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_TAPERED_CLOSED_LOOPS</unmanaged>
-	TaperedClosedLoops = 9,
+	DWRITE_PANOSE_FINIALS_TAPERED_CLOSED_LOOPS = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_TAPERED_OPEN_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_TAPERED_OPEN_LOOPS</unmanaged>
-	TaperedOpenLoops = 10,
+	DWRITE_PANOSE_FINIALS_TAPERED_OPEN_LOOPS = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_ROUND_NO_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_ROUND_NO_LOOPS</unmanaged>
-	RoundNoLoops = 11,
+	DWRITE_PANOSE_FINIALS_ROUND_NO_LOOPS = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_ROUND_CLOSED_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_ROUND_CLOSED_LOOPS</unmanaged>
-	RoundClosedLoops = 12,
+	DWRITE_PANOSE_FINIALS_ROUND_CLOSED_LOOPS = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_ROUND_OPEN_LOOPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_ROUND_OPEN_LOOPS</unmanaged>
-	RoundOpenLoops = 13,
+	DWRITE_PANOSE_FINIALS_ROUND_OPEN_LOOPS = 13,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_XASCENT</unmanaged>
-public enum PanoseXascent
+public enum DWRITE_PANOSE_XASCENT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_XASCENT_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_XASCENT_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_VERY_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_VERY_LOW</unmanaged>
-	VeryLow = 2,
+	DWRITE_PANOSE_XASCENT_VERY_LOW = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_LOW</unmanaged>
-	Low = 3,
+	DWRITE_PANOSE_XASCENT_LOW = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_MEDIUM</unmanaged>
-	Medium = 4,
+	DWRITE_PANOSE_XASCENT_MEDIUM = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_HIGH</unmanaged>
-	High = 5,
+	DWRITE_PANOSE_XASCENT_HIGH = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_VERY_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_VERY_HIGH</unmanaged>
-	VeryHigh = 6,
+	DWRITE_PANOSE_XASCENT_VERY_HIGH = 6,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS"]/*' />
 /// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS</unmanaged>
-public enum PanoseDecorativeClass
+public enum DWRITE_PANOSE_DECORATIVE_CLASS
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_DECORATIVE_CLASS_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_DECORATIVE_CLASS_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_DERIVATIVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_DERIVATIVE</unmanaged>
-	Derivative = 2,
+	DWRITE_PANOSE_DECORATIVE_CLASS_DERIVATIVE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_TOPOLOGY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_TOPOLOGY</unmanaged>
-	NonstandardTopology = 3,
+	DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_TOPOLOGY = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ELEMENTS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ELEMENTS</unmanaged>
-	NonstandardElements = 4,
+	DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ELEMENTS = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ASPECT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ASPECT</unmanaged>
-	NonstandardAspect = 5,
+	DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ASPECT = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_INITIALS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_INITIALS</unmanaged>
-	Initials = 6,
+	DWRITE_PANOSE_DECORATIVE_CLASS_INITIALS = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_CARTOON"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_CARTOON</unmanaged>
-	Cartoon = 7,
+	DWRITE_PANOSE_DECORATIVE_CLASS_CARTOON = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_PICTURE_STEMS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_PICTURE_STEMS</unmanaged>
-	PictureStems = 8,
+	DWRITE_PANOSE_DECORATIVE_CLASS_PICTURE_STEMS = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_ORNAMENTED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_ORNAMENTED</unmanaged>
-	Ornamented = 9,
+	DWRITE_PANOSE_DECORATIVE_CLASS_ORNAMENTED = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_TEXT_AND_BACKGROUND"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_TEXT_AND_BACKGROUND</unmanaged>
-	TextAndBackground = 10,
+	DWRITE_PANOSE_DECORATIVE_CLASS_TEXT_AND_BACKGROUND = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_COLLAGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_COLLAGE</unmanaged>
-	Collage = 11,
+	DWRITE_PANOSE_DECORATIVE_CLASS_COLLAGE = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_MONTAGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_MONTAGE</unmanaged>
-	Montage = 12,
+	DWRITE_PANOSE_DECORATIVE_CLASS_MONTAGE = 12,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ASPECT</unmanaged>
-public enum PanoseAspect
+public enum DWRITE_PANOSE_ASPECT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_ASPECT_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_ASPECT_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_SUPER_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_SUPER_CONDENSED</unmanaged>
-	SuperCondensed = 2,
+	DWRITE_PANOSE_ASPECT_SUPER_CONDENSED = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_VERY_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_VERY_CONDENSED</unmanaged>
-	VeryCondensed = 3,
+	DWRITE_PANOSE_ASPECT_VERY_CONDENSED = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_CONDENSED</unmanaged>
-	Condensed = 4,
+	DWRITE_PANOSE_ASPECT_CONDENSED = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_NORMAL</unmanaged>
-	Normal = 5,
+	DWRITE_PANOSE_ASPECT_NORMAL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_EXTENDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_EXTENDED</unmanaged>
-	Extended = 6,
+	DWRITE_PANOSE_ASPECT_EXTENDED = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_VERY_EXTENDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_VERY_EXTENDED</unmanaged>
-	VeryExtended = 7,
+	DWRITE_PANOSE_ASPECT_VERY_EXTENDED = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_SUPER_EXTENDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_SUPER_EXTENDED</unmanaged>
-	SuperExtended = 8,
+	DWRITE_PANOSE_ASPECT_SUPER_EXTENDED = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_MONOSPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_MONOSPACED</unmanaged>
-	Monospaced = 9,
+	DWRITE_PANOSE_ASPECT_MONOSPACED = 9,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FILL</unmanaged>
-public enum PanoseFill
+public enum DWRITE_PANOSE_FILL
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_FILL_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_FILL_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL</unmanaged>
-	StandardSolidFill = 2,
+	DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_NO_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_NO_FILL</unmanaged>
-	NoFill = 3,
+	DWRITE_PANOSE_FILL_NO_FILL = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_PATTERNED_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_PATTERNED_FILL</unmanaged>
-	PatternedFill = 4,
+	DWRITE_PANOSE_FILL_PATTERNED_FILL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_COMPLEX_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_COMPLEX_FILL</unmanaged>
-	ComplexFill = 5,
+	DWRITE_PANOSE_FILL_COMPLEX_FILL = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_SHAPED_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_SHAPED_FILL</unmanaged>
-	ShapedFill = 6,
+	DWRITE_PANOSE_FILL_SHAPED_FILL = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_DRAWN_DISTRESSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_DRAWN_DISTRESSED</unmanaged>
-	DrawnDistressed = 7,
+	DWRITE_PANOSE_FILL_DRAWN_DISTRESSED = 7,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING"]/*' />
 /// <unmanaged>DWRITE_PANOSE_LINING</unmanaged>
-public enum PanoseLining
+public enum DWRITE_PANOSE_LINING
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_LINING_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_LINING_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_NONE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_NONE</unmanaged>
-	None = 2,
+	DWRITE_PANOSE_LINING_NONE = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_INLINE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_INLINE</unmanaged>
-	Inline = 3,
+	DWRITE_PANOSE_LINING_INLINE = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_OUTLINE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_OUTLINE</unmanaged>
-	Outline = 4,
+	DWRITE_PANOSE_LINING_OUTLINE = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_ENGRAVED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_ENGRAVED</unmanaged>
-	Engraved = 5,
+	DWRITE_PANOSE_LINING_ENGRAVED = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_SHADOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_SHADOW</unmanaged>
-	Shadow = 6,
+	DWRITE_PANOSE_LINING_SHADOW = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_RELIEF"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_RELIEF</unmanaged>
-	Relief = 7,
+	DWRITE_PANOSE_LINING_RELIEF = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_BACKDROP"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_BACKDROP</unmanaged>
-	Backdrop = 8,
+	DWRITE_PANOSE_LINING_BACKDROP = 8,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY</unmanaged>
-public enum PanoseDecorativeTopology
+public enum DWRITE_PANOSE_DECORATIVE_TOPOLOGY
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_STANDARD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_STANDARD</unmanaged>
-	Standard = 2,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_STANDARD = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SQUARE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SQUARE</unmanaged>
-	Square = 3,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SQUARE = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_MULTIPLE_SEGMENT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_MULTIPLE_SEGMENT</unmanaged>
-	MultipleSegment = 4,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_MULTIPLE_SEGMENT = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ART_DECO"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ART_DECO</unmanaged>
-	ArtDeco = 5,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ART_DECO = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UNEVEN_WEIGHTING"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UNEVEN_WEIGHTING</unmanaged>
-	UnevenWeighting = 6,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UNEVEN_WEIGHTING = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_ARMS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_ARMS</unmanaged>
-	DiverseArms = 7,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_ARMS = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_FORMS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_FORMS</unmanaged>
-	DiverseForms = 8,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_FORMS = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_LOMBARDIC_FORMS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_LOMBARDIC_FORMS</unmanaged>
-	LombardicForms = 9,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_LOMBARDIC_FORMS = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UPPER_CASE_IN_LOWER_CASE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UPPER_CASE_IN_LOWER_CASE</unmanaged>
-	UpperCaseInLowerCase = 10,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UPPER_CASE_IN_LOWER_CASE = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_IMPLIED_TOPOLOGY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_IMPLIED_TOPOLOGY</unmanaged>
-	ImpliedTopology = 11,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_IMPLIED_TOPOLOGY = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_HORSESHOE_E_AND_A"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_HORSESHOE_E_AND_A</unmanaged>
-	HorseshoeEAndA = 12,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_HORSESHOE_E_AND_A = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_CURSIVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_CURSIVE</unmanaged>
-	Cursive = 13,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_CURSIVE = 13,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_BLACKLETTER"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_BLACKLETTER</unmanaged>
-	Blackletter = 14,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_BLACKLETTER = 14,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SWASH_VARIANCE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SWASH_VARIANCE</unmanaged>
-	SwashVariance = 15,
+	DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SWASH_VARIANCE = 15,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES"]/*' />
 /// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES</unmanaged>
-public enum PanoseCharacterRanges
+public enum DWRITE_PANOSE_CHARACTER_RANGES
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_CHARACTER_RANGES_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_CHARACTER_RANGES_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_EXTENDED_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_EXTENDED_COLLECTION</unmanaged>
-	ExtendedCollection = 2,
+	DWRITE_PANOSE_CHARACTER_RANGES_EXTENDED_COLLECTION = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_LITERALS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_LITERALS</unmanaged>
-	Literals = 3,
+	DWRITE_PANOSE_CHARACTER_RANGES_LITERALS = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_NO_LOWER_CASE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_NO_LOWER_CASE</unmanaged>
-	NoLowerCase = 4,
+	DWRITE_PANOSE_CHARACTER_RANGES_NO_LOWER_CASE = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_SMALL_CAPS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_SMALL_CAPS</unmanaged>
-	SmallCaps = 5,
+	DWRITE_PANOSE_CHARACTER_RANGES_SMALL_CAPS = 5,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND</unmanaged>
-public enum PanoseSymbolKind
+public enum DWRITE_PANOSE_SYMBOL_KIND
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_SYMBOL_KIND_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_SYMBOL_KIND_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_MONTAGES"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_MONTAGES</unmanaged>
-	Montages = 2,
+	DWRITE_PANOSE_SYMBOL_KIND_MONTAGES = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_PICTURES"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_PICTURES</unmanaged>
-	Pictures = 3,
+	DWRITE_PANOSE_SYMBOL_KIND_PICTURES = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_SHAPES"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_SHAPES</unmanaged>
-	Shapes = 4,
+	DWRITE_PANOSE_SYMBOL_KIND_SHAPES = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC</unmanaged>
-	Scientific = 5,
+	DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_MUSIC"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_MUSIC</unmanaged>
-	Music = 6,
+	DWRITE_PANOSE_SYMBOL_KIND_MUSIC = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_EXPERT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_EXPERT</unmanaged>
-	Expert = 7,
+	DWRITE_PANOSE_SYMBOL_KIND_EXPERT = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_PATTERNS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_PATTERNS</unmanaged>
-	Patterns = 8,
+	DWRITE_PANOSE_SYMBOL_KIND_PATTERNS = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_BOARDERS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_BOARDERS</unmanaged>
-	Boarders = 9,
+	DWRITE_PANOSE_SYMBOL_KIND_BOARDERS = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ICONS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_ICONS</unmanaged>
-	Icons = 10,
+	DWRITE_PANOSE_SYMBOL_KIND_ICONS = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_LOGOS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_LOGOS</unmanaged>
-	Logos = 11,
+	DWRITE_PANOSE_SYMBOL_KIND_LOGOS = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC</unmanaged>
-	IndustrySpecific = 12,
+	DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC = 12,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO</unmanaged>
-public enum PanoseSymbolAspectRatio
+public enum DWRITE_PANOSE_SYMBOL_ASPECT_RATIO
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY</unmanaged>
-	Any = 0,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT</unmanaged>
-	NoFit = 1,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH</unmanaged>
-	NoWidth = 2,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE</unmanaged>
-	ExceptionallyWide = 3,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE</unmanaged>
-	SuperWide = 4,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE</unmanaged>
-	VeryWide = 5,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE</unmanaged>
-	Wide = 6,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL</unmanaged>
-	Normal = 7,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW</unmanaged>
-	Narrow = 8,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW</unmanaged>
-	VeryNarrow = 9,
+	DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW = 9,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD"]/*' />
 /// <unmanaged>DWRITE_OUTLINE_THRESHOLD</unmanaged>
-public enum OutlineThreshold
+public enum DWRITE_OUTLINE_THRESHOLD
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ANTIALIASED"]/*' />
 	/// <unmanaged>DWRITE_OUTLINE_THRESHOLD_ANTIALIASED</unmanaged>
-	Antialiased = 0,
+	DWRITE_OUTLINE_THRESHOLD_ANTIALIASED = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ALIASED"]/*' />
 	/// <unmanaged>DWRITE_OUTLINE_THRESHOLD_ALIASED</unmanaged>
-	Aliased = 1,
+	DWRITE_OUTLINE_THRESHOLD_ALIASED = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE"]/*' />
 /// <unmanaged>DWRITE_BASELINE</unmanaged>
-public enum Baseline
+public enum DWRITE_BASELINE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_BASELINE_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_ROMAN"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_ROMAN</unmanaged>
-	Roman = 1,
+	DWRITE_BASELINE_ROMAN = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_CENTRAL"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_CENTRAL</unmanaged>
-	Central = 2,
+	DWRITE_BASELINE_CENTRAL = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_MATH"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_MATH</unmanaged>
-	Math = 3,
+	DWRITE_BASELINE_MATH = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_HANGING"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_HANGING</unmanaged>
-	Hanging = 4,
+	DWRITE_BASELINE_HANGING = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_IDEOGRAPHIC_BOTTOM"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_IDEOGRAPHIC_BOTTOM</unmanaged>
-	IdeographicBottom = 5,
+	DWRITE_BASELINE_IDEOGRAPHIC_BOTTOM = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_IDEOGRAPHIC_TOP"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_IDEOGRAPHIC_TOP</unmanaged>
-	IdeographicTop = 6,
+	DWRITE_BASELINE_IDEOGRAPHIC_TOP = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_MINIMUM"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_MINIMUM</unmanaged>
-	Minimum = 7,
+	DWRITE_BASELINE_MINIMUM = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_MAXIMUM"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_MAXIMUM</unmanaged>
-	Maximum = 8,
+	DWRITE_BASELINE_MAXIMUM = 8,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION"]/*' />
 /// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION</unmanaged>
-public enum VerticalGlyphOrientation
+public enum DWRITE_VERTICAL_GLYPH_ORIENTATION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED"]/*' />
 	/// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED</unmanaged>
-	Stacked = 1,
+	DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE"]/*' />
 /// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE</unmanaged>
-public enum GlyphOrientationAngle
+public enum DWRITE_GLYPH_ORIENTATION_ANGLE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES</unmanaged>
-	_0Degrees = 0,
+	DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES</unmanaged>
-	_90Degrees = 1,
+	DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES</unmanaged>
-	_180Degrees = 2,
+	DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES</unmanaged>
-	_270Degrees = 3,
+	DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE</unmanaged>
-public enum TextAntialiasMode
+public enum DWRITE_TEXT_ANTIALIAS_MODE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE</unmanaged>
-	Cleartype = 0,
+	DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE</unmanaged>
-	Grayscale = 1,
+	DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_OPTICAL_ALIGNMENT</unmanaged>
-public enum OpticalAlignment
+public enum DWRITE_OPTICAL_ALIGNMENT
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NONE"]/*' />
 	/// <unmanaged>DWRITE_OPTICAL_ALIGNMENT_NONE</unmanaged>
-	None = 0,
+	DWRITE_OPTICAL_ALIGNMENT_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS"]/*' />
 	/// <unmanaged>DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS</unmanaged>
-	NoSideBearings = 1,
+	DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE"]/*' />
 /// <unmanaged>DWRITE_GRID_FIT_MODE</unmanaged>
-public enum GridFitMode
+public enum DWRITE_GRID_FIT_MODE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_GRID_FIT_MODE_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DISABLED"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_DISABLED</unmanaged>
-	Disabled = 1,
+	DWRITE_GRID_FIT_MODE_DISABLED = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_ENABLED"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_ENABLED</unmanaged>
-	Enabled = 2,
+	DWRITE_GRID_FIT_MODE_ENABLED = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID"]/*' />
 /// <unmanaged>DWRITE_FONT_PROPERTY_ID</unmanaged>
-public enum FontPropertyId
+public enum DWRITE_FONT_PROPERTY_ID
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_NONE</unmanaged>
-	None = 0,
+	DWRITE_FONT_PROPERTY_ID_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FAMILY_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FAMILY_NAME</unmanaged>
-	WeightStretchStyleFamilyName = 1,
+	DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FAMILY_NAME = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FAMILY_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FAMILY_NAME</unmanaged>
-	TypographicFamilyName = 2,
+	DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FAMILY_NAME = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FACE_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FACE_NAME</unmanaged>
-	WeightStretchStyleFaceName = 3,
+	DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FACE_NAME = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_FULL_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_FULL_NAME</unmanaged>
-	FullName = 4,
+	DWRITE_FONT_PROPERTY_ID_FULL_NAME = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_WIN32_FAMILY_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_WIN32_FAMILY_NAME</unmanaged>
-	Win32FamilyName = 5,
+	DWRITE_FONT_PROPERTY_ID_WIN32_FAMILY_NAME = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_POSTSCRIPT_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_POSTSCRIPT_NAME</unmanaged>
-	PostscriptName = 6,
+	DWRITE_FONT_PROPERTY_ID_POSTSCRIPT_NAME = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_DESIGN_SCRIPT_LANGUAGE_TAG"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_DESIGN_SCRIPT_LANGUAGE_TAG</unmanaged>
-	DesignScriptLanguageTag = 7,
+	DWRITE_FONT_PROPERTY_ID_DESIGN_SCRIPT_LANGUAGE_TAG = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_SUPPORTED_SCRIPT_LANGUAGE_TAG"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_SUPPORTED_SCRIPT_LANGUAGE_TAG</unmanaged>
-	SupportedScriptLanguageTag = 8,
+	DWRITE_FONT_PROPERTY_ID_SUPPORTED_SCRIPT_LANGUAGE_TAG = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_SEMANTIC_TAG"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_SEMANTIC_TAG</unmanaged>
-	SemanticTag = 9,
+	DWRITE_FONT_PROPERTY_ID_SEMANTIC_TAG = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_WEIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_WEIGHT</unmanaged>
-	Weight = 10,
+	DWRITE_FONT_PROPERTY_ID_WEIGHT = 10,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_STRETCH"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_STRETCH</unmanaged>
-	Stretch = 11,
+	DWRITE_FONT_PROPERTY_ID_STRETCH = 11,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_STYLE"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_STYLE</unmanaged>
-	Style = 12,
+	DWRITE_FONT_PROPERTY_ID_STYLE = 12,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FACE_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FACE_NAME</unmanaged>
-	TypographicFaceName = 13,
+	DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FACE_NAME = 13,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_TOTAL"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_TOTAL</unmanaged>
-	Total = 13,
+	DWRITE_FONT_PROPERTY_ID_TOTAL = 13,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_TOTAL_RS3"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_TOTAL_RS3</unmanaged>
-	TotalRs3 = 14,
+	DWRITE_FONT_PROPERTY_ID_TOTAL_RS3 = 14,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_PREFERRED_FAMILY_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_PREFERRED_FAMILY_NAME</unmanaged>
-	PreferredFamilyName = 2,
+	DWRITE_FONT_PROPERTY_ID_PREFERRED_FAMILY_NAME = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_FAMILY_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_FAMILY_NAME</unmanaged>
-	FamilyName = 1,
+	DWRITE_FONT_PROPERTY_ID_FAMILY_NAME = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_FACE_NAME"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_FACE_NAME</unmanaged>
-	FaceName = 3,
+	DWRITE_FONT_PROPERTY_ID_FACE_NAME = 3,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY"]/*' />
 /// <unmanaged>DWRITE_LOCALITY</unmanaged>
-public enum Locality
+public enum DWRITE_LOCALITY
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_REMOTE"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_REMOTE</unmanaged>
-	Remote = 0,
+	DWRITE_LOCALITY_REMOTE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_PARTIAL"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_PARTIAL</unmanaged>
-	Partial = 1,
+	DWRITE_LOCALITY_PARTIAL = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_LOCAL"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_LOCAL</unmanaged>
-	Local = 2,
+	DWRITE_LOCALITY_LOCAL = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1"]/*' />
 /// <unmanaged>DWRITE_RENDERING_MODE1</unmanaged>
-public enum RenderingMode1
+public enum DWRITE_RENDERING_MODE1
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_RENDERING_MODE1_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_ALIASED"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_ALIASED</unmanaged>
-	Aliased = 1,
+	DWRITE_RENDERING_MODE1_ALIASED = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_GDI_CLASSIC"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_GDI_CLASSIC</unmanaged>
-	GDIClassic = 2,
+	DWRITE_RENDERING_MODE1_GDI_CLASSIC = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_GDI_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_GDI_NATURAL</unmanaged>
-	GDINatural = 3,
+	DWRITE_RENDERING_MODE1_GDI_NATURAL = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_NATURAL</unmanaged>
-	Natural = 4,
+	DWRITE_RENDERING_MODE1_NATURAL = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC</unmanaged>
-	NaturalSymmetric = 5,
+	DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_OUTLINE"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_OUTLINE</unmanaged>
-	Outline = 6,
+	DWRITE_RENDERING_MODE1_OUTLINE = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC_DOWNSAMPLED"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC_DOWNSAMPLED</unmanaged>
-	NaturalSymmetricDownsampled = 7,
+	DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC_DOWNSAMPLED = 7,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE"]/*' />
 /// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE</unmanaged>
-public enum FontLineGapUsage
+public enum DWRITE_FONT_LINE_GAP_USAGE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_DEFAULT</unmanaged>
-	Default = 0,
+	DWRITE_FONT_LINE_GAP_USAGE_DEFAULT = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DISABLED"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_DISABLED</unmanaged>
-	Disabled = 1,
+	DWRITE_FONT_LINE_GAP_USAGE_DISABLED = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_ENABLED"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_ENABLED</unmanaged>
-	Enabled = 2,
+	DWRITE_FONT_LINE_GAP_USAGE_ENABLED = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE"]/*' />
 /// <unmanaged>DWRITE_CONTAINER_TYPE</unmanaged>
-public enum ContainerType
+public enum DWRITE_CONTAINER_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_UNKNOWN</unmanaged>
-	Unknown = 0,
+	DWRITE_CONTAINER_TYPE_UNKNOWN = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_WOFF"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_WOFF</unmanaged>
-	Woff = 1,
+	DWRITE_CONTAINER_TYPE_WOFF = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_WOFF2"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_WOFF2</unmanaged>
-	Woff2 = 2,
+	DWRITE_CONTAINER_TYPE_WOFF2 = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL"]/*' />
 /// <unmanaged>DWRITE_FONT_FAMILY_MODEL</unmanaged>
-public enum FontFamilyModel
+public enum DWRITE_FONT_FAMILY_MODEL
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC</unmanaged>
-	Typographic = 0,
+	DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE</unmanaged>
-	WeightStretchStyle = 1,
+	DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES"]/*' />
 /// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES</unmanaged>
 [Flags]
-public enum AutomaticFontAxes
+public enum DWRITE_AUTOMATIC_FONT_AXES
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_NONE"]/*' />
 	/// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES_NONE</unmanaged>
-	None = 0,
+	DWRITE_AUTOMATIC_FONT_AXES_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE"]/*' />
 	/// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE</unmanaged>
-	OpticalSize = 1,
+	DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE = 1,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_ATTRIBUTES"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_ATTRIBUTES</unmanaged>
 [Flags]
-public enum FontAxisAttributes
+public enum DWRITE_FONT_AXIS_ATTRIBUTES
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_ATTRIBUTES::DWRITE_FONT_AXIS_ATTRIBUTES_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_ATTRIBUTES_NONE</unmanaged>
-	None = 0,
+	DWRITE_FONT_AXIS_ATTRIBUTES_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_ATTRIBUTES::DWRITE_FONT_AXIS_ATTRIBUTES_VARIABLE"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_ATTRIBUTES_VARIABLE</unmanaged>
-	Variable = 1,
+	DWRITE_FONT_AXIS_ATTRIBUTES_VARIABLE = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_ATTRIBUTES::DWRITE_FONT_AXIS_ATTRIBUTES_HIDDEN"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_ATTRIBUTES_HIDDEN</unmanaged>
-	Hidden = 2,
+	DWRITE_FONT_AXIS_ATTRIBUTES_HIDDEN = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_SOURCE_TYPE</unmanaged>
-public enum FontSourceType
+public enum DWRITE_FONT_SOURCE_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_UNKNOWN</unmanaged>
-	Unknown = 0,
+	DWRITE_FONT_SOURCE_TYPE_UNKNOWN = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_PER_MACHINE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_PER_MACHINE</unmanaged>
-	PerMachine = 1,
+	DWRITE_FONT_SOURCE_TYPE_PER_MACHINE = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_PER_USER"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_PER_USER</unmanaged>
-	PerUser = 2,
+	DWRITE_FONT_SOURCE_TYPE_PER_USER = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE</unmanaged>
-	AppxPackage = 3,
+	DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER</unmanaged>
-	RemoteFontProvider = 4,
+	DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER = 4,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL"]/*' />
 /// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL</unmanaged>
-public enum PaintFeatureLevel
+public enum DWRITE_PAINT_FEATURE_LEVEL
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL::DWRITE_PAINT_FEATURE_LEVEL_NONE"]/*' />
 	/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL_NONE</unmanaged>
-	None = 0,
+	DWRITE_PAINT_FEATURE_LEVEL_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL::DWRITE_PAINT_FEATURE_LEVEL_COLR_V0"]/*' />
 	/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL_COLR_V0</unmanaged>
-	ColrV0 = 1,
+	DWRITE_PAINT_FEATURE_LEVEL_COLR_V0 = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL::DWRITE_PAINT_FEATURE_LEVEL_COLR_V1"]/*' />
 	/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL_COLR_V1</unmanaged>
-	ColrV1 = 2,
+	DWRITE_PAINT_FEATURE_LEVEL_COLR_V1 = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES"]/*' />
 /// <unmanaged>DWRITE_PAINT_ATTRIBUTES</unmanaged>
 [Flags]
-public enum PaintAttributes
+public enum DWRITE_PAINT_ATTRIBUTES
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES::DWRITE_PAINT_ATTRIBUTES_NONE"]/*' />
 	/// <unmanaged>DWRITE_PAINT_ATTRIBUTES_NONE</unmanaged>
-	None = 0,
+	DWRITE_PAINT_ATTRIBUTES_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES::DWRITE_PAINT_ATTRIBUTES_USES_PALETTE"]/*' />
 	/// <unmanaged>DWRITE_PAINT_ATTRIBUTES_USES_PALETTE</unmanaged>
-	UsesPalette = 1,
+	DWRITE_PAINT_ATTRIBUTES_USES_PALETTE = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES::DWRITE_PAINT_ATTRIBUTES_USES_TEXT_COLOR"]/*' />
 	/// <unmanaged>DWRITE_PAINT_ATTRIBUTES_USES_TEXT_COLOR</unmanaged>
-	UsesTextColor = 2,
+	DWRITE_PAINT_ATTRIBUTES_USES_TEXT_COLOR = 2,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE"]/*' />
 /// <unmanaged>DWRITE_COLOR_COMPOSITE_MODE</unmanaged>
-public enum ColorCompositeMode
+public enum DWRITE_COLOR_COMPOSITE_MODE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_CLEAR"]/*' />
 	/// <unmanaged>DWRITE_COLOR_COMPOSITE_CLEAR</unmanaged>
@@ -2298,39 +2297,39 @@ public enum ColorCompositeMode
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE"]/*' />
 /// <unmanaged>DWRITE_PAINT_TYPE</unmanaged>
-public enum PaintType
+public enum DWRITE_PAINT_TYPE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_NONE"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_NONE</unmanaged>
-	None = 0,
+	DWRITE_PAINT_TYPE_NONE = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_LAYERS"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_LAYERS</unmanaged>
-	Layers = 1,
+	DWRITE_PAINT_TYPE_LAYERS = 1,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_SOLID_GLYPH"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_SOLID_GLYPH</unmanaged>
-	SolidGlyph = 2,
+	DWRITE_PAINT_TYPE_SOLID_GLYPH = 2,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_SOLID"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_SOLID</unmanaged>
-	Solid = 3,
+	DWRITE_PAINT_TYPE_SOLID = 3,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_LINEAR_GRADIENT"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_LINEAR_GRADIENT</unmanaged>
-	LinearGradient = 4,
+	DWRITE_PAINT_TYPE_LINEAR_GRADIENT = 4,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_RADIAL_GRADIENT"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_RADIAL_GRADIENT</unmanaged>
-	RadialGradient = 5,
+	DWRITE_PAINT_TYPE_RADIAL_GRADIENT = 5,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_SWEEP_GRADIENT"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_SWEEP_GRADIENT</unmanaged>
-	SweepGradient = 6,
+	DWRITE_PAINT_TYPE_SWEEP_GRADIENT = 6,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_GLYPH"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_GLYPH</unmanaged>
-	Glyph = 7,
+	DWRITE_PAINT_TYPE_GLYPH = 7,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_COLOR_GLYPH"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_COLOR_GLYPH</unmanaged>
-	ColorGlyph = 8,
+	DWRITE_PAINT_TYPE_COLOR_GLYPH = 8,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_TRANSFORM"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_TRANSFORM</unmanaged>
-	Transform = 9,
+	DWRITE_PAINT_TYPE_TRANSFORM = 9,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_COMPOSITE"]/*' />
 	/// <unmanaged>DWRITE_PAINT_TYPE_COMPOSITE</unmanaged>
-	Composite = 10,
+	DWRITE_PAINT_TYPE_COMPOSITE = 10,
 }

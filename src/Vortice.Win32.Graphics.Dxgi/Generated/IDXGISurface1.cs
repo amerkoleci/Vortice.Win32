@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1"]/*' />
 /// <unmanaged>IDXGISurface1</unmanaged>
@@ -113,17 +113,17 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGISurface.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDesc(SurfaceDescription* pDesc)
+	public HResult GetDesc(DXGI_SURFACE_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISurface1*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISurface1*, DXGI_SURFACE_DESC*, int>)(lpVtbl[8]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISurface.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Map(MappedRect* pLockedRect, MapFlags MapFlags)
+	public HResult Map(DXGI_MAPPED_RECT* pLockedRect, DXGI_MAP_FLAGS MapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISurface1*, MappedRect*, MapFlags, int>)(lpVtbl[9]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISurface1*, DXGI_MAPPED_RECT*, DXGI_MAP_FLAGS, int>)(lpVtbl[9]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
 	}
 
 	/// <inheritdoc cref="IDXGISurface.Unmap" />

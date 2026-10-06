@@ -1,12 +1,11 @@
 ﻿// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D12;
 using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Apis;
-using static Vortice.Win32.Graphics.D3D12MemoryAllocator.Apis;
+using static Vortice.Win32.Graphics.D3D12MA;
 
-namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics;
 
 public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
 {
@@ -23,25 +22,25 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
     public ulong GetMemoryCapacity(uint memorySegmentGroup) => D3D12MA_Allocator_GetMemoryCapacity(Handle, memorySegmentGroup);
 
     public HResult CreateResource(D3D12MA_ALLOCATION_DESC* pAllocDesc,
-        in ResourceDescription resourceDesc,
+        in D3D12_RESOURCE_DESC resourceDesc,
         D3D12_RESOURCE_STATES initialResourceState,
-        ClearValue* pOptimizedClearValue,
+        D3D12_CLEAR_VALUE* pOptimizedClearValue,
         D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {
-        fixed (ResourceDescription* pResourceDesc = &resourceDesc)
+        fixed (D3D12_RESOURCE_DESC* pResourceDesc = &resourceDesc)
         {
             return D3D12MA_Allocator_CreateResource(Handle, pAllocDesc, pResourceDesc, initialResourceState, pOptimizedClearValue, allocation, riidResource, ppvResource);
         }
     }
 
     public HResult CreateResource<TResource>(D3D12MA_ALLOCATION_DESC* pAllocDesc,
-        in ResourceDescription resourceDesc,
+        in D3D12_RESOURCE_DESC resourceDesc,
         D3D12_RESOURCE_STATES initialResourceState,
-        ClearValue* pOptimizedClearValue,
+        D3D12_CLEAR_VALUE* pOptimizedClearValue,
         D3D12MA_Allocation* allocation, TResource** ppvResource)
         where TResource : unmanaged, ID3D12Resource.Interface
     {
-        fixed (ResourceDescription* pResourceDesc = &resourceDesc)
+        fixed (D3D12_RESOURCE_DESC* pResourceDesc = &resourceDesc)
         {
             return D3D12MA_Allocator_CreateResource(Handle,
                 pAllocDesc,
@@ -54,18 +53,18 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
     }
 
     public HResult CreateResource2(D3D12MA_ALLOCATION_DESC* pAllocDesc,
-        ResourceDescription1* pResourceDesc,
+        D3D12_RESOURCE_DESC1* pResourceDesc,
         D3D12_RESOURCE_STATES initialResourceState,
-        ClearValue* pOptimizedClearValue,
+        D3D12_CLEAR_VALUE* pOptimizedClearValue,
         D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {
         return D3D12MA_Allocator_CreateResource2(Handle, pAllocDesc, pResourceDesc, initialResourceState, pOptimizedClearValue, allocation, riidResource, ppvResource);
     }
 
     public HResult CreateResource3(D3D12MA_ALLOCATION_DESC* pAllocDesc,
-        ResourceDescription1* pResourceDesc,
+        D3D12_RESOURCE_DESC1* pResourceDesc,
         D3D12_BARRIER_LAYOUT initialLayout,
-        ClearValue* pOptimizedClearValue,
+        D3D12_CLEAR_VALUE* pOptimizedClearValue,
         uint numCastableFormats, Format* pCastableFormats,
         D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {

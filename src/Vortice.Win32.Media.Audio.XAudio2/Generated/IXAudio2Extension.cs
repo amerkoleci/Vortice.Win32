@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2Extension"]/*' />
 /// <unmanaged>IXAudio2Extension</unmanaged>

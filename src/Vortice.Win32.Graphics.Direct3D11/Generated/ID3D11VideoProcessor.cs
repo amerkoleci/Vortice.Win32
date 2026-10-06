@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor"]/*' />
 /// <unmanaged>ID3D11VideoProcessor</unmanaged>
@@ -105,26 +105,26 @@ public unsafe partial struct ID3D11VideoProcessor : ID3D11VideoProcessor.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor::GetContentDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetContentDesc(VideoProcessorContentDescription* pDesc)
+	public void GetContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessor*, VideoProcessorContentDescription*, void>)(lpVtbl[7]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessor*, D3D11_VIDEO_PROCESSOR_CONTENT_DESC*, void>)(lpVtbl[7]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor::GetRateConversionCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetRateConversionCaps(VideoProcessorRateConversionCaps* pCaps)
+	public void GetRateConversionCaps(D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS* pCaps)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessor*, VideoProcessorRateConversionCaps*, void>)(lpVtbl[8]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pCaps);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessor*, D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS*, void>)(lpVtbl[8]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pCaps);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		void GetContentDesc(VideoProcessorContentDescription* pDesc);
+		void GetContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pDesc);
 
 		[VtblIndex(8)]
-		void GetRateConversionCaps(VideoProcessorRateConversionCaps* pCaps);
+		void GetRateConversionCaps(D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS* pCaps);
 	}
 }
 

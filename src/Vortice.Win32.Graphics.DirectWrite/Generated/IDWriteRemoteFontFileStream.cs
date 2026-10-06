@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream"]/*' />
 /// <unmanaged>IDWriteRemoteFontFileStream</unmanaged>
@@ -121,17 +121,17 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Locality GetLocality()
+	public DWRITE_LOCALITY GetLocality()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, Locality>)(lpVtbl[9]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, DWRITE_LOCALITY>)(lpVtbl[9]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::BeginDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult BeginDownload(Guid* downloadOperationID, FileFragment* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult)
+	public HResult BeginDownload(Guid* downloadOperationID, DWRITE_FILE_FRAGMENT* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, Guid*, FileFragment*, uint, IDWriteAsyncResult**, int>)(lpVtbl[10]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), downloadOperationID, fileFragments, fragmentCount, asyncResult);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, Guid*, DWRITE_FILE_FRAGMENT*, uint, IDWriteAsyncResult**, int>)(lpVtbl[10]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), downloadOperationID, fileFragments, fragmentCount, asyncResult);
 	}
 
 	public interface Interface : IDWriteFontFileStream.Interface
@@ -143,10 +143,10 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 		HResult GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize);
 
 		[VtblIndex(9)]
-		Locality GetLocality();
+		DWRITE_LOCALITY GetLocality();
 
 		[VtblIndex(10)]
-		HResult BeginDownload(Guid* downloadOperationID, FileFragment* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult);
+		HResult BeginDownload(Guid* downloadOperationID, DWRITE_FILE_FRAGMENT* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult);
 	}
 }
 

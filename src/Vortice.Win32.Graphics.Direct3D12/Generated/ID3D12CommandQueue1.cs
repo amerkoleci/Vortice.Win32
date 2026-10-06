@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1"]/*' />
 /// <unmanaged>ID3D12CommandQueue1</unmanaged>
@@ -113,17 +113,17 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.UpdateTileMappings" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void UpdateTileMappings(ID3D12Resource* pResource, uint NumResourceRegions, TiledResourceCoordinate* pResourceRegionStartCoordinates, TileRegionSize* pResourceRegionSizes, ID3D12Heap* pHeap, uint NumRanges, D3D12_TILE_RANGE_FLAGS* pRangeFlags, uint* pHeapRangeStartOffsets, uint* pRangeTileCounts, D3D12_TILE_MAPPING_FLAGS Flags)
+	public void UpdateTileMappings(ID3D12Resource* pResource, uint NumResourceRegions, D3D12_TILED_RESOURCE_COORDINATE* pResourceRegionStartCoordinates, D3D12_TILE_REGION_SIZE* pResourceRegionSizes, ID3D12Heap* pHeap, uint NumRanges, D3D12_TILE_RANGE_FLAGS* pRangeFlags, uint* pHeapRangeStartOffsets, uint* pRangeTileCounts, D3D12_TILE_MAPPING_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D12Heap*, uint, D3D12_TILE_RANGE_FLAGS*, uint*, uint*, D3D12_TILE_MAPPING_FLAGS, void>)(lpVtbl[8]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pResource, NumResourceRegions, pResourceRegionStartCoordinates, pResourceRegionSizes, pHeap, NumRanges, pRangeFlags, pHeapRangeStartOffsets, pRangeTileCounts, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, uint, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, ID3D12Heap*, uint, D3D12_TILE_RANGE_FLAGS*, uint*, uint*, D3D12_TILE_MAPPING_FLAGS, void>)(lpVtbl[8]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pResource, NumResourceRegions, pResourceRegionStartCoordinates, pResourceRegionSizes, pHeap, NumRanges, pRangeFlags, pHeapRangeStartOffsets, pRangeTileCounts, Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12CommandQueue.CopyTileMappings" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void CopyTileMappings(ID3D12Resource* pDstResource, TiledResourceCoordinate* pDstRegionStartCoordinate, ID3D12Resource* pSrcResource, TiledResourceCoordinate* pSrcRegionStartCoordinate, TileRegionSize* pRegionSize, D3D12_TILE_MAPPING_FLAGS Flags)
+	public void CopyTileMappings(ID3D12Resource* pDstResource, D3D12_TILED_RESOURCE_COORDINATE* pDstRegionStartCoordinate, ID3D12Resource* pSrcResource, D3D12_TILED_RESOURCE_COORDINATE* pSrcRegionStartCoordinate, D3D12_TILE_REGION_SIZE* pRegionSize, D3D12_TILE_MAPPING_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, TiledResourceCoordinate*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, D3D12_TILE_MAPPING_FLAGS, void>)(lpVtbl[9]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pDstResource, pDstRegionStartCoordinate, pSrcResource, pSrcRegionStartCoordinate, pRegionSize, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, D3D12_TILE_MAPPING_FLAGS, void>)(lpVtbl[9]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pDstResource, pDstRegionStartCoordinate, pSrcResource, pSrcRegionStartCoordinate, pRegionSize, Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12CommandQueue.ExecuteCommandLists" />
@@ -193,10 +193,9 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public CommandQueueDescription GetDesc()
+	public D3D12_COMMAND_QUEUE_DESC GetDesc()
 	{
-		CommandQueueDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, CommandQueueDescription*, CommandQueueDescription*>)(lpVtbl[18]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_DESC>)(lpVtbl[18]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::SetProcessPriority"]/*' />

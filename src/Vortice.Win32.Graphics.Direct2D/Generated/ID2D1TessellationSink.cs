@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink"]/*' />
 /// <unmanaged>ID2D1TessellationSink</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::AddTriangles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void AddTriangles(Triangle* triangles, uint trianglesCount)
+	public void AddTriangles(D2D1_TRIANGLE* triangles, uint trianglesCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1TessellationSink*, Triangle*, uint, void>)(lpVtbl[3]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this), triangles, trianglesCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1TessellationSink*, D2D1_TRIANGLE*, uint, void>)(lpVtbl[3]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this), triangles, trianglesCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::Close"]/*' />
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void AddTriangles(Triangle* triangles, uint trianglesCount);
+		void AddTriangles(D2D1_TRIANGLE* triangles, uint trianglesCount);
 
 		[VtblIndex(4)]
 		HResult Close();

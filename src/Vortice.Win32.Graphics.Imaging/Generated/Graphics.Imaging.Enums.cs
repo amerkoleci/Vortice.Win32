@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType"]/*' />
 /// <unmanaged>WICColorContextType</unmanaged>
@@ -263,7 +263,6 @@ public enum WICBitmapTransformOptions
 [Flags]
 public enum WICBitmapLockFlags
 {
-	None = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapLockFlags::WICBitmapLockRead"]/*' />
 	/// <unmanaged>WICBitmapLockRead</unmanaged>
 	Read = 1,

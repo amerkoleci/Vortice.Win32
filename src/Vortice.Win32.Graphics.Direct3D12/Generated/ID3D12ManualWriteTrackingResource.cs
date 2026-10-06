@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ManualWriteTrackingResource"]/*' />
 /// <unmanaged>ID3D12ManualWriteTrackingResource</unmanaged>
@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12ManualWriteTrackingResource : ID3D12ManualWri
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ManualWriteTrackingResource::TrackWrite"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void TrackWrite(uint Subresource, Range* pWrittenRange)
+	public void TrackWrite(uint Subresource, D3D12_RANGE* pWrittenRange)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12ManualWriteTrackingResource*, uint, Range*, void>)(lpVtbl[3]))((ID3D12ManualWriteTrackingResource*)Unsafe.AsPointer(ref this), Subresource, pWrittenRange);
+		((delegate* unmanaged[MemberFunction]<ID3D12ManualWriteTrackingResource*, uint, D3D12_RANGE*, void>)(lpVtbl[3]))((ID3D12ManualWriteTrackingResource*)Unsafe.AsPointer(ref this), Subresource, pWrittenRange);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void TrackWrite(uint Subresource, Range* pWrittenRange);
+		void TrackWrite(uint Subresource, D3D12_RANGE* pWrittenRange);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView"]/*' />
 /// <unmanaged>ID3D11RenderTargetView</unmanaged>
@@ -113,15 +113,15 @@ public unsafe partial struct ID3D11RenderTargetView : ID3D11RenderTargetView.Int
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(RenderTargetViewDescription* pDesc)
+	public void GetDesc(D3D11_RENDER_TARGET_VIEW_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11RenderTargetView*, RenderTargetViewDescription*, void>)(lpVtbl[8]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11RenderTargetView*, D3D11_RENDER_TARGET_VIEW_DESC*, void>)(lpVtbl[8]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc(RenderTargetViewDescription* pDesc);
+		void GetDesc(D3D11_RENDER_TARGET_VIEW_DESC* pDesc);
 	}
 }
 

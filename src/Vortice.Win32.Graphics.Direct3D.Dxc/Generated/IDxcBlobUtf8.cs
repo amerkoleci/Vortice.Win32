@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>IDxcBlobUtf8</unmanaged>
 [Guid("3da636c9-ba71-4024-a301-30cbf125305b")]
@@ -88,9 +88,9 @@ public unsafe partial struct IDxcBlobUtf8 : IDxcBlobUtf8.Interface, INativeGuid
 	/// <inheritdoc cref="IDxcBlobEncoding.GetEncoding" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage)
+	public HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf8*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
+		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf8*, Bool32*, DXC_CP*, int>)(lpVtbl[5]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]

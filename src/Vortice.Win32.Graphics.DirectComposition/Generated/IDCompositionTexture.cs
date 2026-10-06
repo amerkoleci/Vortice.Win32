@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture"]/*' />
 /// <unmanaged>IDCompositionTexture</unmanaged>
@@ -81,17 +81,17 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetColorSpace(Graphics.Dxgi.Common.ColorSpaceType colorSpace)
+	public HResult SetColorSpace(Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE colorSpace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Graphics.Dxgi.Common.ColorSpaceType, int>)(lpVtbl[4]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), colorSpace);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, int>)(lpVtbl[4]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), colorSpace);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetAlphaMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetAlphaMode(Graphics.Dxgi.Common.AlphaMode alphaMode)
+	public HResult SetAlphaMode(Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Graphics.Dxgi.Common.AlphaMode, int>)(lpVtbl[5]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), alphaMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, int>)(lpVtbl[5]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), alphaMode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::GetAvailableFence"]/*' />
@@ -108,10 +108,10 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 		HResult SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect);
 
 		[VtblIndex(4)]
-		HResult SetColorSpace(Graphics.Dxgi.Common.ColorSpaceType colorSpace);
+		HResult SetColorSpace(Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE colorSpace);
 
 		[VtblIndex(5)]
-		HResult SetAlphaMode(Graphics.Dxgi.Common.AlphaMode alphaMode);
+		HResult SetAlphaMode(Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode);
 
 		[VtblIndex(6)]
 		HResult GetAvailableFence(ulong* fenceValue, Guid* iid, void** availableFence);

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Effect"]/*' />
 /// <unmanaged>ID2D1Effect</unmanaged>
@@ -97,9 +97,9 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Properties.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public PropertyType GetType(uint index)
+	public D2D1_PROPERTY_TYPE GetType(uint index)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, D2D1_PROPERTY_TYPE>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyIndex" />
@@ -113,33 +113,33 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Properties.SetValueByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetValueByName(char* name, PropertyType type, byte* data, uint dataSize)
+	public HResult SetValueByName(char* name, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.SetValue" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize)
+	public HResult SetValue(uint index, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[9]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValueByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetValueByName(char* name, PropertyType type, byte* data, uint dataSize)
+	public HResult GetValueByName(char* name, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValue" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize)
+	public HResult GetValue(uint index, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[11]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValueSize" />

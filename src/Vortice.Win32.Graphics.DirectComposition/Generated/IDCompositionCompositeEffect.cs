@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionCompositeEffect"]/*' />
 /// <unmanaged>IDCompositionCompositeEffect</unmanaged>
@@ -81,15 +81,15 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionCompositeEffect::SetMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetMode(Graphics.Direct2D.Common.CompositeMode mode)
+	public HResult SetMode(Graphics.Direct2D.Common.D2D1_COMPOSITE_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, Graphics.Direct2D.Common.CompositeMode, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, Graphics.Direct2D.Common.D2D1_COMPOSITE_MODE, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetMode(Graphics.Direct2D.Common.CompositeMode mode);
+		HResult SetMode(Graphics.Direct2D.Common.D2D1_COMPOSITE_MODE mode);
 	}
 }
 

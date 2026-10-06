@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession"]/*' />
 /// <unmanaged>ID3D12ProtectedResourceSession</unmanaged>
@@ -129,16 +129,15 @@ public unsafe partial struct ID3D12ProtectedResourceSession : ID3D12ProtectedRes
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public ProtectedResourceSessionDescription GetDesc()
+	public D3D12_PROTECTED_RESOURCE_SESSION_DESC GetDesc()
 	{
-		ProtectedResourceSessionDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession*, ProtectedResourceSessionDescription*, ProtectedResourceSessionDescription*>)(lpVtbl[10]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession*, D3D12_PROTECTED_RESOURCE_SESSION_DESC>)(lpVtbl[10]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12ProtectedSession.Interface
 	{
 		[VtblIndex(10)]
-		ProtectedResourceSessionDescription GetDesc();
+		D3D12_PROTECTED_RESOURCE_SESSION_DESC GetDesc();
 	}
 }
 

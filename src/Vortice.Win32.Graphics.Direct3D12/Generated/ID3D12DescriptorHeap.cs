@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap"]/*' />
 /// <unmanaged>ID3D12DescriptorHeap</unmanaged>
@@ -113,40 +113,37 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public DescriptorHeapDescription GetDesc()
+	public D3D12_DESCRIPTOR_HEAP_DESC GetDesc()
 	{
-		DescriptorHeapDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, DescriptorHeapDescription*, DescriptorHeapDescription*>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, D3D12_DESCRIPTOR_HEAP_DESC>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart()
+	public D3D12_CPU_DESCRIPTOR_HANDLE GetCPUDescriptorHandleForHeapStart()
 	{
-		CpuDescriptorHandle result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, CpuDescriptorHandle*, CpuDescriptorHandle*>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, D3D12_CPU_DESCRIPTOR_HANDLE>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetGPUDescriptorHandleForHeapStart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart()
+	public D3D12_GPU_DESCRIPTOR_HANDLE GetGPUDescriptorHandleForHeapStart()
 	{
-		GpuDescriptorHandle result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, GpuDescriptorHandle*, GpuDescriptorHandle*>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, D3D12_GPU_DESCRIPTOR_HANDLE>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]
-		DescriptorHeapDescription GetDesc();
+		D3D12_DESCRIPTOR_HEAP_DESC GetDesc();
 
 		[VtblIndex(9)]
-		CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart();
+		D3D12_CPU_DESCRIPTOR_HANDLE GetCPUDescriptorHandleForHeapStart();
 
 		[VtblIndex(10)]
-		GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart();
+		D3D12_GPU_DESCRIPTOR_HANDLE GetGPUDescriptorHandleForHeapStart();
 	}
 }
 

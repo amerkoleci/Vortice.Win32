@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo"]/*' />
 /// <unmanaged>ID2D1RenderInfo</unmanaged>
@@ -73,17 +73,17 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInputDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInputDescription(uint inputIndex, InputDescription inputDescription)
+	public HResult SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, uint, InputDescription, int>)(lpVtbl[3]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, uint, D2D1_INPUT_DESCRIPTION, int>)(lpVtbl[3]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetOutputBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
+	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetCached"]/*' />
@@ -105,10 +105,10 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetInputDescription(uint inputIndex, InputDescription inputDescription);
+		HResult SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription);
 
 		[VtblIndex(4)]
-		HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth);
+		HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth);
 
 		[VtblIndex(5)]
 		void SetCached(Bool32 isCached);

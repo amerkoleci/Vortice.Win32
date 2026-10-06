@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView"]/*' />
 /// <unmanaged>ID3D11VideoProcessorInputView</unmanaged>
@@ -113,15 +113,15 @@ public unsafe partial struct ID3D11VideoProcessorInputView : ID3D11VideoProcesso
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(VideoProcessorInputViewDescription* pDesc)
+	public void GetDesc(D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorInputView*, VideoProcessorInputViewDescription*, void>)(lpVtbl[8]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorInputView*, D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC*, void>)(lpVtbl[8]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc(VideoProcessorInputViewDescription* pDesc);
+		void GetDesc(D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC* pDesc);
 	}
 }
 

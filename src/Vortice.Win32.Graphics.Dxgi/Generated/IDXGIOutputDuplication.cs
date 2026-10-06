@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication"]/*' />
 /// <unmanaged>IDXGIOutputDuplication</unmanaged>
@@ -105,17 +105,17 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDesc(OutduplDescription* pDesc)
+	public void GetDesc(DXGI_OUTDUPL_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, OutduplDescription*, void>)(lpVtbl[7]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, DXGI_OUTDUPL_DESC*, void>)(lpVtbl[7]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::AcquireNextFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult AcquireNextFrame(uint TimeoutInMilliseconds, OutduplFrameInfo* pFrameInfo, IDXGIResource** ppDesktopResource)
+	public HResult AcquireNextFrame(uint TimeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* pFrameInfo, IDXGIResource** ppDesktopResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, OutduplFrameInfo*, IDXGIResource**, int>)(lpVtbl[8]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), TimeoutInMilliseconds, pFrameInfo, ppDesktopResource);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, DXGI_OUTDUPL_FRAME_INFO*, IDXGIResource**, int>)(lpVtbl[8]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), TimeoutInMilliseconds, pFrameInfo, ppDesktopResource);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameDirtyRects"]/*' />
@@ -129,25 +129,25 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameMoveRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFrameMoveRects(uint MoveRectsBufferSize, OutduplMoveRect* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired)
+	public HResult GetFrameMoveRects(uint MoveRectsBufferSize, DXGI_OUTDUPL_MOVE_RECT* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, OutduplMoveRect*, uint*, int>)(lpVtbl[10]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), MoveRectsBufferSize, pMoveRectBuffer, pMoveRectsBufferSizeRequired);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, DXGI_OUTDUPL_MOVE_RECT*, uint*, int>)(lpVtbl[10]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), MoveRectsBufferSize, pMoveRectBuffer, pMoveRectsBufferSizeRequired);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFramePointerShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, OutduplPointerShapeInfo* pPointerShapeInfo)
+	public HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, DXGI_OUTDUPL_POINTER_SHAPE_INFO* pPointerShapeInfo)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, void*, uint*, OutduplPointerShapeInfo*, int>)(lpVtbl[11]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), PointerShapeBufferSize, pPointerShapeBuffer, pPointerShapeBufferSizeRequired, pPointerShapeInfo);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, void*, uint*, DXGI_OUTDUPL_POINTER_SHAPE_INFO*, int>)(lpVtbl[11]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), PointerShapeBufferSize, pPointerShapeBuffer, pPointerShapeBufferSizeRequired, pPointerShapeInfo);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::MapDesktopSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult MapDesktopSurface(MappedRect* pLockedRect)
+	public HResult MapDesktopSurface(DXGI_MAPPED_RECT* pLockedRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, MappedRect*, int>)(lpVtbl[12]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pLockedRect);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, DXGI_MAPPED_RECT*, int>)(lpVtbl[12]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pLockedRect);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::UnMapDesktopSurface"]/*' />
@@ -169,22 +169,22 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	public interface Interface : IDXGIObject.Interface
 	{
 		[VtblIndex(7)]
-		void GetDesc(OutduplDescription* pDesc);
+		void GetDesc(DXGI_OUTDUPL_DESC* pDesc);
 
 		[VtblIndex(8)]
-		HResult AcquireNextFrame(uint TimeoutInMilliseconds, OutduplFrameInfo* pFrameInfo, IDXGIResource** ppDesktopResource);
+		HResult AcquireNextFrame(uint TimeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* pFrameInfo, IDXGIResource** ppDesktopResource);
 
 		[VtblIndex(9)]
 		HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired);
 
 		[VtblIndex(10)]
-		HResult GetFrameMoveRects(uint MoveRectsBufferSize, OutduplMoveRect* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired);
+		HResult GetFrameMoveRects(uint MoveRectsBufferSize, DXGI_OUTDUPL_MOVE_RECT* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired);
 
 		[VtblIndex(11)]
-		HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, OutduplPointerShapeInfo* pPointerShapeInfo);
+		HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, DXGI_OUTDUPL_POINTER_SHAPE_INFO* pPointerShapeInfo);
 
 		[VtblIndex(12)]
-		HResult MapDesktopSurface(MappedRect* pLockedRect);
+		HResult MapDesktopSurface(DXGI_MAPPED_RECT* pLockedRect);
 
 		[VtblIndex(13)]
 		HResult UnMapDesktopSurface();

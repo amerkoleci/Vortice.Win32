@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1"]/*' />
 /// <unmanaged>ID2D1ColorContext1</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 	/// <inheritdoc cref="ID2D1ColorContext.GetColorSpace" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ColorSpace GetColorSpace()
+	public D2D1_COLOR_SPACE GetColorSpace()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, ColorSpace>)(lpVtbl[4]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, D2D1_COLOR_SPACE>)(lpVtbl[4]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1ColorContext.GetProfileSize" />
@@ -105,37 +105,37 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1::GetColorContextType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public ColorContextType GetColorContextType()
+	public D2D1_COLOR_CONTEXT_TYPE GetColorContextType()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, ColorContextType>)(lpVtbl[7]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, D2D1_COLOR_CONTEXT_TYPE>)(lpVtbl[7]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1::GetDXGIColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Dxgi.Common.ColorSpaceType GetDXGIColorSpace()
+	public Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE GetDXGIColorSpace()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, Graphics.Dxgi.Common.ColorSpaceType>)(lpVtbl[8]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE>)(lpVtbl[8]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1::GetSimpleColorProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSimpleColorProfile(SimpleColorProfile* simpleProfile)
+	public HResult GetSimpleColorProfile(D2D1_SIMPLE_COLOR_PROFILE* simpleProfile)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, SimpleColorProfile*, int>)(lpVtbl[9]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), simpleProfile);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, D2D1_SIMPLE_COLOR_PROFILE*, int>)(lpVtbl[9]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), simpleProfile);
 	}
 
 	public interface Interface : ID2D1ColorContext.Interface
 	{
 		[VtblIndex(7)]
-		ColorContextType GetColorContextType();
+		D2D1_COLOR_CONTEXT_TYPE GetColorContextType();
 
 		[VtblIndex(8)]
-		Graphics.Dxgi.Common.ColorSpaceType GetDXGIColorSpace();
+		Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE GetDXGIColorSpace();
 
 		[VtblIndex(9)]
-		HResult GetSimpleColorProfile(SimpleColorProfile* simpleProfile);
+		HResult GetSimpleColorProfile(D2D1_SIMPLE_COLOR_PROFILE* simpleProfile);
 	}
 }
 

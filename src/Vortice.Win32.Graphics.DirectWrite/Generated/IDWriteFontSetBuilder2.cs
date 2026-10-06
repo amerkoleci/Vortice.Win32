@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2"]/*' />
 /// <unmanaged>IDWriteFontSetBuilder2</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontFaceReference" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, FontProperty* properties, uint propertyCount)
+	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFaceReference*, FontProperty*, uint, int>)(lpVtbl[3]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFaceReference, properties, propertyCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFaceReference*, DWRITE_FONT_PROPERTY*, uint, int>)(lpVtbl[3]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFaceReference, properties, propertyCount);
 	}
 
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontFaceReference" />
@@ -113,9 +113,9 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, FontProperty* properties, uint propertyCount)
+	public HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFile*, uint, FontSimulations, FontAxisValue*, uint, FontAxisRange*, uint, FontProperty*, uint, int>)(lpVtbl[8]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFile, fontFaceIndex, fontSimulations, fontAxisValues, fontAxisValueCount, fontAxisRanges, fontAxisRangeCount, properties, propertyCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFile*, uint, DWRITE_FONT_SIMULATIONS, DWRITE_FONT_AXIS_VALUE*, uint, DWRITE_FONT_AXIS_RANGE*, uint, DWRITE_FONT_PROPERTY*, uint, int>)(lpVtbl[8]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFile, fontFaceIndex, fontSimulations, fontAxisValues, fontAxisValueCount, fontAxisRanges, fontAxisRangeCount, properties, propertyCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFontFile"]/*' />
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	public interface Interface : IDWriteFontSetBuilder1.Interface
 	{
 		[VtblIndex(8)]
-		HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, FontProperty* properties, uint propertyCount);
+		HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount, DWRITE_FONT_PROPERTY* properties, uint propertyCount);
 
 		[VtblIndex(9)]
 		HResult AddFontFile(char* filePath);

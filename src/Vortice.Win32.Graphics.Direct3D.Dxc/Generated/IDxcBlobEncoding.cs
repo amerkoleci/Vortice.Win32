@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>IDxcBlobEncoding</unmanaged>
 [Guid("7241d424-2646-4191-97c0-98e96e42fc68")]
@@ -87,15 +87,15 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage)
+	public HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcBlobEncoding*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
+		return ((delegate* unmanaged[MemberFunction]<IDxcBlobEncoding*, Bool32*, DXC_CP*, int>)(lpVtbl[5]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
 
 	public interface Interface : IDxcBlob.Interface
 	{
 		[VtblIndex(5)]
-		HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage);
+		HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage);
 	}
 }
 

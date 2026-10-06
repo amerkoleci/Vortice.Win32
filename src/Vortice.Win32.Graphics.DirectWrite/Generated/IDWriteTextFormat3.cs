@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3"]/*' />
 /// <unmanaged>IDWriteTextFormat3</unmanaged>
@@ -73,41 +73,41 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat.SetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetTextAlignment(TextAlignment textAlignment)
+	public HResult SetTextAlignment(DWRITE_TEXT_ALIGNMENT textAlignment)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, TextAlignment, int>)(lpVtbl[3]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), textAlignment);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_TEXT_ALIGNMENT, int>)(lpVtbl[3]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), textAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetParagraphAlignment(ParagraphAlignment paragraphAlignment)
+	public HResult SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, ParagraphAlignment, int>)(lpVtbl[4]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), paragraphAlignment);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_PARAGRAPH_ALIGNMENT, int>)(lpVtbl[4]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), paragraphAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetWordWrapping(WordWrapping wordWrapping)
+	public HResult SetWordWrapping(DWRITE_WORD_WRAPPING wordWrapping)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, WordWrapping, int>)(lpVtbl[5]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), wordWrapping);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_WORD_WRAPPING, int>)(lpVtbl[5]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), wordWrapping);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetReadingDirection(ReadingDirection readingDirection)
+	public HResult SetReadingDirection(DWRITE_READING_DIRECTION readingDirection)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, ReadingDirection, int>)(lpVtbl[6]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), readingDirection);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_READING_DIRECTION, int>)(lpVtbl[6]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), readingDirection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetFlowDirection(FlowDirection flowDirection)
+	public HResult SetFlowDirection(DWRITE_FLOW_DIRECTION flowDirection)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FlowDirection, int>)(lpVtbl[7]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), flowDirection);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FLOW_DIRECTION, int>)(lpVtbl[7]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), flowDirection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetIncrementalTabStop" />
@@ -121,57 +121,57 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat.SetTrimming" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetTrimming(Trimming* trimmingOptions, IDWriteInlineObject* trimmingSign)
+	public HResult SetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject* trimmingSign)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, Trimming*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_TRIMMING*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetLineSpacing" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetLineSpacing(LineSpacingMethod lineSpacingMethod, float lineSpacing, float baseline)
+	public HResult SetLineSpacing(DWRITE_LINE_SPACING_METHOD lineSpacingMethod, float lineSpacing, float baseline)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, LineSpacingMethod, float, float, int>)(lpVtbl[10]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_LINE_SPACING_METHOD, float, float, int>)(lpVtbl[10]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public TextAlignment GetTextAlignment()
+	public DWRITE_TEXT_ALIGNMENT GetTextAlignment()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, TextAlignment>)(lpVtbl[11]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_TEXT_ALIGNMENT>)(lpVtbl[11]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public ParagraphAlignment GetParagraphAlignment()
+	public DWRITE_PARAGRAPH_ALIGNMENT GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_PARAGRAPH_ALIGNMENT>)(lpVtbl[12]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public WordWrapping GetWordWrapping()
+	public DWRITE_WORD_WRAPPING GetWordWrapping()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, WordWrapping>)(lpVtbl[13]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_WORD_WRAPPING>)(lpVtbl[13]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public ReadingDirection GetReadingDirection()
+	public DWRITE_READING_DIRECTION GetReadingDirection()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_READING_DIRECTION>)(lpVtbl[14]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public FlowDirection GetFlowDirection()
+	public DWRITE_FLOW_DIRECTION GetFlowDirection()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FlowDirection>)(lpVtbl[15]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FLOW_DIRECTION>)(lpVtbl[15]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -185,17 +185,17 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat.GetTrimming" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetTrimming(Trimming* trimmingOptions, IDWriteInlineObject** trimmingSign)
+	public HResult GetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject** trimmingSign)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, Trimming*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_TRIMMING*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetLineSpacing" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetLineSpacing(LineSpacingMethod* lineSpacingMethod, float* lineSpacing, float* baseline)
+	public HResult GetLineSpacing(DWRITE_LINE_SPACING_METHOD* lineSpacingMethod, float* lineSpacing, float* baseline)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, LineSpacingMethod*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_LINE_SPACING_METHOD*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontCollection" />
@@ -225,25 +225,25 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public FontWeight GetFontWeight()
+	public DWRITE_FONT_WEIGHT GetFontWeight()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FontWeight>)(lpVtbl[22]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FONT_WEIGHT>)(lpVtbl[22]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public FontStyle GetFontStyle()
+	public DWRITE_FONT_STYLE GetFontStyle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FontStyle>)(lpVtbl[23]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FONT_STYLE>)(lpVtbl[23]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public FontStretch GetFontStretch()
+	public DWRITE_FONT_STRETCH GetFontStretch()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FontStretch>)(lpVtbl[24]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FONT_STRETCH>)(lpVtbl[24]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -273,17 +273,17 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetVerticalGlyphOrientation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult SetVerticalGlyphOrientation(VerticalGlyphOrientation glyphOrientation)
+	public HResult SetVerticalGlyphOrientation(DWRITE_VERTICAL_GLYPH_ORIENTATION glyphOrientation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, VerticalGlyphOrientation, int>)(lpVtbl[28]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), glyphOrientation);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_VERTICAL_GLYPH_ORIENTATION, int>)(lpVtbl[28]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), glyphOrientation);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.GetVerticalGlyphOrientation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public DWRITE_VERTICAL_GLYPH_ORIENTATION GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, VerticalGlyphOrientation>)(lpVtbl[29]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_VERTICAL_GLYPH_ORIENTATION>)(lpVtbl[29]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetLastLineWrapping" />
@@ -305,17 +305,17 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetOpticalAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetOpticalAlignment(OpticalAlignment opticalAlignment)
+	public HResult SetOpticalAlignment(DWRITE_OPTICAL_ALIGNMENT opticalAlignment)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, OpticalAlignment, int>)(lpVtbl[32]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), opticalAlignment);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_OPTICAL_ALIGNMENT, int>)(lpVtbl[32]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), opticalAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.GetOpticalAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public OpticalAlignment GetOpticalAlignment()
+	public DWRITE_OPTICAL_ALIGNMENT GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, OpticalAlignment>)(lpVtbl[33]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_OPTICAL_ALIGNMENT>)(lpVtbl[33]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetFontFallback" />
@@ -337,25 +337,25 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat2.SetLineSpacing" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult SetLineSpacing(LineSpacing* lineSpacingOptions)
+	public HResult SetLineSpacing(DWRITE_LINE_SPACING* lineSpacingOptions)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, LineSpacing*, int>)(lpVtbl[36]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_LINE_SPACING*, int>)(lpVtbl[36]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat2.GetLineSpacing" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult GetLineSpacing(LineSpacing* lineSpacingOptions)
+	public HResult GetLineSpacing(DWRITE_LINE_SPACING* lineSpacingOptions)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, LineSpacing*, int>)(lpVtbl[37]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_LINE_SPACING*, int>)(lpVtbl[37]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
+	public HResult SetFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FontAxisValue*, uint, int>)(lpVtbl[38]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FONT_AXIS_VALUE*, uint, int>)(lpVtbl[38]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetFontAxisValueCount"]/*' />
@@ -369,43 +369,43 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
+	public HResult GetFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, FontAxisValue*, uint, int>)(lpVtbl[40]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_FONT_AXIS_VALUE*, uint, int>)(lpVtbl[40]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public AutomaticFontAxes GetAutomaticFontAxes()
+	public DWRITE_AUTOMATIC_FONT_AXES GetAutomaticFontAxes()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, AutomaticFontAxes>)(lpVtbl[41]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_AUTOMATIC_FONT_AXES>)(lpVtbl[41]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes)
+	public HResult SetAutomaticFontAxes(DWRITE_AUTOMATIC_FONT_AXES automaticFontAxes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, AutomaticFontAxes, int>)(lpVtbl[42]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), automaticFontAxes);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, DWRITE_AUTOMATIC_FONT_AXES, int>)(lpVtbl[42]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), automaticFontAxes);
 	}
 
 	public interface Interface : IDWriteTextFormat2.Interface
 	{
 		[VtblIndex(38)]
-		HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount);
+		HResult SetFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount);
 
 		[VtblIndex(39)]
 		uint GetFontAxisValueCount();
 
 		[VtblIndex(40)]
-		HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount);
+		HResult GetFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount);
 
 		[VtblIndex(41)]
-		AutomaticFontAxes GetAutomaticFontAxes();
+		DWRITE_AUTOMATIC_FONT_AXES GetAutomaticFontAxes();
 
 		[VtblIndex(42)]
-		HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes);
+		HResult SetAutomaticFontAxes(DWRITE_AUTOMATIC_FONT_AXES automaticFontAxes);
 	}
 }
 

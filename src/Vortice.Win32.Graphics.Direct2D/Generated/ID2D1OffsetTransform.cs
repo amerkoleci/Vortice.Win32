@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform"]/*' />
 /// <unmanaged>ID2D1OffsetTransform</unmanaged>
@@ -91,8 +91,7 @@ public unsafe partial struct ID2D1OffsetTransform : ID2D1OffsetTransform.Interfa
 	[VtblIndex(5)]
 	public System.Drawing.Point GetOffset()
 	{
-		System.Drawing.Point result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1OffsetTransform*, System.Drawing.Point*, System.Drawing.Point*>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1OffsetTransform*, System.Drawing.Point>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1TransformNode.Interface

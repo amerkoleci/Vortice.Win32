@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget2"]/*' />
 /// <unmanaged>IDWriteBitmapRenderTarget2</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteBitmapRenderTarget2 : IDWriteBitmapRenderTar
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
+	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, float, float, MeasuringMode, GlyphRun*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, float, float, DWRITE_MEASURING_MODE, DWRITE_GLYPH_RUN*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.GetMemoryDC" />
@@ -137,31 +137,31 @@ public unsafe partial struct IDWriteBitmapRenderTarget2 : IDWriteBitmapRenderTar
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget1.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public TextAntialiasMode GetTextAntialiasMode()
+	public DWRITE_TEXT_ANTIALIAS_MODE GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, TextAntialiasMode>)(lpVtbl[11]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, DWRITE_TEXT_ANTIALIAS_MODE>)(lpVtbl[11]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget1.SetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode)
+	public HResult SetTextAntialiasMode(DWRITE_TEXT_ANTIALIAS_MODE antialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, TextAntialiasMode, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this), antialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, DWRITE_TEXT_ANTIALIAS_MODE, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this), antialiasMode);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget2::GetBitmapData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetBitmapData(BitmapDataBgra32* bitmapData)
+	public HResult GetBitmapData(DWRITE_BITMAP_DATA_BGRA32* bitmapData)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, BitmapDataBgra32*, int>)(lpVtbl[13]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this), bitmapData);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget2*, DWRITE_BITMAP_DATA_BGRA32*, int>)(lpVtbl[13]))((IDWriteBitmapRenderTarget2*)Unsafe.AsPointer(ref this), bitmapData);
 	}
 
 	public interface Interface : IDWriteBitmapRenderTarget1.Interface
 	{
 		[VtblIndex(13)]
-		HResult GetBitmapData(BitmapDataBgra32* bitmapData);
+		HResult GetBitmapData(DWRITE_BITMAP_DATA_BGRA32* bitmapData);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
 /// <unmanaged>IDXGIDisplayControl</unmanaged>

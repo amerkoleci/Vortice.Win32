@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance"]/*' />
 /// <unmanaged>ID3D11ClassInstance</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct ID3D11ClassInstance : ID3D11ClassInstance.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(ClassInstanceDescription* pDesc)
+	public void GetDesc(D3D11_CLASS_INSTANCE_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11ClassInstance*, ClassInstanceDescription*, void>)(lpVtbl[8]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11ClassInstance*, D3D11_CLASS_INSTANCE_DESC*, void>)(lpVtbl[8]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetInstanceName"]/*' />
@@ -140,7 +140,7 @@ public unsafe partial struct ID3D11ClassInstance : ID3D11ClassInstance.Interface
 		void GetClassLinkage(ID3D11ClassLinkage** ppLinkage);
 
 		[VtblIndex(8)]
-		void GetDesc(ClassInstanceDescription* pDesc);
+		void GetDesc(D3D11_CLASS_INSTANCE_DESC* pDesc);
 
 		[VtblIndex(9)]
 		void GetInstanceName(byte* pInstanceName, nuint* pBufferLength);

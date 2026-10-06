@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList2"]/*' />
 /// <unmanaged>IDWriteFontList2</unmanaged>
@@ -97,9 +97,9 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <inheritdoc cref="IDWriteFontList1.GetFontLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Locality GetFontLocality(uint listIndex)
+	public DWRITE_LOCALITY GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, uint, Locality>)(lpVtbl[6]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, uint, DWRITE_LOCALITY>)(lpVtbl[6]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <inheritdoc cref="IDWriteFontList1.GetFont" />

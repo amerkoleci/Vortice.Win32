@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
-public static partial class Apis
+public static partial class DXC
 {
 	public static ref readonly Guid CLSID_DxcUtils
 	{
@@ -341,35 +341,35 @@ public static partial class Apis
 		}
 	}
 
-	public const DxcCp DXC_CP_ACP = DxcCp.Acp;
-	public const DxcCp DXC_CP_UTF16 = DxcCp.Utf16;
-	public const DxcCp DXC_CP_UTF8 = DxcCp.Utf8;
-	public const DxcCp DXC_CP_UTF32 = DxcCp.Utf32;
-	public const DxcCp DXC_CP_WIDE = DxcCp.Wide;
-	public const DxcOutKind DXC_OUT_NONE = DxcOutKind.None;
-	public const DxcOutKind DXC_OUT_OBJECT = DxcOutKind.Object;
-	public const DxcOutKind DXC_OUT_ERRORS = DxcOutKind.Errors;
-	public const DxcOutKind DXC_OUT_PDB = DxcOutKind.Pdb;
-	public const DxcOutKind DXC_OUT_SHADER_HASH = DxcOutKind.ShaderHash;
-	public const DxcOutKind DXC_OUT_DISASSEMBLY = DxcOutKind.Disassembly;
-	public const DxcOutKind DXC_OUT_HLSL = DxcOutKind.Hlsl;
-	public const DxcOutKind DXC_OUT_TEXT = DxcOutKind.Text;
-	public const DxcOutKind DXC_OUT_REFLECTION = DxcOutKind.Reflection;
-	public const DxcOutKind DXC_OUT_ROOT_SIGNATURE = DxcOutKind.RootSignature;
-	public const DxcOutKind DXC_OUT_EXTRA_OUTPUTS = DxcOutKind.ExtraOutputs;
-	public const DxcOutKind DXC_OUT_REMARKS = DxcOutKind.Remarks;
-	public const DxcOutKind DXC_OUT_TIME_REPORT = DxcOutKind.TimeReport;
-	public const DxcOutKind DXC_OUT_TIME_TRACE = DxcOutKind.TimeTrace;
-	public const DxcOutKind DXC_OUT_LAST = DxcOutKind.Last;
-	public const DxcOutKind DXC_OUT_NUM_ENUMS = DxcOutKind.NumEnums;
-	public const DxcHashFlags DXC_HASHFLAG_INCLUDES_SOURCE = DxcHashFlags.IncludesSource;
-	public const DxcValidatorFlags DxcValidatorFlags_Default = DxcValidatorFlags.Default;
-	public const DxcValidatorFlags DxcValidatorFlags_InPlaceEdit = DxcValidatorFlags.InPlaceEdit;
-	public const DxcValidatorFlags DxcValidatorFlags_RootSignatureOnly = DxcValidatorFlags.RootSignatureOnly;
-	public const DxcValidatorFlags DxcValidatorFlags_ModuleOnly = DxcValidatorFlags.ModuleOnly;
-	public const DxcValidatorFlags DxcValidatorFlags_ValidMask = DxcValidatorFlags.ValidMask;
-	public const DxcVersionInfoFlags DxcVersionInfoFlags_None = DxcVersionInfoFlags.None;
-	public const DxcVersionInfoFlags DxcVersionInfoFlags_Debug = DxcVersionInfoFlags.Debug;
-	public const DxcVersionInfoFlags DxcVersionInfoFlags_Internal = DxcVersionInfoFlags.Internal;
+	public const DXC_CP DXC_CP_ACP = DXC_CP.DXC_CP_ACP;
+	public const DXC_CP DXC_CP_UTF16 = DXC_CP.DXC_CP_UTF16;
+	public const DXC_CP DXC_CP_UTF8 = DXC_CP.DXC_CP_UTF8;
+	public const DXC_CP DXC_CP_UTF32 = DXC_CP.DXC_CP_UTF32;
+	public const DXC_CP DXC_CP_WIDE = DXC_CP.DXC_CP_WIDE;
+	public const DXC_OUT_KIND DXC_OUT_NONE = DXC_OUT_KIND.DXC_OUT_NONE;
+	public const DXC_OUT_KIND DXC_OUT_OBJECT = DXC_OUT_KIND.DXC_OUT_OBJECT;
+	public const DXC_OUT_KIND DXC_OUT_ERRORS = DXC_OUT_KIND.DXC_OUT_ERRORS;
+	public const DXC_OUT_KIND DXC_OUT_PDB = DXC_OUT_KIND.DXC_OUT_PDB;
+	public const DXC_OUT_KIND DXC_OUT_SHADER_HASH = DXC_OUT_KIND.DXC_OUT_SHADER_HASH;
+	public const DXC_OUT_KIND DXC_OUT_DISASSEMBLY = DXC_OUT_KIND.DXC_OUT_DISASSEMBLY;
+	public const DXC_OUT_KIND DXC_OUT_HLSL = DXC_OUT_KIND.DXC_OUT_HLSL;
+	public const DXC_OUT_KIND DXC_OUT_TEXT = DXC_OUT_KIND.DXC_OUT_TEXT;
+	public const DXC_OUT_KIND DXC_OUT_REFLECTION = DXC_OUT_KIND.DXC_OUT_REFLECTION;
+	public const DXC_OUT_KIND DXC_OUT_ROOT_SIGNATURE = DXC_OUT_KIND.DXC_OUT_ROOT_SIGNATURE;
+	public const DXC_OUT_KIND DXC_OUT_EXTRA_OUTPUTS = DXC_OUT_KIND.DXC_OUT_EXTRA_OUTPUTS;
+	public const DXC_OUT_KIND DXC_OUT_REMARKS = DXC_OUT_KIND.DXC_OUT_REMARKS;
+	public const DXC_OUT_KIND DXC_OUT_TIME_REPORT = DXC_OUT_KIND.DXC_OUT_TIME_REPORT;
+	public const DXC_OUT_KIND DXC_OUT_TIME_TRACE = DXC_OUT_KIND.DXC_OUT_TIME_TRACE;
+	public const DXC_OUT_KIND DXC_OUT_LAST = DXC_OUT_KIND.DXC_OUT_LAST;
+	public const DXC_OUT_KIND DXC_OUT_NUM_ENUMS = DXC_OUT_KIND.DXC_OUT_NUM_ENUMS;
+	public const DXC_HASHFLAG DXC_HASHFLAG_INCLUDES_SOURCE = DXC_HASHFLAG.DXC_HASHFLAG_INCLUDES_SOURCE;
+	public const DxcValidatorFlags DxcValidatorFlags_Default = DxcValidatorFlags.DxcValidatorFlags_Default;
+	public const DxcValidatorFlags DxcValidatorFlags_InPlaceEdit = DxcValidatorFlags.DxcValidatorFlags_InPlaceEdit;
+	public const DxcValidatorFlags DxcValidatorFlags_RootSignatureOnly = DxcValidatorFlags.DxcValidatorFlags_RootSignatureOnly;
+	public const DxcValidatorFlags DxcValidatorFlags_ModuleOnly = DxcValidatorFlags.DxcValidatorFlags_ModuleOnly;
+	public const DxcValidatorFlags DxcValidatorFlags_ValidMask = DxcValidatorFlags.DxcValidatorFlags_ValidMask;
+	public const DxcVersionInfoFlags DxcVersionInfoFlags_None = DxcVersionInfoFlags.DxcVersionInfoFlags_None;
+	public const DxcVersionInfoFlags DxcVersionInfoFlags_Debug = DxcVersionInfoFlags.DxcVersionInfoFlags_Debug;
+	public const DxcVersionInfoFlags DxcVersionInfoFlags_Internal = DxcVersionInfoFlags.DxcVersionInfoFlags_Internal;
 }
 

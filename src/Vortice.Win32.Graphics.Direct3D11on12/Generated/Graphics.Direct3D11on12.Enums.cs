@@ -7,5 +7,5 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32;
+namespace Vortice.Win32.Graphics;
 

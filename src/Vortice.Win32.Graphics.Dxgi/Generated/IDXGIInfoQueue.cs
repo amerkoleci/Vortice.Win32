@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue"]/*' />
 /// <unmanaged>IDXGIInfoQueue</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMessage(Guid Producer, ulong MessageIndex, InfoQueueMessage* pMessage, nuint* pMessageByteLength)
+	public HResult GetMessage(Guid Producer, ulong MessageIndex, DXGI_INFO_QUEUE_MESSAGE* pMessage, nuint* pMessageByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, ulong, InfoQueueMessage*, nuint*, int>)(lpVtbl[5]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, MessageIndex, pMessage, pMessageByteLength);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, ulong, DXGI_INFO_QUEUE_MESSAGE*, nuint*, int>)(lpVtbl[5]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, MessageIndex, pMessage, pMessageByteLength);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessagesAllowedByRetrievalFilters"]/*' />
@@ -145,17 +145,17 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddStorageFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult AddStorageFilterEntries(Guid Producer, InfoQueueFilter* pFilter)
+	public HResult AddStorageFilterEntries(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[12]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_FILTER*, int>)(lpVtbl[12]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetStorageFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	public HResult GetStorageFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[13]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStorageFilter"]/*' />
@@ -193,9 +193,9 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult PushStorageFilter(Guid Producer, InfoQueueFilter* pFilter)
+	public HResult PushStorageFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[18]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_FILTER*, int>)(lpVtbl[18]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PopStorageFilter"]/*' />
@@ -217,17 +217,17 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddRetrievalFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult AddRetrievalFilterEntries(Guid Producer, InfoQueueFilter* pFilter)
+	public HResult AddRetrievalFilterEntries(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[21]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_FILTER*, int>)(lpVtbl[21]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult GetRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	public HResult GetRetrievalFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, nuint*, int>)(lpVtbl[22]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[22]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::ClearRetrievalFilter"]/*' />
@@ -265,9 +265,9 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult PushRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter)
+	public HResult PushRetrievalFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[27]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_FILTER*, int>)(lpVtbl[27]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PopRetrievalFilter"]/*' />
@@ -289,33 +289,33 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, byte* pDescription)
+	public HResult AddMessage(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_CATEGORY Category, DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity, int ID, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, InfoQueueMessageSeverity, int, byte*, int>)(lpVtbl[30]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_MESSAGE_CATEGORY, DXGI_INFO_QUEUE_MESSAGE_SEVERITY, int, byte*, int>)(lpVtbl[30]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, byte* pDescription)
+	public HResult AddApplicationMessage(DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, InfoQueueMessageSeverity, byte*, int>)(lpVtbl[31]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, DXGI_INFO_QUEUE_MESSAGE_SEVERITY, byte*, int>)(lpVtbl[31]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category, Bool32 bEnable)
+	public HResult SetBreakOnCategory(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_CATEGORY Category, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, Bool32, int>)(lpVtbl[32]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_MESSAGE_CATEGORY, Bool32, int>)(lpVtbl[32]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, bEnable);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult SetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity, Bool32 bEnable)
+	public HResult SetBreakOnSeverity(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueMessageSeverity, Bool32, int>)(lpVtbl[33]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_MESSAGE_SEVERITY, Bool32, int>)(lpVtbl[33]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity, bEnable);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnID"]/*' />
@@ -329,17 +329,17 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public Bool32 GetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category)
+	public Bool32 GetBreakOnCategory(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_CATEGORY Category)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, Bool32>)(lpVtbl[35]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_MESSAGE_CATEGORY, Bool32>)(lpVtbl[35]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public Bool32 GetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity)
+	public Bool32 GetBreakOnSeverity(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, InfoQueueMessageSeverity, Bool32>)(lpVtbl[36]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIInfoQueue*, Guid, DXGI_INFO_QUEUE_MESSAGE_SEVERITY, Bool32>)(lpVtbl[36]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnID"]/*' />
@@ -375,7 +375,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		void ClearStoredMessages(Guid Producer);
 
 		[VtblIndex(5)]
-		HResult GetMessage(Guid Producer, ulong MessageIndex, InfoQueueMessage* pMessage, nuint* pMessageByteLength);
+		HResult GetMessage(Guid Producer, ulong MessageIndex, DXGI_INFO_QUEUE_MESSAGE* pMessage, nuint* pMessageByteLength);
 
 		[VtblIndex(6)]
 		ulong GetNumStoredMessagesAllowedByRetrievalFilters(Guid Producer);
@@ -396,10 +396,10 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		ulong GetNumMessagesDeniedByStorageFilter(Guid Producer);
 
 		[VtblIndex(12)]
-		HResult AddStorageFilterEntries(Guid Producer, InfoQueueFilter* pFilter);
+		HResult AddStorageFilterEntries(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(13)]
-		HResult GetStorageFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+		HResult GetStorageFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength);
 
 		[VtblIndex(14)]
 		void ClearStorageFilter(Guid Producer);
@@ -414,7 +414,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		HResult PushCopyOfStorageFilter(Guid Producer);
 
 		[VtblIndex(18)]
-		HResult PushStorageFilter(Guid Producer, InfoQueueFilter* pFilter);
+		HResult PushStorageFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(19)]
 		void PopStorageFilter(Guid Producer);
@@ -423,10 +423,10 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		uint GetStorageFilterStackSize(Guid Producer);
 
 		[VtblIndex(21)]
-		HResult AddRetrievalFilterEntries(Guid Producer, InfoQueueFilter* pFilter);
+		HResult AddRetrievalFilterEntries(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(22)]
-		HResult GetRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+		HResult GetRetrievalFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength);
 
 		[VtblIndex(23)]
 		void ClearRetrievalFilter(Guid Producer);
@@ -441,7 +441,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		HResult PushCopyOfRetrievalFilter(Guid Producer);
 
 		[VtblIndex(27)]
-		HResult PushRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter);
+		HResult PushRetrievalFilter(Guid Producer, DXGI_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(28)]
 		void PopRetrievalFilter(Guid Producer);
@@ -450,25 +450,25 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 		uint GetRetrievalFilterStackSize(Guid Producer);
 
 		[VtblIndex(30)]
-		HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, byte* pDescription);
+		HResult AddMessage(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_CATEGORY Category, DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity, int ID, byte* pDescription);
 
 		[VtblIndex(31)]
-		HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, byte* pDescription);
+		HResult AddApplicationMessage(DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity, byte* pDescription);
 
 		[VtblIndex(32)]
-		HResult SetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category, Bool32 bEnable);
+		HResult SetBreakOnCategory(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_CATEGORY Category, Bool32 bEnable);
 
 		[VtblIndex(33)]
-		HResult SetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity, Bool32 bEnable);
+		HResult SetBreakOnSeverity(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity, Bool32 bEnable);
 
 		[VtblIndex(34)]
 		HResult SetBreakOnID(Guid Producer, int ID, Bool32 bEnable);
 
 		[VtblIndex(35)]
-		Bool32 GetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category);
+		Bool32 GetBreakOnCategory(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_CATEGORY Category);
 
 		[VtblIndex(36)]
-		Bool32 GetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity);
+		Bool32 GetBreakOnSeverity(Guid Producer, DXGI_INFO_QUEUE_MESSAGE_SEVERITY Severity);
 
 		[VtblIndex(37)]
 		Bool32 GetBreakOnID(Guid Producer, int ID);

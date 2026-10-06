@@ -7,15 +7,15 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class D3D11
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11CreateDevice"]/*' />
 	[LibraryImport("d3d11.dll")]
-	public static partial HResult D3D11CreateDevice(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, nint Software, CreateDeviceFlags Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+	public static partial HResult D3D11CreateDevice(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.D3D_DRIVER_TYPE DriverType, nint Software, D3D11_CREATE_DEVICE_FLAG Flags, Graphics.Direct3D.D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, Graphics.Direct3D.D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11CreateDeviceAndSwapChain"]/*' />
 	[LibraryImport("d3d11.dll")]
-	public static partial HResult D3D11CreateDeviceAndSwapChain(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, nint Software, CreateDeviceFlags Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Graphics.Dxgi.SwapChainDescription* pSwapChainDesc, Graphics.Dxgi.IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+	public static partial HResult D3D11CreateDeviceAndSwapChain(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.D3D_DRIVER_TYPE DriverType, nint Software, D3D11_CREATE_DEVICE_FLAG Flags, Graphics.Direct3D.D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Graphics.Dxgi.DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, Graphics.Dxgi.IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, Graphics.Direct3D.D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
 }

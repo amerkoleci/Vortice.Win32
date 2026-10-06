@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget3"]/*' />
 /// <unmanaged>IDWriteBitmapRenderTarget3</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteBitmapRenderTarget3 : IDWriteBitmapRenderTar
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
+	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, float, float, MeasuringMode, GlyphRun*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, float, float, DWRITE_MEASURING_MODE, DWRITE_GLYPH_RUN*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.GetMemoryDC" />
@@ -137,61 +137,61 @@ public unsafe partial struct IDWriteBitmapRenderTarget3 : IDWriteBitmapRenderTar
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget1.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public TextAntialiasMode GetTextAntialiasMode()
+	public DWRITE_TEXT_ANTIALIAS_MODE GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, TextAntialiasMode>)(lpVtbl[11]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, DWRITE_TEXT_ANTIALIAS_MODE>)(lpVtbl[11]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget1.SetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode)
+	public HResult SetTextAntialiasMode(DWRITE_TEXT_ANTIALIAS_MODE antialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, TextAntialiasMode, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), antialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, DWRITE_TEXT_ANTIALIAS_MODE, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), antialiasMode);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget2.GetBitmapData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetBitmapData(BitmapDataBgra32* bitmapData)
+	public HResult GetBitmapData(DWRITE_BITMAP_DATA_BGRA32* bitmapData)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, BitmapDataBgra32*, int>)(lpVtbl[13]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), bitmapData);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, DWRITE_BITMAP_DATA_BGRA32*, int>)(lpVtbl[13]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), bitmapData);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget3::GetPaintFeatureLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public PaintFeatureLevel GetPaintFeatureLevel()
+	public DWRITE_PAINT_FEATURE_LEVEL GetPaintFeatureLevel()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, PaintFeatureLevel>)(lpVtbl[14]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, DWRITE_PAINT_FEATURE_LEVEL>)(lpVtbl[14]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget3::DrawPaintGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult DrawPaintGlyphRun(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphImageFormats glyphImageFormat, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect)
+	public HResult DrawPaintGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, DWRITE_GLYPH_IMAGE_FORMATS glyphImageFormat, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, float, float, MeasuringMode, GlyphRun*, GlyphImageFormats, uint, uint, Rect*, int>)(lpVtbl[15]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, glyphImageFormat, textColor, colorPaletteIndex, blackBoxRect);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, float, float, DWRITE_MEASURING_MODE, DWRITE_GLYPH_RUN*, DWRITE_GLYPH_IMAGE_FORMATS, uint, uint, Rect*, int>)(lpVtbl[15]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, glyphImageFormat, textColor, colorPaletteIndex, blackBoxRect);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget3::DrawGlyphRunWithColorSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult DrawGlyphRunWithColorSupport(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect)
+	public HResult DrawGlyphRunWithColorSupport(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, float, float, MeasuringMode, GlyphRun*, IDWriteRenderingParams*, uint, uint, Rect*, int>)(lpVtbl[16]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, colorPaletteIndex, blackBoxRect);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget3*, float, float, DWRITE_MEASURING_MODE, DWRITE_GLYPH_RUN*, IDWriteRenderingParams*, uint, uint, Rect*, int>)(lpVtbl[16]))((IDWriteBitmapRenderTarget3*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, colorPaletteIndex, blackBoxRect);
 	}
 
 	public interface Interface : IDWriteBitmapRenderTarget2.Interface
 	{
 		[VtblIndex(14)]
-		PaintFeatureLevel GetPaintFeatureLevel();
+		DWRITE_PAINT_FEATURE_LEVEL GetPaintFeatureLevel();
 
 		[VtblIndex(15)]
-		HResult DrawPaintGlyphRun(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphImageFormats glyphImageFormat, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect);
+		HResult DrawPaintGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, DWRITE_GLYPH_IMAGE_FORMATS glyphImageFormat, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect);
 
 		[VtblIndex(16)]
-		HResult DrawGlyphRunWithColorSupport(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect);
+		HResult DrawGlyphRunWithColorSupport(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, uint colorPaletteIndex, Rect* blackBoxRect);
 	}
 }
 

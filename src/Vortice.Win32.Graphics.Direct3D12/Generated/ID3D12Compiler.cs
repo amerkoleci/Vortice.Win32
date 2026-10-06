@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Compiler"]/*' />
 /// <unmanaged>ID3D12Compiler</unmanaged>
@@ -81,25 +81,25 @@ public unsafe partial struct ID3D12Compiler : ID3D12Compiler.Interface, INativeG
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Compiler::CompilePipelineState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CompilePipelineState(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, PipelineStateStreamDescription* pDesc)
+	public HResult CompilePipelineState(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint GroupVersion, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Compiler*, CompilerCacheGroupKey*, uint, PipelineStateStreamDescription*, int>)(lpVtbl[4]))((ID3D12Compiler*)Unsafe.AsPointer(ref this), pGroupKey, GroupVersion, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Compiler*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, int>)(lpVtbl[4]))((ID3D12Compiler*)Unsafe.AsPointer(ref this), pGroupKey, GroupVersion, pDesc);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Compiler::CompileStateObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CompileStateObject(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, StateObjectDescription* pDesc, Guid* riid, void** ppCompilerStateObject)
+	public HResult CompileStateObject(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint GroupVersion, D3D12_STATE_OBJECT_DESC* pDesc, Guid* riid, void** ppCompilerStateObject)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Compiler*, CompilerCacheGroupKey*, uint, StateObjectDescription*, Guid*, void**, int>)(lpVtbl[5]))((ID3D12Compiler*)Unsafe.AsPointer(ref this), pGroupKey, GroupVersion, pDesc, riid, ppCompilerStateObject);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Compiler*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint, D3D12_STATE_OBJECT_DESC*, Guid*, void**, int>)(lpVtbl[5]))((ID3D12Compiler*)Unsafe.AsPointer(ref this), pGroupKey, GroupVersion, pDesc, riid, ppCompilerStateObject);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Compiler::CompileAddToStateObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CompileAddToStateObject(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, StateObjectDescription* pAddition, ID3D12CompilerStateObject* pCompilerStateObjectToGrowFrom, Guid* riid, void** ppNewCompilerStateObject)
+	public HResult CompileAddToStateObject(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint GroupVersion, D3D12_STATE_OBJECT_DESC* pAddition, ID3D12CompilerStateObject* pCompilerStateObjectToGrowFrom, Guid* riid, void** ppNewCompilerStateObject)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Compiler*, CompilerCacheGroupKey*, uint, StateObjectDescription*, ID3D12CompilerStateObject*, Guid*, void**, int>)(lpVtbl[6]))((ID3D12Compiler*)Unsafe.AsPointer(ref this), pGroupKey, GroupVersion, pAddition, pCompilerStateObjectToGrowFrom, riid, ppNewCompilerStateObject);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Compiler*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint, D3D12_STATE_OBJECT_DESC*, ID3D12CompilerStateObject*, Guid*, void**, int>)(lpVtbl[6]))((ID3D12Compiler*)Unsafe.AsPointer(ref this), pGroupKey, GroupVersion, pAddition, pCompilerStateObjectToGrowFrom, riid, ppNewCompilerStateObject);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Compiler::GetCacheSession"]/*' />
@@ -113,13 +113,13 @@ public unsafe partial struct ID3D12Compiler : ID3D12Compiler.Interface, INativeG
 	public interface Interface : ID3D12CompilerFactoryChild.Interface
 	{
 		[VtblIndex(4)]
-		HResult CompilePipelineState(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, PipelineStateStreamDescription* pDesc);
+		HResult CompilePipelineState(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint GroupVersion, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc);
 
 		[VtblIndex(5)]
-		HResult CompileStateObject(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, StateObjectDescription* pDesc, Guid* riid, void** ppCompilerStateObject);
+		HResult CompileStateObject(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint GroupVersion, D3D12_STATE_OBJECT_DESC* pDesc, Guid* riid, void** ppCompilerStateObject);
 
 		[VtblIndex(6)]
-		HResult CompileAddToStateObject(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, StateObjectDescription* pAddition, ID3D12CompilerStateObject* pCompilerStateObjectToGrowFrom, Guid* riid, void** ppNewCompilerStateObject);
+		HResult CompileAddToStateObject(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint GroupVersion, D3D12_STATE_OBJECT_DESC* pAddition, ID3D12CompilerStateObject* pCompilerStateObjectToGrowFrom, Guid* riid, void** ppNewCompilerStateObject);
 
 		[VtblIndex(7)]
 		HResult GetCacheSession(Guid* riid, void** ppCompilerCacheSession);

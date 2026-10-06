@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList</unmanaged>
@@ -177,9 +177,9 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::CopyTextureRegion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void CopyTextureRegion(TextureCopyLocation* pDst, uint DstX, uint DstY, uint DstZ, TextureCopyLocation* pSrc, Box* pSrcBox)
+	public void CopyTextureRegion(D3D12_TEXTURE_COPY_LOCATION* pDst, uint DstX, uint DstY, uint DstZ, D3D12_TEXTURE_COPY_LOCATION* pSrc, D3D12_BOX* pSrcBox)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, TextureCopyLocation*, uint, uint, uint, TextureCopyLocation*, Box*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pDst, DstX, DstY, DstZ, pSrc, pSrcBox);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D12_TEXTURE_COPY_LOCATION*, uint, uint, uint, D3D12_TEXTURE_COPY_LOCATION*, D3D12_BOX*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pDst, DstX, DstY, DstZ, pSrc, pSrcBox);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::CopyResource"]/*' />
@@ -193,33 +193,33 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::CopyTiles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public void CopyTiles(ID3D12Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags)
+	public void CopyTiles(ID3D12Resource* pTiledResource, D3D12_TILED_RESOURCE_COORDINATE* pTileRegionStartCoordinate, D3D12_TILE_REGION_SIZE* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D12Resource*, ulong, D3D12_TILE_COPY_FLAGS, void>)(lpVtbl[18]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, ID3D12Resource*, ulong, D3D12_TILE_COPY_FLAGS, void>)(lpVtbl[18]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ResolveSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format)
+	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.DXGI_FORMAT, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::IASetPrimitiveTopology"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology PrimitiveTopology)
+	public void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), PrimitiveTopology);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), PrimitiveTopology);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::RSSetViewports"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public void RSSetViewports(uint NumViewports, Viewport* pViewports)
+	public void RSSetViewports(uint NumViewports, D3D12_VIEWPORT* pViewports)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, Viewport*, void>)(lpVtbl[21]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, D3D12_VIEWPORT*, void>)(lpVtbl[21]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::RSSetScissorRects"]/*' />
@@ -257,9 +257,9 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ResourceBarrier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public void ResourceBarrier(uint NumBarriers, ResourceBarrier* pBarriers)
+	public void ResourceBarrier(uint NumBarriers, D3D12_RESOURCE_BARRIER* pBarriers)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, ResourceBarrier*, void>)(lpVtbl[26]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumBarriers, pBarriers);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, D3D12_RESOURCE_BARRIER*, void>)(lpVtbl[26]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumBarriers, pBarriers);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ExecuteBundle"]/*' />
@@ -297,17 +297,17 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetComputeRootDescriptorTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public void SetComputeRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor)
+	public void SetComputeRootDescriptorTable(uint RootParameterIndex, D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, GpuDescriptorHandle, void>)(lpVtbl[31]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, D3D12_GPU_DESCRIPTOR_HANDLE, void>)(lpVtbl[31]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetGraphicsRootDescriptorTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public void SetGraphicsRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor)
+	public void SetGraphicsRootDescriptorTable(uint RootParameterIndex, D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, GpuDescriptorHandle, void>)(lpVtbl[32]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, D3D12_GPU_DESCRIPTOR_HANDLE, void>)(lpVtbl[32]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetComputeRoot32BitConstant"]/*' />
@@ -393,73 +393,73 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::IASetIndexBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public void IASetIndexBuffer(IndexBufferView* pView)
+	public void IASetIndexBuffer(D3D12_INDEX_BUFFER_VIEW* pView)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, IndexBufferView*, void>)(lpVtbl[43]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pView);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D12_INDEX_BUFFER_VIEW*, void>)(lpVtbl[43]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pView);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::IASetVertexBuffers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
-	public void IASetVertexBuffers(uint StartSlot, uint NumViews, VertexBufferView* pViews)
+	public void IASetVertexBuffers(uint StartSlot, uint NumViews, D3D12_VERTEX_BUFFER_VIEW* pViews)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, uint, VertexBufferView*, void>)(lpVtbl[44]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, uint, D3D12_VERTEX_BUFFER_VIEW*, void>)(lpVtbl[44]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SOSetTargets"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void SOSetTargets(uint StartSlot, uint NumViews, StreamOutputBufferView* pViews)
+	public void SOSetTargets(uint StartSlot, uint NumViews, D3D12_STREAM_OUTPUT_BUFFER_VIEW* pViews)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, uint, StreamOutputBufferView*, void>)(lpVtbl[45]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, uint, D3D12_STREAM_OUTPUT_BUFFER_VIEW*, void>)(lpVtbl[45]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::OMSetRenderTargets"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public void OMSetRenderTargets(uint NumRenderTargetDescriptors, CpuDescriptorHandle* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, CpuDescriptorHandle* pDepthStencilDescriptor)
+	public void OMSetRenderTargets(uint NumRenderTargetDescriptors, D3D12_CPU_DESCRIPTOR_HANDLE* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, D3D12_CPU_DESCRIPTOR_HANDLE* pDepthStencilDescriptor)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, CpuDescriptorHandle*, Bool32, CpuDescriptorHandle*, void>)(lpVtbl[46]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumRenderTargetDescriptors, pRenderTargetDescriptors, RTsSingleHandleToDescriptorRange, pDepthStencilDescriptor);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, uint, D3D12_CPU_DESCRIPTOR_HANDLE*, Bool32, D3D12_CPU_DESCRIPTOR_HANDLE*, void>)(lpVtbl[46]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumRenderTargetDescriptors, pRenderTargetDescriptors, RTsSingleHandleToDescriptorRange, pDepthStencilDescriptor);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ClearDepthStencilView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, D3D12_CLEAR_FLAGS ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects)
+	public void ClearDepthStencilView(D3D12_CPU_DESCRIPTOR_HANDLE DepthStencilView, D3D12_CLEAR_FLAGS ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, CpuDescriptorHandle, D3D12_CLEAR_FLAGS, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D12_CPU_DESCRIPTOR_HANDLE, D3D12_CLEAR_FLAGS, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ClearRenderTargetView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects)
+	public void ClearRenderTargetView(D3D12_CPU_DESCRIPTOR_HANDLE RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, CpuDescriptorHandle, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D12_CPU_DESCRIPTOR_HANDLE, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ClearUnorderedAccessViewUint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects)
+	public void ClearUnorderedAccessViewUint(D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap, D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D12_GPU_DESCRIPTOR_HANDLE, D3D12_CPU_DESCRIPTOR_HANDLE, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ClearUnorderedAccessViewFloat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects)
+	public void ClearUnorderedAccessViewFloat(D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap, D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D12_GPU_DESCRIPTOR_HANDLE, D3D12_CPU_DESCRIPTOR_HANDLE, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::DiscardResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public void DiscardResource(ID3D12Resource* pResource, DiscardRegion* pRegion)
+	public void DiscardResource(ID3D12Resource* pResource, D3D12_DISCARD_REGION* pRegion)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, DiscardRegion*, void>)(lpVtbl[51]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pResource, pRegion);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, D3D12_DISCARD_REGION*, void>)(lpVtbl[51]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pResource, pRegion);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::BeginQuery"]/*' />
@@ -550,22 +550,22 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 		void CopyBufferRegion(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, ulong NumBytes);
 
 		[VtblIndex(16)]
-		void CopyTextureRegion(TextureCopyLocation* pDst, uint DstX, uint DstY, uint DstZ, TextureCopyLocation* pSrc, Box* pSrcBox);
+		void CopyTextureRegion(D3D12_TEXTURE_COPY_LOCATION* pDst, uint DstX, uint DstY, uint DstZ, D3D12_TEXTURE_COPY_LOCATION* pSrc, D3D12_BOX* pSrcBox);
 
 		[VtblIndex(17)]
 		void CopyResource(ID3D12Resource* pDstResource, ID3D12Resource* pSrcResource);
 
 		[VtblIndex(18)]
-		void CopyTiles(ID3D12Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags);
+		void CopyTiles(ID3D12Resource* pTiledResource, D3D12_TILED_RESOURCE_COORDINATE* pTileRegionStartCoordinate, D3D12_TILE_REGION_SIZE* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags);
 
 		[VtblIndex(19)]
-		void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format);
+		void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format);
 
 		[VtblIndex(20)]
-		void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology PrimitiveTopology);
+		void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology);
 
 		[VtblIndex(21)]
-		void RSSetViewports(uint NumViewports, Viewport* pViewports);
+		void RSSetViewports(uint NumViewports, D3D12_VIEWPORT* pViewports);
 
 		[VtblIndex(22)]
 		void RSSetScissorRects(uint NumRects, Rect* pRects);
@@ -580,7 +580,7 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 		void SetPipelineState(ID3D12PipelineState* pPipelineState);
 
 		[VtblIndex(26)]
-		void ResourceBarrier(uint NumBarriers, ResourceBarrier* pBarriers);
+		void ResourceBarrier(uint NumBarriers, D3D12_RESOURCE_BARRIER* pBarriers);
 
 		[VtblIndex(27)]
 		void ExecuteBundle(ID3D12GraphicsCommandList* pCommandList);
@@ -595,10 +595,10 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 		void SetGraphicsRootSignature(ID3D12RootSignature* pRootSignature);
 
 		[VtblIndex(31)]
-		void SetComputeRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor);
+		void SetComputeRootDescriptorTable(uint RootParameterIndex, D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor);
 
 		[VtblIndex(32)]
-		void SetGraphicsRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor);
+		void SetGraphicsRootDescriptorTable(uint RootParameterIndex, D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor);
 
 		[VtblIndex(33)]
 		void SetComputeRoot32BitConstant(uint RootParameterIndex, uint SrcData, uint DestOffsetIn32BitValues);
@@ -631,31 +631,31 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 		void SetGraphicsRootUnorderedAccessView(uint RootParameterIndex, ulong BufferLocation);
 
 		[VtblIndex(43)]
-		void IASetIndexBuffer(IndexBufferView* pView);
+		void IASetIndexBuffer(D3D12_INDEX_BUFFER_VIEW* pView);
 
 		[VtblIndex(44)]
-		void IASetVertexBuffers(uint StartSlot, uint NumViews, VertexBufferView* pViews);
+		void IASetVertexBuffers(uint StartSlot, uint NumViews, D3D12_VERTEX_BUFFER_VIEW* pViews);
 
 		[VtblIndex(45)]
-		void SOSetTargets(uint StartSlot, uint NumViews, StreamOutputBufferView* pViews);
+		void SOSetTargets(uint StartSlot, uint NumViews, D3D12_STREAM_OUTPUT_BUFFER_VIEW* pViews);
 
 		[VtblIndex(46)]
-		void OMSetRenderTargets(uint NumRenderTargetDescriptors, CpuDescriptorHandle* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, CpuDescriptorHandle* pDepthStencilDescriptor);
+		void OMSetRenderTargets(uint NumRenderTargetDescriptors, D3D12_CPU_DESCRIPTOR_HANDLE* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, D3D12_CPU_DESCRIPTOR_HANDLE* pDepthStencilDescriptor);
 
 		[VtblIndex(47)]
-		void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, D3D12_CLEAR_FLAGS ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects);
+		void ClearDepthStencilView(D3D12_CPU_DESCRIPTOR_HANDLE DepthStencilView, D3D12_CLEAR_FLAGS ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects);
 
 		[VtblIndex(48)]
-		void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects);
+		void ClearRenderTargetView(D3D12_CPU_DESCRIPTOR_HANDLE RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects);
 
 		[VtblIndex(49)]
-		void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects);
+		void ClearUnorderedAccessViewUint(D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap, D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects);
 
 		[VtblIndex(50)]
-		void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects);
+		void ClearUnorderedAccessViewFloat(D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap, D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects);
 
 		[VtblIndex(51)]
-		void DiscardResource(ID3D12Resource* pResource, DiscardRegion* pRegion);
+		void DiscardResource(ID3D12Resource* pResource, D3D12_DISCARD_REGION* pRegion);
 
 		[VtblIndex(52)]
 		void BeginQuery(ID3D12QueryHeap* pQueryHeap, D3D12_QUERY_TYPE Type, uint Index);

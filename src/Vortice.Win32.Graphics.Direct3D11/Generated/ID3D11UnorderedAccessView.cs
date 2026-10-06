@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView"]/*' />
 /// <unmanaged>ID3D11UnorderedAccessView</unmanaged>
@@ -113,15 +113,15 @@ public unsafe partial struct ID3D11UnorderedAccessView : ID3D11UnorderedAccessVi
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(UnorderedAccessViewDescription* pDesc)
+	public void GetDesc(D3D11_UNORDERED_ACCESS_VIEW_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11UnorderedAccessView*, UnorderedAccessViewDescription*, void>)(lpVtbl[8]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11UnorderedAccessView*, D3D11_UNORDERED_ACCESS_VIEW_DESC*, void>)(lpVtbl[8]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc(UnorderedAccessViewDescription* pDesc);
+		void GetDesc(D3D11_UNORDERED_ACCESS_VIEW_DESC* pDesc);
 	}
 }
 

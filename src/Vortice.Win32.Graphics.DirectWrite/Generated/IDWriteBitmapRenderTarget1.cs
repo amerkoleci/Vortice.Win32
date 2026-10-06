@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1"]/*' />
 /// <unmanaged>IDWriteBitmapRenderTarget1</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteBitmapRenderTarget1 : IDWriteBitmapRenderTar
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
+	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget1*, float, float, MeasuringMode, GlyphRun*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget1*, float, float, DWRITE_MEASURING_MODE, DWRITE_GLYPH_RUN*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.GetMemoryDC" />
@@ -137,26 +137,26 @@ public unsafe partial struct IDWriteBitmapRenderTarget1 : IDWriteBitmapRenderTar
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::GetTextAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public TextAntialiasMode GetTextAntialiasMode()
+	public DWRITE_TEXT_ANTIALIAS_MODE GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget1*, TextAntialiasMode>)(lpVtbl[11]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget1*, DWRITE_TEXT_ANTIALIAS_MODE>)(lpVtbl[11]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::SetTextAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode)
+	public HResult SetTextAntialiasMode(DWRITE_TEXT_ANTIALIAS_MODE antialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget1*, TextAntialiasMode, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), antialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget1*, DWRITE_TEXT_ANTIALIAS_MODE, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), antialiasMode);
 	}
 
 	public interface Interface : IDWriteBitmapRenderTarget.Interface
 	{
 		[VtblIndex(11)]
-		TextAntialiasMode GetTextAntialiasMode();
+		DWRITE_TEXT_ANTIALIAS_MODE GetTextAntialiasMode();
 
 		[VtblIndex(12)]
-		HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode);
+		HResult SetTextAntialiasMode(DWRITE_TEXT_ANTIALIAS_MODE antialiasMode);
 	}
 }
 

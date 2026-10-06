@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1"]/*' />
 /// <unmanaged>ID3D11VideoProcessorEnumerator1</unmanaged>
@@ -105,63 +105,63 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorContentDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetVideoProcessorContentDesc(VideoProcessorContentDescription* pContentDesc)
+	public HResult GetVideoProcessorContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pContentDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, VideoProcessorContentDescription*, int>)(lpVtbl[7]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pContentDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, D3D11_VIDEO_PROCESSOR_CONTENT_DESC*, int>)(lpVtbl[7]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pContentDesc);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.CheckVideoProcessorFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.Format Format, uint* pFlags)
+	public HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint* pFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Format, pFlags);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.DXGI_FORMAT, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Format, pFlags);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorCaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetVideoProcessorCaps(VideoProcessorCaps* pCaps)
+	public HResult GetVideoProcessorCaps(D3D11_VIDEO_PROCESSOR_CAPS* pCaps)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, VideoProcessorCaps*, int>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pCaps);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, D3D11_VIDEO_PROCESSOR_CAPS*, int>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pCaps);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorRateConversionCaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetVideoProcessorRateConversionCaps(uint TypeIndex, VideoProcessorRateConversionCaps* pCaps)
+	public HResult GetVideoProcessorRateConversionCaps(uint TypeIndex, D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS* pCaps)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, uint, VideoProcessorRateConversionCaps*, int>)(lpVtbl[10]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, pCaps);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, uint, D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS*, int>)(lpVtbl[10]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, pCaps);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorCustomRate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, VideoProcessorCustomRate* pRate)
+	public HResult GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, D3D11_VIDEO_PROCESSOR_CUSTOM_RATE* pRate)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, uint, uint, VideoProcessorCustomRate*, int>)(lpVtbl[11]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, CustomRateIndex, pRate);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, uint, uint, D3D11_VIDEO_PROCESSOR_CUSTOM_RATE*, int>)(lpVtbl[11]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, CustomRateIndex, pRate);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorFilterRange" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetVideoProcessorFilterRange(VideoProcessorFilter Filter, VideoProcessorFilterRange* pRange)
+	public HResult GetVideoProcessorFilterRange(D3D11_VIDEO_PROCESSOR_FILTER Filter, D3D11_VIDEO_PROCESSOR_FILTER_RANGE* pRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, VideoProcessorFilter, VideoProcessorFilterRange*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Filter, pRange);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, D3D11_VIDEO_PROCESSOR_FILTER, D3D11_VIDEO_PROCESSOR_FILTER_RANGE*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Filter, pRange);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1::CheckVideoProcessorFormatConversion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.Format InputFormat, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, Graphics.Dxgi.Common.Format OutputFormat, Graphics.Dxgi.Common.ColorSpaceType OutputColorSpace, Bool32* pSupported)
+	public HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.DXGI_FORMAT InputFormat, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, Graphics.Dxgi.Common.DXGI_FORMAT OutputFormat, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE OutputColorSpace, Bool32* pSupported)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
 	}
 
 	public interface Interface : ID3D11VideoProcessorEnumerator.Interface
 	{
 		[VtblIndex(13)]
-		HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.Format InputFormat, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, Graphics.Dxgi.Common.Format OutputFormat, Graphics.Dxgi.Common.ColorSpaceType OutputColorSpace, Bool32* pSupported);
+		HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.DXGI_FORMAT InputFormat, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, Graphics.Dxgi.Common.DXGI_FORMAT OutputFormat, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE OutputColorSpace, Bool32* pSupported);
 	}
 }
 

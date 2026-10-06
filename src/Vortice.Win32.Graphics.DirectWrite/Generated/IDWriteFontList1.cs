@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1"]/*' />
 /// <unmanaged>IDWriteFontList1</unmanaged>
@@ -97,9 +97,9 @@ public unsafe partial struct IDWriteFontList1 : IDWriteFontList1.Interface, INat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Locality GetFontLocality(uint listIndex)
+	public DWRITE_LOCALITY GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList1*, uint, Locality>)(lpVtbl[6]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList1*, uint, DWRITE_LOCALITY>)(lpVtbl[6]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFont"]/*' />
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteFontList1 : IDWriteFontList1.Interface, INat
 	public interface Interface : IDWriteFontList.Interface
 	{
 		[VtblIndex(6)]
-		Locality GetFontLocality(uint listIndex);
+		DWRITE_LOCALITY GetFontLocality(uint listIndex);
 
 		[VtblIndex(7)]
 		HResult GetFont(uint listIndex, IDWriteFont3** font);

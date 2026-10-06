@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography"]/*' />
 /// <unmanaged>IDWriteTypography</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddFontFeature(FontFeature fontFeature)
+	public HResult AddFontFeature(DWRITE_FONT_FEATURE fontFeature)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, FontFeature, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, DWRITE_FONT_FEATURE, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />
@@ -89,21 +89,21 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature)
+	public HResult GetFontFeature(uint fontFeatureIndex, DWRITE_FONT_FEATURE* fontFeature)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, uint, FontFeature*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, uint, DWRITE_FONT_FEATURE*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddFontFeature(FontFeature fontFeature);
+		HResult AddFontFeature(DWRITE_FONT_FEATURE fontFeature);
 
 		[VtblIndex(4)]
 		uint GetFontFeatureCount();
 
 		[VtblIndex(5)]
-		HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature);
+		HResult GetFontFeature(uint fontFeatureIndex, DWRITE_FONT_FEATURE* fontFeature);
 	}
 }
 

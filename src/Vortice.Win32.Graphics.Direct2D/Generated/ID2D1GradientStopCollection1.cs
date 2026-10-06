@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1"]/*' />
 /// <unmanaged>ID2D1GradientStopCollection1</unmanaged>
@@ -89,83 +89,83 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetGradientStops" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetGradientStops(Common.GradientStop* gradientStops, uint gradientStopsCount)
+	public void GetGradientStops(Common.D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Common.GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Common.D2D1_GRADIENT_STOP*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetColorInterpolationGamma" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Gamma GetColorInterpolationGamma()
+	public D2D1_GAMMA GetColorInterpolationGamma()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Gamma>)(lpVtbl[6]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, D2D1_GAMMA>)(lpVtbl[6]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetExtendMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public ExtendMode GetExtendMode()
+	public D2D1_EXTEND_MODE GetExtendMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, D2D1_EXTEND_MODE>)(lpVtbl[7]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetGradientStops1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetGradientStops1(Common.GradientStop* gradientStops, uint gradientStopsCount)
+	public void GetGradientStops1(Common.D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Common.GradientStop*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Common.D2D1_GRADIENT_STOP*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPreInterpolationSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public ColorSpace GetPreInterpolationSpace()
+	public D2D1_COLOR_SPACE GetPreInterpolationSpace()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, D2D1_COLOR_SPACE>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPostInterpolationSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public ColorSpace GetPostInterpolationSpace()
+	public D2D1_COLOR_SPACE GetPostInterpolationSpace()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, D2D1_COLOR_SPACE>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetBufferPrecision"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public BufferPrecision GetBufferPrecision()
+	public D2D1_BUFFER_PRECISION GetBufferPrecision()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, BufferPrecision>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, D2D1_BUFFER_PRECISION>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetColorInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public ColorInterpolationMode GetColorInterpolationMode()
+	public D2D1_COLOR_INTERPOLATION_MODE GetColorInterpolationMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, ColorInterpolationMode>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, D2D1_COLOR_INTERPOLATION_MODE>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1GradientStopCollection.Interface
 	{
 		[VtblIndex(8)]
-		void GetGradientStops1(Common.GradientStop* gradientStops, uint gradientStopsCount);
+		void GetGradientStops1(Common.D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount);
 
 		[VtblIndex(9)]
-		ColorSpace GetPreInterpolationSpace();
+		D2D1_COLOR_SPACE GetPreInterpolationSpace();
 
 		[VtblIndex(10)]
-		ColorSpace GetPostInterpolationSpace();
+		D2D1_COLOR_SPACE GetPostInterpolationSpace();
 
 		[VtblIndex(11)]
-		BufferPrecision GetBufferPrecision();
+		D2D1_BUFFER_PRECISION GetBufferPrecision();
 
 		[VtblIndex(12)]
-		ColorInterpolationMode GetColorInterpolationMode();
+		D2D1_COLOR_INTERPOLATION_MODE GetColorInterpolationMode();
 	}
 }
 

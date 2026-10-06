@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PageableTools"]/*' />
 /// <unmanaged>ID3D12PageableTools</unmanaged>
@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12PageableTools : ID3D12PageableTools.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PageableTools::GetAllocation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAllocation(GpuVirtualAddressRange* pAllocation)
+	public HResult GetAllocation(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pAllocation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PageableTools*, GpuVirtualAddressRange*, int>)(lpVtbl[3]))((ID3D12PageableTools*)Unsafe.AsPointer(ref this), pAllocation);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PageableTools*, D3D12_GPU_VIRTUAL_ADDRESS_RANGE*, int>)(lpVtbl[3]))((ID3D12PageableTools*)Unsafe.AsPointer(ref this), pAllocation);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetAllocation(GpuVirtualAddressRange* pAllocation);
+		HResult GetAllocation(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pAllocation);
 	}
 }
 

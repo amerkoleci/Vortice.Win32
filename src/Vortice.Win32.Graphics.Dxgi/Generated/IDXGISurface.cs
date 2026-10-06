@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface"]/*' />
 /// <unmanaged>IDXGISurface</unmanaged>
@@ -113,17 +113,17 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDesc(SurfaceDescription* pDesc)
+	public HResult GetDesc(DXGI_SURFACE_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISurface*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISurface*, DXGI_SURFACE_DESC*, int>)(lpVtbl[8]))((IDXGISurface*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Map(MappedRect* pLockedRect, MapFlags MapFlags)
+	public HResult Map(DXGI_MAPPED_RECT* pLockedRect, DXGI_MAP_FLAGS MapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISurface*, MappedRect*, MapFlags, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISurface*, DXGI_MAPPED_RECT*, DXGI_MAP_FLAGS, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
@@ -137,10 +137,10 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 	public interface Interface : IDXGIDeviceSubObject.Interface
 	{
 		[VtblIndex(8)]
-		HResult GetDesc(SurfaceDescription* pDesc);
+		HResult GetDesc(DXGI_SURFACE_DESC* pDesc);
 
 		[VtblIndex(9)]
-		HResult Map(MappedRect* pLockedRect, MapFlags MapFlags);
+		HResult Map(DXGI_MAPPED_RECT* pLockedRect, DXGI_MAP_FLAGS MapFlags);
 
 		[VtblIndex(10)]
 		HResult Unmap();

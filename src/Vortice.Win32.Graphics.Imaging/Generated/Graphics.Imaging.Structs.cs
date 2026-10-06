@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern"]/*' />
 /// <unmanaged>WICBitmapPattern</unmanaged>
@@ -26,7 +26,7 @@ public partial struct WICBitmapPattern
 	public unsafe byte* Mask;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
-	public Bool32 EndOfStream;
+	public BOOL EndOfStream;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
@@ -34,7 +34,7 @@ public partial struct WICBitmapPattern
 public partial struct WICImageParameters
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelFormat"]/*' />
-	public Graphics.Direct2D.Common.PixelFormat PixelFormat;
+	public D2D1_PIXEL_FORMAT PixelFormat;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::DpiX"]/*' />
 	public float DpiX;
@@ -267,7 +267,7 @@ public partial struct WICDdsParameters
 	public uint ArraySize;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::DxgiFormat"]/*' />
-	public Graphics.Dxgi.Common.Format DxgiFormat;
+	public DXGI_FORMAT DxgiFormat;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Dimension"]/*' />
 	public WICDdsDimension Dimension;
@@ -281,7 +281,7 @@ public partial struct WICDdsParameters
 public partial struct WICDdsFormatInfo
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::DxgiFormat"]/*' />
-	public Graphics.Dxgi.Common.Format DxgiFormat;
+	public DXGI_FORMAT DxgiFormat;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BytesPerBlock"]/*' />
 	public uint BytesPerBlock;

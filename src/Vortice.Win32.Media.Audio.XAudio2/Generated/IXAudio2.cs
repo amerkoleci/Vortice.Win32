@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2"]/*' />
 /// <unmanaged>IXAudio2</unmanaged>
@@ -89,25 +89,25 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateSourceVoice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateSourceVoice(IXAudio2SourceVoice** ppSourceVoice, Media.Audio.WaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, IXAudio2VoiceCallback* pCallback, VoiceSends* pSendList, EffectChain* pEffectChain)
+	public HResult CreateSourceVoice(IXAudio2SourceVoice** ppSourceVoice, Media.Audio.WaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, IXAudio2VoiceCallback* pCallback, XAUDIO2_VOICE_SENDS* pSendList, XAUDIO2_EFFECT_CHAIN* pEffectChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2SourceVoice**, Media.Audio.WaveFormatEx*, uint, float, IXAudio2VoiceCallback*, VoiceSends*, EffectChain*, int>)(lpVtbl[5]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSourceVoice, pSourceFormat, Flags, MaxFrequencyRatio, pCallback, pSendList, pEffectChain);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2SourceVoice**, Media.Audio.WaveFormatEx*, uint, float, IXAudio2VoiceCallback*, XAUDIO2_VOICE_SENDS*, XAUDIO2_EFFECT_CHAIN*, int>)(lpVtbl[5]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSourceVoice, pSourceFormat, Flags, MaxFrequencyRatio, pCallback, pSendList, pEffectChain);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateSubmixVoice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateSubmixVoice(IXAudio2SubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, VoiceSends* pSendList, EffectChain* pEffectChain)
+	public HResult CreateSubmixVoice(IXAudio2SubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, XAUDIO2_VOICE_SENDS* pSendList, XAUDIO2_EFFECT_CHAIN* pEffectChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2SubmixVoice**, uint, uint, uint, uint, VoiceSends*, EffectChain*, int>)(lpVtbl[6]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSubmixVoice, InputChannels, InputSampleRate, Flags, ProcessingStage, pSendList, pEffectChain);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2SubmixVoice**, uint, uint, uint, uint, XAUDIO2_VOICE_SENDS*, XAUDIO2_EFFECT_CHAIN*, int>)(lpVtbl[6]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSubmixVoice, InputChannels, InputSampleRate, Flags, ProcessingStage, pSendList, pEffectChain);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateMasteringVoice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, char* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory)
+	public HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, char* szDeviceId, XAUDIO2_EFFECT_CHAIN* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, char*, EffectChain*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, char*, XAUDIO2_EFFECT_CHAIN*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::StartEngine"]/*' />
@@ -137,17 +137,17 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::GetPerformanceData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetPerformanceData(PerformanceData* pPerfData)
+	public void GetPerformanceData(XAUDIO2_PERFORMANCE_DATA* pPerfData)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2*, PerformanceData*, void>)(lpVtbl[11]))((IXAudio2*)Unsafe.AsPointer(ref this), pPerfData);
+		((delegate* unmanaged[MemberFunction]<IXAudio2*, XAUDIO2_PERFORMANCE_DATA*, void>)(lpVtbl[11]))((IXAudio2*)Unsafe.AsPointer(ref this), pPerfData);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::SetDebugConfiguration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public void SetDebugConfiguration(DebugConfiguration* pDebugConfiguration, void* pReserved = null)
+	public void SetDebugConfiguration(XAUDIO2_DEBUG_CONFIGURATION* pDebugConfiguration, void* pReserved = null)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2*, DebugConfiguration*, void*, void>)(lpVtbl[12]))((IXAudio2*)Unsafe.AsPointer(ref this), pDebugConfiguration, pReserved);
+		((delegate* unmanaged[MemberFunction]<IXAudio2*, XAUDIO2_DEBUG_CONFIGURATION*, void*, void>)(lpVtbl[12]))((IXAudio2*)Unsafe.AsPointer(ref this), pDebugConfiguration, pReserved);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -159,13 +159,13 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 		void UnregisterForCallbacks(IXAudio2EngineCallback* pCallback);
 
 		[VtblIndex(5)]
-		HResult CreateSourceVoice(IXAudio2SourceVoice** ppSourceVoice, Media.Audio.WaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, IXAudio2VoiceCallback* pCallback, VoiceSends* pSendList, EffectChain* pEffectChain);
+		HResult CreateSourceVoice(IXAudio2SourceVoice** ppSourceVoice, Media.Audio.WaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, IXAudio2VoiceCallback* pCallback, XAUDIO2_VOICE_SENDS* pSendList, XAUDIO2_EFFECT_CHAIN* pEffectChain);
 
 		[VtblIndex(6)]
-		HResult CreateSubmixVoice(IXAudio2SubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, VoiceSends* pSendList, EffectChain* pEffectChain);
+		HResult CreateSubmixVoice(IXAudio2SubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, XAUDIO2_VOICE_SENDS* pSendList, XAUDIO2_EFFECT_CHAIN* pEffectChain);
 
 		[VtblIndex(7)]
-		HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, char* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory);
+		HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, char* szDeviceId, XAUDIO2_EFFECT_CHAIN* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory);
 
 		[VtblIndex(8)]
 		HResult StartEngine();
@@ -177,10 +177,10 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 		HResult CommitChanges(uint OperationSet);
 
 		[VtblIndex(11)]
-		void GetPerformanceData(PerformanceData* pPerfData);
+		void GetPerformanceData(XAUDIO2_PERFORMANCE_DATA* pPerfData);
 
 		[VtblIndex(12)]
-		void SetDebugConfiguration(DebugConfiguration* pDebugConfiguration, void* pReserved = null);
+		void SetDebugConfiguration(XAUDIO2_DEBUG_CONFIGURATION* pDebugConfiguration, void* pReserved = null);
 	}
 }
 

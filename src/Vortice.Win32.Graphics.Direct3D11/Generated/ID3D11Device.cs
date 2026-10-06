@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device"]/*' />
 /// <unmanaged>ID3D11Device</unmanaged>
@@ -73,73 +73,73 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateBuffer(BufferDescription* pDesc, SubresourceData* pInitialData, ID3D11Buffer** ppBuffer)
+	public HResult CreateBuffer(D3D11_BUFFER_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Buffer** ppBuffer)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, BufferDescription*, SubresourceData*, ID3D11Buffer**, int>)(lpVtbl[3]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppBuffer);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_BUFFER_DESC*, D3D11_SUBRESOURCE_DATA*, ID3D11Buffer**, int>)(lpVtbl[3]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppBuffer);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture1D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateTexture1D(Texture1DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture1D** ppTexture1D)
+	public HResult CreateTexture1D(D3D11_TEXTURE1D_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Texture1D** ppTexture1D)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Texture1DDescription*, SubresourceData*, ID3D11Texture1D**, int>)(lpVtbl[4]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture1D);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_TEXTURE1D_DESC*, D3D11_SUBRESOURCE_DATA*, ID3D11Texture1D**, int>)(lpVtbl[4]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture1D);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture2D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateTexture2D(Texture2DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture2D** ppTexture2D)
+	public HResult CreateTexture2D(D3D11_TEXTURE2D_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Texture2D** ppTexture2D)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Texture2DDescription*, SubresourceData*, ID3D11Texture2D**, int>)(lpVtbl[5]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture2D);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_TEXTURE2D_DESC*, D3D11_SUBRESOURCE_DATA*, ID3D11Texture2D**, int>)(lpVtbl[5]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture2D);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture3D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateTexture3D(Texture3DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture3D** ppTexture3D)
+	public HResult CreateTexture3D(D3D11_TEXTURE3D_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Texture3D** ppTexture3D)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Texture3DDescription*, SubresourceData*, ID3D11Texture3D**, int>)(lpVtbl[6]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture3D);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_TEXTURE3D_DESC*, D3D11_SUBRESOURCE_DATA*, ID3D11Texture3D**, int>)(lpVtbl[6]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture3D);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateShaderResourceView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateShaderResourceView(ID3D11Resource* pResource, ShaderResourceViewDescription* pDesc, ID3D11ShaderResourceView** ppSRView)
+	public HResult CreateShaderResourceView(ID3D11Resource* pResource, D3D11_SHADER_RESOURCE_VIEW_DESC* pDesc, ID3D11ShaderResourceView** ppSRView)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, ShaderResourceViewDescription*, ID3D11ShaderResourceView**, int>)(lpVtbl[7]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppSRView);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, D3D11_SHADER_RESOURCE_VIEW_DESC*, ID3D11ShaderResourceView**, int>)(lpVtbl[7]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppSRView);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateUnorderedAccessView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateUnorderedAccessView(ID3D11Resource* pResource, UnorderedAccessViewDescription* pDesc, ID3D11UnorderedAccessView** ppUAView)
+	public HResult CreateUnorderedAccessView(ID3D11Resource* pResource, D3D11_UNORDERED_ACCESS_VIEW_DESC* pDesc, ID3D11UnorderedAccessView** ppUAView)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, UnorderedAccessViewDescription*, ID3D11UnorderedAccessView**, int>)(lpVtbl[8]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppUAView);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, D3D11_UNORDERED_ACCESS_VIEW_DESC*, ID3D11UnorderedAccessView**, int>)(lpVtbl[8]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppUAView);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateRenderTargetView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateRenderTargetView(ID3D11Resource* pResource, RenderTargetViewDescription* pDesc, ID3D11RenderTargetView** ppRTView)
+	public HResult CreateRenderTargetView(ID3D11Resource* pResource, D3D11_RENDER_TARGET_VIEW_DESC* pDesc, ID3D11RenderTargetView** ppRTView)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, RenderTargetViewDescription*, ID3D11RenderTargetView**, int>)(lpVtbl[9]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppRTView);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, D3D11_RENDER_TARGET_VIEW_DESC*, ID3D11RenderTargetView**, int>)(lpVtbl[9]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppRTView);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDepthStencilView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateDepthStencilView(ID3D11Resource* pResource, DepthStencilViewDescription* pDesc, ID3D11DepthStencilView** ppDepthStencilView)
+	public HResult CreateDepthStencilView(ID3D11Resource* pResource, D3D11_DEPTH_STENCIL_VIEW_DESC* pDesc, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, DepthStencilViewDescription*, ID3D11DepthStencilView**, int>)(lpVtbl[10]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppDepthStencilView);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, ID3D11Resource*, D3D11_DEPTH_STENCIL_VIEW_DESC*, ID3D11DepthStencilView**, int>)(lpVtbl[10]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppDepthStencilView);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateInputLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateInputLayout(InputElementDescription* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout)
+	public HResult CreateInputLayout(D3D11_INPUT_ELEMENT_DESC* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, InputElementDescription*, uint, void*, nuint, ID3D11InputLayout**, int>)(lpVtbl[11]))((ID3D11Device*)Unsafe.AsPointer(ref this), pInputElementDescs, NumElements, pShaderBytecodeWithInputSignature, BytecodeLength, ppInputLayout);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_INPUT_ELEMENT_DESC*, uint, void*, nuint, ID3D11InputLayout**, int>)(lpVtbl[11]))((ID3D11Device*)Unsafe.AsPointer(ref this), pInputElementDescs, NumElements, pShaderBytecodeWithInputSignature, BytecodeLength, ppInputLayout);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateVertexShader"]/*' />
@@ -161,9 +161,9 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateGeometryShaderWithStreamOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, SODeclarationEntry* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader)
+	public HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, D3D11_SO_DECLARATION_ENTRY* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, void*, nuint, SODeclarationEntry*, uint, uint*, uint, uint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[14]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pSODeclaration, NumEntries, pBufferStrides, NumStrides, RasterizedStream, pClassLinkage, ppGeometryShader);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, void*, nuint, D3D11_SO_DECLARATION_ENTRY*, uint, uint*, uint, uint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[14]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pSODeclaration, NumEntries, pBufferStrides, NumStrides, RasterizedStream, pClassLinkage, ppGeometryShader);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreatePixelShader"]/*' />
@@ -209,57 +209,57 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateBlendState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateBlendState(BlendDescription* pBlendStateDesc, ID3D11BlendState** ppBlendState)
+	public HResult CreateBlendState(D3D11_BLEND_DESC* pBlendStateDesc, ID3D11BlendState** ppBlendState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, BlendDescription*, ID3D11BlendState**, int>)(lpVtbl[20]))((ID3D11Device*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_BLEND_DESC*, ID3D11BlendState**, int>)(lpVtbl[20]))((ID3D11Device*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDepthStencilState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateDepthStencilState(DepthStencilDescription* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState)
+	public HResult CreateDepthStencilState(D3D11_DEPTH_STENCIL_DESC* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, DepthStencilDescription*, ID3D11DepthStencilState**, int>)(lpVtbl[21]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDepthStencilDesc, ppDepthStencilState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_DEPTH_STENCIL_DESC*, ID3D11DepthStencilState**, int>)(lpVtbl[21]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDepthStencilDesc, ppDepthStencilState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateRasterizerState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateRasterizerState(RasterizerDescription* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState)
+	public HResult CreateRasterizerState(D3D11_RASTERIZER_DESC* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, RasterizerDescription*, ID3D11RasterizerState**, int>)(lpVtbl[22]))((ID3D11Device*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_RASTERIZER_DESC*, ID3D11RasterizerState**, int>)(lpVtbl[22]))((ID3D11Device*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateSamplerState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult CreateSamplerState(SamplerDescription* pSamplerDesc, ID3D11SamplerState** ppSamplerState)
+	public HResult CreateSamplerState(D3D11_SAMPLER_DESC* pSamplerDesc, ID3D11SamplerState** ppSamplerState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, SamplerDescription*, ID3D11SamplerState**, int>)(lpVtbl[23]))((ID3D11Device*)Unsafe.AsPointer(ref this), pSamplerDesc, ppSamplerState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_SAMPLER_DESC*, ID3D11SamplerState**, int>)(lpVtbl[23]))((ID3D11Device*)Unsafe.AsPointer(ref this), pSamplerDesc, ppSamplerState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateQuery"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CreateQuery(QueryDescription* pQueryDesc, ID3D11Query** ppQuery)
+	public HResult CreateQuery(D3D11_QUERY_DESC* pQueryDesc, ID3D11Query** ppQuery)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, QueryDescription*, ID3D11Query**, int>)(lpVtbl[24]))((ID3D11Device*)Unsafe.AsPointer(ref this), pQueryDesc, ppQuery);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_QUERY_DESC*, ID3D11Query**, int>)(lpVtbl[24]))((ID3D11Device*)Unsafe.AsPointer(ref this), pQueryDesc, ppQuery);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreatePredicate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult CreatePredicate(QueryDescription* pPredicateDesc, ID3D11Predicate** ppPredicate)
+	public HResult CreatePredicate(D3D11_QUERY_DESC* pPredicateDesc, ID3D11Predicate** ppPredicate)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, QueryDescription*, ID3D11Predicate**, int>)(lpVtbl[25]))((ID3D11Device*)Unsafe.AsPointer(ref this), pPredicateDesc, ppPredicate);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_QUERY_DESC*, ID3D11Predicate**, int>)(lpVtbl[25]))((ID3D11Device*)Unsafe.AsPointer(ref this), pPredicateDesc, ppPredicate);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateCounter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult CreateCounter(CounterDescription* pCounterDesc, ID3D11Counter** ppCounter)
+	public HResult CreateCounter(D3D11_COUNTER_DESC* pCounterDesc, ID3D11Counter** ppCounter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, CounterDescription*, ID3D11Counter**, int>)(lpVtbl[26]))((ID3D11Device*)Unsafe.AsPointer(ref this), pCounterDesc, ppCounter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_COUNTER_DESC*, ID3D11Counter**, int>)(lpVtbl[26]))((ID3D11Device*)Unsafe.AsPointer(ref this), pCounterDesc, ppCounter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDeferredContext"]/*' />
@@ -281,41 +281,41 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFormatSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult CheckFormatSupport(Graphics.Dxgi.Common.Format Format, uint* pFormatSupport)
+	public HResult CheckFormatSupport(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint* pFormatSupport)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[29]))((ID3D11Device*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Graphics.Dxgi.Common.DXGI_FORMAT, uint*, int>)(lpVtbl[29]))((ID3D11Device*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckMultisampleQualityLevels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint* pNumQualityLevels)
+	public HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint SampleCount, uint* pNumQualityLevels)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Graphics.Dxgi.Common.Format, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Graphics.Dxgi.Common.DXGI_FORMAT, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckCounterInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public void CheckCounterInfo(CounterInfo* pCounterInfo)
+	public void CheckCounterInfo(D3D11_COUNTER_INFO* pCounterInfo)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11Device*, CounterInfo*, void>)(lpVtbl[31]))((ID3D11Device*)Unsafe.AsPointer(ref this), pCounterInfo);
+		((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_COUNTER_INFO*, void>)(lpVtbl[31]))((ID3D11Device*)Unsafe.AsPointer(ref this), pCounterInfo);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckCounter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult CheckCounter(CounterDescription* pDesc, CounterType* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength)
+	public HResult CheckCounter(D3D11_COUNTER_DESC* pDesc, D3D11_COUNTER_TYPE* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, CounterDescription*, CounterType*, uint*, byte*, uint*, byte*, uint*, byte*, uint*, int>)(lpVtbl[32]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pType, pActiveCounters, szName, pNameLength, szUnits, pUnitsLength, szDescription, pDescriptionLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_COUNTER_DESC*, D3D11_COUNTER_TYPE*, uint*, byte*, uint*, byte*, uint*, byte*, uint*, int>)(lpVtbl[32]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pType, pActiveCounters, szName, pNameLength, szUnits, pUnitsLength, szDescription, pDescriptionLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
+	public HResult CheckFeatureSupport(D3D11_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Feature, void*, int, int>)(lpVtbl[33]))((ID3D11Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, D3D11_FEATURE, void*, int, int>)(lpVtbl[33]))((ID3D11Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetPrivateData"]/*' />
@@ -345,9 +345,9 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetFeatureLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public Graphics.Direct3D.FeatureLevel GetFeatureLevel()
+	public Graphics.Direct3D.D3D_FEATURE_LEVEL GetFeatureLevel()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Graphics.Direct3D.FeatureLevel>)(lpVtbl[37]))((ID3D11Device*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device*, Graphics.Direct3D.D3D_FEATURE_LEVEL>)(lpVtbl[37]))((ID3D11Device*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetCreationFlags"]/*' />
@@ -393,31 +393,31 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateBuffer(BufferDescription* pDesc, SubresourceData* pInitialData, ID3D11Buffer** ppBuffer);
+		HResult CreateBuffer(D3D11_BUFFER_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Buffer** ppBuffer);
 
 		[VtblIndex(4)]
-		HResult CreateTexture1D(Texture1DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture1D** ppTexture1D);
+		HResult CreateTexture1D(D3D11_TEXTURE1D_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Texture1D** ppTexture1D);
 
 		[VtblIndex(5)]
-		HResult CreateTexture2D(Texture2DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture2D** ppTexture2D);
+		HResult CreateTexture2D(D3D11_TEXTURE2D_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Texture2D** ppTexture2D);
 
 		[VtblIndex(6)]
-		HResult CreateTexture3D(Texture3DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture3D** ppTexture3D);
+		HResult CreateTexture3D(D3D11_TEXTURE3D_DESC* pDesc, D3D11_SUBRESOURCE_DATA* pInitialData, ID3D11Texture3D** ppTexture3D);
 
 		[VtblIndex(7)]
-		HResult CreateShaderResourceView(ID3D11Resource* pResource, ShaderResourceViewDescription* pDesc, ID3D11ShaderResourceView** ppSRView);
+		HResult CreateShaderResourceView(ID3D11Resource* pResource, D3D11_SHADER_RESOURCE_VIEW_DESC* pDesc, ID3D11ShaderResourceView** ppSRView);
 
 		[VtblIndex(8)]
-		HResult CreateUnorderedAccessView(ID3D11Resource* pResource, UnorderedAccessViewDescription* pDesc, ID3D11UnorderedAccessView** ppUAView);
+		HResult CreateUnorderedAccessView(ID3D11Resource* pResource, D3D11_UNORDERED_ACCESS_VIEW_DESC* pDesc, ID3D11UnorderedAccessView** ppUAView);
 
 		[VtblIndex(9)]
-		HResult CreateRenderTargetView(ID3D11Resource* pResource, RenderTargetViewDescription* pDesc, ID3D11RenderTargetView** ppRTView);
+		HResult CreateRenderTargetView(ID3D11Resource* pResource, D3D11_RENDER_TARGET_VIEW_DESC* pDesc, ID3D11RenderTargetView** ppRTView);
 
 		[VtblIndex(10)]
-		HResult CreateDepthStencilView(ID3D11Resource* pResource, DepthStencilViewDescription* pDesc, ID3D11DepthStencilView** ppDepthStencilView);
+		HResult CreateDepthStencilView(ID3D11Resource* pResource, D3D11_DEPTH_STENCIL_VIEW_DESC* pDesc, ID3D11DepthStencilView** ppDepthStencilView);
 
 		[VtblIndex(11)]
-		HResult CreateInputLayout(InputElementDescription* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout);
+		HResult CreateInputLayout(D3D11_INPUT_ELEMENT_DESC* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout);
 
 		[VtblIndex(12)]
 		HResult CreateVertexShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader);
@@ -426,7 +426,7 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 		HResult CreateGeometryShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader);
 
 		[VtblIndex(14)]
-		HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, SODeclarationEntry* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader);
+		HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, D3D11_SO_DECLARATION_ENTRY* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader);
 
 		[VtblIndex(15)]
 		HResult CreatePixelShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader);
@@ -444,25 +444,25 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 		HResult CreateClassLinkage(ID3D11ClassLinkage** ppLinkage);
 
 		[VtblIndex(20)]
-		HResult CreateBlendState(BlendDescription* pBlendStateDesc, ID3D11BlendState** ppBlendState);
+		HResult CreateBlendState(D3D11_BLEND_DESC* pBlendStateDesc, ID3D11BlendState** ppBlendState);
 
 		[VtblIndex(21)]
-		HResult CreateDepthStencilState(DepthStencilDescription* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState);
+		HResult CreateDepthStencilState(D3D11_DEPTH_STENCIL_DESC* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState);
 
 		[VtblIndex(22)]
-		HResult CreateRasterizerState(RasterizerDescription* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState);
+		HResult CreateRasterizerState(D3D11_RASTERIZER_DESC* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState);
 
 		[VtblIndex(23)]
-		HResult CreateSamplerState(SamplerDescription* pSamplerDesc, ID3D11SamplerState** ppSamplerState);
+		HResult CreateSamplerState(D3D11_SAMPLER_DESC* pSamplerDesc, ID3D11SamplerState** ppSamplerState);
 
 		[VtblIndex(24)]
-		HResult CreateQuery(QueryDescription* pQueryDesc, ID3D11Query** ppQuery);
+		HResult CreateQuery(D3D11_QUERY_DESC* pQueryDesc, ID3D11Query** ppQuery);
 
 		[VtblIndex(25)]
-		HResult CreatePredicate(QueryDescription* pPredicateDesc, ID3D11Predicate** ppPredicate);
+		HResult CreatePredicate(D3D11_QUERY_DESC* pPredicateDesc, ID3D11Predicate** ppPredicate);
 
 		[VtblIndex(26)]
-		HResult CreateCounter(CounterDescription* pCounterDesc, ID3D11Counter** ppCounter);
+		HResult CreateCounter(D3D11_COUNTER_DESC* pCounterDesc, ID3D11Counter** ppCounter);
 
 		[VtblIndex(27)]
 		HResult CreateDeferredContext(uint ContextFlags, ID3D11DeviceContext** ppDeferredContext);
@@ -471,19 +471,19 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 		HResult OpenSharedResource(Handle hResource, Guid* ReturnedInterface, void** ppResource);
 
 		[VtblIndex(29)]
-		HResult CheckFormatSupport(Graphics.Dxgi.Common.Format Format, uint* pFormatSupport);
+		HResult CheckFormatSupport(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint* pFormatSupport);
 
 		[VtblIndex(30)]
-		HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint* pNumQualityLevels);
+		HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint SampleCount, uint* pNumQualityLevels);
 
 		[VtblIndex(31)]
-		void CheckCounterInfo(CounterInfo* pCounterInfo);
+		void CheckCounterInfo(D3D11_COUNTER_INFO* pCounterInfo);
 
 		[VtblIndex(32)]
-		HResult CheckCounter(CounterDescription* pDesc, CounterType* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength);
+		HResult CheckCounter(D3D11_COUNTER_DESC* pDesc, D3D11_COUNTER_TYPE* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength);
 
 		[VtblIndex(33)]
-		HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
+		HResult CheckFeatureSupport(D3D11_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
 
 		[VtblIndex(34)]
 		HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData);
@@ -495,7 +495,7 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 		HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData);
 
 		[VtblIndex(37)]
-		Graphics.Direct3D.FeatureLevel GetFeatureLevel();
+		Graphics.Direct3D.D3D_FEATURE_LEVEL GetFeatureLevel();
 
 		[VtblIndex(38)]
 		uint GetCreationFlags();

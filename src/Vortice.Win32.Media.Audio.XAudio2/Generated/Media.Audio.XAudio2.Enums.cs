@@ -7,25 +7,23 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_BUFFER_FLAGS"]/*' />
 /// <unmanaged>XAPO_BUFFER_FLAGS</unmanaged>
-[Flags]
-public enum XAPOBufferFlags
+public enum XAPO_BUFFER_FLAGS
 {
-	None = 0,
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_BUFFER_FLAGS::XAPO_BUFFER_SILENT"]/*' />
 	/// <unmanaged>XAPO_BUFFER_SILENT</unmanaged>
-	Silent = 0,
+	XAPO_BUFFER_SILENT = 0,
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_BUFFER_FLAGS::XAPO_BUFFER_VALID"]/*' />
 	/// <unmanaged>XAPO_BUFFER_VALID</unmanaged>
-	Valid = 1,
+	XAPO_BUFFER_VALID = 1,
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_FILTER_TYPE"]/*' />
 /// <unmanaged>XAUDIO2_FILTER_TYPE</unmanaged>
-public enum FilterType
+public enum XAUDIO2_FILTER_TYPE
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_FILTER_TYPE::LowPassFilter"]/*' />
 	/// <unmanaged>LowPassFilter</unmanaged>

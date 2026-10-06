@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession"]/*' />
 /// <unmanaged>ID3D12ShaderCacheSession</unmanaged>
@@ -137,10 +137,9 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public ShaderCacheSessionDescription GetDesc()
+	public D3D12_SHADER_CACHE_SESSION_DESC GetDesc()
 	{
-		ShaderCacheSessionDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, ShaderCacheSessionDescription*, ShaderCacheSessionDescription*>)(lpVtbl[11]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, D3D12_SHADER_CACHE_SESSION_DESC>)(lpVtbl[11]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12DeviceChild.Interface
@@ -155,7 +154,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 		void SetDeleteOnDestroy();
 
 		[VtblIndex(11)]
-		ShaderCacheSessionDescription GetDesc();
+		D3D12_SHADER_CACHE_SESSION_DESC GetDesc();
 	}
 }
 

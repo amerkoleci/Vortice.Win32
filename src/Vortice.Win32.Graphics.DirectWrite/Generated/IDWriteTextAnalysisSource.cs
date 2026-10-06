@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource"]/*' />
 /// <unmanaged>IDWriteTextAnalysisSource</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetParagraphReadingDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public ReadingDirection GetParagraphReadingDirection()
+	public DWRITE_READING_DIRECTION GetParagraphReadingDirection()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, DWRITE_READING_DIRECTION>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetLocaleName"]/*' />
@@ -119,7 +119,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 		HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength);
 
 		[VtblIndex(5)]
-		ReadingDirection GetParagraphReadingDirection();
+		DWRITE_READING_DIRECTION GetParagraphReadingDirection();
 
 		[VtblIndex(6)]
 		HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName);

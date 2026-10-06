@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory"]/*' />
 /// <unmanaged>IDXGIFactory</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult MakeWindowAssociation(nint WindowHandle, WindowAssociationFlags Flags)
+	public HResult MakeWindowAssociation(nint WindowHandle, DXGI_MWA_FLAGS Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory*, nint, WindowAssociationFlags, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory*, nint, DXGI_MWA_FLAGS, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
@@ -129,9 +129,9 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::CreateSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	public HResult CreateSwapChain(IUnknown* pDevice, DXGI_SWAP_CHAIN_DESC* pDesc, IDXGISwapChain** ppSwapChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory*, IUnknown*, DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::CreateSoftwareAdapter"]/*' />
@@ -148,13 +148,13 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface, INativeGuid
 		HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter);
 
 		[VtblIndex(8)]
-		HResult MakeWindowAssociation(nint WindowHandle, WindowAssociationFlags Flags);
+		HResult MakeWindowAssociation(nint WindowHandle, DXGI_MWA_FLAGS Flags);
 
 		[VtblIndex(9)]
 		HResult GetWindowAssociation(nint* pWindowHandle);
 
 		[VtblIndex(10)]
-		HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain);
+		HResult CreateSwapChain(IUnknown* pDevice, DXGI_SWAP_CHAIN_DESC* pDesc, IDXGISwapChain** ppSwapChain);
 
 		[VtblIndex(11)]
 		HResult CreateSoftwareAdapter(nint Module, IDXGIAdapter** ppAdapter);

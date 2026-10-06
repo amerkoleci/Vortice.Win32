@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle"]/*' />
 /// <unmanaged>ID2D1InkStyle</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetNibShape(InkNibShape nibShape)
+	public void SetNibShape(D2D1_INK_NIB_SHAPE nibShape)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1InkStyle*, InkNibShape, void>)(lpVtbl[6]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), nibShape);
+		((delegate* unmanaged[MemberFunction]<ID2D1InkStyle*, D2D1_INK_NIB_SHAPE, void>)(lpVtbl[6]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), nibShape);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public InkNibShape GetNibShape()
+	public D2D1_INK_NIB_SHAPE GetNibShape()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1InkStyle*, InkNibShape>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1InkStyle*, D2D1_INK_NIB_SHAPE>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -119,10 +119,10 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 		void GetNibTransform(Matrix3x2* transform);
 
 		[VtblIndex(6)]
-		void SetNibShape(InkNibShape nibShape);
+		void SetNibShape(D2D1_INK_NIB_SHAPE nibShape);
 
 		[VtblIndex(7)]
-		InkNibShape GetNibShape();
+		D2D1_INK_NIB_SHAPE GetNibShape();
 	}
 }
 

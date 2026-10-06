@@ -7,40 +7,40 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D.Common;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT"]/*' />
 /// <unmanaged>D2D1_PIXEL_FORMAT</unmanaged>
-public partial struct PixelFormat
+public partial struct D2D1_PIXEL_FORMAT
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::format"]/*' />
-	public Graphics.Dxgi.Common.Format format;
+	public DXGI_FORMAT format;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::alphaMode"]/*' />
-	public AlphaMode alphaMode;
+	public D2D1_ALPHA_MODE alphaMode;
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP"]/*' />
 /// <unmanaged>D2D1_GRADIENT_STOP</unmanaged>
-public partial struct GradientStop
+public partial struct D2D1_GRADIENT_STOP
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::position"]/*' />
 	public float position;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
-	public Color4 color;
+	public D2D1_COLOR_F color;
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_BEZIER_SEGMENT</unmanaged>
-public partial struct BezierSegment
+public partial struct D2D1_BEZIER_SEGMENT
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point1"]/*' />
-	public Vector2 point1;
+	public D2D_POINT_2F point1;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point2"]/*' />
-	public Vector2 point2;
+	public D2D_POINT_2F point2;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point3"]/*' />
-	public Vector2 point3;
+	public D2D_POINT_2F point3;
 }

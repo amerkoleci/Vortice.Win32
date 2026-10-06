@@ -7,11 +7,11 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class DWrite
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWriteCreateFactory"]/*' />
 	[LibraryImport("DWrite.dll")]
-	public static partial HResult DWriteCreateFactory(FactoryType factoryType, Guid* iid, void** factory);
+	public static partial HResult DWriteCreateFactory(DWRITE_FACTORY_TYPE factoryType, Guid* iid, void** factory);
 }

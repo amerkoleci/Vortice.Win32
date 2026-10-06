@@ -9,9 +9,9 @@ using Vortice.Win32.Graphics.Direct3D;
 using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Apis;
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class D3D12
 {
     public static uint D3D12CalcSubresource(uint MipSlice, uint ArraySlice, uint PlaneSlice, uint MipLevels, uint ArraySize)
     {
@@ -37,8 +37,8 @@ public static unsafe partial class Apis
     }
 
     public static void MemcpySubresource(
-        MemcpyDest* pDest,
-        SubresourceData* pSrc,
+        D3D12_MEMCPY_DEST* pDest,
+        D3D12_SUBRESOURCE_DATA* pSrc,
         nuint RowSizeInBytes,
         uint NumRows,
         uint NumSlices)
@@ -61,9 +61,9 @@ public static unsafe partial class Apis
     }
 
     public static void MemcpySubresource(
-        MemcpyDest* pDest,
+        D3D12_MEMCPY_DEST* pDest,
         void* pResourceData,
-        SubresourceInfo* pSrc,
+        D3D12_SUBRESOURCE_INFO* pSrc,
         nuint RowSizeInBytes, uint NumRows, uint NumSlices)
     {
         for (var z = 0u; z < NumSlices; ++z)
@@ -85,13 +85,13 @@ public static unsafe partial class Apis
 
     public static byte D3D12GetFormatPlaneCount(ID3D12Device* device, Format format)
     {
-        FeatureDataFormatInfo formatInfo = new()
+        D3D12_FEATURE_DATA_FORMAT_INFO formatInfo = new()
         {
             Format = format,
             PlaneCount = 0,
         };
 
-        if (device->CheckFeatureSupport(D3D12_FEATURE_FORMAT_INFO, &formatInfo, sizeof(FeatureDataFormatInfo)).Failure)
+        if (device->CheckFeatureSupport(D3D12_FEATURE_FORMAT_INFO, &formatInfo, sizeof(D3D12_FEATURE_DATA_FORMAT_INFO)).Failure)
         {
             return 0;
         }
@@ -122,13 +122,13 @@ public static unsafe partial class Apis
         uint FirstSubresource,
         uint NumSubresources,
         ulong RequiredSize,
-        PlacedSubresourceFootprint* pLayouts,
+        D3D12_PLACED_SUBRESOURCE_FOOTPRINT* pLayouts,
         uint* pNumRows,
         ulong* pRowSizesInBytes,
-        SubresourceData* pSrcData)
+        D3D12_SUBRESOURCE_DATA* pSrcData)
     {
-        ResourceDescription IntermediateDesc = pIntermediate->GetDesc();
-        ResourceDescription DestinationDesc = pDestinationResource->GetDesc();
+        D3D12_RESOURCE_DESC IntermediateDesc = pIntermediate->GetDesc();
+        D3D12_RESOURCE_DESC DestinationDesc = pDestinationResource->GetDesc();
 
         if (IntermediateDesc.Dimension != D3D12_RESOURCE_DIMENSION_BUFFER ||
             IntermediateDesc.Width < RequiredSize + pLayouts[0].Offset ||
@@ -153,7 +153,7 @@ public static unsafe partial class Apis
                 return 0;
             }
 
-            MemcpyDest DestData = new MemcpyDest
+            D3D12_MEMCPY_DEST DestData = new()
             {
                 pData = pData + pLayouts[i].Offset,
                 RowPitch = pLayouts[i].Footprint.RowPitch,
@@ -171,8 +171,8 @@ public static unsafe partial class Apis
         {
             for (uint i = 0; i < NumSubresources; ++i)
             {
-                TextureCopyLocation Dst = new(pDestinationResource, i + FirstSubresource);
-                TextureCopyLocation Src = new(pIntermediate, pLayouts[i]);
+                D3D12_TEXTURE_COPY_LOCATION Dst = new(pDestinationResource, i + FirstSubresource);
+                D3D12_TEXTURE_COPY_LOCATION Src = new(pIntermediate, pLayouts[i]);
 
                 pCmdList->CopyTextureRegion(&Dst, 0, 0, 0, &Src, null);
             }
@@ -188,11 +188,11 @@ public static unsafe partial class Apis
         uint FirstSubresource,
         uint NumSubresources,
         ulong RequiredSize,
-        PlacedSubresourceFootprint* pLayouts,
+        D3D12_PLACED_SUBRESOURCE_FOOTPRINT* pLayouts,
         uint* pNumRows,
         ulong* pRowSizesInBytes,
         void* pResourceData,
-        SubresourceInfo* pSrcData)
+        D3D12_SUBRESOURCE_INFO* pSrcData)
     {
         var IntermediateDesc = pIntermediate->GetDesc();
         var DestinationDesc = pDestinationResource->GetDesc();
@@ -220,7 +220,7 @@ public static unsafe partial class Apis
                 return 0;
             }
 
-            MemcpyDest DestData = new MemcpyDest
+            D3D12_MEMCPY_DEST DestData = new()
             {
                 pData = pData + pLayouts[i].Offset,
                 RowPitch = (nuint)pLayouts[i].Footprint.RowPitch,
@@ -237,10 +237,10 @@ public static unsafe partial class Apis
         }
         else
         {
-            for (var i = 0u; i < NumSubresources; ++i)
+            for (uint i = 0u; i < NumSubresources; ++i)
             {
-                TextureCopyLocation Dst = new(pDestinationResource, i + FirstSubresource);
-                TextureCopyLocation Src = new(pIntermediate, pLayouts[i]);
+                D3D12_TEXTURE_COPY_LOCATION Dst = new(pDestinationResource, i + FirstSubresource);
+                D3D12_TEXTURE_COPY_LOCATION Src = new(pIntermediate, pLayouts[i]);
                 pCmdList->CopyTextureRegion(&Dst, 0, 0, 0, &Src, null);
             }
         }
@@ -254,10 +254,10 @@ public static unsafe partial class Apis
         ulong IntermediateOffset,
         uint FirstSubresource,
         uint NumSubresources,
-        SubresourceData* pSrcData)
+        D3D12_SUBRESOURCE_DATA* pSrcData)
     {
         ulong RequiredSize = 0;
-        ulong MemToAlloc = (ulong)(sizeof(PlacedSubresourceFootprint) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
+        ulong MemToAlloc = (ulong)(sizeof(D3D12_PLACED_SUBRESOURCE_FOOTPRINT) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
 
         if (MemToAlloc > unchecked((nuint)(-1)))
         {
@@ -271,7 +271,7 @@ public static unsafe partial class Apis
             return 0;
         }
 
-        var pLayouts = (PlacedSubresourceFootprint*)pMem;
+        var pLayouts = (D3D12_PLACED_SUBRESOURCE_FOOTPRINT*)pMem;
         ulong* pRowSizesInBytes = (ulong*)(pLayouts + NumSubresources);
         uint* pNumRows = (uint*)(pRowSizesInBytes + NumSubresources);
 
@@ -296,10 +296,10 @@ public static unsafe partial class Apis
         uint FirstSubresource,
         uint NumSubresources,
         void* pResourceData,
-        SubresourceInfo* pSrcData)
+        D3D12_SUBRESOURCE_INFO* pSrcData)
     {
         ulong RequiredSize = 0;
-        ulong MemToAlloc = (ulong)(sizeof(PlacedSubresourceFootprint) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
+        ulong MemToAlloc = (ulong)(sizeof(D3D12_PLACED_SUBRESOURCE_FOOTPRINT) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
 
         if (MemToAlloc > unchecked((nuint)(-1)))
         {
@@ -313,7 +313,7 @@ public static unsafe partial class Apis
             return 0;
         }
 
-        var pLayouts = (PlacedSubresourceFootprint*)pMem;
+        var pLayouts = (D3D12_PLACED_SUBRESOURCE_FOOTPRINT*)pMem;
         ulong* pRowSizesInBytes = (ulong*)(pLayouts + NumSubresources);
         uint* pNumRows = (uint*)(pRowSizesInBytes + NumSubresources);
 
@@ -338,10 +338,10 @@ public static unsafe partial class Apis
         ulong IntermediateOffset,
         uint FirstSubresource,
         uint NumSubresources,
-        SubresourceData* pSrcData)
+        D3D12_SUBRESOURCE_DATA* pSrcData)
     {
         ulong RequiredSize = 0;
-        PlacedSubresourceFootprint* Layouts = stackalloc PlacedSubresourceFootprint[(int)MaxSubresources];
+        D3D12_PLACED_SUBRESOURCE_FOOTPRINT* Layouts = stackalloc D3D12_PLACED_SUBRESOURCE_FOOTPRINT[(int)MaxSubresources];
         uint* NumRows = stackalloc uint[(int)MaxSubresources];
         ulong* RowSizesInBytes = stackalloc ulong[(int)MaxSubresources];
 
@@ -365,10 +365,10 @@ public static unsafe partial class Apis
         uint FirstSubresource,
         uint NumSubresources,
         void* pResourceData,
-        SubresourceInfo* pSrcData)
+        D3D12_SUBRESOURCE_INFO* pSrcData)
     {
         ulong RequiredSize = 0;
-        PlacedSubresourceFootprint* Layouts = stackalloc PlacedSubresourceFootprint[(int)MaxSubresources];
+        D3D12_PLACED_SUBRESOURCE_FOOTPRINT* Layouts = stackalloc D3D12_PLACED_SUBRESOURCE_FOOTPRINT[(int)MaxSubresources];
         uint* NumRows = stackalloc uint[(int)MaxSubresources];
         ulong* RowSizesInBytes = stackalloc ulong[(int)MaxSubresources];
 
@@ -389,7 +389,7 @@ public static unsafe partial class Apis
     }
 
     public static HResult D3D12SerializeVersionedRootSignature(
-        VersionedRootSignatureDescription* pRootSignatureDesc,
+        D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pRootSignatureDesc,
         D3D_ROOT_SIGNATURE_VERSION MaxVersion,
         ID3DBlob** ppBlob,
         ID3DBlob** ppErrorBlob)
@@ -408,100 +408,100 @@ public static unsafe partial class Apis
                         return D3D12SerializeRootSignature(&pRootSignatureDesc->Anonymous.Desc_1_0, D3D_ROOT_SIGNATURE_VERSION_1_0, ppBlob, ppErrorBlob);
 
                     case D3D_ROOT_SIGNATURE_VERSION_1_1:
+                    {
+                        HResult hr = HResult.Ok;
+                        ref readonly D3D12_ROOT_SIGNATURE_DESC1 desc_1_1 = ref pRootSignatureDesc->Anonymous.Desc_1_1;
+
+                        nuint ParametersSize = (uint)sizeof(D3D12_ROOT_PARAMETER) * desc_1_1.NumParameters;
+                        void* pParameters = ((ulong)ParametersSize > 0) ? HeapAlloc(GetProcessHeap(), 0, ParametersSize) : null;
+
+                        if ((ulong)ParametersSize > 0 && pParameters == null)
                         {
-                            HResult hr = HResult.Ok;
-                            ref readonly RootSignatureDescription1 desc_1_1 = ref pRootSignatureDesc->Anonymous.Desc_1_1;
-
-                            nuint ParametersSize = (uint)sizeof(RootParameter) * desc_1_1.NumParameters;
-                            void* pParameters = ((ulong)ParametersSize > 0) ? HeapAlloc(GetProcessHeap(), 0, ParametersSize) : null;
-
-                            if ((ulong)ParametersSize > 0 && pParameters == null)
-                            {
-                                hr = HResult.OutOfMemory;
-                            }
-
-                            var pParameters_1_0 = (RootParameter*)pParameters;
-
-                            if (hr.Success)
-                            {
-                                for (uint n = 0; n < desc_1_1.NumParameters; n++)
-                                {
-                                    Debug.Assert((long)ParametersSize == (sizeof(RootParameter) * desc_1_1.NumParameters));
-
-                                    pParameters_1_0[n].ParameterType = desc_1_1.pParameters[n].ParameterType;
-                                    pParameters_1_0[n].ShaderVisibility = desc_1_1.pParameters[n].ShaderVisibility;
-
-                                    switch (desc_1_1.pParameters[n].ParameterType)
-                                    {
-                                        case D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS:
-                                            pParameters_1_0[n].Anonymous.Constants.Num32BitValues = desc_1_1.pParameters[n].Anonymous.Constants.Num32BitValues;
-                                            pParameters_1_0[n].Anonymous.Constants.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Constants.RegisterSpace;
-                                            pParameters_1_0[n].Anonymous.Constants.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Constants.ShaderRegister;
-                                            break;
-
-                                        case D3D12_ROOT_PARAMETER_TYPE_CBV:
-                                        case D3D12_ROOT_PARAMETER_TYPE_SRV:
-                                        case D3D12_ROOT_PARAMETER_TYPE_UAV:
-                                            pParameters_1_0[n].Anonymous.Descriptor.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Descriptor.RegisterSpace;
-                                            pParameters_1_0[n].Anonymous.Descriptor.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Descriptor.ShaderRegister;
-                                            break;
-
-                                        case D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE:
-                                            ref readonly RootDescriptorTable1 table_1_1 = ref desc_1_1.pParameters[n].Anonymous.DescriptorTable;
-
-                                            nuint DescriptorRangesSize = (uint)sizeof(DescriptorRange) * table_1_1.NumDescriptorRanges;
-                                            void* pDescriptorRanges = ((ulong)DescriptorRangesSize > 0 && hr.Success) ? HeapAlloc(GetProcessHeap(), 0, DescriptorRangesSize) : null;
-
-                                            if ((ulong)DescriptorRangesSize > 0 && pDescriptorRanges == null)
-                                            {
-                                                hr = HResult.OutOfMemory;
-                                            }
-
-                                            var pDescriptorRanges_1_0 = (DescriptorRange*)pDescriptorRanges;
-
-                                            if (hr.Success)
-                                            {
-                                                for (uint x = 0; x < table_1_1.NumDescriptorRanges; x++)
-                                                {
-                                                    Debug.Assert((long)DescriptorRangesSize == (sizeof(DescriptorRange) * table_1_1.NumDescriptorRanges));
-
-                                                    pDescriptorRanges_1_0[x].BaseShaderRegister = table_1_1.pDescriptorRanges[x].BaseShaderRegister;
-                                                    pDescriptorRanges_1_0[x].NumDescriptors = table_1_1.pDescriptorRanges[x].NumDescriptors;
-                                                    pDescriptorRanges_1_0[x].OffsetInDescriptorsFromTableStart = table_1_1.pDescriptorRanges[x].OffsetInDescriptorsFromTableStart;
-                                                    pDescriptorRanges_1_0[x].RangeType = table_1_1.pDescriptorRanges[x].RangeType;
-                                                    pDescriptorRanges_1_0[x].RegisterSpace = table_1_1.pDescriptorRanges[x].RegisterSpace;
-                                                }
-                                            }
-
-                                            ref RootDescriptorTable table_1_0 = ref pParameters_1_0[n].Anonymous.DescriptorTable;
-                                            table_1_0.NumDescriptorRanges = table_1_1.NumDescriptorRanges;
-                                            table_1_0.pDescriptorRanges = pDescriptorRanges_1_0;
-                                            break;
-                                    }
-                                }
-                            }
-
-                            if (hr.Success)
-                            {
-                                RootSignatureDescription desc_1_0 = new RootSignatureDescription(desc_1_1.NumParameters, pParameters_1_0, desc_1_1.NumStaticSamplers, desc_1_1.pStaticSamplers, desc_1_1.Flags);
-                                hr = D3D12SerializeRootSignature(&desc_1_0, D3D_ROOT_SIGNATURE_VERSION_1_0 , ppBlob, ppErrorBlob);
-                            }
-
-                            if (pParameters != null)
-                            {
-                                for (uint n = 0; n < desc_1_1.NumParameters; n++)
-                                {
-                                    if (desc_1_1.pParameters[n].ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE)
-                                    {
-                                        _ = HeapFree(GetProcessHeap(), 0, (void*)pParameters_1_0[n].Anonymous.DescriptorTable.pDescriptorRanges);
-                                    }
-                                }
-
-                                _ = HeapFree(GetProcessHeap(), 0, pParameters);
-                            }
-
-                            return hr;
+                            hr = HResult.OutOfMemory;
                         }
+
+                        var pParameters_1_0 = (D3D12_ROOT_PARAMETER*)pParameters;
+
+                        if (hr.Success)
+                        {
+                            for (uint n = 0; n < desc_1_1.NumParameters; n++)
+                            {
+                                Debug.Assert((long)ParametersSize == (sizeof(D3D12_ROOT_PARAMETER) * desc_1_1.NumParameters));
+
+                                pParameters_1_0[n].ParameterType = desc_1_1.pParameters[n].ParameterType;
+                                pParameters_1_0[n].ShaderVisibility = desc_1_1.pParameters[n].ShaderVisibility;
+
+                                switch (desc_1_1.pParameters[n].ParameterType)
+                                {
+                                    case D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS:
+                                        pParameters_1_0[n].Anonymous.Constants.Num32BitValues = desc_1_1.pParameters[n].Anonymous.Constants.Num32BitValues;
+                                        pParameters_1_0[n].Anonymous.Constants.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Constants.RegisterSpace;
+                                        pParameters_1_0[n].Anonymous.Constants.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Constants.ShaderRegister;
+                                        break;
+
+                                    case D3D12_ROOT_PARAMETER_TYPE_CBV:
+                                    case D3D12_ROOT_PARAMETER_TYPE_SRV:
+                                    case D3D12_ROOT_PARAMETER_TYPE_UAV:
+                                        pParameters_1_0[n].Anonymous.Descriptor.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Descriptor.RegisterSpace;
+                                        pParameters_1_0[n].Anonymous.Descriptor.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Descriptor.ShaderRegister;
+                                        break;
+
+                                    case D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE:
+                                        ref readonly D3D12_ROOT_DESCRIPTOR_TABLE1 table_1_1 = ref desc_1_1.pParameters[n].Anonymous.DescriptorTable;
+
+                                        nuint DescriptorRangesSize = (uint)sizeof(D3D12_DESCRIPTOR_RANGE) * table_1_1.NumDescriptorRanges;
+                                        void* pDescriptorRanges = ((ulong)DescriptorRangesSize > 0 && hr.Success) ? HeapAlloc(GetProcessHeap(), 0, DescriptorRangesSize) : null;
+
+                                        if ((ulong)DescriptorRangesSize > 0 && pDescriptorRanges == null)
+                                        {
+                                            hr = HResult.OutOfMemory;
+                                        }
+
+                                        var pDescriptorRanges_1_0 = (D3D12_DESCRIPTOR_RANGE*)pDescriptorRanges;
+
+                                        if (hr.Success)
+                                        {
+                                            for (uint x = 0; x < table_1_1.NumDescriptorRanges; x++)
+                                            {
+                                                Debug.Assert((long)DescriptorRangesSize == (sizeof(D3D12_DESCRIPTOR_RANGE) * table_1_1.NumDescriptorRanges));
+
+                                                pDescriptorRanges_1_0[x].BaseShaderRegister = table_1_1.pDescriptorRanges[x].BaseShaderRegister;
+                                                pDescriptorRanges_1_0[x].NumDescriptors = table_1_1.pDescriptorRanges[x].NumDescriptors;
+                                                pDescriptorRanges_1_0[x].OffsetInDescriptorsFromTableStart = table_1_1.pDescriptorRanges[x].OffsetInDescriptorsFromTableStart;
+                                                pDescriptorRanges_1_0[x].RangeType = table_1_1.pDescriptorRanges[x].RangeType;
+                                                pDescriptorRanges_1_0[x].RegisterSpace = table_1_1.pDescriptorRanges[x].RegisterSpace;
+                                            }
+                                        }
+
+                                        ref D3D12_ROOT_DESCRIPTOR_TABLE table_1_0 = ref pParameters_1_0[n].Anonymous.DescriptorTable;
+                                        table_1_0.NumDescriptorRanges = table_1_1.NumDescriptorRanges;
+                                        table_1_0.pDescriptorRanges = pDescriptorRanges_1_0;
+                                        break;
+                                }
+                            }
+                        }
+
+                        if (hr.Success)
+                        {
+                            D3D12_ROOT_SIGNATURE_DESC desc_1_0 = new D3D12_ROOT_SIGNATURE_DESC(desc_1_1.NumParameters, pParameters_1_0, desc_1_1.NumStaticSamplers, desc_1_1.pStaticSamplers, desc_1_1.Flags);
+                            hr = D3D12SerializeRootSignature(&desc_1_0, D3D_ROOT_SIGNATURE_VERSION_1_0, ppBlob, ppErrorBlob);
+                        }
+
+                        if (pParameters != null)
+                        {
+                            for (uint n = 0; n < desc_1_1.NumParameters; n++)
+                            {
+                                if (desc_1_1.pParameters[n].ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE)
+                                {
+                                    _ = HeapFree(GetProcessHeap(), 0, (void*)pParameters_1_0[n].Anonymous.DescriptorTable.pDescriptorRanges);
+                                }
+                            }
+
+                            _ = HeapFree(GetProcessHeap(), 0, pParameters);
+                        }
+
+                        return hr;
+                    }
                 }
                 break;
 

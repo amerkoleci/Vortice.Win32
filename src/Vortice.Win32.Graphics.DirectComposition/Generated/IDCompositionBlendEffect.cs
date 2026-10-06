@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBlendEffect"]/*' />
 /// <unmanaged>IDCompositionBlendEffect</unmanaged>
@@ -81,15 +81,15 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBlendEffect::SetMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetMode(Graphics.Direct2D.Common.BlendMode mode)
+	public HResult SetMode(Graphics.Direct2D.Common.D2D1_BLEND_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, Graphics.Direct2D.Common.BlendMode, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, Graphics.Direct2D.Common.D2D1_BLEND_MODE, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetMode(Graphics.Direct2D.Common.BlendMode mode);
+		HResult SetMode(Graphics.Direct2D.Common.D2D1_BLEND_MODE mode);
 	}
 }
 

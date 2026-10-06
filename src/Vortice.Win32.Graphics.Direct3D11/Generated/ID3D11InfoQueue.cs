@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue"]/*' />
 /// <unmanaged>ID3D11InfoQueue</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength)
+	public HResult GetMessage(ulong MessageIndex, D3D11_MESSAGE* pMessage, nuint* pMessageByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong, Message*, nuint*, int>)(lpVtbl[5]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong, D3D11_MESSAGE*, nuint*, int>)(lpVtbl[5]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
@@ -145,17 +145,17 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddStorageFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult AddStorageFilterEntries(InfoQueueFilter* pFilter)
+	public HResult AddStorageFilterEntries(D3D11_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[12]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int>)(lpVtbl[12]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	public HResult GetStorageFilter(D3D11_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[13]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::ClearStorageFilter"]/*' />
@@ -185,9 +185,9 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult PushStorageFilter(InfoQueueFilter* pFilter)
+	public HResult PushStorageFilter(D3D11_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[17]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int>)(lpVtbl[17]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PopStorageFilter"]/*' />
@@ -209,17 +209,17 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddRetrievalFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter)
+	public HResult AddRetrievalFilterEntries(D3D11_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[20]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int>)(lpVtbl[20]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	public HResult GetRetrievalFilter(D3D11_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[21]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[21]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::ClearRetrievalFilter"]/*' />
@@ -249,9 +249,9 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult PushRetrievalFilter(InfoQueueFilter* pFilter)
+	public HResult PushRetrievalFilter(D3D11_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[25]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_INFO_QUEUE_FILTER*, int>)(lpVtbl[25]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PopRetrievalFilter"]/*' />
@@ -273,65 +273,65 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte* pDescription)
+	public HResult AddMessage(D3D11_MESSAGE_CATEGORY Category, D3D11_MESSAGE_SEVERITY Severity, D3D11_MESSAGE_ID ID, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, byte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_CATEGORY, D3D11_MESSAGE_SEVERITY, D3D11_MESSAGE_ID, byte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(MessageSeverity Severity, byte* pDescription)
+	public HResult AddApplicationMessage(D3D11_MESSAGE_SEVERITY Severity, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, byte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_SEVERITY, byte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable)
+	public HResult SetBreakOnCategory(D3D11_MESSAGE_CATEGORY Category, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, Bool32, int>)(lpVtbl[30]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_CATEGORY, Bool32, int>)(lpVtbl[30]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable)
+	public HResult SetBreakOnSeverity(D3D11_MESSAGE_SEVERITY Severity, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, Bool32, int>)(lpVtbl[31]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_SEVERITY, Bool32, int>)(lpVtbl[31]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetBreakOnID(MessageId ID, Bool32 bEnable)
+	public HResult SetBreakOnID(D3D11_MESSAGE_ID ID, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageId, Bool32, int>)(lpVtbl[32]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_ID, Bool32, int>)(lpVtbl[32]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public Bool32 GetBreakOnCategory(MessageCategory Category)
+	public Bool32 GetBreakOnCategory(D3D11_MESSAGE_CATEGORY Category)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, Bool32>)(lpVtbl[33]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_CATEGORY, Bool32>)(lpVtbl[33]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Bool32 GetBreakOnSeverity(MessageSeverity Severity)
+	public Bool32 GetBreakOnSeverity(D3D11_MESSAGE_SEVERITY Severity)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, Bool32>)(lpVtbl[34]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_SEVERITY, Bool32>)(lpVtbl[34]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public Bool32 GetBreakOnID(MessageId ID)
+	public Bool32 GetBreakOnID(D3D11_MESSAGE_ID ID)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageId, Bool32>)(lpVtbl[35]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, D3D11_MESSAGE_ID, Bool32>)(lpVtbl[35]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetMuteDebugOutput"]/*' />
@@ -359,7 +359,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		void ClearStoredMessages();
 
 		[VtblIndex(5)]
-		HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength);
+		HResult GetMessage(ulong MessageIndex, D3D11_MESSAGE* pMessage, nuint* pMessageByteLength);
 
 		[VtblIndex(6)]
 		ulong GetNumMessagesAllowedByStorageFilter();
@@ -380,10 +380,10 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		ulong GetMessageCountLimit();
 
 		[VtblIndex(12)]
-		HResult AddStorageFilterEntries(InfoQueueFilter* pFilter);
+		HResult AddStorageFilterEntries(D3D11_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(13)]
-		HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+		HResult GetStorageFilter(D3D11_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength);
 
 		[VtblIndex(14)]
 		void ClearStorageFilter();
@@ -395,7 +395,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		HResult PushCopyOfStorageFilter();
 
 		[VtblIndex(17)]
-		HResult PushStorageFilter(InfoQueueFilter* pFilter);
+		HResult PushStorageFilter(D3D11_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(18)]
 		void PopStorageFilter();
@@ -404,10 +404,10 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		uint GetStorageFilterStackSize();
 
 		[VtblIndex(20)]
-		HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter);
+		HResult AddRetrievalFilterEntries(D3D11_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(21)]
-		HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+		HResult GetRetrievalFilter(D3D11_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength);
 
 		[VtblIndex(22)]
 		void ClearRetrievalFilter();
@@ -419,7 +419,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		HResult PushCopyOfRetrievalFilter();
 
 		[VtblIndex(25)]
-		HResult PushRetrievalFilter(InfoQueueFilter* pFilter);
+		HResult PushRetrievalFilter(D3D11_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(26)]
 		void PopRetrievalFilter();
@@ -428,28 +428,28 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		uint GetRetrievalFilterStackSize();
 
 		[VtblIndex(28)]
-		HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte* pDescription);
+		HResult AddMessage(D3D11_MESSAGE_CATEGORY Category, D3D11_MESSAGE_SEVERITY Severity, D3D11_MESSAGE_ID ID, byte* pDescription);
 
 		[VtblIndex(29)]
-		HResult AddApplicationMessage(MessageSeverity Severity, byte* pDescription);
+		HResult AddApplicationMessage(D3D11_MESSAGE_SEVERITY Severity, byte* pDescription);
 
 		[VtblIndex(30)]
-		HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable);
+		HResult SetBreakOnCategory(D3D11_MESSAGE_CATEGORY Category, Bool32 bEnable);
 
 		[VtblIndex(31)]
-		HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable);
+		HResult SetBreakOnSeverity(D3D11_MESSAGE_SEVERITY Severity, Bool32 bEnable);
 
 		[VtblIndex(32)]
-		HResult SetBreakOnID(MessageId ID, Bool32 bEnable);
+		HResult SetBreakOnID(D3D11_MESSAGE_ID ID, Bool32 bEnable);
 
 		[VtblIndex(33)]
-		Bool32 GetBreakOnCategory(MessageCategory Category);
+		Bool32 GetBreakOnCategory(D3D11_MESSAGE_CATEGORY Category);
 
 		[VtblIndex(34)]
-		Bool32 GetBreakOnSeverity(MessageSeverity Severity);
+		Bool32 GetBreakOnSeverity(D3D11_MESSAGE_SEVERITY Severity);
 
 		[VtblIndex(35)]
-		Bool32 GetBreakOnID(MessageId ID);
+		Bool32 GetBreakOnID(D3D11_MESSAGE_ID ID);
 
 		[VtblIndex(36)]
 		void SetMuteDebugOutput(Bool32 bMute);

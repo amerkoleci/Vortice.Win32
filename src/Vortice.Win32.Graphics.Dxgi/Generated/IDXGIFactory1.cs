@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
 /// <unmanaged>IDXGIFactory1</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult MakeWindowAssociation(nint WindowHandle, WindowAssociationFlags Flags)
+	public HResult MakeWindowAssociation(nint WindowHandle, DXGI_MWA_FLAGS Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, nint, WindowAssociationFlags, int>)(lpVtbl[8]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, nint, DXGI_MWA_FLAGS, int>)(lpVtbl[8]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
@@ -129,9 +129,9 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	public HResult CreateSwapChain(IUnknown* pDevice, DXGI_SWAP_CHAIN_DESC* pDesc, IDXGISwapChain** ppSwapChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, IUnknown*, DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />

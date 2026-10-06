@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup"]/*' />
 /// <unmanaged>ID2D1GeometryGroup</unmanaged>
@@ -113,17 +113,17 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	/// <inheritdoc cref="ID2D1Geometry.CompareWithGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, GeometryRelation* relation)
+	public HResult CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, D2D1_GEOMETRY_RELATION* relation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, ID2D1Geometry*, Matrix3x2*, float, GeometryRelation*, int>)(lpVtbl[8]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), inputGeometry, inputGeometryTransform, flatteningTolerance, relation);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, ID2D1Geometry*, Matrix3x2*, float, D2D1_GEOMETRY_RELATION*, int>)(lpVtbl[8]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), inputGeometry, inputGeometryTransform, flatteningTolerance, relation);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Simplify" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Simplify(GeometrySimplificationOption simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult Simplify(D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, GeometrySimplificationOption, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, D2D1_GEOMETRY_SIMPLIFICATION_OPTION, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Tessellate" />
@@ -137,9 +137,9 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	/// <inheritdoc cref="ID2D1Geometry.CombineWithGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, CombineMode combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, D2D1_COMBINE_MODE combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, ID2D1Geometry*, CombineMode, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, ID2D1Geometry*, D2D1_COMBINE_MODE, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Outline" />
@@ -185,9 +185,9 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetFillMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public Common.FillMode GetFillMode()
+	public Common.D2D1_FILL_MODE GetFillMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, Common.FillMode>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, Common.D2D1_FILL_MODE>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometryCount"]/*' />
@@ -209,7 +209,7 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	public interface Interface : ID2D1Geometry.Interface
 	{
 		[VtblIndex(17)]
-		Common.FillMode GetFillMode();
+		Common.D2D1_FILL_MODE GetFillMode();
 
 		[VtblIndex(18)]
 		uint GetSourceGeometryCount();

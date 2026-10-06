@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class DXGI
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory"]/*' />
 	[LibraryImport("dxgi.dll")]
@@ -21,7 +21,7 @@ public static unsafe partial class Apis
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory2"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult CreateDXGIFactory2(CreateFactoryFlags Flags, Guid* riid, void** ppFactory);
+	public static partial HResult CreateDXGIFactory2(DXGI_CREATE_FACTORY_FLAGS Flags, Guid* riid, void** ppFactory);
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIGetDebugInterface1"]/*' />
 	[LibraryImport("dxgi.dll")]

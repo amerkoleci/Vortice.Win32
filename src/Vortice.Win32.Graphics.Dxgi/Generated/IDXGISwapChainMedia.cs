@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
 /// <unmanaged>IDXGISwapChainMedia</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats)
+	public HResult GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* pStats)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChainMedia*, DXGI_FRAME_STATISTICS_MEDIA*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
@@ -97,7 +97,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats);
+		HResult GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* pStats);
 
 		[VtblIndex(4)]
 		HResult SetPresentDuration(uint Duration);

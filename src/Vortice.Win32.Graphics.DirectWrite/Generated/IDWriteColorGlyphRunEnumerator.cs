@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator"]/*' />
 /// <unmanaged>IDWriteColorGlyphRunEnumerator</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator : IDWriteColorGlyphR
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator::GetCurrentRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCurrentRun(ColorGlyphRun** colorGlyphRun)
+	public HResult GetCurrentRun(DWRITE_COLOR_GLYPH_RUN** colorGlyphRun)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator*)Unsafe.AsPointer(ref this), colorGlyphRun);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator*, DWRITE_COLOR_GLYPH_RUN**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -92,7 +92,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator : IDWriteColorGlyphR
 		HResult MoveNext(Bool32* hasRun);
 
 		[VtblIndex(4)]
-		HResult GetCurrentRun(ColorGlyphRun** colorGlyphRun);
+		HResult GetCurrentRun(DWRITE_COLOR_GLYPH_RUN** colorGlyphRun);
 	}
 }
 

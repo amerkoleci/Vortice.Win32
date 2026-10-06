@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual3"]/*' />
 /// <unmanaged>IDCompositionVisual3</unmanaged>
@@ -137,17 +137,17 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 	/// <inheritdoc cref="IDCompositionVisual.SetBitmapInterpolationMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetBitmapInterpolationMode(BitmapInterpolationMode interpolationMode)
+	public HResult SetBitmapInterpolationMode(DCOMPOSITION_BITMAP_INTERPOLATION_MODE interpolationMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, BitmapInterpolationMode, int>)(lpVtbl[11]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), interpolationMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DCOMPOSITION_BITMAP_INTERPOLATION_MODE, int>)(lpVtbl[11]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetBorderMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetBorderMode(BorderMode borderMode)
+	public HResult SetBorderMode(DCOMPOSITION_BORDER_MODE borderMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, BorderMode, int>)(lpVtbl[12]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), borderMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DCOMPOSITION_BORDER_MODE, int>)(lpVtbl[12]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), borderMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
@@ -201,25 +201,25 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 	/// <inheritdoc cref="IDCompositionVisual.SetCompositeMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetCompositeMode(CompositeMode compositeMode)
+	public HResult SetCompositeMode(DCOMPOSITION_COMPOSITE_MODE compositeMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), compositeMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DCOMPOSITION_COMPOSITE_MODE, int>)(lpVtbl[19]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), compositeMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual2.SetOpacityMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult SetOpacityMode(OpacityMode mode)
+	public HResult SetOpacityMode(DCOMPOSITION_OPACITY_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, OpacityMode, int>)(lpVtbl[20]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DCOMPOSITION_OPACITY_MODE, int>)(lpVtbl[20]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual2.SetBackFaceVisibility" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SetBackFaceVisibility(BackfaceVisibility visibility)
+	public HResult SetBackFaceVisibility(DCOMPOSITION_BACKFACE_VISIBILITY visibility)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), visibility);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DCOMPOSITION_BACKFACE_VISIBILITY, int>)(lpVtbl[21]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), visibility);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisualDebug.EnableHeatMap" />
@@ -257,9 +257,9 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual3::SetDepthMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult SetDepthMode(DepthMode mode)
+	public HResult SetDepthMode(DCOMPOSITION_DEPTH_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DepthMode, int>)(lpVtbl[26]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual3*, DCOMPOSITION_DEPTH_MODE, int>)(lpVtbl[26]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual3::SetOffsetZ"]/*' />
@@ -321,7 +321,7 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 	public interface Interface : IDCompositionVisualDebug.Interface
 	{
 		[VtblIndex(26)]
-		HResult SetDepthMode(DepthMode mode);
+		HResult SetDepthMode(DCOMPOSITION_DEPTH_MODE mode);
 
 		[VtblIndex(27)]
 		HResult SetOffsetZ(IDCompositionAnimation* animation);

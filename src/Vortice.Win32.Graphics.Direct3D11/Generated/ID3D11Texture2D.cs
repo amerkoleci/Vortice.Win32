@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D"]/*' />
 /// <unmanaged>ID3D11Texture2D</unmanaged>
@@ -105,9 +105,9 @@ public unsafe partial struct ID3D11Texture2D : ID3D11Texture2D.Interface, INativ
 	/// <inheritdoc cref="ID3D11Resource.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetType(ResourceDimension* pResourceDimension)
+	public void GetType(D3D11_RESOURCE_DIMENSION* pResourceDimension)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11Texture2D*, ResourceDimension*, void>)(lpVtbl[7]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), pResourceDimension);
+		((delegate* unmanaged[MemberFunction]<ID3D11Texture2D*, D3D11_RESOURCE_DIMENSION*, void>)(lpVtbl[7]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), pResourceDimension);
 	}
 
 	/// <inheritdoc cref="ID3D11Resource.SetEvictionPriority" />
@@ -129,15 +129,15 @@ public unsafe partial struct ID3D11Texture2D : ID3D11Texture2D.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public void GetDesc(Texture2DDescription* pDesc)
+	public void GetDesc(D3D11_TEXTURE2D_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11Texture2D*, Texture2DDescription*, void>)(lpVtbl[10]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11Texture2D*, D3D11_TEXTURE2D_DESC*, void>)(lpVtbl[10]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11Resource.Interface
 	{
 		[VtblIndex(10)]
-		void GetDesc(Texture2DDescription* pDesc);
+		void GetDesc(D3D11_TEXTURE2D_DESC* pDesc);
 	}
 }
 

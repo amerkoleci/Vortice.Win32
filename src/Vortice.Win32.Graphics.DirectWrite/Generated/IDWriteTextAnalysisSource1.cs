@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1"]/*' />
 /// <unmanaged>IDWriteTextAnalysisSource1</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetParagraphReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public ReadingDirection GetParagraphReadingDirection()
+	public DWRITE_READING_DIRECTION GetParagraphReadingDirection()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, DWRITE_READING_DIRECTION>)(lpVtbl[5]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetLocaleName" />
@@ -113,15 +113,15 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, VerticalGlyphOrientation* glyphOrientation, byte* bidiLevel)
+	public HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, DWRITE_VERTICAL_GLYPH_ORIENTATION* glyphOrientation, byte* bidiLevel)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, uint*, VerticalGlyphOrientation*, byte*, int>)(lpVtbl[8]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientation, bidiLevel);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, uint*, DWRITE_VERTICAL_GLYPH_ORIENTATION*, byte*, int>)(lpVtbl[8]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientation, bidiLevel);
 	}
 
 	public interface Interface : IDWriteTextAnalysisSource.Interface
 	{
 		[VtblIndex(8)]
-		HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, VerticalGlyphOrientation* glyphOrientation, byte* bidiLevel);
+		HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, DWRITE_VERTICAL_GLYPH_ORIENTATION* glyphOrientation, byte* bidiLevel);
 	}
 }
 

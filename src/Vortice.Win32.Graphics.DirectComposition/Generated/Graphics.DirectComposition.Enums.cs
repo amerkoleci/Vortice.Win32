@@ -7,115 +7,115 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BITMAP_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_BITMAP_INTERPOLATION_MODE</unmanaged>
-public enum BitmapInterpolationMode
+public enum DCOMPOSITION_BITMAP_INTERPOLATION_MODE
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BITMAP_INTERPOLATION_MODE::DCOMPOSITION_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>DCOMPOSITION_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	DCOMPOSITION_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BITMAP_INTERPOLATION_MODE::DCOMPOSITION_BITMAP_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>DCOMPOSITION_BITMAP_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	DCOMPOSITION_BITMAP_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BITMAP_INTERPOLATION_MODE::DCOMPOSITION_BITMAP_INTERPOLATION_MODE_INHERIT"]/*' />
 	/// <unmanaged>DCOMPOSITION_BITMAP_INTERPOLATION_MODE_INHERIT</unmanaged>
-	Inherit = -1,
+	DCOMPOSITION_BITMAP_INTERPOLATION_MODE_INHERIT = -1,
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BORDER_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_BORDER_MODE</unmanaged>
-public enum BorderMode
+public enum DCOMPOSITION_BORDER_MODE
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BORDER_MODE::DCOMPOSITION_BORDER_MODE_SOFT"]/*' />
 	/// <unmanaged>DCOMPOSITION_BORDER_MODE_SOFT</unmanaged>
-	Soft = 0,
+	DCOMPOSITION_BORDER_MODE_SOFT = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BORDER_MODE::DCOMPOSITION_BORDER_MODE_HARD"]/*' />
 	/// <unmanaged>DCOMPOSITION_BORDER_MODE_HARD</unmanaged>
-	Hard = 1,
+	DCOMPOSITION_BORDER_MODE_HARD = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BORDER_MODE::DCOMPOSITION_BORDER_MODE_INHERIT"]/*' />
 	/// <unmanaged>DCOMPOSITION_BORDER_MODE_INHERIT</unmanaged>
-	Inherit = -1,
+	DCOMPOSITION_BORDER_MODE_INHERIT = -1,
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_COMPOSITE_MODE</unmanaged>
-public enum CompositeMode
+public enum DCOMPOSITION_COMPOSITE_MODE
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE::DCOMPOSITION_COMPOSITE_MODE_SOURCE_OVER"]/*' />
 	/// <unmanaged>DCOMPOSITION_COMPOSITE_MODE_SOURCE_OVER</unmanaged>
-	SourceOver = 0,
+	DCOMPOSITION_COMPOSITE_MODE_SOURCE_OVER = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE::DCOMPOSITION_COMPOSITE_MODE_DESTINATION_INVERT"]/*' />
 	/// <unmanaged>DCOMPOSITION_COMPOSITE_MODE_DESTINATION_INVERT</unmanaged>
-	DestinationInvert = 1,
+	DCOMPOSITION_COMPOSITE_MODE_DESTINATION_INVERT = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE::DCOMPOSITION_COMPOSITE_MODE_MIN_BLEND"]/*' />
 	/// <unmanaged>DCOMPOSITION_COMPOSITE_MODE_MIN_BLEND</unmanaged>
-	MinBlend = 2,
+	DCOMPOSITION_COMPOSITE_MODE_MIN_BLEND = 2,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE::DCOMPOSITION_COMPOSITE_MODE_INHERIT"]/*' />
 	/// <unmanaged>DCOMPOSITION_COMPOSITE_MODE_INHERIT</unmanaged>
-	Inherit = -1,
+	DCOMPOSITION_COMPOSITE_MODE_INHERIT = -1,
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BACKFACE_VISIBILITY"]/*' />
 /// <unmanaged>DCOMPOSITION_BACKFACE_VISIBILITY</unmanaged>
-public enum BackfaceVisibility
+public enum DCOMPOSITION_BACKFACE_VISIBILITY
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BACKFACE_VISIBILITY::DCOMPOSITION_BACKFACE_VISIBILITY_VISIBLE"]/*' />
 	/// <unmanaged>DCOMPOSITION_BACKFACE_VISIBILITY_VISIBLE</unmanaged>
-	Visible = 0,
+	DCOMPOSITION_BACKFACE_VISIBILITY_VISIBLE = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BACKFACE_VISIBILITY::DCOMPOSITION_BACKFACE_VISIBILITY_HIDDEN"]/*' />
 	/// <unmanaged>DCOMPOSITION_BACKFACE_VISIBILITY_HIDDEN</unmanaged>
-	Hidden = 1,
+	DCOMPOSITION_BACKFACE_VISIBILITY_HIDDEN = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BACKFACE_VISIBILITY::DCOMPOSITION_BACKFACE_VISIBILITY_INHERIT"]/*' />
 	/// <unmanaged>DCOMPOSITION_BACKFACE_VISIBILITY_INHERIT</unmanaged>
-	Inherit = -1,
+	DCOMPOSITION_BACKFACE_VISIBILITY_INHERIT = -1,
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_OPACITY_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_OPACITY_MODE</unmanaged>
-public enum OpacityMode
+public enum DCOMPOSITION_OPACITY_MODE
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_OPACITY_MODE::DCOMPOSITION_OPACITY_MODE_LAYER"]/*' />
 	/// <unmanaged>DCOMPOSITION_OPACITY_MODE_LAYER</unmanaged>
-	Layer = 0,
+	DCOMPOSITION_OPACITY_MODE_LAYER = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_OPACITY_MODE::DCOMPOSITION_OPACITY_MODE_MULTIPLY"]/*' />
 	/// <unmanaged>DCOMPOSITION_OPACITY_MODE_MULTIPLY</unmanaged>
-	Multiply = 1,
+	DCOMPOSITION_OPACITY_MODE_MULTIPLY = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_OPACITY_MODE::DCOMPOSITION_OPACITY_MODE_INHERIT"]/*' />
 	/// <unmanaged>DCOMPOSITION_OPACITY_MODE_INHERIT</unmanaged>
-	Inherit = -1,
+	DCOMPOSITION_OPACITY_MODE_INHERIT = -1,
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_DEPTH_MODE</unmanaged>
-public enum DepthMode
+public enum DCOMPOSITION_DEPTH_MODE
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE::DCOMPOSITION_DEPTH_MODE_TREE"]/*' />
 	/// <unmanaged>DCOMPOSITION_DEPTH_MODE_TREE</unmanaged>
-	Tree = 0,
+	DCOMPOSITION_DEPTH_MODE_TREE = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE::DCOMPOSITION_DEPTH_MODE_SPATIAL"]/*' />
 	/// <unmanaged>DCOMPOSITION_DEPTH_MODE_SPATIAL</unmanaged>
-	Spatial = 1,
+	DCOMPOSITION_DEPTH_MODE_SPATIAL = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE::DCOMPOSITION_DEPTH_MODE_SORTED"]/*' />
 	/// <unmanaged>DCOMPOSITION_DEPTH_MODE_SORTED</unmanaged>
-	Sorted = 3,
+	DCOMPOSITION_DEPTH_MODE_SORTED = 3,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE::DCOMPOSITION_DEPTH_MODE_INHERIT"]/*' />
 	/// <unmanaged>DCOMPOSITION_DEPTH_MODE_INHERIT</unmanaged>
-	Inherit = -1,
+	DCOMPOSITION_DEPTH_MODE_INHERIT = -1,
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_ID_TYPE"]/*' />
 /// <unmanaged>COMPOSITION_FRAME_ID_TYPE</unmanaged>
-public enum CompositionFrameIdType
+public enum COMPOSITION_FRAME_ID_TYPE
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_ID_TYPE::COMPOSITION_FRAME_ID_CREATED"]/*' />
 	/// <unmanaged>COMPOSITION_FRAME_ID_CREATED</unmanaged>
-	Created = 0,
+	COMPOSITION_FRAME_ID_CREATED = 0,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_ID_TYPE::COMPOSITION_FRAME_ID_CONFIRMED"]/*' />
 	/// <unmanaged>COMPOSITION_FRAME_ID_CONFIRMED</unmanaged>
-	Confirmed = 1,
+	COMPOSITION_FRAME_ID_CONFIRMED = 1,
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_ID_TYPE::COMPOSITION_FRAME_ID_COMPLETED"]/*' />
 	/// <unmanaged>COMPOSITION_FRAME_ID_COMPLETED</unmanaged>
-	Completed = 2,
+	COMPOSITION_FRAME_ID_COMPLETED = 2,
 }

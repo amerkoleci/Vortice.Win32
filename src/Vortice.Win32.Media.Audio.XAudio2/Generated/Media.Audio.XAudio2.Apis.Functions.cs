@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
-public static unsafe partial class Apis
+public static unsafe partial class XAudio2
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateFX"]/*' />
 	[LibraryImport("xaudio2_9")]

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3"]/*' />
 /// <unmanaged>IDWriteRenderingParams3</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public PixelGeometry GetPixelGeometry()
+	public DWRITE_PIXEL_GEOMETRY GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, DWRITE_PIXEL_GEOMETRY>)(lpVtbl[6]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public RenderingMode GetRenderingMode()
+	public DWRITE_RENDERING_MODE GetRenderingMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, DWRITE_RENDERING_MODE>)(lpVtbl[7]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams1.GetGrayscaleEnhancedContrast" />
@@ -121,23 +121,23 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	/// <inheritdoc cref="IDWriteRenderingParams2.GetGridFitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public GridFitMode GetGridFitMode()
+	public DWRITE_GRID_FIT_MODE GetGridFitMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, DWRITE_GRID_FIT_MODE>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3::GetRenderingMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public RenderingMode1 GetRenderingMode1()
+	public DWRITE_RENDERING_MODE1 GetRenderingMode1()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, RenderingMode1>)(lpVtbl[10]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, DWRITE_RENDERING_MODE1>)(lpVtbl[10]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IDWriteRenderingParams2.Interface
 	{
 		[VtblIndex(10)]
-		RenderingMode1 GetRenderingMode1();
+		DWRITE_RENDERING_MODE1 GetRenderingMode1();
 	}
 }
 

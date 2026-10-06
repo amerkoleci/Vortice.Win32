@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1"]/*' />
 /// <unmanaged>ID3D11RasterizerState1</unmanaged>
@@ -105,23 +105,23 @@ public unsafe partial struct ID3D11RasterizerState1 : ID3D11RasterizerState1.Int
 	/// <inheritdoc cref="ID3D11RasterizerState.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDesc(RasterizerDescription* pDesc)
+	public void GetDesc(D3D11_RASTERIZER_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11RasterizerState1*, RasterizerDescription*, void>)(lpVtbl[7]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11RasterizerState1*, D3D11_RASTERIZER_DESC*, void>)(lpVtbl[7]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc1(RasterizerDescription1* pDesc)
+	public void GetDesc1(D3D11_RASTERIZER_DESC1* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11RasterizerState1*, RasterizerDescription1*, void>)(lpVtbl[8]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11RasterizerState1*, D3D11_RASTERIZER_DESC1*, void>)(lpVtbl[8]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11RasterizerState.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc1(RasterizerDescription1* pDesc);
+		void GetDesc1(D3D11_RASTERIZER_DESC1* pDesc);
 	}
 }
 

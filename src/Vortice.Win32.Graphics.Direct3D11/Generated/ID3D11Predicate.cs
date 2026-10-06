@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Predicate"]/*' />
 /// <unmanaged>ID3D11Predicate</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct ID3D11Predicate : ID3D11Predicate.Interface, INativ
 	/// <inheritdoc cref="ID3D11Query.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(QueryDescription* pDesc)
+	public void GetDesc(D3D11_QUERY_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11Predicate*, QueryDescription*, void>)(lpVtbl[8]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11Predicate*, D3D11_QUERY_DESC*, void>)(lpVtbl[8]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11Query.Interface

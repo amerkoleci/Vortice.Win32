@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily1"]/*' />
 /// <unmanaged>IDWriteFontFamily1</unmanaged>
@@ -105,25 +105,25 @@ public unsafe partial struct IDWriteFontFamily1 : IDWriteFontFamily1.Interface, 
 	/// <inheritdoc cref="IDWriteFontFamily.GetFirstMatchingFont" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetFirstMatchingFont(FontWeight weight, FontStretch stretch, FontStyle style, IDWriteFont** matchingFont)
+	public HResult GetFirstMatchingFont(DWRITE_FONT_WEIGHT weight, DWRITE_FONT_STRETCH stretch, DWRITE_FONT_STYLE style, IDWriteFont** matchingFont)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFamily1*, FontWeight, FontStretch, FontStyle, IDWriteFont**, int>)(lpVtbl[7]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), weight, stretch, style, matchingFont);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFamily1*, DWRITE_FONT_WEIGHT, DWRITE_FONT_STRETCH, DWRITE_FONT_STYLE, IDWriteFont**, int>)(lpVtbl[7]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), weight, stretch, style, matchingFont);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFamily.GetMatchingFonts" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetMatchingFonts(FontWeight weight, FontStretch stretch, FontStyle style, IDWriteFontList** matchingFonts)
+	public HResult GetMatchingFonts(DWRITE_FONT_WEIGHT weight, DWRITE_FONT_STRETCH stretch, DWRITE_FONT_STYLE style, IDWriteFontList** matchingFonts)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFamily1*, FontWeight, FontStretch, FontStyle, IDWriteFontList**, int>)(lpVtbl[8]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), weight, stretch, style, matchingFonts);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFamily1*, DWRITE_FONT_WEIGHT, DWRITE_FONT_STRETCH, DWRITE_FONT_STYLE, IDWriteFontList**, int>)(lpVtbl[8]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), weight, stretch, style, matchingFonts);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Locality GetFontLocality(uint listIndex)
+	public DWRITE_LOCALITY GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFamily1*, uint, Locality>)(lpVtbl[9]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFamily1*, uint, DWRITE_LOCALITY>)(lpVtbl[9]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily1::GetFont"]/*' />
@@ -145,7 +145,7 @@ public unsafe partial struct IDWriteFontFamily1 : IDWriteFontFamily1.Interface, 
 	public interface Interface : IDWriteFontFamily.Interface
 	{
 		[VtblIndex(9)]
-		Locality GetFontLocality(uint listIndex);
+		DWRITE_LOCALITY GetFontLocality(uint listIndex);
 
 		[VtblIndex(10)]
 		HResult GetFont(uint listIndex, IDWriteFont3** font);

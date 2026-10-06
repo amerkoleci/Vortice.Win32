@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams"]/*' />
 /// <unmanaged>IDWriteRenderingParams</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct IDWriteRenderingParams : IDWriteRenderingParams.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetPixelGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public PixelGeometry GetPixelGeometry()
+	public DWRITE_PIXEL_GEOMETRY GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams*, DWRITE_PIXEL_GEOMETRY>)(lpVtbl[6]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetRenderingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public RenderingMode GetRenderingMode()
+	public DWRITE_RENDERING_MODE GetRenderingMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams*, DWRITE_RENDERING_MODE>)(lpVtbl[7]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -122,10 +122,10 @@ public unsafe partial struct IDWriteRenderingParams : IDWriteRenderingParams.Int
 		float GetClearTypeLevel();
 
 		[VtblIndex(6)]
-		PixelGeometry GetPixelGeometry();
+		DWRITE_PIXEL_GEOMETRY GetPixelGeometry();
 
 		[VtblIndex(7)]
-		RenderingMode GetRenderingMode();
+		DWRITE_RENDERING_MODE GetRenderingMode();
 	}
 }
 

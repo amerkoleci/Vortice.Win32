@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>IDxcValidator2</unmanaged>
 [Guid("458e1fd1-b1b2-4750-a6e1-9c10f03bed92")]

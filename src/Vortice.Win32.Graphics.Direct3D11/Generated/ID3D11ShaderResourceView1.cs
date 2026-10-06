@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView1"]/*' />
 /// <unmanaged>ID3D11ShaderResourceView1</unmanaged>
@@ -113,23 +113,23 @@ public unsafe partial struct ID3D11ShaderResourceView1 : ID3D11ShaderResourceVie
 	/// <inheritdoc cref="ID3D11ShaderResourceView.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(ShaderResourceViewDescription* pDesc)
+	public void GetDesc(D3D11_SHADER_RESOURCE_VIEW_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11ShaderResourceView1*, ShaderResourceViewDescription*, void>)(lpVtbl[8]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11ShaderResourceView1*, D3D11_SHADER_RESOURCE_VIEW_DESC*, void>)(lpVtbl[8]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void GetDesc1(ShaderResourceViewDescription1* pDesc1)
+	public void GetDesc1(D3D11_SHADER_RESOURCE_VIEW_DESC1* pDesc1)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11ShaderResourceView1*, ShaderResourceViewDescription1*, void>)(lpVtbl[9]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), pDesc1);
+		((delegate* unmanaged[MemberFunction]<ID3D11ShaderResourceView1*, D3D11_SHADER_RESOURCE_VIEW_DESC1*, void>)(lpVtbl[9]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
 
 	public interface Interface : ID3D11ShaderResourceView.Interface
 	{
 		[VtblIndex(9)]
-		void GetDesc1(ShaderResourceViewDescription1* pDesc1);
+		void GetDesc1(D3D11_SHADER_RESOURCE_VIEW_DESC1* pDesc1);
 	}
 }
 

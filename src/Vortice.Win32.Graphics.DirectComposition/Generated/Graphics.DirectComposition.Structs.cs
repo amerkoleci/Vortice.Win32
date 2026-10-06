@@ -7,17 +7,17 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS"]/*' />
 /// <unmanaged>DCOMPOSITION_FRAME_STATISTICS</unmanaged>
-public partial struct FrameStatistics
+public partial struct DCOMPOSITION_FRAME_STATISTICS
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::lastFrameTime"]/*' />
 	public long lastFrameTime;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::currentCompositionRate"]/*' />
-	public Graphics.Dxgi.Common.Rational currentCompositionRate;
+	public DXGI_RATIONAL currentCompositionRate;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::currentTime"]/*' />
 	public long currentTime;
@@ -31,7 +31,7 @@ public partial struct FrameStatistics
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_STATS"]/*' />
 /// <unmanaged>COMPOSITION_FRAME_STATS</unmanaged>
-public partial struct CompositionFrameStats
+public partial struct COMPOSITION_FRAME_STATS
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_STATS::startTime"]/*' />
 	public ulong startTime;
@@ -45,13 +45,13 @@ public partial struct CompositionFrameStats
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID"]/*' />
 /// <unmanaged>COMPOSITION_TARGET_ID</unmanaged>
-public partial struct CompositionTargetId
+public partial struct COMPOSITION_TARGET_ID
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID::displayAdapterLuid"]/*' />
-	public Luid displayAdapterLuid;
+	public LUID displayAdapterLuid;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID::renderAdapterLuid"]/*' />
-	public Luid renderAdapterLuid;
+	public LUID renderAdapterLuid;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID::vidPnSourceId"]/*' />
 	public uint vidPnSourceId;
@@ -65,7 +65,7 @@ public partial struct CompositionTargetId
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_STATS"]/*' />
 /// <unmanaged>COMPOSITION_STATS</unmanaged>
-public partial struct CompositionStats
+public partial struct COMPOSITION_STATS
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_STATS::presentCount"]/*' />
 	public uint presentCount;
@@ -82,7 +82,7 @@ public partial struct CompositionStats
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_STATS"]/*' />
 /// <unmanaged>COMPOSITION_TARGET_STATS</unmanaged>
-public partial struct CompositionTargetStats
+public partial struct COMPOSITION_TARGET_STATS
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_STATS::outstandingPresents"]/*' />
 	public uint outstandingPresents;
@@ -94,15 +94,15 @@ public partial struct CompositionTargetStats
 	public ulong vblankDuration;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_STATS::presentedStats"]/*' />
-	public CompositionStats presentedStats;
+	public COMPOSITION_STATS presentedStats;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_STATS::completedStats"]/*' />
-	public CompositionStats completedStats;
+	public COMPOSITION_STATS completedStats;
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionInkTrailPoint"]/*' />
 /// <unmanaged>DCompositionInkTrailPoint</unmanaged>
-public partial struct InkTrailPoint
+public partial struct DCompositionInkTrailPoint
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionInkTrailPoint::x"]/*' />
 	public float x;

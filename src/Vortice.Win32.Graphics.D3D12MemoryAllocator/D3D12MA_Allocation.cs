@@ -1,11 +1,9 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D12;
-using static Vortice.Win32.Apis;
-using static Vortice.Win32.Graphics.D3D12MemoryAllocator.Apis;
+using static Vortice.Win32.Graphics.D3D12MA;
 
-namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics;
 
 public readonly record struct D3D12MA_Allocation(nint Handle)
 {

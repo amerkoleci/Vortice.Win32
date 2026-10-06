@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList8"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList8</unmanaged>
@@ -177,9 +177,9 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyTextureRegion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void CopyTextureRegion(TextureCopyLocation* pDst, uint DstX, uint DstY, uint DstZ, TextureCopyLocation* pSrc, Box* pSrcBox)
+	public void CopyTextureRegion(D3D12_TEXTURE_COPY_LOCATION* pDst, uint DstX, uint DstY, uint DstZ, D3D12_TEXTURE_COPY_LOCATION* pSrc, D3D12_BOX* pSrcBox)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, TextureCopyLocation*, uint, uint, uint, TextureCopyLocation*, Box*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDst, DstX, DstY, DstZ, pSrc, pSrcBox);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_TEXTURE_COPY_LOCATION*, uint, uint, uint, D3D12_TEXTURE_COPY_LOCATION*, D3D12_BOX*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDst, DstX, DstY, DstZ, pSrc, pSrcBox);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyResource" />
@@ -193,33 +193,33 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyTiles" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public void CopyTiles(ID3D12Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags)
+	public void CopyTiles(ID3D12Resource* pTiledResource, D3D12_TILED_RESOURCE_COORDINATE* pTileRegionStartCoordinate, D3D12_TILE_REGION_SIZE* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D12Resource*, ulong, D3D12_TILE_COPY_FLAGS, void>)(lpVtbl[18]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, D3D12_TILED_RESOURCE_COORDINATE*, D3D12_TILE_REGION_SIZE*, ID3D12Resource*, ulong, D3D12_TILE_COPY_FLAGS, void>)(lpVtbl[18]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ResolveSubresource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format)
+	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.DXGI_FORMAT, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetPrimitiveTopology" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology PrimitiveTopology)
+	public void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), PrimitiveTopology);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), PrimitiveTopology);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.RSSetViewports" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public void RSSetViewports(uint NumViewports, Viewport* pViewports)
+	public void RSSetViewports(uint NumViewports, D3D12_VIEWPORT* pViewports)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, Viewport*, void>)(lpVtbl[21]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_VIEWPORT*, void>)(lpVtbl[21]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.RSSetScissorRects" />
@@ -257,9 +257,9 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ResourceBarrier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public void ResourceBarrier(uint NumBarriers, ResourceBarrier* pBarriers)
+	public void ResourceBarrier(uint NumBarriers, D3D12_RESOURCE_BARRIER* pBarriers)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, ResourceBarrier*, void>)(lpVtbl[26]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumBarriers, pBarriers);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_RESOURCE_BARRIER*, void>)(lpVtbl[26]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumBarriers, pBarriers);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ExecuteBundle" />
@@ -297,17 +297,17 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootDescriptorTable" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public void SetComputeRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor)
+	public void SetComputeRootDescriptorTable(uint RootParameterIndex, D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, GpuDescriptorHandle, void>)(lpVtbl[31]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_GPU_DESCRIPTOR_HANDLE, void>)(lpVtbl[31]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRootDescriptorTable" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public void SetGraphicsRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor)
+	public void SetGraphicsRootDescriptorTable(uint RootParameterIndex, D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, GpuDescriptorHandle, void>)(lpVtbl[32]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_GPU_DESCRIPTOR_HANDLE, void>)(lpVtbl[32]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRoot32BitConstant" />
@@ -393,73 +393,73 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public void IASetIndexBuffer(IndexBufferView* pView)
+	public void IASetIndexBuffer(D3D12_INDEX_BUFFER_VIEW* pView)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, IndexBufferView*, void>)(lpVtbl[43]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pView);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_INDEX_BUFFER_VIEW*, void>)(lpVtbl[43]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pView);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetVertexBuffers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
-	public void IASetVertexBuffers(uint StartSlot, uint NumViews, VertexBufferView* pViews)
+	public void IASetVertexBuffers(uint StartSlot, uint NumViews, D3D12_VERTEX_BUFFER_VIEW* pViews)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, uint, VertexBufferView*, void>)(lpVtbl[44]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, uint, D3D12_VERTEX_BUFFER_VIEW*, void>)(lpVtbl[44]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SOSetTargets" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void SOSetTargets(uint StartSlot, uint NumViews, StreamOutputBufferView* pViews)
+	public void SOSetTargets(uint StartSlot, uint NumViews, D3D12_STREAM_OUTPUT_BUFFER_VIEW* pViews)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, uint, StreamOutputBufferView*, void>)(lpVtbl[45]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, uint, D3D12_STREAM_OUTPUT_BUFFER_VIEW*, void>)(lpVtbl[45]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.OMSetRenderTargets" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public void OMSetRenderTargets(uint NumRenderTargetDescriptors, CpuDescriptorHandle* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, CpuDescriptorHandle* pDepthStencilDescriptor)
+	public void OMSetRenderTargets(uint NumRenderTargetDescriptors, D3D12_CPU_DESCRIPTOR_HANDLE* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, D3D12_CPU_DESCRIPTOR_HANDLE* pDepthStencilDescriptor)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, CpuDescriptorHandle*, Bool32, CpuDescriptorHandle*, void>)(lpVtbl[46]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumRenderTargetDescriptors, pRenderTargetDescriptors, RTsSingleHandleToDescriptorRange, pDepthStencilDescriptor);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_CPU_DESCRIPTOR_HANDLE*, Bool32, D3D12_CPU_DESCRIPTOR_HANDLE*, void>)(lpVtbl[46]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumRenderTargetDescriptors, pRenderTargetDescriptors, RTsSingleHandleToDescriptorRange, pDepthStencilDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearDepthStencilView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, D3D12_CLEAR_FLAGS ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects)
+	public void ClearDepthStencilView(D3D12_CPU_DESCRIPTOR_HANDLE DepthStencilView, D3D12_CLEAR_FLAGS ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, CpuDescriptorHandle, D3D12_CLEAR_FLAGS, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_CPU_DESCRIPTOR_HANDLE, D3D12_CLEAR_FLAGS, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearRenderTargetView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects)
+	public void ClearRenderTargetView(D3D12_CPU_DESCRIPTOR_HANDLE RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, CpuDescriptorHandle, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_CPU_DESCRIPTOR_HANDLE, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearUnorderedAccessViewUint" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects)
+	public void ClearUnorderedAccessViewUint(D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap, D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_GPU_DESCRIPTOR_HANDLE, D3D12_CPU_DESCRIPTOR_HANDLE, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearUnorderedAccessViewFloat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects)
+	public void ClearUnorderedAccessViewFloat(D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap, D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_GPU_DESCRIPTOR_HANDLE, D3D12_CPU_DESCRIPTOR_HANDLE, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.DiscardResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public void DiscardResource(ID3D12Resource* pResource, DiscardRegion* pRegion)
+	public void DiscardResource(ID3D12Resource* pResource, D3D12_DISCARD_REGION* pRegion)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, DiscardRegion*, void>)(lpVtbl[51]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pResource, pRegion);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, D3D12_DISCARD_REGION*, void>)(lpVtbl[51]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pResource, pRegion);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.BeginQuery" />
@@ -529,17 +529,17 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, D3D12_SUBRESOURCE_RANGE_UINT64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, D3D12_SUBRESOURCE_RANGE_UINT64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, D3D12_SUBRESOURCE_RANGE_UINT64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, D3D12_SUBRESOURCE_RANGE_UINT64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -553,17 +553,17 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.SetSamplePositions" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
-	public void SetSamplePositions(uint NumSamplesPerPixel, uint NumPixels, SamplePosition* pSamplePositions)
+	public void SetSamplePositions(uint NumSamplesPerPixel, uint NumPixels, D3D12_SAMPLE_POSITION* pSamplePositions)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, uint, SamplePosition*, void>)(lpVtbl[63]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumSamplesPerPixel, NumPixels, pSamplePositions);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, uint, D3D12_SAMPLE_POSITION*, void>)(lpVtbl[63]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumSamplesPerPixel, NumPixels, pSamplePositions);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.ResolveSubresourceRegion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, Rect* pSrcRect, Graphics.Dxgi.Common.Format Format, D3D12_RESOLVE_MODE ResolveMode)
+	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, Rect* pSrcRect, Graphics.Dxgi.Common.DXGI_FORMAT Format, D3D12_RESOLVE_MODE ResolveMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, Graphics.Dxgi.Common.Format, D3D12_RESOLVE_MODE, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, Graphics.Dxgi.Common.DXGI_FORMAT, D3D12_RESOLVE_MODE, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.SetViewInstanceMask" />
@@ -577,9 +577,9 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList2.WriteBufferImmediate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
-	public void WriteBufferImmediate(uint Count, WriteBufferImmediateParameter* pParams, D3D12_WRITEBUFFERIMMEDIATE_MODE* pModes)
+	public void WriteBufferImmediate(uint Count, D3D12_WRITEBUFFERIMMEDIATE_PARAMETER* pParams, D3D12_WRITEBUFFERIMMEDIATE_MODE* pModes)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, WriteBufferImmediateParameter*, D3D12_WRITEBUFFERIMMEDIATE_MODE*, void>)(lpVtbl[66]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), Count, pParams, pModes);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_WRITEBUFFERIMMEDIATE_PARAMETER*, D3D12_WRITEBUFFERIMMEDIATE_MODE*, void>)(lpVtbl[66]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), Count, pParams, pModes);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList3.SetProtectedResourceSession" />
@@ -593,9 +593,9 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.BeginRenderPass" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
-	public void BeginRenderPass(uint NumRenderTargets, RenderPassRenderTargetDescription* pRenderTargets, RenderPassDepthStencilDescription* pDepthStencil, D3D12_RENDER_PASS_FLAGS Flags)
+	public void BeginRenderPass(uint NumRenderTargets, D3D12_RENDER_PASS_RENDER_TARGET_DESC* pRenderTargets, D3D12_RENDER_PASS_DEPTH_STENCIL_DESC* pDepthStencil, D3D12_RENDER_PASS_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, RenderPassRenderTargetDescription*, RenderPassDepthStencilDescription*, D3D12_RENDER_PASS_FLAGS, void>)(lpVtbl[68]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumRenderTargets, pRenderTargets, pDepthStencil, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_RENDER_PASS_RENDER_TARGET_DESC*, D3D12_RENDER_PASS_DEPTH_STENCIL_DESC*, D3D12_RENDER_PASS_FLAGS, void>)(lpVtbl[68]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumRenderTargets, pRenderTargets, pDepthStencil, Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.EndRenderPass" />
@@ -625,17 +625,17 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.BuildRaytracingAccelerationStructure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public void BuildRaytracingAccelerationStructure(BuildRaytracingAccelerationStructureDescription* pDesc, uint NumPostbuildInfoDescs, RaytracingAccelerationStructurePostbuildInfoDescription* pPostbuildInfoDescs)
+	public void BuildRaytracingAccelerationStructure(D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC* pDesc, uint NumPostbuildInfoDescs, D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC* pPostbuildInfoDescs)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, BuildRaytracingAccelerationStructureDescription*, uint, RaytracingAccelerationStructurePostbuildInfoDescription*, void>)(lpVtbl[72]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDesc, NumPostbuildInfoDescs, pPostbuildInfoDescs);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC*, uint, D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC*, void>)(lpVtbl[72]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDesc, NumPostbuildInfoDescs, pPostbuildInfoDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.EmitRaytracingAccelerationStructurePostbuildInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
-	public void EmitRaytracingAccelerationStructurePostbuildInfo(RaytracingAccelerationStructurePostbuildInfoDescription* pDesc, uint NumSourceAccelerationStructures, ulong* pSourceAccelerationStructureData)
+	public void EmitRaytracingAccelerationStructurePostbuildInfo(D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC* pDesc, uint NumSourceAccelerationStructures, ulong* pSourceAccelerationStructureData)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, RaytracingAccelerationStructurePostbuildInfoDescription*, uint, ulong*, void>)(lpVtbl[73]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDesc, NumSourceAccelerationStructures, pSourceAccelerationStructureData);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC*, uint, ulong*, void>)(lpVtbl[73]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDesc, NumSourceAccelerationStructures, pSourceAccelerationStructureData);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.CopyRaytracingAccelerationStructure" />
@@ -657,9 +657,9 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.DispatchRays" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public void DispatchRays(DispatchRaysDescription* pDesc)
+	public void DispatchRays(D3D12_DISPATCH_RAYS_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, DispatchRaysDescription*, void>)(lpVtbl[76]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, D3D12_DISPATCH_RAYS_DESC*, void>)(lpVtbl[76]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList5.RSSetShadingRate" />
@@ -689,9 +689,9 @@ public unsafe partial struct ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList7.Barrier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public void Barrier(uint NumBarrierGroups, BarrierGroup* pBarrierGroups)
+	public void Barrier(uint NumBarrierGroups, D3D12_BARRIER_GROUP* pBarrierGroups)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, BarrierGroup*, void>)(lpVtbl[80]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumBarrierGroups, pBarrierGroups);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList8*, uint, D3D12_BARRIER_GROUP*, void>)(lpVtbl[80]))((ID3D12GraphicsCommandList8*)Unsafe.AsPointer(ref this), NumBarrierGroups, pBarrierGroups);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList8::OMSetFrontAndBackStencilRef"]/*' />

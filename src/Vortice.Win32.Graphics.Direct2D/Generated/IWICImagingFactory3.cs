@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Imaging.D2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImagingFactory3"]/*' />
 /// <unmanaged>IWICImagingFactory3</unmanaged>

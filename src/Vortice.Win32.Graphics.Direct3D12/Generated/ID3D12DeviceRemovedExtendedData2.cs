@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2"]/*' />
 /// <unmanaged>ID3D12DeviceRemovedExtendedData2</unmanaged>
@@ -73,41 +73,41 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemo
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedData.GetAutoBreadcrumbsOutput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAutoBreadcrumbsOutput(DredAutoBreadcrumbsOutput* pOutput)
+	public HResult GetAutoBreadcrumbsOutput(D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, DredAutoBreadcrumbsOutput*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedData.GetPageFaultAllocationOutput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPageFaultAllocationOutput(DredPageFaultOutput* pOutput)
+	public HResult GetPageFaultAllocationOutput(D3D12_DRED_PAGE_FAULT_OUTPUT* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, DredPageFaultOutput*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, D3D12_DRED_PAGE_FAULT_OUTPUT*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedData1.GetAutoBreadcrumbsOutput1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetAutoBreadcrumbsOutput1(DredAutoBreadcrumbsOutput1* pOutput)
+	public HResult GetAutoBreadcrumbsOutput1(D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, DredAutoBreadcrumbsOutput1*, int>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1*, int>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedData1.GetPageFaultAllocationOutput1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetPageFaultAllocationOutput1(DredPageFaultOutput1* pOutput)
+	public HResult GetPageFaultAllocationOutput1(D3D12_DRED_PAGE_FAULT_OUTPUT1* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, DredPageFaultOutput1*, int>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, D3D12_DRED_PAGE_FAULT_OUTPUT1*, int>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetPageFaultAllocationOutput2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetPageFaultAllocationOutput2(DredPageFaultOutput2* pOutput)
+	public HResult GetPageFaultAllocationOutput2(D3D12_DRED_PAGE_FAULT_OUTPUT2* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, DredPageFaultOutput2*, int>)(lpVtbl[7]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, D3D12_DRED_PAGE_FAULT_OUTPUT2*, int>)(lpVtbl[7]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetDeviceState"]/*' />
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemo
 	public interface Interface : ID3D12DeviceRemovedExtendedData1.Interface
 	{
 		[VtblIndex(7)]
-		HResult GetPageFaultAllocationOutput2(DredPageFaultOutput2* pOutput);
+		HResult GetPageFaultAllocationOutput2(D3D12_DRED_PAGE_FAULT_OUTPUT2* pOutput);
 
 		[VtblIndex(8)]
 		D3D12_DRED_DEVICE_STATE GetDeviceState();

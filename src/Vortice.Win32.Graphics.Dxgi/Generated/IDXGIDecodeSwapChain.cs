@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain"]/*' />
 /// <unmanaged>IDXGIDecodeSwapChain</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::PresentBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, PresentFlags Flags)
+	public HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, DXGI_PRESENT Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, uint, uint, PresentFlags, int>)(lpVtbl[3]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), BufferToPresent, SyncInterval, Flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, uint, uint, DXGI_PRESENT, int>)(lpVtbl[3]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), BufferToPresent, SyncInterval, Flags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetSourceRect"]/*' />
@@ -129,23 +129,23 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetColorSpace(MultiplaneOverlayYcbcrFlags ColorSpace)
+	public HResult SetColorSpace(DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS ColorSpace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags, int>)(lpVtbl[10]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), ColorSpace);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS, int>)(lpVtbl[10]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), ColorSpace);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public MultiplaneOverlayYcbcrFlags GetColorSpace()
+	public DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS GetColorSpace()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, PresentFlags Flags);
+		HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, DXGI_PRESENT Flags);
 
 		[VtblIndex(4)]
 		HResult SetSourceRect(Rect* pRect);
@@ -166,10 +166,10 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 		HResult GetDestSize(uint* pWidth, uint* pHeight);
 
 		[VtblIndex(10)]
-		HResult SetColorSpace(MultiplaneOverlayYcbcrFlags ColorSpace);
+		HResult SetColorSpace(DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS ColorSpace);
 
 		[VtblIndex(11)]
-		MultiplaneOverlayYcbcrFlags GetColorSpace();
+		DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS GetColorSpace();
 	}
 }
 

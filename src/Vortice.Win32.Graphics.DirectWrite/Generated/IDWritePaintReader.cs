@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader"]/*' />
 /// <unmanaged>IDWritePaintReader</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::SetCurrentGlyph"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetCurrentGlyph(uint glyphIndex, PaintElement* paintElement, uint structSize, Vortice.Win32.Numerics.RectF** clipBox, PaintAttributes* glyphAttributes)
+	public HResult SetCurrentGlyph(uint glyphIndex, DWRITE_PAINT_ELEMENT* paintElement, uint structSize, Vortice.Win32.Numerics.RectF** clipBox, DWRITE_PAINT_ATTRIBUTES* glyphAttributes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, PaintElement*, uint, Vortice.Win32.Numerics.RectF**, PaintAttributes*, int>)(lpVtbl[3]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), glyphIndex, paintElement, structSize, clipBox, glyphAttributes);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, DWRITE_PAINT_ELEMENT*, uint, Vortice.Win32.Numerics.RectF**, DWRITE_PAINT_ATTRIBUTES*, int>)(lpVtbl[3]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), glyphIndex, paintElement, structSize, clipBox, glyphAttributes);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::SetTextColor"]/*' />
@@ -105,17 +105,17 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::MoveToFirstChild"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult MoveToFirstChild(PaintElement* paintElement, uint structSize)
+	public HResult MoveToFirstChild(DWRITE_PAINT_ELEMENT* paintElement, uint structSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, PaintElement*, uint, int>)(lpVtbl[7]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), paintElement, structSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, DWRITE_PAINT_ELEMENT*, uint, int>)(lpVtbl[7]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), paintElement, structSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::MoveToNextSibling"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult MoveToNextSibling(PaintElement* paintElement, uint structSize)
+	public HResult MoveToNextSibling(DWRITE_PAINT_ELEMENT* paintElement, uint structSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, PaintElement*, uint, int>)(lpVtbl[8]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), paintElement, structSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, DWRITE_PAINT_ELEMENT*, uint, int>)(lpVtbl[8]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), paintElement, structSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::MoveToParent"]/*' />
@@ -129,23 +129,23 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::GetGradientStops"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, Graphics.Direct2D.Common.GradientStop* gradientStops)
+	public HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, Graphics.Direct2D.Common.D2D1_GRADIENT_STOP* gradientStops)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, uint, Graphics.Direct2D.Common.GradientStop*, int>)(lpVtbl[10]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), firstGradientStopIndex, gradientStopCount, gradientStops);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, uint, Graphics.Direct2D.Common.D2D1_GRADIENT_STOP*, int>)(lpVtbl[10]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), firstGradientStopIndex, gradientStopCount, gradientStops);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::GetGradientStopColors"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetGradientStopColors(uint firstGradientStopIndex, uint gradientStopCount, PaintColor* gradientStopColors)
+	public HResult GetGradientStopColors(uint firstGradientStopIndex, uint gradientStopCount, DWRITE_PAINT_COLOR* gradientStopColors)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, uint, PaintColor*, int>)(lpVtbl[11]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), firstGradientStopIndex, gradientStopCount, gradientStopColors);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, uint, DWRITE_PAINT_COLOR*, int>)(lpVtbl[11]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), firstGradientStopIndex, gradientStopCount, gradientStopColors);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetCurrentGlyph(uint glyphIndex, PaintElement* paintElement, uint structSize, Vortice.Win32.Numerics.RectF** clipBox, PaintAttributes* glyphAttributes);
+		HResult SetCurrentGlyph(uint glyphIndex, DWRITE_PAINT_ELEMENT* paintElement, uint structSize, Vortice.Win32.Numerics.RectF** clipBox, DWRITE_PAINT_ATTRIBUTES* glyphAttributes);
 
 		[VtblIndex(4)]
 		HResult SetTextColor(Color4* textColor);
@@ -157,19 +157,19 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 		HResult SetCustomColorPalette(Color4** paletteEntries, uint paletteEntryCount);
 
 		[VtblIndex(7)]
-		HResult MoveToFirstChild(PaintElement* paintElement, uint structSize);
+		HResult MoveToFirstChild(DWRITE_PAINT_ELEMENT* paintElement, uint structSize);
 
 		[VtblIndex(8)]
-		HResult MoveToNextSibling(PaintElement* paintElement, uint structSize);
+		HResult MoveToNextSibling(DWRITE_PAINT_ELEMENT* paintElement, uint structSize);
 
 		[VtblIndex(9)]
 		HResult MoveToParent();
 
 		[VtblIndex(10)]
-		HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, Graphics.Direct2D.Common.GradientStop* gradientStops);
+		HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, Graphics.Direct2D.Common.D2D1_GRADIENT_STOP* gradientStops);
 
 		[VtblIndex(11)]
-		HResult GetGradientStopColors(uint firstGradientStopIndex, uint gradientStopCount, PaintColor* gradientStopColors);
+		HResult GetGradientStopColors(uint firstGradientStopIndex, uint gradientStopCount, DWRITE_PAINT_COLOR* gradientStopColors);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
 /// <unmanaged>IDXGISwapChain2</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain.Present" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Present(uint SyncInterval, PresentFlags Flags)
+	public HResult Present(uint SyncInterval, DXGI_PRESENT Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, DXGI_PRESENT, int>)(lpVtbl[8]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />
@@ -145,25 +145,25 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetDesc(SwapChainDescription* pDesc)
+	public HResult GetDesc(DXGI_SWAP_CHAIN_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_SWAP_CHAIN_DESC*, int>)(lpVtbl[12]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, SwapChainFlags SwapChainFlags)
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, uint, uint, Common.Format, SwapChainFlags, int>)(lpVtbl[13]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, uint, uint, Common.DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
+	public HResult ResizeTarget(Common.DXGI_MODE_DESC* pNewTargetParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pNewTargetParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
@@ -177,9 +177,9 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain.GetFrameStatistics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	public HResult GetFrameStatistics(DXGI_FRAME_STATISTICS* pStats)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pStats);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_FRAME_STATISTICS*, int>)(lpVtbl[16]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pStats);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetLastPresentCount" />
@@ -193,17 +193,17 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain1.GetDesc1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetDesc1(SwapChainDescription1* pDesc)
+	public HResult GetDesc1(DXGI_SWAP_CHAIN_DESC1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, SwapChainDescription1*, int>)(lpVtbl[18]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_SWAP_CHAIN_DESC1*, int>)(lpVtbl[18]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetFullscreenDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
+	public HResult GetFullscreenDesc(DXGI_SWAP_CHAIN_FULLSCREEN_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, SwapChainFullscreenDescription*, int>)(lpVtbl[19]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_SWAP_CHAIN_FULLSCREEN_DESC*, int>)(lpVtbl[19]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetHwnd" />
@@ -225,9 +225,9 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain1.Present1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult Present1(uint SyncInterval, PresentFlags PresentFlags, PresentParameters* pPresentParameters)
+	public HResult Present1(uint SyncInterval, DXGI_PRESENT PresentFlags, DXGI_PRESENT_PARAMETERS* pPresentParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, PresentFlags, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, DXGI_PRESENT, DXGI_PRESENT_PARAMETERS*, int>)(lpVtbl[22]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.IsTemporaryMonoSupported" />
@@ -265,17 +265,17 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult SetRotation(Common.ModeRotation Rotation)
+	public HResult SetRotation(Common.DXGI_MODE_ROTATION Rotation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.ModeRotation, int>)(lpVtbl[27]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Rotation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.DXGI_MODE_ROTATION, int>)(lpVtbl[27]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Rotation);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult GetRotation(Common.ModeRotation* pRotation)
+	public HResult GetRotation(Common.DXGI_MODE_ROTATION* pRotation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.DXGI_MODE_ROTATION*, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />

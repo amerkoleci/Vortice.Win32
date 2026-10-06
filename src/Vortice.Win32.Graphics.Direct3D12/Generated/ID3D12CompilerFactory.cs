@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory"]/*' />
 /// <unmanaged>ID3D12CompilerFactory</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct ID3D12CompilerFactory : ID3D12CompilerFactory.Inter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory::EnumerateAdapterFamilies"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult EnumerateAdapterFamilies(uint AdapterFamilyIndex, AdapterFamily* pAdapterFamily)
+	public HResult EnumerateAdapterFamilies(uint AdapterFamilyIndex, D3D12_ADAPTER_FAMILY* pAdapterFamily)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, uint, AdapterFamily*, int>)(lpVtbl[3]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), AdapterFamilyIndex, pAdapterFamily);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, uint, D3D12_ADAPTER_FAMILY*, int>)(lpVtbl[3]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), AdapterFamilyIndex, pAdapterFamily);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory::EnumerateAdapterFamilyABIVersions"]/*' />
@@ -89,25 +89,25 @@ public unsafe partial struct ID3D12CompilerFactory : ID3D12CompilerFactory.Inter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory::EnumerateAdapterFamilyCompilerVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult EnumerateAdapterFamilyCompilerVersion(uint AdapterFamilyIndex, VersionNumber* pCompilerVersion)
+	public HResult EnumerateAdapterFamilyCompilerVersion(uint AdapterFamilyIndex, D3D12_VERSION_NUMBER* pCompilerVersion)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, uint, VersionNumber*, int>)(lpVtbl[5]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), AdapterFamilyIndex, pCompilerVersion);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, uint, D3D12_VERSION_NUMBER*, int>)(lpVtbl[5]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), AdapterFamilyIndex, pCompilerVersion);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory::GetApplicationProfileVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetApplicationProfileVersion(CompilerTarget* pTarget, ApplicationDescription* pApplicationDesc, VersionNumber* pApplicationProfileVersion)
+	public HResult GetApplicationProfileVersion(D3D12_COMPILER_TARGET* pTarget, D3D12_APPLICATION_DESC* pApplicationDesc, D3D12_VERSION_NUMBER* pApplicationProfileVersion)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, CompilerTarget*, ApplicationDescription*, VersionNumber*, int>)(lpVtbl[6]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), pTarget, pApplicationDesc, pApplicationProfileVersion);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, D3D12_COMPILER_TARGET*, D3D12_APPLICATION_DESC*, D3D12_VERSION_NUMBER*, int>)(lpVtbl[6]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), pTarget, pApplicationDesc, pApplicationProfileVersion);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory::CreateCompilerCacheSession"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateCompilerCacheSession(CompilerDatabasePath* pPaths, uint NumPaths, CompilerTarget* pTarget, ApplicationDescription* pApplicationDesc, Guid* riid, void** ppCompilerCacheSession)
+	public HResult CreateCompilerCacheSession(D3D12_COMPILER_DATABASE_PATH* pPaths, uint NumPaths, D3D12_COMPILER_TARGET* pTarget, D3D12_APPLICATION_DESC* pApplicationDesc, Guid* riid, void** ppCompilerCacheSession)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, CompilerDatabasePath*, uint, CompilerTarget*, ApplicationDescription*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), pPaths, NumPaths, pTarget, pApplicationDesc, riid, ppCompilerCacheSession);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactory*, D3D12_COMPILER_DATABASE_PATH*, uint, D3D12_COMPILER_TARGET*, D3D12_APPLICATION_DESC*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CompilerFactory*)Unsafe.AsPointer(ref this), pPaths, NumPaths, pTarget, pApplicationDesc, riid, ppCompilerCacheSession);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactory::CreateCompiler"]/*' />
@@ -121,19 +121,19 @@ public unsafe partial struct ID3D12CompilerFactory : ID3D12CompilerFactory.Inter
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult EnumerateAdapterFamilies(uint AdapterFamilyIndex, AdapterFamily* pAdapterFamily);
+		HResult EnumerateAdapterFamilies(uint AdapterFamilyIndex, D3D12_ADAPTER_FAMILY* pAdapterFamily);
 
 		[VtblIndex(4)]
 		HResult EnumerateAdapterFamilyABIVersions(uint AdapterFamilyIndex, uint* pNumABIVersions, ulong* pABIVersions);
 
 		[VtblIndex(5)]
-		HResult EnumerateAdapterFamilyCompilerVersion(uint AdapterFamilyIndex, VersionNumber* pCompilerVersion);
+		HResult EnumerateAdapterFamilyCompilerVersion(uint AdapterFamilyIndex, D3D12_VERSION_NUMBER* pCompilerVersion);
 
 		[VtblIndex(6)]
-		HResult GetApplicationProfileVersion(CompilerTarget* pTarget, ApplicationDescription* pApplicationDesc, VersionNumber* pApplicationProfileVersion);
+		HResult GetApplicationProfileVersion(D3D12_COMPILER_TARGET* pTarget, D3D12_APPLICATION_DESC* pApplicationDesc, D3D12_VERSION_NUMBER* pApplicationProfileVersion);
 
 		[VtblIndex(7)]
-		HResult CreateCompilerCacheSession(CompilerDatabasePath* pPaths, uint NumPaths, CompilerTarget* pTarget, ApplicationDescription* pApplicationDesc, Guid* riid, void** ppCompilerCacheSession);
+		HResult CreateCompilerCacheSession(D3D12_COMPILER_DATABASE_PATH* pPaths, uint NumPaths, D3D12_COMPILER_TARGET* pTarget, D3D12_APPLICATION_DESC* pApplicationDesc, Guid* riid, void** ppCompilerCacheSession);
 
 		[VtblIndex(8)]
 		HResult CreateCompiler(ID3D12CompilerCacheSession* pCompilerCacheSession, Guid* riid, void** ppCompiler);

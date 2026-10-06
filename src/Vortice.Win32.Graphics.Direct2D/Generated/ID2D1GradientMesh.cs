@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh"]/*' />
 /// <unmanaged>ID2D1GradientMesh</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatches"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPatches(uint startIndex, GradientMeshPatch* patches, uint patchesCount)
+	public HResult GetPatches(uint startIndex, D2D1_GRADIENT_MESH_PATCH* patches, uint patchesCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientMesh*, uint, GradientMeshPatch*, uint, int>)(lpVtbl[5]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), startIndex, patches, patchesCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientMesh*, uint, D2D1_GRADIENT_MESH_PATCH*, uint, int>)(lpVtbl[5]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), startIndex, patches, patchesCount);
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -100,7 +100,7 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 		uint GetPatchCount();
 
 		[VtblIndex(5)]
-		HResult GetPatches(uint startIndex, GradientMeshPatch* patches, uint patchesCount);
+		HResult GetPatches(uint startIndex, D2D1_GRADIENT_MESH_PATCH* patches, uint patchesCount);
 	}
 }
 

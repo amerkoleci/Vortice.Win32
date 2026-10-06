@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1"]/*' />
 /// <unmanaged>ID3D12PipelineLibrary1</unmanaged>
@@ -121,17 +121,17 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	/// <inheritdoc cref="ID3D12PipelineLibrary.LoadGraphicsPipeline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult LoadGraphicsPipeline(char* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadGraphicsPipeline(char* pName, D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary1*, char*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary1*, char*, D3D12_GRAPHICS_PIPELINE_STATE_DESC*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.LoadComputePipeline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult LoadComputePipeline(char* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadComputePipeline(char* pName, D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary1*, char*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary1*, char*, D3D12_COMPUTE_PIPELINE_STATE_DESC*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.GetSerializedSize" />
@@ -153,15 +153,15 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1::LoadPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult LoadPipeline(char* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadPipeline(char* pName, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary1*, char*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary1*, char*, D3D12_PIPELINE_STATE_STREAM_DESC*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	public interface Interface : ID3D12PipelineLibrary.Interface
 	{
 		[VtblIndex(13)]
-		HResult LoadPipeline(char* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState);
+		HResult LoadPipeline(char* pName, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc, Guid* riid, void** ppPipelineState);
 	}
 }
 

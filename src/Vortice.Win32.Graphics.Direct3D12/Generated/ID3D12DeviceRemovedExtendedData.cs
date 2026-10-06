@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData"]/*' />
 /// <unmanaged>ID3D12DeviceRemovedExtendedData</unmanaged>
@@ -73,26 +73,26 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData : ID3D12DeviceRemov
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData::GetAutoBreadcrumbsOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAutoBreadcrumbsOutput(DredAutoBreadcrumbsOutput* pOutput)
+	public HResult GetAutoBreadcrumbsOutput(D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData*, DredAutoBreadcrumbsOutput*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData*, D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData::GetPageFaultAllocationOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPageFaultAllocationOutput(DredPageFaultOutput* pOutput)
+	public HResult GetPageFaultAllocationOutput(D3D12_DRED_PAGE_FAULT_OUTPUT* pOutput)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData*, DredPageFaultOutput*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData*)Unsafe.AsPointer(ref this), pOutput);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData*, D3D12_DRED_PAGE_FAULT_OUTPUT*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetAutoBreadcrumbsOutput(DredAutoBreadcrumbsOutput* pOutput);
+		HResult GetAutoBreadcrumbsOutput(D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT* pOutput);
 
 		[VtblIndex(4)]
-		HResult GetPageFaultAllocationOutput(DredPageFaultOutput* pOutput);
+		HResult GetPageFaultAllocationOutput(D3D12_DRED_PAGE_FAULT_OUTPUT* pOutput);
 	}
 }
 

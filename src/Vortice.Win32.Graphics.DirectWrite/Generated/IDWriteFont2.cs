@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont2"]/*' />
 /// <unmanaged>IDWriteFont2</unmanaged>
@@ -81,25 +81,25 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public FontWeight GetWeight()
+	public DWRITE_FONT_WEIGHT GetWeight()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, FontWeight>)(lpVtbl[4]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_FONT_WEIGHT>)(lpVtbl[4]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public FontStretch GetStretch()
+	public DWRITE_FONT_STRETCH GetStretch()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, FontStretch>)(lpVtbl[5]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_FONT_STRETCH>)(lpVtbl[5]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public FontStyle GetStyle()
+	public DWRITE_FONT_STYLE GetStyle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, FontStyle>)(lpVtbl[6]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_FONT_STYLE>)(lpVtbl[6]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.IsSymbolFont" />
@@ -121,25 +121,25 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.GetInformationalStrings" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetInformationalStrings(InformationalStringId informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
+	public HResult GetInformationalStrings(DWRITE_INFORMATIONAL_STRING_ID informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, InformationalStringId, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont2*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_INFORMATIONAL_STRING_ID, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont2*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public FontSimulations GetSimulations()
+	public DWRITE_FONT_SIMULATIONS GetSimulations()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, FontSimulations>)(lpVtbl[10]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_FONT_SIMULATIONS>)(lpVtbl[10]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetMetrics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetMetrics(FontMetrics* fontMetrics)
+	public void GetMetrics(DWRITE_FONT_METRICS* fontMetrics)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFont2*, FontMetrics*, void>)(lpVtbl[11]))((IDWriteFont2*)Unsafe.AsPointer(ref this), fontMetrics);
+		((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_FONT_METRICS*, void>)(lpVtbl[11]))((IDWriteFont2*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.HasCharacter" />
@@ -161,25 +161,25 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont1.GetMetrics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public void GetMetrics(FontMetrics1* fontMetrics)
+	public void GetMetrics(DWRITE_FONT_METRICS1* fontMetrics)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFont2*, FontMetrics1*, void>)(lpVtbl[14]))((IDWriteFont2*)Unsafe.AsPointer(ref this), fontMetrics);
+		((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_FONT_METRICS1*, void>)(lpVtbl[14]))((IDWriteFont2*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteFont1.GetPanose" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public void GetPanose(Panose* panose)
+	public void GetPanose(DWRITE_PANOSE* panose)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFont2*, Panose*, void>)(lpVtbl[15]))((IDWriteFont2*)Unsafe.AsPointer(ref this), panose);
+		((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_PANOSE*, void>)(lpVtbl[15]))((IDWriteFont2*)Unsafe.AsPointer(ref this), panose);
 	}
 
 	/// <inheritdoc cref="IDWriteFont1.GetUnicodeRanges" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount)
+	public HResult GetUnicodeRanges(uint maxRangeCount, DWRITE_UNICODE_RANGE* unicodeRanges, uint* actualRangeCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, uint, UnicodeRange*, uint*, int>)(lpVtbl[16]))((IDWriteFont2*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, uint, DWRITE_UNICODE_RANGE*, uint*, int>)(lpVtbl[16]))((IDWriteFont2*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
 	}
 
 	/// <inheritdoc cref="IDWriteFont1.IsMonospacedFont" />

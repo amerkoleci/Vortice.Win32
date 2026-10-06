@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug"]/*' />
 /// <unmanaged>IDXGIDebug</unmanaged>
@@ -73,15 +73,15 @@ public unsafe partial struct IDXGIDebug : IDXGIDebug.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)
+	public HResult ReportLiveObjects(Guid apiid, DXGI_DEBUG_RLO_FLAGS flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDebug*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDebug*, Guid, DXGI_DEBUG_RLO_FLAGS, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags);
+		HResult ReportLiveObjects(Guid apiid, DXGI_DEBUG_RLO_FLAGS flags);
 	}
 }
 

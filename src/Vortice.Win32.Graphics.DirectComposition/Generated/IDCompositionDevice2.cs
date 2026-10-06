@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice2"]/*' />
 /// <unmanaged>IDCompositionDevice2</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDCompositionDevice2 : IDCompositionDevice2.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice2::GetFrameStatistics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFrameStatistics(FrameStatistics* statistics)
+	public HResult GetFrameStatistics(DCOMPOSITION_FRAME_STATISTICS* statistics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice2*, FrameStatistics*, int>)(lpVtbl[5]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), statistics);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice2*, DCOMPOSITION_FRAME_STATISTICS*, int>)(lpVtbl[5]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), statistics);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice2::CreateVisual"]/*' />
@@ -113,17 +113,17 @@ public unsafe partial struct IDCompositionDevice2 : IDCompositionDevice2.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice2::CreateSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface)
+	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice2*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice2*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice2::CreateVirtualSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface)
+	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice2*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice2*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice2::CreateTranslateTransform"]/*' />
@@ -247,7 +247,7 @@ public unsafe partial struct IDCompositionDevice2 : IDCompositionDevice2.Interfa
 		HResult WaitForCommitCompletion();
 
 		[VtblIndex(5)]
-		HResult GetFrameStatistics(FrameStatistics* statistics);
+		HResult GetFrameStatistics(DCOMPOSITION_FRAME_STATISTICS* statistics);
 
 		[VtblIndex(6)]
 		HResult CreateVisual(IDCompositionVisual2** visual);
@@ -256,10 +256,10 @@ public unsafe partial struct IDCompositionDevice2 : IDCompositionDevice2.Interfa
 		HResult CreateSurfaceFactory(IUnknown* renderingDevice, IDCompositionSurfaceFactory** surfaceFactory);
 
 		[VtblIndex(8)]
-		HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface);
+		HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface);
 
 		[VtblIndex(9)]
-		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface);
+		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface);
 
 		[VtblIndex(10)]
 		HResult CreateTranslateTransform(IDCompositionTranslateTransform** translateTransform);

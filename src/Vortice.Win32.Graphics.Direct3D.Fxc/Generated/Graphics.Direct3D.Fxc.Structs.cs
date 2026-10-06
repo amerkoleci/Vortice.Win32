@@ -7,11 +7,11 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Fxc;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA"]/*' />
 /// <unmanaged>D3D_SHADER_DATA</unmanaged>
-public partial struct ShaderData
+public partial struct D3D_SHADER_DATA
 {
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA::pBytecode"]/*' />
 	public unsafe void* pBytecode;

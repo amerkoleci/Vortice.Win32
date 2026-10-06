@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device"]/*' />
 /// <unmanaged>ID2D1Device</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1Device : ID2D1Device.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device*)Unsafe.AsPointer(ref this), options, deviceContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device::SetMaximumTextureMemory"]/*' />
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1Device : ID2D1Device.Interface, INativeGuid
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext);
+		HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext);
 
 		[VtblIndex(5)]
 		void SetMaximumTextureMemory(ulong maximumInBytes);

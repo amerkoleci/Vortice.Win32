@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement"]/*' />
 /// <unmanaged>ID2D1SvgElement</unmanaged>
@@ -273,17 +273,17 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult SetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
+	public HResult SetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_POD_TYPE type, void* value, uint valueSizeInBytes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributePodType, void*, uint, int>)(lpVtbl[28]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, D2D1_SVG_ATTRIBUTE_POD_TYPE, void*, uint, int>)(lpVtbl[28]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult SetAttributeValue(char* name, SvgAttributeStringType type, char* value)
+	public HResult SetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_STRING_TYPE type, char* value)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributeStringType, char*, int>)(lpVtbl[29]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, D2D1_SVG_ATTRIBUTE_STRING_TYPE, char*, int>)(lpVtbl[29]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
@@ -297,25 +297,25 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult GetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
+	public HResult GetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_POD_TYPE type, void* value, uint valueSizeInBytes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributePodType, void*, uint, int>)(lpVtbl[31]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, D2D1_SVG_ATTRIBUTE_POD_TYPE, void*, uint, int>)(lpVtbl[31]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult GetAttributeValue(char* name, SvgAttributeStringType type, char* value, uint valueCount)
+	public HResult GetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_STRING_TYPE type, char* value, uint valueCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributeStringType, char*, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, D2D1_SVG_ATTRIBUTE_STRING_TYPE, char*, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValueLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult GetAttributeValueLength(char* name, SvgAttributeStringType type, uint* valueLength)
+	public HResult GetAttributeValueLength(char* name, D2D1_SVG_ATTRIBUTE_STRING_TYPE type, uint* valueLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, D2D1_SVG_ATTRIBUTE_STRING_TYPE, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -393,22 +393,22 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		HResult SetAttributeValue(char* name, ID2D1SvgAttribute* value);
 
 		[VtblIndex(28)]
-		HResult SetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
+		HResult SetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_POD_TYPE type, void* value, uint valueSizeInBytes);
 
 		[VtblIndex(29)]
-		HResult SetAttributeValue(char* name, SvgAttributeStringType type, char* value);
+		HResult SetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_STRING_TYPE type, char* value);
 
 		[VtblIndex(30)]
 		HResult GetAttributeValue(char* name, Guid* riid, void** value);
 
 		[VtblIndex(31)]
-		HResult GetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
+		HResult GetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_POD_TYPE type, void* value, uint valueSizeInBytes);
 
 		[VtblIndex(32)]
-		HResult GetAttributeValue(char* name, SvgAttributeStringType type, char* value, uint valueCount);
+		HResult GetAttributeValue(char* name, D2D1_SVG_ATTRIBUTE_STRING_TYPE type, char* value, uint valueCount);
 
 		[VtblIndex(33)]
-		HResult GetAttributeValueLength(char* name, SvgAttributeStringType type, uint* valueLength);
+		HResult GetAttributeValueLength(char* name, D2D1_SVG_ATTRIBUTE_STRING_TYPE type, uint* valueLength);
 	}
 }
 

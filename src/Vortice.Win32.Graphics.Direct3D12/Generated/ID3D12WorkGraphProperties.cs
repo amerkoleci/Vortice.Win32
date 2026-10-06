@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties"]/*' />
 /// <unmanaged>ID3D12WorkGraphProperties</unmanaged>
@@ -83,8 +83,7 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 	[VtblIndex(4)]
 	public char* GetProgramName(uint WorkGraphIndex)
 	{
-		char* result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, char**, uint, char**>)(lpVtbl[4]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), &result, WorkGraphIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, char*>)(lpVtbl[4]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetWorkGraphIndex"]/*' />
@@ -106,18 +105,17 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetNodeID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public NodeId GetNodeID(uint WorkGraphIndex, uint NodeIndex)
+	public D3D12_NODE_ID GetNodeID(uint WorkGraphIndex, uint NodeIndex)
 	{
-		NodeId result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, NodeId*, uint, uint, NodeId*>)(lpVtbl[7]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), &result, WorkGraphIndex, NodeIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, uint, D3D12_NODE_ID>)(lpVtbl[7]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, NodeIndex);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetNodeIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public uint GetNodeIndex(uint WorkGraphIndex, NodeId NodeID)
+	public uint GetNodeIndex(uint WorkGraphIndex, D3D12_NODE_ID NodeID)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, NodeId, uint>)(lpVtbl[8]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, NodeID);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, D3D12_NODE_ID, uint>)(lpVtbl[8]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, NodeID);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetNodeLocalRootArgumentsTableIndex"]/*' />
@@ -139,18 +137,17 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetEntrypointID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public NodeId GetEntrypointID(uint WorkGraphIndex, uint EntrypointIndex)
+	public D3D12_NODE_ID GetEntrypointID(uint WorkGraphIndex, uint EntrypointIndex)
 	{
-		NodeId result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, NodeId*, uint, uint, NodeId*>)(lpVtbl[11]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), &result, WorkGraphIndex, EntrypointIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, uint, D3D12_NODE_ID>)(lpVtbl[11]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, EntrypointIndex);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetEntrypointIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public uint GetEntrypointIndex(uint WorkGraphIndex, NodeId NodeID)
+	public uint GetEntrypointIndex(uint WorkGraphIndex, D3D12_NODE_ID NodeID)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, NodeId, uint>)(lpVtbl[12]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, NodeID);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, D3D12_NODE_ID, uint>)(lpVtbl[12]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, NodeID);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetEntrypointRecordSizeInBytes"]/*' />
@@ -164,9 +161,9 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetWorkGraphMemoryRequirements"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public void GetWorkGraphMemoryRequirements(uint WorkGraphIndex, WorkGraphMemoryRequirements* pWorkGraphMemoryRequirements)
+	public void GetWorkGraphMemoryRequirements(uint WorkGraphIndex, D3D12_WORK_GRAPH_MEMORY_REQUIREMENTS* pWorkGraphMemoryRequirements)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, WorkGraphMemoryRequirements*, void>)(lpVtbl[14]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, pWorkGraphMemoryRequirements);
+		((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, D3D12_WORK_GRAPH_MEMORY_REQUIREMENTS*, void>)(lpVtbl[14]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex, pWorkGraphMemoryRequirements);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetEntrypointRecordAlignmentInBytes"]/*' />
@@ -192,10 +189,10 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 		uint GetNumNodes(uint WorkGraphIndex);
 
 		[VtblIndex(7)]
-		NodeId GetNodeID(uint WorkGraphIndex, uint NodeIndex);
+		D3D12_NODE_ID GetNodeID(uint WorkGraphIndex, uint NodeIndex);
 
 		[VtblIndex(8)]
-		uint GetNodeIndex(uint WorkGraphIndex, NodeId NodeID);
+		uint GetNodeIndex(uint WorkGraphIndex, D3D12_NODE_ID NodeID);
 
 		[VtblIndex(9)]
 		uint GetNodeLocalRootArgumentsTableIndex(uint WorkGraphIndex, uint NodeIndex);
@@ -204,16 +201,16 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 		uint GetNumEntrypoints(uint WorkGraphIndex);
 
 		[VtblIndex(11)]
-		NodeId GetEntrypointID(uint WorkGraphIndex, uint EntrypointIndex);
+		D3D12_NODE_ID GetEntrypointID(uint WorkGraphIndex, uint EntrypointIndex);
 
 		[VtblIndex(12)]
-		uint GetEntrypointIndex(uint WorkGraphIndex, NodeId NodeID);
+		uint GetEntrypointIndex(uint WorkGraphIndex, D3D12_NODE_ID NodeID);
 
 		[VtblIndex(13)]
 		uint GetEntrypointRecordSizeInBytes(uint WorkGraphIndex, uint EntrypointIndex);
 
 		[VtblIndex(14)]
-		void GetWorkGraphMemoryRequirements(uint WorkGraphIndex, WorkGraphMemoryRequirements* pWorkGraphMemoryRequirements);
+		void GetWorkGraphMemoryRequirements(uint WorkGraphIndex, D3D12_WORK_GRAPH_MEMORY_REQUIREMENTS* pWorkGraphMemoryRequirements);
 
 		[VtblIndex(15)]
 		uint GetEntrypointRecordAlignmentInBytes(uint WorkGraphIndex, uint EntrypointIndex);

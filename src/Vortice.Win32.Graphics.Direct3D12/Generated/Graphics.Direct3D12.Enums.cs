@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE"]/*' />
 /// <unmanaged>D3D12_COMMAND_LIST_TYPE</unmanaged>
@@ -439,6 +439,9 @@ public enum D3D12_PIPELINE_STATE_FLAGS
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_DYNAMIC_INDEX_BUFFER_STRIP_CUT"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_DYNAMIC_INDEX_BUFFER_STRIP_CUT</unmanaged>
 	D3D12_PIPELINE_STATE_FLAG_DYNAMIC_INDEX_BUFFER_STRIP_CUT = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_DISABLE_CACHED_BLOB"]/*' />
+	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_DISABLE_CACHED_BLOB</unmanaged>
+	D3D12_PIPELINE_STATE_FLAG_DISABLE_CACHED_BLOB = 16,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION"]/*' />
@@ -700,6 +703,12 @@ public enum D3D12_FEATURE
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_SHADER_CACHE_ABI_SUPPORT"]/*' />
 	/// <unmanaged>D3D12_FEATURE_SHADER_CACHE_ABI_SUPPORT</unmanaged>
 	D3D12_FEATURE_SHADER_CACHE_ABI_SUPPORT = 61,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_BARRIER_LAYOUT"]/*' />
+	/// <unmanaged>D3D12_FEATURE_BARRIER_LAYOUT</unmanaged>
+	D3D12_FEATURE_BARRIER_LAYOUT = 64,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS22"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS22</unmanaged>
+	D3D12_FEATURE_D3D12_OPTIONS22 = 65,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_MIN_PRECISION_SUPPORT"]/*' />
@@ -1049,9 +1058,12 @@ public enum D3D_SHADER_MODEL
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_9"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_9</unmanaged>
 	D3D_SHADER_MODEL_6_9 = 105,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_10"]/*' />
+	/// <unmanaged>D3D_SHADER_MODEL_6_10</unmanaged>
+	D3D_SHADER_MODEL_6_10 = 106,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_HIGHEST_SHADER_MODEL"]/*' />
 	/// <unmanaged>D3D_HIGHEST_SHADER_MODEL</unmanaged>
-	D3D_HIGHEST_SHADER_MODEL = 105,
+	D3D_HIGHEST_SHADER_MODEL = 106,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
@@ -1782,6 +1794,9 @@ public enum D3D12_SRV_DIMENSION
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SRV_DIMENSION::D3D12_SRV_DIMENSION_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
 	/// <unmanaged>D3D12_SRV_DIMENSION_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
 	D3D12_SRV_DIMENSION_RAYTRACING_ACCELERATION_STRUCTURE = 11,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SRV_DIMENSION::D3D12_SRV_DIMENSION_BUFFER_BYTE_OFFSET"]/*' />
+	/// <unmanaged>D3D12_SRV_DIMENSION_BUFFER_BYTE_OFFSET</unmanaged>
+	D3D12_SRV_DIMENSION_BUFFER_BYTE_OFFSET = 12,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER"]/*' />
@@ -2021,6 +2036,9 @@ public enum D3D12_UAV_DIMENSION
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_TEXTURE3D"]/*' />
 	/// <unmanaged>D3D12_UAV_DIMENSION_TEXTURE3D</unmanaged>
 	D3D12_UAV_DIMENSION_TEXTURE3D = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_BUFFER_BYTE_OFFSET"]/*' />
+	/// <unmanaged>D3D12_UAV_DIMENSION_BUFFER_BYTE_OFFSET</unmanaged>
+	D3D12_UAV_DIMENSION_BUFFER_BYTE_OFFSET = 9,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RTV_DIMENSION"]/*' />
@@ -2883,9 +2901,9 @@ public enum D3D12_STATE_SUBOBJECT_TYPE
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT_TYPE::D3D12_STATE_SUBOBJECT_TYPE_LOCAL_SERIALIZED_ROOT_SIGNATURE"]/*' />
 	/// <unmanaged>D3D12_STATE_SUBOBJECT_TYPE_LOCAL_SERIALIZED_ROOT_SIGNATURE</unmanaged>
 	D3D12_STATE_SUBOBJECT_TYPE_LOCAL_SERIALIZED_ROOT_SIGNATURE = 32,
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT_TYPE::D3D12_STATE_SUBOBJECT_TYPE_COMPILER_EXISITING_COLLECTION"]/*' />
-	/// <unmanaged>D3D12_STATE_SUBOBJECT_TYPE_COMPILER_EXISITING_COLLECTION</unmanaged>
-	D3D12_STATE_SUBOBJECT_TYPE_COMPILER_EXISITING_COLLECTION = 33,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT_TYPE::D3D12_STATE_SUBOBJECT_TYPE_COMPILER_EXISTING_COLLECTION"]/*' />
+	/// <unmanaged>D3D12_STATE_SUBOBJECT_TYPE_COMPILER_EXISTING_COLLECTION</unmanaged>
+	D3D12_STATE_SUBOBJECT_TYPE_COMPILER_EXISTING_COLLECTION = 33,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT_TYPE::D3D12_STATE_SUBOBJECT_TYPE_EXISTING_COLLECTION_BY_KEY"]/*' />
 	/// <unmanaged>D3D12_STATE_SUBOBJECT_TYPE_EXISTING_COLLECTION_BY_KEY</unmanaged>
 	D3D12_STATE_SUBOBJECT_TYPE_EXISTING_COLLECTION_BY_KEY = 36,
@@ -4368,6 +4386,37 @@ public enum D3D12_SHADER_CACHE_CONTROL_FLAGS
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_CONTROL_FLAGS::D3D12_SHADER_CACHE_CONTROL_FLAG_CLEAR"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_CONTROL_FLAG_CLEAR</unmanaged>
 	D3D12_SHADER_CACHE_CONTROL_FLAG_CLEAR = 4,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRIM_NOTIFICATION_FLAGS"]/*' />
+/// <unmanaged>D3D12_TRIM_NOTIFICATION_FLAGS</unmanaged>
+[Flags]
+public enum D3D12_TRIM_NOTIFICATION_FLAGS
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRIM_NOTIFICATION_FLAGS::D3D12_TRIM_NOTIFICATION_FLAG_NONE"]/*' />
+	/// <unmanaged>D3D12_TRIM_NOTIFICATION_FLAG_NONE</unmanaged>
+	D3D12_TRIM_NOTIFICATION_FLAG_NONE = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRIM_NOTIFICATION_FLAGS::D3D12_TRIM_NOTIFICATION_FLAG_PERIODIC_TRIM"]/*' />
+	/// <unmanaged>D3D12_TRIM_NOTIFICATION_FLAG_PERIODIC_TRIM</unmanaged>
+	D3D12_TRIM_NOTIFICATION_FLAG_PERIODIC_TRIM = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRIM_NOTIFICATION_FLAGS::D3D12_TRIM_NOTIFICATION_FLAG_RESTART_PERIODIC_TRIM"]/*' />
+	/// <unmanaged>D3D12_TRIM_NOTIFICATION_FLAG_RESTART_PERIODIC_TRIM</unmanaged>
+	D3D12_TRIM_NOTIFICATION_FLAG_RESTART_PERIODIC_TRIM = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRIM_NOTIFICATION_FLAGS::D3D12_TRIM_NOTIFICATION_FLAG_TRIM_TO_BUDGET"]/*' />
+	/// <unmanaged>D3D12_TRIM_NOTIFICATION_FLAG_TRIM_TO_BUDGET</unmanaged>
+	D3D12_TRIM_NOTIFICATION_FLAG_TRIM_TO_BUDGET = 4,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_FLAGS"]/*' />
+/// <unmanaged>D3D12_QUERY_HEAP_FLAGS</unmanaged>
+public enum D3D12_QUERY_HEAP_FLAGS
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_FLAGS::D3D12_QUERY_HEAP_FLAG_NONE"]/*' />
+	/// <unmanaged>D3D12_QUERY_HEAP_FLAG_NONE</unmanaged>
+	D3D12_QUERY_HEAP_FLAG_NONE = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_FLAGS::D3D12_QUERY_HEAP_FLAG_CPU_RESOLVE"]/*' />
+	/// <unmanaged>D3D12_QUERY_HEAP_FLAG_CPU_RESOLVE</unmanaged>
+	D3D12_QUERY_HEAP_FLAG_CPU_RESOLVE = 1,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS"]/*' />
@@ -7570,6 +7619,21 @@ public enum D3D12_MESSAGE_ID
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_TEXTURE_BARRIER_INVALID_FLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_TEXTURE_BARRIER_INVALID_FLAGS</unmanaged>
 	D3D12_MESSAGE_ID_TEXTURE_BARRIER_INVALID_FLAGS = 1436,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_STOREPIPELINE_CACHED_BLOB_DISABLED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_STOREPIPELINE_CACHED_BLOB_DISABLED</unmanaged>
+	D3D12_MESSAGE_ID_STOREPIPELINE_CACHED_BLOB_DISABLED = 1442,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEQUERYHEAP_INVALID_FLAGS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATEQUERYHEAP_INVALID_FLAGS</unmanaged>
+	D3D12_MESSAGE_ID_CREATEQUERYHEAP_INVALID_FLAGS = 1443,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVEQUERYDATA_INVALID_QUERYHEAP"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVEQUERYDATA_INVALID_QUERYHEAP</unmanaged>
+	D3D12_MESSAGE_ID_RESOLVEQUERYDATA_INVALID_QUERYHEAP = 1444,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_NON_UNIFORM_RESOURCE_INDEX"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_NON_UNIFORM_RESOURCE_INDEX</unmanaged>
+	D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_NON_UNIFORM_RESOURCE_INDEX = 1451,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DEGENERATE_SPLIT_BARRIER"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DEGENERATE_SPLIT_BARRIER</unmanaged>
+	D3D12_MESSAGE_ID_DEGENERATE_SPLIT_BARRIER = 1466,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS"]/*' />

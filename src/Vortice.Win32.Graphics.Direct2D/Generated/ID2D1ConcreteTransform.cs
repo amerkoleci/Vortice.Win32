@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ConcreteTransform"]/*' />
 /// <unmanaged>ID2D1ConcreteTransform</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ConcreteTransform::SetOutputBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
+	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ConcreteTransform*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ConcreteTransform*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ConcreteTransform::SetCached"]/*' />
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth);
+		HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth);
 
 		[VtblIndex(5)]
 		void SetCached(Bool32 isCached);

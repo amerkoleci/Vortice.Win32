@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink4"]/*' />
 /// <unmanaged>ID2D1CommandSink4</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.SetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetAntialiasMode(AntialiasMode antialiasMode)
+	public HResult SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, AntialiasMode, int>)(lpVtbl[5]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), antialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_ANTIALIAS_MODE, int>)(lpVtbl[5]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), antialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.SetTags" />
@@ -105,9 +105,9 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.SetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetTextAntialiasMode(TextAntialiasMode textAntialiasMode)
+	public HResult SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, TextAntialiasMode, int>)(lpVtbl[7]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), textAntialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_TEXT_ANTIALIAS_MODE, int>)(lpVtbl[7]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), textAntialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.SetTextRenderingParams" />
@@ -129,17 +129,17 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.SetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetPrimitiveBlend(PrimitiveBlend primitiveBlend)
+	public HResult SetPrimitiveBlend(D2D1_PRIMITIVE_BLEND primitiveBlend)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, PrimitiveBlend, int>)(lpVtbl[10]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), primitiveBlend);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_PRIMITIVE_BLEND, int>)(lpVtbl[10]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.SetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetUnitMode(UnitMode unitMode)
+	public HResult SetUnitMode(D2D1_UNIT_MODE unitMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, UnitMode, int>)(lpVtbl[11]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), unitMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_UNIT_MODE, int>)(lpVtbl[11]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), unitMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.Clear" />
@@ -153,9 +153,9 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public HResult DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.DWRITE_GLYPH_RUN* glyphRun, Graphics.DirectWrite.DWRITE_GLYPH_RUN_DESCRIPTION* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, Vector2, Graphics.DirectWrite.DWRITE_GLYPH_RUN*, Graphics.DirectWrite.DWRITE_GLYPH_RUN_DESCRIPTION*, ID2D1Brush*, Graphics.DirectWrite.DWRITE_MEASURING_MODE, int>)(lpVtbl[13]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawLine" />
@@ -185,17 +185,17 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.DrawBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
+	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.RectF* destinationRectangle, float opacity, D2D1_INTERPOLATION_MODE interpolationMode, Vortice.Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, ID2D1Bitmap*, Vortice.Win32.Numerics.RectF*, float, InterpolationMode, Vortice.Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, ID2D1Bitmap*, Vortice.Win32.Numerics.RectF*, float, D2D1_INTERPOLATION_MODE, Vortice.Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, D2D1_INTERPOLATION_MODE interpolationMode, Common.D2D1_COMPOSITE_MODE compositeMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, ID2D1Image*, Vector2*, Vortice.Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, ID2D1Image*, Vector2*, Vortice.Win32.Numerics.RectF*, D2D1_INTERPOLATION_MODE, Common.D2D1_COMPOSITE_MODE, int>)(lpVtbl[18]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGdiMetafile" />
@@ -241,17 +241,17 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.PushAxisAlignedClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult PushAxisAlignedClip(Vortice.Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
+	public HResult PushAxisAlignedClip(Vortice.Win32.Numerics.RectF* clipRect, D2D1_ANTIALIAS_MODE antialiasMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, Vortice.Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, Vortice.Win32.Numerics.RectF*, D2D1_ANTIALIAS_MODE, int>)(lpVtbl[24]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.PushLayer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult PushLayer(LayerParameters1* layerParameters1, ID2D1Layer* layer)
+	public HResult PushLayer(D2D1_LAYER_PARAMETERS1* layerParameters1, ID2D1Layer* layer)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, LayerParameters1*, ID2D1Layer*, int>)(lpVtbl[25]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), layerParameters1, layer);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_LAYER_PARAMETERS1*, ID2D1Layer*, int>)(lpVtbl[25]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), layerParameters1, layer);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.PopAxisAlignedClip" />
@@ -273,9 +273,9 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink1.SetPrimitiveBlend1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult SetPrimitiveBlend1(PrimitiveBlend primitiveBlend)
+	public HResult SetPrimitiveBlend1(D2D1_PRIMITIVE_BLEND primitiveBlend)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, PrimitiveBlend, int>)(lpVtbl[28]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), primitiveBlend);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_PRIMITIVE_BLEND, int>)(lpVtbl[28]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink2.DrawInk" />
@@ -305,23 +305,23 @@ public unsafe partial struct ID2D1CommandSink4 : ID2D1CommandSink4.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink3.DrawSpriteBatch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions)
+	public HResult DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, D2D1_BITMAP_INTERPOLATION_MODE interpolationMode, D2D1_SPRITE_OPTIONS spriteOptions)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, int>)(lpVtbl[32]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, D2D1_BITMAP_INTERPOLATION_MODE, D2D1_SPRITE_OPTIONS, int>)(lpVtbl[32]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink4::SetPrimitiveBlend2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult SetPrimitiveBlend2(PrimitiveBlend primitiveBlend)
+	public HResult SetPrimitiveBlend2(D2D1_PRIMITIVE_BLEND primitiveBlend)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, PrimitiveBlend, int>)(lpVtbl[33]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), primitiveBlend);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink4*, D2D1_PRIMITIVE_BLEND, int>)(lpVtbl[33]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
 	public interface Interface : ID2D1CommandSink3.Interface
 	{
 		[VtblIndex(33)]
-		HResult SetPrimitiveBlend2(PrimitiveBlend primitiveBlend);
+		HResult SetPrimitiveBlend2(D2D1_PRIMITIVE_BLEND primitiveBlend);
 	}
 }
 

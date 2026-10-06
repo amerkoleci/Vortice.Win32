@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle"]/*' />
 /// <unmanaged>ID2D1StrokeStyle</unmanaged>
@@ -81,25 +81,25 @@ public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetStartCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public CapStyle GetStartCap()
+	public D2D1_CAP_STYLE GetStartCap()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, D2D1_CAP_STYLE>)(lpVtbl[4]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetEndCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public CapStyle GetEndCap()
+	public D2D1_CAP_STYLE GetEndCap()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, D2D1_CAP_STYLE>)(lpVtbl[5]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public CapStyle GetDashCap()
+	public D2D1_CAP_STYLE GetDashCap()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, D2D1_CAP_STYLE>)(lpVtbl[6]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetMiterLimit"]/*' />
@@ -113,9 +113,9 @@ public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetLineJoin"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public LineJoin GetLineJoin()
+	public D2D1_LINE_JOIN GetLineJoin()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, D2D1_LINE_JOIN>)(lpVtbl[8]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashOffset"]/*' />
@@ -129,9 +129,9 @@ public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public DashStyle GetDashStyle()
+	public D2D1_DASH_STYLE GetDashStyle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle*, D2D1_DASH_STYLE>)(lpVtbl[10]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashesCount"]/*' />
@@ -153,25 +153,25 @@ public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INat
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		CapStyle GetStartCap();
+		D2D1_CAP_STYLE GetStartCap();
 
 		[VtblIndex(5)]
-		CapStyle GetEndCap();
+		D2D1_CAP_STYLE GetEndCap();
 
 		[VtblIndex(6)]
-		CapStyle GetDashCap();
+		D2D1_CAP_STYLE GetDashCap();
 
 		[VtblIndex(7)]
 		float GetMiterLimit();
 
 		[VtblIndex(8)]
-		LineJoin GetLineJoin();
+		D2D1_LINE_JOIN GetLineJoin();
 
 		[VtblIndex(9)]
 		float GetDashOffset();
 
 		[VtblIndex(10)]
-		DashStyle GetDashStyle();
+		D2D1_DASH_STYLE GetDashStyle();
 
 		[VtblIndex(11)]
 		uint GetDashesCount();

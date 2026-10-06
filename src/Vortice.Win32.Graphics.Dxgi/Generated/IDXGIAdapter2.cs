@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
 /// <unmanaged>IDXGIAdapter2</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDesc(AdapterDescription* pDesc)
+	public HResult GetDesc(DXGI_ADAPTER_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter2*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter2*, DXGI_ADAPTER_DESC*, int>)(lpVtbl[8]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
@@ -129,23 +129,23 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetDesc1(AdapterDescription1* pDesc)
+	public HResult GetDesc1(DXGI_ADAPTER_DESC1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter2*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter2*, DXGI_ADAPTER_DESC1*, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetDesc2(AdapterDescription2* pDesc)
+	public HResult GetDesc2(DXGI_ADAPTER_DESC2* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter2*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter2*, DXGI_ADAPTER_DESC2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : IDXGIAdapter1.Interface
 	{
 		[VtblIndex(11)]
-		HResult GetDesc2(AdapterDescription2* pDesc);
+		HResult GetDesc2(DXGI_ADAPTER_DESC2* pDesc);
 	}
 }
 

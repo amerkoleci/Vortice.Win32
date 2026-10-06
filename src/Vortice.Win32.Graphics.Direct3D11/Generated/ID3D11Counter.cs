@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Counter"]/*' />
 /// <unmanaged>ID3D11Counter</unmanaged>
@@ -113,15 +113,15 @@ public unsafe partial struct ID3D11Counter : ID3D11Counter.Interface, INativeGui
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Counter::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(CounterDescription* pDesc)
+	public void GetDesc(D3D11_COUNTER_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11Counter*, CounterDescription*, void>)(lpVtbl[8]))((ID3D11Counter*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11Counter*, D3D11_COUNTER_DESC*, void>)(lpVtbl[8]))((ID3D11Counter*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11Asynchronous.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc(CounterDescription* pDesc);
+		void GetDesc(D3D11_COUNTER_DESC* pDesc);
 	}
 }
 

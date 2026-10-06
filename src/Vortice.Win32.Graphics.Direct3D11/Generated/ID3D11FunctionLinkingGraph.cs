@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph"]/*' />
 /// <unmanaged>ID3D11FunctionLinkingGraph</unmanaged>
@@ -81,17 +81,17 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::SetInputSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetInputSignature(ParameterDescription* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode)
+	public HResult SetInputSignature(D3D11_PARAMETER_DESC* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, ParameterDescription*, uint, ID3D11LinkingNode**, int>)(lpVtbl[4]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pInputParameters, cInputParameters, ppInputNode);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, D3D11_PARAMETER_DESC*, uint, ID3D11LinkingNode**, int>)(lpVtbl[4]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pInputParameters, cInputParameters, ppInputNode);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::SetOutputSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetOutputSignature(ParameterDescription* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode)
+	public HResult SetOutputSignature(D3D11_PARAMETER_DESC* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, ParameterDescription*, uint, ID3D11LinkingNode**, int>)(lpVtbl[5]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pOutputParameters, cOutputParameters, ppOutputNode);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, D3D11_PARAMETER_DESC*, uint, ID3D11LinkingNode**, int>)(lpVtbl[5]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pOutputParameters, cOutputParameters, ppOutputNode);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::CallFunction"]/*' />
@@ -140,10 +140,10 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 		HResult CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, Graphics.Direct3D.ID3DBlob** ppErrorBuffer);
 
 		[VtblIndex(4)]
-		HResult SetInputSignature(ParameterDescription* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode);
+		HResult SetInputSignature(D3D11_PARAMETER_DESC* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode);
 
 		[VtblIndex(5)]
-		HResult SetOutputSignature(ParameterDescription* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode);
+		HResult SetOutputSignature(D3D11_PARAMETER_DESC* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode);
 
 		[VtblIndex(6)]
 		HResult CallFunction(byte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, byte* pFunctionName, ID3D11LinkingNode** ppCallNode);

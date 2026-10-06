@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1"]/*' />
 /// <unmanaged>ID2D1StrokeStyle1</unmanaged>
@@ -81,25 +81,25 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetStartCap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public CapStyle GetStartCap()
+	public D2D1_CAP_STYLE GetStartCap()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, D2D1_CAP_STYLE>)(lpVtbl[4]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetEndCap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public CapStyle GetEndCap()
+	public D2D1_CAP_STYLE GetEndCap()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, D2D1_CAP_STYLE>)(lpVtbl[5]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashCap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public CapStyle GetDashCap()
+	public D2D1_CAP_STYLE GetDashCap()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, D2D1_CAP_STYLE>)(lpVtbl[6]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetMiterLimit" />
@@ -113,9 +113,9 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetLineJoin" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public LineJoin GetLineJoin()
+	public D2D1_LINE_JOIN GetLineJoin()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, D2D1_LINE_JOIN>)(lpVtbl[8]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashOffset" />
@@ -129,9 +129,9 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public DashStyle GetDashStyle()
+	public D2D1_DASH_STYLE GetDashStyle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, D2D1_DASH_STYLE>)(lpVtbl[10]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashesCount" />
@@ -153,15 +153,15 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1::GetStrokeTransformType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public StrokeTransformType GetStrokeTransformType()
+	public D2D1_STROKE_TRANSFORM_TYPE GetStrokeTransformType()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1StrokeStyle1*, D2D1_STROKE_TRANSFORM_TYPE>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1StrokeStyle.Interface
 	{
 		[VtblIndex(13)]
-		StrokeTransformType GetStrokeTransformType();
+		D2D1_STROKE_TRANSFORM_TYPE GetStrokeTransformType();
 	}
 }
 

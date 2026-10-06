@@ -123,9 +123,6 @@ public static class Program
         { "Graphics.Direct2D.Matrix4x4F", "Matrix4x4" },
         { "Graphics.Direct2D.Matrix5x4F", "Matrix5x4" },
 
-        { "Graphics.Direct3D11.D3D11_VIEWPORT", "Viewport" },
-        { "Graphics.Direct3D12.D3D12_VIEWPORT", "Viewport" },
-
         // Media
         { "Media.Audio.AUDIO_STREAM_CATEGORY", "Media.Audio.AudioStreamCategory" },
         { "Media.Audio.WAVEFORMATEX", "Media.Audio.WaveFormatEx" },
@@ -1286,29 +1283,41 @@ public static class Program
             string outputPath = Path.Combine(rootSrcPath, "Vortice.Win32");
             bool useSubFolders = true;
             bool cleanFolder = true;
-            bool skipRename = false;
+            bool skipRename = true;
+            string @namespace = "Vortice.Win32.Graphics";
+            string apiName = "Apis";
 
-            if (jsonFile == "Graphics.Dxgi.json")
+            if (jsonFile == "Graphics.Dxgi.Common.json")
+            {
+                apiName = "DXGICommon";
+            }
+            else if (jsonFile == "Graphics.Direct3D.json")
+            {
+                apiName = "D3D";
+            }
+            else if (jsonFile == "Graphics.Dxgi.json")
             {
                 outputPath = dxgiPath;
                 useSubFolders = false;
+                apiName = "DXGI";
             }
             else if (jsonFile.EndsWith("Direct3D11.json"))
             {
                 outputPath = d3d11Path;
                 useSubFolders = false;
+                apiName = "D3D11";
             }
             else if (jsonFile.EndsWith("Direct3D12.json"))
             {
                 outputPath = d3d12Path;
                 useSubFolders = false;
-                skipRename = true;
+                apiName = "D3D12";
             }
             else if (jsonFile.EndsWith("Direct3D11on12.json"))
             {
                 outputPath = d3d11on12Path;
                 useSubFolders = false;
-                skipRename = true;
+                apiName = "D3D11On12";
             }
             else if (jsonFile == "Graphics.Imaging.json")
             {
@@ -1325,21 +1334,28 @@ public static class Program
                 outputPath = d2dPath;
                 useSubFolders = false;
                 cleanFolder = false;
+                apiName = "D2D";
             }
             else if (jsonFile == "Graphics.DirectWrite.json")
             {
                 outputPath = dwritePath;
                 useSubFolders = false;
+                @namespace = "Vortice.Win32.Graphics";
+                apiName = "DWrite";
             }
             else if (jsonFile == "Graphics.Direct3D.Dxc.json")
             {
                 outputPath = dxcPath;
                 useSubFolders = false;
+                @namespace = "Vortice.Win32.Graphics";
+                apiName = "DXC";
             }
             else if (jsonFile == "Graphics.Direct3D.Fxc.json")
             {
                 outputPath = fxcPath;
                 useSubFolders = false;
+                @namespace = "Vortice.Win32.Graphics";
+                apiName = "FXC";
             }
             else if (jsonFile == "Graphics.DirectComposition.json")
             {
@@ -1350,11 +1366,15 @@ public static class Program
             {
                 outputPath = d3d9Path;
                 useSubFolders = false;
+                @namespace = "Vortice.Win32.Graphics";
+                apiName = "D3D9";
             }
             else if (jsonFile == "Media.Audio.XAudio2.json")
             {
                 outputPath = XAudio2Path;
                 useSubFolders = false;
+                @namespace = "Vortice.Win32.Audio";
+                apiName = "XAudio2";
             }
 
             outputPath = Path.Combine(outputPath, "Generated");
@@ -1368,8 +1388,10 @@ public static class Program
             {
                 OutputPath = outputPath,
                 UseSubFolders = useSubFolders,
+                Namespace = @namespace,
+                ApiName = apiName,
                 CleanFolder = cleanFolder,
-                SkipRename = skipRename
+                SkipRename = skipRename,
             };
 
             Generate(api!, jsonFile, options);
@@ -1383,6 +1405,8 @@ public static class Program
         public required string OutputPath { get; set; }
         public bool UseSubFolders { get; set; } = true;
         public bool CleanFolder { get; set; } = true;
+        public required string Namespace { get; set; }
+        public required string ApiName { get; set; }
         public bool SkipRename { get; set; } = false;
     }
 
@@ -1512,16 +1536,22 @@ public static class Program
         if (!generateFile)
             return;
 
+        if (options.SkipRename)
+        {
+
+        }
+
+        string @namespace = options.SkipRename ? options.Namespace : $"Vortice.Win32.{apiName}";
         string[] usingNamespaces = apiName == "Graphics.Imaging" ? ["Vortice.Win32.Graphics.Direct2D.Common"] : [];
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Apis.cs"),
             apiName,
             docFileName,
-            $"Vortice.Win32.{apiName}",
+            @namespace,
             usingNamespaces);
 
         bool needNewLine = false;
-        using (writer.PushBlock($"public static partial class Apis"))
+        using (writer.PushBlock($"public static partial class {options.ApiName}"))
         {
             foreach (var constant in api.Constants)
             {
@@ -1596,7 +1626,7 @@ public static class Program
 
     private static void GenerateTypes(string folder, string apiName, string docFileName, ApiData api, GenerateOptions options)
     {
-        string @namespace = options.SkipRename ? "Vortice.Win32" : $"Vortice.Win32.{apiName}";
+        string @namespace = options.SkipRename ? options.Namespace : $"Vortice.Win32.{apiName}";
 
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Enums.cs"),
@@ -1683,8 +1713,8 @@ public static class Program
             Path.Combine(folder, $"{apiName}.Structs.cs"),
             apiName,
             docFileName,
-            $"Vortice.Win32.{apiName}");
-        needNewLine = true;
+            @namespace);
+        needNewLine = false;
 
         // Unions
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
@@ -1705,8 +1735,7 @@ public static class Program
                 structWriter.WriteLine();
             }
 
-            string structCsTypeName = GetCsStructTypeName(structType, apiName);
-            GenerateStruct(structWriter, api, structType);
+            GenerateStruct(structWriter, options, api, structType, false);
             s_visitedStructs.Add($"{apiName}.{structType.Name}");
             needNewLine = true;
         }
@@ -1732,8 +1761,7 @@ public static class Program
                 structWriter.WriteLine();
             }
 
-            string structCsTypeName = GetCsStructTypeName(structType, apiName);
-            GenerateStruct(structWriter, api, structType);
+            GenerateStruct(structWriter, options, api, structType, false);
             s_visitedStructs.Add($"{apiName}.{structType.Name}");
             needNewLine = true;
         }
@@ -1815,23 +1843,40 @@ public static class Program
                 functions.Add(method);
             }
 
-            GenerateComType(folder, apiName, docFileName, api, comType, methodsToGenerate);
+            GenerateComType(folder, apiName, docFileName, api, comType, methodsToGenerate, options);
             s_visitedComTypes.Add(comType);
         }
     }
 
-    private static string GetCsStructTypeName(ApiType structType, string apiName)
+    private static string GetCsStructTypeName(GenerateOptions options, ApiType structType, string apiName, bool nestedType = false)
     {
-        if (structType.Name.StartsWith("Dxc") ||
-            structType.Name.StartsWith("WIC"))
+        if (nestedType)
         {
             return structType.Name;
         }
         else
         {
-            string csTypeName = GetDataTypeName(structType.Name, out _);
-            AddCsMapping(apiName, structType.Name, csTypeName);
-            return csTypeName;
+            if (options.SkipRename)
+            {
+                return structType.Name;
+            }
+            else if (structType.Name.StartsWith("Dxc") ||
+                structType.Name.StartsWith("WIC"))
+            {
+                return structType.Name;
+            }
+            else if (structType.Name.StartsWith("DComposition"))
+            {
+                string csTypeName = structType.Name.Substring("DComposition".Length);
+                AddCsMapping(apiName, structType.Name, csTypeName);
+                return csTypeName;
+            }
+            else
+            {
+                string csTypeName = GetDataTypeName(structType.Name, out _);
+                AddCsMapping(apiName, structType.Name, csTypeName);
+                return csTypeName;
+            }
         }
     }
 
@@ -1840,13 +1885,14 @@ public static class Program
         if (api.Functions.Length == 0)
             return;
 
+        string @namespace = options.SkipRename ? options.Namespace : $"Vortice.Win32.{apiName}";
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Apis.Functions.cs"),
             apiName,
             docFileName,
-            $"Vortice.Win32.{apiName}");
+            @namespace);
 
-        using (writer.PushBlock($"public static unsafe partial class Apis"))
+        using (writer.PushBlock($"public static unsafe partial class {options.ApiName}"))
         {
             bool needNewLine = false;
             foreach (ApiType function in api.Functions)
@@ -2034,7 +2080,7 @@ public static class Program
         {
             csTypeName = enumType.Name;
         }
-        else 
+        else
         {
             csTypeName = GetDataTypeName(enumType.Name, out enumPrefix);
             AddCsMapping(writer.Api, enumType.Name, csTypeName);
@@ -2243,33 +2289,10 @@ public static class Program
         return enumValueName;
     }
 
-    private static void GenerateStruct(CodeWriter writer, ApiData api, ApiType structType, bool nestedType = false)
+    private static void GenerateStruct(CodeWriter writer, GenerateOptions options, ApiData api, ApiType structType, bool nestedType = false)
     {
-        string csTypeName;
+        string csTypeName = GetCsStructTypeName(options, structType, writer.Api, nestedType);
         string structPrefix = string.Empty;
-
-        if (nestedType)
-        {
-            csTypeName = structType.Name;
-        }
-        else
-        {
-            if (structType.Name.StartsWith("Dxc") ||
-                structType.Name.StartsWith("WIC"))
-            {
-                csTypeName = structType.Name;
-            }
-            else if (structType.Name.StartsWith("DComposition"))
-            {
-                csTypeName = structType.Name.Substring("DComposition".Length);
-                AddCsMapping(writer.Api, structType.Name, csTypeName);
-            }
-            else
-            {
-                csTypeName = GetDataTypeName(structType.Name, out structPrefix);
-                AddCsMapping(writer.Api, structType.Name, csTypeName);
-            }
-        }
 
         if (!nestedType)
         {
@@ -2303,15 +2326,7 @@ public static class Program
 
                 string fieldValueName = field.Name;
 
-                if (structType.Name == "D3D11_OMAC" || structType.Name == "D3D_OMAC")
-                {
-                    fieldValueName = "Buffer";
-                }
-                else if (structType.Name == "D3D12_NODE_MASK")
-                {
-                    fieldValueName = "Mask";
-                }
-                else if (s_structFieldNameRemap.TryGetValue($"{structType.Name}::{field.Name}", out string? remapFieldName))
+                if (s_structFieldNameRemap.TryGetValue($"{structType.Name}::{field.Name}", out string? remapFieldName))
                 {
                     fieldValueName = remapFieldName;
                 }
@@ -2334,6 +2349,11 @@ public static class Program
                     {
                         fieldTypeName = GetTypeName($"{writer.Api}.{remapType}");
                     }
+                }
+
+                if (structType.Name == "D2D1_PIXEL_FORMAT")
+                {
+
                 }
 
                 if (fieldTypeName == "Array")
@@ -2403,7 +2423,22 @@ public static class Program
                     }
                     else
                     {
-                        fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
+                        if (options.SkipRename)
+                        {
+                            if (field.Type.Kind == "ApiRef")
+                            {
+                                fieldTypeName = field.Type.Name;
+                            }
+                            else
+                            {
+                                fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
+                            }
+                        }
+                        else
+                        {
+                            fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
+                        }
+
                         if (fieldTypeName.EndsWith("*"))
                         {
                             unsafePrefix += "unsafe ";
@@ -2442,7 +2477,7 @@ public static class Program
                             string fieldTypeName = GetTypeName(field.Type);
                             fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
 
-                            string fieldName = GetPrettyFieldName(field.Name, structPrefix, false);
+                            string fieldName = options.SkipRename ? field.Name : GetPrettyFieldName(field.Name, structPrefix, false);
 
                             writer.WriteLine("[UnscopedRef]");
                             if (fieldTypeName == "Array")
@@ -2483,7 +2518,7 @@ public static class Program
 
                 foreach (ApiType nestedTypeToGenerate in structType.NestedTypes)
                 {
-                    GenerateStruct(writer, api, nestedTypeToGenerate, true);
+                    GenerateStruct(writer, options, api, nestedTypeToGenerate, true);
                 }
             }
         }
@@ -2493,8 +2528,10 @@ public static class Program
         string folder, string apiName, string docFileName,
         ApiData api,
         ApiType comType,
-        Dictionary<string, List<ApiType>> methodsToGenerate)
+        Dictionary<string, List<ApiType>> methodsToGenerate,
+        GenerateOptions options)
     {
+        string @namespace = options.SkipRename ? options.Namespace : $"Vortice.Win32.{apiName}";
         string csTypeName = comType.Name;
         List<string> namespaces = [];
 
@@ -2507,7 +2544,7 @@ public static class Program
             Path.Combine(folder, $"{csTypeName}.cs"),
             apiName,
             docFileName,
-            $"Vortice.Win32.{apiName}",
+            @namespace,
             [.. namespaces]
             );
 
@@ -2670,17 +2707,6 @@ public static class Program
                     StringBuilder argumentsNameBuilder = new();
                     int parameterIndex = 0;
 
-                    bool useReturnAsParameter = false;
-                    if (returnType != "void" &&
-                        method.ReturnType.TargetKind != "Com" &&
-                        method.ReturnType.Kind == "ApiRef" &&
-                        !IsEnum(method.ReturnType) &&
-                        IsStructAsReturnMarshal(method.ReturnType)
-                        )
-                    {
-                        useReturnAsParameter = true;
-                    }
-
                     // Return type
                     returnType = NormalizeTypeName(writer.Api, returnType);
 
@@ -2694,17 +2720,6 @@ public static class Program
                     {
                         returnCastType = returnMarshalType;
                         returnMarshalType = "void*";
-                    }
-
-                    if (useReturnAsParameter)
-                    {
-                        argumentsTypesBuilder.Append(returnMarshalType);
-                        argumentsTypesBuilder.Append('*');
-
-                        if (method.Params.Count > 0)
-                        {
-                            argumentsTypesBuilder.Append(", ");
-                        }
                     }
 
                     foreach (ApiParameter parameter in method.Params)
@@ -2779,16 +2794,12 @@ public static class Program
                         parameterIndex++;
                     }
 
-                    if (method.Params.Count > 0 || useReturnAsParameter)
+                    if (method.Params.Count > 0)
                     {
                         argumentsTypesBuilder.Append(", ");
                     }
 
                     argumentsTypesBuilder.Append(returnMarshalType);
-                    if (useReturnAsParameter)
-                    {
-                        argumentsTypesBuilder.Append('*');
-                    }
 
                     string argumentsString = argumentBuilder.ToString();
                     string argumentTypesString = argumentsTypesBuilder.ToString();
@@ -2835,38 +2846,26 @@ public static class Program
                         bool writeReturn = false;
                         if (returnType != "void")
                         {
-                            if (useReturnAsParameter)
-                            {
-                                writer.WriteLine($"{returnType} result;");
-                                writer.Write("return ");
-                                writer.WriteLine($"*((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{comType.VTableIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
-                            }
-                            else
-                            {
-                                writeReturn = true;
-                            }
+                            writeReturn = true;
                         }
 
-                        if (!useReturnAsParameter)
+                        if (writeReturn)
+                            writer.Write("return ");
+
+                        if (!string.IsNullOrEmpty(returnCastType))
                         {
-                            if (writeReturn)
-                                writer.Write("return ");
+                            writer.Write($"(({returnCastType})(");
+                        }
 
-                            if (!string.IsNullOrEmpty(returnCastType))
-                            {
-                                writer.Write($"(({returnCastType})(");
-                            }
+                        writer.Write($"((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{comType.VTableIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString})");
 
-                            writer.Write($"((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{comType.VTableIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString})");
-
-                            if (!string.IsNullOrEmpty(returnCastType))
-                            {
-                                writer.WriteLine("));");
-                            }
-                            else
-                            {
-                                writer.WriteLine(";");
-                            }
+                        if (!string.IsNullOrEmpty(returnCastType))
+                        {
+                            writer.WriteLine("));");
+                        }
+                        else
+                        {
+                            writer.WriteLine(";");
                         }
                     }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>IDxcBlobUtf16</unmanaged>
 [Guid("a3f84eab-0faa-497e-a39c-ee6ed60b2d84")]
@@ -88,17 +88,16 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	/// <inheritdoc cref="IDxcBlobEncoding.GetEncoding" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage)
+	public HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf16*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
+		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf16*, Bool32*, DXC_CP*, int>)(lpVtbl[5]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public char* GetStringPointer()
 	{
-		char* result;
-		return *((delegate* unmanaged[MemberFunction]<IDxcBlobUtf16*, char**, char**>)(lpVtbl[6]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf16*, char*>)(lpVtbl[6]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]

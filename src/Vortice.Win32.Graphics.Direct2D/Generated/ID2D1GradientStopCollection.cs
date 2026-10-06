@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection"]/*' />
 /// <unmanaged>ID2D1GradientStopCollection</unmanaged>
@@ -89,25 +89,25 @@ public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopColl
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetGradientStops"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetGradientStops(Common.GradientStop* gradientStops, uint gradientStopsCount)
+	public void GetGradientStops(Common.D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, Common.GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, Common.D2D1_GRADIENT_STOP*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetColorInterpolationGamma"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Gamma GetColorInterpolationGamma()
+	public D2D1_GAMMA GetColorInterpolationGamma()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, Gamma>)(lpVtbl[6]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, D2D1_GAMMA>)(lpVtbl[6]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetExtendMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public ExtendMode GetExtendMode()
+	public D2D1_EXTEND_MODE GetExtendMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, D2D1_EXTEND_MODE>)(lpVtbl[7]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -116,13 +116,13 @@ public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopColl
 		uint GetGradientStopCount();
 
 		[VtblIndex(5)]
-		void GetGradientStops(Common.GradientStop* gradientStops, uint gradientStopsCount);
+		void GetGradientStops(Common.D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount);
 
 		[VtblIndex(6)]
-		Gamma GetColorInterpolationGamma();
+		D2D1_GAMMA GetColorInterpolationGamma();
 
 		[VtblIndex(7)]
-		ExtendMode GetExtendMode();
+		D2D1_EXTEND_MODE GetExtendMode();
 	}
 }
 

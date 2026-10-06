@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform"]/*' />
 /// <unmanaged>ID2D1BorderTransform</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1BorderTransform : ID2D1BorderTransform.Interfa
 	/// <inheritdoc cref="ID2D1ConcreteTransform.SetOutputBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
+	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
 
 	/// <inheritdoc cref="ID2D1ConcreteTransform.SetCached" />
@@ -97,48 +97,48 @@ public unsafe partial struct ID2D1BorderTransform : ID2D1BorderTransform.Interfa
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::SetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetExtendModeX(ExtendMode extendMode)
+	public void SetExtendModeX(D2D1_EXTEND_MODE extendMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, ExtendMode, void>)(lpVtbl[6]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), extendMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, D2D1_EXTEND_MODE, void>)(lpVtbl[6]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), extendMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::SetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void SetExtendModeY(ExtendMode extendMode)
+	public void SetExtendModeY(D2D1_EXTEND_MODE extendMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, ExtendMode, void>)(lpVtbl[7]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), extendMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, D2D1_EXTEND_MODE, void>)(lpVtbl[7]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), extendMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public ExtendMode GetExtendModeX()
+	public D2D1_EXTEND_MODE GetExtendModeX()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[8]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, D2D1_EXTEND_MODE>)(lpVtbl[8]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public ExtendMode GetExtendModeY()
+	public D2D1_EXTEND_MODE GetExtendModeY()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[9]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1BorderTransform*, D2D1_EXTEND_MODE>)(lpVtbl[9]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1ConcreteTransform.Interface
 	{
 		[VtblIndex(6)]
-		void SetExtendModeX(ExtendMode extendMode);
+		void SetExtendModeX(D2D1_EXTEND_MODE extendMode);
 
 		[VtblIndex(7)]
-		void SetExtendModeY(ExtendMode extendMode);
+		void SetExtendModeY(D2D1_EXTEND_MODE extendMode);
 
 		[VtblIndex(8)]
-		ExtendMode GetExtendModeX();
+		D2D1_EXTEND_MODE GetExtendModeX();
 
 		[VtblIndex(9)]
-		ExtendMode GetExtendModeY();
+		D2D1_EXTEND_MODE GetExtendModeY();
 	}
 }
 

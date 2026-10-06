@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession1"]/*' />
 /// <unmanaged>ID3D12ProtectedResourceSession1</unmanaged>
@@ -129,25 +129,23 @@ public unsafe partial struct ID3D12ProtectedResourceSession1 : ID3D12ProtectedRe
 	/// <inheritdoc cref="ID3D12ProtectedResourceSession.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public ProtectedResourceSessionDescription GetDesc()
+	public D3D12_PROTECTED_RESOURCE_SESSION_DESC GetDesc()
 	{
-		ProtectedResourceSessionDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession1*, ProtectedResourceSessionDescription*, ProtectedResourceSessionDescription*>)(lpVtbl[10]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession1*, D3D12_PROTECTED_RESOURCE_SESSION_DESC>)(lpVtbl[10]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public ProtectedResourceSessionDescription1 GetDesc1()
+	public D3D12_PROTECTED_RESOURCE_SESSION_DESC1 GetDesc1()
 	{
-		ProtectedResourceSessionDescription1 result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession1*, ProtectedResourceSessionDescription1*, ProtectedResourceSessionDescription1*>)(lpVtbl[11]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession1*, D3D12_PROTECTED_RESOURCE_SESSION_DESC1>)(lpVtbl[11]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12ProtectedResourceSession.Interface
 	{
 		[VtblIndex(11)]
-		ProtectedResourceSessionDescription1 GetDesc1();
+		D3D12_PROTECTED_RESOURCE_SESSION_DESC1 GetDesc1();
 	}
 }
 

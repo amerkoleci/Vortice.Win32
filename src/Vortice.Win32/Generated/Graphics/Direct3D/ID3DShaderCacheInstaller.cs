@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstaller"]/*' />
 /// <unmanaged>ID3DShaderCacheInstaller</unmanaged>
@@ -105,9 +105,9 @@ public unsafe partial struct ID3DShaderCacheInstaller : ID3DShaderCacheInstaller
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstaller::RegisterApplication"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult RegisterApplication(char* pExePath, ShaderCacheApplicationDescription* pApplicationDesc, Guid* riid, void** ppvApp)
+	public HResult RegisterApplication(char* pExePath, D3D_SHADER_CACHE_APPLICATION_DESC* pApplicationDesc, Guid* riid, void** ppvApp)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstaller*, char*, ShaderCacheApplicationDescription*, Guid*, void**, int>)(lpVtbl[7]))((ID3DShaderCacheInstaller*)Unsafe.AsPointer(ref this), pExePath, pApplicationDesc, riid, ppvApp);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstaller*, char*, D3D_SHADER_CACHE_APPLICATION_DESC*, Guid*, void**, int>)(lpVtbl[7]))((ID3DShaderCacheInstaller*)Unsafe.AsPointer(ref this), pExePath, pApplicationDesc, riid, ppvApp);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstaller::RemoveApplication"]/*' />
@@ -153,9 +153,9 @@ public unsafe partial struct ID3DShaderCacheInstaller : ID3DShaderCacheInstaller
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstaller::GetPrecompileTargets"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetPrecompileTargets(ShaderCacheApplicationDescription* pApplicationDesc, uint* pArraySize, ShaderCacheCompilerProperties* pArray, ShaderCacheTargetFlags flags)
+	public HResult GetPrecompileTargets(D3D_SHADER_CACHE_APPLICATION_DESC* pApplicationDesc, uint* pArraySize, D3D_SHADER_CACHE_COMPILER_PROPERTIES* pArray, D3D_SHADER_CACHE_TARGET_FLAGS flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstaller*, ShaderCacheApplicationDescription*, uint*, ShaderCacheCompilerProperties*, ShaderCacheTargetFlags, int>)(lpVtbl[13]))((ID3DShaderCacheInstaller*)Unsafe.AsPointer(ref this), pApplicationDesc, pArraySize, pArray, flags);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstaller*, D3D_SHADER_CACHE_APPLICATION_DESC*, uint*, D3D_SHADER_CACHE_COMPILER_PROPERTIES*, D3D_SHADER_CACHE_TARGET_FLAGS, int>)(lpVtbl[13]))((ID3DShaderCacheInstaller*)Unsafe.AsPointer(ref this), pApplicationDesc, pArraySize, pArray, flags);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -173,7 +173,7 @@ public unsafe partial struct ID3DShaderCacheInstaller : ID3DShaderCacheInstaller
 		HResult UnregisterServiceDriverUpdateTrigger(IntPtr hServiceHandle);
 
 		[VtblIndex(7)]
-		HResult RegisterApplication(char* pExePath, ShaderCacheApplicationDescription* pApplicationDesc, Guid* riid, void** ppvApp);
+		HResult RegisterApplication(char* pExePath, D3D_SHADER_CACHE_APPLICATION_DESC* pApplicationDesc, Guid* riid, void** ppvApp);
 
 		[VtblIndex(8)]
 		HResult RemoveApplication(ID3DShaderCacheApplication* pApplication);
@@ -191,7 +191,7 @@ public unsafe partial struct ID3DShaderCacheInstaller : ID3DShaderCacheInstaller
 		uint GetMaxPrecompileTargetCount();
 
 		[VtblIndex(13)]
-		HResult GetPrecompileTargets(ShaderCacheApplicationDescription* pApplicationDesc, uint* pArraySize, ShaderCacheCompilerProperties* pArray, ShaderCacheTargetFlags flags);
+		HResult GetPrecompileTargets(D3D_SHADER_CACHE_APPLICATION_DESC* pApplicationDesc, uint* pArraySize, D3D_SHADER_CACHE_COMPILER_PROPERTIES* pArray, D3D_SHADER_CACHE_TARGET_FLAGS flags);
 	}
 }
 

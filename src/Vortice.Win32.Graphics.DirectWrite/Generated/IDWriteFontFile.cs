@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile"]/*' />
 /// <unmanaged>IDWriteFontFile</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::Analyze"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Analyze(Bool32* isSupportedFontType, FontFileType* fontFileType, FontFaceType* fontFaceType, uint* numberOfFaces)
+	public HResult Analyze(Bool32* isSupportedFontType, DWRITE_FONT_FILE_TYPE* fontFileType, DWRITE_FONT_FACE_TYPE* fontFaceType, uint* numberOfFaces)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFile*, Bool32*, FontFileType*, FontFaceType*, uint*, int>)(lpVtbl[5]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), isSupportedFontType, fontFileType, fontFaceType, numberOfFaces);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFile*, Bool32*, DWRITE_FONT_FILE_TYPE*, DWRITE_FONT_FACE_TYPE*, uint*, int>)(lpVtbl[5]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), isSupportedFontType, fontFileType, fontFaceType, numberOfFaces);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -103,7 +103,7 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 		HResult GetLoader(IDWriteFontFileLoader** fontFileLoader);
 
 		[VtblIndex(5)]
-		HResult Analyze(Bool32* isSupportedFontType, FontFileType* fontFileType, FontFaceType* fontFaceType, uint* numberOfFaces);
+		HResult Analyze(Bool32* isSupportedFontType, DWRITE_FONT_FILE_TYPE* fontFileType, DWRITE_FONT_FACE_TYPE* fontFaceType, uint* numberOfFaces);
 	}
 }
 

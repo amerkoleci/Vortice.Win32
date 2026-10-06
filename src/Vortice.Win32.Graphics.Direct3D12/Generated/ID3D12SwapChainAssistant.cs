@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant"]/*' />
 /// <unmanaged>ID3D12SwapChainAssistant</unmanaged>
@@ -75,8 +75,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : ID3D12SwapChainAssistant
 	[VtblIndex(3)]
 	public Luid GetLUID()
 	{
-		Luid result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12SwapChainAssistant*, Luid*, Luid*>)(lpVtbl[3]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SwapChainAssistant*, Luid>)(lpVtbl[3]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetSwapChainObject"]/*' />

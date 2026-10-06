@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11on12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device"]/*' />
 /// <unmanaged>ID3D11On12Device</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::CreateWrappedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
+	public HResult CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, Graphics.Direct3D12.D3D12_RESOURCE_STATES InState, Graphics.Direct3D12.D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device*, IUnknown*, ResourceFlags*, D3D12_RESOURCE_STATES, D3D12_RESOURCE_STATES, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device*, IUnknown*, D3D11_RESOURCE_FLAGS*, Graphics.Direct3D12.D3D12_RESOURCE_STATES, Graphics.Direct3D12.D3D12_RESOURCE_STATES, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::ReleaseWrappedResources"]/*' />
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11);
+		HResult CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, Graphics.Direct3D12.D3D12_RESOURCE_STATES InState, Graphics.Direct3D12.D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11);
 
 		[VtblIndex(4)]
 		void ReleaseWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources);

@@ -7,83 +7,81 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>DXC_CP</unmanaged>
-public enum DxcCp : uint
+public enum DXC_CP : uint
 {
 	/// <unmanaged>DXC_CP_ACP</unmanaged>
-	Acp = 0,
+	DXC_CP_ACP = 0,
 	/// <unmanaged>DXC_CP_UTF16</unmanaged>
-	Utf16 = 1200,
+	DXC_CP_UTF16 = 1200,
 	/// <unmanaged>DXC_CP_UTF8</unmanaged>
-	Utf8 = 65001,
+	DXC_CP_UTF8 = 65001,
 	/// <unmanaged>DXC_CP_UTF32</unmanaged>
-	Utf32 = 12000,
+	DXC_CP_UTF32 = 12000,
 	/// <unmanaged>DXC_CP_WIDE</unmanaged>
-	Wide = 1200,
+	DXC_CP_WIDE = 1200,
 }
 
 /// <unmanaged>DXC_OUT_KIND</unmanaged>
-public enum DxcOutKind
+public enum DXC_OUT_KIND
 {
 	/// <unmanaged>DXC_OUT_NONE</unmanaged>
-	None = 0,
+	DXC_OUT_NONE = 0,
 	/// <unmanaged>DXC_OUT_OBJECT</unmanaged>
-	Object = 1,
+	DXC_OUT_OBJECT = 1,
 	/// <unmanaged>DXC_OUT_ERRORS</unmanaged>
-	Errors = 2,
+	DXC_OUT_ERRORS = 2,
 	/// <unmanaged>DXC_OUT_PDB</unmanaged>
-	Pdb = 3,
+	DXC_OUT_PDB = 3,
 	/// <unmanaged>DXC_OUT_SHADER_HASH</unmanaged>
-	ShaderHash = 4,
+	DXC_OUT_SHADER_HASH = 4,
 	/// <unmanaged>DXC_OUT_DISASSEMBLY</unmanaged>
-	Disassembly = 5,
+	DXC_OUT_DISASSEMBLY = 5,
 	/// <unmanaged>DXC_OUT_HLSL</unmanaged>
-	Hlsl = 6,
+	DXC_OUT_HLSL = 6,
 	/// <unmanaged>DXC_OUT_TEXT</unmanaged>
-	Text = 7,
+	DXC_OUT_TEXT = 7,
 	/// <unmanaged>DXC_OUT_REFLECTION</unmanaged>
-	Reflection = 8,
+	DXC_OUT_REFLECTION = 8,
 	/// <unmanaged>DXC_OUT_ROOT_SIGNATURE</unmanaged>
-	RootSignature = 9,
+	DXC_OUT_ROOT_SIGNATURE = 9,
 	/// <unmanaged>DXC_OUT_EXTRA_OUTPUTS</unmanaged>
-	ExtraOutputs = 10,
+	DXC_OUT_EXTRA_OUTPUTS = 10,
 	/// <unmanaged>DXC_OUT_REMARKS</unmanaged>
-	Remarks = 11,
+	DXC_OUT_REMARKS = 11,
 	/// <unmanaged>DXC_OUT_TIME_REPORT</unmanaged>
-	TimeReport = 12,
+	DXC_OUT_TIME_REPORT = 12,
 	/// <unmanaged>DXC_OUT_TIME_TRACE</unmanaged>
-	TimeTrace = 13,
+	DXC_OUT_TIME_TRACE = 13,
 	/// <unmanaged>DXC_OUT_LAST</unmanaged>
-	Last = 13,
+	DXC_OUT_LAST = 13,
 	/// <unmanaged>DXC_OUT_NUM_ENUMS</unmanaged>
-	NumEnums = 14,
+	DXC_OUT_NUM_ENUMS = 14,
 }
 /// <unmanaged>DXC_HASHFLAG</unmanaged>
 [Flags]
-public enum DxcHashFlags : uint
+public enum DXC_HASHFLAG : uint
 {
-	None = 0,
 	/// <unmanaged>DXC_HASHFLAG_INCLUDES_SOURCE</unmanaged>
-	IncludesSource = 1,
+	DXC_HASHFLAG_INCLUDES_SOURCE = 1,
 }
 
 /// <unmanaged>DxcValidatorFlags</unmanaged>
 [Flags]
 public enum DxcValidatorFlags : uint
 {
-	None = 0,
 	/// <unmanaged>DxcValidatorFlags_Default</unmanaged>
-	Default = 0,
+	DxcValidatorFlags_Default = 0,
 	/// <unmanaged>DxcValidatorFlags_InPlaceEdit</unmanaged>
-	InPlaceEdit = 1,
+	DxcValidatorFlags_InPlaceEdit = 1,
 	/// <unmanaged>DxcValidatorFlags_RootSignatureOnly</unmanaged>
-	RootSignatureOnly = 2,
+	DxcValidatorFlags_RootSignatureOnly = 2,
 	/// <unmanaged>DxcValidatorFlags_ModuleOnly</unmanaged>
-	ModuleOnly = 4,
+	DxcValidatorFlags_ModuleOnly = 4,
 	/// <unmanaged>DxcValidatorFlags_ValidMask</unmanaged>
-	ValidMask = 7,
+	DxcValidatorFlags_ValidMask = 7,
 }
 
 /// <unmanaged>DxcVersionInfoFlags</unmanaged>
@@ -91,9 +89,9 @@ public enum DxcValidatorFlags : uint
 public enum DxcVersionInfoFlags : uint
 {
 	/// <unmanaged>DxcVersionInfoFlags_None</unmanaged>
-	None = 0,
+	DxcVersionInfoFlags_None = 0,
 	/// <unmanaged>DxcVersionInfoFlags_Debug</unmanaged>
-	Debug = 1,
+	DxcVersionInfoFlags_Debug = 1,
 	/// <unmanaged>DxcVersionInfoFlags_Internal</unmanaged>
-	Internal = 2,
+	DxcVersionInfoFlags_Internal = 2,
 }

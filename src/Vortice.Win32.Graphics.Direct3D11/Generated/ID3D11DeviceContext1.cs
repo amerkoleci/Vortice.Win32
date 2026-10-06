@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1"]/*' />
 /// <unmanaged>ID3D11DeviceContext1</unmanaged>
@@ -161,9 +161,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, MapFlags MapFlags, MappedSubresource* pMappedResource)
+	public HResult Map(ID3D11Resource* pResource, uint Subresource, D3D11_MAP MapType, D3D11_MAP_FLAG MapFlags, D3D11_MAPPED_SUBRESOURCE* pMappedResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, MapMode, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, D3D11_MAP, D3D11_MAP_FLAG, D3D11_MAPPED_SUBRESOURCE*, int>)(lpVtbl[14]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Unmap" />
@@ -201,9 +201,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.IASetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format Format, uint Offset)
+	public void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.DXGI_FORMAT Format, uint Offset)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Buffer*, Graphics.Dxgi.Common.Format, uint, void>)(lpVtbl[19]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Buffer*, Graphics.Dxgi.Common.DXGI_FORMAT, uint, void>)(lpVtbl[19]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawIndexedInstanced" />
@@ -241,9 +241,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.IASetPrimitiveTopology" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology Topology)
+	public void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY Topology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[24]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), Topology);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[24]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), Topology);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSSetShaderResources" />
@@ -401,9 +401,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.RSSetViewports" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
-	public void RSSetViewports(uint NumViewports, Viewport* pViewports)
+	public void RSSetViewports(uint NumViewports, D3D11_VIEWPORT* pViewports)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, uint, Viewport*, void>)(lpVtbl[44]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, uint, D3D11_VIEWPORT*, void>)(lpVtbl[44]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSSetScissorRects" />
@@ -417,9 +417,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.CopySubresourceRegion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public void CopySubresourceRegion(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox)
+	public void CopySubresourceRegion(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, D3D11_BOX* pSrcBox)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, Box*, void>)(lpVtbl[46]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, D3D11_BOX*, void>)(lpVtbl[46]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CopyResource" />
@@ -433,9 +433,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.UpdateSubresource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public void UpdateSubresource(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
+	public void UpdateSubresource(ID3D11Resource* pDstResource, uint DstSubresource, D3D11_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, Box*, void*, uint, uint, void>)(lpVtbl[48]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, D3D11_BOX*, void*, uint, uint, void>)(lpVtbl[48]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CopyStructureCount" />
@@ -473,9 +473,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearDepthStencilView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil)
+	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, D3D11_CLEAR_FLAG ClearFlags, float Depth, byte Stencil)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11DepthStencilView*, ClearFlags, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11DepthStencilView*, D3D11_CLEAR_FLAG, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GenerateMips" />
@@ -505,9 +505,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.ResolveSubresource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format)
+	public void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, ID3D11Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[57]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, ID3D11Resource*, uint, Graphics.Dxgi.Common.DXGI_FORMAT, void>)(lpVtbl[57]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ExecuteCommandList" />
@@ -689,9 +689,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.DXGI_FORMAT* Format, uint* Offset)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Buffer**, Graphics.Dxgi.Common.DXGI_FORMAT*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetConstantBuffers" />
@@ -713,9 +713,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetPrimitiveTopology" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public void IAGetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology* pTopology)
+	public void IAGetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY* pTopology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Graphics.Direct3D.PrimitiveTopology*, void>)(lpVtbl[83]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pTopology);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY*, void>)(lpVtbl[83]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pTopology);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShaderResources" />
@@ -809,9 +809,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetViewports" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(95)]
-	public void RSGetViewports(uint* pNumViewports, Viewport* pViewports)
+	public void RSGetViewports(uint* pNumViewports, D3D11_VIEWPORT* pViewports)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, uint*, Viewport*, void>)(lpVtbl[95]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pNumViewports, pViewports);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, uint*, D3D11_VIEWPORT*, void>)(lpVtbl[95]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pNumViewports, pViewports);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetScissorRects" />
@@ -945,9 +945,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(112)]
-	public new DeviceContextType GetType()
+	public new D3D11_DEVICE_CONTEXT_TYPE GetType()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, DeviceContextType>)(lpVtbl[112]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, D3D11_DEVICE_CONTEXT_TYPE>)(lpVtbl[112]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetContextFlags" />
@@ -969,17 +969,17 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::CopySubresourceRegion1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(115)]
-	public void CopySubresourceRegion1(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox, uint CopyFlags)
+	public void CopySubresourceRegion1(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, D3D11_BOX* pSrcBox, uint CopyFlags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, Box*, uint, void>)(lpVtbl[115]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox, CopyFlags);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, D3D11_BOX*, uint, void>)(lpVtbl[115]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox, CopyFlags);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::UpdateSubresource1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(116)]
-	public void UpdateSubresource1(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch, uint CopyFlags)
+	public void UpdateSubresource1(ID3D11Resource* pDstResource, uint DstSubresource, D3D11_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch, uint CopyFlags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, Box*, void*, uint, uint, uint, void>)(lpVtbl[116]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch, CopyFlags);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, D3D11_BOX*, void*, uint, uint, uint, void>)(lpVtbl[116]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch, CopyFlags);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::DiscardResource"]/*' />
@@ -1121,10 +1121,10 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	public interface Interface : ID3D11DeviceContext.Interface
 	{
 		[VtblIndex(115)]
-		void CopySubresourceRegion1(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox, uint CopyFlags);
+		void CopySubresourceRegion1(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, D3D11_BOX* pSrcBox, uint CopyFlags);
 
 		[VtblIndex(116)]
-		void UpdateSubresource1(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch, uint CopyFlags);
+		void UpdateSubresource1(ID3D11Resource* pDstResource, uint DstSubresource, D3D11_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch, uint CopyFlags);
 
 		[VtblIndex(117)]
 		void DiscardResource(ID3D11Resource* pResource);

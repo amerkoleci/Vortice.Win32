@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource"]/*' />
 /// <unmanaged>ID2D1TransformedImageSource</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1TransformedImageSource : ID2D1TransformedImage
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource::GetProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetProperties(TransformedImageSourceProperties* properties)
+	public void GetProperties(D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES* properties)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1TransformedImageSource*, TransformedImageSourceProperties*, void>)(lpVtbl[5]))((ID2D1TransformedImageSource*)Unsafe.AsPointer(ref this), properties);
+		((delegate* unmanaged[MemberFunction]<ID2D1TransformedImageSource*, D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES*, void>)(lpVtbl[5]))((ID2D1TransformedImageSource*)Unsafe.AsPointer(ref this), properties);
 	}
 
 	public interface Interface : ID2D1Image.Interface
@@ -100,7 +100,7 @@ public unsafe partial struct ID2D1TransformedImageSource : ID2D1TransformedImage
 		void GetSource(ID2D1ImageSource** imageSource);
 
 		[VtblIndex(5)]
-		void GetProperties(TransformedImageSourceProperties* properties);
+		void GetProperties(D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES* properties);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink"]/*' />
 /// <unmanaged>ID2D1Ink</unmanaged>
@@ -81,26 +81,25 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetStartPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void SetStartPoint(InkPoint* startPoint)
+	public void SetStartPoint(D2D1_INK_POINT* startPoint)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkPoint*, void>)(lpVtbl[4]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startPoint);
+		((delegate* unmanaged[MemberFunction]<ID2D1Ink*, D2D1_INK_POINT*, void>)(lpVtbl[4]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startPoint);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetStartPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public InkPoint GetStartPoint()
+	public D2D1_INK_POINT GetStartPoint()
 	{
-		InkPoint result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkPoint*, InkPoint*>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, D2D1_INK_POINT>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::AddSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult AddSegments(InkBezierSegment* segments, uint segmentsCount)
+	public HResult AddSegments(D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkBezierSegment*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, D2D1_INK_BEZIER_SEGMENT*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::RemoveSegmentsAtEnd"]/*' />
@@ -114,17 +113,17 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount)
+	public HResult SetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, D2D1_INK_BEZIER_SEGMENT*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegmentAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetSegmentAtEnd(InkBezierSegment* segment)
+	public HResult SetSegmentAtEnd(D2D1_INK_BEZIER_SEGMENT* segment)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkBezierSegment*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, D2D1_INK_BEZIER_SEGMENT*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegmentCount"]/*' />
@@ -138,9 +137,9 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount)
+	public HResult GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, D2D1_INK_BEZIER_SEGMENT*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::StreamAsGeometry"]/*' />
@@ -162,28 +161,28 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		void SetStartPoint(InkPoint* startPoint);
+		void SetStartPoint(D2D1_INK_POINT* startPoint);
 
 		[VtblIndex(5)]
-		InkPoint GetStartPoint();
+		D2D1_INK_POINT GetStartPoint();
 
 		[VtblIndex(6)]
-		HResult AddSegments(InkBezierSegment* segments, uint segmentsCount);
+		HResult AddSegments(D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(7)]
 		HResult RemoveSegmentsAtEnd(uint segmentsCount);
 
 		[VtblIndex(8)]
-		HResult SetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount);
+		HResult SetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(9)]
-		HResult SetSegmentAtEnd(InkBezierSegment* segment);
+		HResult SetSegmentAtEnd(D2D1_INK_BEZIER_SEGMENT* segment);
 
 		[VtblIndex(10)]
 		uint GetSegmentCount();
 
 		[VtblIndex(11)]
-		HResult GetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount);
+		HResult GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(12)]
 		HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
 /// <unmanaged>IDXGIOutput3</unmanaged>
@@ -105,25 +105,25 @@ public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDesc(OutputDescription* pDesc)
+	public HResult GetDesc(DXGI_OUTPUT_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, DXGI_OUTPUT_DESC*, int>)(lpVtbl[7]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDisplayModeList(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	public HResult GetDisplayModeList(Common.DXGI_FORMAT EnumFormat, DXGI_ENUM_MODES Flags, uint* pNumModes, Common.DXGI_MODE_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.Format, EnumModesFlags, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_FORMAT, DXGI_ENUM_MODES, uint*, Common.DXGI_MODE_DESC*, int>)(lpVtbl[8]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	public HResult FindClosestMatchingMode(Common.DXGI_MODE_DESC* pModeToMatch, Common.DXGI_MODE_DESC* pClosestMatch, IUnknown* pConcernedDevice)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_MODE_DESC*, Common.DXGI_MODE_DESC*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
@@ -153,25 +153,25 @@ public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	public HResult GetGammaControlCapabilities(Common.DXGI_GAMMA_CONTROL_CAPABILITIES* pGammaCaps)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pGammaCaps);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_GAMMA_CONTROL_CAPABILITIES*, int>)(lpVtbl[13]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pGammaCaps);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetGammaControl(Common.GammaControl* pArray)
+	public HResult SetGammaControl(Common.DXGI_GAMMA_CONTROL* pArray)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_GAMMA_CONTROL*, int>)(lpVtbl[14]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetGammaControl(Common.GammaControl* pArray)
+	public HResult GetGammaControl(Common.DXGI_GAMMA_CONTROL* pArray)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_GAMMA_CONTROL*, int>)(lpVtbl[15]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
@@ -193,25 +193,25 @@ public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	public HResult GetFrameStatistics(DXGI_FRAME_STATISTICS* pStats)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pStats);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, DXGI_FRAME_STATISTICS*, int>)(lpVtbl[18]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pStats);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetDisplayModeList1(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, ModeDescription1* pDesc)
+	public HResult GetDisplayModeList1(Common.DXGI_FORMAT EnumFormat, DXGI_ENUM_MODES Flags, uint* pNumModes, DXGI_MODE_DESC1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.Format, EnumModesFlags, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_FORMAT, DXGI_ENUM_MODES, uint*, DXGI_MODE_DESC1*, int>)(lpVtbl[19]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	public HResult FindClosestMatchingMode1(DXGI_MODE_DESC1* pModeToMatch, DXGI_MODE_DESC1* pClosestMatch, IUnknown* pConcernedDevice)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, DXGI_MODE_DESC1*, DXGI_MODE_DESC1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
@@ -241,15 +241,15 @@ public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
+	public HResult CheckOverlaySupport(Common.DXGI_FORMAT EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput3*, Common.DXGI_FORMAT, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
 	}
 
 	public interface Interface : IDXGIOutput2.Interface
 	{
 		[VtblIndex(24)]
-		HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags);
+		HResult CheckOverlaySupport(Common.DXGI_FORMAT EnumFormat, IUnknown* pConcernedDevice, uint* pFlags);
 	}
 }
 

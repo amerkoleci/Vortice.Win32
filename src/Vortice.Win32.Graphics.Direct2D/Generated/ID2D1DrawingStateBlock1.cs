@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock1"]/*' />
 /// <unmanaged>ID2D1DrawingStateBlock1</unmanaged>
@@ -81,17 +81,17 @@ public unsafe partial struct ID2D1DrawingStateBlock1 : ID2D1DrawingStateBlock1.I
 	/// <inheritdoc cref="ID2D1DrawingStateBlock.GetDescription" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDescription(DrawingStateDescription* stateDescription)
+	public void GetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, DrawingStateDescription*, void>)(lpVtbl[4]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, D2D1_DRAWING_STATE_DESCRIPTION*, void>)(lpVtbl[4]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
 	/// <inheritdoc cref="ID2D1DrawingStateBlock.SetDescription" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void SetDescription(DrawingStateDescription* stateDescription)
+	public void SetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, DrawingStateDescription*, void>)(lpVtbl[5]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, D2D1_DRAWING_STATE_DESCRIPTION*, void>)(lpVtbl[5]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
 	/// <inheritdoc cref="ID2D1DrawingStateBlock.SetTextRenderingParams" />
@@ -113,26 +113,26 @@ public unsafe partial struct ID2D1DrawingStateBlock1 : ID2D1DrawingStateBlock1.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock1::GetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDescription(DrawingStateDescription1* stateDescription)
+	public void GetDescription(D2D1_DRAWING_STATE_DESCRIPTION1* stateDescription)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, DrawingStateDescription1*, void>)(lpVtbl[8]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, D2D1_DRAWING_STATE_DESCRIPTION1*, void>)(lpVtbl[8]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock1::SetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void SetDescription(DrawingStateDescription1* stateDescription)
+	public void SetDescription(D2D1_DRAWING_STATE_DESCRIPTION1* stateDescription)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, DrawingStateDescription1*, void>)(lpVtbl[9]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, D2D1_DRAWING_STATE_DESCRIPTION1*, void>)(lpVtbl[9]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
 	public interface Interface : ID2D1DrawingStateBlock.Interface
 	{
 		[VtblIndex(8)]
-		void GetDescription(DrawingStateDescription1* stateDescription);
+		void GetDescription(D2D1_DRAWING_STATE_DESCRIPTION1* stateDescription);
 
 		[VtblIndex(9)]
-		void SetDescription(DrawingStateDescription1* stateDescription);
+		void SetDescription(D2D1_DRAWING_STATE_DESCRIPTION1* stateDescription);
 	}
 }
 

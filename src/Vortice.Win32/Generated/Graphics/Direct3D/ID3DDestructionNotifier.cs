@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier"]/*' />
 /// <unmanaged>ID3DDestructionNotifier</unmanaged>

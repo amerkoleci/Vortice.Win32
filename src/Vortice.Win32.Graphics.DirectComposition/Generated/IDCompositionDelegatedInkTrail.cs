@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail"]/*' />
 /// <unmanaged>IDCompositionDelegatedInkTrail</unmanaged>
@@ -73,17 +73,17 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::AddTrailPoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddTrailPoints(InkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId)
+	public HResult AddTrailPoints(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, InkTrailPoint*, uint, uint*, int>)(lpVtbl[3]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, generationId);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, DCompositionInkTrailPoint*, uint, uint*, int>)(lpVtbl[3]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, generationId);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::AddTrailPointsWithPrediction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddTrailPointsWithPrediction(InkTrailPoint* inkPoints, uint inkPointsCount, InkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId)
+	public HResult AddTrailPointsWithPrediction(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, DCompositionInkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, InkTrailPoint*, uint, InkTrailPoint*, uint, uint*, int>)(lpVtbl[4]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, predictedInkPoints, predictedInkPointsCount, generationId);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, DCompositionInkTrailPoint*, uint, DCompositionInkTrailPoint*, uint, uint*, int>)(lpVtbl[4]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, predictedInkPoints, predictedInkPointsCount, generationId);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::RemoveTrailPoints"]/*' />
@@ -105,10 +105,10 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddTrailPoints(InkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId);
+		HResult AddTrailPoints(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId);
 
 		[VtblIndex(4)]
-		HResult AddTrailPointsWithPrediction(InkTrailPoint* inkPoints, uint inkPointsCount, InkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId);
+		HResult AddTrailPointsWithPrediction(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, DCompositionInkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId);
 
 		[VtblIndex(5)]
 		HResult RemoveTrailPoints(uint generationId);

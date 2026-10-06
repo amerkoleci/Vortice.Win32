@@ -7,20 +7,20 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11on12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>D3D11_RESOURCE_FLAGS</unmanaged>
-public partial struct ResourceFlags
+public partial struct D3D11_RESOURCE_FLAGS
 {
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::BindFlags"]/*' />
-	public Graphics.Direct3D11.BindFlags BindFlags;
+	public Graphics.Direct3D11.D3D11_BIND_FLAG BindFlags;
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::MiscFlags"]/*' />
-	public Graphics.Direct3D11.ResourceMiscFlags MiscFlags;
+	public Graphics.Direct3D11.D3D11_RESOURCE_MISC_FLAG MiscFlags;
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::CPUAccessFlags"]/*' />
-	public Graphics.Direct3D11.CpuAccessFlags CPUAccessFlags;
+	public Graphics.Direct3D11.D3D11_CPU_ACCESS_FLAG CPUAccessFlags;
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::StructureByteStride"]/*' />
 	public uint StructureByteStride;

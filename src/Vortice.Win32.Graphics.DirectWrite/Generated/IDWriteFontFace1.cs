@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1"]/*' />
 /// <unmanaged>IDWriteFontFace1</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public new FontFaceType GetType()
+	public new DWRITE_FONT_FACE_TYPE GetType()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, FontFaceType>)(lpVtbl[3]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, DWRITE_FONT_FACE_TYPE>)(lpVtbl[3]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -97,9 +97,9 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public FontSimulations GetSimulations()
+	public DWRITE_FONT_SIMULATIONS GetSimulations()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, FontSimulations>)(lpVtbl[6]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, DWRITE_FONT_SIMULATIONS>)(lpVtbl[6]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />
@@ -113,9 +113,9 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	/// <inheritdoc cref="IDWriteFontFace.GetMetrics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetMetrics(FontMetrics* fontFaceMetrics)
+	public void GetMetrics(DWRITE_FONT_METRICS* fontFaceMetrics)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, FontMetrics*, void>)(lpVtbl[8]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), fontFaceMetrics);
+		((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, DWRITE_FONT_METRICS*, void>)(lpVtbl[8]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), fontFaceMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetGlyphCount" />
@@ -129,9 +129,9 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	/// <inheritdoc cref="IDWriteFontFace.GetDesignGlyphMetrics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetDesignGlyphMetrics(ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways)
+	public HResult GetDesignGlyphMetrics(ushort* glyphIndices, uint glyphCount, DWRITE_GLYPH_METRICS* glyphMetrics, Bool32 isSideways)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, ushort*, uint, GlyphMetrics*, Bool32, int>)(lpVtbl[10]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount, glyphMetrics, isSideways);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, ushort*, uint, DWRITE_GLYPH_METRICS*, Bool32, int>)(lpVtbl[10]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount, glyphMetrics, isSideways);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetGlyphIndices" />
@@ -161,65 +161,65 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	/// <inheritdoc cref="IDWriteFontFace.GetGlyphRunOutline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, GlyphOffset* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, ushort*, float*, GlyphOffset*, uint, Bool32, Bool32, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[14]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, glyphIndices, glyphAdvances, glyphOffsets, glyphCount, isSideways, isRightToLeft, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, ushort*, float*, DWRITE_GLYPH_OFFSET*, uint, Bool32, Bool32, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[14]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, glyphIndices, glyphAdvances, glyphOffsets, glyphCount, isSideways, isRightToLeft, geometrySink);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetRecommendedRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetRecommendedRenderingMode(float emSize, float pixelsPerDip, MeasuringMode measuringMode, IDWriteRenderingParams* renderingParams, RenderingMode* renderingMode)
+	public HResult GetRecommendedRenderingMode(float emSize, float pixelsPerDip, DWRITE_MEASURING_MODE measuringMode, IDWriteRenderingParams* renderingParams, DWRITE_RENDERING_MODE* renderingMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, MeasuringMode, IDWriteRenderingParams*, RenderingMode*, int>)(lpVtbl[15]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, measuringMode, renderingParams, renderingMode);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, DWRITE_MEASURING_MODE, IDWriteRenderingParams*, DWRITE_RENDERING_MODE*, int>)(lpVtbl[15]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, measuringMode, renderingParams, renderingMode);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetGdiCompatibleMetrics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, FontMetrics* fontFaceMetrics)
+	public HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, DWRITE_FONT_METRICS* fontFaceMetrics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, Matrix3x2*, FontMetrics*, int>)(lpVtbl[16]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, fontFaceMetrics);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, Matrix3x2*, DWRITE_FONT_METRICS*, int>)(lpVtbl[16]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, fontFaceMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetGdiCompatibleGlyphMetrics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetGdiCompatibleGlyphMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways)
+	public HResult GetGdiCompatibleGlyphMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, ushort* glyphIndices, uint glyphCount, DWRITE_GLYPH_METRICS* glyphMetrics, Bool32 isSideways)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, Matrix3x2*, Bool32, ushort*, uint, GlyphMetrics*, Bool32, int>)(lpVtbl[17]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, useGdiNatural, glyphIndices, glyphCount, glyphMetrics, isSideways);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, Matrix3x2*, Bool32, ushort*, uint, DWRITE_GLYPH_METRICS*, Bool32, int>)(lpVtbl[17]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, useGdiNatural, glyphIndices, glyphCount, glyphMetrics, isSideways);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public void GetMetrics(FontMetrics1* fontMetrics)
+	public void GetMetrics(DWRITE_FONT_METRICS1* fontMetrics)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, FontMetrics1*, void>)(lpVtbl[18]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), fontMetrics);
+		((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, DWRITE_FONT_METRICS1*, void>)(lpVtbl[18]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::GetGdiCompatibleMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, FontMetrics1* fontMetrics)
+	public HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, DWRITE_FONT_METRICS1* fontMetrics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, Matrix3x2*, FontMetrics1*, int>)(lpVtbl[19]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, fontMetrics);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, Matrix3x2*, DWRITE_FONT_METRICS1*, int>)(lpVtbl[19]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, fontMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::GetCaretMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void GetCaretMetrics(CaretMetrics* caretMetrics)
+	public void GetCaretMetrics(DWRITE_CARET_METRICS* caretMetrics)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, CaretMetrics*, void>)(lpVtbl[20]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), caretMetrics);
+		((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, DWRITE_CARET_METRICS*, void>)(lpVtbl[20]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), caretMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::GetUnicodeRanges"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount)
+	public HResult GetUnicodeRanges(uint maxRangeCount, DWRITE_UNICODE_RANGE* unicodeRanges, uint* actualRangeCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, uint, UnicodeRange*, uint*, int>)(lpVtbl[21]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, uint, DWRITE_UNICODE_RANGE*, uint*, int>)(lpVtbl[21]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::IsMonospacedFont"]/*' />
@@ -265,9 +265,9 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::GetRecommendedRenderingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, RenderingMode* renderingMode)
+	public HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, DWRITE_OUTLINE_THRESHOLD outlineThreshold, DWRITE_MEASURING_MODE measuringMode, DWRITE_RENDERING_MODE* renderingMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, float, Matrix3x2*, Bool32, OutlineThreshold, MeasuringMode, RenderingMode*, int>)(lpVtbl[27]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), fontEmSize, dpiX, dpiY, transform, isSideways, outlineThreshold, measuringMode, renderingMode);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace1*, float, float, float, Matrix3x2*, Bool32, DWRITE_OUTLINE_THRESHOLD, DWRITE_MEASURING_MODE, DWRITE_RENDERING_MODE*, int>)(lpVtbl[27]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this), fontEmSize, dpiX, dpiY, transform, isSideways, outlineThreshold, measuringMode, renderingMode);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace1::GetVerticalGlyphVariants"]/*' />
@@ -289,16 +289,16 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 	public interface Interface : IDWriteFontFace.Interface
 	{
 		[VtblIndex(18)]
-		void GetMetrics(FontMetrics1* fontMetrics);
+		void GetMetrics(DWRITE_FONT_METRICS1* fontMetrics);
 
 		[VtblIndex(19)]
-		HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, FontMetrics1* fontMetrics);
+		HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, DWRITE_FONT_METRICS1* fontMetrics);
 
 		[VtblIndex(20)]
-		void GetCaretMetrics(CaretMetrics* caretMetrics);
+		void GetCaretMetrics(DWRITE_CARET_METRICS* caretMetrics);
 
 		[VtblIndex(21)]
-		HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount);
+		HResult GetUnicodeRanges(uint maxRangeCount, DWRITE_UNICODE_RANGE* unicodeRanges, uint* actualRangeCount);
 
 		[VtblIndex(22)]
 		Bool32 IsMonospacedFont();
@@ -316,7 +316,7 @@ public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INat
 		Bool32 HasKerningPairs();
 
 		[VtblIndex(27)]
-		HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, RenderingMode* renderingMode);
+		HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, DWRITE_OUTLINE_THRESHOLD outlineThreshold, DWRITE_MEASURING_MODE measuringMode, DWRITE_RENDERING_MODE* renderingMode);
 
 		[VtblIndex(28)]
 		HResult GetVerticalGlyphVariants(uint glyphCount, ushort* nominalGlyphIndices, ushort* verticalGlyphIndices);

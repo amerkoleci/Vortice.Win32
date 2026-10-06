@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer"]/*' />
 /// <unmanaged>ID3D12RootSignatureDeserializer</unmanaged>
@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : ID3D12RootSignatu
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer::GetRootSignatureDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public RootSignatureDescription* GetRootSignatureDesc()
+	public D3D12_ROOT_SIGNATURE_DESC* GetRootSignatureDesc()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignatureDeserializer*, RootSignatureDescription*>)(lpVtbl[3]))((ID3D12RootSignatureDeserializer*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignatureDeserializer*, D3D12_ROOT_SIGNATURE_DESC*>)(lpVtbl[3]))((ID3D12RootSignatureDeserializer*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		RootSignatureDescription* GetRootSignatureDesc();
+		D3D12_ROOT_SIGNATURE_DESC* GetRootSignatureDesc();
 	}
 }
 

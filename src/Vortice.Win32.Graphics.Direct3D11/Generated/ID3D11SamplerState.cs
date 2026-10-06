@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState"]/*' />
 /// <unmanaged>ID3D11SamplerState</unmanaged>
@@ -105,15 +105,15 @@ public unsafe partial struct ID3D11SamplerState : ID3D11SamplerState.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDesc(SamplerDescription* pDesc)
+	public void GetDesc(D3D11_SAMPLER_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11SamplerState*, SamplerDescription*, void>)(lpVtbl[7]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11SamplerState*, D3D11_SAMPLER_DESC*, void>)(lpVtbl[7]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		void GetDesc(SamplerDescription* pDesc);
+		void GetDesc(D3D11_SAMPLER_DESC* pDesc);
 	}
 }
 

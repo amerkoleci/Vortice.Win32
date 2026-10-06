@@ -7,648 +7,632 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE"]/*' />
 /// <unmanaged>DXGI_USAGE</unmanaged>
 [Flags]
-public enum Usage : uint
+public enum DXGI_USAGE : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_SHADER_INPUT"]/*' />
 	/// <unmanaged>DXGI_USAGE_SHADER_INPUT</unmanaged>
-	ShaderInput = 16,
+	DXGI_USAGE_SHADER_INPUT = 16,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_RENDER_TARGET_OUTPUT"]/*' />
 	/// <unmanaged>DXGI_USAGE_RENDER_TARGET_OUTPUT</unmanaged>
-	RenderTargetOutput = 32,
+	DXGI_USAGE_RENDER_TARGET_OUTPUT = 32,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_BACK_BUFFER"]/*' />
 	/// <unmanaged>DXGI_USAGE_BACK_BUFFER</unmanaged>
-	BackBuffer = 64,
+	DXGI_USAGE_BACK_BUFFER = 64,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_SHARED"]/*' />
 	/// <unmanaged>DXGI_USAGE_SHARED</unmanaged>
-	Shared = 128,
+	DXGI_USAGE_SHARED = 128,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_READ_ONLY"]/*' />
 	/// <unmanaged>DXGI_USAGE_READ_ONLY</unmanaged>
-	ReadOnly = 256,
+	DXGI_USAGE_READ_ONLY = 256,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_DISCARD_ON_PRESENT"]/*' />
 	/// <unmanaged>DXGI_USAGE_DISCARD_ON_PRESENT</unmanaged>
-	DiscardOnPresent = 512,
+	DXGI_USAGE_DISCARD_ON_PRESENT = 512,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_UNORDERED_ACCESS"]/*' />
 	/// <unmanaged>DXGI_USAGE_UNORDERED_ACCESS</unmanaged>
-	UnorderedAccess = 1024,
+	DXGI_USAGE_UNORDERED_ACCESS = 1024,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT"]/*' />
 /// <unmanaged>DXGI_PRESENT</unmanaged>
 [Flags]
-public enum PresentFlags : uint
+public enum DXGI_PRESENT : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_TEST"]/*' />
 	/// <unmanaged>DXGI_PRESENT_TEST</unmanaged>
-	Test = 1,
+	DXGI_PRESENT_TEST = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_DO_NOT_SEQUENCE"]/*' />
 	/// <unmanaged>DXGI_PRESENT_DO_NOT_SEQUENCE</unmanaged>
-	DoNotSequence = 2,
+	DXGI_PRESENT_DO_NOT_SEQUENCE = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_RESTART"]/*' />
 	/// <unmanaged>DXGI_PRESENT_RESTART</unmanaged>
-	Restart = 4,
+	DXGI_PRESENT_RESTART = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_DO_NOT_WAIT"]/*' />
 	/// <unmanaged>DXGI_PRESENT_DO_NOT_WAIT</unmanaged>
-	DoNotWait = 8,
+	DXGI_PRESENT_DO_NOT_WAIT = 8,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_STEREO_PREFER_RIGHT"]/*' />
 	/// <unmanaged>DXGI_PRESENT_STEREO_PREFER_RIGHT</unmanaged>
-	StereoPreferRight = 16,
+	DXGI_PRESENT_STEREO_PREFER_RIGHT = 16,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_STEREO_TEMPORARY_MONO"]/*' />
 	/// <unmanaged>DXGI_PRESENT_STEREO_TEMPORARY_MONO</unmanaged>
-	StereoTemporaryMono = 32,
+	DXGI_PRESENT_STEREO_TEMPORARY_MONO = 32,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_RESTRICT_TO_OUTPUT"]/*' />
 	/// <unmanaged>DXGI_PRESENT_RESTRICT_TO_OUTPUT</unmanaged>
-	RestrictToOutput = 64,
+	DXGI_PRESENT_RESTRICT_TO_OUTPUT = 64,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_USE_DURATION"]/*' />
 	/// <unmanaged>DXGI_PRESENT_USE_DURATION</unmanaged>
-	UseDuration = 256,
+	DXGI_PRESENT_USE_DURATION = 256,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_ALLOW_TEARING"]/*' />
 	/// <unmanaged>DXGI_PRESENT_ALLOW_TEARING</unmanaged>
-	AllowTearing = 512,
+	DXGI_PRESENT_ALLOW_TEARING = 512,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES"]/*' />
 /// <unmanaged>DXGI_ENUM_MODES</unmanaged>
 [Flags]
-public enum EnumModesFlags : uint
+public enum DXGI_ENUM_MODES : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_INTERLACED"]/*' />
 	/// <unmanaged>DXGI_ENUM_MODES_INTERLACED</unmanaged>
-	Interlaced = 1,
+	DXGI_ENUM_MODES_INTERLACED = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_SCALING"]/*' />
 	/// <unmanaged>DXGI_ENUM_MODES_SCALING</unmanaged>
-	Scaling = 2,
+	DXGI_ENUM_MODES_SCALING = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_STEREO"]/*' />
 	/// <unmanaged>DXGI_ENUM_MODES_STEREO</unmanaged>
-	Stereo = 4,
+	DXGI_ENUM_MODES_STEREO = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_DISABLED_STEREO"]/*' />
 	/// <unmanaged>DXGI_ENUM_MODES_DISABLED_STEREO</unmanaged>
-	DisabledStereo = 8,
+	DXGI_ENUM_MODES_DISABLED_STEREO = 8,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS"]/*' />
 /// <unmanaged>DXGI_MWA_FLAGS</unmanaged>
 [Flags]
-public enum WindowAssociationFlags : uint
+public enum DXGI_MWA_FLAGS : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_WINDOW_CHANGES"]/*' />
 	/// <unmanaged>DXGI_MWA_NO_WINDOW_CHANGES</unmanaged>
-	NoWindowChanges = 1,
+	DXGI_MWA_NO_WINDOW_CHANGES = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_ALT_ENTER"]/*' />
 	/// <unmanaged>DXGI_MWA_NO_ALT_ENTER</unmanaged>
-	NoAltEnter = 2,
+	DXGI_MWA_NO_ALT_ENTER = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_PRINT_SCREEN"]/*' />
 	/// <unmanaged>DXGI_MWA_NO_PRINT_SCREEN</unmanaged>
-	NoPrintScreen = 4,
+	DXGI_MWA_NO_PRINT_SCREEN = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_VALID"]/*' />
 	/// <unmanaged>DXGI_MWA_VALID</unmanaged>
-	Valid = 7,
+	DXGI_MWA_VALID = 7,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS"]/*' />
 /// <unmanaged>DXGI_MAP_FLAGS</unmanaged>
 [Flags]
-public enum MapFlags : uint
+public enum DXGI_MAP_FLAGS : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_READ"]/*' />
 	/// <unmanaged>DXGI_MAP_READ</unmanaged>
-	Read = 1,
+	DXGI_MAP_READ = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_WRITE"]/*' />
 	/// <unmanaged>DXGI_MAP_WRITE</unmanaged>
-	Write = 2,
+	DXGI_MAP_WRITE = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_DISCARD"]/*' />
 	/// <unmanaged>DXGI_MAP_DISCARD</unmanaged>
-	Discard = 4,
+	DXGI_MAP_DISCARD = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
 /// <unmanaged>DXGI_RESOURCE_PRIORITY</unmanaged>
-public enum ResourcePriority : uint
+public enum DXGI_RESOURCE_PRIORITY : uint
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MINIMUM"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MINIMUM</unmanaged>
-	Minimum = 671088640,
+	DXGI_RESOURCE_PRIORITY_MINIMUM = 671088640,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_LOW"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_LOW</unmanaged>
-	Low = 1342177280,
+	DXGI_RESOURCE_PRIORITY_LOW = 1342177280,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_NORMAL</unmanaged>
-	Normal = 2013265920,
+	DXGI_RESOURCE_PRIORITY_NORMAL = 2013265920,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_HIGH</unmanaged>
-	High = 2684354560,
+	DXGI_RESOURCE_PRIORITY_HIGH = 2684354560,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MAXIMUM"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MAXIMUM</unmanaged>
-	Maximum = 3355443200,
+	DXGI_RESOURCE_PRIORITY_MAXIMUM = 3355443200,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE_RW"]/*' />
 /// <unmanaged>DXGI_SHARED_RESOURCE_RW</unmanaged>
 [Flags]
-public enum SharedResourceRw : uint
+public enum DXGI_SHARED_RESOURCE_RW : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE_RW::DXGI_SHARED_RESOURCE_READ"]/*' />
 	/// <unmanaged>DXGI_SHARED_RESOURCE_READ</unmanaged>
-	Read = 2147483648,
+	DXGI_SHARED_RESOURCE_READ = 2147483648,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE_RW::DXGI_SHARED_RESOURCE_WRITE"]/*' />
 	/// <unmanaged>DXGI_SHARED_RESOURCE_WRITE</unmanaged>
-	Write = 1,
+	DXGI_SHARED_RESOURCE_WRITE = 1,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_CREATE_FACTORY_FLAGS"]/*' />
 /// <unmanaged>DXGI_CREATE_FACTORY_FLAGS</unmanaged>
 [Flags]
-public enum CreateFactoryFlags : uint
+public enum DXGI_CREATE_FACTORY_FLAGS : uint
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_CREATE_FACTORY_FLAGS::DXGI_CREATE_FACTORY_DEBUG"]/*' />
 	/// <unmanaged>DXGI_CREATE_FACTORY_DEBUG</unmanaged>
-	Debug = 1,
+	DXGI_CREATE_FACTORY_DEBUG = 1,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
 /// <unmanaged>DXGI_RESIDENCY</unmanaged>
-public enum Residency
+public enum DXGI_RESIDENCY
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_FULLY_RESIDENT"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_FULLY_RESIDENT</unmanaged>
-	FullyResident = 1,
+	DXGI_RESIDENCY_FULLY_RESIDENT = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY</unmanaged>
-	ResidentInSharedMemory = 2,
+	DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_EVICTED_TO_DISK"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_EVICTED_TO_DISK</unmanaged>
-	EvictedToDisk = 3,
+	DXGI_RESIDENCY_EVICTED_TO_DISK = 3,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT"]/*' />
 /// <unmanaged>DXGI_SWAP_EFFECT</unmanaged>
-public enum SwapEffect
+public enum DXGI_SWAP_EFFECT
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_DISCARD"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_DISCARD</unmanaged>
-	Discard = 0,
+	DXGI_SWAP_EFFECT_DISCARD = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_SEQUENTIAL"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_SEQUENTIAL</unmanaged>
-	Sequential = 1,
+	DXGI_SWAP_EFFECT_SEQUENTIAL = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL</unmanaged>
-	FlipSequential = 3,
+	DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL = 3,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_DISCARD"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_FLIP_DISCARD</unmanaged>
-	FlipDiscard = 4,
+	DXGI_SWAP_EFFECT_FLIP_DISCARD = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_FLAG</unmanaged>
 [Flags]
-public enum SwapChainFlags
+public enum DXGI_SWAP_CHAIN_FLAG
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_NONPREROTATED"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_NONPREROTATED</unmanaged>
-	NonPrerotated = 1,
+	DXGI_SWAP_CHAIN_FLAG_NONPREROTATED = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH</unmanaged>
-	AllowModeSwitch = 2,
+	DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE</unmanaged>
-	GDICompatible = 4,
+	DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT</unmanaged>
-	RestrictedContent = 8,
+	DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT = 8,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER</unmanaged>
-	RestrictSharedResourceDriver = 16,
+	DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER = 16,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_DISPLAY_ONLY"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_DISPLAY_ONLY</unmanaged>
-	DisplayOnly = 32,
+	DXGI_SWAP_CHAIN_FLAG_DISPLAY_ONLY = 32,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT</unmanaged>
-	FrameLatencyWaitableObject = 64,
+	DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT = 64,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER</unmanaged>
-	ForegroundLayer = 128,
+	DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER = 128,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO</unmanaged>
-	FullscreenVideo = 256,
+	DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO = 256,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO</unmanaged>
-	YUVVideo = 512,
+	DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO = 512,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED</unmanaged>
-	HWProtected = 1024,
+	DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED = 1024,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING</unmanaged>
-	AllowTearing = 2048,
+	DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING = 2048,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS</unmanaged>
-	RestrictedToAllHolographicDisplays = 4096,
+	DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS = 4096,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG</unmanaged>
 [Flags]
-public enum AdapterFlags
+public enum DXGI_ADAPTER_FLAG
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_NONE</unmanaged>
-	None = 0,
+	DXGI_ADAPTER_FLAG_NONE = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_REMOTE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_REMOTE</unmanaged>
-	Remote = 1,
+	DXGI_ADAPTER_FLAG_REMOTE = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_SOFTWARE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_SOFTWARE</unmanaged>
-	Software = 2,
+	DXGI_ADAPTER_FLAG_SOFTWARE = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE</unmanaged>
-public enum OutduplPointerShapeType
+public enum DXGI_OUTDUPL_POINTER_SHAPE_TYPE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME</unmanaged>
-	Monochrome = 1,
+	DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR</unmanaged>
-	Color = 2,
+	DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MASKED_COLOR"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MASKED_COLOR</unmanaged>
-	MaskedColor = 4,
+	DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MASKED_COLOR = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY</unmanaged>
-public enum OfferResourcePriority
+public enum DXGI_OFFER_RESOURCE_PRIORITY
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_LOW"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_LOW</unmanaged>
-	Low = 1,
+	DXGI_OFFER_RESOURCE_PRIORITY_LOW = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_NORMAL</unmanaged>
-	Normal = 2,
+	DXGI_OFFER_RESOURCE_PRIORITY_NORMAL = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_HIGH</unmanaged>
-	High = 3,
+	DXGI_OFFER_RESOURCE_PRIORITY_HIGH = 3,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING"]/*' />
 /// <unmanaged>DXGI_SCALING</unmanaged>
-public enum Scaling
+public enum DXGI_SCALING
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_STRETCH"]/*' />
 	/// <unmanaged>DXGI_SCALING_STRETCH</unmanaged>
-	Stretch = 0,
+	DXGI_SCALING_STRETCH = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_NONE"]/*' />
 	/// <unmanaged>DXGI_SCALING_NONE</unmanaged>
-	None = 1,
+	DXGI_SCALING_NONE = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_ASPECT_RATIO_STRETCH"]/*' />
 	/// <unmanaged>DXGI_SCALING_ASPECT_RATIO_STRETCH</unmanaged>
-	AspectRatioStretch = 2,
+	DXGI_SCALING_ASPECT_RATIO_STRETCH = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY"]/*' />
 /// <unmanaged>DXGI_GRAPHICS_PREEMPTION_GRANULARITY</unmanaged>
-public enum GraphicsPreemptionGranularity
+public enum DXGI_GRAPHICS_PREEMPTION_GRANULARITY
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
-	DmaBufferBoundary = 0,
+	DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY</unmanaged>
-	PrimitiveBoundary = 1,
+	DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY</unmanaged>
-	TriangleBoundary = 2,
+	DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY</unmanaged>
-	PixelBoundary = 3,
+	DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY = 3,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
-	InstructionBoundary = 4,
+	DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY"]/*' />
 /// <unmanaged>DXGI_COMPUTE_PREEMPTION_GRANULARITY</unmanaged>
-public enum ComputePreemptionGranularity
+public enum DXGI_COMPUTE_PREEMPTION_GRANULARITY
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
-	DmaBufferBoundary = 0,
+	DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY</unmanaged>
-	DispatchBoundary = 1,
+	DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY</unmanaged>
-	ThreadGroupBoundary = 2,
+	DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY</unmanaged>
-	ThreadBoundary = 3,
+	DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY = 3,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
-	InstructionBoundary = 4,
+	DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS"]/*' />
 /// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS</unmanaged>
 [Flags]
-public enum MultiplaneOverlayYcbcrFlags
+public enum DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE</unmanaged>
-	YcbcrFlagNominalRange = 1,
+	DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709</unmanaged>
-	YcbcrFlagBt709 = 2,
+	DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709 = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC</unmanaged>
-	YcbcrFlagXvycc = 4,
+	DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE"]/*' />
 /// <unmanaged>DXGI_FRAME_PRESENTATION_MODE</unmanaged>
-public enum FramePresentationMode
+public enum DXGI_FRAME_PRESENTATION_MODE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSED"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_COMPOSED</unmanaged>
-	Composed = 0,
+	DXGI_FRAME_PRESENTATION_MODE_COMPOSED = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_OVERLAY"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_OVERLAY</unmanaged>
-	Overlay = 1,
+	DXGI_FRAME_PRESENTATION_MODE_OVERLAY = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_NONE"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_NONE</unmanaged>
-	None = 2,
+	DXGI_FRAME_PRESENTATION_MODE_NONE = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE</unmanaged>
-	CompositionFailure = 3,
+	DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE = 3,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG</unmanaged>
 [Flags]
-public enum OverlaySupportFlags
+public enum DXGI_OVERLAY_SUPPORT_FLAG
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_DIRECT"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG_DIRECT</unmanaged>
-	Direct = 1,
+	DXGI_OVERLAY_SUPPORT_FLAG_DIRECT = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_SCALING"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG_SCALING</unmanaged>
-	Scaling = 2,
+	DXGI_OVERLAY_SUPPORT_FLAG_SCALING = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 [Flags]
-public enum SwapChainColorSpaceSupportFlags
+public enum DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT</unmanaged>
-	Present = 1,
+	DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT</unmanaged>
-	OverlayPresent = 2,
+	DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 [Flags]
-public enum OverlayColorSpaceSupportFlags
+public enum DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG::DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT</unmanaged>
-	Present = 1,
+	DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT = 1,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP"]/*' />
 /// <unmanaged>DXGI_MEMORY_SEGMENT_GROUP</unmanaged>
-public enum MemorySegmentGroup
+public enum DXGI_MEMORY_SEGMENT_GROUP
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP::DXGI_MEMORY_SEGMENT_GROUP_LOCAL"]/*' />
 	/// <unmanaged>DXGI_MEMORY_SEGMENT_GROUP_LOCAL</unmanaged>
-	Local = 0,
+	DXGI_MEMORY_SEGMENT_GROUP_LOCAL = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP::DXGI_MEMORY_SEGMENT_GROUP_NON_LOCAL"]/*' />
 	/// <unmanaged>DXGI_MEMORY_SEGMENT_GROUP_NON_LOCAL</unmanaged>
-	NonLocal = 1,
+	DXGI_MEMORY_SEGMENT_GROUP_NON_LOCAL = 1,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FLAG</unmanaged>
 [Flags]
-public enum OutduplFlags
+public enum DXGI_OUTDUPL_FLAG
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG::DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY</unmanaged>
-	CompositedUICaptureOnly = 1,
+	DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY = 1,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_TYPE</unmanaged>
-public enum HDRMetadataType
+public enum DXGI_HDR_METADATA_TYPE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_NONE"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_NONE</unmanaged>
-	None = 0,
+	DXGI_HDR_METADATA_TYPE_NONE = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_HDR10</unmanaged>
-	Hdr10 = 1,
+	DXGI_HDR_METADATA_TYPE_HDR10 = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10PLUS"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_HDR10PLUS</unmanaged>
-	Hdr10plus = 2,
+	DXGI_HDR_METADATA_TYPE_HDR10PLUS = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_FLAGS</unmanaged>
 [Flags]
-public enum OfferResourceFlags
+public enum DXGI_OFFER_RESOURCE_FLAGS
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS::DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT</unmanaged>
-	AllowDecommit = 1,
+	DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT = 1,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS"]/*' />
 /// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULTS</unmanaged>
-public enum ReclaimResourceResults
+public enum DXGI_RECLAIM_RESOURCE_RESULTS
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_OK"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_OK</unmanaged>
-	Ok = 0,
+	DXGI_RECLAIM_RESOURCE_RESULT_OK = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED</unmanaged>
-	Discarded = 1,
+	DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED</unmanaged>
-	NotCommitted = 2,
+	DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FEATURE"]/*' />
 /// <unmanaged>DXGI_FEATURE</unmanaged>
-public enum Feature
+public enum DXGI_FEATURE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FEATURE::DXGI_FEATURE_PRESENT_ALLOW_TEARING"]/*' />
 	/// <unmanaged>DXGI_FEATURE_PRESENT_ALLOW_TEARING</unmanaged>
-	PresentAllowTearing = 0,
+	DXGI_FEATURE_PRESENT_ALLOW_TEARING = 0,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
-public enum AdapterFlags3
+public enum DXGI_ADAPTER_FLAG3
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>
-	None = 0,
+	DXGI_ADAPTER_FLAG3_NONE = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_REMOTE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_REMOTE</unmanaged>
-	Remote = 1,
+	DXGI_ADAPTER_FLAG3_REMOTE = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SOFTWARE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SOFTWARE</unmanaged>
-	Software = 2,
+	DXGI_ADAPTER_FLAG3_SOFTWARE = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE</unmanaged>
-	AcgCompatible = 4,
+	DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES</unmanaged>
-	SupportMonitoredFences = 8,
+	DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES = 8,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES</unmanaged>
-	SupportNonMonitoredFences = 16,
+	DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES = 16,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE</unmanaged>
-	KeyedMutexConformance = 32,
+	DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE = 32,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS</unmanaged>
 [Flags]
-public enum HardwareCompositionSupportFlags
+public enum DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN</unmanaged>
-	Fullscreen = 1,
+	DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED</unmanaged>
-	Windowed = 2,
+	DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED</unmanaged>
-	CursorStretched = 4,
+	DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE"]/*' />
 /// <unmanaged>DXGI_GPU_PREFERENCE</unmanaged>
-public enum GpuPreference
+public enum DXGI_GPU_PREFERENCE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_UNSPECIFIED</unmanaged>
-	Unspecified = 0,
+	DXGI_GPU_PREFERENCE_UNSPECIFIED = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_MINIMUM_POWER"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_MINIMUM_POWER</unmanaged>
-	MinimumPower = 1,
+	DXGI_GPU_PREFERENCE_MINIMUM_POWER = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE</unmanaged>
-	HighPerformance = 2,
+	DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE = 2,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS"]/*' />
 /// <unmanaged>DXGI_DEBUG_RLO_FLAGS</unmanaged>
 [Flags]
-public enum ReportLiveObjectFlags
+public enum DXGI_DEBUG_RLO_FLAGS
 {
-	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_SUMMARY"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_SUMMARY</unmanaged>
-	Summary = 1,
+	DXGI_DEBUG_RLO_SUMMARY = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_DETAIL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_DETAIL</unmanaged>
-	Detail = 2,
+	DXGI_DEBUG_RLO_DETAIL = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_IGNORE_INTERNAL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_IGNORE_INTERNAL</unmanaged>
-	IgnoreInternal = 4,
+	DXGI_DEBUG_RLO_IGNORE_INTERNAL = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_ALL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_ALL</unmanaged>
-	All = 7,
+	DXGI_DEBUG_RLO_ALL = 7,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY</unmanaged>
-public enum InfoQueueMessageCategory
+public enum DXGI_INFO_QUEUE_MESSAGE_CATEGORY
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN</unmanaged>
-	Unknown = 0,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS</unmanaged>
-	Miscellaneous = 1,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION</unmanaged>
-	Initialization = 2,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP</unmanaged>
-	Cleanup = 3,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP = 3,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION</unmanaged>
-	Compilation = 4,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION</unmanaged>
-	StateCreation = 5,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION = 5,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING</unmanaged>
-	StateSetting = 6,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING = 6,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING</unmanaged>
-	StateGetting = 7,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING = 7,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION</unmanaged>
-	ResourceManipulation = 8,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION = 8,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION</unmanaged>
-	Execution = 9,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION = 9,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER</unmanaged>
-	Shader = 10,
+	DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER = 10,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY</unmanaged>
-public enum InfoQueueMessageSeverity
+public enum DXGI_INFO_QUEUE_MESSAGE_SEVERITY
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION</unmanaged>
-	Corruption = 0,
+	DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR</unmanaged>
-	Error = 1,
+	DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING</unmanaged>
-	Warning = 2,
+	DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO</unmanaged>
-	Info = 3,
+	DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO = 3,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE</unmanaged>
-	Message = 4,
+	DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id"]/*' />
 /// <unmanaged>DXGI_Message_Id</unmanaged>
-public enum MessageId
+public enum DXGI_Message_Id
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow</unmanaged>

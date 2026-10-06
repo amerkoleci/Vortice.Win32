@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader"]/*' />
 /// <unmanaged>IDWriteRemoteFontFileLoader</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader::GetLocalityFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, Locality* locality)
+	public HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, DWRITE_LOCALITY* locality)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, void*, uint, Locality*, int>)(lpVtbl[5]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, locality);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, void*, uint, DWRITE_LOCALITY*, int>)(lpVtbl[5]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, locality);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader::CreateFontFileReferenceFromUrl"]/*' />
@@ -108,7 +108,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 		HResult CreateRemoteStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteRemoteFontFileStream** fontFileStream);
 
 		[VtblIndex(5)]
-		HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, Locality* locality);
+		HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, DWRITE_LOCALITY* locality);
 
 		[VtblIndex(6)]
 		HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile);

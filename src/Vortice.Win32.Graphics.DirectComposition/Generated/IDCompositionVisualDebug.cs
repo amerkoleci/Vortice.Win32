@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug"]/*' />
 /// <unmanaged>IDCompositionVisualDebug</unmanaged>
@@ -137,17 +137,17 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetBitmapInterpolationMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetBitmapInterpolationMode(BitmapInterpolationMode interpolationMode)
+	public HResult SetBitmapInterpolationMode(DCOMPOSITION_BITMAP_INTERPOLATION_MODE interpolationMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, BitmapInterpolationMode, int>)(lpVtbl[11]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), interpolationMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_BITMAP_INTERPOLATION_MODE, int>)(lpVtbl[11]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetBorderMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetBorderMode(BorderMode borderMode)
+	public HResult SetBorderMode(DCOMPOSITION_BORDER_MODE borderMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, BorderMode, int>)(lpVtbl[12]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), borderMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_BORDER_MODE, int>)(lpVtbl[12]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), borderMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
@@ -201,25 +201,25 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetCompositeMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetCompositeMode(CompositeMode compositeMode)
+	public HResult SetCompositeMode(DCOMPOSITION_COMPOSITE_MODE compositeMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), compositeMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_COMPOSITE_MODE, int>)(lpVtbl[19]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), compositeMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual2.SetOpacityMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult SetOpacityMode(OpacityMode mode)
+	public HResult SetOpacityMode(DCOMPOSITION_OPACITY_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, OpacityMode, int>)(lpVtbl[20]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_OPACITY_MODE, int>)(lpVtbl[20]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual2.SetBackFaceVisibility" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SetBackFaceVisibility(BackfaceVisibility visibility)
+	public HResult SetBackFaceVisibility(DCOMPOSITION_BACKFACE_VISIBILITY visibility)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visibility);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_BACKFACE_VISIBILITY, int>)(lpVtbl[21]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visibility);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::EnableHeatMap"]/*' />

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform"]/*' />
 /// <unmanaged>ID2D1BlendTransform</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1BlendTransform : ID2D1BlendTransform.Interface
 	/// <inheritdoc cref="ID2D1ConcreteTransform.SetOutputBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
+	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1BlendTransform*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1BlendTransform*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
 
 	/// <inheritdoc cref="ID2D1ConcreteTransform.SetCached" />
@@ -97,26 +97,26 @@ public unsafe partial struct ID2D1BlendTransform : ID2D1BlendTransform.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform::SetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetDescription(BlendDescription* description)
+	public void SetDescription(D2D1_BLEND_DESCRIPTION* description)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1BlendTransform*, BlendDescription*, void>)(lpVtbl[6]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
+		((delegate* unmanaged[MemberFunction]<ID2D1BlendTransform*, D2D1_BLEND_DESCRIPTION*, void>)(lpVtbl[6]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform::GetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDescription(BlendDescription* description)
+	public void GetDescription(D2D1_BLEND_DESCRIPTION* description)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1BlendTransform*, BlendDescription*, void>)(lpVtbl[7]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
+		((delegate* unmanaged[MemberFunction]<ID2D1BlendTransform*, D2D1_BLEND_DESCRIPTION*, void>)(lpVtbl[7]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
 	}
 
 	public interface Interface : ID2D1ConcreteTransform.Interface
 	{
 		[VtblIndex(6)]
-		void SetDescription(BlendDescription* description);
+		void SetDescription(D2D1_BLEND_DESCRIPTION* description);
 
 		[VtblIndex(7)]
-		void GetDescription(BlendDescription* description);
+		void GetDescription(D2D1_BLEND_DESCRIPTION* description);
 	}
 }
 

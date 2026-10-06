@@ -1,10 +1,9 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D12;
 using Vortice.Win32.Graphics.Dxgi;
 
-namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>D3D12MA_ALLOCATION_CALLBACKS</unmanaged>
 public unsafe partial struct D3D12MA_ALLOCATION_CALLBACKS
@@ -24,7 +23,7 @@ public unsafe partial struct D3D12MA_ALLOCATION_CALLBACKS
 /// <unmanaged>D3D12MA_ALLOCATOR_DESC</unmanaged>
 public unsafe partial struct D3D12MA_ALLOCATOR_DESC
 {
-    public AllocatorFlags Flags;
+    public D3D12MA_ALLOCATOR_FLAGS Flags;
     public ID3D12Device* pDevice;
     public ulong PreferredBlockSize;
     public D3D12MA_ALLOCATION_CALLBACKS* pAllocationCallbacks;
@@ -33,8 +32,8 @@ public unsafe partial struct D3D12MA_ALLOCATOR_DESC
 
 public unsafe partial struct D3D12MA_POOL_DESC
 {
-    public PoolFlags Flags;
-    public HeapProperties HeapProperties;
+    public D3D12MA_POOL_FLAGS Flags;
+    public D3D12_HEAP_PROPERTIES HeapProperties;
     public D3D12_HEAP_FLAGS HeapFlags;
     public ulong BlockSize;
     public uint MinBlockCount;
@@ -47,7 +46,7 @@ public unsafe partial struct D3D12MA_POOL_DESC
 /// <unmanaged>D3D12MA_VIRTUAL_BLOCK_DESC</unmanaged>
 public unsafe partial struct D3D12MA_VIRTUAL_BLOCK_DESC
 {
-    public VirtualBlockFlags Flags;
+    public D3D12MA_VIRTUAL_BLOCK_FLAGS Flags;
     public ulong Size;
     public D3D12MA_ALLOCATION_CALLBACKS* pAllocationCallbacks;
 }
@@ -55,7 +54,7 @@ public unsafe partial struct D3D12MA_VIRTUAL_BLOCK_DESC
 /// <unmanaged>D3D12MA_ALLOCATION_DESC</unmanaged>
 public unsafe partial struct D3D12MA_ALLOCATION_DESC
 {
-    public AllocationFlags Flags;
+    public D3D12MA_ALLOCATION_FLAGS Flags;
     public D3D12_HEAP_TYPE HeapType;
     public D3D12_HEAP_FLAGS ExtraHeapFlags;
     public D3D12MA_Pool CustomPool;
@@ -65,7 +64,7 @@ public unsafe partial struct D3D12MA_ALLOCATION_DESC
 /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_DESC</unmanaged>
 public unsafe partial struct D3D12MA_VIRTUAL_ALLOCATION_DESC
 {
-    public VirtualAllocationFlags Flags;
+    public D3D12MA_VIRTUAL_ALLOCATION_FLAGS Flags;
     public ulong Size;
     public ulong Alignment;
     public void* pPrivateData;

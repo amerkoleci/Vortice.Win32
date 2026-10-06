@@ -7,13 +7,13 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 public static unsafe partial class Apis
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateFactory"]/*' />
 	[LibraryImport("d2d1.dll")]
-	public static partial HResult D2D1CreateFactory(FactoryType factoryType, Guid* riid, FactoryOptions* pFactoryOptions, void** ppIFactory);
+	public static partial HResult D2D1CreateFactory(D2D1_FACTORY_TYPE factoryType, Guid* riid, D2D1_FACTORY_OPTIONS* pFactoryOptions, void** ppIFactory);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1MakeRotateMatrix"]/*' />
 	[LibraryImport("d2d1.dll")]
@@ -33,15 +33,15 @@ public static unsafe partial class Apis
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateDevice"]/*' />
 	[LibraryImport("d2d1.dll")]
-	public static partial HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, CreationProperties* creationProperties, ID2D1Device** d2dDevice);
+	public static partial HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, D2D1_CREATION_PROPERTIES* creationProperties, ID2D1Device** d2dDevice);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateDeviceContext"]/*' />
 	[LibraryImport("d2d1.dll")]
-	public static partial HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, CreationProperties* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
+	public static partial HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, D2D1_CREATION_PROPERTIES* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1ConvertColorSpace"]/*' />
 	[LibraryImport("d2d1.dll")]
-	public static partial Color4 D2D1ConvertColorSpace(ColorSpace sourceColorSpace, ColorSpace destinationColorSpace, Color4* color);
+	public static partial Color4 D2D1ConvertColorSpace(D2D1_COLOR_SPACE sourceColorSpace, D2D1_COLOR_SPACE destinationColorSpace, Color4* color);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1SinCos"]/*' />
 	[LibraryImport("d2d1.dll")]

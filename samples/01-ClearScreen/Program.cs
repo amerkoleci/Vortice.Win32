@@ -16,13 +16,13 @@ using Vortice.Win32.Media.Audio.XAudio2;
 using static Vortice.Win32.Apis;
 using static Vortice.Win32.Graphics.Direct2D.Apis;
 using static Vortice.Win32.Graphics.Direct3D.Dxc.Apis;
-using static Vortice.Win32.Graphics.Direct3D12.Apis;
+using static Vortice.Win32.Graphics.D3D12;
 using static Vortice.Win32.Graphics.Direct3D11.Apis;
 using static Vortice.Win32.Graphics.DirectWrite.Apis;
 using static Vortice.Win32.Graphics.Dxgi.Apis;
 using static Vortice.Win32.Graphics.Imaging.D2D.Apis;
 using static Vortice.Win32.Media.Audio.XAudio2.Apis;
-using static Vortice.Win32.Graphics.D3D12MemoryAllocator.Apis;
+using static Vortice.Win32.Graphics.D3D12MA;
 
 using DWriteFactoryType = Vortice.Win32.Graphics.DirectWrite.FactoryType;
 using FactoryType = Vortice.Win32.Graphics.Direct2D.FactoryType;
@@ -30,8 +30,7 @@ using FeatureLevel = Vortice.Win32.Graphics.Direct3D.FeatureLevel;
 using InfoQueueFilter = Vortice.Win32.Graphics.Direct3D11.InfoQueueFilter;
 using MessageId = Vortice.Win32.Graphics.Direct3D11.MessageId;
 using D3D11MessageSeverity = Vortice.Win32.Graphics.Direct3D11.MessageSeverity;
-using Vortice.Win32.Graphics.Direct3D12;
-using Vortice.Win32.Graphics.D3D12MemoryAllocator;
+using Vortice.Win32.Graphics;
 
 namespace ClearScreen;
 
@@ -231,7 +230,7 @@ public static unsafe class Program
             allocationDesc.HeapType = D3D12_HEAP_TYPE.D3D12_HEAP_TYPE_DEFAULT;
 
             using ComPtr<ID3D12Resource> buffer = default;
-            ResourceDescription bufferDesc = ResourceDescription.Buffer(256u);
+            D3D12_RESOURCE_DESC bufferDesc = D3D12_RESOURCE_DESC.Buffer(256u);
 
             D3D12MA_Allocation allocation = default;
             hr = allocator.CreateResource<ID3D12Resource>(&allocationDesc, in bufferDesc, D3D12_RESOURCE_STATES.D3D12_RESOURCE_STATE_COMMON,

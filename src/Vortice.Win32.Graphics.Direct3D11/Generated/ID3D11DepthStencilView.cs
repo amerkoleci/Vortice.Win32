@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView"]/*' />
 /// <unmanaged>ID3D11DepthStencilView</unmanaged>
@@ -113,15 +113,15 @@ public unsafe partial struct ID3D11DepthStencilView : ID3D11DepthStencilView.Int
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(DepthStencilViewDescription* pDesc)
+	public void GetDesc(D3D11_DEPTH_STENCIL_VIEW_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DepthStencilView*, DepthStencilViewDescription*, void>)(lpVtbl[8]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11DepthStencilView*, D3D11_DEPTH_STENCIL_VIEW_DESC*, void>)(lpVtbl[8]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc(DepthStencilViewDescription* pDesc);
+		void GetDesc(D3D11_DEPTH_STENCIL_VIEW_DESC* pDesc);
 	}
 }
 

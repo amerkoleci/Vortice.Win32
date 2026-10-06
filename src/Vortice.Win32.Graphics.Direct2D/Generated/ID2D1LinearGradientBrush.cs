@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush"]/*' />
 /// <unmanaged>ID2D1LinearGradientBrush</unmanaged>
@@ -131,8 +131,7 @@ public unsafe partial struct ID2D1LinearGradientBrush : ID2D1LinearGradientBrush
 	[VtblIndex(10)]
 	public Vector2 GetStartPoint()
 	{
-		Vector2 result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1LinearGradientBrush*, Vector2*, Vector2*>)(lpVtbl[10]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1LinearGradientBrush*, Vector2>)(lpVtbl[10]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetEndPoint"]/*' />
@@ -140,8 +139,7 @@ public unsafe partial struct ID2D1LinearGradientBrush : ID2D1LinearGradientBrush
 	[VtblIndex(11)]
 	public Vector2 GetEndPoint()
 	{
-		Vector2 result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1LinearGradientBrush*, Vector2*, Vector2*>)(lpVtbl[11]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1LinearGradientBrush*, Vector2>)(lpVtbl[11]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetGradientStopCollection"]/*' />

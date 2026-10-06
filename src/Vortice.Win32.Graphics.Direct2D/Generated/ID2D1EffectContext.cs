@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext"]/*' />
 /// <unmanaged>ID2D1EffectContext</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::GetMaximumSupportedFeatureLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.FeatureLevel* featureLevels, uint featureLevelsCount, Graphics.Direct3D.FeatureLevel* maximumSupportedFeatureLevel)
+	public HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, Graphics.Direct3D.D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Graphics.Direct3D.FeatureLevel*, uint, Graphics.Direct3D.FeatureLevel*, int>)(lpVtbl[5]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), featureLevels, featureLevelsCount, maximumSupportedFeatureLevel);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Graphics.Direct3D.D3D_FEATURE_LEVEL*, uint, Graphics.Direct3D.D3D_FEATURE_LEVEL*, int>)(lpVtbl[5]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), featureLevels, featureLevelsCount, maximumSupportedFeatureLevel);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateTransformNodeFromEffect"]/*' />
@@ -105,17 +105,17 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateBlendTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateBlendTransform(uint numInputs, BlendDescription* blendDescription, ID2D1BlendTransform** transform)
+	public HResult CreateBlendTransform(uint numInputs, D2D1_BLEND_DESCRIPTION* blendDescription, ID2D1BlendTransform** transform)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, uint, BlendDescription*, ID2D1BlendTransform**, int>)(lpVtbl[7]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), numInputs, blendDescription, transform);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, uint, D2D1_BLEND_DESCRIPTION*, ID2D1BlendTransform**, int>)(lpVtbl[7]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), numInputs, blendDescription, transform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateBorderTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateBorderTransform(ExtendMode extendModeX, ExtendMode extendModeY, ID2D1BorderTransform** transform)
+	public HResult CreateBorderTransform(D2D1_EXTEND_MODE extendModeX, D2D1_EXTEND_MODE extendModeY, ID2D1BorderTransform** transform)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, ExtendMode, ExtendMode, ID2D1BorderTransform**, int>)(lpVtbl[8]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), extendModeX, extendModeY, transform);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, D2D1_EXTEND_MODE, D2D1_EXTEND_MODE, ID2D1BorderTransform**, int>)(lpVtbl[8]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), extendModeX, extendModeY, transform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateOffsetTransform"]/*' />
@@ -169,9 +169,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateResourceTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateResourceTexture(Guid* resourceId, ResourceTextureProperties* resourceTextureProperties, byte* data, uint* strides, uint dataSize, ID2D1ResourceTexture** resourceTexture)
+	public HResult CreateResourceTexture(Guid* resourceId, D2D1_RESOURCE_TEXTURE_PROPERTIES* resourceTextureProperties, byte* data, uint* strides, uint dataSize, ID2D1ResourceTexture** resourceTexture)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Guid*, ResourceTextureProperties*, byte*, uint*, uint, ID2D1ResourceTexture**, int>)(lpVtbl[15]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), resourceId, resourceTextureProperties, data, strides, dataSize, resourceTexture);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Guid*, D2D1_RESOURCE_TEXTURE_PROPERTIES*, byte*, uint*, uint, ID2D1ResourceTexture**, int>)(lpVtbl[15]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), resourceId, resourceTextureProperties, data, strides, dataSize, resourceTexture);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::FindResourceTexture"]/*' />
@@ -185,9 +185,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateVertexBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CreateVertexBuffer(VertexBufferProperties* vertexBufferProperties, Guid* resourceId, CustomVertexBufferProperties* customVertexBufferProperties, ID2D1VertexBuffer** buffer)
+	public HResult CreateVertexBuffer(D2D1_VERTEX_BUFFER_PROPERTIES* vertexBufferProperties, Guid* resourceId, D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES* customVertexBufferProperties, ID2D1VertexBuffer** buffer)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, VertexBufferProperties*, Guid*, CustomVertexBufferProperties*, ID2D1VertexBuffer**, int>)(lpVtbl[17]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), vertexBufferProperties, resourceId, customVertexBufferProperties, buffer);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, D2D1_VERTEX_BUFFER_PROPERTIES*, Guid*, D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES*, ID2D1VertexBuffer**, int>)(lpVtbl[17]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), vertexBufferProperties, resourceId, customVertexBufferProperties, buffer);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::FindVertexBuffer"]/*' />
@@ -201,9 +201,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContext(D2D1_COLOR_SPACE space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, ColorSpace, byte*, uint, ID2D1ColorContext**, int>)(lpVtbl[19]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), space, profile, profileSize, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, D2D1_COLOR_SPACE, byte*, uint, ID2D1ColorContext**, int>)(lpVtbl[19]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), space, profile, profileSize, colorContext);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateColorContextFromFilename"]/*' />
@@ -225,17 +225,17 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CheckFeatureSupport(Feature feature, void* featureSupportData, uint featureSupportDataSize)
+	public HResult CheckFeatureSupport(D2D1_FEATURE feature, void* featureSupportData, uint featureSupportDataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Feature, void*, uint, int>)(lpVtbl[22]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), feature, featureSupportData, featureSupportDataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, D2D1_FEATURE, void*, uint, int>)(lpVtbl[22]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), feature, featureSupportData, featureSupportDataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::IsBufferPrecisionSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision)
+	public Bool32 IsBufferPrecisionSupported(D2D1_BUFFER_PRECISION bufferPrecision)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, BufferPrecision, Bool32>)(lpVtbl[23]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), bufferPrecision);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, D2D1_BUFFER_PRECISION, Bool32>)(lpVtbl[23]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), bufferPrecision);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -247,16 +247,16 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		HResult CreateEffect(Guid* effectId, ID2D1Effect** effect);
 
 		[VtblIndex(5)]
-		HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.FeatureLevel* featureLevels, uint featureLevelsCount, Graphics.Direct3D.FeatureLevel* maximumSupportedFeatureLevel);
+		HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, Graphics.Direct3D.D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel);
 
 		[VtblIndex(6)]
 		HResult CreateTransformNodeFromEffect(ID2D1Effect* effect, ID2D1TransformNode** transformNode);
 
 		[VtblIndex(7)]
-		HResult CreateBlendTransform(uint numInputs, BlendDescription* blendDescription, ID2D1BlendTransform** transform);
+		HResult CreateBlendTransform(uint numInputs, D2D1_BLEND_DESCRIPTION* blendDescription, ID2D1BlendTransform** transform);
 
 		[VtblIndex(8)]
-		HResult CreateBorderTransform(ExtendMode extendModeX, ExtendMode extendModeY, ID2D1BorderTransform** transform);
+		HResult CreateBorderTransform(D2D1_EXTEND_MODE extendModeX, D2D1_EXTEND_MODE extendModeY, ID2D1BorderTransform** transform);
 
 		[VtblIndex(9)]
 		HResult CreateOffsetTransform(System.Drawing.Point offset, ID2D1OffsetTransform** transform);
@@ -277,19 +277,19 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		Bool32 IsShaderLoaded(Guid* shaderId);
 
 		[VtblIndex(15)]
-		HResult CreateResourceTexture(Guid* resourceId, ResourceTextureProperties* resourceTextureProperties, byte* data, uint* strides, uint dataSize, ID2D1ResourceTexture** resourceTexture);
+		HResult CreateResourceTexture(Guid* resourceId, D2D1_RESOURCE_TEXTURE_PROPERTIES* resourceTextureProperties, byte* data, uint* strides, uint dataSize, ID2D1ResourceTexture** resourceTexture);
 
 		[VtblIndex(16)]
 		HResult FindResourceTexture(Guid* resourceId, ID2D1ResourceTexture** resourceTexture);
 
 		[VtblIndex(17)]
-		HResult CreateVertexBuffer(VertexBufferProperties* vertexBufferProperties, Guid* resourceId, CustomVertexBufferProperties* customVertexBufferProperties, ID2D1VertexBuffer** buffer);
+		HResult CreateVertexBuffer(D2D1_VERTEX_BUFFER_PROPERTIES* vertexBufferProperties, Guid* resourceId, D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES* customVertexBufferProperties, ID2D1VertexBuffer** buffer);
 
 		[VtblIndex(18)]
 		HResult FindVertexBuffer(Guid* resourceId, ID2D1VertexBuffer** buffer);
 
 		[VtblIndex(19)]
-		HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext);
+		HResult CreateColorContext(D2D1_COLOR_SPACE space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(20)]
 		HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext);
@@ -298,10 +298,10 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(22)]
-		HResult CheckFeatureSupport(Feature feature, void* featureSupportData, uint featureSupportDataSize);
+		HResult CheckFeatureSupport(D2D1_FEATURE feature, void* featureSupportData, uint featureSupportDataSize);
 
 		[VtblIndex(23)]
-		Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision);
+		Bool32 IsBufferPrecisionSupported(D2D1_BUFFER_PRECISION bufferPrecision);
 	}
 }
 

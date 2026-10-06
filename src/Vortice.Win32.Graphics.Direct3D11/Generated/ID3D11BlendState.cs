@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11BlendState"]/*' />
 /// <unmanaged>ID3D11BlendState</unmanaged>
@@ -105,15 +105,15 @@ public unsafe partial struct ID3D11BlendState : ID3D11BlendState.Interface, INat
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11BlendState::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDesc(BlendDescription* pDesc)
+	public void GetDesc(D3D11_BLEND_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11BlendState*, BlendDescription*, void>)(lpVtbl[7]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11BlendState*, D3D11_BLEND_DESC*, void>)(lpVtbl[7]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		void GetDesc(BlendDescription* pDesc);
+		void GetDesc(D3D11_BLEND_DESC* pDesc);
 	}
 }
 

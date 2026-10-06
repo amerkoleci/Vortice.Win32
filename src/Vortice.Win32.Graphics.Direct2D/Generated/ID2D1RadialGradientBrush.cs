@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush"]/*' />
 /// <unmanaged>ID2D1RadialGradientBrush</unmanaged>
@@ -147,8 +147,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(12)]
 	public Vector2 GetCenter()
 	{
-		Vector2 result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientOriginOffset"]/*' />
@@ -156,8 +155,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(13)]
 	public Vector2 GetGradientOriginOffset()
 	{
-		Vector2 result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusX"]/*' />

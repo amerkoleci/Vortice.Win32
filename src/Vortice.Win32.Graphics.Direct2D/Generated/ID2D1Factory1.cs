@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1"]/*' />
 /// <unmanaged>ID2D1Factory1</unmanaged>
@@ -97,25 +97,25 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1Factory.CreateRoundedRectangleGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateRoundedRectangleGeometry(RoundedRect* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry)
+	public HResult CreateRoundedRectangleGeometry(D2D1_ROUNDED_RECT* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, RoundedRect*, ID2D1RoundedRectangleGeometry**, int>)(lpVtbl[6]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), roundedRectangle, roundedRectangleGeometry);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_ROUNDED_RECT*, ID2D1RoundedRectangleGeometry**, int>)(lpVtbl[6]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), roundedRectangle, roundedRectangleGeometry);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateEllipseGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateEllipseGeometry(Ellipse* ellipse, ID2D1EllipseGeometry** ellipseGeometry)
+	public HResult CreateEllipseGeometry(D2D1_ELLIPSE* ellipse, ID2D1EllipseGeometry** ellipseGeometry)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Ellipse*, ID2D1EllipseGeometry**, int>)(lpVtbl[7]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), ellipse, ellipseGeometry);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_ELLIPSE*, ID2D1EllipseGeometry**, int>)(lpVtbl[7]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), ellipse, ellipseGeometry);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateGeometryGroup" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateGeometryGroup(Common.FillMode fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup)
+	public HResult CreateGeometryGroup(Common.D2D1_FILL_MODE fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Common.FillMode, ID2D1Geometry**, uint, ID2D1GeometryGroup**, int>)(lpVtbl[8]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), fillMode, geometries, geometriesCount, geometryGroup);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Common.D2D1_FILL_MODE, ID2D1Geometry**, uint, ID2D1GeometryGroup**, int>)(lpVtbl[8]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), fillMode, geometries, geometriesCount, geometryGroup);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateTransformedGeometry" />
@@ -137,49 +137,49 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1Factory.CreateStrokeStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateStrokeStyle(StrokeStyleProperties* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle)
+	public HResult CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, StrokeStyleProperties*, float*, uint, ID2D1StrokeStyle**, int>)(lpVtbl[11]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), strokeStyleProperties, dashes, dashesCount, strokeStyle);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_STROKE_STYLE_PROPERTIES*, float*, uint, ID2D1StrokeStyle**, int>)(lpVtbl[11]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), strokeStyleProperties, dashes, dashesCount, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateDrawingStateBlock" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateDrawingStateBlock(DrawingStateDescription* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock)
+	public HResult CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, DrawingStateDescription*, Graphics.DirectWrite.IDWriteRenderingParams*, ID2D1DrawingStateBlock**, int>)(lpVtbl[12]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), drawingStateDescription, textRenderingParams, drawingStateBlock);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_DRAWING_STATE_DESCRIPTION*, Graphics.DirectWrite.IDWriteRenderingParams*, ID2D1DrawingStateBlock**, int>)(lpVtbl[12]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), drawingStateDescription, textRenderingParams, drawingStateBlock);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateWicBitmapRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateWicBitmapRenderTarget(Graphics.Imaging.IWICBitmap* target, RenderTargetProperties* renderTargetProperties, ID2D1RenderTarget** renderTarget)
+	public HResult CreateWicBitmapRenderTarget(Graphics.Imaging.IWICBitmap* target, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Graphics.Imaging.IWICBitmap*, RenderTargetProperties*, ID2D1RenderTarget**, int>)(lpVtbl[13]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), target, renderTargetProperties, renderTarget);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Graphics.Imaging.IWICBitmap*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1RenderTarget**, int>)(lpVtbl[13]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), target, renderTargetProperties, renderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateHwndRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateHwndRenderTarget(RenderTargetProperties* renderTargetProperties, HwndRenderTargetProperties* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget)
+	public HResult CreateHwndRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, D2D1_HWND_RENDER_TARGET_PROPERTIES* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, RenderTargetProperties*, HwndRenderTargetProperties*, ID2D1HwndRenderTarget**, int>)(lpVtbl[14]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), renderTargetProperties, hwndRenderTargetProperties, hwndRenderTarget);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_RENDER_TARGET_PROPERTIES*, D2D1_HWND_RENDER_TARGET_PROPERTIES*, ID2D1HwndRenderTarget**, int>)(lpVtbl[14]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), renderTargetProperties, hwndRenderTargetProperties, hwndRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateDxgiSurfaceRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateDxgiSurfaceRenderTarget(Graphics.Dxgi.IDXGISurface* dxgiSurface, RenderTargetProperties* renderTargetProperties, ID2D1RenderTarget** renderTarget)
+	public HResult CreateDxgiSurfaceRenderTarget(Graphics.Dxgi.IDXGISurface* dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Graphics.Dxgi.IDXGISurface*, RenderTargetProperties*, ID2D1RenderTarget**, int>)(lpVtbl[15]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), dxgiSurface, renderTargetProperties, renderTarget);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Graphics.Dxgi.IDXGISurface*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1RenderTarget**, int>)(lpVtbl[15]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), dxgiSurface, renderTargetProperties, renderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateDCRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateDCRenderTarget(RenderTargetProperties* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget)
+	public HResult CreateDCRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, RenderTargetProperties*, ID2D1DCRenderTarget**, int>)(lpVtbl[16]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), renderTargetProperties, dcRenderTarget);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1DCRenderTarget**, int>)(lpVtbl[16]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), renderTargetProperties, dcRenderTarget);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::CreateDevice"]/*' />
@@ -193,9 +193,9 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::CreateStrokeStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateStrokeStyle(StrokeStyleProperties1* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle1** strokeStyle)
+	public HResult CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES1* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle1** strokeStyle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, StrokeStyleProperties1*, float*, uint, ID2D1StrokeStyle1**, int>)(lpVtbl[18]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), strokeStyleProperties, dashes, dashesCount, strokeStyle);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_STROKE_STYLE_PROPERTIES1*, float*, uint, ID2D1StrokeStyle1**, int>)(lpVtbl[18]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), strokeStyleProperties, dashes, dashesCount, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::CreatePathGeometry"]/*' />
@@ -209,9 +209,9 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::CreateDrawingStateBlock"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateDrawingStateBlock(DrawingStateDescription1* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock1** drawingStateBlock)
+	public HResult CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION1* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock1** drawingStateBlock)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, DrawingStateDescription1*, Graphics.DirectWrite.IDWriteRenderingParams*, ID2D1DrawingStateBlock1**, int>)(lpVtbl[20]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), drawingStateDescription, textRenderingParams, drawingStateBlock);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, D2D1_DRAWING_STATE_DESCRIPTION1*, Graphics.DirectWrite.IDWriteRenderingParams*, ID2D1DrawingStateBlock1**, int>)(lpVtbl[20]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), drawingStateDescription, textRenderingParams, drawingStateBlock);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::CreateGdiMetafile"]/*' />
@@ -225,17 +225,17 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::RegisterEffectFromStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
+	public HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, Com.IStream*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[22]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, Com.IStream*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[22]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::RegisterEffectFromString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RegisterEffectFromString(Guid* classId, char* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
+	public HResult RegisterEffectFromString(Guid* classId, char* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, char*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, char*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::UnregisterEffect"]/*' />
@@ -268,22 +268,22 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 		HResult CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, ID2D1Device** d2dDevice);
 
 		[VtblIndex(18)]
-		HResult CreateStrokeStyle(StrokeStyleProperties1* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle1** strokeStyle);
+		HResult CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES1* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle1** strokeStyle);
 
 		[VtblIndex(19)]
 		HResult CreatePathGeometry(ID2D1PathGeometry1** pathGeometry);
 
 		[VtblIndex(20)]
-		HResult CreateDrawingStateBlock(DrawingStateDescription1* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock1** drawingStateBlock);
+		HResult CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION1* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock1** drawingStateBlock);
 
 		[VtblIndex(21)]
 		HResult CreateGdiMetafile(Com.IStream* metafileStream, ID2D1GdiMetafile** metafile);
 
 		[VtblIndex(22)]
-		HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
+		HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
 
 		[VtblIndex(23)]
-		HResult RegisterEffectFromString(Guid* classId, char* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
+		HResult RegisterEffectFromString(Guid* classId, char* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
 
 		[VtblIndex(24)]
 		HResult UnregisterEffect(Guid* classId);

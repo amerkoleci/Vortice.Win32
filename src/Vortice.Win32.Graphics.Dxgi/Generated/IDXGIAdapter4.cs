@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
 /// <unmanaged>IDXGIAdapter4</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDesc(AdapterDescription* pDesc)
+	public HResult GetDesc(DXGI_ADAPTER_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, DXGI_ADAPTER_DESC*, int>)(lpVtbl[8]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
@@ -129,17 +129,17 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetDesc1(AdapterDescription1* pDesc)
+	public HResult GetDesc1(DXGI_ADAPTER_DESC1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, DXGI_ADAPTER_DESC1*, int>)(lpVtbl[10]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter2.GetDesc2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetDesc2(AdapterDescription2* pDesc)
+	public HResult GetDesc2(DXGI_ADAPTER_DESC2* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, DXGI_ADAPTER_DESC2*, int>)(lpVtbl[11]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter3.RegisterHardwareContentProtectionTeardownStatusEvent" />
@@ -161,17 +161,17 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter3.QueryVideoMemoryInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo)
+	public HResult QueryVideoMemoryInfo(uint NodeIndex, DXGI_MEMORY_SEGMENT_GROUP MemorySegmentGroup, DXGI_QUERY_VIDEO_MEMORY_INFO* pVideoMemoryInfo)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[14]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, uint, DXGI_MEMORY_SEGMENT_GROUP, DXGI_QUERY_VIDEO_MEMORY_INFO*, int>)(lpVtbl[14]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter3.SetVideoMemoryReservation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation)
+	public HResult SetVideoMemoryReservation(uint NodeIndex, DXGI_MEMORY_SEGMENT_GROUP MemorySegmentGroup, ulong Reservation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[15]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, uint, DXGI_MEMORY_SEGMENT_GROUP, ulong, int>)(lpVtbl[15]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter3.RegisterVideoMemoryBudgetChangeNotificationEvent" />
@@ -193,15 +193,15 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4::GetDesc3"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetDesc3(AdapterDescription3* pDesc)
+	public HResult GetDesc3(DXGI_ADAPTER_DESC3* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, AdapterDescription3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, DXGI_ADAPTER_DESC3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : IDXGIAdapter3.Interface
 	{
 		[VtblIndex(18)]
-		HResult GetDesc3(AdapterDescription3* pDesc);
+		HResult GetDesc3(DXGI_ADAPTER_DESC3* pDesc);
 	}
 }
 

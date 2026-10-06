@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint"]/*' />
 /// <unmanaged>ID2D1SvgPaint</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::SetPaintType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPaintType(SvgPaintType paintType)
+	public HResult SetPaintType(D2D1_SVG_PAINT_TYPE paintType)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, SvgPaintType, int>)(lpVtbl[6]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this), paintType);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, D2D1_SVG_PAINT_TYPE, int>)(lpVtbl[6]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this), paintType);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::GetPaintType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public SvgPaintType GetPaintType()
+	public D2D1_SVG_PAINT_TYPE GetPaintType()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, SvgPaintType>)(lpVtbl[7]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, D2D1_SVG_PAINT_TYPE>)(lpVtbl[7]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::SetColor"]/*' />
@@ -153,10 +153,10 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]
-		HResult SetPaintType(SvgPaintType paintType);
+		HResult SetPaintType(D2D1_SVG_PAINT_TYPE paintType);
 
 		[VtblIndex(7)]
-		SvgPaintType GetPaintType();
+		D2D1_SVG_PAINT_TYPE GetPaintType();
 
 		[VtblIndex(8)]
 		HResult SetColor(Color4* color);

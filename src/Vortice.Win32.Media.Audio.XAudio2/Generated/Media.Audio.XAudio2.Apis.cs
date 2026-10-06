@@ -7,9 +7,9 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
-public static partial class Apis
+public static partial class XAudio2
 {
 	public const uint FXEQ_MIN_FRAMERATE = 22000;
 
@@ -459,14 +459,14 @@ public static partial class Apis
 
 	public const uint X3DAUDIO_CALCULATE_REDIRECT_TO_LFE = 131072;
 
-	public const XAPOBufferFlags XAPO_BUFFER_SILENT = XAPOBufferFlags.Silent;
-	public const XAPOBufferFlags XAPO_BUFFER_VALID = XAPOBufferFlags.Valid;
-	public const FilterType LowPassFilter = FilterType.LowPassFilter;
-	public const FilterType BandPassFilter = FilterType.BandPassFilter;
-	public const FilterType HighPassFilter = FilterType.HighPassFilter;
-	public const FilterType NotchFilter = FilterType.NotchFilter;
-	public const FilterType LowPassOnePoleFilter = FilterType.LowPassOnePoleFilter;
-	public const FilterType HighPassOnePoleFilter = FilterType.HighPassOnePoleFilter;
+	public const XAPO_BUFFER_FLAGS XAPO_BUFFER_SILENT = XAPO_BUFFER_FLAGS.XAPO_BUFFER_SILENT;
+	public const XAPO_BUFFER_FLAGS XAPO_BUFFER_VALID = XAPO_BUFFER_FLAGS.XAPO_BUFFER_VALID;
+	public const XAUDIO2_FILTER_TYPE LowPassFilter = XAUDIO2_FILTER_TYPE.LowPassFilter;
+	public const XAUDIO2_FILTER_TYPE BandPassFilter = XAUDIO2_FILTER_TYPE.BandPassFilter;
+	public const XAUDIO2_FILTER_TYPE HighPassFilter = XAUDIO2_FILTER_TYPE.HighPassFilter;
+	public const XAUDIO2_FILTER_TYPE NotchFilter = XAUDIO2_FILTER_TYPE.NotchFilter;
+	public const XAUDIO2_FILTER_TYPE LowPassOnePoleFilter = XAUDIO2_FILTER_TYPE.LowPassOnePoleFilter;
+	public const XAUDIO2_FILTER_TYPE HighPassOnePoleFilter = XAUDIO2_FILTER_TYPE.HighPassOnePoleFilter;
 	public const HrtfDirectivityType OmniDirectional = HrtfDirectivityType.OmniDirectional;
 	public const HrtfDirectivityType Cardioid = HrtfDirectivityType.Cardioid;
 	public const HrtfDirectivityType Cone = HrtfDirectivityType.Cone;

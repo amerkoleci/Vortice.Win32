@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>IDxcUtils</unmanaged>
 [Guid("4605c4cb-2019-492a-ada4-65f20bb7d67f")]
@@ -78,30 +78,30 @@ public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateBlobFromPinned(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** ppBlobEncoding)
+	public HResult CreateBlobFromPinned(void* pData, uint size, DXC_CP codePage, IDxcBlobEncoding** ppBlobEncoding)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, void*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[4]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, size, codePage, ppBlobEncoding);
+		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, void*, uint, DXC_CP, IDxcBlobEncoding**, int>)(lpVtbl[4]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, size, codePage, ppBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult MoveToBlob(void* pData, Com.IMalloc* pIMalloc, uint size, DxcCp codePage, IDxcBlobEncoding** ppBlobEncoding)
+	public HResult MoveToBlob(void* pData, Com.IMalloc* pIMalloc, uint size, DXC_CP codePage, IDxcBlobEncoding** ppBlobEncoding)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, void*, Com.IMalloc*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, pIMalloc, size, codePage, ppBlobEncoding);
+		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, void*, Com.IMalloc*, uint, DXC_CP, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, pIMalloc, size, codePage, ppBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateBlob(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** ppBlobEncoding)
+	public HResult CreateBlob(void* pData, uint size, DXC_CP codePage, IDxcBlobEncoding** ppBlobEncoding)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, void*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[6]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, size, codePage, ppBlobEncoding);
+		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, void*, uint, DXC_CP, IDxcBlobEncoding**, int>)(lpVtbl[6]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, size, codePage, ppBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult LoadFile(char* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** ppBlobEncoding)
+	public HResult LoadFile(char* pFileName, DXC_CP* pCodePage, IDxcBlobEncoding** ppBlobEncoding)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, char*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcUtils*)Unsafe.AsPointer(ref this), pFileName, pCodePage, ppBlobEncoding);
+		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, char*, DXC_CP*, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcUtils*)Unsafe.AsPointer(ref this), pFileName, pCodePage, ppBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -166,16 +166,16 @@ public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 		HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult);
 
 		[VtblIndex(4)]
-		HResult CreateBlobFromPinned(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** ppBlobEncoding);
+		HResult CreateBlobFromPinned(void* pData, uint size, DXC_CP codePage, IDxcBlobEncoding** ppBlobEncoding);
 
 		[VtblIndex(5)]
-		HResult MoveToBlob(void* pData, Com.IMalloc* pIMalloc, uint size, DxcCp codePage, IDxcBlobEncoding** ppBlobEncoding);
+		HResult MoveToBlob(void* pData, Com.IMalloc* pIMalloc, uint size, DXC_CP codePage, IDxcBlobEncoding** ppBlobEncoding);
 
 		[VtblIndex(6)]
-		HResult CreateBlob(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** ppBlobEncoding);
+		HResult CreateBlob(void* pData, uint size, DXC_CP codePage, IDxcBlobEncoding** ppBlobEncoding);
 
 		[VtblIndex(7)]
-		HResult LoadFile(char* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** ppBlobEncoding);
+		HResult LoadFile(char* pFileName, DXC_CP* pCodePage, IDxcBlobEncoding** ppBlobEncoding);
 
 		[VtblIndex(8)]
 		HResult CreateReadOnlyStreamFromBlob(IDxcBlob* pBlob, Com.IStream** ppStream);

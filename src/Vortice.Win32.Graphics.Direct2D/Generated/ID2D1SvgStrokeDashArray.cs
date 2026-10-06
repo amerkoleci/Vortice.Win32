@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray"]/*' />
 /// <unmanaged>ID2D1SvgStrokeDashArray</unmanaged>
@@ -105,9 +105,9 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult UpdateDashes(SvgLength* dashes, uint dashesCount, uint startIndex)
+	public HResult UpdateDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, D2D1_SVG_LENGTH*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
@@ -121,9 +121,9 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetDashes(SvgLength* dashes, uint dashesCount, uint startIndex)
+	public HResult GetDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, D2D1_SVG_LENGTH*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
@@ -148,13 +148,13 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 		HResult RemoveDashesAtEnd(uint dashesCount);
 
 		[VtblIndex(7)]
-		HResult UpdateDashes(SvgLength* dashes, uint dashesCount, uint startIndex);
+		HResult UpdateDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(8)]
 		HResult UpdateDashes(float* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(9)]
-		HResult GetDashes(SvgLength* dashes, uint dashesCount, uint startIndex);
+		HResult GetDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(10)]
 		HResult GetDashes(float* dashes, uint dashesCount, uint startIndex);

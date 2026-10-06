@@ -7,12 +7,12 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>DxcShaderHash</unmanaged>
 public partial struct DxcShaderHash
 {
-	public DxcHashFlags Flags;
+	public DXC_HASHFLAG Flags;
 
 	public unsafe fixed byte HashDigest[16];
 }
@@ -24,21 +24,21 @@ public partial struct DxcBuffer
 
 	public nuint Size;
 
-	public DxcCp Encoding;
+	public DXC_CP Encoding;
 }
 
 /// <unmanaged>DxcDefine</unmanaged>
 public partial struct DxcDefine
 {
-	public unsafe char* Name;
+	public PWSTR Name;
 
-	public unsafe char* Value;
+	public PWSTR Value;
 }
 
 /// <unmanaged>DxcArgPair</unmanaged>
 public partial struct DxcArgPair
 {
-	public unsafe char* pName;
+	public PWSTR pName;
 
-	public unsafe char* pValue;
+	public PWSTR pValue;
 }

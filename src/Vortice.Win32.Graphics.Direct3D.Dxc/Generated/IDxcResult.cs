@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>IDxcResult</unmanaged>
 [Guid("58346cda-dde7-4497-9461-6f87af5e0659")]
@@ -95,16 +95,16 @@ public unsafe partial struct IDxcResult : IDxcResult.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Bool32 HasOutput(DxcOutKind dxcOutKind)
+	public Bool32 HasOutput(DXC_OUT_KIND dxcOutKind)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, DxcOutKind, Bool32>)(lpVtbl[6]))((IDxcResult*)Unsafe.AsPointer(ref this), dxcOutKind);
+		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, DXC_OUT_KIND, Bool32>)(lpVtbl[6]))((IDxcResult*)Unsafe.AsPointer(ref this), dxcOutKind);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetOutput(DxcOutKind dxcOutKind, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputName)
+	public HResult GetOutput(DXC_OUT_KIND dxcOutKind, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, DxcOutKind, Guid*, void**, IDxcBlobUtf16**, int>)(lpVtbl[7]))((IDxcResult*)Unsafe.AsPointer(ref this), dxcOutKind, iid, ppvObject, ppOutputName);
+		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, DXC_OUT_KIND, Guid*, void**, IDxcBlobUtf16**, int>)(lpVtbl[7]))((IDxcResult*)Unsafe.AsPointer(ref this), dxcOutKind, iid, ppvObject, ppOutputName);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -116,34 +116,34 @@ public unsafe partial struct IDxcResult : IDxcResult.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public DxcOutKind GetOutputByIndex(uint Index)
+	public DXC_OUT_KIND GetOutputByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, uint, DxcOutKind>)(lpVtbl[9]))((IDxcResult*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, uint, DXC_OUT_KIND>)(lpVtbl[9]))((IDxcResult*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public DxcOutKind PrimaryOutput()
+	public DXC_OUT_KIND PrimaryOutput()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, DxcOutKind>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDxcResult*, DXC_OUT_KIND>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IDxcOperationResult.Interface
 	{
 		[VtblIndex(6)]
-		Bool32 HasOutput(DxcOutKind dxcOutKind);
+		Bool32 HasOutput(DXC_OUT_KIND dxcOutKind);
 
 		[VtblIndex(7)]
-		HResult GetOutput(DxcOutKind dxcOutKind, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputName);
+		HResult GetOutput(DXC_OUT_KIND dxcOutKind, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputName);
 
 		[VtblIndex(8)]
 		uint GetNumOutputs();
 
 		[VtblIndex(9)]
-		DxcOutKind GetOutputByIndex(uint Index);
+		DXC_OUT_KIND GetOutputByIndex(uint Index);
 
 		[VtblIndex(10)]
-		DxcOutKind PrimaryOutput();
+		DXC_OUT_KIND PrimaryOutput();
 	}
 }
 

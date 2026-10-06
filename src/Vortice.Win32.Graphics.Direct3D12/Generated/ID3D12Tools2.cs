@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools2"]/*' />
 /// <unmanaged>ID3D12Tools2</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID3D12Tools2 : ID3D12Tools2.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Tools1.ReserveGPUVARangesAtCreate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult ReserveGPUVARangesAtCreate(GpuVirtualAddressRange* pRanges, uint uiNumRanges)
+	public HResult ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, GpuVirtualAddressRange*, uint, int>)(lpVtbl[5]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), pRanges, uiNumRanges);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, D3D12_GPU_VIRTUAL_ADDRESS_RANGE*, uint, int>)(lpVtbl[5]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), pRanges, uiNumRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12Tools1.ClearReservedGPUVARangesList" />

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap"]/*' />
 /// <unmanaged>ID3D12Heap</unmanaged>
@@ -113,16 +113,15 @@ public unsafe partial struct ID3D12Heap : ID3D12Heap.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HeapDescription GetDesc()
+	public D3D12_HEAP_DESC GetDesc()
 	{
-		HeapDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12Heap*, HeapDescription*, HeapDescription*>)(lpVtbl[8]))((ID3D12Heap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Heap*, D3D12_HEAP_DESC>)(lpVtbl[8]))((ID3D12Heap*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]
-		HeapDescription GetDesc();
+		D3D12_HEAP_DESC GetDesc();
 	}
 }
 

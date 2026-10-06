@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap"]/*' />
 /// <unmanaged>ID2D1Bitmap</unmanaged>
@@ -83,8 +83,7 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()
 	{
-		System.Drawing.SizeF result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Bitmap*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap*, System.Drawing.SizeF>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelSize"]/*' />
@@ -92,17 +91,15 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(5)]
 	public System.Drawing.Size GetPixelSize()
 	{
-		System.Drawing.Size result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Bitmap*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap*, System.Drawing.Size>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Common.PixelFormat GetPixelFormat()
+	public Common.D2D1_PIXEL_FORMAT GetPixelFormat()
 	{
-		Common.PixelFormat result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Bitmap*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap*, Common.D2D1_PIXEL_FORMAT>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetDpi"]/*' />
@@ -146,7 +143,7 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 		System.Drawing.Size GetPixelSize();
 
 		[VtblIndex(6)]
-		Common.PixelFormat GetPixelFormat();
+		Common.D2D1_PIXEL_FORMAT GetPixelFormat();
 
 		[VtblIndex(7)]
 		void GetDpi(float* dpiX, float* dpiY);

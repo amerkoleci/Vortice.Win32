@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties2"]/*' />
 /// <unmanaged>ID3D12StateObjectProperties2</unmanaged>
@@ -105,10 +105,9 @@ public unsafe partial struct ID3D12StateObjectProperties2 : ID3D12StateObjectPro
 	/// <inheritdoc cref="ID3D12StateObjectProperties1.GetProgramIdentifier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public ProgramIdentifier GetProgramIdentifier(char* pProgramName)
+	public D3D12_PROGRAM_IDENTIFIER GetProgramIdentifier(char* pProgramName)
 	{
-		ProgramIdentifier result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties2*, ProgramIdentifier*, char*, ProgramIdentifier*>)(lpVtbl[7]))((ID3D12StateObjectProperties2*)Unsafe.AsPointer(ref this), &result, pProgramName);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties2*, char*, D3D12_PROGRAM_IDENTIFIER>)(lpVtbl[7]))((ID3D12StateObjectProperties2*)Unsafe.AsPointer(ref this), pProgramName);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties2::GetGlobalRootSignatureForProgram"]/*' />

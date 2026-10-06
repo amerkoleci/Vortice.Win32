@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerClient"]/*' />
 /// <unmanaged>ID3DShaderCacheInstallerClient</unmanaged>
@@ -53,9 +53,9 @@ public unsafe partial struct ID3DShaderCacheInstallerClient : ID3DShaderCacheIns
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerClient::GetInstallerScope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public ShaderCacheAppRegistrationScope GetInstallerScope()
+	public D3D_SHADER_CACHE_APP_REGISTRATION_SCOPE GetInstallerScope()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerClient*, ShaderCacheAppRegistrationScope>)(lpVtbl[1]))((ID3DShaderCacheInstallerClient*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerClient*, D3D_SHADER_CACHE_APP_REGISTRATION_SCOPE>)(lpVtbl[1]))((ID3DShaderCacheInstallerClient*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerClient::HandleDriverUpdate"]/*' />
@@ -72,7 +72,7 @@ public unsafe partial struct ID3DShaderCacheInstallerClient : ID3DShaderCacheIns
 		HResult GetInstallerName(nuint* pNameLength, char* pName);
 
 		[VtblIndex(1)]
-		ShaderCacheAppRegistrationScope GetInstallerScope();
+		D3D_SHADER_CACHE_APP_REGISTRATION_SCOPE GetInstallerScope();
 
 		[VtblIndex(2)]
 		HResult HandleDriverUpdate(ID3DShaderCacheInstaller* pInstaller);

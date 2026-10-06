@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1"]/*' />
 /// <unmanaged>ID2D1Bitmap1</unmanaged>
@@ -83,8 +83,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()
 	{
-		System.Drawing.SizeF result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, System.Drawing.SizeF>)(lpVtbl[4]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.GetPixelSize" />
@@ -92,17 +91,15 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	[VtblIndex(5)]
 	public System.Drawing.Size GetPixelSize()
 	{
-		System.Drawing.Size result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[5]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, System.Drawing.Size>)(lpVtbl[5]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Common.PixelFormat GetPixelFormat()
+	public Common.D2D1_PIXEL_FORMAT GetPixelFormat()
 	{
-		Common.PixelFormat result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[6]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, Common.D2D1_PIXEL_FORMAT>)(lpVtbl[6]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.GetDpi" />
@@ -148,9 +145,9 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public BitmapOptions GetOptions()
+	public D2D1_BITMAP_OPTIONS GetOptions()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, BitmapOptions>)(lpVtbl[12]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, D2D1_BITMAP_OPTIONS>)(lpVtbl[12]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetSurface"]/*' />
@@ -164,9 +161,9 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(MapOptions options, MappedRect* mappedRect)
+	public HResult Map(D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT* mappedRect)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, MapOptions, MappedRect*, int>)(lpVtbl[14]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), options, mappedRect);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, D2D1_MAP_OPTIONS, D2D1_MAPPED_RECT*, int>)(lpVtbl[14]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), options, mappedRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Unmap"]/*' />
@@ -183,13 +180,13 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 		void GetColorContext(ID2D1ColorContext** colorContext);
 
 		[VtblIndex(12)]
-		BitmapOptions GetOptions();
+		D2D1_BITMAP_OPTIONS GetOptions();
 
 		[VtblIndex(13)]
 		HResult GetSurface(Graphics.Dxgi.IDXGISurface** dxgiSurface);
 
 		[VtblIndex(14)]
-		HResult Map(MapOptions options, MappedRect* mappedRect);
+		HResult Map(D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT* mappedRect);
 
 		[VtblIndex(15)]
 		HResult Unmap();

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties"]/*' />
 /// <unmanaged>ID2D1Properties</unmanaged>
@@ -97,9 +97,9 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public PropertyType GetType(uint index)
+	public D2D1_PROPERTY_TYPE GetType(uint index)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, D2D1_PROPERTY_TYPE>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyIndex"]/*' />
@@ -113,33 +113,33 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValueByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetValueByName(char* name, PropertyType type, byte* data, uint dataSize)
+	public HResult SetValueByName(char* name, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, char*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, char*, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[8]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize)
+	public HResult SetValue(uint index, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[9]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetValueByName(char* name, PropertyType type, byte* data, uint dataSize)
+	public HResult GetValueByName(char* name, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, char*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, char*, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[10]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize)
+	public HResult GetValue(uint index, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, D2D1_PROPERTY_TYPE, byte*, uint, int>)(lpVtbl[11]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueSize"]/*' />
@@ -170,22 +170,22 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 		uint GetPropertyNameLength(uint index);
 
 		[VtblIndex(6)]
-		PropertyType GetType(uint index);
+		D2D1_PROPERTY_TYPE GetType(uint index);
 
 		[VtblIndex(7)]
 		uint GetPropertyIndex(char* name);
 
 		[VtblIndex(8)]
-		HResult SetValueByName(char* name, PropertyType type, byte* data, uint dataSize);
+		HResult SetValueByName(char* name, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize);
 
 		[VtblIndex(9)]
-		HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize);
+		HResult SetValue(uint index, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize);
 
 		[VtblIndex(10)]
-		HResult GetValueByName(char* name, PropertyType type, byte* data, uint dataSize);
+		HResult GetValueByName(char* name, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize);
 
 		[VtblIndex(11)]
-		HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize);
+		HResult GetValue(uint index, D2D1_PROPERTY_TYPE type, byte* data, uint dataSize);
 
 		[VtblIndex(12)]
 		uint GetValueSize(uint index);

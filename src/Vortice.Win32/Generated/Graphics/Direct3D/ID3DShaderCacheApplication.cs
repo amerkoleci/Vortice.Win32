@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication"]/*' />
 /// <unmanaged>ID3DShaderCacheApplication</unmanaged>
@@ -81,17 +81,17 @@ public unsafe partial struct ID3DShaderCacheApplication : ID3DShaderCacheApplica
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetDesc(ShaderCacheApplicationDescription* pApplicationDesc)
+	public HResult GetDesc(D3D_SHADER_CACHE_APPLICATION_DESC* pApplicationDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, ShaderCacheApplicationDescription*, int>)(lpVtbl[4]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), pApplicationDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, D3D_SHADER_CACHE_APPLICATION_DESC*, int>)(lpVtbl[4]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), pApplicationDesc);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication::RegisterComponent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult RegisterComponent(char* pName, char* pStateObjectDBPath, uint NumPSDB, ShaderCachePsdbProperties* pPSDBs, Guid* riid, void** ppvComponent)
+	public HResult RegisterComponent(char* pName, char* pStateObjectDBPath, uint NumPSDB, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs, Guid* riid, void** ppvComponent)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, char*, char*, uint, ShaderCachePsdbProperties*, Guid*, void**, int>)(lpVtbl[5]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), pName, pStateObjectDBPath, NumPSDB, pPSDBs, riid, ppvComponent);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, char*, char*, uint, D3D_SHADER_CACHE_PSDB_PROPERTIES*, Guid*, void**, int>)(lpVtbl[5]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), pName, pStateObjectDBPath, NumPSDB, pPSDBs, riid, ppvComponent);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication::RemoveComponent"]/*' />
@@ -121,17 +121,17 @@ public unsafe partial struct ID3DShaderCacheApplication : ID3DShaderCacheApplica
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication::GetPrecompileTargetCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public uint GetPrecompileTargetCount(ShaderCacheTargetFlags flags)
+	public uint GetPrecompileTargetCount(D3D_SHADER_CACHE_TARGET_FLAGS flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, ShaderCacheTargetFlags, uint>)(lpVtbl[9]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), flags);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, D3D_SHADER_CACHE_TARGET_FLAGS, uint>)(lpVtbl[9]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), flags);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication::GetPrecompileTargets"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetPrecompileTargets(uint ArraySize, ShaderCacheCompilerProperties* pArray, ShaderCacheTargetFlags flags)
+	public HResult GetPrecompileTargets(uint ArraySize, D3D_SHADER_CACHE_COMPILER_PROPERTIES* pArray, D3D_SHADER_CACHE_TARGET_FLAGS flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, uint, ShaderCacheCompilerProperties*, ShaderCacheTargetFlags, int>)(lpVtbl[10]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), ArraySize, pArray, flags);
+		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheApplication*, uint, D3D_SHADER_CACHE_COMPILER_PROPERTIES*, D3D_SHADER_CACHE_TARGET_FLAGS, int>)(lpVtbl[10]))((ID3DShaderCacheApplication*)Unsafe.AsPointer(ref this), ArraySize, pArray, flags);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheApplication::GetInstallerName"]/*' />
@@ -148,10 +148,10 @@ public unsafe partial struct ID3DShaderCacheApplication : ID3DShaderCacheApplica
 		HResult GetExePath(ushort** pExePath);
 
 		[VtblIndex(4)]
-		HResult GetDesc(ShaderCacheApplicationDescription* pApplicationDesc);
+		HResult GetDesc(D3D_SHADER_CACHE_APPLICATION_DESC* pApplicationDesc);
 
 		[VtblIndex(5)]
-		HResult RegisterComponent(char* pName, char* pStateObjectDBPath, uint NumPSDB, ShaderCachePsdbProperties* pPSDBs, Guid* riid, void** ppvComponent);
+		HResult RegisterComponent(char* pName, char* pStateObjectDBPath, uint NumPSDB, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs, Guid* riid, void** ppvComponent);
 
 		[VtblIndex(6)]
 		HResult RemoveComponent(ID3DShaderCacheComponent* pComponent);
@@ -163,10 +163,10 @@ public unsafe partial struct ID3DShaderCacheApplication : ID3DShaderCacheApplica
 		HResult GetComponent(uint index, Guid* riid, void** ppvComponent);
 
 		[VtblIndex(9)]
-		uint GetPrecompileTargetCount(ShaderCacheTargetFlags flags);
+		uint GetPrecompileTargetCount(D3D_SHADER_CACHE_TARGET_FLAGS flags);
 
 		[VtblIndex(10)]
-		HResult GetPrecompileTargets(uint ArraySize, ShaderCacheCompilerProperties* pArray, ShaderCacheTargetFlags flags);
+		HResult GetPrecompileTargets(uint ArraySize, D3D_SHADER_CACHE_COMPILER_PROPERTIES* pArray, D3D_SHADER_CACHE_TARGET_FLAGS flags);
 
 		[VtblIndex(11)]
 		HResult GetInstallerName(ushort** pInstallerName);

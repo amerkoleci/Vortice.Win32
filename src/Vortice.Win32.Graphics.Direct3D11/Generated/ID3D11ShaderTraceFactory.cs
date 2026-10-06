@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory"]/*' />
 /// <unmanaged>ID3D11ShaderTraceFactory</unmanaged>
@@ -73,15 +73,15 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory::CreateShaderTrace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateShaderTrace(IUnknown* pShader, ShaderTraceDescription* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)
+	public HResult CreateShaderTrace(IUnknown* pShader, D3D11_SHADER_TRACE_DESC* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderTraceFactory*, IUnknown*, ShaderTraceDescription*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderTraceFactory*, IUnknown*, D3D11_SHADER_TRACE_DESC*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateShaderTrace(IUnknown* pShader, ShaderTraceDescription* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace);
+		HResult CreateShaderTrace(IUnknown* pShader, D3D11_SHADER_TRACE_DESC* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace);
 	}
 }
 

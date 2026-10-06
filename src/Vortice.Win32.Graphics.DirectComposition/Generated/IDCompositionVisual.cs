@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual"]/*' />
 /// <unmanaged>IDCompositionVisual</unmanaged>
@@ -137,17 +137,17 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetBitmapInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetBitmapInterpolationMode(BitmapInterpolationMode interpolationMode)
+	public HResult SetBitmapInterpolationMode(DCOMPOSITION_BITMAP_INTERPOLATION_MODE interpolationMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, BitmapInterpolationMode, int>)(lpVtbl[11]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), interpolationMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, DCOMPOSITION_BITMAP_INTERPOLATION_MODE, int>)(lpVtbl[11]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetBorderMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetBorderMode(BorderMode borderMode)
+	public HResult SetBorderMode(DCOMPOSITION_BORDER_MODE borderMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, BorderMode, int>)(lpVtbl[12]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), borderMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, DCOMPOSITION_BORDER_MODE, int>)(lpVtbl[12]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), borderMode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetClip"]/*' />
@@ -201,9 +201,9 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetCompositeMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetCompositeMode(CompositeMode compositeMode)
+	public HResult SetCompositeMode(DCOMPOSITION_COMPOSITE_MODE compositeMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), compositeMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisual*, DCOMPOSITION_COMPOSITE_MODE, int>)(lpVtbl[19]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), compositeMode);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -233,10 +233,10 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 		HResult SetEffect(IDCompositionEffect* effect);
 
 		[VtblIndex(11)]
-		HResult SetBitmapInterpolationMode(BitmapInterpolationMode interpolationMode);
+		HResult SetBitmapInterpolationMode(DCOMPOSITION_BITMAP_INTERPOLATION_MODE interpolationMode);
 
 		[VtblIndex(12)]
-		HResult SetBorderMode(BorderMode borderMode);
+		HResult SetBorderMode(DCOMPOSITION_BORDER_MODE borderMode);
 
 		[VtblIndex(13)]
 		HResult SetClip(IDCompositionClip* clip);
@@ -257,7 +257,7 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 		HResult RemoveAllVisuals();
 
 		[VtblIndex(19)]
-		HResult SetCompositeMode(CompositeMode compositeMode);
+		HResult SetCompositeMode(DCOMPOSITION_COMPOSITE_MODE compositeMode);
 	}
 }
 

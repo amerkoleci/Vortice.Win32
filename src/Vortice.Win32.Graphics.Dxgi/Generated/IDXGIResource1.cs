@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1"]/*' />
 /// <unmanaged>IDXGIResource1</unmanaged>
@@ -121,25 +121,25 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIResource.GetUsage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetUsage(Usage* pUsage)
+	public HResult GetUsage(DXGI_USAGE* pUsage)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Usage*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, DXGI_USAGE*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
 	}
 
 	/// <inheritdoc cref="IDXGIResource.SetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
+	public HResult SetEvictionPriority(DXGI_RESOURCE_PRIORITY EvictionPriority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, DXGI_RESOURCE_PRIORITY, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
 	}
 
 	/// <inheritdoc cref="IDXGIResource.GetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetEvictionPriority(ResourcePriority* pEvictionPriority)
+	public HResult GetEvictionPriority(DXGI_RESOURCE_PRIORITY* pEvictionPriority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, ResourcePriority*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, DXGI_RESOURCE_PRIORITY*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />

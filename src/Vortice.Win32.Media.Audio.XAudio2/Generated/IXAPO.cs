@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO"]/*' />
 /// <unmanaged>IXAPO</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::GetRegistrationProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetRegistrationProperties(XAPORegistrationProperties** ppRegistrationProperties)
+	public HResult GetRegistrationProperties(XAPO_REGISTRATION_PROPERTIES** ppRegistrationProperties)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAPO*, XAPORegistrationProperties**, int>)(lpVtbl[3]))((IXAPO*)Unsafe.AsPointer(ref this), ppRegistrationProperties);
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, XAPO_REGISTRATION_PROPERTIES**, int>)(lpVtbl[3]))((IXAPO*)Unsafe.AsPointer(ref this), ppRegistrationProperties);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::IsInputFormatSupported"]/*' />
@@ -113,9 +113,9 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::LockForProcess"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult LockForProcess(uint InputLockedParameterCount, XAPOLockForProcessParameters* pInputLockedParameters, uint OutputLockedParameterCount, XAPOLockForProcessParameters* pOutputLockedParameters)
+	public HResult LockForProcess(uint InputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pInputLockedParameters, uint OutputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pOutputLockedParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPOLockForProcessParameters*, uint, XAPOLockForProcessParameters*, int>)(lpVtbl[8]))((IXAPO*)Unsafe.AsPointer(ref this), InputLockedParameterCount, pInputLockedParameters, OutputLockedParameterCount, pOutputLockedParameters);
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPO_LOCKFORPROCESS_PARAMETERS*, uint, XAPO_LOCKFORPROCESS_PARAMETERS*, int>)(lpVtbl[8]))((IXAPO*)Unsafe.AsPointer(ref this), InputLockedParameterCount, pInputLockedParameters, OutputLockedParameterCount, pOutputLockedParameters);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::UnlockForProcess"]/*' />
@@ -129,9 +129,9 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::Process"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public void Process(uint InputProcessParameterCount, XAPOProcessBufferParameters* pInputProcessParameters, uint OutputProcessParameterCount, XAPOProcessBufferParameters* pOutputProcessParameters, Bool32 IsEnabled)
+	public void Process(uint InputProcessParameterCount, XAPO_PROCESS_BUFFER_PARAMETERS* pInputProcessParameters, uint OutputProcessParameterCount, XAPO_PROCESS_BUFFER_PARAMETERS* pOutputProcessParameters, Bool32 IsEnabled)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPOProcessBufferParameters*, uint, XAPOProcessBufferParameters*, Bool32, void>)(lpVtbl[10]))((IXAPO*)Unsafe.AsPointer(ref this), InputProcessParameterCount, pInputProcessParameters, OutputProcessParameterCount, pOutputProcessParameters, IsEnabled);
+		((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPO_PROCESS_BUFFER_PARAMETERS*, uint, XAPO_PROCESS_BUFFER_PARAMETERS*, Bool32, void>)(lpVtbl[10]))((IXAPO*)Unsafe.AsPointer(ref this), InputProcessParameterCount, pInputProcessParameters, OutputProcessParameterCount, pOutputProcessParameters, IsEnabled);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::CalcInputFrames"]/*' />
@@ -153,7 +153,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetRegistrationProperties(XAPORegistrationProperties** ppRegistrationProperties);
+		HResult GetRegistrationProperties(XAPO_REGISTRATION_PROPERTIES** ppRegistrationProperties);
 
 		[VtblIndex(4)]
 		HResult IsInputFormatSupported(Media.Audio.WaveFormatEx* pOutputFormat, Media.Audio.WaveFormatEx* pRequestedInputFormat, Media.Audio.WaveFormatEx** ppSupportedInputFormat);
@@ -168,13 +168,13 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 		void Reset();
 
 		[VtblIndex(8)]
-		HResult LockForProcess(uint InputLockedParameterCount, XAPOLockForProcessParameters* pInputLockedParameters, uint OutputLockedParameterCount, XAPOLockForProcessParameters* pOutputLockedParameters);
+		HResult LockForProcess(uint InputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pInputLockedParameters, uint OutputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pOutputLockedParameters);
 
 		[VtblIndex(9)]
 		void UnlockForProcess();
 
 		[VtblIndex(10)]
-		void Process(uint InputProcessParameterCount, XAPOProcessBufferParameters* pInputProcessParameters, uint OutputProcessParameterCount, XAPOProcessBufferParameters* pOutputProcessParameters, Bool32 IsEnabled);
+		void Process(uint InputProcessParameterCount, XAPO_PROCESS_BUFFER_PARAMETERS* pInputProcessParameters, uint OutputProcessParameterCount, XAPO_PROCESS_BUFFER_PARAMETERS* pOutputProcessParameters, Bool32 IsEnabled);
 
 		[VtblIndex(11)]
 		uint CalcInputFrames(uint OutputFrameCount);

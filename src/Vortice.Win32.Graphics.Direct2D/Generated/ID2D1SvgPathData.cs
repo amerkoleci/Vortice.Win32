@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData"]/*' />
 /// <unmanaged>ID2D1SvgPathData</unmanaged>
@@ -137,17 +137,17 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::UpdateCommands"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult UpdateCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex)
+	public HResult UpdateCommands(D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, uint startIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, SvgPathCommand*, uint, uint, int>)(lpVtbl[11]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commands, commandsCount, startIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, D2D1_SVG_PATH_COMMAND*, uint, uint, int>)(lpVtbl[11]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commands, commandsCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetCommands"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex)
+	public HResult GetCommands(D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, uint startIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, SvgPathCommand*, uint, uint, int>)(lpVtbl[12]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commands, commandsCount, startIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, D2D1_SVG_PATH_COMMAND*, uint, uint, int>)(lpVtbl[12]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commands, commandsCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetCommandsCount"]/*' />
@@ -161,9 +161,9 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::CreatePathGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreatePathGeometry(Common.FillMode fillMode, ID2D1PathGeometry1** pathGeometry)
+	public HResult CreatePathGeometry(Common.D2D1_FILL_MODE fillMode, ID2D1PathGeometry1** pathGeometry)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, Common.FillMode, ID2D1PathGeometry1**, int>)(lpVtbl[14]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), fillMode, pathGeometry);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, Common.D2D1_FILL_MODE, ID2D1PathGeometry1**, int>)(lpVtbl[14]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), fillMode, pathGeometry);
 	}
 
 	public interface Interface : ID2D1SvgAttribute.Interface
@@ -184,16 +184,16 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 		HResult RemoveCommandsAtEnd(uint commandsCount);
 
 		[VtblIndex(11)]
-		HResult UpdateCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex);
+		HResult UpdateCommands(D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, uint startIndex);
 
 		[VtblIndex(12)]
-		HResult GetCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex);
+		HResult GetCommands(D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, uint startIndex);
 
 		[VtblIndex(13)]
 		uint GetCommandsCount();
 
 		[VtblIndex(14)]
-		HResult CreatePathGeometry(Common.FillMode fillMode, ID2D1PathGeometry1** pathGeometry);
+		HResult CreatePathGeometry(Common.D2D1_FILL_MODE fillMode, ID2D1PathGeometry1** pathGeometry);
 	}
 }
 

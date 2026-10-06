@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState"]/*' />
 /// <unmanaged>ID3D11RasterizerState</unmanaged>
@@ -105,15 +105,15 @@ public unsafe partial struct ID3D11RasterizerState : ID3D11RasterizerState.Inter
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDesc(RasterizerDescription* pDesc)
+	public void GetDesc(D3D11_RASTERIZER_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11RasterizerState*, RasterizerDescription*, void>)(lpVtbl[7]))((ID3D11RasterizerState*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11RasterizerState*, D3D11_RASTERIZER_DESC*, void>)(lpVtbl[7]))((ID3D11RasterizerState*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		void GetDesc(RasterizerDescription* pDesc);
+		void GetDesc(D3D11_RASTERIZER_DESC* pDesc);
 	}
 }
 

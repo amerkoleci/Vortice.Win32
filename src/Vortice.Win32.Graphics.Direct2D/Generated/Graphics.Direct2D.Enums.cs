@@ -7,3054 +7,3054 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION"]/*' />
 /// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION</unmanaged>
-public enum InterpolationModeDefinition
+public enum D2D1_INTERPOLATION_MODE_DEFINITION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_INTERPOLATION_MODE_DEFINITION_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_LINEAR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_INTERPOLATION_MODE_DEFINITION_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_CUBIC"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_INTERPOLATION_MODE_DEFINITION_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_INTERPOLATION_MODE_DEFINITION_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_INTERPOLATION_MODE_DEFINITION_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_INTERPOLATION_MODE_DEFINITION_HIGH_QUALITY_CUBIC = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_FANT"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_FANT</unmanaged>
-	Fant = 6,
+	D2D1_INTERPOLATION_MODE_DEFINITION_FANT = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_MIPMAP_LINEAR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_MIPMAP_LINEAR</unmanaged>
-	MipmapLinear = 7,
+	D2D1_INTERPOLATION_MODE_DEFINITION_MIPMAP_LINEAR = 7,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA"]/*' />
 /// <unmanaged>D2D1_GAMMA</unmanaged>
-public enum Gamma
+public enum D2D1_GAMMA
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_2_2"]/*' />
 	/// <unmanaged>D2D1_GAMMA_2_2</unmanaged>
-	Gamma_2_2 = 0,
+	D2D1_GAMMA_2_2 = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_1_0"]/*' />
 	/// <unmanaged>D2D1_GAMMA_1_0</unmanaged>
-	Gamma_1_0 = 1,
+	D2D1_GAMMA_1_0 = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT"]/*' />
 /// <unmanaged>D2D1_OPACITY_MASK_CONTENT</unmanaged>
-public enum OpacityMaskContent
+public enum D2D1_OPACITY_MASK_CONTENT
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_GRAPHICS"]/*' />
 	/// <unmanaged>D2D1_OPACITY_MASK_CONTENT_GRAPHICS</unmanaged>
-	Graphics = 0,
+	D2D1_OPACITY_MASK_CONTENT_GRAPHICS = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL"]/*' />
 	/// <unmanaged>D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL</unmanaged>
-	TextNatural = 1,
+	D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE</unmanaged>
-	TextGDICompatible = 2,
+	D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXTEND_MODE"]/*' />
 /// <unmanaged>D2D1_EXTEND_MODE</unmanaged>
-public enum ExtendMode
+public enum D2D1_EXTEND_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXTEND_MODE::D2D1_EXTEND_MODE_CLAMP"]/*' />
 	/// <unmanaged>D2D1_EXTEND_MODE_CLAMP</unmanaged>
-	Clamp = 0,
+	D2D1_EXTEND_MODE_CLAMP = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXTEND_MODE::D2D1_EXTEND_MODE_WRAP"]/*' />
 	/// <unmanaged>D2D1_EXTEND_MODE_WRAP</unmanaged>
-	Wrap = 1,
+	D2D1_EXTEND_MODE_WRAP = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXTEND_MODE::D2D1_EXTEND_MODE_MIRROR"]/*' />
 	/// <unmanaged>D2D1_EXTEND_MODE_MIRROR</unmanaged>
-	Mirror = 2,
+	D2D1_EXTEND_MODE_MIRROR = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>D2D1_ANTIALIAS_MODE</unmanaged>
-public enum AntialiasMode
+public enum D2D1_ANTIALIAS_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE::D2D1_ANTIALIAS_MODE_PER_PRIMITIVE"]/*' />
 	/// <unmanaged>D2D1_ANTIALIAS_MODE_PER_PRIMITIVE</unmanaged>
-	PerPrimitive = 0,
+	D2D1_ANTIALIAS_MODE_PER_PRIMITIVE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE::D2D1_ANTIALIAS_MODE_ALIASED"]/*' />
 	/// <unmanaged>D2D1_ANTIALIAS_MODE_ALIASED</unmanaged>
-	Aliased = 1,
+	D2D1_ANTIALIAS_MODE_ALIASED = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE</unmanaged>
-public enum TextAntialiasMode
+public enum D2D1_TEXT_ANTIALIAS_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_DEFAULT</unmanaged>
-	Default = 0,
+	D2D1_TEXT_ANTIALIAS_MODE_DEFAULT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_CLEARTYPE</unmanaged>
-	Cleartype = 1,
+	D2D1_TEXT_ANTIALIAS_MODE_CLEARTYPE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE</unmanaged>
-	Grayscale = 2,
+	D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_ALIASED"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_ALIASED</unmanaged>
-	Aliased = 3,
+	D2D1_TEXT_ANTIALIAS_MODE_ALIASED = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAP_INTERPOLATION_MODE</unmanaged>
-public enum BitmapInterpolationMode
+public enum D2D1_BITMAP_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_BITMAP_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_BITMAP_INTERPOLATION_MODE_LINEAR = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAW_TEXT_OPTIONS"]/*' />
 /// <unmanaged>D2D1_DRAW_TEXT_OPTIONS</unmanaged>
 [Flags]
-public enum DrawTextOptions
+public enum D2D1_DRAW_TEXT_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAW_TEXT_OPTIONS::D2D1_DRAW_TEXT_OPTIONS_NO_SNAP"]/*' />
 	/// <unmanaged>D2D1_DRAW_TEXT_OPTIONS_NO_SNAP</unmanaged>
-	NoSnap = 1,
+	D2D1_DRAW_TEXT_OPTIONS_NO_SNAP = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAW_TEXT_OPTIONS::D2D1_DRAW_TEXT_OPTIONS_CLIP"]/*' />
 	/// <unmanaged>D2D1_DRAW_TEXT_OPTIONS_CLIP</unmanaged>
-	Clip = 2,
+	D2D1_DRAW_TEXT_OPTIONS_CLIP = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAW_TEXT_OPTIONS::D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT"]/*' />
 	/// <unmanaged>D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT</unmanaged>
-	EnableColorFont = 4,
+	D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAW_TEXT_OPTIONS::D2D1_DRAW_TEXT_OPTIONS_DISABLE_COLOR_BITMAP_SNAPPING"]/*' />
 	/// <unmanaged>D2D1_DRAW_TEXT_OPTIONS_DISABLE_COLOR_BITMAP_SNAPPING</unmanaged>
-	DisableColorBitmapSnapping = 8,
+	D2D1_DRAW_TEXT_OPTIONS_DISABLE_COLOR_BITMAP_SNAPPING = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAW_TEXT_OPTIONS::D2D1_DRAW_TEXT_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_DRAW_TEXT_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_DRAW_TEXT_OPTIONS_NONE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE"]/*' />
 /// <unmanaged>D2D1_ARC_SIZE</unmanaged>
-public enum ArcSize
+public enum D2D1_ARC_SIZE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE::D2D1_ARC_SIZE_SMALL"]/*' />
 	/// <unmanaged>D2D1_ARC_SIZE_SMALL</unmanaged>
-	Small = 0,
+	D2D1_ARC_SIZE_SMALL = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE::D2D1_ARC_SIZE_LARGE"]/*' />
 	/// <unmanaged>D2D1_ARC_SIZE_LARGE</unmanaged>
-	Large = 1,
+	D2D1_ARC_SIZE_LARGE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE"]/*' />
 /// <unmanaged>D2D1_CAP_STYLE</unmanaged>
-public enum CapStyle
+public enum D2D1_CAP_STYLE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_FLAT"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_FLAT</unmanaged>
-	Flat = 0,
+	D2D1_CAP_STYLE_FLAT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_SQUARE"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_SQUARE</unmanaged>
-	Square = 1,
+	D2D1_CAP_STYLE_SQUARE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_ROUND"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_ROUND</unmanaged>
-	Round = 2,
+	D2D1_CAP_STYLE_ROUND = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_TRIANGLE"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_TRIANGLE</unmanaged>
-	Triangle = 3,
+	D2D1_CAP_STYLE_TRIANGLE = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE"]/*' />
 /// <unmanaged>D2D1_DASH_STYLE</unmanaged>
-public enum DashStyle
+public enum D2D1_DASH_STYLE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE::D2D1_DASH_STYLE_SOLID"]/*' />
 	/// <unmanaged>D2D1_DASH_STYLE_SOLID</unmanaged>
-	Solid = 0,
+	D2D1_DASH_STYLE_SOLID = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE::D2D1_DASH_STYLE_DASH"]/*' />
 	/// <unmanaged>D2D1_DASH_STYLE_DASH</unmanaged>
-	Dash = 1,
+	D2D1_DASH_STYLE_DASH = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE::D2D1_DASH_STYLE_DOT"]/*' />
 	/// <unmanaged>D2D1_DASH_STYLE_DOT</unmanaged>
-	Dot = 2,
+	D2D1_DASH_STYLE_DOT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE::D2D1_DASH_STYLE_DASH_DOT"]/*' />
 	/// <unmanaged>D2D1_DASH_STYLE_DASH_DOT</unmanaged>
-	DashDot = 3,
+	D2D1_DASH_STYLE_DASH_DOT = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE::D2D1_DASH_STYLE_DASH_DOT_DOT"]/*' />
 	/// <unmanaged>D2D1_DASH_STYLE_DASH_DOT_DOT</unmanaged>
-	DashDotDot = 4,
+	D2D1_DASH_STYLE_DASH_DOT_DOT = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DASH_STYLE::D2D1_DASH_STYLE_CUSTOM"]/*' />
 	/// <unmanaged>D2D1_DASH_STYLE_CUSTOM</unmanaged>
-	Custom = 5,
+	D2D1_DASH_STYLE_CUSTOM = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINE_JOIN"]/*' />
 /// <unmanaged>D2D1_LINE_JOIN</unmanaged>
-public enum LineJoin
+public enum D2D1_LINE_JOIN
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINE_JOIN::D2D1_LINE_JOIN_MITER"]/*' />
 	/// <unmanaged>D2D1_LINE_JOIN_MITER</unmanaged>
-	Miter = 0,
+	D2D1_LINE_JOIN_MITER = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINE_JOIN::D2D1_LINE_JOIN_BEVEL"]/*' />
 	/// <unmanaged>D2D1_LINE_JOIN_BEVEL</unmanaged>
-	Bevel = 1,
+	D2D1_LINE_JOIN_BEVEL = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINE_JOIN::D2D1_LINE_JOIN_ROUND"]/*' />
 	/// <unmanaged>D2D1_LINE_JOIN_ROUND</unmanaged>
-	Round = 2,
+	D2D1_LINE_JOIN_ROUND = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINE_JOIN::D2D1_LINE_JOIN_MITER_OR_BEVEL"]/*' />
 	/// <unmanaged>D2D1_LINE_JOIN_MITER_OR_BEVEL</unmanaged>
-	MiterOrBevel = 3,
+	D2D1_LINE_JOIN_MITER_OR_BEVEL = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE"]/*' />
 /// <unmanaged>D2D1_COMBINE_MODE</unmanaged>
-public enum CombineMode
+public enum D2D1_COMBINE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_UNION"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_UNION</unmanaged>
-	Union = 0,
+	D2D1_COMBINE_MODE_UNION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_INTERSECT"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_INTERSECT</unmanaged>
-	Intersect = 1,
+	D2D1_COMBINE_MODE_INTERSECT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_XOR"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_XOR</unmanaged>
-	Xor = 2,
+	D2D1_COMBINE_MODE_XOR = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_EXCLUDE"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_EXCLUDE</unmanaged>
-	Exclude = 3,
+	D2D1_COMBINE_MODE_EXCLUDE = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_RELATION"]/*' />
 /// <unmanaged>D2D1_GEOMETRY_RELATION</unmanaged>
-public enum GeometryRelation
+public enum D2D1_GEOMETRY_RELATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_RELATION::D2D1_GEOMETRY_RELATION_UNKNOWN"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_RELATION_UNKNOWN</unmanaged>
-	Unknown = 0,
+	D2D1_GEOMETRY_RELATION_UNKNOWN = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_RELATION::D2D1_GEOMETRY_RELATION_DISJOINT"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_RELATION_DISJOINT</unmanaged>
-	Disjoint = 1,
+	D2D1_GEOMETRY_RELATION_DISJOINT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_RELATION::D2D1_GEOMETRY_RELATION_IS_CONTAINED"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_RELATION_IS_CONTAINED</unmanaged>
-	IsContained = 2,
+	D2D1_GEOMETRY_RELATION_IS_CONTAINED = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_RELATION::D2D1_GEOMETRY_RELATION_CONTAINS"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_RELATION_CONTAINS</unmanaged>
-	Contains = 3,
+	D2D1_GEOMETRY_RELATION_CONTAINS = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_RELATION::D2D1_GEOMETRY_RELATION_OVERLAP"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_RELATION_OVERLAP</unmanaged>
-	Overlap = 4,
+	D2D1_GEOMETRY_RELATION_OVERLAP = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION"]/*' />
 /// <unmanaged>D2D1_GEOMETRY_SIMPLIFICATION_OPTION</unmanaged>
-public enum GeometrySimplificationOption
+public enum D2D1_GEOMETRY_SIMPLIFICATION_OPTION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION::D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES</unmanaged>
-	CubicsAndLines = 0,
+	D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION::D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES</unmanaged>
-	Lines = 1,
+	D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION"]/*' />
 /// <unmanaged>D2D1_SWEEP_DIRECTION</unmanaged>
-public enum SweepDirection
+public enum D2D1_SWEEP_DIRECTION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION::D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE"]/*' />
 	/// <unmanaged>D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE</unmanaged>
-	CounterClockwise = 0,
+	D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION::D2D1_SWEEP_DIRECTION_CLOCKWISE"]/*' />
 	/// <unmanaged>D2D1_SWEEP_DIRECTION_CLOCKWISE</unmanaged>
-	Clockwise = 1,
+	D2D1_SWEEP_DIRECTION_CLOCKWISE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS"]/*' />
 /// <unmanaged>D2D1_LAYER_OPTIONS</unmanaged>
 [Flags]
-public enum LayerOptions
+public enum D2D1_LAYER_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS::D2D1_LAYER_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_LAYER_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS::D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE</unmanaged>
-	InitializeForCleartype = 1,
+	D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE"]/*' />
 /// <unmanaged>D2D1_WINDOW_STATE</unmanaged>
 [Flags]
-public enum WindowState
+public enum D2D1_WINDOW_STATE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE::D2D1_WINDOW_STATE_NONE"]/*' />
 	/// <unmanaged>D2D1_WINDOW_STATE_NONE</unmanaged>
-	None = 0,
+	D2D1_WINDOW_STATE_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE::D2D1_WINDOW_STATE_OCCLUDED"]/*' />
 	/// <unmanaged>D2D1_WINDOW_STATE_OCCLUDED</unmanaged>
-	Occluded = 1,
+	D2D1_WINDOW_STATE_OCCLUDED = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE"]/*' />
 /// <unmanaged>D2D1_RENDER_TARGET_TYPE</unmanaged>
-public enum RenderTargetType
+public enum D2D1_RENDER_TARGET_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_TYPE_DEFAULT</unmanaged>
-	Default = 0,
+	D2D1_RENDER_TARGET_TYPE_DEFAULT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_SOFTWARE"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_TYPE_SOFTWARE</unmanaged>
-	Software = 1,
+	D2D1_RENDER_TARGET_TYPE_SOFTWARE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_HARDWARE"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_TYPE_HARDWARE</unmanaged>
-	Hardware = 2,
+	D2D1_RENDER_TARGET_TYPE_HARDWARE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL"]/*' />
 /// <unmanaged>D2D1_FEATURE_LEVEL</unmanaged>
-public enum FeatureLevel
+public enum D2D1_FEATURE_LEVEL
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_FEATURE_LEVEL_DEFAULT</unmanaged>
-	Default = 0,
+	D2D1_FEATURE_LEVEL_DEFAULT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_9"]/*' />
 	/// <unmanaged>D2D1_FEATURE_LEVEL_9</unmanaged>
-	Level_9 = 37120,
+	D2D1_FEATURE_LEVEL_9 = 37120,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_10"]/*' />
 	/// <unmanaged>D2D1_FEATURE_LEVEL_10</unmanaged>
-	Level_10 = 40960,
+	D2D1_FEATURE_LEVEL_10 = 40960,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_USAGE"]/*' />
 /// <unmanaged>D2D1_RENDER_TARGET_USAGE</unmanaged>
 [Flags]
-public enum RenderTargetUsage
+public enum D2D1_RENDER_TARGET_USAGE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_USAGE::D2D1_RENDER_TARGET_USAGE_NONE"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_USAGE_NONE</unmanaged>
-	None = 0,
+	D2D1_RENDER_TARGET_USAGE_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_USAGE::D2D1_RENDER_TARGET_USAGE_FORCE_BITMAP_REMOTING"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_USAGE_FORCE_BITMAP_REMOTING</unmanaged>
-	ForceBitmapRemoting = 1,
+	D2D1_RENDER_TARGET_USAGE_FORCE_BITMAP_REMOTING = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_USAGE::D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE</unmanaged>
-	GDICompatible = 2,
+	D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS"]/*' />
 /// <unmanaged>D2D1_PRESENT_OPTIONS</unmanaged>
 [Flags]
-public enum PresentOptions
+public enum D2D1_PRESENT_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_PRESENT_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_PRESENT_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS"]/*' />
 	/// <unmanaged>D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS</unmanaged>
-	RetainContents = 1,
+	D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_IMMEDIATELY"]/*' />
 	/// <unmanaged>D2D1_PRESENT_OPTIONS_IMMEDIATELY</unmanaged>
-	Immediately = 2,
+	D2D1_PRESENT_OPTIONS_IMMEDIATELY = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS"]/*' />
 /// <unmanaged>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS</unmanaged>
 [Flags]
-public enum CompatibleRenderTargetOptions
+public enum D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS::D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS::D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE</unmanaged>
-	GDICompatible = 1,
+	D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE"]/*' />
 /// <unmanaged>D2D1_DC_INITIALIZE_MODE</unmanaged>
-public enum DCInitializeMode
+public enum D2D1_DC_INITIALIZE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_COPY"]/*' />
 	/// <unmanaged>D2D1_DC_INITIALIZE_MODE_COPY</unmanaged>
-	Copy = 0,
+	D2D1_DC_INITIALIZE_MODE_COPY = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_CLEAR"]/*' />
 	/// <unmanaged>D2D1_DC_INITIALIZE_MODE_CLEAR</unmanaged>
-	Clear = 1,
+	D2D1_DC_INITIALIZE_MODE_CLEAR = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL"]/*' />
 /// <unmanaged>D2D1_DEBUG_LEVEL</unmanaged>
-public enum DebugLevel
+public enum D2D1_DEBUG_LEVEL
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_NONE"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_NONE</unmanaged>
-	None = 0,
+	D2D1_DEBUG_LEVEL_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_ERROR"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_ERROR</unmanaged>
-	Error = 1,
+	D2D1_DEBUG_LEVEL_ERROR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_WARNING"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_WARNING</unmanaged>
-	Warning = 2,
+	D2D1_DEBUG_LEVEL_WARNING = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_INFORMATION"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_INFORMATION</unmanaged>
-	Information = 3,
+	D2D1_DEBUG_LEVEL_INFORMATION = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE"]/*' />
 /// <unmanaged>D2D1_FACTORY_TYPE</unmanaged>
-public enum FactoryType
+public enum D2D1_FACTORY_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE::D2D1_FACTORY_TYPE_SINGLE_THREADED"]/*' />
 	/// <unmanaged>D2D1_FACTORY_TYPE_SINGLE_THREADED</unmanaged>
-	SingleThreaded = 0,
+	D2D1_FACTORY_TYPE_SINGLE_THREADED = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE::D2D1_FACTORY_TYPE_MULTI_THREADED"]/*' />
 	/// <unmanaged>D2D1_FACTORY_TYPE_MULTI_THREADED</unmanaged>
-	MultiThreaded = 1,
+	D2D1_FACTORY_TYPE_MULTI_THREADED = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR"]/*' />
 /// <unmanaged>D2D1_CHANNEL_SELECTOR</unmanaged>
-public enum ChannelSelector
+public enum D2D1_CHANNEL_SELECTOR
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_R"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_R</unmanaged>
-	R = 0,
+	D2D1_CHANNEL_SELECTOR_R = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_G"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_G</unmanaged>
-	G = 1,
+	D2D1_CHANNEL_SELECTOR_G = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_B"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_B</unmanaged>
-	B = 2,
+	D2D1_CHANNEL_SELECTOR_B = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_A"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_A</unmanaged>
-	A = 3,
+	D2D1_CHANNEL_SELECTOR_A = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION</unmanaged>
-public enum BitmapSourceOrientation
+public enum D2D1_BITMAPSOURCE_ORIENTATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_DEFAULT</unmanaged>
-	Default = 1,
+	D2D1_BITMAPSOURCE_ORIENTATION_DEFAULT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_FLIP_HORIZONTAL</unmanaged>
-	FlipHorizontal = 2,
+	D2D1_BITMAPSOURCE_ORIENTATION_FLIP_HORIZONTAL = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE180"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE180</unmanaged>
-	RotateClockwise180 = 3,
+	D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE180 = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL</unmanaged>
-	RotateClockwise180FlipHorizontal = 4,
+	D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL</unmanaged>
-	RotateClockwise270FlipHorizontal = 5,
+	D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90</unmanaged>
-	RotateClockwise90 = 6,
+	D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90 = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL</unmanaged>
-	RotateClockwise90FlipHorizontal = 7,
+	D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270</unmanaged>
-	RotateClockwise270 = 8,
+	D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270 = 8,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP"]/*' />
 /// <unmanaged>D2D1_GAUSSIANBLUR_PROP</unmanaged>
-public enum GaussianBlurProp
+public enum D2D1_GAUSSIANBLUR_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION</unmanaged>
-	StandardDeviation = 0,
+	D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION</unmanaged>
-	Optimization = 1,
+	D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 2,
+	D2D1_GAUSSIANBLUR_PROP_BORDER_MODE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_OPTIMIZATION"]/*' />
 /// <unmanaged>D2D1_GAUSSIANBLUR_OPTIMIZATION</unmanaged>
-public enum GaussianBlurOptimization
+public enum D2D1_GAUSSIANBLUR_OPTIMIZATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_OPTIMIZATION::D2D1_GAUSSIANBLUR_OPTIMIZATION_SPEED"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_OPTIMIZATION_SPEED</unmanaged>
-	Speed = 0,
+	D2D1_GAUSSIANBLUR_OPTIMIZATION_SPEED = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_OPTIMIZATION::D2D1_GAUSSIANBLUR_OPTIMIZATION_BALANCED"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_OPTIMIZATION_BALANCED</unmanaged>
-	Balanced = 1,
+	D2D1_GAUSSIANBLUR_OPTIMIZATION_BALANCED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_OPTIMIZATION::D2D1_GAUSSIANBLUR_OPTIMIZATION_QUALITY"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_OPTIMIZATION_QUALITY</unmanaged>
-	Quality = 2,
+	D2D1_GAUSSIANBLUR_OPTIMIZATION_QUALITY = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP"]/*' />
 /// <unmanaged>D2D1_DIRECTIONALBLUR_PROP</unmanaged>
-public enum DirectionalBlurProp
+public enum D2D1_DIRECTIONALBLUR_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION</unmanaged>
-	StandardDeviation = 0,
+	D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_ANGLE</unmanaged>
-	Angle = 1,
+	D2D1_DIRECTIONALBLUR_PROP_ANGLE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION</unmanaged>
-	Optimization = 2,
+	D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 3,
+	D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_OPTIMIZATION"]/*' />
 /// <unmanaged>D2D1_DIRECTIONALBLUR_OPTIMIZATION</unmanaged>
-public enum DirectionalBlurOptimization
+public enum D2D1_DIRECTIONALBLUR_OPTIMIZATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_OPTIMIZATION::D2D1_DIRECTIONALBLUR_OPTIMIZATION_SPEED"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_OPTIMIZATION_SPEED</unmanaged>
-	Speed = 0,
+	D2D1_DIRECTIONALBLUR_OPTIMIZATION_SPEED = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_OPTIMIZATION::D2D1_DIRECTIONALBLUR_OPTIMIZATION_BALANCED"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_OPTIMIZATION_BALANCED</unmanaged>
-	Balanced = 1,
+	D2D1_DIRECTIONALBLUR_OPTIMIZATION_BALANCED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_OPTIMIZATION::D2D1_DIRECTIONALBLUR_OPTIMIZATION_QUALITY"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_OPTIMIZATION_QUALITY</unmanaged>
-	Quality = 2,
+	D2D1_DIRECTIONALBLUR_OPTIMIZATION_QUALITY = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP"]/*' />
 /// <unmanaged>D2D1_SHADOW_PROP</unmanaged>
-public enum ShadowProp
+public enum D2D1_SHADOW_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION</unmanaged>
-	BlurStandardDeviation = 0,
+	D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_SHADOW_PROP_COLOR</unmanaged>
-	Color = 1,
+	D2D1_SHADOW_PROP_COLOR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_OPTIMIZATION"]/*' />
 	/// <unmanaged>D2D1_SHADOW_PROP_OPTIMIZATION</unmanaged>
-	Optimization = 2,
+	D2D1_SHADOW_PROP_OPTIMIZATION = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION"]/*' />
 /// <unmanaged>D2D1_SHADOW_OPTIMIZATION</unmanaged>
-public enum ShadowOptimization
+public enum D2D1_SHADOW_OPTIMIZATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_SPEED"]/*' />
 	/// <unmanaged>D2D1_SHADOW_OPTIMIZATION_SPEED</unmanaged>
-	Speed = 0,
+	D2D1_SHADOW_OPTIMIZATION_SPEED = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_BALANCED"]/*' />
 	/// <unmanaged>D2D1_SHADOW_OPTIMIZATION_BALANCED</unmanaged>
-	Balanced = 1,
+	D2D1_SHADOW_OPTIMIZATION_BALANCED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_QUALITY"]/*' />
 	/// <unmanaged>D2D1_SHADOW_OPTIMIZATION_QUALITY</unmanaged>
-	Quality = 2,
+	D2D1_SHADOW_OPTIMIZATION_QUALITY = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_PROP"]/*' />
 /// <unmanaged>D2D1_BLEND_PROP</unmanaged>
-public enum BlendProp
+public enum D2D1_BLEND_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_PROP::D2D1_BLEND_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_BLEND_PROP_MODE</unmanaged>
-	Mode = 0,
+	D2D1_BLEND_PROP_MODE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SATURATION_PROP"]/*' />
 /// <unmanaged>D2D1_SATURATION_PROP</unmanaged>
-public enum SaturationProp
+public enum D2D1_SATURATION_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SATURATION_PROP::D2D1_SATURATION_PROP_SATURATION"]/*' />
 	/// <unmanaged>D2D1_SATURATION_PROP_SATURATION</unmanaged>
-	Saturation = 0,
+	D2D1_SATURATION_PROP_SATURATION = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP"]/*' />
 /// <unmanaged>D2D1_HUEROTATION_PROP</unmanaged>
-public enum HueRotationProp
+public enum D2D1_HUEROTATION_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP::D2D1_HUEROTATION_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_HUEROTATION_PROP_ANGLE</unmanaged>
-	Angle = 0,
+	D2D1_HUEROTATION_PROP_ANGLE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMATRIX_PROP"]/*' />
 /// <unmanaged>D2D1_COLORMATRIX_PROP</unmanaged>
-public enum ColorMatrixProp
+public enum D2D1_COLORMATRIX_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMATRIX_PROP::D2D1_COLORMATRIX_PROP_COLOR_MATRIX"]/*' />
 	/// <unmanaged>D2D1_COLORMATRIX_PROP_COLOR_MATRIX</unmanaged>
-	ColorMatrix = 0,
+	D2D1_COLORMATRIX_PROP_COLOR_MATRIX = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMATRIX_PROP::D2D1_COLORMATRIX_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_COLORMATRIX_PROP_ALPHA_MODE</unmanaged>
-	AlphaMode = 1,
+	D2D1_COLORMATRIX_PROP_ALPHA_MODE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMATRIX_PROP::D2D1_COLORMATRIX_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_COLORMATRIX_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 2,
+	D2D1_COLORMATRIX_PROP_CLAMP_OUTPUT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_PROP</unmanaged>
-public enum BitmapSourceProp
+public enum D2D1_BITMAPSOURCE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE</unmanaged>
-	WicBitmapSource = 0,
+	D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_SCALE</unmanaged>
-	Scale = 1,
+	D2D1_BITMAPSOURCE_PROP_SCALE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 2,
+	D2D1_BITMAPSOURCE_PROP_INTERPOLATION_MODE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ENABLE_DPI_CORRECTION"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_ENABLE_DPI_CORRECTION</unmanaged>
-	EnableDpiCorrection = 3,
+	D2D1_BITMAPSOURCE_PROP_ENABLE_DPI_CORRECTION = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_ALPHA_MODE</unmanaged>
-	AlphaMode = 4,
+	D2D1_BITMAPSOURCE_PROP_ALPHA_MODE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ORIENTATION"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_ORIENTATION</unmanaged>
-	Orientation = 5,
+	D2D1_BITMAPSOURCE_PROP_ORIENTATION = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE</unmanaged>
-public enum BitmapSourceInterpolationMode
+public enum D2D1_BITMAPSOURCE_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE::D2D1_BITMAPSOURCE_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_BITMAPSOURCE_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE::D2D1_BITMAPSOURCE_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_BITMAPSOURCE_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE::D2D1_BITMAPSOURCE_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_BITMAPSOURCE_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE::D2D1_BITMAPSOURCE_INTERPOLATION_MODE_FANT"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE_FANT</unmanaged>
-	Fant = 6,
+	D2D1_BITMAPSOURCE_INTERPOLATION_MODE_FANT = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE::D2D1_BITMAPSOURCE_INTERPOLATION_MODE_MIPMAP_LINEAR"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE_MIPMAP_LINEAR</unmanaged>
-	MipmapLinear = 7,
+	D2D1_BITMAPSOURCE_INTERPOLATION_MODE_MIPMAP_LINEAR = 7,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE</unmanaged>
-public enum BitmapSourceAlphaMode
+public enum D2D1_BITMAPSOURCE_ALPHA_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED</unmanaged>
-	Premultiplied = 1,
+	D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT</unmanaged>
-	Straight = 2,
+	D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPOSITE_PROP"]/*' />
 /// <unmanaged>D2D1_COMPOSITE_PROP</unmanaged>
-public enum CompositeProp
+public enum D2D1_COMPOSITE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPOSITE_PROP::D2D1_COMPOSITE_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_COMPOSITE_PROP_MODE</unmanaged>
-	Mode = 0,
+	D2D1_COMPOSITE_PROP_MODE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_3DTRANSFORM_PROP</unmanaged>
-public enum Transform3DProperties
+public enum D2D1_3DTRANSFORM_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_PROP::D2D1_3DTRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 0,
+	D2D1_3DTRANSFORM_PROP_INTERPOLATION_MODE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_PROP::D2D1_3DTRANSFORM_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 1,
+	D2D1_3DTRANSFORM_PROP_BORDER_MODE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_PROP::D2D1_3DTRANSFORM_PROP_TRANSFORM_MATRIX"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_PROP_TRANSFORM_MATRIX</unmanaged>
-	TransformMatrix = 2,
+	D2D1_3DTRANSFORM_PROP_TRANSFORM_MATRIX = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE</unmanaged>
-public enum Transform3DInterpolationMode
+public enum D2D1_3DTRANSFORM_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE::D2D1_3DTRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_3DTRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE::D2D1_3DTRANSFORM_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_3DTRANSFORM_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE::D2D1_3DTRANSFORM_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_3DTRANSFORM_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE::D2D1_3DTRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_3DTRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE::D2D1_3DTRANSFORM_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_3DTRANSFORM_INTERPOLATION_MODE_ANISOTROPIC = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP</unmanaged>
-public enum PerspectiveTransform3DProperties
+public enum D2D1_3DPERSPECTIVETRANSFORM_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 0,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_INTERPOLATION_MODE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 1,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_BORDER_MODE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_DEPTH"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_DEPTH</unmanaged>
-	Depth = 2,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_DEPTH = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_PERSPECTIVE_ORIGIN"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_PERSPECTIVE_ORIGIN</unmanaged>
-	PerspectiveOrigin = 3,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_PERSPECTIVE_ORIGIN = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_LOCAL_OFFSET"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_LOCAL_OFFSET</unmanaged>
-	LocalOffset = 4,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_LOCAL_OFFSET = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_GLOBAL_OFFSET"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_GLOBAL_OFFSET</unmanaged>
-	GlobalOffset = 5,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_GLOBAL_OFFSET = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION_ORIGIN"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION_ORIGIN</unmanaged>
-	RotationOrigin = 6,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION_ORIGIN = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION</unmanaged>
-	Rotation = 7,
+	D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION = 7,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE</unmanaged>
-public enum PerspectiveTransform3DInteroplationMode
+public enum D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE::D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE::D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE::D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE::D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE::D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_ANISOTROPIC = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP</unmanaged>
-public enum AffineTransform2DProperties
+public enum D2D1_2DAFFINETRANSFORM_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 0,
+	D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 1,
+	D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX</unmanaged>
-	TransformMatrix = 2,
+	D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS</unmanaged>
-	Sharpness = 3,
+	D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_PROP"]/*' />
 /// <unmanaged>D2D1_DPICOMPENSATION_PROP</unmanaged>
-public enum DpiCompensationProp
+public enum D2D1_DPICOMPENSATION_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_PROP::D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 0,
+	D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_PROP::D2D1_DPICOMPENSATION_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 1,
+	D2D1_DPICOMPENSATION_PROP_BORDER_MODE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_PROP::D2D1_DPICOMPENSATION_PROP_INPUT_DPI"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_PROP_INPUT_DPI</unmanaged>
-	InputDpi = 2,
+	D2D1_DPICOMPENSATION_PROP_INPUT_DPI = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE</unmanaged>
-public enum DpiCompensationInterpolationMode
+public enum D2D1_DPICOMPENSATION_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_DPICOMPENSATION_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_DPICOMPENSATION_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_DPICOMPENSATION_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_DPICOMPENSATION_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_DPICOMPENSATION_INTERPOLATION_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_DPICOMPENSATION_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP"]/*' />
 /// <unmanaged>D2D1_SCALE_PROP</unmanaged>
-public enum ScaleProp
+public enum D2D1_SCALE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_SCALE</unmanaged>
-	Scale = 0,
+	D2D1_SCALE_PROP_SCALE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_CENTER_POINT"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_CENTER_POINT</unmanaged>
-	CenterPoint = 1,
+	D2D1_SCALE_PROP_CENTER_POINT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 2,
+	D2D1_SCALE_PROP_INTERPOLATION_MODE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 3,
+	D2D1_SCALE_PROP_BORDER_MODE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_SHARPNESS"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_SHARPNESS</unmanaged>
-	Sharpness = 4,
+	D2D1_SCALE_PROP_SHARPNESS = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE</unmanaged>
-public enum ScaleInterpolationMode
+public enum D2D1_SCALE_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE::D2D1_SCALE_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_SCALE_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE::D2D1_SCALE_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_SCALE_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE::D2D1_SCALE_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_SCALE_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE::D2D1_SCALE_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_SCALE_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE::D2D1_SCALE_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_SCALE_INTERPOLATION_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_INTERPOLATION_MODE::D2D1_SCALE_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_SCALE_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_SCALE_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP"]/*' />
 /// <unmanaged>D2D1_TURBULENCE_PROP</unmanaged>
-public enum TurbulenceProp
+public enum D2D1_TURBULENCE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_OFFSET"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_OFFSET</unmanaged>
-	Offset = 0,
+	D2D1_TURBULENCE_PROP_OFFSET = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_SIZE"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_SIZE</unmanaged>
-	Size = 1,
+	D2D1_TURBULENCE_PROP_SIZE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_BASE_FREQUENCY"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_BASE_FREQUENCY</unmanaged>
-	BaseFrequency = 2,
+	D2D1_TURBULENCE_PROP_BASE_FREQUENCY = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_NUM_OCTAVES"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_NUM_OCTAVES</unmanaged>
-	NumOctaves = 3,
+	D2D1_TURBULENCE_PROP_NUM_OCTAVES = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_SEED"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_SEED</unmanaged>
-	Seed = 4,
+	D2D1_TURBULENCE_PROP_SEED = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_NOISE"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_NOISE</unmanaged>
-	Noise = 5,
+	D2D1_TURBULENCE_PROP_NOISE = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_PROP::D2D1_TURBULENCE_PROP_STITCHABLE"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_PROP_STITCHABLE</unmanaged>
-	Stitchable = 6,
+	D2D1_TURBULENCE_PROP_STITCHABLE = 6,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP"]/*' />
 /// <unmanaged>D2D1_DISPLACEMENTMAP_PROP</unmanaged>
-public enum DisplacementMapProp
+public enum D2D1_DISPLACEMENTMAP_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_SCALE</unmanaged>
-	Scale = 0,
+	D2D1_DISPLACEMENTMAP_PROP_SCALE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT</unmanaged>
-	XChannelSelect = 1,
+	D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT</unmanaged>
-	YChannelSelect = 2,
+	D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_PROP</unmanaged>
-public enum ColorManagementProp
+public enum D2D1_COLORMANAGEMENT_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_SOURCE_COLOR_CONTEXT"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_SOURCE_COLOR_CONTEXT</unmanaged>
-	SourceColorContext = 0,
+	D2D1_COLORMANAGEMENT_PROP_SOURCE_COLOR_CONTEXT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_SOURCE_RENDERING_INTENT"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_SOURCE_RENDERING_INTENT</unmanaged>
-	SourceRenderingIntent = 1,
+	D2D1_COLORMANAGEMENT_PROP_SOURCE_RENDERING_INTENT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_DESTINATION_COLOR_CONTEXT"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_DESTINATION_COLOR_CONTEXT</unmanaged>
-	DestinationColorContext = 2,
+	D2D1_COLORMANAGEMENT_PROP_DESTINATION_COLOR_CONTEXT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_DESTINATION_RENDERING_INTENT"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_DESTINATION_RENDERING_INTENT</unmanaged>
-	DestinationRenderingIntent = 3,
+	D2D1_COLORMANAGEMENT_PROP_DESTINATION_RENDERING_INTENT = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_ALPHA_MODE</unmanaged>
-	AlphaMode = 4,
+	D2D1_COLORMANAGEMENT_PROP_ALPHA_MODE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_QUALITY"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_QUALITY</unmanaged>
-	Quality = 5,
+	D2D1_COLORMANAGEMENT_PROP_QUALITY = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_ALPHA_MODE</unmanaged>
-public enum ColorManagementAlphaMode
+public enum D2D1_COLORMANAGEMENT_ALPHA_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_ALPHA_MODE::D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED</unmanaged>
-	Premultiplied = 1,
+	D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_ALPHA_MODE::D2D1_COLORMANAGEMENT_ALPHA_MODE_STRAIGHT"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_ALPHA_MODE_STRAIGHT</unmanaged>
-	Straight = 2,
+	D2D1_COLORMANAGEMENT_ALPHA_MODE_STRAIGHT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_QUALITY"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_QUALITY</unmanaged>
-public enum ColorManagementQuality
+public enum D2D1_COLORMANAGEMENT_QUALITY
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_QUALITY::D2D1_COLORMANAGEMENT_QUALITY_PROOF"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_QUALITY_PROOF</unmanaged>
-	Proof = 0,
+	D2D1_COLORMANAGEMENT_QUALITY_PROOF = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_QUALITY::D2D1_COLORMANAGEMENT_QUALITY_NORMAL"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_QUALITY_NORMAL</unmanaged>
-	Normal = 1,
+	D2D1_COLORMANAGEMENT_QUALITY_NORMAL = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_QUALITY::D2D1_COLORMANAGEMENT_QUALITY_BEST"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_QUALITY_BEST</unmanaged>
-	Best = 2,
+	D2D1_COLORMANAGEMENT_QUALITY_BEST = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT</unmanaged>
-public enum ColorManagementRenderingIntent
+public enum D2D1_COLORMANAGEMENT_RENDERING_INTENT
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL</unmanaged>
-	Perceptual = 0,
+	D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_RELATIVE_COLORIMETRIC"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_RELATIVE_COLORIMETRIC</unmanaged>
-	RelativeColorimetric = 1,
+	D2D1_COLORMANAGEMENT_RENDERING_INTENT_RELATIVE_COLORIMETRIC = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION</unmanaged>
-	Saturation = 2,
+	D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC</unmanaged>
-	AbsoluteColorimetric = 3,
+	D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP"]/*' />
 /// <unmanaged>D2D1_HISTOGRAM_PROP</unmanaged>
-public enum HistogramProp
+public enum D2D1_HISTOGRAM_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_NUM_BINS"]/*' />
 	/// <unmanaged>D2D1_HISTOGRAM_PROP_NUM_BINS</unmanaged>
-	NumBins = 0,
+	D2D1_HISTOGRAM_PROP_NUM_BINS = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_CHANNEL_SELECT"]/*' />
 	/// <unmanaged>D2D1_HISTOGRAM_PROP_CHANNEL_SELECT</unmanaged>
-	ChannelSelect = 1,
+	D2D1_HISTOGRAM_PROP_CHANNEL_SELECT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT</unmanaged>
-	HistogramOutput = 2,
+	D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP"]/*' />
 /// <unmanaged>D2D1_POINTSPECULAR_PROP</unmanaged>
-public enum PointSpecularProp
+public enum D2D1_POINTSPECULAR_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_LIGHT_POSITION</unmanaged>
-	LightPosition = 0,
+	D2D1_POINTSPECULAR_PROP_LIGHT_POSITION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_SPECULAR_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_SPECULAR_EXPONENT</unmanaged>
-	SpecularExponent = 1,
+	D2D1_POINTSPECULAR_PROP_SPECULAR_EXPONENT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_SPECULAR_CONSTANT"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_SPECULAR_CONSTANT</unmanaged>
-	SpecularConstant = 2,
+	D2D1_POINTSPECULAR_PROP_SPECULAR_CONSTANT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_SURFACE_SCALE"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_SURFACE_SCALE</unmanaged>
-	SurfaceScale = 3,
+	D2D1_POINTSPECULAR_PROP_SURFACE_SCALE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_COLOR</unmanaged>
-	Color = 4,
+	D2D1_POINTSPECULAR_PROP_COLOR = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 5,
+	D2D1_POINTSPECULAR_PROP_KERNEL_UNIT_LENGTH = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 6,
+	D2D1_POINTSPECULAR_PROP_SCALE_MODE = 6,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE</unmanaged>
-public enum PointSpecularScaleMode
+public enum D2D1_POINTSPECULAR_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_POINTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_POINTSPECULAR_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_POINTSPECULAR_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_POINTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_POINTSPECULAR_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_POINTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP"]/*' />
 /// <unmanaged>D2D1_SPOTSPECULAR_PROP</unmanaged>
-public enum SpotSpecularProp
+public enum D2D1_SPOTSPECULAR_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_LIGHT_POSITION</unmanaged>
-	LightPosition = 0,
+	D2D1_SPOTSPECULAR_PROP_LIGHT_POSITION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_POINTS_AT"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_POINTS_AT</unmanaged>
-	PointsAt = 1,
+	D2D1_SPOTSPECULAR_PROP_POINTS_AT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_FOCUS"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_FOCUS</unmanaged>
-	Focus = 2,
+	D2D1_SPOTSPECULAR_PROP_FOCUS = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_LIMITING_CONE_ANGLE"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_LIMITING_CONE_ANGLE</unmanaged>
-	LimitingConeAngle = 3,
+	D2D1_SPOTSPECULAR_PROP_LIMITING_CONE_ANGLE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_SPECULAR_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_SPECULAR_EXPONENT</unmanaged>
-	SpecularExponent = 4,
+	D2D1_SPOTSPECULAR_PROP_SPECULAR_EXPONENT = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_SPECULAR_CONSTANT"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_SPECULAR_CONSTANT</unmanaged>
-	SpecularConstant = 5,
+	D2D1_SPOTSPECULAR_PROP_SPECULAR_CONSTANT = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_SURFACE_SCALE"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_SURFACE_SCALE</unmanaged>
-	SurfaceScale = 6,
+	D2D1_SPOTSPECULAR_PROP_SURFACE_SCALE = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_COLOR</unmanaged>
-	Color = 7,
+	D2D1_SPOTSPECULAR_PROP_COLOR = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 8,
+	D2D1_SPOTSPECULAR_PROP_KERNEL_UNIT_LENGTH = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 9,
+	D2D1_SPOTSPECULAR_PROP_SCALE_MODE = 9,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE</unmanaged>
-public enum SpotSpecularScaleMode
+public enum D2D1_SPOTSPECULAR_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_SPOTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_SPOTSPECULAR_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_SPOTSPECULAR_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_SPOTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_SPOTSPECULAR_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_SPOTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP"]/*' />
 /// <unmanaged>D2D1_DISTANTSPECULAR_PROP</unmanaged>
-public enum DistantSpecularProp
+public enum D2D1_DISTANTSPECULAR_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_AZIMUTH"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_AZIMUTH</unmanaged>
-	Azimuth = 0,
+	D2D1_DISTANTSPECULAR_PROP_AZIMUTH = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_ELEVATION"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_ELEVATION</unmanaged>
-	Elevation = 1,
+	D2D1_DISTANTSPECULAR_PROP_ELEVATION = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_SPECULAR_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_SPECULAR_EXPONENT</unmanaged>
-	SpecularExponent = 2,
+	D2D1_DISTANTSPECULAR_PROP_SPECULAR_EXPONENT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_SPECULAR_CONSTANT"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_SPECULAR_CONSTANT</unmanaged>
-	SpecularConstant = 3,
+	D2D1_DISTANTSPECULAR_PROP_SPECULAR_CONSTANT = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_SURFACE_SCALE"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_SURFACE_SCALE</unmanaged>
-	SurfaceScale = 4,
+	D2D1_DISTANTSPECULAR_PROP_SURFACE_SCALE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_COLOR</unmanaged>
-	Color = 5,
+	D2D1_DISTANTSPECULAR_PROP_COLOR = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 6,
+	D2D1_DISTANTSPECULAR_PROP_KERNEL_UNIT_LENGTH = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 7,
+	D2D1_DISTANTSPECULAR_PROP_SCALE_MODE = 7,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE</unmanaged>
-public enum DistantSpecularScaleMode
+public enum D2D1_DISTANTSPECULAR_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_DISTANTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_DISTANTSPECULAR_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_DISTANTSPECULAR_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_DISTANTSPECULAR_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_DISTANTSPECULAR_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_DISTANTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP"]/*' />
 /// <unmanaged>D2D1_POINTDIFFUSE_PROP</unmanaged>
-public enum PointDiffuseProp
+public enum D2D1_POINTDIFFUSE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_LIGHT_POSITION</unmanaged>
-	LightPosition = 0,
+	D2D1_POINTDIFFUSE_PROP_LIGHT_POSITION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_DIFFUSE_CONSTANT"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_DIFFUSE_CONSTANT</unmanaged>
-	DiffuseConstant = 1,
+	D2D1_POINTDIFFUSE_PROP_DIFFUSE_CONSTANT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_SURFACE_SCALE"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_SURFACE_SCALE</unmanaged>
-	SurfaceScale = 2,
+	D2D1_POINTDIFFUSE_PROP_SURFACE_SCALE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_COLOR</unmanaged>
-	Color = 3,
+	D2D1_POINTDIFFUSE_PROP_COLOR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 4,
+	D2D1_POINTDIFFUSE_PROP_KERNEL_UNIT_LENGTH = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 5,
+	D2D1_POINTDIFFUSE_PROP_SCALE_MODE = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE</unmanaged>
-public enum PointDiffuseScaleMode
+public enum D2D1_POINTDIFFUSE_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_POINTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_POINTDIFFUSE_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_POINTDIFFUSE_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_POINTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_POINTDIFFUSE_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_POINTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP"]/*' />
 /// <unmanaged>D2D1_SPOTDIFFUSE_PROP</unmanaged>
-public enum SpotDiffuseProp
+public enum D2D1_SPOTDIFFUSE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_LIGHT_POSITION</unmanaged>
-	LightPosition = 0,
+	D2D1_SPOTDIFFUSE_PROP_LIGHT_POSITION = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_POINTS_AT"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_POINTS_AT</unmanaged>
-	PointsAt = 1,
+	D2D1_SPOTDIFFUSE_PROP_POINTS_AT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_FOCUS"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_FOCUS</unmanaged>
-	Focus = 2,
+	D2D1_SPOTDIFFUSE_PROP_FOCUS = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_LIMITING_CONE_ANGLE"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_LIMITING_CONE_ANGLE</unmanaged>
-	LimitingConeAngle = 3,
+	D2D1_SPOTDIFFUSE_PROP_LIMITING_CONE_ANGLE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_DIFFUSE_CONSTANT"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_DIFFUSE_CONSTANT</unmanaged>
-	DiffuseConstant = 4,
+	D2D1_SPOTDIFFUSE_PROP_DIFFUSE_CONSTANT = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_SURFACE_SCALE"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_SURFACE_SCALE</unmanaged>
-	SurfaceScale = 5,
+	D2D1_SPOTDIFFUSE_PROP_SURFACE_SCALE = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_COLOR</unmanaged>
-	Color = 6,
+	D2D1_SPOTDIFFUSE_PROP_COLOR = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 7,
+	D2D1_SPOTDIFFUSE_PROP_KERNEL_UNIT_LENGTH = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 8,
+	D2D1_SPOTDIFFUSE_PROP_SCALE_MODE = 8,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE</unmanaged>
-public enum SpotDiffuseScaleMode
+public enum D2D1_SPOTDIFFUSE_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_SPOTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_SPOTDIFFUSE_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_SPOTDIFFUSE_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_SPOTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_SPOTDIFFUSE_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_SPOTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP"]/*' />
 /// <unmanaged>D2D1_DISTANTDIFFUSE_PROP</unmanaged>
-public enum DistantDiffuseProp
+public enum D2D1_DISTANTDIFFUSE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_AZIMUTH"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_AZIMUTH</unmanaged>
-	Azimuth = 0,
+	D2D1_DISTANTDIFFUSE_PROP_AZIMUTH = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_ELEVATION"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_ELEVATION</unmanaged>
-	Elevation = 1,
+	D2D1_DISTANTDIFFUSE_PROP_ELEVATION = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_DIFFUSE_CONSTANT"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_DIFFUSE_CONSTANT</unmanaged>
-	DiffuseConstant = 2,
+	D2D1_DISTANTDIFFUSE_PROP_DIFFUSE_CONSTANT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_SURFACE_SCALE"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_SURFACE_SCALE</unmanaged>
-	SurfaceScale = 3,
+	D2D1_DISTANTDIFFUSE_PROP_SURFACE_SCALE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_COLOR</unmanaged>
-	Color = 4,
+	D2D1_DISTANTDIFFUSE_PROP_COLOR = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 5,
+	D2D1_DISTANTDIFFUSE_PROP_KERNEL_UNIT_LENGTH = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 6,
+	D2D1_DISTANTDIFFUSE_PROP_SCALE_MODE = 6,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE</unmanaged>
-public enum DistantDiffuseScaleMode
+public enum D2D1_DISTANTDIFFUSE_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_DISTANTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_DISTANTDIFFUSE_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_DISTANTDIFFUSE_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_DISTANTDIFFUSE_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_DISTANTDIFFUSE_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_DISTANTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FLOOD_PROP"]/*' />
 /// <unmanaged>D2D1_FLOOD_PROP</unmanaged>
-public enum FloodProp
+public enum D2D1_FLOOD_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FLOOD_PROP::D2D1_FLOOD_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_FLOOD_PROP_COLOR</unmanaged>
-	Color = 0,
+	D2D1_FLOOD_PROP_COLOR = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_LINEARTRANSFER_PROP</unmanaged>
-public enum LinearTransferProp
+public enum D2D1_LINEARTRANSFER_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT</unmanaged>
-	RedYIntercept = 0,
+	D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_SLOPE</unmanaged>
-	RedSlope = 1,
+	D2D1_LINEARTRANSFER_PROP_RED_SLOPE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_DISABLE</unmanaged>
-	RedDisable = 2,
+	D2D1_LINEARTRANSFER_PROP_RED_DISABLE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_GREEN_Y_INTERCEPT</unmanaged>
-	GreenYIntercept = 3,
+	D2D1_LINEARTRANSFER_PROP_GREEN_Y_INTERCEPT = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_GREEN_SLOPE</unmanaged>
-	GreenSlope = 4,
+	D2D1_LINEARTRANSFER_PROP_GREEN_SLOPE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_GREEN_DISABLE</unmanaged>
-	GreenDisable = 5,
+	D2D1_LINEARTRANSFER_PROP_GREEN_DISABLE = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_BLUE_Y_INTERCEPT</unmanaged>
-	BlueYIntercept = 6,
+	D2D1_LINEARTRANSFER_PROP_BLUE_Y_INTERCEPT = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_BLUE_SLOPE</unmanaged>
-	BlueSlope = 7,
+	D2D1_LINEARTRANSFER_PROP_BLUE_SLOPE = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_BLUE_DISABLE</unmanaged>
-	BlueDisable = 8,
+	D2D1_LINEARTRANSFER_PROP_BLUE_DISABLE = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_ALPHA_Y_INTERCEPT</unmanaged>
-	AlphaYIntercept = 9,
+	D2D1_LINEARTRANSFER_PROP_ALPHA_Y_INTERCEPT = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_ALPHA_SLOPE</unmanaged>
-	AlphaSlope = 10,
+	D2D1_LINEARTRANSFER_PROP_ALPHA_SLOPE = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE</unmanaged>
-	AlphaDisable = 11,
+	D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 12,
+	D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT = 12,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_GAMMATRANSFER_PROP</unmanaged>
-public enum GammaTransferProp
+public enum D2D1_GAMMATRANSFER_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_RED_AMPLITUDE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_RED_AMPLITUDE</unmanaged>
-	RedAmplitude = 0,
+	D2D1_GAMMATRANSFER_PROP_RED_AMPLITUDE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_RED_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_RED_EXPONENT</unmanaged>
-	RedExponent = 1,
+	D2D1_GAMMATRANSFER_PROP_RED_EXPONENT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_RED_OFFSET"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_RED_OFFSET</unmanaged>
-	RedOffset = 2,
+	D2D1_GAMMATRANSFER_PROP_RED_OFFSET = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_RED_DISABLE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_RED_DISABLE</unmanaged>
-	RedDisable = 3,
+	D2D1_GAMMATRANSFER_PROP_RED_DISABLE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_GREEN_AMPLITUDE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_GREEN_AMPLITUDE</unmanaged>
-	GreenAmplitude = 4,
+	D2D1_GAMMATRANSFER_PROP_GREEN_AMPLITUDE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_GREEN_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_GREEN_EXPONENT</unmanaged>
-	GreenExponent = 5,
+	D2D1_GAMMATRANSFER_PROP_GREEN_EXPONENT = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_GREEN_OFFSET"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_GREEN_OFFSET</unmanaged>
-	GreenOffset = 6,
+	D2D1_GAMMATRANSFER_PROP_GREEN_OFFSET = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_GREEN_DISABLE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_GREEN_DISABLE</unmanaged>
-	GreenDisable = 7,
+	D2D1_GAMMATRANSFER_PROP_GREEN_DISABLE = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_BLUE_AMPLITUDE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_BLUE_AMPLITUDE</unmanaged>
-	BlueAmplitude = 8,
+	D2D1_GAMMATRANSFER_PROP_BLUE_AMPLITUDE = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_BLUE_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_BLUE_EXPONENT</unmanaged>
-	BlueExponent = 9,
+	D2D1_GAMMATRANSFER_PROP_BLUE_EXPONENT = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_BLUE_OFFSET"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_BLUE_OFFSET</unmanaged>
-	BlueOffset = 10,
+	D2D1_GAMMATRANSFER_PROP_BLUE_OFFSET = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_BLUE_DISABLE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_BLUE_DISABLE</unmanaged>
-	BlueDisable = 11,
+	D2D1_GAMMATRANSFER_PROP_BLUE_DISABLE = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_ALPHA_AMPLITUDE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_ALPHA_AMPLITUDE</unmanaged>
-	AlphaAmplitude = 12,
+	D2D1_GAMMATRANSFER_PROP_ALPHA_AMPLITUDE = 12,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_ALPHA_EXPONENT"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_ALPHA_EXPONENT</unmanaged>
-	AlphaExponent = 13,
+	D2D1_GAMMATRANSFER_PROP_ALPHA_EXPONENT = 13,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_ALPHA_OFFSET"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_ALPHA_OFFSET</unmanaged>
-	AlphaOffset = 14,
+	D2D1_GAMMATRANSFER_PROP_ALPHA_OFFSET = 14,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_ALPHA_DISABLE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_ALPHA_DISABLE</unmanaged>
-	AlphaDisable = 15,
+	D2D1_GAMMATRANSFER_PROP_ALPHA_DISABLE = 15,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 16,
+	D2D1_GAMMATRANSFER_PROP_CLAMP_OUTPUT = 16,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_TABLETRANSFER_PROP</unmanaged>
-public enum TableTransferProp
+public enum D2D1_TABLETRANSFER_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_RED_TABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_RED_TABLE</unmanaged>
-	RedTable = 0,
+	D2D1_TABLETRANSFER_PROP_RED_TABLE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_RED_DISABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_RED_DISABLE</unmanaged>
-	RedDisable = 1,
+	D2D1_TABLETRANSFER_PROP_RED_DISABLE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_GREEN_TABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_GREEN_TABLE</unmanaged>
-	GreenTable = 2,
+	D2D1_TABLETRANSFER_PROP_GREEN_TABLE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_GREEN_DISABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_GREEN_DISABLE</unmanaged>
-	GreenDisable = 3,
+	D2D1_TABLETRANSFER_PROP_GREEN_DISABLE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_BLUE_TABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_BLUE_TABLE</unmanaged>
-	BlueTable = 4,
+	D2D1_TABLETRANSFER_PROP_BLUE_TABLE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_BLUE_DISABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_BLUE_DISABLE</unmanaged>
-	BlueDisable = 5,
+	D2D1_TABLETRANSFER_PROP_BLUE_DISABLE = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_ALPHA_TABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_ALPHA_TABLE</unmanaged>
-	AlphaTable = 6,
+	D2D1_TABLETRANSFER_PROP_ALPHA_TABLE = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_ALPHA_DISABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_ALPHA_DISABLE</unmanaged>
-	AlphaDisable = 7,
+	D2D1_TABLETRANSFER_PROP_ALPHA_DISABLE = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 8,
+	D2D1_TABLETRANSFER_PROP_CLAMP_OUTPUT = 8,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_DISCRETETRANSFER_PROP</unmanaged>
-public enum DiscreteTransferProp
+public enum D2D1_DISCRETETRANSFER_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_RED_TABLE</unmanaged>
-	RedTable = 0,
+	D2D1_DISCRETETRANSFER_PROP_RED_TABLE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_RED_DISABLE</unmanaged>
-	RedDisable = 1,
+	D2D1_DISCRETETRANSFER_PROP_RED_DISABLE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_GREEN_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_GREEN_TABLE</unmanaged>
-	GreenTable = 2,
+	D2D1_DISCRETETRANSFER_PROP_GREEN_TABLE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_GREEN_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_GREEN_DISABLE</unmanaged>
-	GreenDisable = 3,
+	D2D1_DISCRETETRANSFER_PROP_GREEN_DISABLE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_BLUE_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_BLUE_TABLE</unmanaged>
-	BlueTable = 4,
+	D2D1_DISCRETETRANSFER_PROP_BLUE_TABLE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_BLUE_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_BLUE_DISABLE</unmanaged>
-	BlueDisable = 5,
+	D2D1_DISCRETETRANSFER_PROP_BLUE_DISABLE = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_ALPHA_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_ALPHA_TABLE</unmanaged>
-	AlphaTable = 6,
+	D2D1_DISCRETETRANSFER_PROP_ALPHA_TABLE = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE</unmanaged>
-	AlphaDisable = 7,
+	D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 8,
+	D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT = 8,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP"]/*' />
 /// <unmanaged>D2D1_CONVOLVEMATRIX_PROP</unmanaged>
-public enum ConvolveMatrixProp
+public enum D2D1_CONVOLVEMATRIX_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_KERNEL_UNIT_LENGTH</unmanaged>
-	KernelUnitLength = 0,
+	D2D1_CONVOLVEMATRIX_PROP_KERNEL_UNIT_LENGTH = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 1,
+	D2D1_CONVOLVEMATRIX_PROP_SCALE_MODE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_X"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_X</unmanaged>
-	KernelSizeX = 2,
+	D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_X = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_Y"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_Y</unmanaged>
-	KernelSizeY = 3,
+	D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_Y = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_KERNEL_MATRIX"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_KERNEL_MATRIX</unmanaged>
-	KernelMatrix = 4,
+	D2D1_CONVOLVEMATRIX_PROP_KERNEL_MATRIX = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_DIVISOR"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_DIVISOR</unmanaged>
-	Divisor = 5,
+	D2D1_CONVOLVEMATRIX_PROP_DIVISOR = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_BIAS"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_BIAS</unmanaged>
-	Bias = 6,
+	D2D1_CONVOLVEMATRIX_PROP_BIAS = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_KERNEL_OFFSET"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_KERNEL_OFFSET</unmanaged>
-	KernelOffset = 7,
+	D2D1_CONVOLVEMATRIX_PROP_KERNEL_OFFSET = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_PRESERVE_ALPHA"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_PRESERVE_ALPHA</unmanaged>
-	PreserveAlpha = 8,
+	D2D1_CONVOLVEMATRIX_PROP_PRESERVE_ALPHA = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 9,
+	D2D1_CONVOLVEMATRIX_PROP_BORDER_MODE = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 10,
+	D2D1_CONVOLVEMATRIX_PROP_CLAMP_OUTPUT = 10,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE</unmanaged>
-public enum ConvolveMatrixScaleMode
+public enum D2D1_CONVOLVEMATRIX_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_CONVOLVEMATRIX_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_CONVOLVEMATRIX_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_CONVOLVEMATRIX_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_CONVOLVEMATRIX_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_CONVOLVEMATRIX_SCALE_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_CONVOLVEMATRIX_SCALE_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP"]/*' />
 /// <unmanaged>D2D1_BRIGHTNESS_PROP</unmanaged>
-public enum BrightnessProp
+public enum D2D1_BRIGHTNESS_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP::D2D1_BRIGHTNESS_PROP_WHITE_POINT"]/*' />
 	/// <unmanaged>D2D1_BRIGHTNESS_PROP_WHITE_POINT</unmanaged>
-	WhitePoint = 0,
+	D2D1_BRIGHTNESS_PROP_WHITE_POINT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP::D2D1_BRIGHTNESS_PROP_BLACK_POINT"]/*' />
 	/// <unmanaged>D2D1_BRIGHTNESS_PROP_BLACK_POINT</unmanaged>
-	BlackPoint = 1,
+	D2D1_BRIGHTNESS_PROP_BLACK_POINT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP"]/*' />
 /// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP</unmanaged>
-public enum ArithmeticCompositeProp
+public enum D2D1_ARITHMETICCOMPOSITE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS"]/*' />
 	/// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS</unmanaged>
-	Coefficients = 0,
+	D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 1,
+	D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP"]/*' />
 /// <unmanaged>D2D1_CROP_PROP</unmanaged>
-public enum CropProp
+public enum D2D1_CROP_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP::D2D1_CROP_PROP_RECT"]/*' />
 	/// <unmanaged>D2D1_CROP_PROP_RECT</unmanaged>
-	Rect = 0,
+	D2D1_CROP_PROP_RECT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP::D2D1_CROP_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_CROP_PROP_BORDER_MODE</unmanaged>
-	BorderMode = 1,
+	D2D1_CROP_PROP_BORDER_MODE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_PROP"]/*' />
 /// <unmanaged>D2D1_BORDER_PROP</unmanaged>
-public enum BorderProp
+public enum D2D1_BORDER_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_PROP::D2D1_BORDER_PROP_EDGE_MODE_X"]/*' />
 	/// <unmanaged>D2D1_BORDER_PROP_EDGE_MODE_X</unmanaged>
-	EdgeModeX = 0,
+	D2D1_BORDER_PROP_EDGE_MODE_X = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_PROP::D2D1_BORDER_PROP_EDGE_MODE_Y"]/*' />
 	/// <unmanaged>D2D1_BORDER_PROP_EDGE_MODE_Y</unmanaged>
-	EdgeModeY = 1,
+	D2D1_BORDER_PROP_EDGE_MODE_Y = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_EDGE_MODE"]/*' />
 /// <unmanaged>D2D1_BORDER_EDGE_MODE</unmanaged>
-public enum BorderEdgeMode
+public enum D2D1_BORDER_EDGE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_EDGE_MODE::D2D1_BORDER_EDGE_MODE_CLAMP"]/*' />
 	/// <unmanaged>D2D1_BORDER_EDGE_MODE_CLAMP</unmanaged>
-	Clamp = 0,
+	D2D1_BORDER_EDGE_MODE_CLAMP = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_EDGE_MODE::D2D1_BORDER_EDGE_MODE_WRAP"]/*' />
 	/// <unmanaged>D2D1_BORDER_EDGE_MODE_WRAP</unmanaged>
-	Wrap = 1,
+	D2D1_BORDER_EDGE_MODE_WRAP = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_EDGE_MODE::D2D1_BORDER_EDGE_MODE_MIRROR"]/*' />
 	/// <unmanaged>D2D1_BORDER_EDGE_MODE_MIRROR</unmanaged>
-	Mirror = 2,
+	D2D1_BORDER_EDGE_MODE_MIRROR = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP"]/*' />
 /// <unmanaged>D2D1_MORPHOLOGY_PROP</unmanaged>
-public enum MorphologyProp
+public enum D2D1_MORPHOLOGY_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_PROP_MODE</unmanaged>
-	Mode = 0,
+	D2D1_MORPHOLOGY_PROP_MODE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_WIDTH"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_PROP_WIDTH</unmanaged>
-	Width = 1,
+	D2D1_MORPHOLOGY_PROP_WIDTH = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_HEIGHT"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_PROP_HEIGHT</unmanaged>
-	Height = 2,
+	D2D1_MORPHOLOGY_PROP_HEIGHT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_MODE"]/*' />
 /// <unmanaged>D2D1_MORPHOLOGY_MODE</unmanaged>
-public enum MorphologyMode
+public enum D2D1_MORPHOLOGY_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_MODE::D2D1_MORPHOLOGY_MODE_ERODE"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_MODE_ERODE</unmanaged>
-	Erode = 0,
+	D2D1_MORPHOLOGY_MODE_ERODE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_MODE::D2D1_MORPHOLOGY_MODE_DILATE"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_MODE_DILATE</unmanaged>
-	Dilate = 1,
+	D2D1_MORPHOLOGY_MODE_DILATE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TILE_PROP"]/*' />
 /// <unmanaged>D2D1_TILE_PROP</unmanaged>
-public enum TileProp
+public enum D2D1_TILE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TILE_PROP::D2D1_TILE_PROP_RECT"]/*' />
 	/// <unmanaged>D2D1_TILE_PROP_RECT</unmanaged>
-	Rect = 0,
+	D2D1_TILE_PROP_RECT = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP"]/*' />
 /// <unmanaged>D2D1_ATLAS_PROP</unmanaged>
-public enum AtlasProp
+public enum D2D1_ATLAS_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP::D2D1_ATLAS_PROP_INPUT_RECT"]/*' />
 	/// <unmanaged>D2D1_ATLAS_PROP_INPUT_RECT</unmanaged>
-	InputRect = 0,
+	D2D1_ATLAS_PROP_INPUT_RECT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP::D2D1_ATLAS_PROP_INPUT_PADDING_RECT"]/*' />
 	/// <unmanaged>D2D1_ATLAS_PROP_INPUT_PADDING_RECT</unmanaged>
-	InputPaddingRect = 1,
+	D2D1_ATLAS_PROP_INPUT_PADDING_RECT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP"]/*' />
 /// <unmanaged>D2D1_OPACITYMETADATA_PROP</unmanaged>
-public enum OpacityMetadataProp
+public enum D2D1_OPACITYMETADATA_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP::D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT"]/*' />
 	/// <unmanaged>D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT</unmanaged>
-	InputOpaqueRect = 0,
+	D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE"]/*' />
 /// <unmanaged>D2D1_PROPERTY_TYPE</unmanaged>
-public enum PropertyType
+public enum D2D1_PROPERTY_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_UNKNOWN</unmanaged>
-	Unknown = 0,
+	D2D1_PROPERTY_TYPE_UNKNOWN = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_STRING"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_STRING</unmanaged>
-	String = 1,
+	D2D1_PROPERTY_TYPE_STRING = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_BOOL"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_BOOL</unmanaged>
-	Bool = 2,
+	D2D1_PROPERTY_TYPE_BOOL = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UINT32"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_UINT32</unmanaged>
-	UInt32 = 3,
+	D2D1_PROPERTY_TYPE_UINT32 = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_INT32"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_INT32</unmanaged>
-	Int32 = 4,
+	D2D1_PROPERTY_TYPE_INT32 = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_FLOAT</unmanaged>
-	Float = 5,
+	D2D1_PROPERTY_TYPE_FLOAT = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR2"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_VECTOR2</unmanaged>
-	Vector2 = 6,
+	D2D1_PROPERTY_TYPE_VECTOR2 = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR3"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_VECTOR3</unmanaged>
-	Vector3 = 7,
+	D2D1_PROPERTY_TYPE_VECTOR3 = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR4"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_VECTOR4</unmanaged>
-	Vector4 = 8,
+	D2D1_PROPERTY_TYPE_VECTOR4 = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_BLOB"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_BLOB</unmanaged>
-	Blob = 9,
+	D2D1_PROPERTY_TYPE_BLOB = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_IUNKNOWN"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_IUNKNOWN</unmanaged>
-	IUnknown = 10,
+	D2D1_PROPERTY_TYPE_IUNKNOWN = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ENUM"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_ENUM</unmanaged>
-	Enum = 11,
+	D2D1_PROPERTY_TYPE_ENUM = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ARRAY"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_ARRAY</unmanaged>
-	Array = 12,
+	D2D1_PROPERTY_TYPE_ARRAY = 12,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_CLSID"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_CLSID</unmanaged>
-	Clsid = 13,
+	D2D1_PROPERTY_TYPE_CLSID = 13,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_3X2"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_3X2</unmanaged>
-	Matrix3x2 = 14,
+	D2D1_PROPERTY_TYPE_MATRIX_3X2 = 14,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_4X3"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_4X3</unmanaged>
-	Matrix4x3 = 15,
+	D2D1_PROPERTY_TYPE_MATRIX_4X3 = 15,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_4X4"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_4X4</unmanaged>
-	Matrix4x4 = 16,
+	D2D1_PROPERTY_TYPE_MATRIX_4X4 = 16,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_5X4"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_5X4</unmanaged>
-	Matrix5x4 = 17,
+	D2D1_PROPERTY_TYPE_MATRIX_5X4 = 17,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_COLOR_CONTEXT"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_COLOR_CONTEXT</unmanaged>
-	ColorContext = 18,
+	D2D1_PROPERTY_TYPE_COLOR_CONTEXT = 18,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY"]/*' />
 /// <unmanaged>D2D1_PROPERTY</unmanaged>
-public enum Property
+public enum D2D1_PROPERTY
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_CLSID"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_CLSID</unmanaged>
-	Clsid = -2147483648,
+	D2D1_PROPERTY_CLSID = -2147483648,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_DISPLAYNAME"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_DISPLAYNAME</unmanaged>
-	Displayname = -2147483647,
+	D2D1_PROPERTY_DISPLAYNAME = -2147483647,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_AUTHOR"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_AUTHOR</unmanaged>
-	Author = -2147483646,
+	D2D1_PROPERTY_AUTHOR = -2147483646,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_CATEGORY"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_CATEGORY</unmanaged>
-	Category = -2147483645,
+	D2D1_PROPERTY_CATEGORY = -2147483645,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_DESCRIPTION"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_DESCRIPTION</unmanaged>
-	Description = -2147483644,
+	D2D1_PROPERTY_DESCRIPTION = -2147483644,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_INPUTS"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_INPUTS</unmanaged>
-	Inputs = -2147483643,
+	D2D1_PROPERTY_INPUTS = -2147483643,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_CACHED"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_CACHED</unmanaged>
-	Cached = -2147483642,
+	D2D1_PROPERTY_CACHED = -2147483642,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_PRECISION"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_PRECISION</unmanaged>
-	Precision = -2147483641,
+	D2D1_PROPERTY_PRECISION = -2147483641,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_MIN_INPUTS"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_MIN_INPUTS</unmanaged>
-	MinInputs = -2147483640,
+	D2D1_PROPERTY_MIN_INPUTS = -2147483640,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY::D2D1_PROPERTY_MAX_INPUTS"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_MAX_INPUTS</unmanaged>
-	MaxInputs = -2147483639,
+	D2D1_PROPERTY_MAX_INPUTS = -2147483639,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY"]/*' />
 /// <unmanaged>D2D1_SUBPROPERTY</unmanaged>
-public enum SubProperty
+public enum D2D1_SUBPROPERTY
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DISPLAYNAME"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_DISPLAYNAME</unmanaged>
-	Displayname = -2147483648,
+	D2D1_SUBPROPERTY_DISPLAYNAME = -2147483648,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_ISREADONLY"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_ISREADONLY</unmanaged>
-	Isreadonly = -2147483647,
+	D2D1_SUBPROPERTY_ISREADONLY = -2147483647,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_MIN"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_MIN</unmanaged>
-	Min = -2147483646,
+	D2D1_SUBPROPERTY_MIN = -2147483646,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_MAX"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_MAX</unmanaged>
-	Max = -2147483645,
+	D2D1_SUBPROPERTY_MAX = -2147483645,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_DEFAULT</unmanaged>
-	Default = -2147483644,
+	D2D1_SUBPROPERTY_DEFAULT = -2147483644,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_FIELDS"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_FIELDS</unmanaged>
-	Fields = -2147483643,
+	D2D1_SUBPROPERTY_FIELDS = -2147483643,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_INDEX"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_INDEX</unmanaged>
-	Index = -2147483642,
+	D2D1_SUBPROPERTY_INDEX = -2147483642,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS"]/*' />
 /// <unmanaged>D2D1_BITMAP_OPTIONS</unmanaged>
 [Flags]
-public enum BitmapOptions
+public enum D2D1_BITMAP_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_BITMAP_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_TARGET"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_TARGET</unmanaged>
-	Target = 1,
+	D2D1_BITMAP_OPTIONS_TARGET = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_CANNOT_DRAW"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_CANNOT_DRAW</unmanaged>
-	CannotDraw = 2,
+	D2D1_BITMAP_OPTIONS_CANNOT_DRAW = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_CPU_READ"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_CPU_READ</unmanaged>
-	CpuRead = 4,
+	D2D1_BITMAP_OPTIONS_CPU_READ = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE</unmanaged>
-	GDICompatible = 8,
+	D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE = 8,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION"]/*' />
 /// <unmanaged>D2D1_BUFFER_PRECISION</unmanaged>
-public enum BufferPrecision
+public enum D2D1_BUFFER_PRECISION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_UNKNOWN"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_UNKNOWN</unmanaged>
-	Unknown = 0,
+	D2D1_BUFFER_PRECISION_UNKNOWN = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_8BPC_UNORM"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_8BPC_UNORM</unmanaged>
-	Precision8BitUnorm = 1,
+	D2D1_BUFFER_PRECISION_8BPC_UNORM = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_8BPC_UNORM_SRGB"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_8BPC_UNORM_SRGB</unmanaged>
-	Precision8BitUnormSrgb = 2,
+	D2D1_BUFFER_PRECISION_8BPC_UNORM_SRGB = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_16BPC_UNORM"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_16BPC_UNORM</unmanaged>
-	Precision16BitUnorm = 3,
+	D2D1_BUFFER_PRECISION_16BPC_UNORM = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_16BPC_FLOAT"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_16BPC_FLOAT</unmanaged>
-	Precision16BitFloat = 4,
+	D2D1_BUFFER_PRECISION_16BPC_FLOAT = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_32BPC_FLOAT"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_32BPC_FLOAT</unmanaged>
-	Precision32BitFloat = 5,
+	D2D1_BUFFER_PRECISION_32BPC_FLOAT = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS"]/*' />
 /// <unmanaged>D2D1_MAP_OPTIONS</unmanaged>
 [Flags]
-public enum MapOptions
+public enum D2D1_MAP_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_MAP_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_READ"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_READ</unmanaged>
-	Read = 1,
+	D2D1_MAP_OPTIONS_READ = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_WRITE"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_WRITE</unmanaged>
-	Write = 2,
+	D2D1_MAP_OPTIONS_WRITE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_DISCARD"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_DISCARD</unmanaged>
-	Discard = 4,
+	D2D1_MAP_OPTIONS_DISCARD = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_INTERPOLATION_MODE</unmanaged>
-public enum InterpolationMode
+public enum D2D1_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE::D2D1_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE::D2D1_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE::D2D1_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE::D2D1_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE::D2D1_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_INTERPOLATION_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE::D2D1_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE"]/*' />
 /// <unmanaged>D2D1_UNIT_MODE</unmanaged>
-public enum UnitMode
+public enum D2D1_UNIT_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE::D2D1_UNIT_MODE_DIPS"]/*' />
 	/// <unmanaged>D2D1_UNIT_MODE_DIPS</unmanaged>
-	Dips = 0,
+	D2D1_UNIT_MODE_DIPS = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE::D2D1_UNIT_MODE_PIXELS"]/*' />
 	/// <unmanaged>D2D1_UNIT_MODE_PIXELS</unmanaged>
-	Pixels = 1,
+	D2D1_UNIT_MODE_PIXELS = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_SPACE"]/*' />
 /// <unmanaged>D2D1_COLOR_SPACE</unmanaged>
-public enum ColorSpace
+public enum D2D1_COLOR_SPACE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_SPACE::D2D1_COLOR_SPACE_CUSTOM"]/*' />
 	/// <unmanaged>D2D1_COLOR_SPACE_CUSTOM</unmanaged>
-	Custom = 0,
+	D2D1_COLOR_SPACE_CUSTOM = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_SPACE::D2D1_COLOR_SPACE_SRGB"]/*' />
 	/// <unmanaged>D2D1_COLOR_SPACE_SRGB</unmanaged>
-	Srgb = 1,
+	D2D1_COLOR_SPACE_SRGB = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_SPACE::D2D1_COLOR_SPACE_SCRGB"]/*' />
 	/// <unmanaged>D2D1_COLOR_SPACE_SCRGB</unmanaged>
-	Scrgb = 2,
+	D2D1_COLOR_SPACE_SCRGB = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS"]/*' />
 /// <unmanaged>D2D1_DEVICE_CONTEXT_OPTIONS</unmanaged>
 [Flags]
-public enum DeviceContextOptions
+public enum D2D1_DEVICE_CONTEXT_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS::D2D1_DEVICE_CONTEXT_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_DEVICE_CONTEXT_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_DEVICE_CONTEXT_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS::D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS"]/*' />
 	/// <unmanaged>D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS</unmanaged>
-	EnableMultithreadedOptimizations = 1,
+	D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE"]/*' />
 /// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE</unmanaged>
-public enum StrokeTransformType
+public enum D2D1_STROKE_TRANSFORM_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_NORMAL"]/*' />
 	/// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE_NORMAL</unmanaged>
-	Normal = 0,
+	D2D1_STROKE_TRANSFORM_TYPE_NORMAL = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_FIXED"]/*' />
 	/// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE_FIXED</unmanaged>
-	Fixed = 1,
+	D2D1_STROKE_TRANSFORM_TYPE_FIXED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE"]/*' />
 	/// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE</unmanaged>
-	Hairline = 2,
+	D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND"]/*' />
 /// <unmanaged>D2D1_PRIMITIVE_BLEND</unmanaged>
-public enum PrimitiveBlend
+public enum D2D1_PRIMITIVE_BLEND
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_SOURCE_OVER"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_SOURCE_OVER</unmanaged>
-	SourceOver = 0,
+	D2D1_PRIMITIVE_BLEND_SOURCE_OVER = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_COPY"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_COPY</unmanaged>
-	Copy = 1,
+	D2D1_PRIMITIVE_BLEND_COPY = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_MIN"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_MIN</unmanaged>
-	Min = 2,
+	D2D1_PRIMITIVE_BLEND_MIN = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_ADD"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_ADD</unmanaged>
-	Add = 3,
+	D2D1_PRIMITIVE_BLEND_ADD = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_MAX"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_MAX</unmanaged>
-	Max = 4,
+	D2D1_PRIMITIVE_BLEND_MAX = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_THREADING_MODE"]/*' />
 /// <unmanaged>D2D1_THREADING_MODE</unmanaged>
-public enum ThreadingMode
+public enum D2D1_THREADING_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_THREADING_MODE::D2D1_THREADING_MODE_SINGLE_THREADED"]/*' />
 	/// <unmanaged>D2D1_THREADING_MODE_SINGLE_THREADED</unmanaged>
-	SingleThreaded = 0,
+	D2D1_THREADING_MODE_SINGLE_THREADED = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_THREADING_MODE::D2D1_THREADING_MODE_MULTI_THREADED"]/*' />
 	/// <unmanaged>D2D1_THREADING_MODE_MULTI_THREADED</unmanaged>
-	MultiThreaded = 1,
+	D2D1_THREADING_MODE_MULTI_THREADED = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_COLOR_INTERPOLATION_MODE</unmanaged>
-public enum ColorInterpolationMode
+public enum D2D1_COLOR_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_INTERPOLATION_MODE::D2D1_COLOR_INTERPOLATION_MODE_STRAIGHT"]/*' />
 	/// <unmanaged>D2D1_COLOR_INTERPOLATION_MODE_STRAIGHT</unmanaged>
-	Straight = 0,
+	D2D1_COLOR_INTERPOLATION_MODE_STRAIGHT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_INTERPOLATION_MODE::D2D1_COLOR_INTERPOLATION_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_COLOR_INTERPOLATION_MODE_PREMULTIPLIED</unmanaged>
-	Premultiplied = 1,
+	D2D1_COLOR_INTERPOLATION_MODE_PREMULTIPLIED = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1"]/*' />
 /// <unmanaged>D2D1_LAYER_OPTIONS1</unmanaged>
 [Flags]
-public enum LayerOptions1
+public enum D2D1_LAYER_OPTIONS1
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_NONE"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS1_NONE</unmanaged>
-	None = 0,
+	D2D1_LAYER_OPTIONS1_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND</unmanaged>
-	InitializeFromBackground = 1,
+	D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_IGNORE_ALPHA"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS1_IGNORE_ALPHA</unmanaged>
-	IgnoreAlpha = 2,
+	D2D1_LAYER_OPTIONS1_IGNORE_ALPHA = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE"]/*' />
 /// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE</unmanaged>
-public enum PrintFontSubsetMode
+public enum D2D1_PRINT_FONT_SUBSET_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE_DEFAULT</unmanaged>
-	Default = 0,
+	D2D1_PRINT_FONT_SUBSET_MODE_DEFAULT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE"]/*' />
 	/// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE</unmanaged>
-	Eachpage = 1,
+	D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_NONE"]/*' />
 	/// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE_NONE</unmanaged>
-	None = 2,
+	D2D1_PRINT_FONT_SUBSET_MODE_NONE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANGE_TYPE"]/*' />
 /// <unmanaged>D2D1_CHANGE_TYPE</unmanaged>
 [Flags]
-public enum ChangeType
+public enum D2D1_CHANGE_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANGE_TYPE::D2D1_CHANGE_TYPE_NONE"]/*' />
 	/// <unmanaged>D2D1_CHANGE_TYPE_NONE</unmanaged>
-	None = 0,
+	D2D1_CHANGE_TYPE_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANGE_TYPE::D2D1_CHANGE_TYPE_PROPERTIES"]/*' />
 	/// <unmanaged>D2D1_CHANGE_TYPE_PROPERTIES</unmanaged>
-	Properties = 1,
+	D2D1_CHANGE_TYPE_PROPERTIES = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANGE_TYPE::D2D1_CHANGE_TYPE_CONTEXT"]/*' />
 	/// <unmanaged>D2D1_CHANGE_TYPE_CONTEXT</unmanaged>
-	Context = 2,
+	D2D1_CHANGE_TYPE_CONTEXT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANGE_TYPE::D2D1_CHANGE_TYPE_GRAPH"]/*' />
 	/// <unmanaged>D2D1_CHANGE_TYPE_GRAPH</unmanaged>
-	Graph = 3,
+	D2D1_CHANGE_TYPE_GRAPH = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS"]/*' />
 /// <unmanaged>D2D1_PIXEL_OPTIONS</unmanaged>
 [Flags]
-public enum PixelOptions
+public enum D2D1_PIXEL_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS::D2D1_PIXEL_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_PIXEL_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_PIXEL_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS::D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING"]/*' />
 	/// <unmanaged>D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING</unmanaged>
-	TrivialSampling = 1,
+	D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_OPTIONS"]/*' />
 /// <unmanaged>D2D1_VERTEX_OPTIONS</unmanaged>
 [Flags]
-public enum VertexOptions
+public enum D2D1_VERTEX_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_OPTIONS::D2D1_VERTEX_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_VERTEX_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_VERTEX_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_OPTIONS::D2D1_VERTEX_OPTIONS_DO_NOT_CLEAR"]/*' />
 	/// <unmanaged>D2D1_VERTEX_OPTIONS_DO_NOT_CLEAR</unmanaged>
-	DoNotClear = 1,
+	D2D1_VERTEX_OPTIONS_DO_NOT_CLEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_OPTIONS::D2D1_VERTEX_OPTIONS_USE_DEPTH_BUFFER"]/*' />
 	/// <unmanaged>D2D1_VERTEX_OPTIONS_USE_DEPTH_BUFFER</unmanaged>
-	UseDepthBuffer = 2,
+	D2D1_VERTEX_OPTIONS_USE_DEPTH_BUFFER = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_OPTIONS::D2D1_VERTEX_OPTIONS_ASSUME_NO_OVERLAP"]/*' />
 	/// <unmanaged>D2D1_VERTEX_OPTIONS_ASSUME_NO_OVERLAP</unmanaged>
-	AssumeNoOverlap = 4,
+	D2D1_VERTEX_OPTIONS_ASSUME_NO_OVERLAP = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE"]/*' />
 /// <unmanaged>D2D1_VERTEX_USAGE</unmanaged>
-public enum VertexUsage
+public enum D2D1_VERTEX_USAGE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE::D2D1_VERTEX_USAGE_STATIC"]/*' />
 	/// <unmanaged>D2D1_VERTEX_USAGE_STATIC</unmanaged>
-	Static = 0,
+	D2D1_VERTEX_USAGE_STATIC = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE::D2D1_VERTEX_USAGE_DYNAMIC"]/*' />
 	/// <unmanaged>D2D1_VERTEX_USAGE_DYNAMIC</unmanaged>
-	Dynamic = 1,
+	D2D1_VERTEX_USAGE_DYNAMIC = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION"]/*' />
 /// <unmanaged>D2D1_BLEND_OPERATION</unmanaged>
-public enum BlendOperation
+public enum D2D1_BLEND_OPERATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_ADD"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_ADD</unmanaged>
-	Add = 1,
+	D2D1_BLEND_OPERATION_ADD = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_SUBTRACT"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_SUBTRACT</unmanaged>
-	Subtract = 2,
+	D2D1_BLEND_OPERATION_SUBTRACT = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_REV_SUBTRACT"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_REV_SUBTRACT</unmanaged>
-	ReverseSubtract = 3,
+	D2D1_BLEND_OPERATION_REV_SUBTRACT = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MIN"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_MIN</unmanaged>
-	Min = 4,
+	D2D1_BLEND_OPERATION_MIN = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MAX"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_MAX</unmanaged>
-	Max = 5,
+	D2D1_BLEND_OPERATION_MAX = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND"]/*' />
 /// <unmanaged>D2D1_BLEND</unmanaged>
-public enum Blend
+public enum D2D1_BLEND
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_ZERO"]/*' />
 	/// <unmanaged>D2D1_BLEND_ZERO</unmanaged>
-	Zero = 1,
+	D2D1_BLEND_ZERO = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_ONE"]/*' />
 	/// <unmanaged>D2D1_BLEND_ONE</unmanaged>
-	One = 2,
+	D2D1_BLEND_ONE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_SRC_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_SRC_COLOR</unmanaged>
-	SrcColor = 3,
+	D2D1_BLEND_SRC_COLOR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_SRC_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_SRC_COLOR</unmanaged>
-	InverseSrcColor = 4,
+	D2D1_BLEND_INV_SRC_COLOR = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_SRC_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_SRC_ALPHA</unmanaged>
-	SrcAlpha = 5,
+	D2D1_BLEND_SRC_ALPHA = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_SRC_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_SRC_ALPHA</unmanaged>
-	InverseSrcAlpha = 6,
+	D2D1_BLEND_INV_SRC_ALPHA = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_DEST_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_DEST_ALPHA</unmanaged>
-	DestAlpha = 7,
+	D2D1_BLEND_DEST_ALPHA = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_DEST_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_DEST_ALPHA</unmanaged>
-	InverseDestAlpha = 8,
+	D2D1_BLEND_INV_DEST_ALPHA = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_DEST_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_DEST_COLOR</unmanaged>
-	DestColor = 9,
+	D2D1_BLEND_DEST_COLOR = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_DEST_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_DEST_COLOR</unmanaged>
-	InverseDestColor = 10,
+	D2D1_BLEND_INV_DEST_COLOR = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_SRC_ALPHA_SAT"]/*' />
 	/// <unmanaged>D2D1_BLEND_SRC_ALPHA_SAT</unmanaged>
-	SrcAlphaSaturate = 11,
+	D2D1_BLEND_SRC_ALPHA_SAT = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_BLEND_FACTOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_BLEND_FACTOR</unmanaged>
-	BlendFactor = 14,
+	D2D1_BLEND_BLEND_FACTOR = 14,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_BLEND_FACTOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_BLEND_FACTOR</unmanaged>
-	InverseBlendFactor = 15,
+	D2D1_BLEND_INV_BLEND_FACTOR = 15,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_DEPTH"]/*' />
 /// <unmanaged>D2D1_CHANNEL_DEPTH</unmanaged>
-public enum ChannelDepth
+public enum D2D1_CHANNEL_DEPTH
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_DEPTH::D2D1_CHANNEL_DEPTH_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_DEPTH_DEFAULT</unmanaged>
-	Default = 0,
+	D2D1_CHANNEL_DEPTH_DEFAULT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_DEPTH::D2D1_CHANNEL_DEPTH_1"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_DEPTH_1</unmanaged>
-	_1 = 1,
+	D2D1_CHANNEL_DEPTH_1 = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_DEPTH::D2D1_CHANNEL_DEPTH_4"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_DEPTH_4</unmanaged>
-	_4 = 4,
+	D2D1_CHANNEL_DEPTH_4 = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER"]/*' />
 /// <unmanaged>D2D1_FILTER</unmanaged>
-public enum Filter
+public enum D2D1_FILTER
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_MAG_MIP_POINT"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_MAG_MIP_POINT</unmanaged>
-	MinMagMipPoint = 0,
+	D2D1_FILTER_MIN_MAG_MIP_POINT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_MAG_POINT_MIP_LINEAR"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_MAG_POINT_MIP_LINEAR</unmanaged>
-	MinMagPointMipLinear = 1,
+	D2D1_FILTER_MIN_MAG_POINT_MIP_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_POINT_MAG_LINEAR_MIP_POINT"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_POINT_MAG_LINEAR_MIP_POINT</unmanaged>
-	MinPointMagLinearMipPoint = 4,
+	D2D1_FILTER_MIN_POINT_MAG_LINEAR_MIP_POINT = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_POINT_MAG_MIP_LINEAR"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_POINT_MAG_MIP_LINEAR</unmanaged>
-	MinPointMagMipLinear = 5,
+	D2D1_FILTER_MIN_POINT_MAG_MIP_LINEAR = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_LINEAR_MAG_MIP_POINT"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_LINEAR_MAG_MIP_POINT</unmanaged>
-	MinLinearMagMipPoint = 16,
+	D2D1_FILTER_MIN_LINEAR_MAG_MIP_POINT = 16,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR</unmanaged>
-	MinLinearMagPointMipLinear = 17,
+	D2D1_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR = 17,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_MAG_LINEAR_MIP_POINT"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_MAG_LINEAR_MIP_POINT</unmanaged>
-	MinMagLinearMipPoint = 20,
+	D2D1_FILTER_MIN_MAG_LINEAR_MIP_POINT = 20,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_MIN_MAG_MIP_LINEAR"]/*' />
 	/// <unmanaged>D2D1_FILTER_MIN_MAG_MIP_LINEAR</unmanaged>
-	MinMagMipLinear = 21,
+	D2D1_FILTER_MIN_MAG_MIP_LINEAR = 21,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILTER::D2D1_FILTER_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_FILTER_ANISOTROPIC</unmanaged>
-	Anisotropic = 85,
+	D2D1_FILTER_ANISOTROPIC = 85,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE"]/*' />
 /// <unmanaged>D2D1_FEATURE</unmanaged>
-public enum Feature
+public enum D2D1_FEATURE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE::D2D1_FEATURE_DOUBLES"]/*' />
 	/// <unmanaged>D2D1_FEATURE_DOUBLES</unmanaged>
-	Doubles = 0,
+	D2D1_FEATURE_DOUBLES = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE::D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS"]/*' />
 	/// <unmanaged>D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS</unmanaged>
-	XHardwareOptions = 1,
+	D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP"]/*' />
 /// <unmanaged>D2D1_YCBCR_PROP</unmanaged>
-public enum YcbcrProp
+public enum D2D1_YCBCR_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_CHROMA_SUBSAMPLING"]/*' />
 	/// <unmanaged>D2D1_YCBCR_PROP_CHROMA_SUBSAMPLING</unmanaged>
-	ChromaSubsampling = 0,
+	D2D1_YCBCR_PROP_CHROMA_SUBSAMPLING = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_TRANSFORM_MATRIX"]/*' />
 	/// <unmanaged>D2D1_YCBCR_PROP_TRANSFORM_MATRIX</unmanaged>
-	TransformMatrix = 1,
+	D2D1_YCBCR_PROP_TRANSFORM_MATRIX = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_YCBCR_PROP_INTERPOLATION_MODE</unmanaged>
-	InterpolationMode = 2,
+	D2D1_YCBCR_PROP_INTERPOLATION_MODE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING"]/*' />
 /// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING</unmanaged>
-public enum YcbcrChromaSubsampling
+public enum D2D1_YCBCR_CHROMA_SUBSAMPLING
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_AUTO"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_AUTO</unmanaged>
-	Auto = 0,
+	D2D1_YCBCR_CHROMA_SUBSAMPLING_AUTO = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_420"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_420</unmanaged>
-	_420 = 1,
+	D2D1_YCBCR_CHROMA_SUBSAMPLING_420 = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_422"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_422</unmanaged>
-	_422 = 2,
+	D2D1_YCBCR_CHROMA_SUBSAMPLING_422 = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_444"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_444</unmanaged>
-	_444 = 3,
+	D2D1_YCBCR_CHROMA_SUBSAMPLING_444 = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_440"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_440</unmanaged>
-	_440 = 4,
+	D2D1_YCBCR_CHROMA_SUBSAMPLING_440 = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE</unmanaged>
-public enum YcbcrInterpolationMode
+public enum D2D1_YCBCR_INTERPOLATION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE::D2D1_YCBCR_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_YCBCR_INTERPOLATION_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE::D2D1_YCBCR_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_YCBCR_INTERPOLATION_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE::D2D1_YCBCR_INTERPOLATION_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_YCBCR_INTERPOLATION_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE::D2D1_YCBCR_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_YCBCR_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE::D2D1_YCBCR_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_YCBCR_INTERPOLATION_MODE_ANISOTROPIC = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_INTERPOLATION_MODE::D2D1_YCBCR_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC"]/*' />
 	/// <unmanaged>D2D1_YCBCR_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC</unmanaged>
-	HighQualityCubic = 5,
+	D2D1_YCBCR_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP"]/*' />
 /// <unmanaged>D2D1_CONTRAST_PROP</unmanaged>
-public enum ContrastProp
+public enum D2D1_CONTRAST_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP::D2D1_CONTRAST_PROP_CONTRAST"]/*' />
 	/// <unmanaged>D2D1_CONTRAST_PROP_CONTRAST</unmanaged>
-	Contrast = 0,
+	D2D1_CONTRAST_PROP_CONTRAST = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP::D2D1_CONTRAST_PROP_CLAMP_INPUT"]/*' />
 	/// <unmanaged>D2D1_CONTRAST_PROP_CLAMP_INPUT</unmanaged>
-	ClampInput = 1,
+	D2D1_CONTRAST_PROP_CLAMP_INPUT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP"]/*' />
 /// <unmanaged>D2D1_RGBTOHUE_PROP</unmanaged>
-public enum RgbToHueProp
+public enum D2D1_RGBTOHUE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP::D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE"]/*' />
 	/// <unmanaged>D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE</unmanaged>
-	OutputColorSpace = 0,
+	D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE"]/*' />
 /// <unmanaged>D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE</unmanaged>
-public enum RgbToHueOutputColorSpace
+public enum D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE::D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE"]/*' />
 	/// <unmanaged>D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE</unmanaged>
-	HueSaturationValue = 0,
+	D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE::D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS"]/*' />
 	/// <unmanaged>D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS</unmanaged>
-	HueSaturationLightness = 1,
+	D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP"]/*' />
 /// <unmanaged>D2D1_HUETORGB_PROP</unmanaged>
-public enum HueToRgbProp
+public enum D2D1_HUETORGB_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP::D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE</unmanaged>
-	InputColorSpace = 0,
+	D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE"]/*' />
 /// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE</unmanaged>
-public enum HueToRgbInputColorSpace
+public enum D2D1_HUETORGB_INPUT_COLOR_SPACE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE</unmanaged>
-	HueSaturationValue = 0,
+	D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS</unmanaged>
-	HueSaturationLightness = 1,
+	D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP"]/*' />
 /// <unmanaged>D2D1_CHROMAKEY_PROP</unmanaged>
-public enum ChromaKeyProp
+public enum D2D1_CHROMAKEY_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_COLOR</unmanaged>
-	Color = 0,
+	D2D1_CHROMAKEY_PROP_COLOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_TOLERANCE"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_TOLERANCE</unmanaged>
-	Tolerance = 1,
+	D2D1_CHROMAKEY_PROP_TOLERANCE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_INVERT_ALPHA"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_INVERT_ALPHA</unmanaged>
-	InvertAlpha = 2,
+	D2D1_CHROMAKEY_PROP_INVERT_ALPHA = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_FEATHER"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_FEATHER</unmanaged>
-	Feather = 3,
+	D2D1_CHROMAKEY_PROP_FEATHER = 3,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EMBOSS_PROP"]/*' />
 /// <unmanaged>D2D1_EMBOSS_PROP</unmanaged>
-public enum EmbossProp
+public enum D2D1_EMBOSS_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EMBOSS_PROP::D2D1_EMBOSS_PROP_HEIGHT"]/*' />
 	/// <unmanaged>D2D1_EMBOSS_PROP_HEIGHT</unmanaged>
-	Height = 0,
+	D2D1_EMBOSS_PROP_HEIGHT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EMBOSS_PROP::D2D1_EMBOSS_PROP_DIRECTION"]/*' />
 	/// <unmanaged>D2D1_EMBOSS_PROP_DIRECTION</unmanaged>
-	Direction = 1,
+	D2D1_EMBOSS_PROP_DIRECTION = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXPOSURE_PROP"]/*' />
 /// <unmanaged>D2D1_EXPOSURE_PROP</unmanaged>
-public enum ExposureProp
+public enum D2D1_EXPOSURE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXPOSURE_PROP::D2D1_EXPOSURE_PROP_EXPOSURE_VALUE"]/*' />
 	/// <unmanaged>D2D1_EXPOSURE_PROP_EXPOSURE_VALUE</unmanaged>
-	ExposureValue = 0,
+	D2D1_EXPOSURE_PROP_EXPOSURE_VALUE = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POSTERIZE_PROP"]/*' />
 /// <unmanaged>D2D1_POSTERIZE_PROP</unmanaged>
-public enum PosterizeProp
+public enum D2D1_POSTERIZE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POSTERIZE_PROP::D2D1_POSTERIZE_PROP_RED_VALUE_COUNT"]/*' />
 	/// <unmanaged>D2D1_POSTERIZE_PROP_RED_VALUE_COUNT</unmanaged>
-	RedValueCount = 0,
+	D2D1_POSTERIZE_PROP_RED_VALUE_COUNT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POSTERIZE_PROP::D2D1_POSTERIZE_PROP_GREEN_VALUE_COUNT"]/*' />
 	/// <unmanaged>D2D1_POSTERIZE_PROP_GREEN_VALUE_COUNT</unmanaged>
-	GreenValueCount = 1,
+	D2D1_POSTERIZE_PROP_GREEN_VALUE_COUNT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POSTERIZE_PROP::D2D1_POSTERIZE_PROP_BLUE_VALUE_COUNT"]/*' />
 	/// <unmanaged>D2D1_POSTERIZE_PROP_BLUE_VALUE_COUNT</unmanaged>
-	BlueValueCount = 2,
+	D2D1_POSTERIZE_PROP_BLUE_VALUE_COUNT = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP"]/*' />
 /// <unmanaged>D2D1_SEPIA_PROP</unmanaged>
-public enum SepiaProp
+public enum D2D1_SEPIA_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP::D2D1_SEPIA_PROP_INTENSITY"]/*' />
 	/// <unmanaged>D2D1_SEPIA_PROP_INTENSITY</unmanaged>
-	Intensity = 0,
+	D2D1_SEPIA_PROP_INTENSITY = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP::D2D1_SEPIA_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_SEPIA_PROP_ALPHA_MODE</unmanaged>
-	AlphaMode = 1,
+	D2D1_SEPIA_PROP_ALPHA_MODE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP"]/*' />
 /// <unmanaged>D2D1_SHARPEN_PROP</unmanaged>
-public enum SharpenProp
+public enum D2D1_SHARPEN_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP::D2D1_SHARPEN_PROP_SHARPNESS"]/*' />
 	/// <unmanaged>D2D1_SHARPEN_PROP_SHARPNESS</unmanaged>
-	Sharpness = 0,
+	D2D1_SHARPEN_PROP_SHARPNESS = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP::D2D1_SHARPEN_PROP_THRESHOLD"]/*' />
 	/// <unmanaged>D2D1_SHARPEN_PROP_THRESHOLD</unmanaged>
-	Threshold = 1,
+	D2D1_SHARPEN_PROP_THRESHOLD = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP"]/*' />
 /// <unmanaged>D2D1_STRAIGHTEN_PROP</unmanaged>
-public enum StraightenProp
+public enum D2D1_STRAIGHTEN_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_PROP_ANGLE</unmanaged>
-	Angle = 0,
+	D2D1_STRAIGHTEN_PROP_ANGLE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE</unmanaged>
-	MaintainSize = 1,
+	D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_PROP_SCALE_MODE</unmanaged>
-	ScaleMode = 2,
+	D2D1_STRAIGHTEN_PROP_SCALE_MODE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE</unmanaged>
-public enum StraightenScaleMode
+public enum D2D1_STRAIGHTEN_SCALE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
-	NearestNeighbor = 0,
+	D2D1_STRAIGHTEN_SCALE_MODE_NEAREST_NEIGHBOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_LINEAR</unmanaged>
-	Linear = 1,
+	D2D1_STRAIGHTEN_SCALE_MODE_LINEAR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_CUBIC</unmanaged>
-	Cubic = 2,
+	D2D1_STRAIGHTEN_SCALE_MODE_CUBIC = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
-	MultiSampleLinear = 3,
+	D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC</unmanaged>
-	Anisotropic = 4,
+	D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEMPERATUREANDTINT_PROP"]/*' />
 /// <unmanaged>D2D1_TEMPERATUREANDTINT_PROP</unmanaged>
-public enum TemperatureandtintProp
+public enum D2D1_TEMPERATUREANDTINT_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEMPERATUREANDTINT_PROP::D2D1_TEMPERATUREANDTINT_PROP_TEMPERATURE"]/*' />
 	/// <unmanaged>D2D1_TEMPERATUREANDTINT_PROP_TEMPERATURE</unmanaged>
-	Temperature = 0,
+	D2D1_TEMPERATUREANDTINT_PROP_TEMPERATURE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEMPERATUREANDTINT_PROP::D2D1_TEMPERATUREANDTINT_PROP_TINT"]/*' />
 	/// <unmanaged>D2D1_TEMPERATUREANDTINT_PROP_TINT</unmanaged>
-	Tint = 1,
+	D2D1_TEMPERATUREANDTINT_PROP_TINT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP"]/*' />
 /// <unmanaged>D2D1_VIGNETTE_PROP</unmanaged>
-public enum VignetteProp
+public enum D2D1_VIGNETTE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_VIGNETTE_PROP_COLOR</unmanaged>
-	Color = 0,
+	D2D1_VIGNETTE_PROP_COLOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_TRANSITION_SIZE"]/*' />
 	/// <unmanaged>D2D1_VIGNETTE_PROP_TRANSITION_SIZE</unmanaged>
-	TransitionSize = 1,
+	D2D1_VIGNETTE_PROP_TRANSITION_SIZE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_STRENGTH"]/*' />
 	/// <unmanaged>D2D1_VIGNETTE_PROP_STRENGTH</unmanaged>
-	Strength = 2,
+	D2D1_VIGNETTE_PROP_STRENGTH = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP"]/*' />
 /// <unmanaged>D2D1_EDGEDETECTION_PROP</unmanaged>
-public enum EdgeDetectionProp
+public enum D2D1_EDGEDETECTION_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_STRENGTH"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_STRENGTH</unmanaged>
-	Strength = 0,
+	D2D1_EDGEDETECTION_PROP_STRENGTH = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_BLUR_RADIUS"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_BLUR_RADIUS</unmanaged>
-	BlurRadius = 1,
+	D2D1_EDGEDETECTION_PROP_BLUR_RADIUS = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_MODE</unmanaged>
-	Mode = 2,
+	D2D1_EDGEDETECTION_PROP_MODE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES</unmanaged>
-	OverlayEdges = 3,
+	D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_ALPHA_MODE</unmanaged>
-	AlphaMode = 4,
+	D2D1_EDGEDETECTION_PROP_ALPHA_MODE = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_MODE"]/*' />
 /// <unmanaged>D2D1_EDGEDETECTION_MODE</unmanaged>
-public enum EdgeDetectionMode
+public enum D2D1_EDGEDETECTION_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_MODE::D2D1_EDGEDETECTION_MODE_SOBEL"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_MODE_SOBEL</unmanaged>
-	Sobel = 0,
+	D2D1_EDGEDETECTION_MODE_SOBEL = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_MODE::D2D1_EDGEDETECTION_MODE_PREWITT"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_MODE_PREWITT</unmanaged>
-	Prewitt = 1,
+	D2D1_EDGEDETECTION_MODE_PREWITT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP"]/*' />
 /// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP</unmanaged>
-public enum HighlightSandShadowsProp
+public enum D2D1_HIGHLIGHTSANDSHADOWS_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS</unmanaged>
-	Highlights = 0,
+	D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_SHADOWS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_SHADOWS</unmanaged>
-	Shadows = 1,
+	D2D1_HIGHLIGHTSANDSHADOWS_PROP_SHADOWS = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_CLARITY"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_CLARITY</unmanaged>
-	Clarity = 2,
+	D2D1_HIGHLIGHTSANDSHADOWS_PROP_CLARITY = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA</unmanaged>
-	InputGamma = 3,
+	D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS</unmanaged>
-	MaskBlurRadius = 4,
+	D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS = 4,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA"]/*' />
 /// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA</unmanaged>
-public enum HighlightSandShadowsInputGamma
+public enum D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR</unmanaged>
-	Linear = 0,
+	D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB</unmanaged>
-	Srgb = 1,
+	D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP"]/*' />
 /// <unmanaged>D2D1_LOOKUPTABLE3D_PROP</unmanaged>
-public enum LookupTable3DProp
+public enum D2D1_LOOKUPTABLE3D_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_LUT"]/*' />
 	/// <unmanaged>D2D1_LOOKUPTABLE3D_PROP_LUT</unmanaged>
-	Lut = 0,
+	D2D1_LOOKUPTABLE3D_PROP_LUT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE</unmanaged>
-	AlphaMode = 1,
+	D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_PROP"]/*' />
 /// <unmanaged>D2D1_OPACITY_PROP</unmanaged>
-public enum OpacityProp
+public enum D2D1_OPACITY_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_PROP::D2D1_OPACITY_PROP_OPACITY"]/*' />
 	/// <unmanaged>D2D1_OPACITY_PROP_OPACITY</unmanaged>
-	Opacity = 0,
+	D2D1_OPACITY_PROP_OPACITY = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROSSFADE_PROP"]/*' />
 /// <unmanaged>D2D1_CROSSFADE_PROP</unmanaged>
-public enum CrossfadeProp
+public enum D2D1_CROSSFADE_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROSSFADE_PROP::D2D1_CROSSFADE_PROP_WEIGHT"]/*' />
 	/// <unmanaged>D2D1_CROSSFADE_PROP_WEIGHT</unmanaged>
-	Weight = 0,
+	D2D1_CROSSFADE_PROP_WEIGHT = 0,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP"]/*' />
 /// <unmanaged>D2D1_TINT_PROP</unmanaged>
-public enum TintProp
+public enum D2D1_TINT_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP::D2D1_TINT_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_TINT_PROP_COLOR</unmanaged>
-	Color = 0,
+	D2D1_TINT_PROP_COLOR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP::D2D1_TINT_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_TINT_PROP_CLAMP_OUTPUT</unmanaged>
-	ClampOutput = 1,
+	D2D1_TINT_PROP_CLAMP_OUTPUT = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP"]/*' />
 /// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP</unmanaged>
-public enum WhiteLevelAdjustmentProp
+public enum D2D1_WHITELEVELADJUSTMENT_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL"]/*' />
 	/// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL</unmanaged>
-	InputWhiteLevel = 0,
+	D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL"]/*' />
 	/// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL</unmanaged>
-	OutputWhiteLevel = 1,
+	D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_PROP"]/*' />
 /// <unmanaged>D2D1_HDRTONEMAP_PROP</unmanaged>
-public enum HDRTonemapProp
+public enum D2D1_HDRTONEMAP_PROP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_PROP::D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE</unmanaged>
-	InputMaxLuminance = 0,
+	D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_PROP::D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE</unmanaged>
-	OutputMaxLuminance = 1,
+	D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_PROP::D2D1_HDRTONEMAP_PROP_DISPLAY_MODE"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_PROP_DISPLAY_MODE</unmanaged>
-	DisplayMode = 2,
+	D2D1_HDRTONEMAP_PROP_DISPLAY_MODE = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE"]/*' />
 /// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE</unmanaged>
-public enum HDRTonemapDisplayMode
+public enum D2D1_HDRTONEMAP_DISPLAY_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_SDR"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE_SDR</unmanaged>
-	Sdr = 0,
+	D2D1_HDRTONEMAP_DISPLAY_MODE_SDR = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_HDR"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE_HDR</unmanaged>
-	HDR = 1,
+	D2D1_HDRTONEMAP_DISPLAY_MODE_HDR = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY"]/*' />
 /// <unmanaged>D2D1_RENDERING_PRIORITY</unmanaged>
-public enum RenderingPriority
+public enum D2D1_RENDERING_PRIORITY
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY::D2D1_RENDERING_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>D2D1_RENDERING_PRIORITY_NORMAL</unmanaged>
-	Normal = 0,
+	D2D1_RENDERING_PRIORITY_NORMAL = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY::D2D1_RENDERING_PRIORITY_LOW"]/*' />
 	/// <unmanaged>D2D1_RENDERING_PRIORITY_LOW</unmanaged>
-	Low = 1,
+	D2D1_RENDERING_PRIORITY_LOW = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE"]/*' />
 /// <unmanaged>D2D1_SVG_PAINT_TYPE</unmanaged>
-public enum SvgPaintType
+public enum D2D1_SVG_PAINT_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_NONE"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_NONE</unmanaged>
-	None = 0,
+	D2D1_SVG_PAINT_TYPE_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_COLOR"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_COLOR</unmanaged>
-	Color = 1,
+	D2D1_SVG_PAINT_TYPE_COLOR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_CURRENT_COLOR"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_CURRENT_COLOR</unmanaged>
-	CurrentColor = 2,
+	D2D1_SVG_PAINT_TYPE_CURRENT_COLOR = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_URI"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_URI</unmanaged>
-	Uri = 3,
+	D2D1_SVG_PAINT_TYPE_URI = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_URI_NONE"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_URI_NONE</unmanaged>
-	UriNone = 4,
+	D2D1_SVG_PAINT_TYPE_URI_NONE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_URI_COLOR"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_URI_COLOR</unmanaged>
-	UriColor = 5,
+	D2D1_SVG_PAINT_TYPE_URI_COLOR = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PAINT_TYPE::D2D1_SVG_PAINT_TYPE_URI_CURRENT_COLOR"]/*' />
 	/// <unmanaged>D2D1_SVG_PAINT_TYPE_URI_CURRENT_COLOR</unmanaged>
-	UriCurrentColor = 6,
+	D2D1_SVG_PAINT_TYPE_URI_CURRENT_COLOR = 6,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS"]/*' />
 /// <unmanaged>D2D1_SVG_LENGTH_UNITS</unmanaged>
-public enum SvgLengthUnits
+public enum D2D1_SVG_LENGTH_UNITS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS::D2D1_SVG_LENGTH_UNITS_NUMBER"]/*' />
 	/// <unmanaged>D2D1_SVG_LENGTH_UNITS_NUMBER</unmanaged>
-	Number = 0,
+	D2D1_SVG_LENGTH_UNITS_NUMBER = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS::D2D1_SVG_LENGTH_UNITS_PERCENTAGE"]/*' />
 	/// <unmanaged>D2D1_SVG_LENGTH_UNITS_PERCENTAGE</unmanaged>
-	Percentage = 1,
+	D2D1_SVG_LENGTH_UNITS_PERCENTAGE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY"]/*' />
 /// <unmanaged>D2D1_SVG_DISPLAY</unmanaged>
-public enum SvgDisplay
+public enum D2D1_SVG_DISPLAY
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY::D2D1_SVG_DISPLAY_INLINE"]/*' />
 	/// <unmanaged>D2D1_SVG_DISPLAY_INLINE</unmanaged>
-	Inline = 0,
+	D2D1_SVG_DISPLAY_INLINE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY::D2D1_SVG_DISPLAY_NONE"]/*' />
 	/// <unmanaged>D2D1_SVG_DISPLAY_NONE</unmanaged>
-	None = 1,
+	D2D1_SVG_DISPLAY_NONE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY"]/*' />
 /// <unmanaged>D2D1_SVG_VISIBILITY</unmanaged>
-public enum SvgVisibility
+public enum D2D1_SVG_VISIBILITY
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY::D2D1_SVG_VISIBILITY_VISIBLE"]/*' />
 	/// <unmanaged>D2D1_SVG_VISIBILITY_VISIBLE</unmanaged>
-	Visible = 0,
+	D2D1_SVG_VISIBILITY_VISIBLE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY::D2D1_SVG_VISIBILITY_HIDDEN"]/*' />
 	/// <unmanaged>D2D1_SVG_VISIBILITY_HIDDEN</unmanaged>
-	Hidden = 1,
+	D2D1_SVG_VISIBILITY_HIDDEN = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW"]/*' />
 /// <unmanaged>D2D1_SVG_OVERFLOW</unmanaged>
-public enum SvgOverflow
+public enum D2D1_SVG_OVERFLOW
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW::D2D1_SVG_OVERFLOW_VISIBLE"]/*' />
 	/// <unmanaged>D2D1_SVG_OVERFLOW_VISIBLE</unmanaged>
-	Visible = 0,
+	D2D1_SVG_OVERFLOW_VISIBLE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW::D2D1_SVG_OVERFLOW_HIDDEN"]/*' />
 	/// <unmanaged>D2D1_SVG_OVERFLOW_HIDDEN</unmanaged>
-	Hidden = 1,
+	D2D1_SVG_OVERFLOW_HIDDEN = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP"]/*' />
 /// <unmanaged>D2D1_SVG_LINE_CAP</unmanaged>
-public enum SvgLineCap
+public enum D2D1_SVG_LINE_CAP
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_BUTT"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_CAP_BUTT</unmanaged>
-	Butt = 0,
+	D2D1_SVG_LINE_CAP_BUTT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_SQUARE"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_CAP_SQUARE</unmanaged>
-	Square = 1,
+	D2D1_SVG_LINE_CAP_SQUARE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_ROUND"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_CAP_ROUND</unmanaged>
-	Round = 2,
+	D2D1_SVG_LINE_CAP_ROUND = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_JOIN"]/*' />
 /// <unmanaged>D2D1_SVG_LINE_JOIN</unmanaged>
-public enum SvgLineJoin
+public enum D2D1_SVG_LINE_JOIN
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_JOIN::D2D1_SVG_LINE_JOIN_BEVEL"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_JOIN_BEVEL</unmanaged>
-	Bevel = 1,
+	D2D1_SVG_LINE_JOIN_BEVEL = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_JOIN::D2D1_SVG_LINE_JOIN_MITER"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_JOIN_MITER</unmanaged>
-	Miter = 3,
+	D2D1_SVG_LINE_JOIN_MITER = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_JOIN::D2D1_SVG_LINE_JOIN_ROUND"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_JOIN_ROUND</unmanaged>
-	Round = 2,
+	D2D1_SVG_LINE_JOIN_ROUND = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN"]/*' />
 /// <unmanaged>D2D1_SVG_ASPECT_ALIGN</unmanaged>
-public enum SvgAspectAlign
+public enum D2D1_SVG_ASPECT_ALIGN
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_NONE"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_NONE</unmanaged>
-	None = 0,
+	D2D1_SVG_ASPECT_ALIGN_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MIN</unmanaged>
-	XMinYMin = 1,
+	D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MIN = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MIN</unmanaged>
-	XMidYMin = 2,
+	D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MIN = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MIN</unmanaged>
-	XMaxYMin = 3,
+	D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MIN = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MID"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MID</unmanaged>
-	XMinYMid = 4,
+	D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MID = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MID"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MID</unmanaged>
-	XMidYMid = 5,
+	D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MID = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MID"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MID</unmanaged>
-	XMaxYMid = 6,
+	D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MID = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MAX"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MAX</unmanaged>
-	XMinYMax = 7,
+	D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MAX = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX</unmanaged>
-	XMidYMax = 8,
+	D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX</unmanaged>
-	XMaxYMax = 9,
+	D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX = 9,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_SCALING"]/*' />
 /// <unmanaged>D2D1_SVG_ASPECT_SCALING</unmanaged>
-public enum SvgAspectScaling
+public enum D2D1_SVG_ASPECT_SCALING
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_SCALING::D2D1_SVG_ASPECT_SCALING_MEET"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_SCALING_MEET</unmanaged>
-	Meet = 0,
+	D2D1_SVG_ASPECT_SCALING_MEET = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_SCALING::D2D1_SVG_ASPECT_SCALING_SLICE"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_SCALING_SLICE</unmanaged>
-	Slice = 1,
+	D2D1_SVG_ASPECT_SCALING_SLICE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND"]/*' />
 /// <unmanaged>D2D1_SVG_PATH_COMMAND</unmanaged>
-public enum SvgPathCommand
+public enum D2D1_SVG_PATH_COMMAND
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CLOSE_PATH"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CLOSE_PATH</unmanaged>
-	ClosePath = 0,
+	D2D1_SVG_PATH_COMMAND_CLOSE_PATH = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_MOVE_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_MOVE_ABSOLUTE</unmanaged>
-	MoveAbsolute = 1,
+	D2D1_SVG_PATH_COMMAND_MOVE_ABSOLUTE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_MOVE_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_MOVE_RELATIVE</unmanaged>
-	MoveRelative = 2,
+	D2D1_SVG_PATH_COMMAND_MOVE_RELATIVE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_LINE_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_LINE_ABSOLUTE</unmanaged>
-	LineAbsolute = 3,
+	D2D1_SVG_PATH_COMMAND_LINE_ABSOLUTE = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_LINE_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_LINE_RELATIVE</unmanaged>
-	LineRelative = 4,
+	D2D1_SVG_PATH_COMMAND_LINE_RELATIVE = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_ABSOLUTE</unmanaged>
-	CubicAbsolute = 5,
+	D2D1_SVG_PATH_COMMAND_CUBIC_ABSOLUTE = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_RELATIVE</unmanaged>
-	CubicRelative = 6,
+	D2D1_SVG_PATH_COMMAND_CUBIC_RELATIVE = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_ABSOLUTE</unmanaged>
-	QuadradicAbsolute = 7,
+	D2D1_SVG_PATH_COMMAND_QUADRADIC_ABSOLUTE = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_RELATIVE</unmanaged>
-	QuadradicRelative = 8,
+	D2D1_SVG_PATH_COMMAND_QUADRADIC_RELATIVE = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_ARC_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_ARC_ABSOLUTE</unmanaged>
-	ArcAbsolute = 9,
+	D2D1_SVG_PATH_COMMAND_ARC_ABSOLUTE = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_ARC_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_ARC_RELATIVE</unmanaged>
-	ArcRelative = 10,
+	D2D1_SVG_PATH_COMMAND_ARC_RELATIVE = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_HORIZONTAL_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_HORIZONTAL_ABSOLUTE</unmanaged>
-	HorizontalAbsolute = 11,
+	D2D1_SVG_PATH_COMMAND_HORIZONTAL_ABSOLUTE = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_HORIZONTAL_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_HORIZONTAL_RELATIVE</unmanaged>
-	HorizontalRelative = 12,
+	D2D1_SVG_PATH_COMMAND_HORIZONTAL_RELATIVE = 12,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_VERTICAL_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_VERTICAL_ABSOLUTE</unmanaged>
-	VerticalAbsolute = 13,
+	D2D1_SVG_PATH_COMMAND_VERTICAL_ABSOLUTE = 13,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_VERTICAL_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_VERTICAL_RELATIVE</unmanaged>
-	VerticalRelative = 14,
+	D2D1_SVG_PATH_COMMAND_VERTICAL_RELATIVE = 14,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_ABSOLUTE</unmanaged>
-	CubicSmoothAbsolute = 15,
+	D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_ABSOLUTE = 15,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_RELATIVE</unmanaged>
-	CubicSmoothRelative = 16,
+	D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_RELATIVE = 16,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE</unmanaged>
-	QuadradicSmoothAbsolute = 17,
+	D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE = 17,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE</unmanaged>
-	QuadradicSmoothRelative = 18,
+	D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE = 18,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_UNIT_TYPE"]/*' />
 /// <unmanaged>D2D1_SVG_UNIT_TYPE</unmanaged>
-public enum SvgUnitType
+public enum D2D1_SVG_UNIT_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_UNIT_TYPE::D2D1_SVG_UNIT_TYPE_USER_SPACE_ON_USE"]/*' />
 	/// <unmanaged>D2D1_SVG_UNIT_TYPE_USER_SPACE_ON_USE</unmanaged>
-	UserSpaceOnUse = 0,
+	D2D1_SVG_UNIT_TYPE_USER_SPACE_ON_USE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_UNIT_TYPE::D2D1_SVG_UNIT_TYPE_OBJECT_BOUNDING_BOX"]/*' />
 	/// <unmanaged>D2D1_SVG_UNIT_TYPE_OBJECT_BOUNDING_BOX</unmanaged>
-	ObjectBoundingBox = 1,
+	D2D1_SVG_UNIT_TYPE_OBJECT_BOUNDING_BOX = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE"]/*' />
 /// <unmanaged>D2D1_SVG_ATTRIBUTE_STRING_TYPE</unmanaged>
-public enum SvgAttributeStringType
+public enum D2D1_SVG_ATTRIBUTE_STRING_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE::D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG</unmanaged>
-	Svg = 0,
+	D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE::D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID</unmanaged>
-	Id = 1,
+	D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE"]/*' />
 /// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE</unmanaged>
-public enum SvgAttributePodType
+public enum D2D1_SVG_ATTRIBUTE_POD_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT</unmanaged>
-	Float = 0,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR</unmanaged>
-	Color = 1,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE</unmanaged>
-	FillMode = 2,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY</unmanaged>
-	Display = 3,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW</unmanaged>
-	Overflow = 4,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP</unmanaged>
-	LineCap = 5,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN</unmanaged>
-	LineJoin = 6,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY</unmanaged>
-	Visibility = 7,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX</unmanaged>
-	Matrix = 8,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE</unmanaged>
-	UnitType = 9,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE</unmanaged>
-	ExtendMode = 10,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO</unmanaged>
-	PreserveAspectRatio = 11,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX</unmanaged>
-	Viewbox = 12,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX = 12,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH</unmanaged>
-	Length = 13,
+	D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH = 13,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE"]/*' />
 /// <unmanaged>D2D1_INK_NIB_SHAPE</unmanaged>
-public enum InkNibShape
+public enum D2D1_INK_NIB_SHAPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE::D2D1_INK_NIB_SHAPE_ROUND"]/*' />
 	/// <unmanaged>D2D1_INK_NIB_SHAPE_ROUND</unmanaged>
-	Round = 0,
+	D2D1_INK_NIB_SHAPE_ROUND = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE::D2D1_INK_NIB_SHAPE_SQUARE"]/*' />
 	/// <unmanaged>D2D1_INK_NIB_SHAPE_SQUARE</unmanaged>
-	Square = 1,
+	D2D1_INK_NIB_SHAPE_SQUARE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION"]/*' />
 /// <unmanaged>D2D1_ORIENTATION</unmanaged>
-public enum Orientation
+public enum D2D1_ORIENTATION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_DEFAULT</unmanaged>
-	Default = 1,
+	D2D1_ORIENTATION_DEFAULT = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_FLIP_HORIZONTAL</unmanaged>
-	FlipHorizontal = 2,
+	D2D1_ORIENTATION_FLIP_HORIZONTAL = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE180"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE180</unmanaged>
-	RotateClockwise180 = 3,
+	D2D1_ORIENTATION_ROTATE_CLOCKWISE180 = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL</unmanaged>
-	RotateClockwise180FlipHorizontal = 4,
+	D2D1_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL</unmanaged>
-	RotateClockwise90FlipHorizontal = 5,
+	D2D1_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE270"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE270</unmanaged>
-	RotateClockwise270 = 6,
+	D2D1_ORIENTATION_ROTATE_CLOCKWISE270 = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL</unmanaged>
-	RotateClockwise270FlipHorizontal = 7,
+	D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE90"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE90</unmanaged>
-	RotateClockwise90 = 8,
+	D2D1_ORIENTATION_ROTATE_CLOCKWISE90 = 8,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS"]/*' />
 /// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS</unmanaged>
 [Flags]
-public enum ImageSourceLoadingOptions
+public enum D2D1_IMAGE_SOURCE_LOADING_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE</unmanaged>
-	ReleaseSource = 1,
+	D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND</unmanaged>
-	CacheOnDemand = 2,
+	D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS"]/*' />
 /// <unmanaged>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS</unmanaged>
 [Flags]
-public enum ImageSourceFromDxgiOptions
+public enum D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS::D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS::D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION</unmanaged>
-	LowQualityPrimaryConversion = 1,
+	D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS"]/*' />
 /// <unmanaged>D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS</unmanaged>
 [Flags]
-public enum TransformedImageSourceOptions
+public enum D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS::D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS::D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_DISABLE_DPI_SCALE"]/*' />
 	/// <unmanaged>D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_DISABLE_DPI_SCALE</unmanaged>
-	DisableDpiScale = 1,
+	D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_DISABLE_DPI_SCALE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE"]/*' />
 /// <unmanaged>D2D1_PATCH_EDGE_MODE</unmanaged>
-public enum PatchEdgeMode
+public enum D2D1_PATCH_EDGE_MODE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ALIASED"]/*' />
 	/// <unmanaged>D2D1_PATCH_EDGE_MODE_ALIASED</unmanaged>
-	Aliased = 0,
+	D2D1_PATCH_EDGE_MODE_ALIASED = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ANTIALIASED"]/*' />
 	/// <unmanaged>D2D1_PATCH_EDGE_MODE_ANTIALIASED</unmanaged>
-	Antialiased = 1,
+	D2D1_PATCH_EDGE_MODE_ANTIALIASED = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED"]/*' />
 	/// <unmanaged>D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED</unmanaged>
-	AliasedInflated = 2,
+	D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPRITE_OPTIONS"]/*' />
 /// <unmanaged>D2D1_SPRITE_OPTIONS</unmanaged>
 [Flags]
-public enum SpriteOptions
+public enum D2D1_SPRITE_OPTIONS
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPRITE_OPTIONS::D2D1_SPRITE_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_SPRITE_OPTIONS_NONE</unmanaged>
-	None = 0,
+	D2D1_SPRITE_OPTIONS_NONE = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPRITE_OPTIONS::D2D1_SPRITE_OPTIONS_CLAMP_TO_SOURCE_RECTANGLE"]/*' />
 	/// <unmanaged>D2D1_SPRITE_OPTIONS_CLAMP_TO_SOURCE_RECTANGLE</unmanaged>
-	ClampToSourceRectangle = 1,
+	D2D1_SPRITE_OPTIONS_CLAMP_TO_SOURCE_RECTANGLE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION"]/*' />
 /// <unmanaged>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION</unmanaged>
-public enum ColorBitmapGlyphSnapOption
+public enum D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION::D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT</unmanaged>
-	Default = 0,
+	D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION::D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE"]/*' />
 	/// <unmanaged>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE</unmanaged>
-	Disable = 1,
+	D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA1"]/*' />
 /// <unmanaged>D2D1_GAMMA1</unmanaged>
-public enum Gamma1
+public enum D2D1_GAMMA1
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA1::D2D1_GAMMA1_G22"]/*' />
 	/// <unmanaged>D2D1_GAMMA1_G22</unmanaged>
-	G22 = 0,
+	D2D1_GAMMA1_G22 = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA1::D2D1_GAMMA1_G10"]/*' />
 	/// <unmanaged>D2D1_GAMMA1_G10</unmanaged>
-	G10 = 1,
+	D2D1_GAMMA1_G10 = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA1::D2D1_GAMMA1_G2084"]/*' />
 	/// <unmanaged>D2D1_GAMMA1_G2084</unmanaged>
-	G2084 = 2,
+	D2D1_GAMMA1_G2084 = 2,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE"]/*' />
 /// <unmanaged>D2D1_COLOR_CONTEXT_TYPE</unmanaged>
-public enum ColorContextType
+public enum D2D1_COLOR_CONTEXT_TYPE
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_ICC"]/*' />
 	/// <unmanaged>D2D1_COLOR_CONTEXT_TYPE_ICC</unmanaged>
-	Icc = 0,
+	D2D1_COLOR_CONTEXT_TYPE_ICC = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_SIMPLE"]/*' />
 	/// <unmanaged>D2D1_COLOR_CONTEXT_TYPE_SIMPLE</unmanaged>
-	Simple = 1,
+	D2D1_COLOR_CONTEXT_TYPE_SIMPLE = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_DXGI"]/*' />
 	/// <unmanaged>D2D1_COLOR_CONTEXT_TYPE_DXGI</unmanaged>
-	DXGI = 2,
+	D2D1_COLOR_CONTEXT_TYPE_DXGI = 2,
 }

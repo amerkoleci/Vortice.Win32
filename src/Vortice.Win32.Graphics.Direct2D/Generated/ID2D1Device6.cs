@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device6"]/*' />
 /// <unmanaged>ID2D1Device6</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1Device6 : ID2D1Device6.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
 
 	/// <inheritdoc cref="ID2D1Device.SetMaximumTextureMemory" />
@@ -113,33 +113,33 @@ public unsafe partial struct ID2D1Device6 : ID2D1Device6.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public RenderingPriority GetRenderingPriority()
+	public D2D1_RENDERING_PRIORITY GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_RENDERING_PRIORITY>)(lpVtbl[8]))((ID2D1Device6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void SetRenderingPriority(RenderingPriority renderingPriority)
+	public void SetRenderingPriority(D2D1_RENDERING_PRIORITY renderingPriority)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1Device6*, RenderingPriority, void>)(lpVtbl[9]))((ID2D1Device6*)Unsafe.AsPointer(ref this), renderingPriority);
+		((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_RENDERING_PRIORITY, void>)(lpVtbl[9]))((ID2D1Device6*)Unsafe.AsPointer(ref this), renderingPriority);
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext1);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext1);
 	}
 
 	/// <inheritdoc cref="ID2D1Device2.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext2** deviceContext2)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext2** deviceContext2)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext2**, int>)(lpVtbl[11]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext2);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext2**, int>)(lpVtbl[11]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext2);
 	}
 
 	/// <inheritdoc cref="ID2D1Device2.FlushDeviceContexts" />
@@ -161,17 +161,17 @@ public unsafe partial struct ID2D1Device6 : ID2D1Device6.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device3.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext3** deviceContext3)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext3** deviceContext3)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext3**, int>)(lpVtbl[14]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext3);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext3**, int>)(lpVtbl[14]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext3);
 	}
 
 	/// <inheritdoc cref="ID2D1Device4.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext4** deviceContext4)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext4** deviceContext4)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext4**, int>)(lpVtbl[15]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext4);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext4**, int>)(lpVtbl[15]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext4);
 	}
 
 	/// <inheritdoc cref="ID2D1Device4.SetMaximumColorGlyphCacheMemory" />
@@ -193,23 +193,23 @@ public unsafe partial struct ID2D1Device6 : ID2D1Device6.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device5.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext5** deviceContext5)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext5** deviceContext5)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext5**, int>)(lpVtbl[18]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext5);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext5**, int>)(lpVtbl[18]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext5);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device6::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext6** deviceContext6)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext6** deviceContext6)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, DeviceContextOptions, ID2D1DeviceContext6**, int>)(lpVtbl[19]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext6);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device6*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext6**, int>)(lpVtbl[19]))((ID2D1Device6*)Unsafe.AsPointer(ref this), options, deviceContext6);
 	}
 
 	public interface Interface : ID2D1Device5.Interface
 	{
 		[VtblIndex(19)]
-		HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext6** deviceContext6);
+		HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext6** deviceContext6);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2"]/*' />
 /// <unmanaged>IDWriteRenderingParams2</unmanaged>
@@ -97,17 +97,17 @@ public unsafe partial struct IDWriteRenderingParams2 : IDWriteRenderingParams2.I
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public PixelGeometry GetPixelGeometry()
+	public DWRITE_PIXEL_GEOMETRY GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams2*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams2*, DWRITE_PIXEL_GEOMETRY>)(lpVtbl[6]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public RenderingMode GetRenderingMode()
+	public DWRITE_RENDERING_MODE GetRenderingMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams2*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams2*, DWRITE_RENDERING_MODE>)(lpVtbl[7]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams1.GetGrayscaleEnhancedContrast" />
@@ -121,15 +121,15 @@ public unsafe partial struct IDWriteRenderingParams2 : IDWriteRenderingParams2.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2::GetGridFitMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public GridFitMode GetGridFitMode()
+	public DWRITE_GRID_FIT_MODE GetGridFitMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams2*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams2*, DWRITE_GRID_FIT_MODE>)(lpVtbl[9]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IDWriteRenderingParams1.Interface
 	{
 		[VtblIndex(9)]
-		GridFitMode GetGridFitMode();
+		DWRITE_GRID_FIT_MODE GetGridFitMode();
 	}
 }
 

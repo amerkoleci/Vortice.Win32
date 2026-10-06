@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 public static unsafe partial class Apis
 {
@@ -37,15 +37,15 @@ public static unsafe partial class Apis
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetFrameId"]/*' />
 	[LibraryImport("dcomp.dll")]
-	public static partial HResult DCompositionGetFrameId(CompositionFrameIdType frameIdType, ulong* frameId);
+	public static partial HResult DCompositionGetFrameId(COMPOSITION_FRAME_ID_TYPE frameIdType, ulong* frameId);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetStatistics"]/*' />
 	[LibraryImport("dcomp.dll")]
-	public static partial HResult DCompositionGetStatistics(ulong frameId, CompositionFrameStats* frameStats, uint targetIdCount, CompositionTargetId* targetIds, uint* actualTargetIdCount);
+	public static partial HResult DCompositionGetStatistics(ulong frameId, COMPOSITION_FRAME_STATS* frameStats, uint targetIdCount, COMPOSITION_TARGET_ID* targetIds, uint* actualTargetIdCount);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetTargetStatistics"]/*' />
 	[LibraryImport("dcomp.dll")]
-	public static partial HResult DCompositionGetTargetStatistics(ulong frameId, CompositionTargetId* targetId, CompositionTargetStats* targetStats);
+	public static partial HResult DCompositionGetTargetStatistics(ulong frameId, COMPOSITION_TARGET_ID* targetId, COMPOSITION_TARGET_STATS* targetStats);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionBoostCompositorClock"]/*' />
 	[LibraryImport("dcomp.dll")]

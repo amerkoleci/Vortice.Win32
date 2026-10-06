@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1"]/*' />
 /// <unmanaged>IDWriteFontFaceReference1</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	/// <inheritdoc cref="IDWriteFontFaceReference.CreateFontFaceWithSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateFontFaceWithSimulations(FontSimulations fontFaceSimulationFlags, IDWriteFontFace3** fontFace)
+	public HResult CreateFontFaceWithSimulations(DWRITE_FONT_SIMULATIONS fontFaceSimulationFlags, IDWriteFontFace3** fontFace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, FontSimulations, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, DWRITE_FONT_SIMULATIONS, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.Equals" />
@@ -105,9 +105,9 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public FontSimulations GetSimulations()
+	public DWRITE_FONT_SIMULATIONS GetSimulations()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, DWRITE_FONT_SIMULATIONS>)(lpVtbl[7]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetFontFile" />
@@ -145,9 +145,9 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Locality GetLocality()
+	public DWRITE_LOCALITY GetLocality()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, DWRITE_LOCALITY>)(lpVtbl[12]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueFontDownloadRequest" />
@@ -201,9 +201,9 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
+	public HResult GetFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, FontAxisValue*, uint, int>)(lpVtbl[19]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, DWRITE_FONT_AXIS_VALUE*, uint, int>)(lpVtbl[19]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
 
 	public interface Interface : IDWriteFontFaceReference.Interface
@@ -215,7 +215,7 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 		uint GetFontAxisValueCount();
 
 		[VtblIndex(19)]
-		HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount);
+		HResult GetFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount);
 	}
 }
 

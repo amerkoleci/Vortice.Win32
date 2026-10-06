@@ -1,11 +1,11 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
+namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>D3D12MA_ALLOCATOR_FLAGS</unmanaged>
 [Flags]
-public enum AllocatorFlags
+public enum D3D12MA_ALLOCATOR_FLAGS
 {
     /// <unmanaged>D3D12MA_ALLOCATOR_FLAG_NONE</unmanaged>
     None = 0x00,
@@ -23,7 +23,7 @@ public enum AllocatorFlags
 
 /// <unmanaged>D3D12MA_POOL_FLAGS</unmanaged>
 [Flags]
-public enum PoolFlags
+public enum D3D12MA_POOL_FLAGS
 {
     /// <unmanaged>D3D12MA_POOL_FLAG_NONE</unmanaged>
     None = 0x0,
@@ -37,7 +37,7 @@ public enum PoolFlags
 
 /// <unmanaged>D3D12MA_ALLOCATION_FLAGS</unmanaged>
 [Flags]
-public enum AllocationFlags
+public enum D3D12MA_ALLOCATION_FLAGS
 {
     /// <unmanaged>D3D12MA_ALLOCATION_FLAG_NONE</unmanaged>
     None = 0x00000000,
@@ -67,19 +67,19 @@ public enum AllocationFlags
 
 /// <unmanaged>D3D12MA_ALLOCATION_FLAGS</unmanaged>
 [Flags]
-public enum VirtualBlockFlags
+public enum D3D12MA_VIRTUAL_BLOCK_FLAGS
 {
     /// <unmanaged>D3D12MA_VIRTUAL_BLOCK_FLAG_NONE</unmanaged>
     None = 0,
     /// <unmanaged>D3D12MA_VIRTUAL_BLOCK_FLAG_ALGORITHM_LINEAR</unmanaged>
-    AlgorithmLinear = PoolFlags.AlgorithmLinear,
+    AlgorithmLinear = D3D12MA_POOL_FLAGS.AlgorithmLinear,
     /// <unmanaged>D3D12MA_VIRTUAL_BLOCK_FLAG_ALGORITHM_MASK</unmanaged>
-    AlgorithmMask = PoolFlags.AlgorithmMask,
+    AlgorithmMask = D3D12MA_POOL_FLAGS.AlgorithmMask,
 }
 
 /// <unmanaged>D3D12MA_DEFRAGMENTATION_FLAGS</unmanaged>
 [Flags]
-public enum DefragmentationFlags
+public enum D3D12MA_DEFRAGMENTATION_FLAGS
 {
     /// <unmanaged>D3D12MA_DEFRAGMENTATION_FLAG_ALGORITHM_FAST</unmanaged>
     AlgorithmFast = 0x1,
@@ -92,7 +92,7 @@ public enum DefragmentationFlags
 }
 
 /// <unmanaged>D3D12MA_DEFRAGMENTATION_MOVE_OPERATION</unmanaged>
-public enum DefragmentationMoveOperation
+public enum D3D12MA_DEFRAGMENTATION_MOVE_OPERATION
 {
     /// <unmanaged>D3D12MA_DEFRAGMENTATION_MOVE_OPERATION_COPY</unmanaged>
     Copy = 0,
@@ -104,18 +104,18 @@ public enum DefragmentationMoveOperation
 
 /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_FLAGS</unmanaged>
 [Flags]
-public enum VirtualAllocationFlags
+public enum D3D12MA_VIRTUAL_ALLOCATION_FLAGS
 {
     /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_FLAG_NONE</unmanaged>
     None = 0,
     /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_FLAG_UPPER_ADDRESS</unmanaged>
-    UpperAddress = AllocationFlags.UpperAddress,
+    UpperAddress = D3D12MA_ALLOCATION_FLAGS.UpperAddress,
     /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_FLAG_STRATEGY_MIN_MEMORY</unmanaged>
-    StrategyMinMemory = AllocationFlags.StrategyMinMemory,
+    StrategyMinMemory = D3D12MA_ALLOCATION_FLAGS.StrategyMinMemory,
     /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_FLAG_STRATEGY_MIN_TIME</unmanaged>
-    StrategyMinTime = AllocationFlags.StrategyMinTime,
+    StrategyMinTime = D3D12MA_ALLOCATION_FLAGS.StrategyMinTime,
     /// <unmanaged>D3D12MA_VIRTUAL_ALLOCATION_FLAG_STRATEGY_MIN_OFFSET</unmanaged>
-    StrategyMinOffset = AllocationFlags.StrategyMinOffset,
+    StrategyMinOffset = D3D12MA_ALLOCATION_FLAGS.StrategyMinOffset,
     /// <unmanaged>D3D12MA_ALLOCATION_FLAG_STRATEGY_MASK</unmanaged>
-    StrategyMask = AllocationFlags.StrategyMask,
+    StrategyMask = D3D12MA_ALLOCATION_FLAGS.StrategyMask,
 }

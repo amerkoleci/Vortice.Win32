@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock"]/*' />
 /// <unmanaged>ID2D1DrawingStateBlock</unmanaged>
@@ -81,17 +81,17 @@ public unsafe partial struct ID2D1DrawingStateBlock : ID2D1DrawingStateBlock.Int
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::GetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDescription(DrawingStateDescription* stateDescription)
+	public void GetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, DrawingStateDescription*, void>)(lpVtbl[4]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), stateDescription);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, D2D1_DRAWING_STATE_DESCRIPTION*, void>)(lpVtbl[4]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void SetDescription(DrawingStateDescription* stateDescription)
+	public void SetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, DrawingStateDescription*, void>)(lpVtbl[5]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), stateDescription);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, D2D1_DRAWING_STATE_DESCRIPTION*, void>)(lpVtbl[5]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetTextRenderingParams"]/*' />
@@ -113,10 +113,10 @@ public unsafe partial struct ID2D1DrawingStateBlock : ID2D1DrawingStateBlock.Int
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		void GetDescription(DrawingStateDescription* stateDescription);
+		void GetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription);
 
 		[VtblIndex(5)]
-		void SetDescription(DrawingStateDescription* stateDescription);
+		void SetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription);
 
 		[VtblIndex(6)]
 		void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams);

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration"]/*' />
 /// <unmanaged>ID3D12DeviceConfiguration</unmanaged>
@@ -73,10 +73,9 @@ public unsafe partial struct ID3D12DeviceConfiguration : ID3D12DeviceConfigurati
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public DeviceConfigurationDescription GetDesc()
+	public D3D12_DEVICE_CONFIGURATION_DESC GetDesc()
 	{
-		DeviceConfigurationDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration*, DeviceConfigurationDescription*, DeviceConfigurationDescription*>)(lpVtbl[3]))((ID3D12DeviceConfiguration*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration*, D3D12_DEVICE_CONFIGURATION_DESC>)(lpVtbl[3]))((ID3D12DeviceConfiguration*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration::GetEnabledExperimentalFeatures"]/*' />
@@ -90,9 +89,9 @@ public unsafe partial struct ID3D12DeviceConfiguration : ID3D12DeviceConfigurati
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration::SerializeVersionedRootSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SerializeVersionedRootSignature(VersionedRootSignatureDescription* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError)
+	public HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration*, VersionedRootSignatureDescription*, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[5]))((ID3D12DeviceConfiguration*)Unsafe.AsPointer(ref this), pDesc, ppResult, ppError);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration*, D3D12_VERSIONED_ROOT_SIGNATURE_DESC*, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[5]))((ID3D12DeviceConfiguration*)Unsafe.AsPointer(ref this), pDesc, ppResult, ppError);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration::CreateVersionedRootSignatureDeserializer"]/*' />
@@ -106,13 +105,13 @@ public unsafe partial struct ID3D12DeviceConfiguration : ID3D12DeviceConfigurati
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		DeviceConfigurationDescription GetDesc();
+		D3D12_DEVICE_CONFIGURATION_DESC GetDesc();
 
 		[VtblIndex(4)]
 		HResult GetEnabledExperimentalFeatures(Guid* pGuids, uint NumGuids);
 
 		[VtblIndex(5)]
-		HResult SerializeVersionedRootSignature(VersionedRootSignatureDescription* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError);
+		HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError);
 
 		[VtblIndex(6)]
 		HResult CreateVersionedRootSignatureDeserializer(void* pBlob, nuint Size, Guid* riid, void** ppvDeserializer);

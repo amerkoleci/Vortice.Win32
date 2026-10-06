@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder"]/*' />
 /// <unmanaged>IDWriteFontFallbackBuilder</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddMapping(UnicodeRange* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale)
+	public HResult AddMapping(DWRITE_UNICODE_RANGE* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallbackBuilder*, UnicodeRange*, uint, ushort**, uint, IDWriteFontCollection*, char*, char*, float, int>)(lpVtbl[3]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), ranges, rangesCount, targetFamilyNames, targetFamilyNamesCount, fontCollection, localeName, baseFamilyName, scale);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallbackBuilder*, DWRITE_UNICODE_RANGE*, uint, ushort**, uint, IDWriteFontCollection*, char*, char*, float, int>)(lpVtbl[3]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), ranges, rangesCount, targetFamilyNames, targetFamilyNamesCount, fontCollection, localeName, baseFamilyName, scale);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMappings"]/*' />
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddMapping(UnicodeRange* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale);
+		HResult AddMapping(DWRITE_UNICODE_RANGE* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale);
 
 		[VtblIndex(4)]
 		HResult AddMappings(IDWriteFontFallback* fontFallback);

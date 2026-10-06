@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionGaussianBlurEffect"]/*' />
 /// <unmanaged>IDCompositionGaussianBlurEffect</unmanaged>
@@ -97,9 +97,9 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionGaussianBlurEffect::SetBorderMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetBorderMode(Graphics.Direct2D.Common.BorderMode mode)
+	public HResult SetBorderMode(Graphics.Direct2D.Common.D2D1_BORDER_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, Graphics.Direct2D.Common.BorderMode, int>)(lpVtbl[6]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, Graphics.Direct2D.Common.D2D1_BORDER_MODE, int>)(lpVtbl[6]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface
@@ -111,7 +111,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 		HResult SetStandardDeviation(float amount);
 
 		[VtblIndex(6)]
-		HResult SetBorderMode(Graphics.Direct2D.Common.BorderMode mode);
+		HResult SetBorderMode(Graphics.Direct2D.Common.D2D1_BORDER_MODE mode);
 	}
 }
 

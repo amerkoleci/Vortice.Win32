@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext"]/*' />
 /// <unmanaged>ID2D1ColorContext</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ColorSpace GetColorSpace()
+	public D2D1_COLOR_SPACE GetColorSpace()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext*, ColorSpace>)(lpVtbl[4]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext*, D2D1_COLOR_SPACE>)(lpVtbl[4]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfileSize"]/*' />
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		ColorSpace GetColorSpace();
+		D2D1_COLOR_SPACE GetColorSpace();
 
 		[VtblIndex(5)]
 		uint GetProfileSize();

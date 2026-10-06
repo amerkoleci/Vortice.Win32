@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap1"]/*' />
 /// <unmanaged>ID3D12Heap1</unmanaged>
@@ -113,10 +113,9 @@ public unsafe partial struct ID3D12Heap1 : ID3D12Heap1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Heap.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HeapDescription GetDesc()
+	public D3D12_HEAP_DESC GetDesc()
 	{
-		HeapDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12Heap1*, HeapDescription*, HeapDescription*>)(lpVtbl[8]))((ID3D12Heap1*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Heap1*, D3D12_HEAP_DESC>)(lpVtbl[8]))((ID3D12Heap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap1::GetProtectedResourceSession"]/*' />

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDesktopDevice"]/*' />
 /// <unmanaged>IDCompositionDesktopDevice</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.GetFrameStatistics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFrameStatistics(FrameStatistics* statistics)
+	public HResult GetFrameStatistics(DCOMPOSITION_FRAME_STATISTICS* statistics)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, FrameStatistics*, int>)(lpVtbl[5]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), statistics);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, DCOMPOSITION_FRAME_STATISTICS*, int>)(lpVtbl[5]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), statistics);
 	}
 
 	/// <inheritdoc cref="IDCompositionDevice2.CreateVisual" />
@@ -113,17 +113,17 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface)
+	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
 	}
 
 	/// <inheritdoc cref="IDCompositionDevice2.CreateVirtualSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface)
+	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
 
 	/// <inheritdoc cref="IDCompositionDevice2.CreateTranslateTransform" />

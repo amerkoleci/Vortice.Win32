@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference"]/*' />
 /// <unmanaged>IDWriteFontFaceReference</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::CreateFontFaceWithSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateFontFaceWithSimulations(FontSimulations fontFaceSimulationFlags, IDWriteFontFace3** fontFace)
+	public HResult CreateFontFaceWithSimulations(DWRITE_FONT_SIMULATIONS fontFaceSimulationFlags, IDWriteFontFace3** fontFace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, FontSimulations, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, DWRITE_FONT_SIMULATIONS, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::Equals"]/*' />
@@ -105,9 +105,9 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public FontSimulations GetSimulations()
+	public DWRITE_FONT_SIMULATIONS GetSimulations()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, DWRITE_FONT_SIMULATIONS>)(lpVtbl[7]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFontFile"]/*' />
@@ -145,9 +145,9 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Locality GetLocality()
+	public DWRITE_LOCALITY GetLocality()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, DWRITE_LOCALITY>)(lpVtbl[12]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueFontDownloadRequest"]/*' />
@@ -188,7 +188,7 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 		HResult CreateFontFace(IDWriteFontFace3** fontFace);
 
 		[VtblIndex(4)]
-		HResult CreateFontFaceWithSimulations(FontSimulations fontFaceSimulationFlags, IDWriteFontFace3** fontFace);
+		HResult CreateFontFaceWithSimulations(DWRITE_FONT_SIMULATIONS fontFaceSimulationFlags, IDWriteFontFace3** fontFace);
 
 		[VtblIndex(5)]
 		Bool32 Equals(IDWriteFontFaceReference* fontFaceReference);
@@ -197,7 +197,7 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 		uint GetFontFaceIndex();
 
 		[VtblIndex(7)]
-		FontSimulations GetSimulations();
+		DWRITE_FONT_SIMULATIONS GetSimulations();
 
 		[VtblIndex(8)]
 		HResult GetFontFile(IDWriteFontFile** fontFile);
@@ -212,7 +212,7 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 		HResult GetFileTime(ulong* lastWriteTime);
 
 		[VtblIndex(12)]
-		Locality GetLocality();
+		DWRITE_LOCALITY GetLocality();
 
 		[VtblIndex(13)]
 		HResult EnqueueFontDownloadRequest();

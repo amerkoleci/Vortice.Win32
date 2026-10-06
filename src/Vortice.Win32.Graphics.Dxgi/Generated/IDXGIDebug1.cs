@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
 /// <unmanaged>IDXGIDebug1</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDebug.ReportLiveObjects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)
+	public HResult ReportLiveObjects(Guid apiid, DXGI_DEBUG_RLO_FLAGS flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDebug1*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDebug1*, Guid, DXGI_DEBUG_RLO_FLAGS, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView"]/*' />
 /// <unmanaged>ID3D11VideoDecoderOutputView</unmanaged>
@@ -113,15 +113,15 @@ public unsafe partial struct ID3D11VideoDecoderOutputView : ID3D11VideoDecoderOu
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetDesc(VideoDecoderOutputViewDescription* pDesc)
+	public void GetDesc(D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC* pDesc)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoDecoderOutputView*, VideoDecoderOutputViewDescription*, void>)(lpVtbl[8]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), pDesc);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoDecoderOutputView*, D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC*, void>)(lpVtbl[8]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]
-		void GetDesc(VideoDecoderOutputViewDescription* pDesc);
+		void GetDesc(D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC* pDesc);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2SourceVoice"]/*' />
 /// <unmanaged>IXAudio2SourceVoice</unmanaged>
@@ -20,25 +20,25 @@ public unsafe partial struct IXAudio2SourceVoice : IXAudio2SourceVoice.Interface
 	/// <inheritdoc cref="IXAudio2Voice.GetVoiceDetails" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public void GetVoiceDetails(VoiceDetails* pVoiceDetails)
+	public void GetVoiceDetails(XAUDIO2_VOICE_DETAILS* pVoiceDetails)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, VoiceDetails*, void>)(lpVtbl[0]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pVoiceDetails);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_VOICE_DETAILS*, void>)(lpVtbl[0]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pVoiceDetails);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputVoices" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public HResult SetOutputVoices(VoiceSends* pSendList)
+	public HResult SetOutputVoices(XAUDIO2_VOICE_SENDS* pSendList)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, VoiceSends*, int>)(lpVtbl[1]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pSendList);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_VOICE_SENDS*, int>)(lpVtbl[1]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pSendList);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetEffectChain" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public HResult SetEffectChain(EffectChain* pEffectChain)
+	public HResult SetEffectChain(XAUDIO2_EFFECT_CHAIN* pEffectChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, EffectChain*, int>)(lpVtbl[2]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pEffectChain);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_EFFECT_CHAIN*, int>)(lpVtbl[2]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pEffectChain);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.EnableEffect" />
@@ -84,33 +84,33 @@ public unsafe partial struct IXAudio2SourceVoice : IXAudio2SourceVoice.Interface
 	/// <inheritdoc cref="IXAudio2Voice.SetFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetFilterParameters(FilterParameters* pParameters, uint OperationSet)
+	public HResult SetFilterParameters(XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, FilterParameters*, uint, int>)(lpVtbl[8]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pParameters, OperationSet);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_FILTER_PARAMETERS*, uint, int>)(lpVtbl[8]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pParameters, OperationSet);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.GetFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void GetFilterParameters(FilterParameters* pParameters)
+	public void GetFilterParameters(XAUDIO2_FILTER_PARAMETERS* pParameters)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, FilterParameters*, void>)(lpVtbl[9]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pParameters);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_FILTER_PARAMETERS*, void>)(lpVtbl[9]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, FilterParameters* pParameters, uint OperationSet)
+	public HResult SetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, IXAudio2Voice*, FilterParameters*, uint, int>)(lpVtbl[10]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters, OperationSet);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, uint, int>)(lpVtbl[10]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters, OperationSet);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.GetOutputFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, FilterParameters* pParameters)
+	public void GetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, XAUDIO2_FILTER_PARAMETERS* pParameters)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, IXAudio2Voice*, FilterParameters*, void>)(lpVtbl[11]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, void>)(lpVtbl[11]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetVolume" />
@@ -188,9 +188,9 @@ public unsafe partial struct IXAudio2SourceVoice : IXAudio2SourceVoice.Interface
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2SourceVoice::SubmitSourceBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SubmitSourceBuffer(Buffer* pBuffer, BufferWma* pBufferWMA)
+	public HResult SubmitSourceBuffer(XAUDIO2_BUFFER* pBuffer, XAUDIO2_BUFFER_WMA* pBufferWMA)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, Buffer*, BufferWma*, int>)(lpVtbl[21]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pBuffer, pBufferWMA);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_BUFFER*, XAUDIO2_BUFFER_WMA*, int>)(lpVtbl[21]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pBuffer, pBufferWMA);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2SourceVoice::FlushSourceBuffers"]/*' />
@@ -220,9 +220,9 @@ public unsafe partial struct IXAudio2SourceVoice : IXAudio2SourceVoice.Interface
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2SourceVoice::GetState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public void GetState(VoiceState* pVoiceState, uint Flags)
+	public void GetState(XAUDIO2_VOICE_STATE* pVoiceState, uint Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, VoiceState*, uint, void>)(lpVtbl[25]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pVoiceState, Flags);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SourceVoice*, XAUDIO2_VOICE_STATE*, uint, void>)(lpVtbl[25]))((IXAudio2SourceVoice*)Unsafe.AsPointer(ref this), pVoiceState, Flags);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2SourceVoice::SetFrequencyRatio"]/*' />
@@ -258,7 +258,7 @@ public unsafe partial struct IXAudio2SourceVoice : IXAudio2SourceVoice.Interface
 		HResult Stop(uint Flags, uint OperationSet);
 
 		[VtblIndex(21)]
-		HResult SubmitSourceBuffer(Buffer* pBuffer, BufferWma* pBufferWMA);
+		HResult SubmitSourceBuffer(XAUDIO2_BUFFER* pBuffer, XAUDIO2_BUFFER_WMA* pBufferWMA);
 
 		[VtblIndex(22)]
 		HResult FlushSourceBuffers();
@@ -270,7 +270,7 @@ public unsafe partial struct IXAudio2SourceVoice : IXAudio2SourceVoice.Interface
 		HResult ExitLoop(uint OperationSet);
 
 		[VtblIndex(25)]
-		void GetState(VoiceState* pVoiceState, uint Flags);
+		void GetState(XAUDIO2_VOICE_STATE* pVoiceState, uint Flags);
 
 		[VtblIndex(26)]
 		HResult SetFrequencyRatio(float Ratio, uint OperationSet);

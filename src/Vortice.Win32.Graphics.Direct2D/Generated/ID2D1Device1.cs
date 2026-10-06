@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1"]/*' />
 /// <unmanaged>ID2D1Device1</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
 
 	/// <inheritdoc cref="ID2D1Device.SetMaximumTextureMemory" />
@@ -113,37 +113,37 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::GetRenderingPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public RenderingPriority GetRenderingPriority()
+	public D2D1_RENDERING_PRIORITY GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, D2D1_RENDERING_PRIORITY>)(lpVtbl[8]))((ID2D1Device1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::SetRenderingPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void SetRenderingPriority(RenderingPriority renderingPriority)
+	public void SetRenderingPriority(D2D1_RENDERING_PRIORITY renderingPriority)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1Device1*, RenderingPriority, void>)(lpVtbl[9]))((ID2D1Device1*)Unsafe.AsPointer(ref this), renderingPriority);
+		((delegate* unmanaged[MemberFunction]<ID2D1Device1*, D2D1_RENDERING_PRIORITY, void>)(lpVtbl[9]))((ID2D1Device1*)Unsafe.AsPointer(ref this), renderingPriority);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1)
+	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext1);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext1);
 	}
 
 	public interface Interface : ID2D1Device.Interface
 	{
 		[VtblIndex(8)]
-		RenderingPriority GetRenderingPriority();
+		D2D1_RENDERING_PRIORITY GetRenderingPriority();
 
 		[VtblIndex(9)]
-		void SetRenderingPriority(RenderingPriority renderingPriority);
+		void SetRenderingPriority(D2D1_RENDERING_PRIORITY renderingPriority);
 
 		[VtblIndex(10)]
-		HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1);
+		HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1);
 	}
 }
 

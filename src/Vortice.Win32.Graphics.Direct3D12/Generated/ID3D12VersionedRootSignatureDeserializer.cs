@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer"]/*' />
 /// <unmanaged>ID3D12VersionedRootSignatureDeserializer</unmanaged>
@@ -73,26 +73,26 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : ID3D12Ve
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetRootSignatureDescAtVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, VersionedRootSignatureDescription** ppDesc)
+	public HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, D3D12_VERSIONED_ROOT_SIGNATURE_DESC** ppDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, D3D_ROOT_SIGNATURE_VERSION, VersionedRootSignatureDescription**, int>)(lpVtbl[3]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), convertToVersion, ppDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, D3D_ROOT_SIGNATURE_VERSION, D3D12_VERSIONED_ROOT_SIGNATURE_DESC**, int>)(lpVtbl[3]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), convertToVersion, ppDesc);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetUnconvertedRootSignatureDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public VersionedRootSignatureDescription* GetUnconvertedRootSignatureDesc()
+	public D3D12_VERSIONED_ROOT_SIGNATURE_DESC* GetUnconvertedRootSignatureDesc()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, VersionedRootSignatureDescription*>)(lpVtbl[4]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, D3D12_VERSIONED_ROOT_SIGNATURE_DESC*>)(lpVtbl[4]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, VersionedRootSignatureDescription** ppDesc);
+		HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, D3D12_VERSIONED_ROOT_SIGNATURE_DESC** ppDesc);
 
 		[VtblIndex(4)]
-		VersionedRootSignatureDescription* GetUnconvertedRootSignatureDesc();
+		D3D12_VERSIONED_ROOT_SIGNATURE_DESC* GetUnconvertedRootSignatureDesc();
 	}
 }
 

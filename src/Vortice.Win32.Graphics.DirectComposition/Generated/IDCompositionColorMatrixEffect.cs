@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectComposition;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect"]/*' />
 /// <unmanaged>IDCompositionColorMatrixEffect</unmanaged>
@@ -105,9 +105,9 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetAlphaMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetAlphaMode(Graphics.Direct2D.Common.ColorMatrixAlphaMode mode)
+	public HResult SetAlphaMode(Graphics.Direct2D.Common.D2D1_COLORMATRIX_ALPHA_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, Graphics.Direct2D.Common.ColorMatrixAlphaMode, int>)(lpVtbl[7]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, Graphics.Direct2D.Common.D2D1_COLORMATRIX_ALPHA_MODE, int>)(lpVtbl[7]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetClampOutput"]/*' />
@@ -130,7 +130,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 		HResult SetMatrixElement(int row, int column, float value);
 
 		[VtblIndex(7)]
-		HResult SetAlphaMode(Graphics.Direct2D.Common.ColorMatrixAlphaMode mode);
+		HResult SetAlphaMode(Graphics.Direct2D.Common.D2D1_COLORMATRIX_ALPHA_MODE mode);
 
 		[VtblIndex(8)]
 		HResult SetClampOutput(Bool32 clamp);

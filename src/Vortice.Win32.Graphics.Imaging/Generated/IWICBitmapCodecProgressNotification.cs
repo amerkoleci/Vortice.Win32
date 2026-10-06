@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification"]/*' />
 /// <unmanaged>IWICBitmapCodecProgressNotification</unmanaged>

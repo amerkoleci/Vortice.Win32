@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection"]/*' />
 /// <unmanaged>ID3D11FunctionParameterReflection</unmanaged>
@@ -45,15 +45,15 @@ public unsafe partial struct ID3D11FunctionParameterReflection : ID3D11FunctionP
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetDesc(ParameterDescription* pDesc)
+	public HResult GetDesc(D3D11_PARAMETER_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionParameterReflection*, ParameterDescription*, int>)(lpVtbl[0]))((ID3D11FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionParameterReflection*, D3D11_PARAMETER_DESC*, int>)(lpVtbl[0]))((ID3D11FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetDesc(ParameterDescription* pDesc);
+		HResult GetDesc(D3D11_PARAMETER_DESC* pDesc);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType"]/*' />
 /// <unmanaged>ID3D11ShaderReflectionType</unmanaged>
@@ -45,9 +45,9 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetDesc(ShaderTypeDescription* pDesc)
+	public HResult GetDesc(D3D11_SHADER_TYPE_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ShaderTypeDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, D3D11_SHADER_TYPE_DESC*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeByIndex"]/*' />
@@ -133,7 +133,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetDesc(ShaderTypeDescription* pDesc);
+		HResult GetDesc(D3D11_SHADER_TYPE_DESC* pDesc);
 
 		[VtblIndex(1)]
 		ID3D11ShaderReflectionType* GetMemberTypeByIndex(uint Index);

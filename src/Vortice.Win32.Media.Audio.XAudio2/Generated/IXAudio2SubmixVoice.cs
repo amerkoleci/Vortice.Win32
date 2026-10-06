@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2SubmixVoice"]/*' />
 /// <unmanaged>IXAudio2SubmixVoice</unmanaged>
@@ -20,25 +20,25 @@ public unsafe partial struct IXAudio2SubmixVoice : IXAudio2SubmixVoice.Interface
 	/// <inheritdoc cref="IXAudio2Voice.GetVoiceDetails" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public void GetVoiceDetails(VoiceDetails* pVoiceDetails)
+	public void GetVoiceDetails(XAUDIO2_VOICE_DETAILS* pVoiceDetails)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, VoiceDetails*, void>)(lpVtbl[0]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pVoiceDetails);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, XAUDIO2_VOICE_DETAILS*, void>)(lpVtbl[0]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pVoiceDetails);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputVoices" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public HResult SetOutputVoices(VoiceSends* pSendList)
+	public HResult SetOutputVoices(XAUDIO2_VOICE_SENDS* pSendList)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, VoiceSends*, int>)(lpVtbl[1]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pSendList);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, XAUDIO2_VOICE_SENDS*, int>)(lpVtbl[1]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pSendList);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetEffectChain" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public HResult SetEffectChain(EffectChain* pEffectChain)
+	public HResult SetEffectChain(XAUDIO2_EFFECT_CHAIN* pEffectChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, EffectChain*, int>)(lpVtbl[2]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pEffectChain);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, XAUDIO2_EFFECT_CHAIN*, int>)(lpVtbl[2]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pEffectChain);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.EnableEffect" />
@@ -84,33 +84,33 @@ public unsafe partial struct IXAudio2SubmixVoice : IXAudio2SubmixVoice.Interface
 	/// <inheritdoc cref="IXAudio2Voice.SetFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetFilterParameters(FilterParameters* pParameters, uint OperationSet)
+	public HResult SetFilterParameters(XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, FilterParameters*, uint, int>)(lpVtbl[8]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pParameters, OperationSet);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, XAUDIO2_FILTER_PARAMETERS*, uint, int>)(lpVtbl[8]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pParameters, OperationSet);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.GetFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void GetFilterParameters(FilterParameters* pParameters)
+	public void GetFilterParameters(XAUDIO2_FILTER_PARAMETERS* pParameters)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, FilterParameters*, void>)(lpVtbl[9]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pParameters);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, XAUDIO2_FILTER_PARAMETERS*, void>)(lpVtbl[9]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, FilterParameters* pParameters, uint OperationSet)
+	public HResult SetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, IXAudio2Voice*, FilterParameters*, uint, int>)(lpVtbl[10]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters, OperationSet);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, uint, int>)(lpVtbl[10]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters, OperationSet);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.GetOutputFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, FilterParameters* pParameters)
+	public void GetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, XAUDIO2_FILTER_PARAMETERS* pParameters)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, IXAudio2Voice*, FilterParameters*, void>)(lpVtbl[11]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters);
+		((delegate* unmanaged[MemberFunction]<IXAudio2SubmixVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, void>)(lpVtbl[11]))((IXAudio2SubmixVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters);
 	}
 
 	/// <inheritdoc cref="IXAudio2Voice.SetVolume" />

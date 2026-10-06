@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug"]/*' />
 /// <unmanaged>ID3D11Debug</unmanaged>
@@ -129,9 +129,9 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ReportLiveDeviceObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)
+	public HResult ReportLiveDeviceObjects(D3D11_RLDO_FLAGS Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, D3D11_RLDO_FLAGS, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContextForDispatch"]/*' />
@@ -166,7 +166,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 		HResult ValidateContext(ID3D11DeviceContext* pContext);
 
 		[VtblIndex(10)]
-		HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags);
+		HResult ReportLiveDeviceObjects(D3D11_RLDO_FLAGS Flags);
 
 		[VtblIndex(11)]
 		HResult ValidateContextForDispatch(ID3D11DeviceContext* pContext);

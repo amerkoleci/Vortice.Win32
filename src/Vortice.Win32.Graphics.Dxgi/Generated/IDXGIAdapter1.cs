@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter1"]/*' />
 /// <unmanaged>IDXGIAdapter1</unmanaged>
@@ -113,9 +113,9 @@ public unsafe partial struct IDXGIAdapter1 : IDXGIAdapter1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDesc(AdapterDescription* pDesc)
+	public HResult GetDesc(DXGI_ADAPTER_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter1*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter1*, DXGI_ADAPTER_DESC*, int>)(lpVtbl[8]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
@@ -129,15 +129,15 @@ public unsafe partial struct IDXGIAdapter1 : IDXGIAdapter1.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetDesc1(AdapterDescription1* pDesc)
+	public HResult GetDesc1(DXGI_ADAPTER_DESC1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter1*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter1*, DXGI_ADAPTER_DESC1*, int>)(lpVtbl[10]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	public interface Interface : IDXGIAdapter.Interface
 	{
 		[VtblIndex(10)]
-		HResult GetDesc1(AdapterDescription1* pDesc);
+		HResult GetDesc1(DXGI_ADAPTER_DESC1* pDesc);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Layer"]/*' />
 /// <unmanaged>ID2D1Layer</unmanaged>
@@ -83,8 +83,7 @@ public unsafe partial struct ID2D1Layer : ID2D1Layer.Interface, INativeGuid
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()
 	{
-		System.Drawing.SizeF result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1Layer*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Layer*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Layer*, System.Drawing.SizeF>)(lpVtbl[4]))((ID2D1Layer*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1Resource.Interface

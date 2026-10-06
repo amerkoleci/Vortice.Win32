@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary"]/*' />
 /// <unmanaged>ID3D12PipelineLibrary</unmanaged>
@@ -121,17 +121,17 @@ public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Inter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadGraphicsPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult LoadGraphicsPipeline(char* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadGraphicsPipeline(char* pName, D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, D3D12_GRAPHICS_PIPELINE_STATE_DESC*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadComputePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult LoadComputePipeline(char* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadComputePipeline(char* pName, D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, D3D12_COMPUTE_PIPELINE_STATE_DESC*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::GetSerializedSize"]/*' />
@@ -156,10 +156,10 @@ public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Inter
 		HResult StorePipeline(char* pName, ID3D12PipelineState* pPipeline);
 
 		[VtblIndex(9)]
-		HResult LoadGraphicsPipeline(char* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+		HResult LoadGraphicsPipeline(char* pName, D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(10)]
-		HResult LoadComputePipeline(char* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+		HResult LoadComputePipeline(char* pName, D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(11)]
 		nuint GetSerializedSize();

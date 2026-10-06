@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont"]/*' />
 /// <unmanaged>IDWriteFont</unmanaged>
@@ -81,25 +81,25 @@ public unsafe partial struct IDWriteFont : IDWriteFont.Interface, INativeGuid
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public FontWeight GetWeight()
+	public DWRITE_FONT_WEIGHT GetWeight()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, FontWeight>)(lpVtbl[4]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, DWRITE_FONT_WEIGHT>)(lpVtbl[4]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public FontStretch GetStretch()
+	public DWRITE_FONT_STRETCH GetStretch()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, FontStretch>)(lpVtbl[5]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, DWRITE_FONT_STRETCH>)(lpVtbl[5]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public FontStyle GetStyle()
+	public DWRITE_FONT_STYLE GetStyle()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, FontStyle>)(lpVtbl[6]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, DWRITE_FONT_STYLE>)(lpVtbl[6]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::IsSymbolFont"]/*' />
@@ -121,25 +121,25 @@ public unsafe partial struct IDWriteFont : IDWriteFont.Interface, INativeGuid
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetInformationalStrings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetInformationalStrings(InformationalStringId informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
+	public HResult GetInformationalStrings(DWRITE_INFORMATIONAL_STRING_ID informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, InformationalStringId, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, DWRITE_INFORMATIONAL_STRING_ID, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public FontSimulations GetSimulations()
+	public DWRITE_FONT_SIMULATIONS GetSimulations()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, FontSimulations>)(lpVtbl[10]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont*, DWRITE_FONT_SIMULATIONS>)(lpVtbl[10]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetMetrics(FontMetrics* fontMetrics)
+	public void GetMetrics(DWRITE_FONT_METRICS* fontMetrics)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFont*, FontMetrics*, void>)(lpVtbl[11]))((IDWriteFont*)Unsafe.AsPointer(ref this), fontMetrics);
+		((delegate* unmanaged[MemberFunction]<IDWriteFont*, DWRITE_FONT_METRICS*, void>)(lpVtbl[11]))((IDWriteFont*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::HasCharacter"]/*' />
@@ -164,13 +164,13 @@ public unsafe partial struct IDWriteFont : IDWriteFont.Interface, INativeGuid
 		HResult GetFontFamily(IDWriteFontFamily** fontFamily);
 
 		[VtblIndex(4)]
-		FontWeight GetWeight();
+		DWRITE_FONT_WEIGHT GetWeight();
 
 		[VtblIndex(5)]
-		FontStretch GetStretch();
+		DWRITE_FONT_STRETCH GetStretch();
 
 		[VtblIndex(6)]
-		FontStyle GetStyle();
+		DWRITE_FONT_STYLE GetStyle();
 
 		[VtblIndex(7)]
 		Bool32 IsSymbolFont();
@@ -179,13 +179,13 @@ public unsafe partial struct IDWriteFont : IDWriteFont.Interface, INativeGuid
 		HResult GetFaceNames(IDWriteLocalizedStrings** names);
 
 		[VtblIndex(9)]
-		HResult GetInformationalStrings(InformationalStringId informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists);
+		HResult GetInformationalStrings(DWRITE_INFORMATIONAL_STRING_ID informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists);
 
 		[VtblIndex(10)]
-		FontSimulations GetSimulations();
+		DWRITE_FONT_SIMULATIONS GetSimulations();
 
 		[VtblIndex(11)]
-		void GetMetrics(FontMetrics* fontMetrics);
+		void GetMetrics(DWRITE_FONT_METRICS* fontMetrics);
 
 		[VtblIndex(12)]
 		HResult HasCharacter(uint unicodeValue, Bool32* exists);

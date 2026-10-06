@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection3"]/*' />
 /// <unmanaged>IDWriteFontCollection3</unmanaged>
@@ -129,17 +129,17 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection2.GetMatchingFonts" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetMatchingFonts(char* familyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
+	public HResult GetMatchingFonts(char* familyName, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, char*, FontAxisValue*, uint, IDWriteFontList2**, int>)(lpVtbl[10]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), familyName, fontAxisValues, fontAxisValueCount, fontList);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, char*, DWRITE_FONT_AXIS_VALUE*, uint, IDWriteFontList2**, int>)(lpVtbl[10]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), familyName, fontAxisValues, fontAxisValueCount, fontList);
 	}
 
 	/// <inheritdoc cref="IDWriteFontCollection2.GetFontFamilyModel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public FontFamilyModel GetFontFamilyModel()
+	public DWRITE_FONT_FAMILY_MODEL GetFontFamilyModel()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, FontFamilyModel>)(lpVtbl[11]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, DWRITE_FONT_FAMILY_MODEL>)(lpVtbl[11]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontCollection2.GetFontSet" />

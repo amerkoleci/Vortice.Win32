@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource"]/*' />
 /// <unmanaged>ID3D12Resource</unmanaged>
@@ -113,26 +113,25 @@ public unsafe partial struct ID3D12Resource : ID3D12Resource.Interface, INativeG
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Map(uint Subresource, Range* pReadRange, void** ppData)
+	public HResult Map(uint Subresource, D3D12_RANGE* pReadRange, void** ppData)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, uint, Range*, void**, int>)(lpVtbl[8]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Subresource, pReadRange, ppData);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, uint, D3D12_RANGE*, void**, int>)(lpVtbl[8]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Subresource, pReadRange, ppData);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void Unmap(uint Subresource, Range* pWrittenRange)
+	public void Unmap(uint Subresource, D3D12_RANGE* pWrittenRange)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12Resource*, uint, Range*, void>)(lpVtbl[9]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Subresource, pWrittenRange);
+		((delegate* unmanaged[MemberFunction]<ID3D12Resource*, uint, D3D12_RANGE*, void>)(lpVtbl[9]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Subresource, pWrittenRange);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public ResourceDescription GetDesc()
+	public D3D12_RESOURCE_DESC GetDesc()
 	{
-		ResourceDescription result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12Resource*, ResourceDescription*, ResourceDescription*>)(lpVtbl[10]))((ID3D12Resource*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, D3D12_RESOURCE_DESC>)(lpVtbl[10]))((ID3D12Resource*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetGPUVirtualAddress"]/*' />
@@ -146,49 +145,49 @@ public unsafe partial struct ID3D12Resource : ID3D12Resource.Interface, INativeG
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::WriteToSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult WriteToSubresource(uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
+	public HResult WriteToSubresource(uint DstSubresource, D3D12_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, uint, Box*, void*, uint, uint, int>)(lpVtbl[12]))((ID3D12Resource*)Unsafe.AsPointer(ref this), DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, uint, D3D12_BOX*, void*, uint, uint, int>)(lpVtbl[12]))((ID3D12Resource*)Unsafe.AsPointer(ref this), DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::ReadFromSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, Box* pSrcBox)
+	public HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, D3D12_BOX* pSrcBox)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, void*, uint, uint, uint, Box*, int>)(lpVtbl[13]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, SrcSubresource, pSrcBox);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, void*, uint, uint, uint, D3D12_BOX*, int>)(lpVtbl[13]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, SrcSubresource, pSrcBox);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetHeapProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetHeapProperties(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags)
+	public HResult GetHeapProperties(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, HeapProperties*, D3D12_HEAP_FLAGS*, int>)(lpVtbl[14]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, D3D12_HEAP_PROPERTIES*, D3D12_HEAP_FLAGS*, int>)(lpVtbl[14]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
 	}
 
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]
-		HResult Map(uint Subresource, Range* pReadRange, void** ppData);
+		HResult Map(uint Subresource, D3D12_RANGE* pReadRange, void** ppData);
 
 		[VtblIndex(9)]
-		void Unmap(uint Subresource, Range* pWrittenRange);
+		void Unmap(uint Subresource, D3D12_RANGE* pWrittenRange);
 
 		[VtblIndex(10)]
-		ResourceDescription GetDesc();
+		D3D12_RESOURCE_DESC GetDesc();
 
 		[VtblIndex(11)]
 		ulong GetGPUVirtualAddress();
 
 		[VtblIndex(12)]
-		HResult WriteToSubresource(uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch);
+		HResult WriteToSubresource(uint DstSubresource, D3D12_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch);
 
 		[VtblIndex(13)]
-		HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, Box* pSrcBox);
+		HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, D3D12_BOX* pSrcBox);
 
 		[VtblIndex(14)]
-		HResult GetHeapProperties(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags);
+		HResult GetHeapProperties(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags);
 	}
 }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl"]/*' />
 /// <unmanaged>ID2D1EffectImpl</unmanaged>
@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::PrepareForRender"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult PrepareForRender(ChangeType changeType)
+	public HResult PrepareForRender(D2D1_CHANGE_TYPE changeType)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectImpl*, ChangeType, int>)(lpVtbl[4]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), changeType);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectImpl*, D2D1_CHANGE_TYPE, int>)(lpVtbl[4]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), changeType);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::SetGraph"]/*' />
@@ -100,7 +100,7 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 		HResult Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph);
 
 		[VtblIndex(4)]
-		HResult PrepareForRender(ChangeType changeType);
+		HResult PrepareForRender(D2D1_CHANGE_TYPE changeType);
 
 		[VtblIndex(5)]
 		HResult SetGraph(ID2D1TransformGraph* transformGraph);

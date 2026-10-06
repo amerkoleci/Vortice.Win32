@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GBVDiagnostics"]/*' />
 /// <unmanaged>ID3D12GBVDiagnostics</unmanaged>
@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12GBVDiagnostics : ID3D12GBVDiagnostics.Interfa
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GBVDiagnostics::GetGBVResourceInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetGBVResourceInfo(ID3D12Resource* pResource, ResourceDescription* pResourceDesc, uint* pResourceHash, uint* pSubresourceStatesByteOffset)
+	public HResult GetGBVResourceInfo(ID3D12Resource* pResource, D3D12_RESOURCE_DESC* pResourceDesc, uint* pResourceHash, uint* pSubresourceStatesByteOffset)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12GBVDiagnostics*, ID3D12Resource*, ResourceDescription*, uint*, uint*, int>)(lpVtbl[6]))((ID3D12GBVDiagnostics*)Unsafe.AsPointer(ref this), pResource, pResourceDesc, pResourceHash, pSubresourceStatesByteOffset);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12GBVDiagnostics*, ID3D12Resource*, D3D12_RESOURCE_DESC*, uint*, uint*, int>)(lpVtbl[6]))((ID3D12GBVDiagnostics*)Unsafe.AsPointer(ref this), pResource, pResourceDesc, pResourceHash, pSubresourceStatesByteOffset);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GBVDiagnostics::GBVReserved0"]/*' />
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12GBVDiagnostics : ID3D12GBVDiagnostics.Interfa
 		HResult GetGBVResourceUniformState(ID3D12Resource* pResource, int* pData);
 
 		[VtblIndex(6)]
-		HResult GetGBVResourceInfo(ID3D12Resource* pResource, ResourceDescription* pResourceDesc, uint* pResourceHash, uint* pSubresourceStatesByteOffset);
+		HResult GetGBVResourceInfo(ID3D12Resource* pResource, D3D12_RESOURCE_DESC* pResourceDesc, uint* pResourceHash, uint* pSubresourceStatesByteOffset);
 
 		[VtblIndex(7)]
 		void GBVReserved0();

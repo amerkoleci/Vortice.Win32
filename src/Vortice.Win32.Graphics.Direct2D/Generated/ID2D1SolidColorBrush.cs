@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush"]/*' />
 /// <unmanaged>ID2D1SolidColorBrush</unmanaged>
@@ -123,8 +123,7 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(9)]
 	public Color4 GetColor()
 	{
-		Color4 result;
-		return *((delegate* unmanaged[MemberFunction]<ID2D1SolidColorBrush*, Color4*, Color4*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SolidColorBrush*, Color4>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1Brush.Interface

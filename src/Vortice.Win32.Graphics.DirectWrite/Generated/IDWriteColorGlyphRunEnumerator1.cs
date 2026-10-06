@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1"]/*' />
 /// <unmanaged>IDWriteColorGlyphRunEnumerator1</unmanaged>
@@ -81,23 +81,23 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	/// <inheritdoc cref="IDWriteColorGlyphRunEnumerator.GetCurrentRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCurrentRun(ColorGlyphRun** colorGlyphRun)
+	public HResult GetCurrentRun(DWRITE_COLOR_GLYPH_RUN** colorGlyphRun)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, DWRITE_COLOR_GLYPH_RUN**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1::GetCurrentRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetCurrentRun(ColorGlyphRun1** colorGlyphRun)
+	public HResult GetCurrentRun(DWRITE_COLOR_GLYPH_RUN1** colorGlyphRun)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun1**, int>)(lpVtbl[5]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, DWRITE_COLOR_GLYPH_RUN1**, int>)(lpVtbl[5]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
 
 	public interface Interface : IDWriteColorGlyphRunEnumerator.Interface
 	{
 		[VtblIndex(5)]
-		HResult GetCurrentRun(ColorGlyphRun1** colorGlyphRun);
+		HResult GetCurrentRun(DWRITE_COLOR_GLYPH_RUN1** colorGlyphRun);
 	}
 }
 

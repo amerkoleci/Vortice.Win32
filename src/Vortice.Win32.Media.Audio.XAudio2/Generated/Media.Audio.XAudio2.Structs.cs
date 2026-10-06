@@ -7,11 +7,11 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES"]/*' />
 /// <unmanaged>XAPO_REGISTRATION_PROPERTIES</unmanaged>
-public partial struct XAPORegistrationProperties
+public partial struct XAPO_REGISTRATION_PROPERTIES
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::clsid"]/*' />
 	public Guid clsid;
@@ -46,7 +46,7 @@ public partial struct XAPORegistrationProperties
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_LOCKFORPROCESS_PARAMETERS"]/*' />
 /// <unmanaged>XAPO_LOCKFORPROCESS_PARAMETERS</unmanaged>
-public partial struct XAPOLockForProcessParameters
+public partial struct XAPO_LOCKFORPROCESS_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_LOCKFORPROCESS_PARAMETERS::pFormat"]/*' />
 	public unsafe Media.Audio.WaveFormatEx* pFormat;
@@ -57,13 +57,13 @@ public partial struct XAPOLockForProcessParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_PROCESS_BUFFER_PARAMETERS"]/*' />
 /// <unmanaged>XAPO_PROCESS_BUFFER_PARAMETERS</unmanaged>
-public partial struct XAPOProcessBufferParameters
+public partial struct XAPO_PROCESS_BUFFER_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_PROCESS_BUFFER_PARAMETERS::pBuffer"]/*' />
 	public unsafe void* pBuffer;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_PROCESS_BUFFER_PARAMETERS::BufferFlags"]/*' />
-	public XAPOBufferFlags BufferFlags;
+	public XAPO_BUFFER_FLAGS BufferFlags;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_PROCESS_BUFFER_PARAMETERS::ValidFrameCount"]/*' />
 	public uint ValidFrameCount;
@@ -71,7 +71,7 @@ public partial struct XAPOProcessBufferParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="FXEQ_PARAMETERS"]/*' />
 /// <unmanaged>FXEQ_PARAMETERS</unmanaged>
-public partial struct FXEQParameters
+public partial struct FXEQ_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="FXEQ_PARAMETERS::FrequencyCenter0"]/*' />
 	public float FrequencyCenter0;
@@ -112,7 +112,7 @@ public partial struct FXEQParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="FXMASTERINGLIMITER_PARAMETERS"]/*' />
 /// <unmanaged>FXMASTERINGLIMITER_PARAMETERS</unmanaged>
-public partial struct FxMasteringLimiterParameters
+public partial struct FXMASTERINGLIMITER_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="FXMASTERINGLIMITER_PARAMETERS::Release"]/*' />
 	public uint Release;
@@ -123,7 +123,7 @@ public partial struct FxMasteringLimiterParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="FXREVERB_PARAMETERS"]/*' />
 /// <unmanaged>FXREVERB_PARAMETERS</unmanaged>
-public partial struct FxReverbParameters
+public partial struct FXREVERB_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="FXREVERB_PARAMETERS::Diffusion"]/*' />
 	public float Diffusion;
@@ -134,7 +134,7 @@ public partial struct FxReverbParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="FXECHO_INITDATA"]/*' />
 /// <unmanaged>FXECHO_INITDATA</unmanaged>
-public partial struct FxEchoInitData
+public partial struct FXECHO_INITDATA
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="FXECHO_INITDATA::MaxDelay"]/*' />
 	public float MaxDelay;
@@ -142,7 +142,7 @@ public partial struct FxEchoInitData
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="FXECHO_PARAMETERS"]/*' />
 /// <unmanaged>FXECHO_PARAMETERS</unmanaged>
-public partial struct FxEchoParameters
+public partial struct FXECHO_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="FXECHO_PARAMETERS::WetDryMix"]/*' />
 	public float WetDryMix;
@@ -156,7 +156,7 @@ public partial struct FxEchoParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_DETAILS"]/*' />
 /// <unmanaged>XAUDIO2_VOICE_DETAILS</unmanaged>
-public partial struct VoiceDetails
+public partial struct XAUDIO2_VOICE_DETAILS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_DETAILS::CreationFlags"]/*' />
 	public uint CreationFlags;
@@ -173,35 +173,35 @@ public partial struct VoiceDetails
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_SEND_DESCRIPTOR"]/*' />
 /// <unmanaged>XAUDIO2_SEND_DESCRIPTOR</unmanaged>
-public partial struct SendDescriptor
+public partial struct XAUDIO2_SEND_DESCRIPTOR
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_SEND_DESCRIPTOR::Flags"]/*' />
 	public uint Flags;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_SEND_DESCRIPTOR::pOutputVoice"]/*' />
-	public unsafe IXAudio2Voice* pOutputVoice;
+	public IXAudio2Voice pOutputVoice;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_SENDS"]/*' />
 /// <unmanaged>XAUDIO2_VOICE_SENDS</unmanaged>
-public partial struct VoiceSends
+public partial struct XAUDIO2_VOICE_SENDS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_SENDS::SendCount"]/*' />
 	public uint SendCount;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_SENDS::pSends"]/*' />
-	public unsafe SendDescriptor* pSends;
+	public unsafe XAUDIO2_SEND_DESCRIPTOR* pSends;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR"]/*' />
 /// <unmanaged>XAUDIO2_EFFECT_DESCRIPTOR</unmanaged>
-public partial struct EffectDescriptor
+public partial struct XAUDIO2_EFFECT_DESCRIPTOR
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR::pEffect"]/*' />
-	public unsafe IUnknown* pEffect;
+	public IUnknown pEffect;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR::InitialState"]/*' />
-	public Bool32 InitialState;
+	public BOOL InitialState;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR::OutputChannels"]/*' />
 	public uint OutputChannels;
@@ -209,21 +209,21 @@ public partial struct EffectDescriptor
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_CHAIN"]/*' />
 /// <unmanaged>XAUDIO2_EFFECT_CHAIN</unmanaged>
-public partial struct EffectChain
+public partial struct XAUDIO2_EFFECT_CHAIN
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_CHAIN::EffectCount"]/*' />
 	public uint EffectCount;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_CHAIN::pEffectDescriptors"]/*' />
-	public unsafe EffectDescriptor* pEffectDescriptors;
+	public unsafe XAUDIO2_EFFECT_DESCRIPTOR* pEffectDescriptors;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_FILTER_PARAMETERS"]/*' />
 /// <unmanaged>XAUDIO2_FILTER_PARAMETERS</unmanaged>
-public partial struct FilterParameters
+public partial struct XAUDIO2_FILTER_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_FILTER_PARAMETERS::Type"]/*' />
-	public FilterType Type;
+	public XAUDIO2_FILTER_TYPE Type;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_FILTER_PARAMETERS::Frequency"]/*' />
 	public float Frequency;
@@ -234,7 +234,7 @@ public partial struct FilterParameters
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_BUFFER"]/*' />
 /// <unmanaged>XAUDIO2_BUFFER</unmanaged>
-public partial struct Buffer
+public partial struct XAUDIO2_BUFFER
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_BUFFER::Flags"]/*' />
 	public uint Flags;
@@ -266,7 +266,7 @@ public partial struct Buffer
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_BUFFER_WMA"]/*' />
 /// <unmanaged>XAUDIO2_BUFFER_WMA</unmanaged>
-public partial struct BufferWma
+public partial struct XAUDIO2_BUFFER_WMA
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_BUFFER_WMA::pDecodedPacketCumulativeBytes"]/*' />
 	public unsafe uint* pDecodedPacketCumulativeBytes;
@@ -277,7 +277,7 @@ public partial struct BufferWma
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_STATE"]/*' />
 /// <unmanaged>XAUDIO2_VOICE_STATE</unmanaged>
-public partial struct VoiceState
+public partial struct XAUDIO2_VOICE_STATE
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_STATE::pCurrentBufferContext"]/*' />
 	public unsafe void* pCurrentBufferContext;
@@ -291,7 +291,7 @@ public partial struct VoiceState
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_PERFORMANCE_DATA"]/*' />
 /// <unmanaged>XAUDIO2_PERFORMANCE_DATA</unmanaged>
-public partial struct PerformanceData
+public partial struct XAUDIO2_PERFORMANCE_DATA
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_PERFORMANCE_DATA::AudioCyclesSinceLastQuery"]/*' />
 	public ulong AudioCyclesSinceLastQuery;
@@ -338,7 +338,7 @@ public partial struct PerformanceData
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION"]/*' />
 /// <unmanaged>XAUDIO2_DEBUG_CONFIGURATION</unmanaged>
-public partial struct DebugConfiguration
+public partial struct XAUDIO2_DEBUG_CONFIGURATION
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::TraceMask"]/*' />
 	public LogType TraceMask;
@@ -347,21 +347,21 @@ public partial struct DebugConfiguration
 	public LogType BreakMask;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogThreadID"]/*' />
-	public Bool32 LogThreadID;
+	public BOOL LogThreadID;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogFileline"]/*' />
-	public Bool32 LogFileline;
+	public BOOL LogFileline;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogFunctionName"]/*' />
-	public Bool32 LogFunctionName;
+	public BOOL LogFunctionName;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogTiming"]/*' />
-	public Bool32 LogTiming;
+	public BOOL LogTiming;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_VOLUMEMETER_LEVELS"]/*' />
 /// <unmanaged>XAUDIO2FX_VOLUMEMETER_LEVELS</unmanaged>
-public partial struct FXVolumeMeterLevels
+public partial struct XAUDIO2FX_VOLUMEMETER_LEVELS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_VOLUMEMETER_LEVELS::pPeakLevels"]/*' />
 	public unsafe float* pPeakLevels;
@@ -375,7 +375,7 @@ public partial struct FXVolumeMeterLevels
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_PARAMETERS"]/*' />
 /// <unmanaged>XAUDIO2FX_REVERB_PARAMETERS</unmanaged>
-public partial struct FXReverbParameters
+public partial struct XAUDIO2FX_REVERB_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_PARAMETERS::WetDryMix"]/*' />
 	public float WetDryMix;
@@ -447,12 +447,12 @@ public partial struct FXReverbParameters
 	public float RoomSize;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_PARAMETERS::DisableLateField"]/*' />
-	public Bool32 DisableLateField;
+	public BOOL DisableLateField;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_I3DL2_PARAMETERS"]/*' />
 /// <unmanaged>XAUDIO2FX_REVERB_I3DL2_PARAMETERS</unmanaged>
-public partial struct FXReverbI3DL2Parameters
+public partial struct XAUDIO2FX_REVERB_I3DL2_PARAMETERS
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_I3DL2_PARAMETERS::WetDryMix"]/*' />
 	public float WetDryMix;

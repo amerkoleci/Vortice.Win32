@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
 /// <unmanaged>IDXGIDevice4</unmanaged>
@@ -113,17 +113,17 @@ public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice.CreateSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, Usage Usage, SharedResource* pSharedResource, IDXGISurface** ppSurface)
+	public HResult CreateSurface(DXGI_SURFACE_DESC* pDesc, uint NumSurfaces, DXGI_USAGE Usage, DXGI_SHARED_RESOURCE* pSharedResource, IDXGISurface** ppSurface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, SurfaceDescription*, uint, Usage, SharedResource*, IDXGISurface**, int>)(lpVtbl[8]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, DXGI_SURFACE_DESC*, uint, DXGI_USAGE, DXGI_SHARED_RESOURCE*, IDXGISurface**, int>)(lpVtbl[8]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
 	}
 
 	/// <inheritdoc cref="IDXGIDevice.QueryResourceResidency" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult QueryResourceResidency(IUnknown** ppResources, Residency* pResidencyStatus, uint NumResources)
+	public HResult QueryResourceResidency(IUnknown** ppResources, DXGI_RESIDENCY* pResidencyStatus, uint NumResources)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, IUnknown**, Residency*, uint, int>)(lpVtbl[9]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, IUnknown**, DXGI_RESIDENCY*, uint, int>)(lpVtbl[9]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
 	}
 
 	/// <inheritdoc cref="IDXGIDevice.SetGPUThreadPriority" />
@@ -161,9 +161,9 @@ public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice2.OfferResources" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult OfferResources(uint NumResources, IDXGIResource** ppResources, OfferResourcePriority Priority)
+	public HResult OfferResources(uint NumResources, IDXGIResource** ppResources, DXGI_OFFER_RESOURCE_PRIORITY Priority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, uint, IDXGIResource**, OfferResourcePriority, int>)(lpVtbl[14]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, uint, IDXGIResource**, DXGI_OFFER_RESOURCE_PRIORITY, int>)(lpVtbl[14]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
 	}
 
 	/// <inheritdoc cref="IDXGIDevice2.ReclaimResources" />
@@ -193,26 +193,26 @@ public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4::OfferResources1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult OfferResources1(uint NumResources, IDXGIResource** ppResources, OfferResourcePriority Priority, uint Flags)
+	public HResult OfferResources1(uint NumResources, IDXGIResource** ppResources, DXGI_OFFER_RESOURCE_PRIORITY Priority, uint Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, uint, IDXGIResource**, OfferResourcePriority, uint, int>)(lpVtbl[18]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority, Flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, uint, IDXGIResource**, DXGI_OFFER_RESOURCE_PRIORITY, uint, int>)(lpVtbl[18]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority, Flags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4::ReclaimResources1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult ReclaimResources1(uint NumResources, IDXGIResource** ppResources, ReclaimResourceResults* pResults)
+	public HResult ReclaimResources1(uint NumResources, IDXGIResource** ppResources, DXGI_RECLAIM_RESOURCE_RESULTS* pResults)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, uint, IDXGIResource**, ReclaimResourceResults*, int>)(lpVtbl[19]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pResults);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice4*, uint, IDXGIResource**, DXGI_RECLAIM_RESOURCE_RESULTS*, int>)(lpVtbl[19]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pResults);
 	}
 
 	public interface Interface : IDXGIDevice3.Interface
 	{
 		[VtblIndex(18)]
-		HResult OfferResources1(uint NumResources, IDXGIResource** ppResources, OfferResourcePriority Priority, uint Flags);
+		HResult OfferResources1(uint NumResources, IDXGIResource** ppResources, DXGI_OFFER_RESOURCE_PRIORITY Priority, uint Flags);
 
 		[VtblIndex(19)]
-		HResult ReclaimResources1(uint NumResources, IDXGIResource** ppResources, ReclaimResourceResults* pResults);
+		HResult ReclaimResources1(uint NumResources, IDXGIResource** ppResources, DXGI_RECLAIM_RESOURCE_RESULTS* pResults);
 	}
 }
 

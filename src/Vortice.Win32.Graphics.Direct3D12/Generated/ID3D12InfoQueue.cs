@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct3D12;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue"]/*' />
 /// <unmanaged>ID3D12InfoQueue</unmanaged>
@@ -89,9 +89,9 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength)
+	public HResult GetMessage(ulong MessageIndex, D3D12_MESSAGE* pMessage, nuint* pMessageByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, ulong, Message*, nuint*, int>)(lpVtbl[5]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, ulong, D3D12_MESSAGE*, nuint*, int>)(lpVtbl[5]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
@@ -145,17 +145,17 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddStorageFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult AddStorageFilterEntries(InfoQueueFilter* pFilter)
+	public HResult AddStorageFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[12]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[12]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	public HResult GetStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[13]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearStorageFilter"]/*' />
@@ -185,9 +185,9 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult PushStorageFilter(InfoQueueFilter* pFilter)
+	public HResult PushStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[17]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[17]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PopStorageFilter"]/*' />
@@ -209,17 +209,17 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddRetrievalFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter)
+	public HResult AddRetrievalFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[20]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[20]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	public HResult GetRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[21]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[21]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearRetrievalFilter"]/*' />
@@ -249,9 +249,9 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult PushRetrievalFilter(InfoQueueFilter* pFilter)
+	public HResult PushRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[25]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[25]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PopRetrievalFilter"]/*' />
@@ -359,7 +359,7 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 		void ClearStoredMessages();
 
 		[VtblIndex(5)]
-		HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength);
+		HResult GetMessage(ulong MessageIndex, D3D12_MESSAGE* pMessage, nuint* pMessageByteLength);
 
 		[VtblIndex(6)]
 		ulong GetNumMessagesAllowedByStorageFilter();
@@ -380,10 +380,10 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 		ulong GetMessageCountLimit();
 
 		[VtblIndex(12)]
-		HResult AddStorageFilterEntries(InfoQueueFilter* pFilter);
+		HResult AddStorageFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(13)]
-		HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+		HResult GetStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength);
 
 		[VtblIndex(14)]
 		void ClearStorageFilter();
@@ -395,7 +395,7 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 		HResult PushCopyOfStorageFilter();
 
 		[VtblIndex(17)]
-		HResult PushStorageFilter(InfoQueueFilter* pFilter);
+		HResult PushStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(18)]
 		void PopStorageFilter();
@@ -404,10 +404,10 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 		uint GetStorageFilterStackSize();
 
 		[VtblIndex(20)]
-		HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter);
+		HResult AddRetrievalFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(21)]
-		HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+		HResult GetRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength);
 
 		[VtblIndex(22)]
 		void ClearRetrievalFilter();
@@ -419,7 +419,7 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 		HResult PushCopyOfRetrievalFilter();
 
 		[VtblIndex(25)]
-		HResult PushRetrievalFilter(InfoQueueFilter* pFilter);
+		HResult PushRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter);
 
 		[VtblIndex(26)]
 		void PopRetrievalFilter();

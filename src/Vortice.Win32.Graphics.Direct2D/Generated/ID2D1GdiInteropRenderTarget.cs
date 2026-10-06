@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget"]/*' />
 /// <unmanaged>ID2D1GdiInteropRenderTarget</unmanaged>
@@ -73,9 +73,9 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::GetDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetDC(DCInitializeMode mode, IntPtr* hdc)
+	public HResult GetDC(D2D1_DC_INITIALIZE_MODE mode, IntPtr* hdc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiInteropRenderTarget*, DCInitializeMode, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiInteropRenderTarget*, D2D1_DC_INITIALIZE_MODE, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::ReleaseDC"]/*' />
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetDC(DCInitializeMode mode, IntPtr* hdc);
+		HResult GetDC(D2D1_DC_INITIALIZE_MODE mode, IntPtr* hdc);
 
 		[VtblIndex(4)]
 		HResult ReleaseDC(Rect* update);
