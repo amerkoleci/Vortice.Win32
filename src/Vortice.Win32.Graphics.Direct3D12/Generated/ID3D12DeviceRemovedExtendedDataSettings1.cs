@@ -73,39 +73,39 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedDataSettings.SetAutoBreadcrumbsEnablement" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void SetAutoBreadcrumbsEnablement(DredEnablement Enablement)
+	public void SetAutoBreadcrumbsEnablement(D3D12_DRED_ENABLEMENT Enablement)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, D3D12_DRED_ENABLEMENT, void>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedDataSettings.SetPageFaultEnablement" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void SetPageFaultEnablement(DredEnablement Enablement)
+	public void SetPageFaultEnablement(D3D12_DRED_ENABLEMENT Enablement)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, D3D12_DRED_ENABLEMENT, void>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedDataSettings.SetWatsonDumpEnablement" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void SetWatsonDumpEnablement(DredEnablement Enablement)
+	public void SetWatsonDumpEnablement(D3D12_DRED_ENABLEMENT Enablement)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, D3D12_DRED_ENABLEMENT, void>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings1::SetBreadcrumbContextEnablement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetBreadcrumbContextEnablement(DredEnablement Enablement)
+	public void SetBreadcrumbContextEnablement(D3D12_DRED_ENABLEMENT Enablement)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+		((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedDataSettings1*, D3D12_DRED_ENABLEMENT, void>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
 	public interface Interface : ID3D12DeviceRemovedExtendedDataSettings.Interface
 	{
 		[VtblIndex(6)]
-		void SetBreadcrumbContextEnablement(DredEnablement Enablement);
+		void SetBreadcrumbContextEnablement(D3D12_DRED_ENABLEMENT Enablement);
 	}
 }
 

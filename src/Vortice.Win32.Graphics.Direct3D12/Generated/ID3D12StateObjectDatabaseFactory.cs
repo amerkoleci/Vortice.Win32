@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12StateObjectDatabaseFactory : ID3D12StateObjec
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabaseFactory::CreateStateObjectDatabaseFromFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateStateObjectDatabaseFromFile(char* pDatabaseFile, StateObjectDatabaseFlags flags, Guid* riid, void** ppvStateObjectDatabase)
+	public HResult CreateStateObjectDatabaseFromFile(char* pDatabaseFile, D3D12_STATE_OBJECT_DATABASE_FLAGS flags, Guid* riid, void** ppvStateObjectDatabase)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabaseFactory*, char*, StateObjectDatabaseFlags, Guid*, void**, int>)(lpVtbl[3]))((ID3D12StateObjectDatabaseFactory*)Unsafe.AsPointer(ref this), pDatabaseFile, flags, riid, ppvStateObjectDatabase);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabaseFactory*, char*, D3D12_STATE_OBJECT_DATABASE_FLAGS, Guid*, void**, int>)(lpVtbl[3]))((ID3D12StateObjectDatabaseFactory*)Unsafe.AsPointer(ref this), pDatabaseFile, flags, riid, ppvStateObjectDatabase);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateStateObjectDatabaseFromFile(char* pDatabaseFile, StateObjectDatabaseFlags flags, Guid* riid, void** ppvStateObjectDatabase);
+		HResult CreateStateObjectDatabaseFromFile(char* pDatabaseFile, D3D12_STATE_OBJECT_DATABASE_FLAGS flags, Guid* riid, void** ppvStateObjectDatabase);
 	}
 }
 

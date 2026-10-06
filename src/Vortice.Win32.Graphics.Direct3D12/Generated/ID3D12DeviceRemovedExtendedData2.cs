@@ -113,9 +113,9 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemo
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetDeviceState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public DredDeviceState GetDeviceState()
+	public D3D12_DRED_DEVICE_STATE GetDeviceState()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, DredDeviceState>)(lpVtbl[8]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData2*, D3D12_DRED_DEVICE_STATE>)(lpVtbl[8]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12DeviceRemovedExtendedData1.Interface
@@ -124,7 +124,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemo
 		HResult GetPageFaultAllocationOutput2(DredPageFaultOutput2* pOutput);
 
 		[VtblIndex(8)]
-		DredDeviceState GetDeviceState();
+		D3D12_DRED_DEVICE_STATE GetDeviceState();
 	}
 }
 

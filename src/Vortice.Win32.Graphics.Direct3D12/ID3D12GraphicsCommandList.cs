@@ -10,10 +10,10 @@ public static unsafe class ID3D12GraphicsCommandListExtensions
     public static void ResourceBarrierTransition<TD3D12GraphicsCommandList>(
         ref this TD3D12GraphicsCommandList self,
         ID3D12Resource* resource,
-        ResourceStates stateBefore,
-        ResourceStates stateAfter,
+        D3D12_RESOURCE_STATES stateBefore,
+        D3D12_RESOURCE_STATES stateAfter,
         uint subresource = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES,
-        ResourceBarrierFlags flags = ResourceBarrierFlags.None)
+        D3D12_RESOURCE_BARRIER_FLAGS flags = D3D12_RESOURCE_BARRIER_FLAG_NONE)
         where TD3D12GraphicsCommandList : unmanaged, ID3D12GraphicsCommandList.Interface
     {
         ResourceBarrier barrier = Direct3D12.ResourceBarrier.InitTransition(resource, stateBefore, stateAfter, subresource, flags);

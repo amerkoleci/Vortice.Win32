@@ -2,6 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
 namespace Vortice.Win32.Graphics.Direct3D12;
 
@@ -10,13 +11,13 @@ public unsafe partial struct RenderTargetViewDescription
     /// <summary>
     /// Initializes a new instance of the <see cref="RenderTargetViewDescription"/> struct.
     /// </summary>
-    /// <param name="viewDimension">The <see cref="RtvDimension"/></param>
+    /// <param name="viewDimension">The <see cref="D3D12_RTV_DIMENSION"/></param>
     /// <param name="format">The <see cref="Format"/> to use or <see cref="Format.Unknown"/>.</param>
-    /// <param name="mipSlice">The index of the mipmap level to use mip slice. or first element for <see cref="RtvDimension.Buffer"/>.</param>
-    /// <param name="firstArraySlice">The index of the first texture to use in an array of textures or NumElements for <see cref="RtvDimension.Buffer"/>, FirstWSlice for <see cref="RtvDimension.Texture3D"/>.</param>
-    /// <param name="arraySize">Number of textures in the array or WSize for <see cref="RtvDimension.Texture3D"/>. </param>
+    /// <param name="mipSlice">The index of the mipmap level to use mip slice. or first element for <see cref="D3D12_RTV_DIMENSION_BUFFER"/>.</param>
+    /// <param name="firstArraySlice">The index of the first texture to use in an array of textures or NumElements for <see cref="D3D12_RTV_DIMENSION_BUFFER"/>, FirstWSlice for <see cref="D3D12_RTV_DIMENSION_TEXTURE3D"/>.</param>
+    /// <param name="arraySize">Number of textures in the array or WSize for <see cref="D3D12_RTV_DIMENSION_TEXTURE3D"/>. </param>
     public RenderTargetViewDescription(
-        RtvDimension viewDimension,
+        D3D12_RTV_DIMENSION viewDimension,
         Format format = Format.Unknown,
         uint mipSlice = 0,
         uint firstArraySlice = 0,
@@ -28,33 +29,33 @@ public unsafe partial struct RenderTargetViewDescription
 
         switch (viewDimension)
         {
-            case RtvDimension.Buffer:
+            case D3D12_RTV_DIMENSION_BUFFER:
                 Buffer.FirstElement = mipSlice;
                 Buffer.NumElements = firstArraySlice;
                 break;
-            case RtvDimension.Texture1D:
+            case D3D12_RTV_DIMENSION_TEXTURE1D:
                 Texture1D.MipSlice = mipSlice;
                 break;
-            case RtvDimension.Texture1DArray:
+            case D3D12_RTV_DIMENSION_TEXTURE1DARRAY:
                 Texture1DArray.MipSlice = mipSlice;
                 Texture1DArray.FirstArraySlice = firstArraySlice;
                 Texture1DArray.ArraySize = arraySize;
                 break;
-            case RtvDimension.Texture2D:
+            case D3D12_RTV_DIMENSION_TEXTURE2D:
                 Texture2D.MipSlice = mipSlice;
                 break;
-            case RtvDimension.Texture2DArray:
+            case D3D12_RTV_DIMENSION_TEXTURE2DARRAY:
                 Texture2DArray.MipSlice = mipSlice;
                 Texture2DArray.FirstArraySlice = firstArraySlice;
                 Texture2DArray.ArraySize = arraySize;
                 break;
-            case RtvDimension.Texture2DMs:
+            case D3D12_RTV_DIMENSION_TEXTURE2DMS:
                 break;
-            case RtvDimension.Texture2DMsArray:
+            case D3D12_RTV_DIMENSION_TEXTURE2DMSARRAY:
                 Texture2DMSArray.FirstArraySlice = firstArraySlice;
                 Texture2DMSArray.ArraySize = arraySize;
                 break;
-            case RtvDimension.Texture3D:
+            case D3D12_RTV_DIMENSION_TEXTURE3D:
                 Texture3D.MipSlice = mipSlice;
                 Texture3D.FirstWSlice = firstArraySlice;
                 Texture3D.WSize = arraySize;
@@ -69,7 +70,7 @@ public unsafe partial struct RenderTargetViewDescription
     /// </summary>
     public RenderTargetViewDescription(
         ID3D12Resource* texture,
-        RtvDimension viewDimension = RtvDimension.Unknown,
+        D3D12_RTV_DIMENSION viewDimension = D3D12_RTV_DIMENSION_UNKNOWN,
         Format format = Format.Unknown,
         uint mipSlice = 0,
         uint firstArraySlice = 0,
@@ -77,34 +78,34 @@ public unsafe partial struct RenderTargetViewDescription
         uint planeSlice = 0)
     {
         ViewDimension = viewDimension;
-        if (viewDimension == RtvDimension.Unknown ||
+        if (viewDimension == D3D12_RTV_DIMENSION_UNKNOWN ||
             format == Format.Unknown ||
             arraySize == unchecked((uint)-1))
         {
             ResourceDescription resourceDesc = texture->GetDesc();
 
-            if (viewDimension == RtvDimension.Unknown)
+            if (viewDimension == D3D12_RTV_DIMENSION_UNKNOWN)
             {
                 switch (resourceDesc.Dimension)
                 {
-                    case ResourceDimension.Buffer:
-                        viewDimension = RtvDimension.Buffer;
+                    case D3D12_RESOURCE_DIMENSION_BUFFER:
+                        viewDimension = D3D12_RTV_DIMENSION_BUFFER;
                         break;
-                    case ResourceDimension.Texture1D:
-                        viewDimension = resourceDesc.DepthOrArraySize > 1 ? RtvDimension.Texture1DArray : RtvDimension.Texture1D;
+                    case D3D12_RESOURCE_DIMENSION_TEXTURE1D:
+                        viewDimension = resourceDesc.DepthOrArraySize > 1 ? D3D12_RTV_DIMENSION_TEXTURE1DARRAY : D3D12_RTV_DIMENSION_TEXTURE1D;
                         break;
-                    case ResourceDimension.Texture2D:
+                    case D3D12_RESOURCE_DIMENSION_TEXTURE2D:
                         if (resourceDesc.SampleDesc.Count > 1)
                         {
-                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? RtvDimension.Texture2DMsArray : RtvDimension.Texture2DMs;
+                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? D3D12_RTV_DIMENSION_TEXTURE2DMSARRAY : D3D12_RTV_DIMENSION_TEXTURE2DMS;
                         }
                         else
                         {
-                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? RtvDimension.Texture2DArray : RtvDimension.Texture2D;
+                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? D3D12_RTV_DIMENSION_TEXTURE2DARRAY : D3D12_RTV_DIMENSION_TEXTURE2D;
                         }
                         break;
-                    case ResourceDimension.Texture3D:
-                        viewDimension = RtvDimension.Texture3D;
+                    case D3D12_RESOURCE_DIMENSION_TEXTURE3D:
+                        viewDimension = D3D12_RTV_DIMENSION_TEXTURE3D;
                         break;
                 }
             }
@@ -115,8 +116,8 @@ public unsafe partial struct RenderTargetViewDescription
             }
 
             bool isArray =
-               viewDimension == RtvDimension.Texture2DArray ||
-               viewDimension == RtvDimension.Texture2DMsArray;
+               viewDimension == D3D12_RTV_DIMENSION_TEXTURE2DARRAY ||
+               viewDimension == D3D12_RTV_DIMENSION_TEXTURE2DMSARRAY;
 
             if (arraySize == unchecked((uint)-1) &&
                 isArray)
@@ -129,35 +130,35 @@ public unsafe partial struct RenderTargetViewDescription
         Anonymous = default;
         switch (viewDimension)
         {
-            case RtvDimension.Buffer:
+            case D3D12_RTV_DIMENSION_BUFFER:
                 Anonymous.Buffer.FirstElement = firstArraySlice;
                 Anonymous.Buffer.NumElements = arraySize;
                 break;
-            case RtvDimension.Texture1D:
+            case D3D12_RTV_DIMENSION_TEXTURE1D:
                 Anonymous.Texture1D.MipSlice = mipSlice;
                 break;
-            case RtvDimension.Texture1DArray:
+            case D3D12_RTV_DIMENSION_TEXTURE1DARRAY:
                 Anonymous.Texture1DArray.MipSlice = mipSlice;
                 Anonymous.Texture1DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture1DArray.ArraySize = arraySize;
                 break;
-            case RtvDimension.Texture2D:
+            case D3D12_RTV_DIMENSION_TEXTURE2D:
                 Anonymous.Texture2D.MipSlice = mipSlice;
                 Anonymous.Texture2D.PlaneSlice = planeSlice;
                 break;
-            case RtvDimension.Texture2DArray:
+            case D3D12_RTV_DIMENSION_TEXTURE2DARRAY:
                 Anonymous.Texture2DArray.MipSlice = mipSlice;
                 Anonymous.Texture2DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DArray.ArraySize = arraySize;
                 Anonymous.Texture2DArray.PlaneSlice = planeSlice;
                 break;
-            case RtvDimension.Texture2DMs:
+            case D3D12_RTV_DIMENSION_TEXTURE2DMS:
                 break;
-            case RtvDimension.Texture2DMsArray:
+            case D3D12_RTV_DIMENSION_TEXTURE2DMSARRAY:
                 Anonymous.Texture2DMSArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DMSArray.ArraySize = arraySize;
                 break;
-            case RtvDimension.Texture3D:
+            case D3D12_RTV_DIMENSION_TEXTURE3D:
                 Anonymous.Texture3D.MipSlice = mipSlice;
                 Anonymous.Texture3D.FirstWSlice = firstArraySlice;
                 Anonymous.Texture3D.WSize = arraySize;

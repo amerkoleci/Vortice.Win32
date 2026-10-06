@@ -1266,17 +1266,16 @@ public static class Program
         string XAudio2Path = Path.Combine(rootSrcPath, "Vortice.Win32.Media.Audio.XAudio2");
 
         // Generate docs
-        //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
-        //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(repoRoot, "Generated", "Graphics", "Direct3D.xml"));
-        //DocGenerator.Generate(new[] { "D2D1" }, Path.Combine(repoRoot, "Generated", "Graphics", "Direct2D.xml"));
-        //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(repoRoot, "Generated", "Graphics", "DirectWrite.xml"));
-        //DocGenerator.Generate(new[] { "WIC" }, Path.Combine(repoRoot, "Generated", "Graphics", "Imaging.xml"));
-
-        //DocGenerator.Generate(new[] { "D3D9" }, Path.Combine(d3d9Path, "Direct3D9.xml"));
-        //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
-        //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
-        //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
-        //DocGenerator.Generate(rootPath, new[] { "XAudio2", "XAUDIO2", "Hrtf", "XAPO", "X3DAUDIO" }, Path.Combine(XAudio2Path, "XAudio2.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "D3D" }, Path.Combine(repoRoot, "Generated", "Graphics", "Direct3D.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "D2D1" }, Path.Combine(repoRoot, "Generated", "Graphics", "Direct2D.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "DWRITE" }, Path.Combine(repoRoot, "Generated", "Graphics", "DirectWrite.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "WIC" }, Path.Combine(repoRoot, "Generated", "Graphics", "Imaging.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "D3D9" }, Path.Combine(d3d9Path, "Direct3D9.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
+        //DocGenerator.Generate(repoRoot, new[] { "XAudio2", "XAUDIO2", "Hrtf", "XAPO", "X3DAUDIO" }, Path.Combine(XAudio2Path, "XAudio2.xml"));
 
         foreach (string jsonFile in s_jsons)
         {
@@ -1287,6 +1286,7 @@ public static class Program
             string outputPath = Path.Combine(rootSrcPath, "Vortice.Win32");
             bool useSubFolders = true;
             bool cleanFolder = true;
+            bool skipRename = false;
 
             if (jsonFile == "Graphics.Dxgi.json")
             {
@@ -1302,11 +1302,13 @@ public static class Program
             {
                 outputPath = d3d12Path;
                 useSubFolders = false;
+                skipRename = true;
             }
             else if (jsonFile.EndsWith("Direct3D11on12.json"))
             {
                 outputPath = d3d11on12Path;
                 useSubFolders = false;
+                skipRename = true;
             }
             else if (jsonFile == "Graphics.Imaging.json")
             {
@@ -1362,17 +1364,33 @@ public static class Program
                 Directory.CreateDirectory(outputPath);
             }
 
-            Generate(api!, outputPath, jsonFile, useSubFolders, cleanFolder);
+            GenerateOptions options = new()
+            {
+                OutputPath = outputPath,
+                UseSubFolders = useSubFolders,
+                CleanFolder = cleanFolder,
+                SkipRename = skipRename
+            };
+
+            Generate(api!, jsonFile, options);
         }
 
         return 0;
     }
 
-    private static void Generate(ApiData api, string outputPath, string jsonFile, bool useSubFolders, bool cleanFolder)
+    class GenerateOptions
+    {
+        public required string OutputPath { get; set; }
+        public bool UseSubFolders { get; set; } = true;
+        public bool CleanFolder { get; set; } = true;
+        public bool SkipRename { get; set; } = false;
+    }
+
+    private static void Generate(ApiData api, string jsonFile, GenerateOptions options)
     {
         string[] splits = jsonFile.Split(".", StringSplitOptions.RemoveEmptyEntries);
         string folderRoot = splits[0];
-        string outputFolder = Path.Combine(outputPath, folderRoot);
+        string outputFolder = Path.Combine(options.OutputPath, folderRoot);
 
         string docFile = splits[1];
         string subFolderName = string.Empty;
@@ -1428,7 +1446,7 @@ public static class Program
 
         string apiName = ns;
         string apiFolder;
-        if (useSubFolders)
+        if (options.UseSubFolders)
         {
             if (!Directory.Exists(outputFolder))
             {
@@ -1439,10 +1457,10 @@ public static class Program
         }
         else
         {
-            apiFolder = outputPath;
+            apiFolder = options.OutputPath;
         }
 
-        if (cleanFolder)
+        if (options.CleanFolder)
         {
             if (Directory.Exists(apiFolder))
             {
@@ -1460,12 +1478,12 @@ public static class Program
             docFile = $"../{docFile}";
         }
 
-        GenerateTypes(apiFolder, apiName, docFile, api);
-        GenerateConstants(apiFolder, apiName, docFile, api);
-        GenerateFunctions(apiFolder, apiName, docFile, api);
+        GenerateTypes(apiFolder, apiName, docFile, api, options);
+        GenerateConstants(apiFolder, apiName, docFile, api, options);
+        GenerateFunctions(apiFolder, apiName, docFile, api, options);
     }
 
-    private static void GenerateConstants(string folder, string apiName, string docFileName, ApiData api)
+    private static void GenerateConstants(string folder, string apiName, string docFileName, ApiData api, GenerateOptions options)
     {
         bool generateFile = false;
 
@@ -1576,13 +1594,15 @@ public static class Program
         writer.WriteLine();
     }
 
-    private static void GenerateTypes(string folder, string apiName, string docFileName, ApiData api)
+    private static void GenerateTypes(string folder, string apiName, string docFileName, ApiData api, GenerateOptions options)
     {
+        string @namespace = options.SkipRename ? "Vortice.Win32" : $"Vortice.Win32.{apiName}";
+
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Enums.cs"),
             apiName,
             docFileName,
-            $"Vortice.Win32.{apiName}");
+            @namespace);
 
         bool needNewLine = false;
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.Equals("enum", StringComparison.InvariantCultureIgnoreCase)))
@@ -1597,7 +1617,7 @@ public static class Program
                 writer.WriteLine();
             }
 
-            GenerateEnum(writer, enumType, false);
+            GenerateEnum(writer, enumType, options, false);
             s_visitedEnums.Add($"{apiName}.{enumType.Name}");
             needNewLine = true;
         }
@@ -1655,7 +1675,7 @@ public static class Program
                 writer.WriteLine();
             }
 
-            GenerateEnum(writer, enumType, true);
+            GenerateEnum(writer, enumType, options, true);
             needNewLine = true;
         }
 
@@ -1815,7 +1835,7 @@ public static class Program
         }
     }
 
-    private static void GenerateFunctions(string folder, string apiName, string docFileName, ApiData api)
+    private static void GenerateFunctions(string folder, string apiName, string docFileName, ApiData api, GenerateOptions options)
     {
         if (api.Functions.Length == 0)
             return;
@@ -1962,7 +1982,7 @@ public static class Program
         return functionSignature.ToString();
     }
 
-    private static void GenerateEnum(CodeWriter writer, ApiType enumType, bool autoGenerated)
+    private static void GenerateEnum(CodeWriter writer, ApiType enumType, GenerateOptions options, bool autoGenerated)
     {
         string csTypeName;
         string enumPrefix = string.Empty;
@@ -2010,7 +2030,11 @@ public static class Program
                 enumPrefix = "D3D";
             }
         }
-        else
+        else if (options.SkipRename)
+        {
+            csTypeName = enumType.Name;
+        }
+        else 
         {
             csTypeName = GetDataTypeName(enumType.Name, out enumPrefix);
             AddCsMapping(writer.Api, enumType.Name, csTypeName);
@@ -2071,10 +2095,13 @@ public static class Program
 
         using (writer.PushBlock($"public enum {csTypeName}{baseTypeDeclaration}"))
         {
-            if (isFlags &&
-                !enumType.Values.Any(item => GetEnumItemName(enumType, item, enumPrefix, skipPrettify) == "None"))
+            if (!options.SkipRename)
             {
-                writer.WriteLine("None = 0,");
+                if (isFlags &&
+                    !enumType.Values.Any(item => GetEnumItemName(enumType, item, enumPrefix, skipPrettify) == "None"))
+                {
+                    writer.WriteLine("None = 0,");
+                }
             }
 
             foreach (ApiEnumValue enumItem in enumType.Values)
@@ -2557,7 +2584,7 @@ public static class Program
                         iterateType = s_visitedComTypes.FirstOrDefault(item => item.Name == interfaceRootType);
                         if (iterateType is not null)
                         {
-                           // comType.VTableIndex = iterateType.VTableIndex;
+                            // comType.VTableIndex = iterateType.VTableIndex;
                         }
                     }
                 }

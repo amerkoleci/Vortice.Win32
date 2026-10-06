@@ -121,9 +121,9 @@ public unsafe partial struct ID3D12ProtectedResourceSession1 : ID3D12ProtectedRe
 	/// <inheritdoc cref="ID3D12ProtectedSession.GetSessionStatus" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public ProtectedSessionStatus GetSessionStatus()
+	public D3D12_PROTECTED_SESSION_STATUS GetSessionStatus()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession1*, ProtectedSessionStatus>)(lpVtbl[9]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedResourceSession1*, D3D12_PROTECTED_SESSION_STATUS>)(lpVtbl[9]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12ProtectedResourceSession.GetDesc" />

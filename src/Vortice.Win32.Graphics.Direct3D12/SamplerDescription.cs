@@ -7,14 +7,14 @@ namespace Vortice.Win32.Graphics.Direct3D12;
 
 public partial struct SamplerDescription
 {
-    public static SamplerDescription PointWrap => new(Filter.MinMagMipPoint, TextureAddressMode.Wrap);
-    public static SamplerDescription PointClamp => new(Filter.MinMagMipPoint, TextureAddressMode.Clamp);
+    public static SamplerDescription PointWrap => new(D3D12_FILTER_MIN_MAG_MIP_POINT, D3D12_TEXTURE_ADDRESS_MODE_WRAP, D3D12_TEXTURE_ADDRESS_MODE_WRAP, D3D12_TEXTURE_ADDRESS_MODE_WRAP);
+    public static SamplerDescription PointClamp => new(D3D12_FILTER_MIN_MAG_MIP_POINT, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, D3D12_TEXTURE_ADDRESS_MODE_CLAMP);
 
-    public static SamplerDescription LinearWrap => new(Filter.MinMagMipLinear, TextureAddressMode.Wrap);
-    public static SamplerDescription LinearClamp => new(Filter.MinMagMipLinear, TextureAddressMode.Clamp);
+    public static SamplerDescription LinearWrap => new(D3D12_FILTER_MIN_MAG_MIP_LINEAR, D3D12_TEXTURE_ADDRESS_MODE_WRAP, D3D12_TEXTURE_ADDRESS_MODE_WRAP, D3D12_TEXTURE_ADDRESS_MODE_WRAP);
+    public static SamplerDescription LinearClamp => new(D3D12_FILTER_MIN_MAG_MIP_LINEAR, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, D3D12_TEXTURE_ADDRESS_MODE_CLAMP);
 
-    public static SamplerDescription AnisotropicWrap => new(Filter.Anisotropic, TextureAddressMode.Wrap, 0.0f, D3D12_MAX_MAXANISOTROPY);
-    public static SamplerDescription AnisotropicClamp => new(Filter.Anisotropic, TextureAddressMode.Clamp, 0.0f, D3D12_MAX_MAXANISOTROPY);
+    public static SamplerDescription AnisotropicWrap => new(D3D12_FILTER_ANISOTROPIC, D3D12_TEXTURE_ADDRESS_MODE_WRAP, D3D12_TEXTURE_ADDRESS_MODE_WRAP, D3D12_TEXTURE_ADDRESS_MODE_WRAP, 0.0f, D3D12_MAX_MAXANISOTROPY);
+    public static SamplerDescription AnisotropicClamp => new(D3D12_FILTER_ANISOTROPIC, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, D3D12_TEXTURE_ADDRESS_MODE_CLAMP, 0.0f, D3D12_MAX_MAXANISOTROPY);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SamplerDescription"/> struct.
@@ -30,13 +30,13 @@ public partial struct SamplerDescription
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
     public unsafe SamplerDescription(
-        Filter filter,
-        TextureAddressMode addressU,
-        TextureAddressMode addressV,
-        TextureAddressMode addressW,
+        D3D12_FILTER filter,
+        D3D12_TEXTURE_ADDRESS_MODE addressU,
+        D3D12_TEXTURE_ADDRESS_MODE addressV,
+        D3D12_TEXTURE_ADDRESS_MODE addressW,
         float mipLODBias,
         uint maxAnisotropy,
-        ComparisonFunction comparisonFunction,
+        D3D12_COMPARISON_FUNC comparisonFunction,
         Color4 borderColor,
         float minLOD,
         float maxLOD)
@@ -69,13 +69,13 @@ public partial struct SamplerDescription
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
     public unsafe SamplerDescription(
-        Filter filter,
-        TextureAddressMode addressU,
-        TextureAddressMode addressV,
-        TextureAddressMode addressW,
+        D3D12_FILTER filter,
+        D3D12_TEXTURE_ADDRESS_MODE addressU,
+        D3D12_TEXTURE_ADDRESS_MODE addressV,
+        D3D12_TEXTURE_ADDRESS_MODE addressW,
         float mipLODBias = 0.0f,
         uint maxAnisotropy = 1,
-        ComparisonFunction comparisonFunction = ComparisonFunction.Never,
+        D3D12_COMPARISON_FUNC comparisonFunction = D3D12_COMPARISON_FUNC_NEVER,
         float minLOD = float.MinValue,
         float maxLOD = float.MaxValue)
     {
@@ -105,11 +105,11 @@ public partial struct SamplerDescription
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
     public unsafe SamplerDescription(
-        Filter filter,
-        TextureAddressMode address,
+        D3D12_FILTER filter,
+        D3D12_TEXTURE_ADDRESS_MODE address,
         float mipLODBias = 0.0f,
         uint maxAnisotropy = 1,
-        ComparisonFunction comparisonFunction = ComparisonFunction.Never,
+        D3D12_COMPARISON_FUNC comparisonFunction = D3D12_COMPARISON_FUNC_NEVER,
         float minLOD = float.MinValue,
         float maxLOD = float.MaxValue)
     {

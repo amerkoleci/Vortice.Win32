@@ -220,21 +220,21 @@ public static unsafe class Program
                 );
             ThrowIfFailed(hr);
 
-            AllocatorDesc allocatorDesc = new()
+            D3D12MA_ALLOCATOR_DESC allocatorDesc = new()
             {
                 pDevice = device.Get(),
                 pAdapter = (IDXGIAdapter*)adapter.Get()
             };
-            hr = CreateAllocator(in allocatorDesc, out Allocator allocator);
+            hr = D3D12MA_CreateAllocator(in allocatorDesc, out D3D12MA_Allocator allocator);
 
-            AllocationDesc allocationDesc = new();
-            allocationDesc.HeapType = HeapType.Default;
+            D3D12MA_ALLOCATION_DESC allocationDesc = new();
+            allocationDesc.HeapType = D3D12_HEAP_TYPE.D3D12_HEAP_TYPE_DEFAULT;
 
             using ComPtr<ID3D12Resource> buffer = default;
             ResourceDescription bufferDesc = ResourceDescription.Buffer(256u);
 
-            Allocation allocation = default;
-            hr = allocator.CreateResource<ID3D12Resource>(&allocationDesc, in bufferDesc, ResourceStates.Common,
+            D3D12MA_Allocation allocation = default;
+            hr = allocator.CreateResource<ID3D12Resource>(&allocationDesc, in bufferDesc, D3D12_RESOURCE_STATES.D3D12_RESOURCE_STATE_COMMON,
                 null, &allocation, buffer.GetAddressOf());
             //var test = allocator.IsUMA;
             ThrowIfFailed(hr);

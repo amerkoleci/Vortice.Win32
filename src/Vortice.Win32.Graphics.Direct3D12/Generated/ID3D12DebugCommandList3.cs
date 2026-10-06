@@ -81,58 +81,58 @@ public unsafe partial struct ID3D12DebugCommandList3 : ID3D12DebugCommandList3.I
 	/// <inheritdoc cref="ID3D12DebugCommandList.SetFeatureMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetFeatureMask(DebugFeature Mask)
+	public HResult SetFeatureMask(D3D12_DEBUG_FEATURE Mask)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, DebugFeature, int>)(lpVtbl[4]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), Mask);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, D3D12_DEBUG_FEATURE, int>)(lpVtbl[4]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), Mask);
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandList.GetFeatureMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public DebugFeature GetFeatureMask()
+	public D3D12_DEBUG_FEATURE GetFeatureMask()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, D3D12_DEBUG_FEATURE>)(lpVtbl[5]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandList2.SetDebugParameter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetDebugParameter(DebugCommandListParameterType Type, void* pData, uint DataSize)
+	public HResult SetDebugParameter(D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE Type, void* pData, uint DataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, DebugCommandListParameterType, void*, uint, int>)(lpVtbl[6]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE, void*, uint, int>)(lpVtbl[6]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandList2.GetDebugParameter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDebugParameter(DebugCommandListParameterType Type, void* pData, uint DataSize)
+	public HResult GetDebugParameter(D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE Type, void* pData, uint DataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, DebugCommandListParameterType, void*, uint, int>)(lpVtbl[7]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE, void*, uint, int>)(lpVtbl[7]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList3::AssertResourceAccess"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, BarrierAccess Access)
+	public void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_ACCESS Access)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, ID3D12Resource*, uint, BarrierAccess, void>)(lpVtbl[8]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
+		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, ID3D12Resource*, uint, D3D12_BARRIER_ACCESS, void>)(lpVtbl[8]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList3::AssertTextureLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, BarrierLayout Layout)
+	public void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_LAYOUT Layout)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, ID3D12Resource*, uint, BarrierLayout, void>)(lpVtbl[9]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
+		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandList3*, ID3D12Resource*, uint, D3D12_BARRIER_LAYOUT, void>)(lpVtbl[9]))((ID3D12DebugCommandList3*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
 	}
 
 	public interface Interface : ID3D12DebugCommandList2.Interface
 	{
 		[VtblIndex(8)]
-		void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, BarrierAccess Access);
+		void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_ACCESS Access);
 
 		[VtblIndex(9)]
-		void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, BarrierLayout Layout);
+		void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_LAYOUT Layout);
 	}
 }
 

@@ -10,7 +10,7 @@ public partial struct CommandQueueDescription
     /// <summary>
     /// Initializes a new instance of the <see cref="CommandQueueDescription"/> struct.
     /// </summary>
-    public CommandQueueDescription(CommandListType type, int priority = 0, CommandQueueFlags flags = CommandQueueFlags.None, uint nodeMask = 0)
+    public CommandQueueDescription(D3D12_COMMAND_LIST_TYPE type, int priority = 0, D3D12_COMMAND_QUEUE_FLAGS flags = D3D12_COMMAND_QUEUE_FLAG_NONE, uint nodeMask = 0)
     {
         Type = type;
         Priority = priority;
@@ -25,7 +25,7 @@ public partial struct CommandQueueDescription
     /// <param name="priority">The priority.</param>
     /// <param name="flags">Options flags.</param>
     /// <param name="nodeMask">Node mask.</param>
-    public CommandQueueDescription(CommandListType type, CommandQueuePriority priority, CommandQueueFlags flags = CommandQueueFlags.None, uint nodeMask = 0)
+    public CommandQueueDescription(D3D12_COMMAND_LIST_TYPE type, D3D12_COMMAND_QUEUE_PRIORITY priority, D3D12_COMMAND_QUEUE_FLAGS flags = D3D12_COMMAND_QUEUE_FLAG_NONE, uint nodeMask = 0)
     {
         Type = type;
         Priority = (int)priority;

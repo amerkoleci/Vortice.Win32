@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12Debug5 : ID3D12Debug5.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Debug3.SetGPUBasedValidationFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)
+	public void SetGPUBasedValidationFlags(D3D12_GPU_BASED_VALIDATION_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12Debug5*, GpuBasedValidationFlags, void>)(lpVtbl[6]))((ID3D12Debug5*)Unsafe.AsPointer(ref this), Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12Debug5*, D3D12_GPU_BASED_VALIDATION_FLAGS, void>)(lpVtbl[6]))((ID3D12Debug5*)Unsafe.AsPointer(ref this), Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12Debug4.DisableDebugLayer" />

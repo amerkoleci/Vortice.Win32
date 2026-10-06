@@ -2,6 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
 namespace Vortice.Win32.Graphics.Direct3D12;
 
@@ -21,7 +22,7 @@ public unsafe partial struct SubresourceFootprint
         Format = resourceDesc.Format;
         Width = (uint)resourceDesc.Width;
         Height = resourceDesc.Height;
-        Depth = (resourceDesc.Dimension == ResourceDimension.Texture3D ? resourceDesc.DepthOrArraySize : 1u);
+        Depth = (resourceDesc.Dimension == D3D12_RESOURCE_DIMENSION_TEXTURE3D ? resourceDesc.DepthOrArraySize : 1u);
         RowPitch = rowPitch;
     }
 }

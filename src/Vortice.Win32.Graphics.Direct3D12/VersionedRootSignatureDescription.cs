@@ -8,11 +8,49 @@ namespace Vortice.Win32.Graphics.Direct3D12;
 
 public unsafe partial struct VersionedRootSignatureDescription
 {
+    public static ref readonly VersionedRootSignatureDescription DEFAULT
+    {
+        get
+        {
+            ReadOnlySpan<byte> data;
+
+            if (Environment.Is64BitProcess)
+            {
+                data = [
+                    0x02, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00
+                ];
+            }
+            else
+            {
+                data = [
+                    0x02, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00,
+                    0x00, 0x00, 0x00, 0x00
+                ];
+            }
+
+            Debug.Assert(data.Length == Unsafe.SizeOf<VersionedRootSignatureDescription>());
+            return ref Unsafe.As<byte, VersionedRootSignatureDescription>(ref MemoryMarshal.GetReference(data));
+        }
+    }
+
     public VersionedRootSignatureDescription(in RootSignatureDescription other)
     {
         Unsafe.SkipInit(out this);
 
-        Version = RootSignatureVersion.V1_0;
+        Version = D3D_ROOT_SIGNATURE_VERSION_1_0;
         Anonymous.Desc_1_0 = other;
     }
 
@@ -20,16 +58,16 @@ public unsafe partial struct VersionedRootSignatureDescription
     {
         Unsafe.SkipInit(out this);
 
-        Version = RootSignatureVersion.V1_1;
+        Version = D3D_ROOT_SIGNATURE_VERSION_1_1;
         Anonymous.Desc_1_1 = other;
     }
 
-    public VersionedRootSignatureDescription(uint numParameters, RootParameter* _pParameters, uint numStaticSamplers = 0, StaticSamplerDescription* _pStaticSamplers = null, RootSignatureFlags flags = RootSignatureFlags.None)
+    public VersionedRootSignatureDescription(uint numParameters, RootParameter* _pParameters, uint numStaticSamplers = 0, StaticSamplerDescription* _pStaticSamplers = null, D3D12_ROOT_SIGNATURE_FLAGS flags = D3D12_ROOT_SIGNATURE_FLAG_NONE)
     {
         Init_1_0(out this, numParameters, _pParameters, numStaticSamplers, _pStaticSamplers, flags);
     }
 
-    public VersionedRootSignatureDescription(uint numParameters, RootParameter1* _pParameters, uint numStaticSamplers = 0, StaticSamplerDescription* _pStaticSamplers = null, RootSignatureFlags flags = RootSignatureFlags.None)
+    public VersionedRootSignatureDescription(uint numParameters, RootParameter1* _pParameters, uint numStaticSamplers = 0, StaticSamplerDescription* _pStaticSamplers = null, D3D12_ROOT_SIGNATURE_FLAGS flags = D3D12_ROOT_SIGNATURE_FLAG_NONE)
     {
         Init_1_1(out this, numParameters, _pParameters, numStaticSamplers, _pStaticSamplers, flags);
     }
@@ -37,7 +75,7 @@ public unsafe partial struct VersionedRootSignatureDescription
     public void Init_1_0(
         uint numParameters, RootParameter* parameters,
         uint numStaticSamplers = 0, StaticSamplerDescription* staticSamplers = null,
-        RootSignatureFlags flags = RootSignatureFlags.None)
+        D3D12_ROOT_SIGNATURE_FLAGS flags = D3D12_ROOT_SIGNATURE_FLAG_NONE)
     {
         Init_1_0(out this, numParameters, parameters, numStaticSamplers, staticSamplers, flags);
     }
@@ -45,11 +83,11 @@ public unsafe partial struct VersionedRootSignatureDescription
     public static void Init_1_0(out VersionedRootSignatureDescription desc,
         uint numParameters, RootParameter* parameters,
         uint numStaticSamplers = 0, StaticSamplerDescription* staticSamplers = null,
-        RootSignatureFlags flags = RootSignatureFlags.None)
+        D3D12_ROOT_SIGNATURE_FLAGS flags = D3D12_ROOT_SIGNATURE_FLAG_NONE)
     {
         desc = default;
 
-        desc.Version = RootSignatureVersion.V1_0;
+        desc.Version = D3D_ROOT_SIGNATURE_VERSION_1_0;
         desc.Anonymous.Desc_1_0.NumParameters = numParameters;
         desc.Anonymous.Desc_1_0.pParameters = parameters;
         desc.Anonymous.Desc_1_0.NumStaticSamplers = numStaticSamplers;
@@ -60,7 +98,7 @@ public unsafe partial struct VersionedRootSignatureDescription
     public void Init_1_1(
         uint numParameters, RootParameter1* parameters,
         uint numStaticSamplers = 0, StaticSamplerDescription* staticSamplers = null,
-        RootSignatureFlags flags = RootSignatureFlags.None)
+        D3D12_ROOT_SIGNATURE_FLAGS flags = D3D12_ROOT_SIGNATURE_FLAG_NONE)
     {
         Init_1_1(out this, numParameters, parameters, numStaticSamplers, staticSamplers, flags);
     }
@@ -69,11 +107,11 @@ public unsafe partial struct VersionedRootSignatureDescription
         out VersionedRootSignatureDescription desc,
         uint numParameters, RootParameter1* parameters,
         uint numStaticSamplers = 0, StaticSamplerDescription* staticSamplers = null,
-        RootSignatureFlags flags = RootSignatureFlags.None)
+        D3D12_ROOT_SIGNATURE_FLAGS flags = D3D12_ROOT_SIGNATURE_FLAG_NONE)
     {
         desc = default;
 
-        desc.Version = RootSignatureVersion.V1_1;
+        desc.Version = D3D_ROOT_SIGNATURE_VERSION_1_1;
         desc.Anonymous.Desc_1_1.NumParameters = numParameters;
         desc.Anonymous.Desc_1_1.pParameters = parameters;
         desc.Anonymous.Desc_1_1.NumStaticSamplers = numStaticSamplers;

@@ -5,7 +5,7 @@ namespace Vortice.Win32.Graphics.Direct3D12;
 
 unsafe partial struct QueryHeapDescription
 {
-    public QueryHeapDescription(QueryHeapType type, uint count, uint nodeMask = 0)
+    public QueryHeapDescription(D3D12_QUERY_HEAP_TYPE type, uint count, uint nodeMask = 0)
     {
         Type = type;
         Count = count;

@@ -13,7 +13,7 @@ public static unsafe partial class Apis
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12SerializeRootSignature"]/*' />
 	[LibraryImport("d3d12.dll")]
-	public static partial HResult D3D12SerializeRootSignature(RootSignatureDescription* pRootSignature, RootSignatureVersion Version, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
+	public static partial HResult D3D12SerializeRootSignature(RootSignatureDescription* pRootSignature, D3D_ROOT_SIGNATURE_VERSION Version, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateRootSignatureDeserializer"]/*' />
 	[LibraryImport("d3d12.dll")]

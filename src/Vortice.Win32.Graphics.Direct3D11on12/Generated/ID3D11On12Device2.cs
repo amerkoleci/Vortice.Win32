@@ -73,9 +73,9 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	/// <inheritdoc cref="ID3D11On12Device.CreateWrappedResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, Graphics.Direct3D12.ResourceStates InState, Graphics.Direct3D12.ResourceStates OutState, Guid* riid, void** ppResource11)
+	public HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, IUnknown*, ResourceFlags*, Graphics.Direct3D12.ResourceStates, Graphics.Direct3D12.ResourceStates, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, IUnknown*, ResourceFlags*, D3D12_RESOURCE_STATES, D3D12_RESOURCE_STATES, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
 	}
 
 	/// <inheritdoc cref="ID3D11On12Device.ReleaseWrappedResources" />

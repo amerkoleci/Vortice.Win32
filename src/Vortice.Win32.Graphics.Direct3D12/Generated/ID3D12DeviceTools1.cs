@@ -89,9 +89,9 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceTools1::GetApplicationSpecificDriverBlobStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public ApplicationSpecificDriverBlobStatus GetApplicationSpecificDriverBlobStatus()
+	public D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS GetApplicationSpecificDriverBlobStatus()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceTools1*, ApplicationSpecificDriverBlobStatus>)(lpVtbl[5]))((ID3D12DeviceTools1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceTools1*, D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS>)(lpVtbl[5]))((ID3D12DeviceTools1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12DeviceTools.Interface
@@ -100,7 +100,7 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 		HResult GetApplicationSpecificDriverState(Graphics.Direct3D.ID3DBlob** ppBlob);
 
 		[VtblIndex(5)]
-		ApplicationSpecificDriverBlobStatus GetApplicationSpecificDriverBlobStatus();
+		D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS GetApplicationSpecificDriverBlobStatus();
 	}
 }
 

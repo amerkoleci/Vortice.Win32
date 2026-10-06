@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12Debug3 : ID3D12Debug3.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetGPUBasedValidationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)
+	public void SetGPUBasedValidationFlags(D3D12_GPU_BASED_VALIDATION_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12Debug3*, GpuBasedValidationFlags, void>)(lpVtbl[6]))((ID3D12Debug3*)Unsafe.AsPointer(ref this), Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12Debug3*, D3D12_GPU_BASED_VALIDATION_FLAGS, void>)(lpVtbl[6]))((ID3D12Debug3*)Unsafe.AsPointer(ref this), Flags);
 	}
 
 	public interface Interface : ID3D12Debug.Interface
@@ -111,7 +111,7 @@ public unsafe partial struct ID3D12Debug3 : ID3D12Debug3.Interface, INativeGuid
 		void SetEnableSynchronizedCommandQueueValidation(Bool32 Enable);
 
 		[VtblIndex(6)]
-		void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags);
+		void SetGPUBasedValidationFlags(D3D12_GPU_BASED_VALIDATION_FLAGS Flags);
 	}
 }
 

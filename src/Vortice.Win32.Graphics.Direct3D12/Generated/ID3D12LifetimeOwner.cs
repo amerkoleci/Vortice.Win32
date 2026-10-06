@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12LifetimeOwner : ID3D12LifetimeOwner.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeOwner::LifetimeStateUpdated"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void LifetimeStateUpdated(LifetimeState NewState)
+	public void LifetimeStateUpdated(D3D12_LIFETIME_STATE NewState)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12LifetimeOwner*, LifetimeState, void>)(lpVtbl[3]))((ID3D12LifetimeOwner*)Unsafe.AsPointer(ref this), NewState);
+		((delegate* unmanaged[MemberFunction]<ID3D12LifetimeOwner*, D3D12_LIFETIME_STATE, void>)(lpVtbl[3]))((ID3D12LifetimeOwner*)Unsafe.AsPointer(ref this), NewState);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void LifetimeStateUpdated(LifetimeState NewState);
+		void LifetimeStateUpdated(D3D12_LIFETIME_STATE NewState);
 	}
 }
 

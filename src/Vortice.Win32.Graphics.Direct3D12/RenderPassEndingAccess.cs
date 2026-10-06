@@ -1,6 +1,8 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
+
 namespace Vortice.Win32.Graphics.Direct3D12;
 
 public partial struct RenderPassEndingAccess : IEquatable<RenderPassEndingAccess>
@@ -12,7 +14,7 @@ public partial struct RenderPassEndingAccess : IEquatable<RenderPassEndingAccess
             return false;
         }
 
-        if (left.Type == RenderPassEndingAccessType.Resolve && !(left.Anonymous.Resolve == right.Anonymous.Resolve))
+        if (left.Type == D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE && !(left.Anonymous.Resolve == right.Anonymous.Resolve))
         {
             return false;
         }
@@ -33,7 +35,7 @@ public partial struct RenderPassEndingAccess : IEquatable<RenderPassEndingAccess
         {
             hashCode.Add(Type);
 
-            if (Type == RenderPassEndingAccessType.Resolve)
+            if (Type == D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE)
             {
                 hashCode.Add(Anonymous.Resolve);
             }

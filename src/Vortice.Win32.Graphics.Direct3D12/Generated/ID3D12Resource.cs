@@ -162,9 +162,9 @@ public unsafe partial struct ID3D12Resource : ID3D12Resource.Interface, INativeG
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetHeapProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetHeapProperties(HeapProperties* pHeapProperties, HeapFlags* pHeapFlags)
+	public HResult GetHeapProperties(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, HeapProperties*, HeapFlags*, int>)(lpVtbl[14]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource*, HeapProperties*, D3D12_HEAP_FLAGS*, int>)(lpVtbl[14]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
 	}
 
 	public interface Interface : ID3D12Pageable.Interface
@@ -188,7 +188,7 @@ public unsafe partial struct ID3D12Resource : ID3D12Resource.Interface, INativeG
 		HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, Box* pSrcBox);
 
 		[VtblIndex(14)]
-		HResult GetHeapProperties(HeapProperties* pHeapProperties, HeapFlags* pHeapFlags);
+		HResult GetHeapProperties(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags);
 	}
 }
 

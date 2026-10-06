@@ -2,6 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
 namespace Vortice.Win32.Graphics.Direct3D12;
 
@@ -17,12 +18,12 @@ public unsafe partial struct DepthStencilViewDescription
     /// <param name="arraySize">Number of textures in the array or WSize for <see cref="RtvDimension.Texture3D"/>.</param>
     /// <param name="flags"></param>
     public DepthStencilViewDescription(
-        DsvDimension viewDimension,
+        D3D12_DSV_DIMENSION viewDimension,
         Format format = Format.Unknown,
         uint mipSlice = 0,
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1),
-        DsvFlags flags = DsvFlags.None)
+        D3D12_DSV_FLAGS flags = D3D12_DSV_FLAG_NONE)
     {
         Format = format;
         ViewDimension = viewDimension;
@@ -31,25 +32,25 @@ public unsafe partial struct DepthStencilViewDescription
 
         switch (viewDimension)
         {
-            case DsvDimension.Texture1D:
+            case D3D12_DSV_DIMENSION_TEXTURE1D:
                 Texture1D.MipSlice = mipSlice;
                 break;
-            case DsvDimension.Texture1DArray:
+            case D3D12_DSV_DIMENSION_TEXTURE1DARRAY:
                 Texture1DArray.MipSlice = mipSlice;
                 Texture1DArray.FirstArraySlice = firstArraySlice;
                 Texture1DArray.ArraySize = arraySize;
                 break;
-            case DsvDimension.Texture2D:
+            case D3D12_DSV_DIMENSION_TEXTURE2D:
                 Texture2D.MipSlice = mipSlice;
                 break;
-            case DsvDimension.Texture2DArray:
+            case D3D12_DSV_DIMENSION_TEXTURE2DARRAY:
                 Texture2DArray.MipSlice = mipSlice;
                 Texture2DArray.FirstArraySlice = firstArraySlice;
                 Texture2DArray.ArraySize = arraySize;
                 break;
-            case DsvDimension.Texture2DMs:
+            case D3D12_DSV_DIMENSION_TEXTURE2DMS:
                 break;
-            case DsvDimension.Texture2DMsArray:
+            case D3D12_DSV_DIMENSION_TEXTURE2DMSARRAY:
                 Texture2DMSArray.FirstArraySlice = firstArraySlice;
                 Texture2DMSArray.ArraySize = arraySize;
                 break;
@@ -63,35 +64,35 @@ public unsafe partial struct DepthStencilViewDescription
     /// </summary>
     public DepthStencilViewDescription(
         ID3D12Resource* texture,
-        DsvDimension viewDimension = DsvDimension.Unknown,
+        D3D12_DSV_DIMENSION viewDimension = D3D12_DSV_DIMENSION_UNKNOWN,
         Format format = Format.Unknown,
         uint mipSlice = 0,
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1),
-        DsvFlags flags = DsvFlags.None)
+        D3D12_DSV_FLAGS flags = D3D12_DSV_FLAG_NONE)
     {
         ViewDimension = viewDimension;
-        if (viewDimension == DsvDimension.Unknown ||
+        if (viewDimension == D3D12_DSV_DIMENSION_UNKNOWN ||
             format == Format.Unknown ||
             arraySize == unchecked((uint)-1))
         {
             ResourceDescription resourceDesc = texture->GetDesc();
 
-            if (viewDimension == DsvDimension.Unknown)
+            if (viewDimension == D3D12_DSV_DIMENSION_UNKNOWN)
             {
                 switch (resourceDesc.Dimension)
                 {
-                    case ResourceDimension.Texture1D:
-                        viewDimension = resourceDesc.DepthOrArraySize > 1 ? DsvDimension.Texture1DArray : DsvDimension.Texture1D;
+                    case D3D12_RESOURCE_DIMENSION_TEXTURE1D:
+                        viewDimension = resourceDesc.DepthOrArraySize > 1 ? D3D12_DSV_DIMENSION_TEXTURE1DARRAY : D3D12_DSV_DIMENSION_TEXTURE1D;
                         break;
-                    case ResourceDimension.Texture2D:
+                    case D3D12_RESOURCE_DIMENSION_TEXTURE2D:
                         if (resourceDesc.SampleDesc.Count > 1)
                         {
-                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? DsvDimension.Texture2DMsArray : DsvDimension.Texture2DMs;
+                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? D3D12_DSV_DIMENSION_TEXTURE2DMSARRAY : D3D12_DSV_DIMENSION_TEXTURE2DMS;
                         }
                         else
                         {
-                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? DsvDimension.Texture2DArray : DsvDimension.Texture2D;
+                            viewDimension = resourceDesc.DepthOrArraySize > 1 ? D3D12_DSV_DIMENSION_TEXTURE2DARRAY : D3D12_DSV_DIMENSION_TEXTURE2D;
                         }
                         break;
                 }
@@ -103,8 +104,8 @@ public unsafe partial struct DepthStencilViewDescription
             }
 
             bool isArray =
-                viewDimension == DsvDimension.Texture2DArray ||
-                viewDimension == DsvDimension.Texture2DMsArray;
+                viewDimension == D3D12_DSV_DIMENSION_TEXTURE2DARRAY ||
+                viewDimension == D3D12_DSV_DIMENSION_TEXTURE2DMSARRAY;
 
             if (arraySize == unchecked((uint)-1) &&
                 isArray)
@@ -119,25 +120,25 @@ public unsafe partial struct DepthStencilViewDescription
 
         switch (viewDimension)
         {
-            case DsvDimension.Texture1D:
+            case D3D12_DSV_DIMENSION_TEXTURE1D:
                 Anonymous.Texture1D.MipSlice = mipSlice;
                 break;
-            case DsvDimension.Texture1DArray:
+            case D3D12_DSV_DIMENSION_TEXTURE1DARRAY:
                 Anonymous.Texture1DArray.MipSlice = mipSlice;
                 Anonymous.Texture1DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture1DArray.ArraySize = arraySize;
                 break;
-            case DsvDimension.Texture2D:
+            case D3D12_DSV_DIMENSION_TEXTURE2D:
                 Anonymous.Texture2D.MipSlice = mipSlice;
                 break;
-            case DsvDimension.Texture2DArray:
+            case D3D12_DSV_DIMENSION_TEXTURE2DARRAY:
                 Anonymous.Texture2DArray.MipSlice = mipSlice;
                 Anonymous.Texture2DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DArray.ArraySize = arraySize;
                 break;
-            case DsvDimension.Texture2DMs:
+            case D3D12_DSV_DIMENSION_TEXTURE2DMS:
                 break;
-            case DsvDimension.Texture2DMsArray:
+            case D3D12_DSV_DIMENSION_TEXTURE2DMSARRAY:
                 Anonymous.Texture2DMSArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DMSArray.ArraySize = arraySize;
                 break;

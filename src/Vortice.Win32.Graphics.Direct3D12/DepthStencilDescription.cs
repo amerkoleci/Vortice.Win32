@@ -10,27 +10,27 @@ public partial struct DepthStencilDescription
     /// <summary>
     /// A built-in description with settings for not using a depth stencil buffer.
     /// </summary>
-    public static DepthStencilDescription None => new(false, false, ComparisonFunction.LessEqual);
+    public static DepthStencilDescription None => new(false, false, D3D12_COMPARISON_FUNC_LESS_EQUAL);
 
     /// <summary>
     /// A built-in description with default settings for using a depth stencil buffer.
     /// </summary>
-    public static DepthStencilDescription Default => new(true, true, ComparisonFunction.LessEqual);
+    public static DepthStencilDescription Default => new(true, true, D3D12_COMPARISON_FUNC_LESS_EQUAL);
 
     /// <summary>
     /// A built-in description with settings for enabling a read-only depth stencil buffer.
     /// </summary>
-    public static DepthStencilDescription Read => new(true, false, ComparisonFunction.LessEqual);
+    public static DepthStencilDescription Read => new(true, false, D3D12_COMPARISON_FUNC_LESS_EQUAL);
 
     /// <summary>
     /// A built-in description with default settings for using a reverse depth stencil buffer.
     /// </summary>
-    public static DepthStencilDescription ReverseZ => new(true, true, ComparisonFunction.GreaterEqual);
+    public static DepthStencilDescription ReverseZ => new(true, true, D3D12_COMPARISON_FUNC_GREATER_EQUAL);
 
     /// <summary>
     /// A built-in description with default settings for using a reverse read-only depth stencil buffer.
     /// </summary>
-    public static DepthStencilDescription ReadReverseZ => new(true, false, ComparisonFunction.GreaterEqual);
+    public static DepthStencilDescription ReadReverseZ => new(true, false, D3D12_COMPARISON_FUNC_GREATER_EQUAL);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="DepthStencilDescription"/> struct.
@@ -38,21 +38,21 @@ public partial struct DepthStencilDescription
     public DepthStencilDescription(
         bool depthEnable,
         bool depthWriteEnable,
-        ComparisonFunction depthFunc,
+        D3D12_COMPARISON_FUNC depthFunc,
         bool stencilEnable = false,
         byte stencilReadMask = (byte)D3D12_DEFAULT_STENCIL_READ_MASK,
         byte stencilWriteMask = (byte)D3D12_DEFAULT_STENCIL_WRITE_MASK,
-        StencilOperation frontStencilFailOp = StencilOperation.Keep,
-        StencilOperation frontStencilDepthFailOp = StencilOperation.Keep,
-        StencilOperation frontStencilPassOp = StencilOperation.Keep,
-        ComparisonFunction frontStencilFunc = ComparisonFunction.Always,
-        StencilOperation backStencilFailOp = StencilOperation.Keep,
-        StencilOperation backStencilDepthFailOp = StencilOperation.Keep,
-        StencilOperation backStencilPassOp = StencilOperation.Keep,
-        ComparisonFunction backStencilFunc = ComparisonFunction.Always)
+        D3D12_STENCIL_OP frontStencilFailOp = D3D12_STENCIL_OP_KEEP,
+        D3D12_STENCIL_OP frontStencilDepthFailOp = D3D12_STENCIL_OP_KEEP,
+        D3D12_STENCIL_OP frontStencilPassOp = D3D12_STENCIL_OP_KEEP,
+        D3D12_COMPARISON_FUNC frontStencilFunc = D3D12_COMPARISON_FUNC_ALWAYS,
+        D3D12_STENCIL_OP backStencilFailOp = D3D12_STENCIL_OP_KEEP,
+        D3D12_STENCIL_OP backStencilDepthFailOp = D3D12_STENCIL_OP_KEEP,
+        D3D12_STENCIL_OP backStencilPassOp = D3D12_STENCIL_OP_KEEP,
+        D3D12_COMPARISON_FUNC backStencilFunc = D3D12_COMPARISON_FUNC_ALWAYS)
     {
         DepthEnable = depthEnable;
-        DepthWriteMask = depthWriteEnable ? DepthWriteMask.All : DepthWriteMask.Zero;
+        DepthWriteMask = depthWriteEnable ? D3D12_DEPTH_WRITE_MASK_ALL : D3D12_DEPTH_WRITE_MASK_ZERO;
         DepthFunc = depthFunc;
         StencilEnable = stencilEnable;
         StencilReadMask = stencilReadMask;

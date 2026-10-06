@@ -9,13 +9,13 @@ public unsafe partial struct ResourceBarrier
 {
     public static ResourceBarrier InitTransition(
         ID3D12Resource* pResource,
-        ResourceStates stateBefore,
-        ResourceStates stateAfter,
+        D3D12_RESOURCE_STATES stateBefore,
+        D3D12_RESOURCE_STATES stateAfter,
         uint subresource = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES,
-        ResourceBarrierFlags flags = ResourceBarrierFlags.None)
+        D3D12_RESOURCE_BARRIER_FLAGS flags = D3D12_RESOURCE_BARRIER_FLAG_NONE)
     {
         ResourceBarrier result = default;
-        result.Type = ResourceBarrierType.Transition;
+        result.Type = D3D12_RESOURCE_BARRIER_TYPE_TRANSITION;
         result.Flags = flags;
         result.Anonymous.Transition.pResource = pResource;
         result.Anonymous.Transition.StateBefore = stateBefore;
@@ -27,7 +27,7 @@ public unsafe partial struct ResourceBarrier
     public static ResourceBarrier InitAliasing(ID3D12Resource* pResourceBefore, ID3D12Resource* pResourceAfter)
     {
         ResourceBarrier result = default;
-        result.Type = ResourceBarrierType.Aliasing;
+        result.Type = D3D12_RESOURCE_BARRIER_TYPE_ALIASING;
         result.Anonymous.Aliasing.pResourceBefore = pResourceBefore;
         result.Anonymous.Aliasing.pResourceAfter = pResourceAfter;
         return result;
@@ -36,7 +36,7 @@ public unsafe partial struct ResourceBarrier
     public static ResourceBarrier InitUAV(ID3D12Resource* pResource)
     {
         ResourceBarrier result = default;
-        result.Type = ResourceBarrierType.Uav;
+        result.Type =  D3D12_RESOURCE_BARRIER_TYPE_UAV;
         result.Anonymous.UAV.pResource = pResource;
         return result;
     }

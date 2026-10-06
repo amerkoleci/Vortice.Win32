@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12Debug2 : ID3D12Debug2.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug2::SetGPUBasedValidationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)
+	public void SetGPUBasedValidationFlags(D3D12_GPU_BASED_VALIDATION_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12Debug2*, GpuBasedValidationFlags, void>)(lpVtbl[3]))((ID3D12Debug2*)Unsafe.AsPointer(ref this), Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12Debug2*, D3D12_GPU_BASED_VALIDATION_FLAGS, void>)(lpVtbl[3]))((ID3D12Debug2*)Unsafe.AsPointer(ref this), Flags);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags);
+		void SetGPUBasedValidationFlags(D3D12_GPU_BASED_VALIDATION_FLAGS Flags);
 	}
 }
 

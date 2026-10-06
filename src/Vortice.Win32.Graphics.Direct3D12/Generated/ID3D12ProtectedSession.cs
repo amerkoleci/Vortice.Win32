@@ -121,9 +121,9 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetSessionStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public ProtectedSessionStatus GetSessionStatus()
+	public D3D12_PROTECTED_SESSION_STATUS GetSessionStatus()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, ProtectedSessionStatus>)(lpVtbl[9]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, D3D12_PROTECTED_SESSION_STATUS>)(lpVtbl[9]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12DeviceChild.Interface
@@ -132,7 +132,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 		HResult GetStatusFence(Guid* riid, void** ppFence);
 
 		[VtblIndex(9)]
-		ProtectedSessionStatus GetSessionStatus();
+		D3D12_PROTECTED_SESSION_STATUS GetSessionStatus();
 	}
 }
 

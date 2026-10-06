@@ -113,15 +113,15 @@ public unsafe partial struct ID3D12CommandList : ID3D12CommandList.Interface, IN
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandList::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public new CommandListType GetType()
+	public new D3D12_COMMAND_LIST_TYPE GetType()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandList*, CommandListType>)(lpVtbl[8]))((ID3D12CommandList*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandList*, D3D12_COMMAND_LIST_TYPE>)(lpVtbl[8]))((ID3D12CommandList*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]
-		CommandListType GetType();
+		D3D12_COMMAND_LIST_TYPE GetType();
 	}
 }
 

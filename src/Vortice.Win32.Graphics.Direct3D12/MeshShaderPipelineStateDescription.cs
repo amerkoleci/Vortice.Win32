@@ -24,7 +24,7 @@ public unsafe partial struct MeshShaderPipelineStateDescription
 
     public DepthStencilDescription1 DepthStencilState;
 
-    public PrimitiveTopologyType PrimitiveTopologyType;
+    public D3D12_PRIMITIVE_TOPOLOGY_TYPE PrimitiveTopologyType;
 
     public uint NumRenderTargets;
 
@@ -38,7 +38,7 @@ public unsafe partial struct MeshShaderPipelineStateDescription
 
     public CachedPipelineState CachedPSO;
 
-    public PipelineStateFlags Flags;
+    public D3D12_PIPELINE_STATE_FLAGS Flags;
 
     public partial struct _RTVFormats_e__FixedBuffer
     {

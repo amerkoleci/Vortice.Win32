@@ -137,15 +137,15 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence1::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public FenceFlags GetCreationFlags()
+	public D3D12_FENCE_FLAGS GetCreationFlags()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, FenceFlags>)(lpVtbl[11]))((ID3D12Fence1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, D3D12_FENCE_FLAGS>)(lpVtbl[11]))((ID3D12Fence1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12Fence.Interface
 	{
 		[VtblIndex(11)]
-		FenceFlags GetCreationFlags();
+		D3D12_FENCE_FLAGS GetCreationFlags();
 	}
 }
 

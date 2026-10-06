@@ -7,7 +7,7 @@ using Vortice.Win32.Graphics.Dxgi;
 namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
 
 /// <unmanaged>D3D12MA_ALLOCATION_CALLBACKS</unmanaged>
-public unsafe partial struct AllocationCallbacks
+public unsafe partial struct D3D12MA_ALLOCATION_CALLBACKS
 {
     /// <summary>Allocation function.</summary>
     /// <unmanaged>D3D12MA_AllocateFunctionType</unmanaged>
@@ -22,44 +22,43 @@ public unsafe partial struct AllocationCallbacks
 }
 
 /// <unmanaged>D3D12MA_ALLOCATOR_DESC</unmanaged>
-public unsafe partial struct AllocatorDesc
+public unsafe partial struct D3D12MA_ALLOCATOR_DESC
 {
     public AllocatorFlags Flags;
     public ID3D12Device* pDevice;
     public ulong PreferredBlockSize;
-    public AllocationCallbacks* pAllocationCallbacks;
+    public D3D12MA_ALLOCATION_CALLBACKS* pAllocationCallbacks;
     public IDXGIAdapter* pAdapter;
 }
 
-/// <unmanaged>D3D12MA_POOL_DESC</unmanaged>
-public unsafe partial struct PoolDesc
+public unsafe partial struct D3D12MA_POOL_DESC
 {
     public PoolFlags Flags;
     public HeapProperties HeapProperties;
-    public HeapFlags HeapFlags;
+    public D3D12_HEAP_FLAGS HeapFlags;
     public ulong BlockSize;
     public uint MinBlockCount;
     public uint MaxBlockCount;
     public ulong MinAllocationAlignment;
     public ID3D12ProtectedResourceSession* pProtectedSession;
-    public ResidencyPriority ResidencyPriority;
+    public D3D12_RESIDENCY_PRIORITY ResidencyPriority;
 }
 
 /// <unmanaged>D3D12MA_VIRTUAL_BLOCK_DESC</unmanaged>
-public unsafe partial struct VirtualBlockDesc
+public unsafe partial struct D3D12MA_VIRTUAL_BLOCK_DESC
 {
     public VirtualBlockFlags Flags;
     public ulong Size;
-    public AllocationCallbacks* pAllocationCallbacks;
+    public D3D12MA_ALLOCATION_CALLBACKS* pAllocationCallbacks;
 }
 
 /// <unmanaged>D3D12MA_ALLOCATION_DESC</unmanaged>
-public unsafe partial struct AllocationDesc
+public unsafe partial struct D3D12MA_ALLOCATION_DESC
 {
     public AllocationFlags Flags;
-    public HeapType HeapType;
-    public HeapFlags ExtraHeapFlags;
-    public Pool* CustomPool;
+    public D3D12_HEAP_TYPE HeapType;
+    public D3D12_HEAP_FLAGS ExtraHeapFlags;
+    public D3D12MA_Pool CustomPool;
     public void* pPrivateData;
 }
 

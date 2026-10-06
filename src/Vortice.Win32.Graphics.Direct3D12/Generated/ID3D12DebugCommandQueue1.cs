@@ -81,26 +81,26 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue1::AssertResourceAccess"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, BarrierAccess Access)
+	public void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_ACCESS Access)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierAccess, void>)(lpVtbl[4]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
+		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, D3D12_BARRIER_ACCESS, void>)(lpVtbl[4]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue1::AssertTextureLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, BarrierLayout Layout)
+	public void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_LAYOUT Layout)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierLayout, void>)(lpVtbl[5]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
+		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, D3D12_BARRIER_LAYOUT, void>)(lpVtbl[5]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
 	}
 
 	public interface Interface : ID3D12DebugCommandQueue.Interface
 	{
 		[VtblIndex(4)]
-		void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, BarrierAccess Access);
+		void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_ACCESS Access);
 
 		[VtblIndex(5)]
-		void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, BarrierLayout Layout);
+		void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, D3D12_BARRIER_LAYOUT Layout);
 	}
 }
 

@@ -23,7 +23,7 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
     /// <param name="layout"></param>
     /// <param name="flags"></param>
     public ResourceDescription(
-        ResourceDimension dimension,
+        D3D12_RESOURCE_DIMENSION dimension,
         ulong alignment,
         ulong width,
         uint height,
@@ -32,8 +32,8 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         Format format,
         uint sampleCount,
         uint sampleQuality,
-        TextureLayout layout,
-        ResourceFlags flags)
+        D3D12_TEXTURE_LAYOUT layout,
+        D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE)
     {
         Dimension = dimension;
         Alignment = alignment;
@@ -47,32 +47,32 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         Flags = flags;
     }
 
-    public static ResourceDescription Buffer(in ResourceAllocationInfo resourceAllocInfo, ResourceFlags flags = ResourceFlags.None)
+    public static ResourceDescription Buffer(in ResourceAllocationInfo resourceAllocInfo, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE)
     {
         return new ResourceDescription(
-            ResourceDimension.Buffer,
+            D3D12_RESOURCE_DIMENSION_BUFFER,
             resourceAllocInfo.Alignment,
             resourceAllocInfo.SizeInBytes,
-            1, 1, 1, Format.Unknown, 1, 0, TextureLayout.RowMajor, flags);
+            1, 1, 1, Format.Unknown, 1, 0, D3D12_TEXTURE_LAYOUT_ROW_MAJOR, flags);
     }
 
     public static ResourceDescription Buffer(
         ulong sizeInBytes,
-        ResourceFlags flags = ResourceFlags.None,
+        D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE,
         ulong alignment = 0)
     {
-        return new ResourceDescription(ResourceDimension.Buffer, alignment, sizeInBytes, 1, 1, 1, Format.Unknown, 1, 0, TextureLayout.RowMajor, flags);
+        return new ResourceDescription(D3D12_RESOURCE_DIMENSION_BUFFER, alignment, sizeInBytes, 1, 1, 1, Format.Unknown, 1, 0, D3D12_TEXTURE_LAYOUT_ROW_MAJOR, flags);
     }
 
     public static ResourceDescription Tex1D(Format format,
         ulong width,
         ushort arraySize = 1,
         ushort mipLevels = 0,
-        ResourceFlags flags = ResourceFlags.None,
-        TextureLayout layout = TextureLayout.Unknown,
+        D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE,
+        D3D12_TEXTURE_LAYOUT layout = D3D12_TEXTURE_LAYOUT_UNKNOWN,
         ulong alignment = 0)
     {
-        return new ResourceDescription(ResourceDimension.Texture1D, alignment, width, 1, arraySize, mipLevels, format, 1, 0, layout, flags);
+        return new ResourceDescription(D3D12_RESOURCE_DIMENSION_TEXTURE1D, alignment, width, 1, arraySize, mipLevels, format, 1, 0, layout, flags);
     }
 
     public static ResourceDescription Tex2D(Format format,
@@ -82,11 +82,11 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         ushort mipLevels = 0,
         uint sampleCount = 1,
         uint sampleQuality = 0,
-        ResourceFlags flags = ResourceFlags.None,
-        TextureLayout layout = TextureLayout.Unknown,
+        D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE,
+        D3D12_TEXTURE_LAYOUT layout = D3D12_TEXTURE_LAYOUT_UNKNOWN,
         ulong alignment = 0)
     {
-        return new ResourceDescription(ResourceDimension.Texture2D,
+        return new ResourceDescription(D3D12_RESOURCE_DIMENSION_TEXTURE2D,
             alignment,
             width,
             height,
@@ -104,12 +104,12 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         uint height,
         ushort depth,
         ushort mipLevels = 0,
-        ResourceFlags flags = ResourceFlags.None,
-        TextureLayout layout = TextureLayout.Unknown,
+        D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE,
+        D3D12_TEXTURE_LAYOUT layout = D3D12_TEXTURE_LAYOUT_UNKNOWN,
         ulong alignment = 0)
     {
         return new ResourceDescription(
-            ResourceDimension.Texture3D,
+            D3D12_RESOURCE_DIMENSION_TEXTURE3D,
             alignment,
             width,
             height,
@@ -122,9 +122,9 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
             flags);
     }
 
-    public ushort Depth => ((Dimension == ResourceDimension.Texture3D) ? DepthOrArraySize : (ushort)(1));
+    public ushort Depth => ((Dimension == D3D12_RESOURCE_DIMENSION_TEXTURE3D) ? DepthOrArraySize : (ushort)(1));
 
-    public ushort ArraySize => ((Dimension != ResourceDimension.Texture3D) ? DepthOrArraySize : (ushort)(1));
+    public ushort ArraySize => ((Dimension != D3D12_RESOURCE_DIMENSION_TEXTURE3D) ? DepthOrArraySize : (ushort)(1));
 
     public byte GetPlaneCount(ID3D12Device* pDevice)
     {

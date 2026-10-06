@@ -113,15 +113,15 @@ public unsafe partial struct ID3D12MetaCommand : ID3D12MetaCommand.Interface, IN
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12MetaCommand::GetRequiredParameterResourceSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public ulong GetRequiredParameterResourceSize(MetaCommandParameterStage Stage, uint ParameterIndex)
+	public ulong GetRequiredParameterResourceSize(D3D12_META_COMMAND_PARAMETER_STAGE Stage, uint ParameterIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12MetaCommand*, MetaCommandParameterStage, uint, ulong>)(lpVtbl[8]))((ID3D12MetaCommand*)Unsafe.AsPointer(ref this), Stage, ParameterIndex);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12MetaCommand*, D3D12_META_COMMAND_PARAMETER_STAGE, uint, ulong>)(lpVtbl[8]))((ID3D12MetaCommand*)Unsafe.AsPointer(ref this), Stage, ParameterIndex);
 	}
 
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]
-		ulong GetRequiredParameterResourceSize(MetaCommandParameterStage Stage, uint ParameterIndex);
+		ulong GetRequiredParameterResourceSize(D3D12_META_COMMAND_PARAMETER_STAGE Stage, uint ParameterIndex);
 	}
 }
 

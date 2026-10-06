@@ -121,9 +121,9 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommandAllocator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateCommandAllocator(CommandListType type, Guid* riid, void** ppCommandAllocator)
+	public HResult CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE type, Guid* riid, void** ppCommandAllocator)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, CommandListType, Guid*, void**, int>)(lpVtbl[9]))((ID3D12Device*)Unsafe.AsPointer(ref this), type, riid, ppCommandAllocator);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_COMMAND_LIST_TYPE, Guid*, void**, int>)(lpVtbl[9]))((ID3D12Device*)Unsafe.AsPointer(ref this), type, riid, ppCommandAllocator);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateGraphicsPipelineState"]/*' />
@@ -145,17 +145,17 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommandList"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateCommandList(uint nodeMask, CommandListType type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList)
+	public HResult CreateCommandList(uint nodeMask, D3D12_COMMAND_LIST_TYPE type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, CommandListType, ID3D12CommandAllocator*, ID3D12PipelineState*, Guid*, void**, int>)(lpVtbl[12]))((ID3D12Device*)Unsafe.AsPointer(ref this), nodeMask, type, pCommandAllocator, pInitialState, riid, ppCommandList);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, D3D12_COMMAND_LIST_TYPE, ID3D12CommandAllocator*, ID3D12PipelineState*, Guid*, void**, int>)(lpVtbl[12]))((ID3D12Device*)Unsafe.AsPointer(ref this), nodeMask, type, pCommandAllocator, pInitialState, riid, ppCommandList);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
+	public HResult CheckFeatureSupport(D3D12_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Feature, void*, int, int>)(lpVtbl[13]))((ID3D12Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_FEATURE, void*, int, int>)(lpVtbl[13]))((ID3D12Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateDescriptorHeap"]/*' />
@@ -169,9 +169,9 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetDescriptorHandleIncrementSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public uint GetDescriptorHandleIncrementSize(DescriptorHeapType DescriptorHeapType)
+	public uint GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapType)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, DescriptorHeapType, uint>)(lpVtbl[15]))((ID3D12Device*)Unsafe.AsPointer(ref this), DescriptorHeapType);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_DESCRIPTOR_HEAP_TYPE, uint>)(lpVtbl[15]))((ID3D12Device*)Unsafe.AsPointer(ref this), DescriptorHeapType);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateRootSignature"]/*' />
@@ -233,17 +233,17 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CopyDescriptors"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public void CopyDescriptors(uint NumDestDescriptorRanges, CpuDescriptorHandle* pDestDescriptorRangeStarts, uint* pDestDescriptorRangeSizes, uint NumSrcDescriptorRanges, CpuDescriptorHandle* pSrcDescriptorRangeStarts, uint* pSrcDescriptorRangeSizes, DescriptorHeapType DescriptorHeapsType)
+	public void CopyDescriptors(uint NumDestDescriptorRanges, CpuDescriptorHandle* pDestDescriptorRangeStarts, uint* pDestDescriptorRangeSizes, uint NumSrcDescriptorRanges, CpuDescriptorHandle* pSrcDescriptorRangeStarts, uint* pSrcDescriptorRangeSizes, D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapsType)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, CpuDescriptorHandle*, uint*, uint, CpuDescriptorHandle*, uint*, DescriptorHeapType, void>)(lpVtbl[23]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumDestDescriptorRanges, pDestDescriptorRangeStarts, pDestDescriptorRangeSizes, NumSrcDescriptorRanges, pSrcDescriptorRangeStarts, pSrcDescriptorRangeSizes, DescriptorHeapsType);
+		((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, CpuDescriptorHandle*, uint*, uint, CpuDescriptorHandle*, uint*, D3D12_DESCRIPTOR_HEAP_TYPE, void>)(lpVtbl[23]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumDestDescriptorRanges, pDestDescriptorRangeStarts, pDestDescriptorRangeSizes, NumSrcDescriptorRanges, pSrcDescriptorRangeStarts, pSrcDescriptorRangeSizes, DescriptorHeapsType);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CopyDescriptorsSimple"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle DestDescriptorRangeStart, CpuDescriptorHandle SrcDescriptorRangeStart, DescriptorHeapType DescriptorHeapsType)
+	public void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle DestDescriptorRangeStart, CpuDescriptorHandle SrcDescriptorRangeStart, D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapsType)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, CpuDescriptorHandle, CpuDescriptorHandle, DescriptorHeapType, void>)(lpVtbl[24]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumDescriptors, DestDescriptorRangeStart, SrcDescriptorRangeStart, DescriptorHeapsType);
+		((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, CpuDescriptorHandle, CpuDescriptorHandle, D3D12_DESCRIPTOR_HEAP_TYPE, void>)(lpVtbl[24]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumDescriptors, DestDescriptorRangeStart, SrcDescriptorRangeStart, DescriptorHeapsType);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetResourceAllocationInfo"]/*' />
@@ -258,18 +258,18 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetCustomHeapProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, D3D12_HEAP_TYPE heapType)
 	{
 		HeapProperties result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12Device*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[26]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
+		return *((delegate* unmanaged[MemberFunction]<ID3D12Device*, HeapProperties*, uint, D3D12_HEAP_TYPE, HeapProperties*>)(lpVtbl[26]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommittedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult CreateCommittedResource(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
+	public HResult CreateCommittedResource(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, HeapProperties*, HeapFlags, ResourceDescription*, ResourceStates, ClearValue*, Guid*, void**, int>)(lpVtbl[27]))((ID3D12Device*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialResourceState, pOptimizedClearValue, riidResource, ppvResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, HeapProperties*, D3D12_HEAP_FLAGS, ResourceDescription*, D3D12_RESOURCE_STATES, ClearValue*, Guid*, void**, int>)(lpVtbl[27]))((ID3D12Device*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialResourceState, pOptimizedClearValue, riidResource, ppvResource);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateHeap"]/*' />
@@ -283,17 +283,17 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreatePlacedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource)
+	public HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ID3D12Heap*, ulong, ResourceDescription*, ResourceStates, ClearValue*, Guid*, void**, int>)(lpVtbl[29]))((ID3D12Device*)Unsafe.AsPointer(ref this), pHeap, HeapOffset, pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ID3D12Heap*, ulong, ResourceDescription*, D3D12_RESOURCE_STATES, ClearValue*, Guid*, void**, int>)(lpVtbl[29]))((ID3D12Device*)Unsafe.AsPointer(ref this), pHeap, HeapOffset, pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateReservedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CreateReservedResource(ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource)
+	public HResult CreateReservedResource(ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ResourceDescription*, ResourceStates, ClearValue*, Guid*, void**, int>)(lpVtbl[30]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ResourceDescription*, D3D12_RESOURCE_STATES, ClearValue*, Guid*, void**, int>)(lpVtbl[30]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateSharedHandle"]/*' />
@@ -339,9 +339,9 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* riid, void** ppFence)
+	public HResult CreateFence(ulong InitialValue, D3D12_FENCE_FLAGS Flags, Guid* riid, void** ppFence)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ulong, FenceFlags, Guid*, void**, int>)(lpVtbl[36]))((ID3D12Device*)Unsafe.AsPointer(ref this), InitialValue, Flags, riid, ppFence);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ulong, D3D12_FENCE_FLAGS, Guid*, void**, int>)(lpVtbl[36]))((ID3D12Device*)Unsafe.AsPointer(ref this), InitialValue, Flags, riid, ppFence);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetDeviceRemovedReason"]/*' />
@@ -410,7 +410,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		HResult CreateCommandQueue(CommandQueueDescription* pDesc, Guid* riid, void** ppCommandQueue);
 
 		[VtblIndex(9)]
-		HResult CreateCommandAllocator(CommandListType type, Guid* riid, void** ppCommandAllocator);
+		HResult CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE type, Guid* riid, void** ppCommandAllocator);
 
 		[VtblIndex(10)]
 		HResult CreateGraphicsPipelineState(GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
@@ -419,16 +419,16 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		HResult CreateComputePipelineState(ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(12)]
-		HResult CreateCommandList(uint nodeMask, CommandListType type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList);
+		HResult CreateCommandList(uint nodeMask, D3D12_COMMAND_LIST_TYPE type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList);
 
 		[VtblIndex(13)]
-		HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
+		HResult CheckFeatureSupport(D3D12_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
 
 		[VtblIndex(14)]
 		HResult CreateDescriptorHeap(DescriptorHeapDescription* pDescriptorHeapDesc, Guid* riid, void** ppvHeap);
 
 		[VtblIndex(15)]
-		uint GetDescriptorHandleIncrementSize(DescriptorHeapType DescriptorHeapType);
+		uint GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapType);
 
 		[VtblIndex(16)]
 		HResult CreateRootSignature(uint nodeMask, void* pBlobWithRootSignature, nuint blobLengthInBytes, Guid* riid, void** ppvRootSignature);
@@ -452,28 +452,28 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		void CreateSampler(SamplerDescription* pDesc, CpuDescriptorHandle DestDescriptor);
 
 		[VtblIndex(23)]
-		void CopyDescriptors(uint NumDestDescriptorRanges, CpuDescriptorHandle* pDestDescriptorRangeStarts, uint* pDestDescriptorRangeSizes, uint NumSrcDescriptorRanges, CpuDescriptorHandle* pSrcDescriptorRangeStarts, uint* pSrcDescriptorRangeSizes, DescriptorHeapType DescriptorHeapsType);
+		void CopyDescriptors(uint NumDestDescriptorRanges, CpuDescriptorHandle* pDestDescriptorRangeStarts, uint* pDestDescriptorRangeSizes, uint NumSrcDescriptorRanges, CpuDescriptorHandle* pSrcDescriptorRangeStarts, uint* pSrcDescriptorRangeSizes, D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapsType);
 
 		[VtblIndex(24)]
-		void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle DestDescriptorRangeStart, CpuDescriptorHandle SrcDescriptorRangeStart, DescriptorHeapType DescriptorHeapsType);
+		void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle DestDescriptorRangeStart, CpuDescriptorHandle SrcDescriptorRangeStart, D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapsType);
 
 		[VtblIndex(25)]
 		ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs);
 
 		[VtblIndex(26)]
-		HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType);
+		HeapProperties GetCustomHeapProperties(uint nodeMask, D3D12_HEAP_TYPE heapType);
 
 		[VtblIndex(27)]
-		HResult CreateCommittedResource(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
+		HResult CreateCommittedResource(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
 
 		[VtblIndex(28)]
 		HResult CreateHeap(HeapDescription* pDesc, Guid* riid, void** ppvHeap);
 
 		[VtblIndex(29)]
-		HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
+		HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
 
 		[VtblIndex(30)]
-		HResult CreateReservedResource(ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
+		HResult CreateReservedResource(ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
 
 		[VtblIndex(31)]
 		HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle);
@@ -491,7 +491,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects);
 
 		[VtblIndex(36)]
-		HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* riid, void** ppFence);
+		HResult CreateFence(ulong InitialValue, D3D12_FENCE_FLAGS Flags, Guid* riid, void** ppFence);
 
 		[VtblIndex(37)]
 		HResult GetDeviceRemovedReason();

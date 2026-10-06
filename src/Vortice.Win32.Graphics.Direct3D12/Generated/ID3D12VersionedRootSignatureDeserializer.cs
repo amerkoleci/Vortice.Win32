@@ -73,9 +73,9 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : ID3D12Ve
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetRootSignatureDescAtVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetRootSignatureDescAtVersion(RootSignatureVersion convertToVersion, VersionedRootSignatureDescription** ppDesc)
+	public HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, VersionedRootSignatureDescription** ppDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, RootSignatureVersion, VersionedRootSignatureDescription**, int>)(lpVtbl[3]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), convertToVersion, ppDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, D3D_ROOT_SIGNATURE_VERSION, VersionedRootSignatureDescription**, int>)(lpVtbl[3]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), convertToVersion, ppDesc);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetUnconvertedRootSignatureDesc"]/*' />
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : ID3D12Ve
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetRootSignatureDescAtVersion(RootSignatureVersion convertToVersion, VersionedRootSignatureDescription** ppDesc);
+		HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, VersionedRootSignatureDescription** ppDesc);
 
 		[VtblIndex(4)]
 		VersionedRootSignatureDescription* GetUnconvertedRootSignatureDesc();

@@ -1,27 +1,29 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
+
 namespace Vortice.Win32.Graphics.Direct3D12;
 
 public partial struct HeapProperties : IEquatable<HeapProperties>
 {
-    public HeapProperties(CpuPageProperty cpuPageProperty,
-        MemoryPool memoryPoolPreference,
+    public HeapProperties(D3D12_CPU_PAGE_PROPERTY cpuPageProperty,
+        D3D12_MEMORY_POOL memoryPoolPreference,
         uint creationNodeMask = 1,
         uint nodeMask = 1)
     {
-        Type = HeapType.Custom;
+        Type = D3D12_HEAP_TYPE_CUSTOM;
         CPUPageProperty = cpuPageProperty;
         MemoryPoolPreference = memoryPoolPreference;
         CreationNodeMask = creationNodeMask;
         VisibleNodeMask = nodeMask;
     }
 
-    public HeapProperties(HeapType type, uint creationNodeMask = 1, uint nodeMask = 1)
+    public HeapProperties(D3D12_HEAP_TYPE type, uint creationNodeMask = 1, uint nodeMask = 1)
     {
         Type = type;
-        CPUPageProperty = CpuPageProperty.Unknown;
-        MemoryPoolPreference = MemoryPool.Unknown;
+        CPUPageProperty = D3D12_CPU_PAGE_PROPERTY_UNKNOWN;
+        MemoryPoolPreference = D3D12_MEMORY_POOL_UNKNOWN;
         CreationNodeMask = creationNodeMask;
         VisibleNodeMask = nodeMask;
     }
@@ -30,9 +32,9 @@ public partial struct HeapProperties : IEquatable<HeapProperties>
     {
         get
         {
-            return (Type == HeapType.Upload)
-                || (Type == HeapType.Readback)
-                || ((Type == HeapType.Custom) && ((CPUPageProperty == CpuPageProperty.WriteCombine) || (CPUPageProperty == CpuPageProperty.WriteBack)));
+            return (Type == D3D12_HEAP_TYPE_UPLOAD)
+                || (Type == D3D12_HEAP_TYPE_READBACK)
+                || ((Type == D3D12_HEAP_TYPE_CUSTOM) && ((CPUPageProperty == D3D12_CPU_PAGE_PROPERTY_WRITE_COMBINE) || (CPUPageProperty == D3D12_CPU_PAGE_PROPERTY_WRITE_BACK)));
         }
     }
 

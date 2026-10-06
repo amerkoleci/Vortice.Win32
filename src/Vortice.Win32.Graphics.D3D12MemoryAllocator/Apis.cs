@@ -11,10 +11,13 @@ public static unsafe partial class Apis
     private const string LibraryName = "D3D12MA";
 
     [LibraryImport(LibraryName, EntryPoint = "D3D12MA_CreateAllocator")]
-    public static partial HResult CreateAllocator(in AllocatorDesc desc, out Allocator allocator);
+    public static partial HResult D3D12MA_CreateAllocator(in D3D12MA_ALLOCATOR_DESC desc, out D3D12MA_Allocator allocator);
+
+    [LibraryImport(LibraryName, EntryPoint = "D3D12MA_CreateAllocator")]
+    public static partial HResult D3D12MA_CreateAllocator(D3D12MA_ALLOCATOR_DESC* pDesc, D3D12MA_Allocator* ppAllocator);
 
     [LibraryImport(LibraryName, EntryPoint = "D3D12MA_CreateVirtualBlock")]
-    public static partial HResult CreateVirtualBlock(in VirtualBlockDesc desc, out VirtualBlock virtualBlock);
+    public static partial HResult CreateVirtualBlock(in D3D12MA_VIRTUAL_BLOCK_DESC desc, out VirtualBlock virtualBlock);
 
     [LibraryImport(LibraryName)]
     internal static partial uint D3D12MA_Allocator_AddRef(nint pSelf);
@@ -36,22 +39,22 @@ public static unsafe partial class Apis
     [LibraryImport(LibraryName)]
     internal static partial ulong D3D12MA_Allocator_GetMemoryCapacity(nint pSelf, uint memorySegmentGroup);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateResource(nint pSelf, AllocationDesc* allocationDesc, ResourceDescription* resourceDesc, ResourceStates initialResourceState, ClearValue* pOptimizedClearValue, Allocation* allocation, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateResource(nint pSelf, D3D12MA_ALLOCATION_DESC* allocationDesc, ResourceDescription* resourceDesc, D3D12_RESOURCE_STATES initialResourceState, ClearValue* pOptimizedClearValue, D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateResource2(nint pSelf, AllocationDesc* allocationDesc, ResourceDescription1* pResourceDesc, ResourceStates initialResourceState, ClearValue* pOptimizedClearValue, Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateResource2(nint pSelf, D3D12MA_ALLOCATION_DESC* allocationDesc, ResourceDescription1* pResourceDesc, D3D12_RESOURCE_STATES initialResourceState, ClearValue* pOptimizedClearValue, D3D12MA_Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateResource3(nint pSelf, AllocationDesc* allocationDesc, ResourceDescription1* pResourceDesc, BarrierLayout InitialLayout, ClearValue* pOptimizedClearValue, uint NumCastableFormats, Format* pCastableFormats, Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateResource3(nint pSelf, D3D12MA_ALLOCATION_DESC* allocationDesc, ResourceDescription1* pResourceDesc, D3D12_BARRIER_LAYOUT InitialLayout, ClearValue* pOptimizedClearValue, uint NumCastableFormats, Format* pCastableFormats, D3D12MA_Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_AllocateMemory(nint pSelf, AllocationDesc* pAllocDesc, ResourceAllocationInfo* pAllocInfo, Allocation* ppAllocation);
+    internal static partial HResult D3D12MA_Allocator_AllocateMemory(nint pSelf, D3D12MA_ALLOCATION_DESC* pAllocDesc, ResourceAllocationInfo* pAllocInfo, D3D12MA_Allocation* ppAllocation);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource(nint pSelf, Allocation* pAllocation, ulong AllocationLocalOffset, ResourceDescription* pResourceDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource(nint pSelf, D3D12MA_Allocation* pAllocation, ulong AllocationLocalOffset, ResourceDescription* pResourceDesc, D3D12_RESOURCE_STATES InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource1(nint pSelf, Allocation* pAllocation, ulong AllocationLocalOffset, ResourceDescription* pResourceDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource1(nint pSelf, D3D12MA_Allocation* pAllocation, ulong AllocationLocalOffset, ResourceDescription* pResourceDesc, D3D12_RESOURCE_STATES InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource2(nint pSelf, Allocation* pAllocation, ulong AllocationLocalOffset, ResourceDescription* pResourceDesc, BarrierLayout InitialLayout, ClearValue* pOptimizedClearValue, uint NumCastableFormats, Format* pCastableFormats, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource2(nint pSelf, D3D12MA_Allocation* pAllocation, ulong AllocationLocalOffset, ResourceDescription* pResourceDesc, D3D12_BARRIER_LAYOUT InitialLayout, ClearValue* pOptimizedClearValue, uint NumCastableFormats, Format* pCastableFormats, Guid* riidResource, void** ppvResource);
 
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreatePool(nint pSelf, PoolDesc* pPoolDesc, Pool* ppPool);
+    internal static partial HResult D3D12MA_Allocator_CreatePool(nint pSelf, D3D12MA_POOL_DESC* pPoolDesc, out D3D12MA_Pool pool);
     [LibraryImport(LibraryName)]
     internal static partial void D3D12MA_Allocator_SetCurrentFrameIndex(nint pSelf, uint frameIndex);
     //[LibraryImport(LibraryName)]
@@ -67,30 +70,30 @@ public static unsafe partial class Apis
 
     #region Allocation
     [LibraryImport(LibraryName)]
-    internal static partial uint D3D12MA_Allocation_AddRef(nint pSelf);
+    internal static partial uint D3D12MA_Allocation_AddRef(D3D12MA_Allocation pSelf);
     [LibraryImport(LibraryName)]
-    internal static partial uint D3D12MA_Allocation_Release(nint pSelf);
+    internal static partial uint D3D12MA_Allocation_Release(D3D12MA_Allocation pSelf);
 
     [LibraryImport(LibraryName)]
-    internal static partial ulong D3D12MA_Allocation_GetOffset(nint pSelf);
+    internal static partial ulong D3D12MA_Allocation_GetOffset(D3D12MA_Allocation pSelf);
     [LibraryImport(LibraryName)]
-    internal static partial ulong D3D12MA_Allocation_GetAlignment(nint pSelf);
+    internal static partial ulong D3D12MA_Allocation_GetAlignment(D3D12MA_Allocation pSelf);
     [LibraryImport(LibraryName)]
-    internal static partial ulong D3D12MA_Allocation_GetSize(nint pSelf);
+    internal static partial ulong D3D12MA_Allocation_GetSize(D3D12MA_Allocation pSelf);
     [LibraryImport(LibraryName)]
-    internal static partial ID3D12Resource* D3D12MA_Allocation_GetResource(nint pSelf);
+    internal static partial ID3D12Resource* D3D12MA_Allocation_GetResource(D3D12MA_Allocation pSelf);
 
     [LibraryImport(LibraryName)]
-    internal static partial void D3D12MA_Allocation_SetResource(nint pSelf, ID3D12Resource* pResource);
+    internal static partial void D3D12MA_Allocation_SetResource(D3D12MA_Allocation pSelf, ID3D12Resource* pResource);
     [LibraryImport(LibraryName)]
-    internal static partial ID3D12Heap* D3D12MA_Allocation_GetHeap(nint pSelf);
+    internal static partial ID3D12Heap* D3D12MA_Allocation_GetHeap(D3D12MA_Allocation pSelf);
     [LibraryImport(LibraryName)]
-    internal static partial void D3D12MA_Allocation_SetPrivateData(nint pSelf, void* pPrivateData);
+    internal static partial void D3D12MA_Allocation_SetPrivateData(D3D12MA_Allocation pSelf, void* pPrivateData);
     [LibraryImport(LibraryName)]
-    internal static partial void* D3D12MA_Allocation_GetPrivateData(nint pSelf);
+    internal static partial void* D3D12MA_Allocation_GetPrivateData(D3D12MA_Allocation pSelf);
     [LibraryImport(LibraryName)]
-    internal static partial void D3D12MA_Allocation_SetName(nint pSelf, char* Name);
+    internal static partial void D3D12MA_Allocation_SetName(D3D12MA_Allocation pSelf, char* Name);
     [LibraryImport(LibraryName)]
-    internal static partial char* D3D12MA_Allocation_GetName(nint pSelf);
+    internal static partial char* D3D12MA_Allocation_GetName(D3D12MA_Allocation pSelf);
     #endregion
 }

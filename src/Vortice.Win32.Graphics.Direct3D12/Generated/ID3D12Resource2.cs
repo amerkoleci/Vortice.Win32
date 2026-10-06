@@ -162,9 +162,9 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Resource.GetHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetHeapProperties(HeapProperties* pHeapProperties, HeapFlags* pHeapFlags)
+	public HResult GetHeapProperties(HeapProperties* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, HeapProperties*, HeapFlags*, int>)(lpVtbl[14]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, HeapProperties*, D3D12_HEAP_FLAGS*, int>)(lpVtbl[14]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
 	}
 
 	/// <inheritdoc cref="ID3D12Resource1.GetProtectedResourceSession" />

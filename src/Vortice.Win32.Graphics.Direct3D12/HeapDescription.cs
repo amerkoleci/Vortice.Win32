@@ -1,5 +1,6 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
 namespace Vortice.Win32.Graphics.Direct3D12;
 
@@ -8,7 +9,7 @@ public unsafe partial struct HeapDescription : IEquatable<HeapDescription>
     public HeapDescription(ulong size,
         HeapProperties properties,
         ulong alignment = 0,
-        HeapFlags flags = HeapFlags.None)
+        D3D12_HEAP_FLAGS flags = D3D12_HEAP_FLAG_NONE)
     {
         SizeInBytes = size;
         Properties = properties;
@@ -17,9 +18,9 @@ public unsafe partial struct HeapDescription : IEquatable<HeapDescription>
     }
 
     public HeapDescription(ulong size,
-        HeapType type,
+        D3D12_HEAP_TYPE type,
         ulong alignment = 0,
-        HeapFlags flags = HeapFlags.None)
+        D3D12_HEAP_FLAGS flags = D3D12_HEAP_FLAG_NONE)
     {
         SizeInBytes = size;
         Properties = new HeapProperties(type);
@@ -28,10 +29,10 @@ public unsafe partial struct HeapDescription : IEquatable<HeapDescription>
     }
 
     public HeapDescription(ulong size,
-        CpuPageProperty cpuPageProperty,
-        MemoryPool memoryPoolPreference,
+        D3D12_CPU_PAGE_PROPERTY cpuPageProperty,
+        D3D12_MEMORY_POOL memoryPoolPreference,
         ulong alignment = 0,
-        HeapFlags flags = HeapFlags.None)
+        D3D12_HEAP_FLAGS flags = D3D12_HEAP_FLAG_NONE)
     {
         SizeInBytes = size;
         Properties = new HeapProperties(cpuPageProperty, memoryPoolPreference);
@@ -41,7 +42,7 @@ public unsafe partial struct HeapDescription : IEquatable<HeapDescription>
 
     public HeapDescription(in ResourceAllocationInfo resourceAllocInfo,
         HeapProperties properties,
-        HeapFlags flags = HeapFlags.None)
+        D3D12_HEAP_FLAGS flags = D3D12_HEAP_FLAG_NONE)
     {
         SizeInBytes = resourceAllocInfo.SizeInBytes;
         Properties = properties;
@@ -50,8 +51,8 @@ public unsafe partial struct HeapDescription : IEquatable<HeapDescription>
     }
 
     public HeapDescription(in ResourceAllocationInfo resourceAllocInfo,
-        HeapType type,
-        HeapFlags flags = HeapFlags.None)
+        D3D12_HEAP_TYPE type,
+        D3D12_HEAP_FLAGS flags = D3D12_HEAP_FLAG_NONE)
     {
         SizeInBytes = resourceAllocInfo.SizeInBytes;
         Properties = new HeapProperties(type);
@@ -60,9 +61,9 @@ public unsafe partial struct HeapDescription : IEquatable<HeapDescription>
     }
 
     public HeapDescription(in ResourceAllocationInfo resAllocInfo,
-        CpuPageProperty cpuPageProperty,
-        MemoryPool memoryPoolPreference,
-        HeapFlags flags = HeapFlags.None)
+        D3D12_CPU_PAGE_PROPERTY cpuPageProperty,
+        D3D12_MEMORY_POOL memoryPoolPreference,
+        D3D12_HEAP_FLAGS flags = D3D12_HEAP_FLAG_NONE)
     {
         SizeInBytes = resAllocInfo.SizeInBytes;
         Properties = new HeapProperties(cpuPageProperty, memoryPoolPreference);

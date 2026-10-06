@@ -4,13 +4,14 @@
 using Vortice.Win32.Graphics.Direct3D;
 using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Apis;
+using static Vortice.Win32.Graphics.Direct3D12.Apis;
 
 namespace Vortice.Win32.Graphics.Direct3D12;
 
 public static unsafe partial class ID3D12DeviceExtensions
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TFeature CheckFeatureSupport<TD3D12Device, TFeature>(ref this TD3D12Device self, Feature feature)
+    public static TFeature CheckFeatureSupport<TD3D12Device, TFeature>(ref this TD3D12Device self, D3D12_FEATURE feature)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
         where TFeature : unmanaged
     {
@@ -20,7 +21,7 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CheckFeatureSupport<TD3D12Device, TFeature>(ref this TD3D12Device self, Feature feature, ref TFeature featureData)
+    public static HResult CheckFeatureSupport<TD3D12Device, TFeature>(ref this TD3D12Device self, D3D12_FEATURE feature, ref TFeature featureData)
        where TD3D12Device : unmanaged, ID3D12Device.Interface
        where TFeature : unmanaged
     {
@@ -31,11 +32,11 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CreateCommittedResource<TD3D12Device>(ref this TD3D12Device self, HeapType heapType, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
+    public static HResult CreateCommittedResource<TD3D12Device>(ref this TD3D12Device self, D3D12_HEAP_TYPE heapType, ResourceDescription* pDesc, D3D12_RESOURCE_STATES InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         HeapProperties heapProperties = new(heapType);
-        return self.CreateCommittedResource(&heapProperties, HeapFlags.None, pDesc, InitialResourceState, pOptimizedClearValue, riidResource, ppvResource);
+        return self.CreateCommittedResource(&heapProperties, D3D12_HEAP_FLAG_NONE, pDesc, InitialResourceState, pOptimizedClearValue, riidResource, ppvResource);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -59,7 +60,7 @@ public static unsafe partial class ID3D12DeviceExtensions
                 MaxSupportedFeatureLevel = FeatureLevel.Level_11_0
             };
 
-            if (self.CheckFeatureSupport(Feature.FeatureLevels, &featureData, sizeof(FeatureDataFeatureLevels)).Success)
+            if (self.CheckFeatureSupport(D3D12_FEATURE_FEATURE_LEVELS, &featureData, sizeof(FeatureDataFeatureLevels)).Success)
             {
                 return featureData.MaxSupportedFeatureLevel;
             }
@@ -82,7 +83,7 @@ public static unsafe partial class ID3D12DeviceExtensions
                 MaxSupportedFeatureLevel = FeatureLevel.Level_11_0
             };
 
-            if (self.CheckFeatureSupport(Feature.FeatureLevels, &featureData, sizeof(FeatureDataFeatureLevels)).Success)
+            if (self.CheckFeatureSupport(D3D12_FEATURE_FEATURE_LEVELS, &featureData, sizeof(FeatureDataFeatureLevels)).Success)
             {
                 return featureData.MaxSupportedFeatureLevel;
             }
@@ -92,9 +93,9 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static RootSignatureVersion CheckHighestRootSignatureVersionl<TD3D12Device>(
+    public static D3D_ROOT_SIGNATURE_VERSION CheckHighestRootSignatureVersionl<TD3D12Device>(
         ref this TD3D12Device self,
-        RootSignatureVersion highestVersion = RootSignatureVersion.V1_1)
+        D3D_ROOT_SIGNATURE_VERSION highestVersion = D3D_ROOT_SIGNATURE_VERSION_1_1)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         var featureData = new FeatureDataRootSignature
@@ -102,16 +103,16 @@ public static unsafe partial class ID3D12DeviceExtensions
             HighestVersion = highestVersion
         };
 
-        if (self.CheckFeatureSupport(Feature.RootSignature, &featureData, sizeof(FeatureDataRootSignature)).Success)
+        if (self.CheckFeatureSupport(D3D12_FEATURE_ROOT_SIGNATURE, &featureData, sizeof(FeatureDataRootSignature)).Success)
         {
             return featureData.HighestVersion;
         }
 
-        return RootSignatureVersion.V1_0;
+        return D3D_ROOT_SIGNATURE_VERSION_1_0;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ShaderModel CheckHighestShaderModel<TD3D12Device>(ref this TD3D12Device self, ShaderModel highestShaderModel)
+    public static D3D_SHADER_MODEL CheckHighestShaderModel<TD3D12Device>(ref this TD3D12Device self, D3D_SHADER_MODEL highestShaderModel)
          where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         var featureData = new FeatureDataShaderModel
@@ -119,17 +120,17 @@ public static unsafe partial class ID3D12DeviceExtensions
             HighestShaderModel = highestShaderModel
         };
 
-        if (self.CheckFeatureSupport(Feature.ShaderModel, &featureData, sizeof(FeatureDataShaderModel)).Success)
+        if (self.CheckFeatureSupport(D3D12_FEATURE_SHADER_MODEL, &featureData, sizeof(FeatureDataShaderModel)).Success)
         {
             return featureData.HighestShaderModel;
         }
 
-        return ShaderModel.SM_5_1;
+        return D3D_SHADER_MODEL_5_1;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool CheckFormatSupport<TD3D12Device>(ref this TD3D12Device self,
-        Format format, out FormatSupport1 formatSupport1, out FormatSupport2 formatSupport2)
+        Format format, out D3D12_FORMAT_SUPPORT1 formatSupport1, out D3D12_FORMAT_SUPPORT2 formatSupport2)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         FeatureDataFormatSupport featureData = new()
@@ -137,10 +138,10 @@ public static unsafe partial class ID3D12DeviceExtensions
             Format = format
         };
 
-        if (self.CheckFeatureSupport(Feature.FormatSupport, &featureData, sizeof(FeatureDataFormatSupport)).Failure)
+        if (self.CheckFeatureSupport(D3D12_FEATURE_FORMAT_SUPPORT, &featureData, sizeof(FeatureDataFormatSupport)).Failure)
         {
-            formatSupport1 = FormatSupport1.None;
-            formatSupport2 = FormatSupport2.None;
+            formatSupport1 = D3D12_FORMAT_SUPPORT1_NONE;
+            formatSupport2 = D3D12_FORMAT_SUPPORT2_NONE;
             return false;
         }
 
@@ -158,7 +159,7 @@ public static unsafe partial class ID3D12DeviceExtensions
             Format = format
         };
 
-        if (self.CheckFeatureSupport(Feature.FormatInfo, &featureData, sizeof(FeatureDataFormatInfo)).Failure)
+        if (self.CheckFeatureSupport(D3D12_FEATURE_FORMAT_INFO, &featureData, sizeof(FeatureDataFormatInfo)).Failure)
         {
             return 0;
         }
@@ -167,7 +168,7 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static FeatureDataCommandQueuePriority CheckCommandQueuePriority<TD3D12Device>(ref this TD3D12Device self, CommandListType commandListType)
+    public static FeatureDataCommandQueuePriority CheckCommandQueuePriority<TD3D12Device>(ref this TD3D12Device self, D3D12_COMMAND_LIST_TYPE commandListType)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         FeatureDataCommandQueuePriority featureData = new()
@@ -175,7 +176,7 @@ public static unsafe partial class ID3D12DeviceExtensions
             CommandListType = commandListType,
         };
 
-        if (self.CheckFeatureSupport(Feature.CommandQueuePriority, &featureData, sizeof(FeatureDataFormatInfo)).Failure)
+        if (self.CheckFeatureSupport(D3D12_FEATURE_COMMAND_QUEUE_PRIORITY, &featureData, sizeof(FeatureDataCommandQueuePriority)).Failure)
         {
             return default;
         }

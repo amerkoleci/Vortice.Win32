@@ -273,65 +273,65 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte* pDescription)
+	public HResult AddMessage(D3D12_MESSAGE_CATEGORY Category, D3D12_MESSAGE_SEVERITY Severity, D3D12_MESSAGE_ID ID, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageCategory, MessageSeverity, MessageId, byte*, int>)(lpVtbl[28]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, int>)(lpVtbl[28]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(MessageSeverity Severity, byte* pDescription)
+	public HResult AddApplicationMessage(D3D12_MESSAGE_SEVERITY Severity, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageSeverity, byte*, int>)(lpVtbl[29]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_SEVERITY, byte*, int>)(lpVtbl[29]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable)
+	public HResult SetBreakOnCategory(D3D12_MESSAGE_CATEGORY Category, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageCategory, Bool32, int>)(lpVtbl[30]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_CATEGORY, Bool32, int>)(lpVtbl[30]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable)
+	public HResult SetBreakOnSeverity(D3D12_MESSAGE_SEVERITY Severity, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageSeverity, Bool32, int>)(lpVtbl[31]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_SEVERITY, Bool32, int>)(lpVtbl[31]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetBreakOnID(MessageId ID, Bool32 bEnable)
+	public HResult SetBreakOnID(D3D12_MESSAGE_ID ID, Bool32 bEnable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageId, Bool32, int>)(lpVtbl[32]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_ID, Bool32, int>)(lpVtbl[32]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public Bool32 GetBreakOnCategory(MessageCategory Category)
+	public Bool32 GetBreakOnCategory(D3D12_MESSAGE_CATEGORY Category)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageCategory, Bool32>)(lpVtbl[33]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_CATEGORY, Bool32>)(lpVtbl[33]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Bool32 GetBreakOnSeverity(MessageSeverity Severity)
+	public Bool32 GetBreakOnSeverity(D3D12_MESSAGE_SEVERITY Severity)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageSeverity, Bool32>)(lpVtbl[34]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_SEVERITY, Bool32>)(lpVtbl[34]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public Bool32 GetBreakOnID(MessageId ID)
+	public Bool32 GetBreakOnID(D3D12_MESSAGE_ID ID)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, MessageId, Bool32>)(lpVtbl[35]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), ID);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue*, D3D12_MESSAGE_ID, Bool32>)(lpVtbl[35]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), ID);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetMuteDebugOutput"]/*' />
@@ -428,28 +428,28 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 		uint GetRetrievalFilterStackSize();
 
 		[VtblIndex(28)]
-		HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte* pDescription);
+		HResult AddMessage(D3D12_MESSAGE_CATEGORY Category, D3D12_MESSAGE_SEVERITY Severity, D3D12_MESSAGE_ID ID, byte* pDescription);
 
 		[VtblIndex(29)]
-		HResult AddApplicationMessage(MessageSeverity Severity, byte* pDescription);
+		HResult AddApplicationMessage(D3D12_MESSAGE_SEVERITY Severity, byte* pDescription);
 
 		[VtblIndex(30)]
-		HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable);
+		HResult SetBreakOnCategory(D3D12_MESSAGE_CATEGORY Category, Bool32 bEnable);
 
 		[VtblIndex(31)]
-		HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable);
+		HResult SetBreakOnSeverity(D3D12_MESSAGE_SEVERITY Severity, Bool32 bEnable);
 
 		[VtblIndex(32)]
-		HResult SetBreakOnID(MessageId ID, Bool32 bEnable);
+		HResult SetBreakOnID(D3D12_MESSAGE_ID ID, Bool32 bEnable);
 
 		[VtblIndex(33)]
-		Bool32 GetBreakOnCategory(MessageCategory Category);
+		Bool32 GetBreakOnCategory(D3D12_MESSAGE_CATEGORY Category);
 
 		[VtblIndex(34)]
-		Bool32 GetBreakOnSeverity(MessageSeverity Severity);
+		Bool32 GetBreakOnSeverity(D3D12_MESSAGE_SEVERITY Severity);
 
 		[VtblIndex(35)]
-		Bool32 GetBreakOnID(MessageId ID);
+		Bool32 GetBreakOnID(D3D12_MESSAGE_ID ID);
 
 		[VtblIndex(36)]
 		void SetMuteDebugOutput(Bool32 bMute);

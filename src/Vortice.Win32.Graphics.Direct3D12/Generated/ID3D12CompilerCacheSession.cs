@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::FindGroupValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult FindGroupValues(CompilerCacheGroupKey* pGroupKey, uint* pExpectedGroupVersion, CompilerValueTypeFlags ValueTypeFlags, delegate* unmanaged[Stdcall]<uint, CompilerCacheTypedConstValue*, void*, void> CallbackFunc, void* pContext)
+	public HResult FindGroupValues(CompilerCacheGroupKey* pGroupKey, uint* pExpectedGroupVersion, D3D12_COMPILER_VALUE_TYPE_FLAGS ValueTypeFlags, delegate* unmanaged[Stdcall]<uint, CompilerCacheTypedConstValue*, void*, void> CallbackFunc, void* pContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, CompilerCacheGroupKey*, uint*, CompilerValueTypeFlags, delegate* unmanaged[Stdcall]<uint, CompilerCacheTypedConstValue*, void*, void>, void*, int>)(lpVtbl[6]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pGroupKey, pExpectedGroupVersion, ValueTypeFlags, CallbackFunc, pContext);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, CompilerCacheGroupKey*, uint*, D3D12_COMPILER_VALUE_TYPE_FLAGS, delegate* unmanaged[Stdcall]<uint, CompilerCacheTypedConstValue*, void*, void>, void*, int>)(lpVtbl[6]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pGroupKey, pExpectedGroupVersion, ValueTypeFlags, CallbackFunc, pContext);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::FindValue"]/*' />
@@ -130,9 +130,9 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::GetValueTypes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public CompilerValueTypeFlags GetValueTypes()
+	public D3D12_COMPILER_VALUE_TYPE_FLAGS GetValueTypes()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, CompilerValueTypeFlags>)(lpVtbl[10]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_VALUE_TYPE_FLAGS>)(lpVtbl[10]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::StoreGroupValueKeys"]/*' />
@@ -160,7 +160,7 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 		HResult FindGroupValueKeys(CompilerCacheGroupKey* pGroupKey, uint* pExpectedGroupVersion, delegate* unmanaged[Stdcall]<CompilerCacheValueKey*, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(6)]
-		HResult FindGroupValues(CompilerCacheGroupKey* pGroupKey, uint* pExpectedGroupVersion, CompilerValueTypeFlags ValueTypeFlags, delegate* unmanaged[Stdcall]<uint, CompilerCacheTypedConstValue*, void*, void> CallbackFunc, void* pContext);
+		HResult FindGroupValues(CompilerCacheGroupKey* pGroupKey, uint* pExpectedGroupVersion, D3D12_COMPILER_VALUE_TYPE_FLAGS ValueTypeFlags, delegate* unmanaged[Stdcall]<uint, CompilerCacheTypedConstValue*, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(7)]
 		HResult FindValue(CompilerCacheValueKey* pValueKey, CompilerCacheTypedValue* pTypedValues, uint NumTypedValues, delegate* unmanaged[Stdcall]<nuint, void*, void*> pCallbackFunc, void* pContext);
@@ -172,7 +172,7 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 		CompilerTarget GetCompilerTarget();
 
 		[VtblIndex(10)]
-		CompilerValueTypeFlags GetValueTypes();
+		D3D12_COMPILER_VALUE_TYPE_FLAGS GetValueTypes();
 
 		[VtblIndex(11)]
 		HResult StoreGroupValueKeys(CompilerCacheGroupKey* pGroupKey, uint GroupVersion, CompilerCacheValueKey* pValueKeys, uint NumValueKeys);

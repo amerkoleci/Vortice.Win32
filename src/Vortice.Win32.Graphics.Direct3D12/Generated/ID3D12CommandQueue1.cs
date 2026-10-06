@@ -113,17 +113,17 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.UpdateTileMappings" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void UpdateTileMappings(ID3D12Resource* pResource, uint NumResourceRegions, TiledResourceCoordinate* pResourceRegionStartCoordinates, TileRegionSize* pResourceRegionSizes, ID3D12Heap* pHeap, uint NumRanges, TileRangeFlags* pRangeFlags, uint* pHeapRangeStartOffsets, uint* pRangeTileCounts, TileMappingFlags Flags)
+	public void UpdateTileMappings(ID3D12Resource* pResource, uint NumResourceRegions, TiledResourceCoordinate* pResourceRegionStartCoordinates, TileRegionSize* pResourceRegionSizes, ID3D12Heap* pHeap, uint NumRanges, D3D12_TILE_RANGE_FLAGS* pRangeFlags, uint* pHeapRangeStartOffsets, uint* pRangeTileCounts, D3D12_TILE_MAPPING_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D12Heap*, uint, TileRangeFlags*, uint*, uint*, TileMappingFlags, void>)(lpVtbl[8]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pResource, NumResourceRegions, pResourceRegionStartCoordinates, pResourceRegionSizes, pHeap, NumRanges, pRangeFlags, pHeapRangeStartOffsets, pRangeTileCounts, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D12Heap*, uint, D3D12_TILE_RANGE_FLAGS*, uint*, uint*, D3D12_TILE_MAPPING_FLAGS, void>)(lpVtbl[8]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pResource, NumResourceRegions, pResourceRegionStartCoordinates, pResourceRegionSizes, pHeap, NumRanges, pRangeFlags, pHeapRangeStartOffsets, pRangeTileCounts, Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12CommandQueue.CopyTileMappings" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void CopyTileMappings(ID3D12Resource* pDstResource, TiledResourceCoordinate* pDstRegionStartCoordinate, ID3D12Resource* pSrcResource, TiledResourceCoordinate* pSrcRegionStartCoordinate, TileRegionSize* pRegionSize, TileMappingFlags Flags)
+	public void CopyTileMappings(ID3D12Resource* pDstResource, TiledResourceCoordinate* pDstRegionStartCoordinate, ID3D12Resource* pSrcResource, TiledResourceCoordinate* pSrcRegionStartCoordinate, TileRegionSize* pRegionSize, D3D12_TILE_MAPPING_FLAGS Flags)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, TiledResourceCoordinate*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, TileMappingFlags, void>)(lpVtbl[9]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pDstResource, pDstRegionStartCoordinate, pSrcResource, pSrcRegionStartCoordinate, pRegionSize, Flags);
+		((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Resource*, TiledResourceCoordinate*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, D3D12_TILE_MAPPING_FLAGS, void>)(lpVtbl[9]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pDstResource, pDstRegionStartCoordinate, pSrcResource, pSrcRegionStartCoordinate, pRegionSize, Flags);
 	}
 
 	/// <inheritdoc cref="ID3D12CommandQueue.ExecuteCommandLists" />
@@ -202,48 +202,48 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::SetProcessPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetProcessPriority(CommandQueueProcessPriority Priority)
+	public HResult SetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY Priority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, CommandQueueProcessPriority, int>)(lpVtbl[19]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Priority);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_PROCESS_PRIORITY, int>)(lpVtbl[19]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Priority);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::GetProcessPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetProcessPriority(CommandQueueProcessPriority* pOutValue)
+	public HResult GetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY* pOutValue)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, CommandQueueProcessPriority*, int>)(lpVtbl[20]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pOutValue);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_PROCESS_PRIORITY*, int>)(lpVtbl[20]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pOutValue);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::SetGlobalPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SetGlobalPriority(CommandQueueGlobalPriority Priority)
+	public HResult SetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY Priority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, CommandQueueGlobalPriority, int>)(lpVtbl[21]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Priority);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY, int>)(lpVtbl[21]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Priority);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::GetGlobalPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult GetGlobalPriority(CommandQueueGlobalPriority* pOutValue)
+	public HResult GetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY* pOutValue)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, CommandQueueGlobalPriority*, int>)(lpVtbl[22]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pOutValue);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY*, int>)(lpVtbl[22]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pOutValue);
 	}
 
 	public interface Interface : ID3D12CommandQueue.Interface
 	{
 		[VtblIndex(19)]
-		HResult SetProcessPriority(CommandQueueProcessPriority Priority);
+		HResult SetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY Priority);
 
 		[VtblIndex(20)]
-		HResult GetProcessPriority(CommandQueueProcessPriority* pOutValue);
+		HResult GetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY* pOutValue);
 
 		[VtblIndex(21)]
-		HResult SetGlobalPriority(CommandQueueGlobalPriority Priority);
+		HResult SetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY Priority);
 
 		[VtblIndex(22)]
-		HResult GetGlobalPriority(CommandQueueGlobalPriority* pOutValue);
+		HResult GetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY* pOutValue);
 	}
 }
 

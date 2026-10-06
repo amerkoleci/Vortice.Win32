@@ -8,26 +8,10 @@ using static Vortice.Win32.Graphics.D3D12MemoryAllocator.Apis;
 
 namespace Vortice.Win32.Graphics.D3D12MemoryAllocator;
 
-[DebuggerDisplay("{DebuggerDisplay,nq}")]
-public readonly unsafe partial struct Allocator : IEquatable<Allocator>
+public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
 {
-    public Allocator(nint handle) { Handle = handle; }
-    public nint Handle { get; }
     public bool IsNull => Handle == 0;
-    public bool IsNotNull => Handle != 0;
-    public static Allocator Null => new(0);
-    public static implicit operator Allocator(nint handle) => new(handle);
-    public static implicit operator nint(Allocator handle) => handle.Handle;
-    public static bool operator ==(Allocator left, Allocator right) => left.Handle == right.Handle;
-    public static bool operator !=(Allocator left, Allocator right) => left.Handle != right.Handle;
-    public static bool operator ==(Allocator left, nint right) => left.Handle == right;
-    public static bool operator !=(Allocator left, nint right) => left.Handle != right;
-    public bool Equals(Allocator other) => Handle == other.Handle;
-    /// <inheritdoc/>
-    public override bool Equals(object? obj) => obj is Allocator handle && Equals(handle);
-    /// <inheritdoc/>
-    public override int GetHashCode() => Handle.GetHashCode();
-    private string DebuggerDisplay => $"{nameof(Allocator)} [0x{Handle:X}]";
+    public static D3D12MA_Allocator Null => default;
 
     public uint AddRef() => D3D12MA_Allocator_AddRef(Handle);
     public uint Release() => D3D12MA_Allocator_Release(Handle);
@@ -38,11 +22,11 @@ public readonly unsafe partial struct Allocator : IEquatable<Allocator>
 
     public ulong GetMemoryCapacity(uint memorySegmentGroup) => D3D12MA_Allocator_GetMemoryCapacity(Handle, memorySegmentGroup);
 
-    public HResult CreateResource(AllocationDesc* pAllocDesc,
+    public HResult CreateResource(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         in ResourceDescription resourceDesc,
-        ResourceStates initialResourceState,
+        D3D12_RESOURCE_STATES initialResourceState,
         ClearValue* pOptimizedClearValue,
-        Allocation* allocation, Guid* riidResource, void** ppvResource)
+        D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {
         fixed (ResourceDescription* pResourceDesc = &resourceDesc)
         {
@@ -50,11 +34,11 @@ public readonly unsafe partial struct Allocator : IEquatable<Allocator>
         }
     }
 
-    public HResult CreateResource<TResource>(AllocationDesc* pAllocDesc,
+    public HResult CreateResource<TResource>(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         in ResourceDescription resourceDesc,
-        ResourceStates initialResourceState,
+        D3D12_RESOURCE_STATES initialResourceState,
         ClearValue* pOptimizedClearValue,
-        Allocation* allocation, TResource** ppvResource)
+        D3D12MA_Allocation* allocation, TResource** ppvResource)
         where TResource : unmanaged, ID3D12Resource.Interface
     {
         fixed (ResourceDescription* pResourceDesc = &resourceDesc)
@@ -69,21 +53,21 @@ public readonly unsafe partial struct Allocator : IEquatable<Allocator>
         }
     }
 
-    public HResult CreateResource2(AllocationDesc* pAllocDesc,
+    public HResult CreateResource2(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         ResourceDescription1* pResourceDesc,
-        ResourceStates initialResourceState,
+        D3D12_RESOURCE_STATES initialResourceState,
         ClearValue* pOptimizedClearValue,
-        Allocation* allocation, Guid* riidResource, void** ppvResource)
+        D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {
         return D3D12MA_Allocator_CreateResource2(Handle, pAllocDesc, pResourceDesc, initialResourceState, pOptimizedClearValue, allocation, riidResource, ppvResource);
     }
 
-    public HResult CreateResource3(AllocationDesc* pAllocDesc,
+    public HResult CreateResource3(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         ResourceDescription1* pResourceDesc,
-        BarrierLayout initialLayout,
+        D3D12_BARRIER_LAYOUT initialLayout,
         ClearValue* pOptimizedClearValue,
         uint numCastableFormats, Format* pCastableFormats,
-        Allocation* allocation, Guid* riidResource, void** ppvResource)
+        D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {
         return D3D12MA_Allocator_CreateResource3(Handle, pAllocDesc, pResourceDesc, initialLayout,
             pOptimizedClearValue,

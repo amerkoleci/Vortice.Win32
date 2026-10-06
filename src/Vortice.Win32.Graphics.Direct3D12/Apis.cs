@@ -18,9 +18,9 @@ public static unsafe partial class Apis
         return MipSlice + ArraySlice * MipLevels + PlaneSlice * MipLevels * ArraySize;
     }
 
-    public static bool D3D12IsLayoutOpaque(TextureLayout Layout)
+    public static bool D3D12IsLayoutOpaque(D3D12_TEXTURE_LAYOUT Layout)
     {
-        return Layout == TextureLayout.Unknown || Layout == TextureLayout.L64KbUndefinedSwizzle;
+        return Layout == D3D12_TEXTURE_LAYOUT_UNKNOWN || Layout == D3D12_TEXTURE_LAYOUT_64KB_UNDEFINED_SWIZZLE;
     }
 
     public static void D3D12DecomposeSubresource(
@@ -85,13 +85,13 @@ public static unsafe partial class Apis
 
     public static byte D3D12GetFormatPlaneCount(ID3D12Device* device, Format format)
     {
-        FeatureDataFormatInfo formatInfo = new FeatureDataFormatInfo
+        FeatureDataFormatInfo formatInfo = new()
         {
             Format = format,
             PlaneCount = 0,
         };
 
-        if (device->CheckFeatureSupport(Feature.FormatInfo, &formatInfo, sizeof(FeatureDataFormatInfo)).Failure)
+        if (device->CheckFeatureSupport(D3D12_FEATURE_FORMAT_INFO, &formatInfo, sizeof(FeatureDataFormatInfo)).Failure)
         {
             return 0;
         }
@@ -130,10 +130,10 @@ public static unsafe partial class Apis
         ResourceDescription IntermediateDesc = pIntermediate->GetDesc();
         ResourceDescription DestinationDesc = pDestinationResource->GetDesc();
 
-        if (IntermediateDesc.Dimension != ResourceDimension.Buffer ||
+        if (IntermediateDesc.Dimension != D3D12_RESOURCE_DIMENSION_BUFFER ||
             IntermediateDesc.Width < RequiredSize + pLayouts[0].Offset ||
             RequiredSize > unchecked((ulong)-1) ||
-            (DestinationDesc.Dimension == ResourceDimension.Buffer && (FirstSubresource != 0 || NumSubresources != 1)))
+            (DestinationDesc.Dimension == D3D12_RESOURCE_DIMENSION_BUFFER && (FirstSubresource != 0 || NumSubresources != 1)))
         {
             return 0;
         }
@@ -163,7 +163,7 @@ public static unsafe partial class Apis
         }
 
         pIntermediate->Unmap(0, null);
-        if (DestinationDesc.Dimension == ResourceDimension.Buffer)
+        if (DestinationDesc.Dimension == D3D12_RESOURCE_DIMENSION_BUFFER)
         {
             pCmdList->CopyBufferRegion(pDestinationResource, 0, pIntermediate, pLayouts[0].Offset, pLayouts[0].Footprint.Width);
         }
@@ -197,10 +197,10 @@ public static unsafe partial class Apis
         var IntermediateDesc = pIntermediate->GetDesc();
         var DestinationDesc = pDestinationResource->GetDesc();
 
-        if (IntermediateDesc.Dimension != ResourceDimension.Buffer ||
+        if (IntermediateDesc.Dimension != D3D12_RESOURCE_DIMENSION_BUFFER ||
             IntermediateDesc.Width < RequiredSize + pLayouts[0].Offset ||
             RequiredSize > unchecked((nuint)(-1)) ||
-            (DestinationDesc.Dimension == ResourceDimension.Buffer && (FirstSubresource != 0 || NumSubresources != 1)))
+            (DestinationDesc.Dimension == D3D12_RESOURCE_DIMENSION_BUFFER && (FirstSubresource != 0 || NumSubresources != 1)))
         {
             return 0;
         }
@@ -231,7 +231,7 @@ public static unsafe partial class Apis
         }
         pIntermediate->Unmap(0, null);
 
-        if (DestinationDesc.Dimension == ResourceDimension.Buffer)
+        if (DestinationDesc.Dimension == D3D12_RESOURCE_DIMENSION_BUFFER)
         {
             pCmdList->CopyBufferRegion(pDestinationResource, 0, pIntermediate, pLayouts[0].Offset, pLayouts[0].Footprint.Width);
         }
@@ -390,7 +390,7 @@ public static unsafe partial class Apis
 
     public static HResult D3D12SerializeVersionedRootSignature(
         VersionedRootSignatureDescription* pRootSignatureDesc,
-        RootSignatureVersion MaxVersion,
+        D3D_ROOT_SIGNATURE_VERSION MaxVersion,
         ID3DBlob** ppBlob,
         ID3DBlob** ppErrorBlob)
     {
@@ -401,13 +401,13 @@ public static unsafe partial class Apis
 
         switch (MaxVersion)
         {
-            case RootSignatureVersion.V1_0:
+            case D3D_ROOT_SIGNATURE_VERSION_1_0:
                 switch (pRootSignatureDesc->Version)
                 {
-                    case RootSignatureVersion.V1_0:
-                        return D3D12SerializeRootSignature(&pRootSignatureDesc->Anonymous.Desc_1_0, RootSignatureVersion.V1_0, ppBlob, ppErrorBlob);
+                    case D3D_ROOT_SIGNATURE_VERSION_1_0:
+                        return D3D12SerializeRootSignature(&pRootSignatureDesc->Anonymous.Desc_1_0, D3D_ROOT_SIGNATURE_VERSION_1_0, ppBlob, ppErrorBlob);
 
-                    case RootSignatureVersion.V1_1:
+                    case D3D_ROOT_SIGNATURE_VERSION_1_1:
                         {
                             HResult hr = HResult.Ok;
                             ref readonly RootSignatureDescription1 desc_1_1 = ref pRootSignatureDesc->Anonymous.Desc_1_1;
@@ -433,20 +433,20 @@ public static unsafe partial class Apis
 
                                     switch (desc_1_1.pParameters[n].ParameterType)
                                     {
-                                        case RootParameterType.T32BitConstants:
+                                        case D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS:
                                             pParameters_1_0[n].Anonymous.Constants.Num32BitValues = desc_1_1.pParameters[n].Anonymous.Constants.Num32BitValues;
                                             pParameters_1_0[n].Anonymous.Constants.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Constants.RegisterSpace;
                                             pParameters_1_0[n].Anonymous.Constants.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Constants.ShaderRegister;
                                             break;
 
-                                        case RootParameterType.Cbv:
-                                        case RootParameterType.Srv:
-                                        case RootParameterType.Uav:
+                                        case D3D12_ROOT_PARAMETER_TYPE_CBV:
+                                        case D3D12_ROOT_PARAMETER_TYPE_SRV:
+                                        case D3D12_ROOT_PARAMETER_TYPE_UAV:
                                             pParameters_1_0[n].Anonymous.Descriptor.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Descriptor.RegisterSpace;
                                             pParameters_1_0[n].Anonymous.Descriptor.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Descriptor.ShaderRegister;
                                             break;
 
-                                        case RootParameterType.DescriptorTable:
+                                        case D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE:
                                             ref readonly RootDescriptorTable1 table_1_1 = ref desc_1_1.pParameters[n].Anonymous.DescriptorTable;
 
                                             nuint DescriptorRangesSize = (uint)sizeof(DescriptorRange) * table_1_1.NumDescriptorRanges;
@@ -484,14 +484,14 @@ public static unsafe partial class Apis
                             if (hr.Success)
                             {
                                 RootSignatureDescription desc_1_0 = new RootSignatureDescription(desc_1_1.NumParameters, pParameters_1_0, desc_1_1.NumStaticSamplers, desc_1_1.pStaticSamplers, desc_1_1.Flags);
-                                hr = D3D12SerializeRootSignature(&desc_1_0, RootSignatureVersion.V1_0 , ppBlob, ppErrorBlob);
+                                hr = D3D12SerializeRootSignature(&desc_1_0, D3D_ROOT_SIGNATURE_VERSION_1_0 , ppBlob, ppErrorBlob);
                             }
 
                             if (pParameters != null)
                             {
                                 for (uint n = 0; n < desc_1_1.NumParameters; n++)
                                 {
-                                    if (desc_1_1.pParameters[n].ParameterType == RootParameterType.DescriptorTable)
+                                    if (desc_1_1.pParameters[n].ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE)
                                     {
                                         _ = HeapFree(GetProcessHeap(), 0, (void*)pParameters_1_0[n].Anonymous.DescriptorTable.pDescriptorRanges);
                                     }
@@ -505,57 +505,57 @@ public static unsafe partial class Apis
                 }
                 break;
 
-            case RootSignatureVersion.V1_1:
+            case D3D_ROOT_SIGNATURE_VERSION_1_1:
                 return D3D12SerializeVersionedRootSignature(pRootSignatureDesc, ppBlob, ppErrorBlob);
         }
 
         return HResult.InvalidArg;
     }
 
-    public static Filter EncodeBasicFilter(FilterType min, FilterType mag, FilterType mip, FilterReductionType reduction)
+    public static uint D3D12_ENCODE_SHADER_4_COMPONENT_MAPPING(D3D12_SHADER_COMPONENT_MAPPING Src0, D3D12_SHADER_COMPONENT_MAPPING Src1, D3D12_SHADER_COMPONENT_MAPPING Src2, D3D12_SHADER_COMPONENT_MAPPING Src3)
     {
-        return (Filter)((((uint)min & D3D12_FILTER_TYPE_MASK) << unchecked((int)D3D12_MIN_FILTER_SHIFT))
-            | (((uint)mag & D3D12_FILTER_TYPE_MASK) << unchecked((int)D3D12_MAG_FILTER_SHIFT))
-            | (((uint)mip & D3D12_FILTER_TYPE_MASK) << unchecked((int)D3D12_MIP_FILTER_SHIFT))
-            | (((uint)reduction & D3D12_FILTER_REDUCTION_TYPE_MASK) << unchecked((int)D3D12_FILTER_REDUCTION_TYPE_SHIFT)));
+        return ((uint)Src0 & D3D12_SHADER_COMPONENT_MAPPING_MASK)
+            | (((uint)Src1 & D3D12_SHADER_COMPONENT_MAPPING_MASK) << unchecked((int)D3D12_SHADER_COMPONENT_MAPPING_SHIFT))
+            | (((uint)Src2 & D3D12_SHADER_COMPONENT_MAPPING_MASK) << (unchecked((int)D3D12_SHADER_COMPONENT_MAPPING_SHIFT) * 2))
+            | (((uint)Src3 & D3D12_SHADER_COMPONENT_MAPPING_MASK) << (unchecked((int)D3D12_SHADER_COMPONENT_MAPPING_SHIFT) * 3))
+            | D3D12_SHADER_COMPONENT_MAPPING_ALWAYS_SET_BIT_AVOIDING_ZEROMEM_MISTAKES;
     }
 
-    public static Filter EncodeAnisotropicFilter(FilterReductionType reduction)
+    public static D3D12_SHADER_COMPONENT_MAPPING D3D12_DECODE_SHADER_4_COMPONENT_MAPPING(int ComponentToExtract, uint Mapping) => (D3D12_SHADER_COMPONENT_MAPPING)((Mapping >> (unchecked((int)D3D12_SHADER_COMPONENT_MAPPING_SHIFT) * ComponentToExtract)) & D3D12_SHADER_COMPONENT_MAPPING_MASK);
+
+    public static D3D12_FILTER D3D12_ENCODE_BASIC_FILTER(D3D12_FILTER_TYPE min, D3D12_FILTER_TYPE mag, D3D12_FILTER_TYPE mip, D3D12_FILTER_REDUCTION_TYPE reduction)
     {
-        return (Filter)(D3D12_ANISOTROPIC_FILTERING_BIT
-            | (int)EncodeBasicFilter(FilterType.Linear, FilterType.Linear, FilterType.Linear, reduction));
+        return (D3D12_FILTER)((((uint)min & D3D12_FILTER_TYPE_MASK) << unchecked((int)D3D12_MIN_FILTER_SHIFT))
+                            | (((uint)mag & D3D12_FILTER_TYPE_MASK) << unchecked((int)D3D12_MAG_FILTER_SHIFT))
+                            | (((uint)mip & D3D12_FILTER_TYPE_MASK) << unchecked((int)D3D12_MIP_FILTER_SHIFT))
+                            | (((uint)reduction & D3D12_FILTER_REDUCTION_TYPE_MASK) << unchecked((int)D3D12_FILTER_REDUCTION_TYPE_SHIFT)));
     }
 
-    public static FilterType DecodeMinFilter(Filter D3D11Filter)
+    public static D3D12_FILTER D3D12_ENCODE_ANISOTROPIC_FILTER(D3D12_FILTER_REDUCTION_TYPE reduction) => (D3D12_FILTER)(D3D12_ANISOTROPIC_FILTERING_BIT | (uint)D3D12_ENCODE_BASIC_FILTER(D3D12_FILTER_TYPE_LINEAR, D3D12_FILTER_TYPE_LINEAR, D3D12_FILTER_TYPE_LINEAR, reduction));
+
+    public static D3D12_FILTER D3D12_ENCODE_MIN_MAG_ANISOTROPIC_MIP_POINT_FILTER(D3D12_FILTER_REDUCTION_TYPE reduction) => (D3D12_FILTER)(D3D12_ANISOTROPIC_FILTERING_BIT) | D3D12_ENCODE_BASIC_FILTER(D3D12_FILTER_TYPE_LINEAR, D3D12_FILTER_TYPE_LINEAR, D3D12_FILTER_TYPE_POINT, reduction);
+
+    public static D3D12_FILTER_TYPE D3D12_DECODE_MIN_FILTER(D3D12_FILTER D3D12Filter) => (D3D12_FILTER_TYPE)(((uint)D3D12Filter >> unchecked((int)D3D12_MIN_FILTER_SHIFT)) & D3D12_FILTER_TYPE_MASK);
+
+    public static D3D12_FILTER_TYPE D3D12_DECODE_MAG_FILTER(D3D12_FILTER D3D12Filter) => (D3D12_FILTER_TYPE)(((uint)D3D12Filter >> unchecked((int)D3D12_MAG_FILTER_SHIFT)) & D3D12_FILTER_TYPE_MASK);
+
+    public static D3D12_FILTER_TYPE D3D12_DECODE_MIP_FILTER(D3D12_FILTER D3D12Filter) => (D3D12_FILTER_TYPE)(((uint)D3D12Filter >> unchecked((int)D3D12_MIP_FILTER_SHIFT)) & D3D12_FILTER_TYPE_MASK);
+
+    public static D3D12_FILTER_REDUCTION_TYPE D3D12_DECODE_FILTER_REDUCTION(D3D12_FILTER D3D12Filter) => (D3D12_FILTER_REDUCTION_TYPE)(((uint)D3D12Filter >> unchecked((int)D3D12_FILTER_REDUCTION_TYPE_SHIFT)) & D3D12_FILTER_REDUCTION_TYPE_MASK);
+
+    public static bool D3D12_DECODE_IS_COMPARISON_FILTER(D3D12_FILTER D3D12Filter) => D3D12_DECODE_FILTER_REDUCTION(D3D12Filter) == D3D12_FILTER_REDUCTION_TYPE_COMPARISON;
+
+    public static bool D3D12_DECODE_IS_ANISOTROPIC_FILTER(D3D12_FILTER D3D12Filter)
     {
-        return (FilterType)(((uint)D3D11Filter >> unchecked((int)D3D12_MIN_FILTER_SHIFT)) & D3D12_FILTER_TYPE_MASK);
+        return (((uint)D3D12Filter & D3D12_ANISOTROPIC_FILTERING_BIT) != 0)
+            && (D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MIN_FILTER(D3D12Filter))
+            && (D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MAG_FILTER(D3D12Filter))
+            && (D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MIP_FILTER(D3D12Filter));
     }
 
-    public static FilterType DecodeMagFilter(Filter D3D11Filter)
-    {
-        return (FilterType)(((uint)D3D11Filter >> unchecked((int)D3D12_MAG_FILTER_SHIFT)) & D3D12_FILTER_TYPE_MASK);
-    }
+    public static uint D3D12_MAKE_COARSE_SHADING_RATE(uint x, uint y) => (x << unchecked((int)D3D12_SHADING_RATE_X_AXIS_SHIFT)) | y;
 
-    public static FilterType DecodeMipFilter(Filter D3D11Filter)
-    {
-        return (FilterType)(((uint)D3D11Filter >> unchecked((int)D3D12_MIP_FILTER_SHIFT)) & D3D12_FILTER_TYPE_MASK);
-    }
+    public static uint D3D12_GET_COARSE_SHADING_RATE_X_AXIS(uint x) => (x >> unchecked((int)D3D12_SHADING_RATE_X_AXIS_SHIFT)) & D3D12_SHADING_RATE_VALID_MASK;
 
-    public static FilterReductionType DecodeFilterReduction(Filter D3D11Filter)
-    {
-        return (FilterReductionType)(((uint)D3D11Filter >> unchecked((int)D3D12_FILTER_REDUCTION_TYPE_SHIFT)) & D3D12_FILTER_REDUCTION_TYPE_MASK);
-    }
-
-    public static bool DecodeisComparisonFilter(Filter D3D11Filter)
-    {
-        return DecodeFilterReduction(D3D11Filter) == FilterReductionType.Comparison;
-    }
-
-    public static bool DecodeIsAnisotropicFilter(Filter D3D11Filter)
-    {
-        return (((int)D3D11Filter & D3D12_ANISOTROPIC_FILTERING_BIT) != 0)
-            && (FilterType.Linear == DecodeMinFilter(D3D11Filter))
-            && (FilterType.Linear == DecodeMagFilter(D3D11Filter))
-            && (FilterType.Linear == DecodeMipFilter(D3D11Filter));
-    }
+    public static uint D3D12_GET_COARSE_SHADING_RATE_Y_AXIS(uint y) => y & D3D12_SHADING_RATE_VALID_MASK;
 }
