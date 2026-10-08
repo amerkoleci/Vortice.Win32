@@ -3,7 +3,7 @@
 
 using System.Drawing;
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct IWICBitmapSource
 {

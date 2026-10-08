@@ -1,13 +1,13 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Media.Audio;
 
-public static unsafe partial class Apis
+unsafe partial class XAudio2
 {
     public static void ReverbConvertI3DL2ToNative(
-        [NativeTypeName("const XAUDIO2FX_REVERB_I3DL2_PARAMETERS *")] FXReverbI3DL2Parameters* pI3DL2,
-        [NativeTypeName("XAUDIO2FX_REVERB_PARAMETERS *")] FXReverbParameters* pNative,
+        [NativeTypeName("const XAUDIO2FX_REVERB_I3DL2_PARAMETERS *")] XAUDIO2FX_REVERB_I3DL2_PARAMETERS* pI3DL2,
+        [NativeTypeName("XAUDIO2FX_REVERB_PARAMETERS *")] XAUDIO2FX_REVERB_PARAMETERS* pNative,
         [Optional, DefaultParameterValue(1)] Bool32 sevenDotOneReverb)
     {
         float reflectionsDelay;

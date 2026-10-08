@@ -145,9 +145,9 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::StreamAsGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetBounds"]/*' />
@@ -185,7 +185,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 		HResult GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(12)]
-		HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
+		HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink);
 
 		[VtblIndex(13)]
 		HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds);

@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData1"]/*' />

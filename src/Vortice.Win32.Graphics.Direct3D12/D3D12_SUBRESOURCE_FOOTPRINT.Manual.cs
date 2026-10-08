@@ -1,14 +1,13 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Graphics.D3D12;
 
 namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct D3D12_SUBRESOURCE_FOOTPRINT
 {
-    public D3D12_SUBRESOURCE_FOOTPRINT(Format format, uint width, uint height, uint depth, uint rowPitch)
+    public D3D12_SUBRESOURCE_FOOTPRINT(DXGI_FORMAT format, uint width, uint height, uint depth, uint rowPitch)
     {
         Format = format;
         Width = width;

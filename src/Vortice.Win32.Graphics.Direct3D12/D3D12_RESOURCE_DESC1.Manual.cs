@@ -1,7 +1,7 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.DXGICommon;
 using static Vortice.Win32.Graphics.D3D12;
 
 namespace Vortice.Win32.Graphics;
@@ -18,7 +18,7 @@ public unsafe partial struct D3D12_RESOURCE_DESC1 : IEquatable<D3D12_RESOURCE_DE
         uint height,
         ushort depthOrArraySize,
         ushort mipLevels,
-        Format format,
+        DXGI_FORMAT format,
         uint sampleCount,
         uint sampleQuality,
         D3D12_TEXTURE_LAYOUT layout,
@@ -49,7 +49,7 @@ public unsafe partial struct D3D12_RESOURCE_DESC1 : IEquatable<D3D12_RESOURCE_DE
             D3D12_RESOURCE_DIMENSION_BUFFER,
             resourceAllocInfo.Alignment,
             resourceAllocInfo.SizeInBytes,
-            1, 1, 1, Format.Unknown, 1, 0, D3D12_TEXTURE_LAYOUT_ROW_MAJOR,
+            1, 1, 1, DXGI_FORMAT_UNKNOWN, 1, 0, D3D12_TEXTURE_LAYOUT_ROW_MAJOR,
             flags,
             0, 0, 0);
     }
@@ -64,12 +64,12 @@ public unsafe partial struct D3D12_RESOURCE_DESC1 : IEquatable<D3D12_RESOURCE_DE
             alignment,
             sizeInBytes,
             1, 1, 1,
-            Format.Unknown, 1, 0, D3D12_TEXTURE_LAYOUT_ROW_MAJOR,
+            DXGI_FORMAT_UNKNOWN, 1, 0, D3D12_TEXTURE_LAYOUT_ROW_MAJOR,
             flags,
             0, 0, 0);
     }
 
-    public static D3D12_RESOURCE_DESC1 Tex1D(Format format,
+    public static D3D12_RESOURCE_DESC1 Tex1D(DXGI_FORMAT format,
         ulong width,
         ushort arraySize = 1,
         ushort mipLevels = 0,
@@ -80,7 +80,7 @@ public unsafe partial struct D3D12_RESOURCE_DESC1 : IEquatable<D3D12_RESOURCE_DE
         return new(D3D12_RESOURCE_DIMENSION_TEXTURE1D, alignment, width, 1, arraySize, mipLevels, format, 1, 0, layout, flags, 0, 0, 0);
     }
 
-    public static D3D12_RESOURCE_DESC1 Tex2D(Format format,
+    public static D3D12_RESOURCE_DESC1 Tex2D(DXGI_FORMAT format,
         ulong width,
         uint height,
         ushort arraySize = 1,
@@ -110,7 +110,7 @@ public unsafe partial struct D3D12_RESOURCE_DESC1 : IEquatable<D3D12_RESOURCE_DE
             samplerFeedbackMipRegionDepth);
     }
 
-    public static D3D12_RESOURCE_DESC1 Texture3D(Format format,
+    public static D3D12_RESOURCE_DESC1 Texture3D(DXGI_FORMAT format,
         ulong width,
         uint height,
         ushort depth,

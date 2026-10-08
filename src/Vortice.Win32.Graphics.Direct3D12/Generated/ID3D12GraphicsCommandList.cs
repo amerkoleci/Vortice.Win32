@@ -201,17 +201,17 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::ResolveSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format)
+	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, DXGI_FORMAT Format)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.DXGI_FORMAT, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ID3D12Resource*, uint, ID3D12Resource*, uint, DXGI_FORMAT, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::IASetPrimitiveTopology"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology)
+	public void IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), PrimitiveTopology);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), PrimitiveTopology);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::RSSetViewports"]/*' />
@@ -559,10 +559,10 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 		void CopyTiles(ID3D12Resource* pTiledResource, D3D12_TILED_RESOURCE_COORDINATE* pTileRegionStartCoordinate, D3D12_TILE_REGION_SIZE* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, D3D12_TILE_COPY_FLAGS Flags);
 
 		[VtblIndex(19)]
-		void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format);
+		void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, DXGI_FORMAT Format);
 
 		[VtblIndex(20)]
-		void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology);
+		void IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology);
 
 		[VtblIndex(21)]
 		void RSSetViewports(uint NumViewports, D3D12_VIEWPORT* pViewports);

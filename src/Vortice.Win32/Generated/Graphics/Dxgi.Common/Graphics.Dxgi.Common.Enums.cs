@@ -464,19 +464,19 @@ public enum DXGI_FORMAT : uint
 	/// <unmanaged>DXGI_FORMAT_A4B4G4R4_UNORM</unmanaged>
 	DXGI_FORMAT_A4B4G4R4_UNORM = 191,
 	/// <unmanaged>DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT</unmanaged>
-	Xbox_R10G10B10_7E3_A2Float = 116u,
+	DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT = 116u,
 	/// <unmanaged>DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT</unmanaged>
-	Xbox_R10G10B10_6E4_A2Float = 117u,
+	DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT = 117u,
 	/// <unmanaged>DXGI_FORMAT_D16_UNORM_S8_UINT</unmanaged>
-	Xbox_D16Unorm_S8Uint = 118u,
+	DXGI_FORMAT_D16_UNORM_S8_UINT = 118u,
 	/// <unmanaged>DXGI_FORMAT_R16_UNORM_X8_TYPELESS</unmanaged>
-	Xbox_R16Unorm_X8Typeless = 119u,
+	DXGI_FORMAT_R16_UNORM_X8_TYPELESS = 119u,
 	/// <unmanaged>DXGI_FORMAT_X16_TYPELESS_G8_UINT</unmanaged>
-	Xbox_X16Typeless_G8Uint = 120u,
+	DXGI_FORMAT_X16_TYPELESS_G8_UINT = 120u,
 	/// <unmanaged>DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM</unmanaged>
-	Xbox_R10G10B10Snorm_A2Unorm = 189u,
+	DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM = 189u,
 	/// <unmanaged>DXGI_FORMAT_R4G4_UNORM</unmanaged>
-	Xbox_R4G4Unorm = 190u,
+	DXGI_FORMAT_R4G4_UNORM = 190u,
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER"]/*' />

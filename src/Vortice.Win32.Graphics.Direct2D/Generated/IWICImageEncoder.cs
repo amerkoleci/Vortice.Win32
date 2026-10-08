@@ -73,37 +73,37 @@ public unsafe partial struct IWICImageEncoder : IWICImageEncoder.Interface, INat
 	/// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult WriteFrame(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters)
+	public HResult WriteFrame(ID2D1Image* pImage, IWICBitmapFrameEncode* pFrameEncode, WICImageParameters* pImageParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapFrameEncode*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[3]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
+		return ((delegate* unmanaged[MemberFunction]<IWICImageEncoder*, ID2D1Image*, IWICBitmapFrameEncode*, WICImageParameters*, int>)(lpVtbl[3]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrameThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult WriteFrameThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters)
+	public HResult WriteFrameThumbnail(ID2D1Image* pImage, IWICBitmapFrameEncode* pFrameEncode, WICImageParameters* pImageParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapFrameEncode*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[4]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
+		return ((delegate* unmanaged[MemberFunction]<IWICImageEncoder*, ID2D1Image*, IWICBitmapFrameEncode*, WICImageParameters*, int>)(lpVtbl[4]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult WriteThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapEncoder* pEncoder, Graphics.Imaging.WICImageParameters* pImageParameters)
+	public HResult WriteThumbnail(ID2D1Image* pImage, IWICBitmapEncoder* pEncoder, WICImageParameters* pImageParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapEncoder*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[5]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pEncoder, pImageParameters);
+		return ((delegate* unmanaged[MemberFunction]<IWICImageEncoder*, ID2D1Image*, IWICBitmapEncoder*, WICImageParameters*, int>)(lpVtbl[5]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pEncoder, pImageParameters);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult WriteFrame(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters);
+		HResult WriteFrame(ID2D1Image* pImage, IWICBitmapFrameEncode* pFrameEncode, WICImageParameters* pImageParameters);
 
 		[VtblIndex(4)]
-		HResult WriteFrameThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters);
+		HResult WriteFrameThumbnail(ID2D1Image* pImage, IWICBitmapFrameEncode* pFrameEncode, WICImageParameters* pImageParameters);
 
 		[VtblIndex(5)]
-		HResult WriteThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapEncoder* pEncoder, Graphics.Imaging.WICImageParameters* pImageParameters);
+		HResult WriteThumbnail(ID2D1Image* pImage, IWICBitmapEncoder* pEncoder, WICImageParameters* pImageParameters);
 	}
 }
 

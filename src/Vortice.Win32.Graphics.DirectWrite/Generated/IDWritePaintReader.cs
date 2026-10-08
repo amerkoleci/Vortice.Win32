@@ -129,9 +129,9 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::GetGradientStops"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, Graphics.Direct2D.Common.D2D1_GRADIENT_STOP* gradientStops)
+	public HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, D2D1_GRADIENT_STOP* gradientStops)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, uint, Graphics.Direct2D.Common.D2D1_GRADIENT_STOP*, int>)(lpVtbl[10]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), firstGradientStopIndex, gradientStopCount, gradientStops);
+		return ((delegate* unmanaged[MemberFunction]<IDWritePaintReader*, uint, uint, D2D1_GRADIENT_STOP*, int>)(lpVtbl[10]))((IDWritePaintReader*)Unsafe.AsPointer(ref this), firstGradientStopIndex, gradientStopCount, gradientStops);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePaintReader::GetGradientStopColors"]/*' />
@@ -166,7 +166,7 @@ public unsafe partial struct IDWritePaintReader : IDWritePaintReader.Interface, 
 		HResult MoveToParent();
 
 		[VtblIndex(10)]
-		HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, Graphics.Direct2D.Common.D2D1_GRADIENT_STOP* gradientStops);
+		HResult GetGradientStops(uint firstGradientStopIndex, uint gradientStopCount, D2D1_GRADIENT_STOP* gradientStops);
 
 		[VtblIndex(11)]
 		HResult GetGradientStopColors(uint firstGradientStopIndex, uint gradientStopCount, DWRITE_PAINT_COLOR* gradientStopColors);

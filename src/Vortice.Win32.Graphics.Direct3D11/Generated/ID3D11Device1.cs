@@ -281,17 +281,17 @@ public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGui
 	/// <inheritdoc cref="ID3D11Device.CheckFormatSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult CheckFormatSupport(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint* pFormatSupport)
+	public HResult CheckFormatSupport(DXGI_FORMAT Format, uint* pFormatSupport)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, Graphics.Dxgi.Common.DXGI_FORMAT, uint*, int>)(lpVtbl[29]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, DXGI_FORMAT, uint*, int>)(lpVtbl[29]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckMultisampleQualityLevels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint SampleCount, uint* pNumQualityLevels)
+	public HResult CheckMultisampleQualityLevels(DXGI_FORMAT Format, uint SampleCount, uint* pNumQualityLevels)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, Graphics.Dxgi.Common.DXGI_FORMAT, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, DXGI_FORMAT, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckCounterInfo" />
@@ -345,9 +345,9 @@ public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGui
 	/// <inheritdoc cref="ID3D11Device.GetFeatureLevel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public Graphics.Direct3D.D3D_FEATURE_LEVEL GetFeatureLevel()
+	public D3D_FEATURE_LEVEL GetFeatureLevel()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, Graphics.Direct3D.D3D_FEATURE_LEVEL>)(lpVtbl[37]))((ID3D11Device1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, D3D_FEATURE_LEVEL>)(lpVtbl[37]))((ID3D11Device1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetCreationFlags" />
@@ -425,9 +425,9 @@ public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGui
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeviceContextState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.D3D_FEATURE_LEVEL* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
+	public HResult CreateDeviceContextState(uint Flags, D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, D3D_FEATURE_LEVEL* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, uint, Graphics.Direct3D.D3D_FEATURE_LEVEL*, uint, uint, Guid*, Graphics.Direct3D.D3D_FEATURE_LEVEL*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, uint, D3D_FEATURE_LEVEL*, uint, uint, Guid*, D3D_FEATURE_LEVEL*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResource1"]/*' />
@@ -461,7 +461,7 @@ public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGui
 		HResult CreateRasterizerState1(D3D11_RASTERIZER_DESC1* pRasterizerDesc, ID3D11RasterizerState1** ppRasterizerState);
 
 		[VtblIndex(47)]
-		HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.D3D_FEATURE_LEVEL* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState);
+		HResult CreateDeviceContextState(uint Flags, D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, D3D_FEATURE_LEVEL* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState);
 
 		[VtblIndex(48)]
 		HResult OpenSharedResource1(Handle hResource, Guid* returnedInterface, void** ppResource);

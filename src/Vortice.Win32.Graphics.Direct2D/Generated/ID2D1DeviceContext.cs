@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmapFromWicBitmap(IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.Imaging.IWICBitmapSource*, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int>)(lpVtbl[5]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, IWICBitmapSource*, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int>)(lpVtbl[5]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateSharedBitmap" />
@@ -121,9 +121,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateGradientStopCollection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateGradientStopCollection(Common.D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, ID2D1GradientStopCollection** gradientStopCollection)
+	public HResult CreateGradientStopCollection(D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, ID2D1GradientStopCollection** gradientStopCollection)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Common.D2D1_GRADIENT_STOP*, uint, D2D1_GAMMA, D2D1_EXTEND_MODE, ID2D1GradientStopCollection**, int>)(lpVtbl[9]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, D2D1_GRADIENT_STOP*, uint, D2D1_GAMMA, D2D1_EXTEND_MODE, ID2D1GradientStopCollection**, int>)(lpVtbl[9]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLinearGradientBrush" />
@@ -145,9 +145,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.D2D1_PIXEL_FORMAT* desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, D2D1_PIXEL_FORMAT* desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, System.Drawing.SizeF*, System.Drawing.Size*, Common.D2D1_PIXEL_FORMAT*, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, System.Drawing.SizeF*, System.Drawing.Size*, D2D1_PIXEL_FORMAT*, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -265,25 +265,25 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawText" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public void DrawText(char* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Vortice.Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode)
+	public void DrawText(char* @string, uint stringLength, IDWriteTextFormat* textFormat, Vortice.Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options, DWRITE_MEASURING_MODE measuringMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, char*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, D2D1_DRAW_TEXT_OPTIONS, Graphics.DirectWrite.DWRITE_MEASURING_MODE, void>)(lpVtbl[27]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, char*, uint, IDWriteTextFormat*, Vortice.Win32.Numerics.RectF*, ID2D1Brush*, D2D1_DRAW_TEXT_OPTIONS, DWRITE_MEASURING_MODE, void>)(lpVtbl[27]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options)
+	public void DrawTextLayout(Vector2 origin, IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, D2D1_DRAW_TEXT_OPTIONS options)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, D2D1_DRAW_TEXT_OPTIONS, void>)(lpVtbl[28]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, IDWriteTextLayout*, ID2D1Brush*, D2D1_DRAW_TEXT_OPTIONS, void>)(lpVtbl[28]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.DWRITE_GLYPH_RUN* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode)
+	public void DrawGlyphRun(Vector2 baselineOrigin, DWRITE_GLYPH_RUN* glyphRun, ID2D1Brush* foregroundBrush, DWRITE_MEASURING_MODE measuringMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, Graphics.DirectWrite.DWRITE_GLYPH_RUN*, ID2D1Brush*, Graphics.DirectWrite.DWRITE_MEASURING_MODE, void>)(lpVtbl[29]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, DWRITE_GLYPH_RUN*, ID2D1Brush*, DWRITE_MEASURING_MODE, void>)(lpVtbl[29]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTransform" />
@@ -337,17 +337,17 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams)
+	public void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.DirectWrite.IDWriteRenderingParams*, void>)(lpVtbl[36]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), textRenderingParams);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, IDWriteRenderingParams*, void>)(lpVtbl[36]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextRenderingParams" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams)
+	public void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[37]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), textRenderingParams);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, IDWriteRenderingParams**, void>)(lpVtbl[37]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTags" />
@@ -449,9 +449,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public Common.D2D1_PIXEL_FORMAT GetPixelFormat()
+	public D2D1_PIXEL_FORMAT GetPixelFormat()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Common.D2D1_PIXEL_FORMAT>)(lpVtbl[50]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, D2D1_PIXEL_FORMAT>)(lpVtbl[50]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -513,9 +513,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromWicBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
-	public HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmapFromWicBitmap(IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.Imaging.IWICBitmapSource*, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int>)(lpVtbl[58]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, IWICBitmapSource*, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int>)(lpVtbl[58]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContext"]/*' />
@@ -537,17 +537,17 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContextFromWicColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContextFromWicColorContext(IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.Imaging.IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[61]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[61]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromDxgiSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
-	public HResult CreateBitmapFromDxgiSurface(Graphics.Dxgi.IDXGISurface* surface, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmapFromDxgiSurface(IDXGISurface* surface, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.Dxgi.IDXGISurface*, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int>)(lpVtbl[62]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), surface, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, IDXGISurface*, D2D1_BITMAP_PROPERTIES1*, ID2D1Bitmap1**, int>)(lpVtbl[62]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), surface, bitmapProperties, bitmap);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateEffect"]/*' />
@@ -561,9 +561,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateGradientStopCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public HResult CreateGradientStopCollection(Common.D2D1_GRADIENT_STOP* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, D2D1_COLOR_SPACE preInterpolationSpace, D2D1_COLOR_SPACE postInterpolationSpace, D2D1_BUFFER_PRECISION bufferPrecision, D2D1_EXTEND_MODE extendMode, D2D1_COLOR_INTERPOLATION_MODE colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1)
+	public HResult CreateGradientStopCollection(D2D1_GRADIENT_STOP* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, D2D1_COLOR_SPACE preInterpolationSpace, D2D1_COLOR_SPACE postInterpolationSpace, D2D1_BUFFER_PRECISION bufferPrecision, D2D1_EXTEND_MODE extendMode, D2D1_COLOR_INTERPOLATION_MODE colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Common.D2D1_GRADIENT_STOP*, uint, D2D1_COLOR_SPACE, D2D1_COLOR_SPACE, D2D1_BUFFER_PRECISION, D2D1_EXTEND_MODE, D2D1_COLOR_INTERPOLATION_MODE, ID2D1GradientStopCollection1**, int>)(lpVtbl[64]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), straightAlphaGradientStops, straightAlphaGradientStopsCount, preInterpolationSpace, postInterpolationSpace, bufferPrecision, extendMode, colorInterpolationMode, gradientStopCollection1);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, D2D1_GRADIENT_STOP*, uint, D2D1_COLOR_SPACE, D2D1_COLOR_SPACE, D2D1_BUFFER_PRECISION, D2D1_EXTEND_MODE, D2D1_COLOR_INTERPOLATION_MODE, ID2D1GradientStopCollection1**, int>)(lpVtbl[64]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), straightAlphaGradientStops, straightAlphaGradientStopsCount, preInterpolationSpace, postInterpolationSpace, bufferPrecision, extendMode, colorInterpolationMode, gradientStopCollection1);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateImageBrush"]/*' />
@@ -593,9 +593,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::IsDxgiFormatSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
-	public Bool32 IsDxgiFormatSupported(Graphics.Dxgi.Common.DXGI_FORMAT format)
+	public Bool32 IsDxgiFormatSupported(DXGI_FORMAT format)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Graphics.Dxgi.Common.DXGI_FORMAT, Bool32>)(lpVtbl[68]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), format);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, DXGI_FORMAT, Bool32>)(lpVtbl[68]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), format);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::IsBufferPrecisionSupported"]/*' />
@@ -625,9 +625,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetGlyphRunWorldBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.DWRITE_GLYPH_RUN* glyphRun, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode, Vortice.Win32.Numerics.RectF** bounds)
+	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, DWRITE_GLYPH_RUN* glyphRun, DWRITE_MEASURING_MODE measuringMode, Vortice.Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, Graphics.DirectWrite.DWRITE_GLYPH_RUN*, Graphics.DirectWrite.DWRITE_MEASURING_MODE, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, DWRITE_GLYPH_RUN*, DWRITE_MEASURING_MODE, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetDevice"]/*' />
@@ -705,17 +705,17 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
-	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.DWRITE_GLYPH_RUN* glyphRun, Graphics.DirectWrite.DWRITE_GLYPH_RUN_DESCRIPTION* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode)
+	public void DrawGlyphRun(Vector2 baselineOrigin, DWRITE_GLYPH_RUN* glyphRun, DWRITE_GLYPH_RUN_DESCRIPTION* glyphRunDescription, ID2D1Brush* foregroundBrush, DWRITE_MEASURING_MODE measuringMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, Graphics.DirectWrite.DWRITE_GLYPH_RUN*, Graphics.DirectWrite.DWRITE_GLYPH_RUN_DESCRIPTION*, ID2D1Brush*, Graphics.DirectWrite.DWRITE_MEASURING_MODE, void>)(lpVtbl[82]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, Vector2, DWRITE_GLYPH_RUN*, DWRITE_GLYPH_RUN_DESCRIPTION*, ID2D1Brush*, DWRITE_MEASURING_MODE, void>)(lpVtbl[82]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, D2D1_INTERPOLATION_MODE interpolationMode, Common.D2D1_COMPOSITE_MODE compositeMode)
+	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, D2D1_INTERPOLATION_MODE interpolationMode, D2D1_COMPOSITE_MODE compositeMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, ID2D1Image*, Vector2*, Vortice.Win32.Numerics.RectF*, D2D1_INTERPOLATION_MODE, Common.D2D1_COMPOSITE_MODE, void>)(lpVtbl[83]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext*, ID2D1Image*, Vector2*, Vortice.Win32.Numerics.RectF*, D2D1_INTERPOLATION_MODE, D2D1_COMPOSITE_MODE, void>)(lpVtbl[83]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGdiMetafile"]/*' />
@@ -788,7 +788,7 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap);
 
 		[VtblIndex(58)]
-		HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap);
+		HResult CreateBitmapFromWicBitmap(IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap);
 
 		[VtblIndex(59)]
 		HResult CreateColorContext(D2D1_COLOR_SPACE space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext);
@@ -797,16 +797,16 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(61)]
-		HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
+		HResult CreateColorContextFromWicColorContext(IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(62)]
-		HResult CreateBitmapFromDxgiSurface(Graphics.Dxgi.IDXGISurface* surface, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap);
+		HResult CreateBitmapFromDxgiSurface(IDXGISurface* surface, D2D1_BITMAP_PROPERTIES1* bitmapProperties, ID2D1Bitmap1** bitmap);
 
 		[VtblIndex(63)]
 		HResult CreateEffect(Guid* effectId, ID2D1Effect** effect);
 
 		[VtblIndex(64)]
-		HResult CreateGradientStopCollection(Common.D2D1_GRADIENT_STOP* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, D2D1_COLOR_SPACE preInterpolationSpace, D2D1_COLOR_SPACE postInterpolationSpace, D2D1_BUFFER_PRECISION bufferPrecision, D2D1_EXTEND_MODE extendMode, D2D1_COLOR_INTERPOLATION_MODE colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1);
+		HResult CreateGradientStopCollection(D2D1_GRADIENT_STOP* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, D2D1_COLOR_SPACE preInterpolationSpace, D2D1_COLOR_SPACE postInterpolationSpace, D2D1_BUFFER_PRECISION bufferPrecision, D2D1_EXTEND_MODE extendMode, D2D1_COLOR_INTERPOLATION_MODE colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1);
 
 		[VtblIndex(65)]
 		HResult CreateImageBrush(ID2D1Image* image, D2D1_IMAGE_BRUSH_PROPERTIES* imageBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1ImageBrush** imageBrush);
@@ -818,7 +818,7 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		HResult CreateCommandList(ID2D1CommandList** commandList);
 
 		[VtblIndex(68)]
-		Bool32 IsDxgiFormatSupported(Graphics.Dxgi.Common.DXGI_FORMAT format);
+		Bool32 IsDxgiFormatSupported(DXGI_FORMAT format);
 
 		[VtblIndex(69)]
 		Bool32 IsBufferPrecisionSupported(D2D1_BUFFER_PRECISION bufferPrecision);
@@ -830,7 +830,7 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		HResult GetImageWorldBounds(ID2D1Image* image, Vortice.Win32.Numerics.RectF** worldBounds);
 
 		[VtblIndex(72)]
-		HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.DWRITE_GLYPH_RUN* glyphRun, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode, Vortice.Win32.Numerics.RectF** bounds);
+		HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, DWRITE_GLYPH_RUN* glyphRun, DWRITE_MEASURING_MODE measuringMode, Vortice.Win32.Numerics.RectF** bounds);
 
 		[VtblIndex(73)]
 		void GetDevice(ID2D1Device** device);
@@ -860,10 +860,10 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		D2D1_UNIT_MODE GetUnitMode();
 
 		[VtblIndex(82)]
-		void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.DWRITE_GLYPH_RUN* glyphRun, Graphics.DirectWrite.DWRITE_GLYPH_RUN_DESCRIPTION* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.DWRITE_MEASURING_MODE measuringMode);
+		void DrawGlyphRun(Vector2 baselineOrigin, DWRITE_GLYPH_RUN* glyphRun, DWRITE_GLYPH_RUN_DESCRIPTION* glyphRunDescription, ID2D1Brush* foregroundBrush, DWRITE_MEASURING_MODE measuringMode);
 
 		[VtblIndex(83)]
-		void DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, D2D1_INTERPOLATION_MODE interpolationMode, Common.D2D1_COMPOSITE_MODE compositeMode);
+		void DrawImage(ID2D1Image* image, Vector2* targetOffset, Vortice.Win32.Numerics.RectF* imageRectangle, D2D1_INTERPOLATION_MODE interpolationMode, D2D1_COMPOSITE_MODE compositeMode);
 
 		[VtblIndex(84)]
 		void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset);

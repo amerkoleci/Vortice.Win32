@@ -1,12 +1,11 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D;
-using Vortice.Win32.Graphics.Dxgi;
+using static Vortice.Win32.Graphics.D3D11;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class D3D11
 {
     public static uint D3D11CalcSubresource(uint MipSlice, uint ArraySlice, uint MipLevels)
     {
@@ -29,10 +28,10 @@ public static unsafe partial class Apis
 
     public static HResult D3D11CreateDevice(
         IDXGIAdapter* adapter,
-        DriverType driverType,
-        CreateDeviceFlags flags,
+        D3D_DRIVER_TYPE driverType,
+        D3D11_CREATE_DEVICE_FLAG flags,
         ID3D11Device** ppDevice,
-        FeatureLevel* pFeatureLevel,
+        D3D_FEATURE_LEVEL* pFeatureLevel,
         ID3D11DeviceContext** ppImmediateContext)
     {
         return D3D11CreateDevice(
@@ -50,14 +49,14 @@ public static unsafe partial class Apis
 
     public static HResult D3D11CreateDevice(
         IDXGIAdapter* pAdapter,
-        DriverType driverType,
-        CreateDeviceFlags flags,
-        ReadOnlySpan<FeatureLevel> featureLevels,
+        D3D_DRIVER_TYPE driverType,
+        D3D11_CREATE_DEVICE_FLAG flags,
+        ReadOnlySpan<D3D_FEATURE_LEVEL> featureLevels,
         ID3D11Device** ppDevice,
-        FeatureLevel* pFeatureLevel,
+        D3D_FEATURE_LEVEL* pFeatureLevel,
         ID3D11DeviceContext** ppImmediateContext)
     {
-        fixed (FeatureLevel* pfeatureLevels = featureLevels)
+        fixed (D3D_FEATURE_LEVEL* pfeatureLevels = featureLevels)
         {
             return D3D11CreateDevice(
                 pAdapter,
@@ -72,51 +71,49 @@ public static unsafe partial class Apis
                 ppImmediateContext);
         }
     }
-
-    public static Filter EncodeBasicFilter(FilterType min, FilterType mag, FilterType mip, FilterReductionType reduction)
+    public static D3D11_FILTER D3D11_ENCODE_BASIC_FILTER(D3D11_FILTER_TYPE min, D3D11_FILTER_TYPE mag, D3D11_FILTER_TYPE mip, D3D11_FILTER_REDUCTION_TYPE reduction)
     {
-        return (Filter)((((uint)min & D3D11_FILTER_TYPE_MASK) << unchecked((int)D3D11_MIN_FILTER_SHIFT))
-            | (((uint)mag & D3D11_FILTER_TYPE_MASK) << unchecked((int)D3D11_MAG_FILTER_SHIFT))
-            | (((uint)mip & D3D11_FILTER_TYPE_MASK) << unchecked((int)D3D11_MIP_FILTER_SHIFT))
-            | (((uint)reduction & D3D11_FILTER_REDUCTION_TYPE_MASK) << unchecked((int)D3D11_FILTER_REDUCTION_TYPE_SHIFT)));
+        return (D3D11_FILTER)((((int)min & D3D11_FILTER_TYPE_MASK) << D3D11_MIN_FILTER_SHIFT)
+                            | (((int)mag & D3D11_FILTER_TYPE_MASK) << D3D11_MAG_FILTER_SHIFT)
+                            | (((int)mip & D3D11_FILTER_TYPE_MASK) << D3D11_MIP_FILTER_SHIFT)
+                            | (((int)reduction & D3D11_FILTER_REDUCTION_TYPE_MASK) << D3D11_FILTER_REDUCTION_TYPE_SHIFT));
     }
 
-    public static Filter EncodeAnisotropicFilter(FilterReductionType reduction)
+    public static D3D11_FILTER D3D11_ENCODE_ANISOTROPIC_FILTER(D3D11_FILTER_REDUCTION_TYPE reduction)
     {
-        return (Filter)(D3D11_ANISOTROPIC_FILTERING_BIT
-            | (int)EncodeBasicFilter(FilterType.Linear, FilterType.Linear, FilterType.Linear, reduction));
+        return (D3D11_FILTER)(D3D11_ANISOTROPIC_FILTERING_BIT
+                            | (int)D3D11_ENCODE_BASIC_FILTER(D3D11_FILTER_TYPE_LINEAR, D3D11_FILTER_TYPE_LINEAR, D3D11_FILTER_TYPE_LINEAR, reduction));
     }
 
-    public static FilterType DecodeMinFilter(Filter D3D11Filter)
+    public static D3D11_FILTER_TYPE D3D11_DECODE_MIN_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return (FilterType)(((uint)D3D11Filter >> unchecked((int)D3D11_MIN_FILTER_SHIFT)) & D3D11_FILTER_TYPE_MASK);
+        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> D3D11_MIN_FILTER_SHIFT) & D3D11_FILTER_TYPE_MASK);
     }
 
-    public static FilterType DecodeMagFilter(Filter D3D11Filter)
+    public static D3D11_FILTER_TYPE D3D11_DECODE_MAG_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return (FilterType)(((uint)D3D11Filter >> unchecked((int)D3D11_MAG_FILTER_SHIFT)) & D3D11_FILTER_TYPE_MASK);
+        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> D3D11_MAG_FILTER_SHIFT) & D3D11_FILTER_TYPE_MASK);
     }
 
-    public static FilterType DecodeMipFilter(Filter D3D11Filter)
+    public static D3D11_FILTER_TYPE D3D11_DECODE_MIP_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return (FilterType)(((uint)D3D11Filter >> unchecked((int)D3D11_MIP_FILTER_SHIFT)) & D3D11_FILTER_TYPE_MASK);
+        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> D3D11_MIP_FILTER_SHIFT) & D3D11_FILTER_TYPE_MASK);
     }
 
-    public static FilterReductionType DecodeFilterReduction(Filter D3D11Filter)
+    public static D3D11_FILTER_REDUCTION_TYPE D3D11_DECODE_FILTER_REDUCTION(D3D11_FILTER D3D11Filter)
     {
-        return (FilterReductionType)(((uint)D3D11Filter >> unchecked((int)D3D11_FILTER_REDUCTION_TYPE_SHIFT)) & D3D11_FILTER_REDUCTION_TYPE_MASK);
+        return (D3D11_FILTER_REDUCTION_TYPE)(((int)D3D11Filter >> D3D11_FILTER_REDUCTION_TYPE_SHIFT) & D3D11_FILTER_REDUCTION_TYPE_MASK);
     }
 
-    public static bool DecodeisComparisonFilter(Filter D3D11Filter)
+    public static bool D3D11_DECODE_IS_COMPARISON_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return DecodeFilterReduction(D3D11Filter) == FilterReductionType.Comparison;
+        return D3D11_DECODE_FILTER_REDUCTION(D3D11Filter) == D3D11_FILTER_REDUCTION_TYPE_COMPARISON;
     }
-
-    public static bool DecodeIsAnisotropicFilter(Filter D3D11Filter)
+    public static bool D3D11_DECODE_IS_ANISOTROPIC_FILTER(D3D11_FILTER D3D11Filter)
     {
         return (((int)D3D11Filter & D3D11_ANISOTROPIC_FILTERING_BIT) != 0)
-            && (FilterType.Linear == DecodeMinFilter(D3D11Filter))
-            && (FilterType.Linear == DecodeMagFilter(D3D11Filter))
-            && (FilterType.Linear == DecodeMipFilter(D3D11Filter));
+            && (D3D11_FILTER_TYPE_LINEAR == D3D11_DECODE_MIN_FILTER(D3D11Filter))
+            && (D3D11_FILTER_TYPE_LINEAR == D3D11_DECODE_MAG_FILTER(D3D11Filter))
+            && (D3D11_FILTER_TYPE_LINEAR == D3D11_DECODE_MIP_FILTER(D3D11Filter));
     }
 }

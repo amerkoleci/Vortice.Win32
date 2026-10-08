@@ -9,7 +9,7 @@
 
 namespace Vortice.Win32.Graphics;
 
-public static partial class Apis
+public static partial class D2D1
 {
 	public const float D2D1_DEFAULT_FLATTENING_TOLERANCE = 0.25f;
 

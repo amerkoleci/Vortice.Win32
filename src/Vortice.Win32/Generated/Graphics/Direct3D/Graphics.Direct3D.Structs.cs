@@ -27,10 +27,10 @@ public partial struct D3D_VERSION_NUMBER
 public partial struct D3D_SHADER_MACRO
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
-	public PSTR Definition;
+	public unsafe byte* Definition;
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_PSDB_PROPERTIES"]/*' />
@@ -38,10 +38,10 @@ public partial struct D3D_SHADER_MACRO
 public partial struct D3D_SHADER_CACHE_PSDB_PROPERTIES
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_PSDB_PROPERTIES::pAdapterFamily"]/*' />
-	public PWSTR pAdapterFamily;
+	public unsafe char* pAdapterFamily;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_PSDB_PROPERTIES::pPsdbPath"]/*' />
-	public PWSTR pPsdbPath;
+	public unsafe char* pPsdbPath;
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_COMPILER_PROPERTIES"]/*' />
@@ -69,16 +69,16 @@ public partial struct D3D_SHADER_CACHE_COMPILER_PROPERTIES
 public partial struct D3D_SHADER_CACHE_APPLICATION_DESC
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_APPLICATION_DESC::pExeFilename"]/*' />
-	public PWSTR pExeFilename;
+	public unsafe char* pExeFilename;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_APPLICATION_DESC::pName"]/*' />
-	public PWSTR pName;
+	public unsafe char* pName;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_APPLICATION_DESC::Version"]/*' />
 	public D3D_VERSION_NUMBER Version;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_APPLICATION_DESC::pEngineName"]/*' />
-	public PWSTR pEngineName;
+	public unsafe char* pEngineName;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_APPLICATION_DESC::EngineVersion"]/*' />
 	public D3D_VERSION_NUMBER EngineVersion;

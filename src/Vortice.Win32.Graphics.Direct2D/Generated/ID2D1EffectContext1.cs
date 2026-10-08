@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1EffectContext1 : ID2D1EffectContext1.Interface
 	/// <inheritdoc cref="ID2D1EffectContext.GetMaximumSupportedFeatureLevel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, Graphics.Direct3D.D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel)
+	public HResult GetMaximumSupportedFeatureLevel(D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext1*, Graphics.Direct3D.D3D_FEATURE_LEVEL*, uint, Graphics.Direct3D.D3D_FEATURE_LEVEL*, int>)(lpVtbl[5]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), featureLevels, featureLevelsCount, maximumSupportedFeatureLevel);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext1*, D3D_FEATURE_LEVEL*, uint, D3D_FEATURE_LEVEL*, int>)(lpVtbl[5]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), featureLevels, featureLevelsCount, maximumSupportedFeatureLevel);
 	}
 
 	/// <inheritdoc cref="ID2D1EffectContext.CreateTransformNodeFromEffect" />
@@ -217,9 +217,9 @@ public unsafe partial struct ID2D1EffectContext1 : ID2D1EffectContext1.Interface
 	/// <inheritdoc cref="ID2D1EffectContext.CreateColorContextFromWicColorContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContextFromWicColorContext(IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext1*, Graphics.Imaging.IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[21]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext1*, IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[21]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
 	}
 
 	/// <inheritdoc cref="ID2D1EffectContext.CheckFeatureSupport" />

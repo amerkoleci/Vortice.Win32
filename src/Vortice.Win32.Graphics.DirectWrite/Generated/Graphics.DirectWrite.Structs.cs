@@ -326,7 +326,7 @@ public partial struct DWRITE_SHAPING_GLYPH_PROPERTIES
 public partial struct DWRITE_GLYPH_RUN
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::fontFace"]/*' />
-	public IDWriteFontFace fontFace;
+	public unsafe IDWriteFontFace* fontFace;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::fontEmSize"]/*' />
 	public float fontEmSize;
@@ -344,7 +344,7 @@ public partial struct DWRITE_GLYPH_RUN
 	public unsafe DWRITE_GLYPH_OFFSET* glyphOffsets;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::isSideways"]/*' />
-	public BOOL isSideways;
+	public Bool32 isSideways;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::bidiLevel"]/*' />
 	public uint bidiLevel;
@@ -355,10 +355,10 @@ public partial struct DWRITE_GLYPH_RUN
 public partial struct DWRITE_GLYPH_RUN_DESCRIPTION
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::localeName"]/*' />
-	public PWSTR localeName;
+	public unsafe char* localeName;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::string"]/*' />
-	public PWSTR @string;
+	public unsafe char* @string;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::stringLength"]/*' />
 	public uint stringLength;
@@ -393,7 +393,7 @@ public partial struct DWRITE_UNDERLINE
 	public DWRITE_FLOW_DIRECTION flowDirection;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::localeName"]/*' />
-	public PWSTR localeName;
+	public unsafe char* localeName;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::measuringMode"]/*' />
 	public DWRITE_MEASURING_MODE measuringMode;
@@ -419,7 +419,7 @@ public partial struct DWRITE_STRIKETHROUGH
 	public DWRITE_FLOW_DIRECTION flowDirection;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::localeName"]/*' />
-	public PWSTR localeName;
+	public unsafe char* localeName;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::measuringMode"]/*' />
 	public DWRITE_MEASURING_MODE measuringMode;
@@ -445,7 +445,7 @@ public partial struct DWRITE_LINE_METRICS
 	public float baseline;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::isTrimmed"]/*' />
-	public BOOL isTrimmed;
+	public Bool32 isTrimmed;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS"]/*' />
@@ -508,7 +508,7 @@ public partial struct DWRITE_INLINE_OBJECT_METRICS
 	public float baseline;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::supportsSideways"]/*' />
-	public BOOL supportsSideways;
+	public Bool32 supportsSideways;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS"]/*' />
@@ -554,10 +554,10 @@ public partial struct DWRITE_HIT_TEST_METRICS
 	public uint bidiLevel;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isText"]/*' />
-	public BOOL isText;
+	public Bool32 isText;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isTrimmed"]/*' />
-	public BOOL isTrimmed;
+	public Bool32 isTrimmed;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1"]/*' />
@@ -604,7 +604,7 @@ public partial struct DWRITE_FONT_METRICS1
 	public short superscriptSizeY;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::hasTypographicMetrics"]/*' />
-	public BOOL hasTypographicMetrics;
+	public Bool32 hasTypographicMetrics;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS"]/*' />
@@ -697,7 +697,7 @@ public partial struct DWRITE_COLOR_GLYPH_RUN
 	public float baselineOriginY;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::runColor"]/*' />
-	public DWRITE_COLOR_F runColor;
+	public Color4 runColor;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::paletteIndex"]/*' />
 	public ushort paletteIndex;
@@ -711,10 +711,10 @@ public partial struct DWRITE_FONT_PROPERTY
 	public DWRITE_FONT_PROPERTY_ID propertyId;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY::propertyValue"]/*' />
-	public PWSTR propertyValue;
+	public unsafe char* propertyValue;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY::localeName"]/*' />
-	public PWSTR localeName;
+	public unsafe char* localeName;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1"]/*' />
@@ -782,19 +782,19 @@ public partial struct DWRITE_GLYPH_IMAGE_DATA
 	public uint pixelsPerEm;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::pixelSize"]/*' />
-	public D2D_SIZE_U pixelSize;
+	public System.Drawing.Size pixelSize;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalLeftOrigin"]/*' />
-	public POINT horizontalLeftOrigin;
+	public System.Drawing.Point horizontalLeftOrigin;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalRightOrigin"]/*' />
-	public POINT horizontalRightOrigin;
+	public System.Drawing.Point horizontalRightOrigin;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalTopOrigin"]/*' />
-	public POINT verticalTopOrigin;
+	public System.Drawing.Point verticalTopOrigin;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalBottomOrigin"]/*' />
-	public POINT verticalBottomOrigin;
+	public System.Drawing.Point verticalBottomOrigin;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT"]/*' />
@@ -852,7 +852,7 @@ public partial struct DWRITE_BITMAP_DATA_BGRA32
 public partial struct DWRITE_PAINT_COLOR
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR::value"]/*' />
-	public DWRITE_COLOR_F value;
+	public Color4 value;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR::paletteEntryIndex"]/*' />
 	public ushort paletteEntryIndex;
@@ -1011,7 +1011,7 @@ public partial struct DWRITE_PAINT_ELEMENT
 
 		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::transform"]/*' />
 		[FieldOffset(0)]
-		public DWRITE_MATRIX transform;
+		public Matrix3x2 transform;
 
 		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::composite"]/*' />
 		[FieldOffset(0)]
@@ -1067,7 +1067,7 @@ public partial struct DWRITE_PAINT_ELEMENT
 			public uint glyphIndex;
 
 			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_COLOR_GLYPH::clipBox"]/*' />
-			public D2D_RECT_F clipBox;
+			public Vortice.Win32.Numerics.RectF clipBox;
 		}
 		public partial struct PAINT_LINEAR_GRADIENT
 		{

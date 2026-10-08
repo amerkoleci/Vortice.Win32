@@ -3,9 +3,9 @@
 
 using static Vortice.Win32.Apis;
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class WIC
 {
     public static HResult CreateWICImagingFactory(IWICImagingFactory** factory)
     {

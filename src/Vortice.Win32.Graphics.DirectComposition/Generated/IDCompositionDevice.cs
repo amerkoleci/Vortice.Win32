@@ -113,17 +113,17 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
+	public HResult CreateSurface(uint width, uint height, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateVirtualSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
+	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateSurfaceFromHandle"]/*' />
@@ -280,10 +280,10 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 		HResult CreateVisual(IDCompositionVisual** visual);
 
 		[VtblIndex(8)]
-		HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface);
+		HResult CreateSurface(uint width, uint height, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface);
 
 		[VtblIndex(9)]
-		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface);
+		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface);
 
 		[VtblIndex(10)]
 		HResult CreateSurfaceFromHandle(Handle handle, IUnknown** surface);

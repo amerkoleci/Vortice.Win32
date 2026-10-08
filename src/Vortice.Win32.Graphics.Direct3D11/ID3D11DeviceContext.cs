@@ -4,7 +4,7 @@
 using static Vortice.Win32.Apis;
 using static Vortice.Win32.Graphics.Direct3D11.Apis;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 public static unsafe class ID3D11DeviceContextExtensions
 {
@@ -14,7 +14,7 @@ public static unsafe class ID3D11DeviceContextExtensions
         float x, float y, float width, float height, float minDepth = 0.0f, float maxDepth = 1.0f)
         where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
-        var viewport = new Viewport(x, y, width, height, minDepth, maxDepth);
+        var viewport = new D3D11_VIEWPORT(x, y, width, height, minDepth, maxDepth);
         self.RSSetViewports(1, &viewport);
     }
 

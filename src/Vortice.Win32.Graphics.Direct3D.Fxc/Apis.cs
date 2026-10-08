@@ -6,9 +6,9 @@ using System.Runtime.InteropServices.Marshalling;
 using System.Text;
 using static Vortice.Win32.Apis;
 
-namespace Vortice.Win32.Graphics.Direct3D.Fxc;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class FXC
 {
     public static ID3DInclude* D3D_COMPILE_STANDARD_FILE_INCLUDE => (ID3DInclude*)(nuint)1;
 
@@ -17,10 +17,10 @@ public static unsafe partial class Apis
         string entryPoint,
         string target,
         string? sourceName = default,
-        ShaderMacro* pDefines = default,
+        D3D_SHADER_MACRO* pDefines = default,
         ID3DInclude* includeHandler = default,
-        CompileFlags flags = CompileFlags.None,
-        CompileFlags2 flags2 = CompileFlags2.None)
+        D3DCOMPILE flags = 0u,
+        D3DCOMPILE_FLAGS2 flags2 = 0u)
     {
         scoped Utf8StringMarshaller.ManagedToUnmanagedIn __source__marshaller = new();
         scoped Utf8StringMarshaller.ManagedToUnmanagedIn __sourceName__marshaller = new();
@@ -80,7 +80,7 @@ public static unsafe partial class Apis
         ReadOnlySpan<byte> source,
         ReadOnlySpan<byte> entryPoint,
         ReadOnlySpan<byte> target,
-        CompileFlags flags,
+        D3DCOMPILE flags,
         ID3DBlob** byteCode,
         ID3DBlob** errorMessage)
     {
@@ -109,7 +109,7 @@ public static unsafe partial class Apis
         ReadOnlySpan<byte> entryPoint,
         ReadOnlySpan<byte> target,
         ID3DInclude* includeHandler,
-        CompileFlags flags,
+        D3DCOMPILE flags,
         ID3DBlob** byteCode,
         ID3DBlob** errorMessage)
     {

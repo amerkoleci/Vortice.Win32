@@ -3,7 +3,7 @@
 
 using Vortice.Win32.Com;
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct IWICStream
 {

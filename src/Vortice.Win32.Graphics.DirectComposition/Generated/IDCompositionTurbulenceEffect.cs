@@ -121,9 +121,9 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetNoise"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetNoise(Graphics.Direct2D.Common.D2D1_TURBULENCE_NOISE noise)
+	public HResult SetNoise(D2D1_TURBULENCE_NOISE noise)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, Graphics.Direct2D.Common.D2D1_TURBULENCE_NOISE, int>)(lpVtbl[9]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), noise);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, D2D1_TURBULENCE_NOISE, int>)(lpVtbl[9]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), noise);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetStitchable"]/*' />
@@ -152,7 +152,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 		HResult SetSeed(uint seed);
 
 		[VtblIndex(9)]
-		HResult SetNoise(Graphics.Direct2D.Common.D2D1_TURBULENCE_NOISE noise);
+		HResult SetNoise(D2D1_TURBULENCE_NOISE noise);
 
 		[VtblIndex(10)]
 		HResult SetStitchable(Bool32 stitchable);

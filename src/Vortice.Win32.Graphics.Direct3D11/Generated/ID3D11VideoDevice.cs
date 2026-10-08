@@ -153,9 +153,9 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CheckVideoDecoderFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, Graphics.Dxgi.Common.DXGI_FORMAT Format, Bool32* pSupported)
+	public HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, DXGI_FORMAT Format, Bool32* pSupported)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice*, Guid*, Graphics.Dxgi.Common.DXGI_FORMAT, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice*, Guid*, DXGI_FORMAT, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::GetVideoDecoderConfigCount"]/*' />
@@ -239,7 +239,7 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 		HResult GetVideoDecoderProfile(uint Index, Guid* pDecoderProfile);
 
 		[VtblIndex(13)]
-		HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, Graphics.Dxgi.Common.DXGI_FORMAT Format, Bool32* pSupported);
+		HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, DXGI_FORMAT Format, Bool32* pSupported);
 
 		[VtblIndex(14)]
 		HResult GetVideoDecoderConfigCount(D3D11_VIDEO_DECODER_DESC* pDesc, uint* pCount);

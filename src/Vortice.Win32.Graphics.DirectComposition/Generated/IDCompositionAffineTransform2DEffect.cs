@@ -81,17 +81,17 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetInterpolationMode(Graphics.Direct2D.Common.D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode)
+	public HResult SetInterpolationMode(D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, Graphics.Direct2D.Common.D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE, int>)(lpVtbl[4]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), interpolationMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE, int>)(lpVtbl[4]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetBorderMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetBorderMode(Graphics.Direct2D.Common.D2D1_BORDER_MODE borderMode)
+	public HResult SetBorderMode(D2D1_BORDER_MODE borderMode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, Graphics.Direct2D.Common.D2D1_BORDER_MODE, int>)(lpVtbl[5]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), borderMode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, D2D1_BORDER_MODE, int>)(lpVtbl[5]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), borderMode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrix"]/*' />
@@ -137,10 +137,10 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetInterpolationMode(Graphics.Direct2D.Common.D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode);
+		HResult SetInterpolationMode(D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode);
 
 		[VtblIndex(5)]
-		HResult SetBorderMode(Graphics.Direct2D.Common.D2D1_BORDER_MODE borderMode);
+		HResult SetBorderMode(D2D1_BORDER_MODE borderMode);
 
 		[VtblIndex(6)]
 		HResult SetTransformMatrix(Matrix3x2* transformMatrix);

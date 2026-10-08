@@ -28,7 +28,7 @@ public partial struct D2D1_GRADIENT_STOP
 	public float position;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
-	public D2D1_COLOR_F color;
+	public Color4 color;
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
@@ -36,11 +36,11 @@ public partial struct D2D1_GRADIENT_STOP
 public partial struct D2D1_BEZIER_SEGMENT
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point1"]/*' />
-	public D2D_POINT_2F point1;
+	public Vector2 point1;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point2"]/*' />
-	public D2D_POINT_2F point2;
+	public Vector2 point2;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point3"]/*' />
-	public D2D_POINT_2F point3;
+	public Vector2 point3;
 }

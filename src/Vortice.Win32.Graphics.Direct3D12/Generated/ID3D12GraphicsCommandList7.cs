@@ -201,17 +201,17 @@ public unsafe partial struct ID3D12GraphicsCommandList7 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ResolveSubresource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format)
+	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, DXGI_FORMAT Format)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList7*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.DXGI_FORMAT, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList7*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList7*, ID3D12Resource*, uint, ID3D12Resource*, uint, DXGI_FORMAT, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList7*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetPrimitiveTopology" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology)
+	public void IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList7*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList7*)Unsafe.AsPointer(ref this), PrimitiveTopology);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList7*, D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList7*)Unsafe.AsPointer(ref this), PrimitiveTopology);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.RSSetViewports" />
@@ -561,9 +561,9 @@ public unsafe partial struct ID3D12GraphicsCommandList7 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.ResolveSubresourceRegion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, Rect* pSrcRect, Graphics.Dxgi.Common.DXGI_FORMAT Format, D3D12_RESOLVE_MODE ResolveMode)
+	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, Rect* pSrcRect, DXGI_FORMAT Format, D3D12_RESOLVE_MODE ResolveMode)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList7*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, Graphics.Dxgi.Common.DXGI_FORMAT, D3D12_RESOLVE_MODE, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList7*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
+		((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList7*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, DXGI_FORMAT, D3D12_RESOLVE_MODE, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList7*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.SetViewInstanceMask" />

@@ -26,7 +26,7 @@ public partial struct WICBitmapPattern
 	public unsafe byte* Mask;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
-	public BOOL EndOfStream;
+	public Bool32 EndOfStream;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
@@ -224,26 +224,10 @@ public partial struct WICRawToneCurve
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve::aPoints"]/*' />
 	public aPoints__FixedBuffer aPoints;
 
-	public unsafe struct aPoints__FixedBuffer
+	[InlineArray(1)]
+	public partial struct aPoints__FixedBuffer
 	{
 		public WICRawToneCurvePoint e0;
-
-		[UnscopedRef]
-		public ref WICRawToneCurvePoint this[int index]
-		{
-			[MethodImpl(MethodImplOptions.AggressiveInlining)]
-			get
-			{
-				return ref AsSpan()[index];
-			}
-		}
-
-		[UnscopedRef]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public Span<WICRawToneCurvePoint> AsSpan()
-		{
-			return MemoryMarshal.CreateSpan(ref e0, 1);
-		}
 	}
 }
 

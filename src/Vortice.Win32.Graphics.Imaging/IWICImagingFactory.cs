@@ -3,7 +3,7 @@
 
 using static Vortice.Win32.Apis;
 
-namespace Vortice.Win32.Graphics.Imaging;
+namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct IWICImagingFactory
 {

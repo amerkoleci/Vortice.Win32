@@ -9,11 +9,11 @@
 
 namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class DirectComposition
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateDevice"]/*' />
 	[LibraryImport("dcomp.dll")]
-	public static partial HResult DCompositionCreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, Guid* iid, void** dcompositionDevice);
+	public static partial HResult DCompositionCreateDevice(IDXGIDevice* dxgiDevice, Guid* iid, void** dcompositionDevice);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateDevice2"]/*' />
 	[LibraryImport("dcomp.dll")]
@@ -25,7 +25,7 @@ public static unsafe partial class Apis
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateSurfaceHandle"]/*' />
 	[LibraryImport("dcomp.dll")]
-	public static partial HResult DCompositionCreateSurfaceHandle(uint desiredAccess, Security.SECURITY_ATTRIBUTES* securityAttributes, Handle* surfaceHandle);
+	public static partial HResult DCompositionCreateSurfaceHandle(uint desiredAccess, SECURITY_ATTRIBUTES* securityAttributes, Handle* surfaceHandle);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionAttachMouseWheelToHwnd"]/*' />
 	[LibraryImport("dcomp.dll")]

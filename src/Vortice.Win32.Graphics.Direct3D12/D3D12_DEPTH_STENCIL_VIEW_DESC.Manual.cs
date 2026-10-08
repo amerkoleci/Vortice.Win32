@@ -1,7 +1,7 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.DXGICommon;
 using static Vortice.Win32.Graphics.D3D12;
 
 namespace Vortice.Win32.Graphics;
@@ -12,14 +12,14 @@ public unsafe partial struct D3D12_DEPTH_STENCIL_VIEW_DESC
     /// Initializes a new instance of the <see cref="D3D12_DEPTH_STENCIL_VIEW_DESC"/> struct.
     /// </summary>
     /// <param name="viewDimension">The <see cref="D3D12_DSV_DIMENSION"/></param>
-    /// <param name="format">The <see cref="Format"/> to use or <see cref="Format.Unknown"/>.</param>
-    /// <param name="mipSlice">The index of the mipmap level to use mip slice. or first element for <see cref="RtvDimension.Buffer"/>.</param>
-    /// <param name="firstArraySlice">The index of the first texture to use in an array of textures or NumElements for <see cref="RtvDimension.Buffer"/>, FirstWSlice for <see cref="RtvDimension.Texture3D"/>.</param>
-    /// <param name="arraySize">Number of textures in the array or WSize for <see cref="RtvDimension.Texture3D"/>.</param>
+    /// <param name="format">The <see cref="DXGI_FORMAT"/> to use or <see cref="DXGI_FORMAT_UNKNOWN"/>.</param>
+    /// <param name="mipSlice">The index of the mipmap level to use mip slice.</param>
+    /// <param name="firstArraySlice">The index of the first texture to use in an array of textures.</param>
+    /// <param name="arraySize">Number of textures in the array.</param>
     /// <param name="flags"></param>
     public D3D12_DEPTH_STENCIL_VIEW_DESC(
         D3D12_DSV_DIMENSION viewDimension,
-        Format format = Format.Unknown,
+        DXGI_FORMAT format = DXGI_FORMAT_UNKNOWN,
         uint mipSlice = 0,
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1),
@@ -65,7 +65,7 @@ public unsafe partial struct D3D12_DEPTH_STENCIL_VIEW_DESC
     public D3D12_DEPTH_STENCIL_VIEW_DESC(
         ID3D12Resource* texture,
         D3D12_DSV_DIMENSION viewDimension = D3D12_DSV_DIMENSION_UNKNOWN,
-        Format format = Format.Unknown,
+        DXGI_FORMAT format = DXGI_FORMAT_UNKNOWN,
         uint mipSlice = 0,
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1),
@@ -73,7 +73,7 @@ public unsafe partial struct D3D12_DEPTH_STENCIL_VIEW_DESC
     {
         ViewDimension = viewDimension;
         if (viewDimension == D3D12_DSV_DIMENSION_UNKNOWN ||
-            format == Format.Unknown ||
+            format == DXGI_FORMAT_UNKNOWN ||
             arraySize == unchecked((uint)-1))
         {
             D3D12_RESOURCE_DESC resourceDesc = texture->GetDesc();
@@ -98,7 +98,7 @@ public unsafe partial struct D3D12_DEPTH_STENCIL_VIEW_DESC
                 }
             }
 
-            if (format == Format.Unknown)
+            if (format == DXGI_FORMAT_UNKNOWN)
             {
                 format = resourceDesc.Format;
             }

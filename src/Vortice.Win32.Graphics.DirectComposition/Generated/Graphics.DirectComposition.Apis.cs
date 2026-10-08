@@ -9,7 +9,7 @@
 
 namespace Vortice.Win32.Graphics;
 
-public static partial class Apis
+public static partial class DirectComposition
 {
 	public const int COMPOSITIONOBJECT_READ = 1;
 

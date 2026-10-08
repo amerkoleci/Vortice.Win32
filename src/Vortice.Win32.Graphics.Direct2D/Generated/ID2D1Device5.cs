@@ -153,9 +153,9 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device2.GetDxgiDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetDxgiDevice(Graphics.Dxgi.IDXGIDevice** dxgiDevice)
+	public HResult GetDxgiDevice(IDXGIDevice** dxgiDevice)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device5*)Unsafe.AsPointer(ref this), dxgiDevice);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device5*)Unsafe.AsPointer(ref this), dxgiDevice);
 	}
 
 	/// <inheritdoc cref="ID2D1Device3.CreateDeviceContext" />

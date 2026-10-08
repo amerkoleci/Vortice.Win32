@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration1"]/*' />
@@ -89,9 +91,9 @@ public unsafe partial struct ID3D12DeviceConfiguration1 : ID3D12DeviceConfigurat
 	/// <inheritdoc cref="ID3D12DeviceConfiguration.SerializeVersionedRootSignature" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError)
+	public HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, ID3DBlob** ppResult, ID3DBlob** ppError)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration1*, D3D12_VERSIONED_ROOT_SIGNATURE_DESC*, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[5]))((ID3D12DeviceConfiguration1*)Unsafe.AsPointer(ref this), pDesc, ppResult, ppError);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration1*, D3D12_VERSIONED_ROOT_SIGNATURE_DESC*, ID3DBlob**, ID3DBlob**, int>)(lpVtbl[5]))((ID3D12DeviceConfiguration1*)Unsafe.AsPointer(ref this), pDesc, ppResult, ppError);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceConfiguration.CreateVersionedRootSignatureDeserializer" />

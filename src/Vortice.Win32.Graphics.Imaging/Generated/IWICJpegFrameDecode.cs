@@ -97,25 +97,25 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetAcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable)
+	public HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.DXGI_JPEG_AC_HUFFMAN_TABLE*, int>)(lpVtbl[6]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, DXGI_JPEG_AC_HUFFMAN_TABLE*, int>)(lpVtbl[6]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetDcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable)
+	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.DXGI_JPEG_DC_HUFFMAN_TABLE*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, DXGI_JPEG_DC_HUFFMAN_TABLE*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetQuantizationTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable)
+	public HResult GetQuantizationTable(uint scanIndex, uint tableIndex, DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.DXGI_JPEG_QUANTIZATION_TABLE*, int>)(lpVtbl[8]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, DXGI_JPEG_QUANTIZATION_TABLE*, int>)(lpVtbl[8]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetFrameHeader"]/*' />
@@ -162,13 +162,13 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 		HResult ClearIndexing();
 
 		[VtblIndex(6)]
-		HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable);
+		HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable);
 
 		[VtblIndex(7)]
-		HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable);
+		HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable);
 
 		[VtblIndex(8)]
-		HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable);
+		HResult GetQuantizationTable(uint scanIndex, uint tableIndex, DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable);
 
 		[VtblIndex(9)]
 		HResult GetFrameHeader(WICJpegFrameHeader* pFrameHeader);

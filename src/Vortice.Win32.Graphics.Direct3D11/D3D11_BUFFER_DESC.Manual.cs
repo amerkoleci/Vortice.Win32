@@ -1,12 +1,14 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+using static Vortice.Win32.Graphics.D3D11;
 
-public partial struct BufferDescription
+namespace Vortice.Win32.Graphics;
+
+public partial struct D3D11_BUFFER_DESC
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="BufferDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_BUFFER_DESC"/> struct.
     /// </summary>
     /// <param name="byteWidth">The size in bytes.</param>
     /// <param name="bindFlags">The bind flags.</param>
@@ -14,11 +16,11 @@ public partial struct BufferDescription
     /// <param name="cpuAccessFlags">The CPU access flags.</param>
     /// <param name="miscFlags">The option flags.</param>
     /// <param name="structureByteStride">The structure byte stride.</param>
-    public BufferDescription(uint byteWidth,
-        BindFlags bindFlags,
-        Usage usage = Usage.Default,
-        CpuAccessFlags cpuAccessFlags = CpuAccessFlags.None,
-        ResourceMiscFlags miscFlags = ResourceMiscFlags.None,
+    public D3D11_BUFFER_DESC(uint byteWidth,
+        D3D11_BIND_FLAG bindFlags,
+        D3D11_USAGE usage = D3D11_USAGE_DEFAULT,
+        D3D11_CPU_ACCESS_FLAG cpuAccessFlags = 0,
+        D3D11_RESOURCE_MISC_FLAG miscFlags = 0,
         uint structureByteStride = 0)
     {
         ByteWidth = byteWidth;

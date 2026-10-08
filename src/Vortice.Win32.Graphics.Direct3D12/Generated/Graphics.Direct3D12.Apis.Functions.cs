@@ -13,7 +13,7 @@ public static unsafe partial class D3D12
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12SerializeRootSignature"]/*' />
 	[LibraryImport("d3d12.dll")]
-	public static partial HResult D3D12SerializeRootSignature(D3D12_ROOT_SIGNATURE_DESC* pRootSignature, D3D_ROOT_SIGNATURE_VERSION Version, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
+	public static partial HResult D3D12SerializeRootSignature(D3D12_ROOT_SIGNATURE_DESC* pRootSignature, D3D_ROOT_SIGNATURE_VERSION Version, ID3DBlob** ppBlob, ID3DBlob** ppErrorBlob);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateRootSignatureDeserializer"]/*' />
 	[LibraryImport("d3d12.dll")]
@@ -21,7 +21,7 @@ public static unsafe partial class D3D12
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12SerializeVersionedRootSignature"]/*' />
 	[LibraryImport("d3d12.dll")]
-	public static partial HResult D3D12SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pRootSignature, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
+	public static partial HResult D3D12SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pRootSignature, ID3DBlob** ppBlob, ID3DBlob** ppErrorBlob);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateVersionedRootSignatureDeserializer"]/*' />
 	[LibraryImport("d3d12.dll")]
@@ -29,7 +29,7 @@ public static unsafe partial class D3D12
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateDevice"]/*' />
 	[LibraryImport("d3d12.dll")]
-	public static partial HResult D3D12CreateDevice(IUnknown* pAdapter, Graphics.Direct3D.D3D_FEATURE_LEVEL MinimumFeatureLevel, Guid* riid, void** ppDevice);
+	public static partial HResult D3D12CreateDevice(IUnknown* pAdapter, D3D_FEATURE_LEVEL MinimumFeatureLevel, Guid* riid, void** ppDevice);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12GetDebugInterface"]/*' />
 	[LibraryImport("d3d12.dll")]

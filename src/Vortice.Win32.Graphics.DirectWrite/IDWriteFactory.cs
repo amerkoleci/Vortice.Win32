@@ -2,17 +2,18 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using static Vortice.Win32.Apis;
+using static Vortice.Win32.Graphics.DWrite;
 
-namespace Vortice.Win32.Graphics.DirectWrite;
+namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct IDWriteFactory
 {
     public ComPtr<IDWriteTextFormat> CreateTextFormat(
         ReadOnlySpan<char> fontFamilyName,
         float fontSize,
-        FontWeight fontWeight = FontWeight.Normal,
-        FontStyle fontStyle = FontStyle.Normal,
-        FontStretch fontStretch = FontStretch.Normal)
+        DWRITE_FONT_WEIGHT fontWeight = DWRITE_FONT_WEIGHT_NORMAL,
+        DWRITE_FONT_STYLE fontStyle = DWRITE_FONT_STYLE_NORMAL,
+        DWRITE_FONT_STRETCH fontStretch = DWRITE_FONT_STRETCH_NORMAL)
     {
         using ComPtr<IDWriteTextFormat> textFormat = default;
 
@@ -36,9 +37,9 @@ public unsafe partial struct IDWriteFactory
         ReadOnlySpan<char> fontFamilyName,
         float fontSize,
         ReadOnlySpan<char> localeName,
-        FontWeight fontWeight = FontWeight.Normal,
-        FontStyle fontStyle = FontStyle.Normal,
-        FontStretch fontStretch = FontStretch.Normal)
+        DWRITE_FONT_WEIGHT fontWeight = DWRITE_FONT_WEIGHT_NORMAL,
+        DWRITE_FONT_STYLE fontStyle = DWRITE_FONT_STYLE_NORMAL,
+        DWRITE_FONT_STRETCH fontStretch = DWRITE_FONT_STRETCH_NORMAL)
     {
         using ComPtr<IDWriteTextFormat> textFormat = default;
 
@@ -67,9 +68,9 @@ public unsafe partial struct IDWriteFactory
         IDWriteFontCollection* fontCollection,
         float fontSize,
         ReadOnlySpan<char> localeName,
-        FontWeight fontWeight = FontWeight.Normal,
-        FontStyle fontStyle = FontStyle.Normal,
-        FontStretch fontStretch = FontStretch.Normal)
+        DWRITE_FONT_WEIGHT fontWeight = DWRITE_FONT_WEIGHT_NORMAL,
+        DWRITE_FONT_STYLE fontStyle = DWRITE_FONT_STYLE_NORMAL,
+        DWRITE_FONT_STRETCH fontStretch = DWRITE_FONT_STRETCH_NORMAL)
     {
         using ComPtr<IDWriteTextFormat> textFormat = default;
 

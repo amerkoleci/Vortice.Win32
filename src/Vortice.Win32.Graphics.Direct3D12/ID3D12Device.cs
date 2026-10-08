@@ -1,10 +1,9 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D;
-using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Apis;
 using static Vortice.Win32.Graphics.D3D12;
+using static Vortice.Win32.Graphics.D3D;
 
 namespace Vortice.Win32.Graphics;
 
@@ -16,7 +15,7 @@ public static unsafe partial class ID3D12DeviceExtensions
         where TFeature : unmanaged
     {
         TFeature featureData = default;
-        ThrowIfFailed(self.CheckFeatureSupport(feature, &featureData, sizeof(TFeature)));
+        self.CheckFeatureSupport(feature, &featureData, sizeof(TFeature)).ThrowIfFailed();
         return featureData;
     }
 
@@ -40,24 +39,24 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static FeatureLevel CheckMaxSupportedFeatureLevel<TD3D12Device>(ref this TD3D12Device self)
+    public static D3D_FEATURE_LEVEL CheckMaxSupportedFeatureLevel<TD3D12Device>(ref this TD3D12Device self)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
-        ReadOnlySpan<FeatureLevel> featureLevels = stackalloc FeatureLevel[4]
-        {
-            FeatureLevel.Level_12_2,
-            FeatureLevel.Level_12_1,
-            FeatureLevel.Level_11_1,
-            FeatureLevel.Level_11_0
-        };
+        ReadOnlySpan<D3D_FEATURE_LEVEL> featureLevels =
+        [
+            D3D_FEATURE_LEVEL_12_2,
+            D3D_FEATURE_LEVEL_12_1,
+            D3D_FEATURE_LEVEL_11_1,
+            D3D_FEATURE_LEVEL_11_0
+        ];
 
-        fixed (FeatureLevel* pFeatureLevels = featureLevels)
+        fixed (D3D_FEATURE_LEVEL* pFeatureLevels = featureLevels)
         {
             D3D12_FEATURE_DATA_FEATURE_LEVELS featureData = new()
             {
                 NumFeatureLevels = (uint)featureLevels.Length,
                 pFeatureLevelsRequested = pFeatureLevels,
-                MaxSupportedFeatureLevel = FeatureLevel.Level_11_0
+                MaxSupportedFeatureLevel = D3D_FEATURE_LEVEL_11_0
             };
 
             if (self.CheckFeatureSupport(D3D12_FEATURE_FEATURE_LEVELS, &featureData, sizeof(D3D12_FEATURE_DATA_FEATURE_LEVELS)).Success)
@@ -65,22 +64,22 @@ public static unsafe partial class ID3D12DeviceExtensions
                 return featureData.MaxSupportedFeatureLevel;
             }
 
-            return FeatureLevel.Level_11_0;
+            return D3D_FEATURE_LEVEL_11_0;
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static FeatureLevel CheckMaxSupportedFeatureLevel<TD3D12Device>(
-        ref this TD3D12Device self, ReadOnlySpan<FeatureLevel> featureLevels)
+    public static D3D_FEATURE_LEVEL CheckMaxSupportedFeatureLevel<TD3D12Device>(
+        ref this TD3D12Device self, ReadOnlySpan<D3D_FEATURE_LEVEL> featureLevels)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
-        fixed (FeatureLevel* pFeatureLevels = featureLevels)
+        fixed (D3D_FEATURE_LEVEL* pFeatureLevels = featureLevels)
         {
             var featureData = new D3D12_FEATURE_DATA_FEATURE_LEVELS
             {
                 NumFeatureLevels = (uint)featureLevels.Length,
                 pFeatureLevelsRequested = pFeatureLevels,
-                MaxSupportedFeatureLevel = FeatureLevel.Level_11_0
+                MaxSupportedFeatureLevel = D3D_FEATURE_LEVEL_11_0
             };
 
             if (self.CheckFeatureSupport(D3D12_FEATURE_FEATURE_LEVELS, &featureData, sizeof(D3D12_FEATURE_DATA_FEATURE_LEVELS)).Success)
@@ -88,7 +87,7 @@ public static unsafe partial class ID3D12DeviceExtensions
                 return featureData.MaxSupportedFeatureLevel;
             }
 
-            return FeatureLevel.Level_11_0;
+            return D3D_FEATURE_LEVEL_11_0;
         }
     }
 
@@ -130,7 +129,7 @@ public static unsafe partial class ID3D12DeviceExtensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool CheckFormatSupport<TD3D12Device>(ref this TD3D12Device self,
-        Format format, out D3D12_FORMAT_SUPPORT1 formatSupport1, out D3D12_FORMAT_SUPPORT2 formatSupport2)
+        DXGI_FORMAT format, out D3D12_FORMAT_SUPPORT1 formatSupport1, out D3D12_FORMAT_SUPPORT2 formatSupport2)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         D3D12_FEATURE_DATA_FORMAT_SUPPORT featureData = new()
@@ -151,7 +150,7 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static byte GetFormatPlaneCount<TD3D12Device>(ref this TD3D12Device self, Format format)
+    public static byte GetFormatPlaneCount<TD3D12Device>(ref this TD3D12Device self, DXGI_FORMAT format)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         D3D12_FEATURE_DATA_FORMAT_INFO featureData = new()

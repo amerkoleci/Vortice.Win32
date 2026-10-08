@@ -105,15 +105,15 @@ public unsafe partial struct ID3D12Tools2 : ID3D12Tools2.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools2::SetApplicationSpecificDriverState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetApplicationSpecificDriverState(IUnknown* pAdapter, Graphics.Direct3D.ID3DBlob* pBlob)
+	public HResult SetApplicationSpecificDriverState(IUnknown* pAdapter, ID3DBlob* pBlob)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, IUnknown*, Graphics.Direct3D.ID3DBlob*, int>)(lpVtbl[7]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), pAdapter, pBlob);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, IUnknown*, ID3DBlob*, int>)(lpVtbl[7]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), pAdapter, pBlob);
 	}
 
 	public interface Interface : ID3D12Tools1.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetApplicationSpecificDriverState(IUnknown* pAdapter, Graphics.Direct3D.ID3DBlob* pBlob);
+		HResult SetApplicationSpecificDriverState(IUnknown* pAdapter, ID3DBlob* pBlob);
 	}
 }
 

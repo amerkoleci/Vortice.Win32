@@ -113,15 +113,15 @@ public unsafe partial struct ID3D12PipelineState : ID3D12PipelineState.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState::GetCachedBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetCachedBlob(Graphics.Direct3D.ID3DBlob** ppBlob)
+	public HResult GetCachedBlob(ID3DBlob** ppBlob)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineState*, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[8]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), ppBlob);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineState*, ID3DBlob**, int>)(lpVtbl[8]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), ppBlob);
 	}
 
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]
-		HResult GetCachedBlob(Graphics.Direct3D.ID3DBlob** ppBlob);
+		HResult GetCachedBlob(ID3DBlob** ppBlob);
 	}
 }
 

@@ -281,9 +281,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamOutputRate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE OutputRate, Bool32 RepeatFrame, Graphics.Dxgi.Common.DXGI_RATIONAL* pCustomRate)
+	public void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE OutputRate, Bool32 RepeatFrame, DXGI_RATIONAL* pCustomRate)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE, Bool32, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[29]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, OutputRate, RepeatFrame, pCustomRate);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE, Bool32, DXGI_RATIONAL*, void>)(lpVtbl[29]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, OutputRate, RepeatFrame, pCustomRate);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamSourceRect" />
@@ -321,9 +321,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamPixelAspectRatio" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Graphics.Dxgi.Common.DXGI_RATIONAL* pSourceAspectRatio, Graphics.Dxgi.Common.DXGI_RATIONAL* pDestinationAspectRatio)
+	public void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, DXGI_RATIONAL* pSourceAspectRatio, DXGI_RATIONAL* pDestinationAspectRatio)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, Bool32, Graphics.Dxgi.Common.DXGI_RATIONAL*, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[34]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pSourceAspectRatio, pDestinationAspectRatio);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, Bool32, DXGI_RATIONAL*, DXGI_RATIONAL*, void>)(lpVtbl[34]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pSourceAspectRatio, pDestinationAspectRatio);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamLumaKey" />
@@ -385,9 +385,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamOutputRate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE* pOutputRate, Bool32* pRepeatFrame, Graphics.Dxgi.Common.DXGI_RATIONAL* pCustomRate)
+	public void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE* pOutputRate, Bool32* pRepeatFrame, DXGI_RATIONAL* pCustomRate)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE*, Bool32*, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[42]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pOutputRate, pRepeatFrame, pCustomRate);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE*, Bool32*, DXGI_RATIONAL*, void>)(lpVtbl[42]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pOutputRate, pRepeatFrame, pCustomRate);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamSourceRect" />
@@ -425,9 +425,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamPixelAspectRatio" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Graphics.Dxgi.Common.DXGI_RATIONAL* pSourceAspectRatio, Graphics.Dxgi.Common.DXGI_RATIONAL* pDestinationAspectRatio)
+	public void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, DXGI_RATIONAL* pSourceAspectRatio, DXGI_RATIONAL* pDestinationAspectRatio)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, Bool32*, Graphics.Dxgi.Common.DXGI_RATIONAL*, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[47]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pSourceAspectRatio, pDestinationAspectRatio);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, Bool32*, DXGI_RATIONAL*, DXGI_RATIONAL*, void>)(lpVtbl[47]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pSourceAspectRatio, pDestinationAspectRatio);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamLumaKey" />
@@ -593,9 +593,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::DecoderEnableDownsampling"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
-	public HResult DecoderEnableDownsampling(ID3D11VideoDecoder* pDecoder, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, uint ReferenceFrameCount)
+	public HResult DecoderEnableDownsampling(ID3D11VideoDecoder* pDecoder, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, uint ReferenceFrameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoDecoder*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_SAMPLE_DESC*, uint, int>)(lpVtbl[68]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pDecoder, InputColorSpace, pOutputDesc, ReferenceFrameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoDecoder*, DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_SAMPLE_DESC*, uint, int>)(lpVtbl[68]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pDecoder, InputColorSpace, pOutputDesc, ReferenceFrameCount);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::DecoderUpdateDownsampling"]/*' />
@@ -609,9 +609,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorSetOutputColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
-	public void VideoProcessorSetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE ColorSpace)
+	public void VideoProcessorSetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, DXGI_COLOR_SPACE_TYPE ColorSpace)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, void>)(lpVtbl[70]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, ColorSpace);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, DXGI_COLOR_SPACE_TYPE, void>)(lpVtbl[70]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, ColorSpace);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorSetOutputShaderUsage"]/*' />
@@ -625,9 +625,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorGetOutputColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public void VideoProcessorGetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE* pColorSpace)
+	public void VideoProcessorGetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, DXGI_COLOR_SPACE_TYPE* pColorSpace)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE*, void>)(lpVtbl[72]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, DXGI_COLOR_SPACE_TYPE*, void>)(lpVtbl[72]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorGetOutputShaderUsage"]/*' />
@@ -641,9 +641,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorSetStreamColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
-	public void VideoProcessorSetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE ColorSpace)
+	public void VideoProcessorSetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, DXGI_COLOR_SPACE_TYPE ColorSpace)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, void>)(lpVtbl[74]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, ColorSpace);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, DXGI_COLOR_SPACE_TYPE, void>)(lpVtbl[74]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, ColorSpace);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorSetStreamMirror"]/*' />
@@ -657,9 +657,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorGetStreamColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public void VideoProcessorGetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE* pColorSpace)
+	public void VideoProcessorGetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, DXGI_COLOR_SPACE_TYPE* pColorSpace)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE*, void>)(lpVtbl[76]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, DXGI_COLOR_SPACE_TYPE*, void>)(lpVtbl[76]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorGetStreamMirror"]/*' />
@@ -673,9 +673,9 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1::VideoProcessorGetBehaviorHints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
-	public HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, Graphics.Dxgi.Common.DXGI_FORMAT OutputFormat, uint StreamCount, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT* pStreams, uint* pBehaviorHints)
+	public HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, DXGI_FORMAT OutputFormat, uint StreamCount, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT* pStreams, uint* pBehaviorHints)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, uint, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, uint, DXGI_FORMAT, uint, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
 	}
 
 	public interface Interface : ID3D11VideoContext.Interface
@@ -690,37 +690,37 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 		HResult CheckCryptoSessionStatus(ID3D11CryptoSession* pCryptoSession, D3D11_CRYPTO_SESSION_STATUS* pStatus);
 
 		[VtblIndex(68)]
-		HResult DecoderEnableDownsampling(ID3D11VideoDecoder* pDecoder, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, uint ReferenceFrameCount);
+		HResult DecoderEnableDownsampling(ID3D11VideoDecoder* pDecoder, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, uint ReferenceFrameCount);
 
 		[VtblIndex(69)]
 		HResult DecoderUpdateDownsampling(ID3D11VideoDecoder* pDecoder, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc);
 
 		[VtblIndex(70)]
-		void VideoProcessorSetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE ColorSpace);
+		void VideoProcessorSetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, DXGI_COLOR_SPACE_TYPE ColorSpace);
 
 		[VtblIndex(71)]
 		void VideoProcessorSetOutputShaderUsage(ID3D11VideoProcessor* pVideoProcessor, Bool32 ShaderUsage);
 
 		[VtblIndex(72)]
-		void VideoProcessorGetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE* pColorSpace);
+		void VideoProcessorGetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, DXGI_COLOR_SPACE_TYPE* pColorSpace);
 
 		[VtblIndex(73)]
 		void VideoProcessorGetOutputShaderUsage(ID3D11VideoProcessor* pVideoProcessor, Bool32* pShaderUsage);
 
 		[VtblIndex(74)]
-		void VideoProcessorSetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE ColorSpace);
+		void VideoProcessorSetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, DXGI_COLOR_SPACE_TYPE ColorSpace);
 
 		[VtblIndex(75)]
 		void VideoProcessorSetStreamMirror(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Bool32 FlipHorizontal, Bool32 FlipVertical);
 
 		[VtblIndex(76)]
-		void VideoProcessorGetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE* pColorSpace);
+		void VideoProcessorGetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, DXGI_COLOR_SPACE_TYPE* pColorSpace);
 
 		[VtblIndex(77)]
 		void VideoProcessorGetStreamMirror(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, Bool32* pFlipHorizontal, Bool32* pFlipVertical);
 
 		[VtblIndex(78)]
-		HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, Graphics.Dxgi.Common.DXGI_FORMAT OutputFormat, uint StreamCount, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT* pStreams, uint* pBehaviorHints);
+		HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, DXGI_FORMAT OutputFormat, uint StreamCount, D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT* pStreams, uint* pBehaviorHints);
 	}
 }
 

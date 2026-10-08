@@ -281,9 +281,9 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorSetStreamOutputRate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE OutputRate, Bool32 RepeatFrame, Graphics.Dxgi.Common.DXGI_RATIONAL* pCustomRate)
+	public void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE OutputRate, Bool32 RepeatFrame, DXGI_RATIONAL* pCustomRate)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE, Bool32, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[29]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, OutputRate, RepeatFrame, pCustomRate);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE, Bool32, DXGI_RATIONAL*, void>)(lpVtbl[29]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, OutputRate, RepeatFrame, pCustomRate);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorSetStreamSourceRect"]/*' />
@@ -321,9 +321,9 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorSetStreamPixelAspectRatio"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Graphics.Dxgi.Common.DXGI_RATIONAL* pSourceAspectRatio, Graphics.Dxgi.Common.DXGI_RATIONAL* pDestinationAspectRatio)
+	public void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, DXGI_RATIONAL* pSourceAspectRatio, DXGI_RATIONAL* pDestinationAspectRatio)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, Bool32, Graphics.Dxgi.Common.DXGI_RATIONAL*, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[34]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pSourceAspectRatio, pDestinationAspectRatio);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, Bool32, DXGI_RATIONAL*, DXGI_RATIONAL*, void>)(lpVtbl[34]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pSourceAspectRatio, pDestinationAspectRatio);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorSetStreamLumaKey"]/*' />
@@ -385,9 +385,9 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetStreamOutputRate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE* pOutputRate, Bool32* pRepeatFrame, Graphics.Dxgi.Common.DXGI_RATIONAL* pCustomRate)
+	public void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE* pOutputRate, Bool32* pRepeatFrame, DXGI_RATIONAL* pCustomRate)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE*, Bool32*, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[42]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pOutputRate, pRepeatFrame, pCustomRate);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE*, Bool32*, DXGI_RATIONAL*, void>)(lpVtbl[42]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pOutputRate, pRepeatFrame, pCustomRate);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetStreamSourceRect"]/*' />
@@ -425,9 +425,9 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetStreamPixelAspectRatio"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Graphics.Dxgi.Common.DXGI_RATIONAL* pSourceAspectRatio, Graphics.Dxgi.Common.DXGI_RATIONAL* pDestinationAspectRatio)
+	public void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, DXGI_RATIONAL* pSourceAspectRatio, DXGI_RATIONAL* pDestinationAspectRatio)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, Bool32*, Graphics.Dxgi.Common.DXGI_RATIONAL*, Graphics.Dxgi.Common.DXGI_RATIONAL*, void>)(lpVtbl[47]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pSourceAspectRatio, pDestinationAspectRatio);
+		((delegate* unmanaged[MemberFunction]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, Bool32*, DXGI_RATIONAL*, DXGI_RATIONAL*, void>)(lpVtbl[47]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pSourceAspectRatio, pDestinationAspectRatio);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetStreamLumaKey"]/*' />
@@ -635,7 +635,7 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 		void VideoProcessorSetStreamColorSpace(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_COLOR_SPACE* pColorSpace);
 
 		[VtblIndex(29)]
-		void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE OutputRate, Bool32 RepeatFrame, Graphics.Dxgi.Common.DXGI_RATIONAL* pCustomRate);
+		void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE OutputRate, Bool32 RepeatFrame, DXGI_RATIONAL* pCustomRate);
 
 		[VtblIndex(30)]
 		void VideoProcessorSetStreamSourceRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Rect* pRect);
@@ -650,7 +650,7 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 		void VideoProcessorSetStreamPalette(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, uint Count, uint* pEntries);
 
 		[VtblIndex(34)]
-		void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Graphics.Dxgi.Common.DXGI_RATIONAL* pSourceAspectRatio, Graphics.Dxgi.Common.DXGI_RATIONAL* pDestinationAspectRatio);
+		void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, DXGI_RATIONAL* pSourceAspectRatio, DXGI_RATIONAL* pDestinationAspectRatio);
 
 		[VtblIndex(35)]
 		void VideoProcessorSetStreamLumaKey(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, float Lower, float Upper);
@@ -674,7 +674,7 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 		void VideoProcessorGetStreamColorSpace(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_COLOR_SPACE* pColorSpace);
 
 		[VtblIndex(42)]
-		void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE* pOutputRate, Bool32* pRepeatFrame, Graphics.Dxgi.Common.DXGI_RATIONAL* pCustomRate);
+		void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, D3D11_VIDEO_PROCESSOR_OUTPUT_RATE* pOutputRate, Bool32* pRepeatFrame, DXGI_RATIONAL* pCustomRate);
 
 		[VtblIndex(43)]
 		void VideoProcessorGetStreamSourceRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Rect* pRect);
@@ -689,7 +689,7 @@ public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, 
 		void VideoProcessorGetStreamPalette(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, uint Count, uint* pEntries);
 
 		[VtblIndex(47)]
-		void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Graphics.Dxgi.Common.DXGI_RATIONAL* pSourceAspectRatio, Graphics.Dxgi.Common.DXGI_RATIONAL* pDestinationAspectRatio);
+		void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, DXGI_RATIONAL* pSourceAspectRatio, DXGI_RATIONAL* pDestinationAspectRatio);
 
 		[VtblIndex(48)]
 		void VideoProcessorGetStreamLumaKey(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, float* pLower, float* pUpper);

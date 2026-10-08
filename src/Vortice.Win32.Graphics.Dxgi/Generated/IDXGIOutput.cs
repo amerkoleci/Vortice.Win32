@@ -113,17 +113,17 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetDisplayModeList"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDisplayModeList(Common.DXGI_FORMAT EnumFormat, DXGI_ENUM_MODES Flags, uint* pNumModes, Common.DXGI_MODE_DESC* pDesc)
+	public HResult GetDisplayModeList(DXGI_FORMAT EnumFormat, DXGI_ENUM_MODES Flags, uint* pNumModes, DXGI_MODE_DESC* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, Common.DXGI_FORMAT, DXGI_ENUM_MODES, uint*, Common.DXGI_MODE_DESC*, int>)(lpVtbl[8]))((IDXGIOutput*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, DXGI_FORMAT, DXGI_ENUM_MODES, uint*, DXGI_MODE_DESC*, int>)(lpVtbl[8]))((IDXGIOutput*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::FindClosestMatchingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult FindClosestMatchingMode(Common.DXGI_MODE_DESC* pModeToMatch, Common.DXGI_MODE_DESC* pClosestMatch, IUnknown* pConcernedDevice)
+	public HResult FindClosestMatchingMode(DXGI_MODE_DESC* pModeToMatch, DXGI_MODE_DESC* pClosestMatch, IUnknown* pConcernedDevice)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, Common.DXGI_MODE_DESC*, Common.DXGI_MODE_DESC*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, DXGI_MODE_DESC*, DXGI_MODE_DESC*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::WaitForVBlank"]/*' />
@@ -153,25 +153,25 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetGammaControlCapabilities"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetGammaControlCapabilities(Common.DXGI_GAMMA_CONTROL_CAPABILITIES* pGammaCaps)
+	public HResult GetGammaControlCapabilities(DXGI_GAMMA_CONTROL_CAPABILITIES* pGammaCaps)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, Common.DXGI_GAMMA_CONTROL_CAPABILITIES*, int>)(lpVtbl[13]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pGammaCaps);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, DXGI_GAMMA_CONTROL_CAPABILITIES*, int>)(lpVtbl[13]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pGammaCaps);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::SetGammaControl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetGammaControl(Common.DXGI_GAMMA_CONTROL* pArray)
+	public HResult SetGammaControl(DXGI_GAMMA_CONTROL* pArray)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, Common.DXGI_GAMMA_CONTROL*, int>)(lpVtbl[14]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, DXGI_GAMMA_CONTROL*, int>)(lpVtbl[14]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetGammaControl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetGammaControl(Common.DXGI_GAMMA_CONTROL* pArray)
+	public HResult GetGammaControl(DXGI_GAMMA_CONTROL* pArray)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, Common.DXGI_GAMMA_CONTROL*, int>)(lpVtbl[15]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput*, DXGI_GAMMA_CONTROL*, int>)(lpVtbl[15]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::SetDisplaySurface"]/*' />
@@ -204,10 +204,10 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface, INativeGuid
 		HResult GetDesc(DXGI_OUTPUT_DESC* pDesc);
 
 		[VtblIndex(8)]
-		HResult GetDisplayModeList(Common.DXGI_FORMAT EnumFormat, DXGI_ENUM_MODES Flags, uint* pNumModes, Common.DXGI_MODE_DESC* pDesc);
+		HResult GetDisplayModeList(DXGI_FORMAT EnumFormat, DXGI_ENUM_MODES Flags, uint* pNumModes, DXGI_MODE_DESC* pDesc);
 
 		[VtblIndex(9)]
-		HResult FindClosestMatchingMode(Common.DXGI_MODE_DESC* pModeToMatch, Common.DXGI_MODE_DESC* pClosestMatch, IUnknown* pConcernedDevice);
+		HResult FindClosestMatchingMode(DXGI_MODE_DESC* pModeToMatch, DXGI_MODE_DESC* pClosestMatch, IUnknown* pConcernedDevice);
 
 		[VtblIndex(10)]
 		HResult WaitForVBlank();
@@ -219,13 +219,13 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface, INativeGuid
 		void ReleaseOwnership();
 
 		[VtblIndex(13)]
-		HResult GetGammaControlCapabilities(Common.DXGI_GAMMA_CONTROL_CAPABILITIES* pGammaCaps);
+		HResult GetGammaControlCapabilities(DXGI_GAMMA_CONTROL_CAPABILITIES* pGammaCaps);
 
 		[VtblIndex(14)]
-		HResult SetGammaControl(Common.DXGI_GAMMA_CONTROL* pArray);
+		HResult SetGammaControl(DXGI_GAMMA_CONTROL* pArray);
 
 		[VtblIndex(15)]
-		HResult GetGammaControl(Common.DXGI_GAMMA_CONTROL* pArray);
+		HResult GetGammaControl(DXGI_GAMMA_CONTROL* pArray);
 
 		[VtblIndex(16)]
 		HResult SetDisplaySurface(IDXGISurface* pScanoutSurface);

@@ -177,9 +177,9 @@ public unsafe partial struct ID3D11ShaderReflection : ID3D11ShaderReflection.Int
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetGSInputPrimitive"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public Graphics.Direct3D.D3D_PRIMITIVE GetGSInputPrimitive()
+	public D3D_PRIMITIVE GetGSInputPrimitive()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflection*, Graphics.Direct3D.D3D_PRIMITIVE>)(lpVtbl[16]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflection*, D3D_PRIMITIVE>)(lpVtbl[16]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::IsSampleFrequencyShader"]/*' />
@@ -201,9 +201,9 @@ public unsafe partial struct ID3D11ShaderReflection : ID3D11ShaderReflection.Int
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetMinFeatureLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetMinFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* pLevel)
+	public HResult GetMinFeatureLevel(D3D_FEATURE_LEVEL* pLevel)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflection*, Graphics.Direct3D.D3D_FEATURE_LEVEL*, int>)(lpVtbl[19]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), pLevel);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflection*, D3D_FEATURE_LEVEL*, int>)(lpVtbl[19]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), pLevel);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetThreadGroupSize"]/*' />
@@ -264,7 +264,7 @@ public unsafe partial struct ID3D11ShaderReflection : ID3D11ShaderReflection.Int
 		uint GetBitwiseInstructionCount();
 
 		[VtblIndex(16)]
-		Graphics.Direct3D.D3D_PRIMITIVE GetGSInputPrimitive();
+		D3D_PRIMITIVE GetGSInputPrimitive();
 
 		[VtblIndex(17)]
 		Bool32 IsSampleFrequencyShader();
@@ -273,7 +273,7 @@ public unsafe partial struct ID3D11ShaderReflection : ID3D11ShaderReflection.Int
 		uint GetNumInterfaceSlots();
 
 		[VtblIndex(19)]
-		HResult GetMinFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* pLevel);
+		HResult GetMinFeatureLevel(D3D_FEATURE_LEVEL* pLevel);
 
 		[VtblIndex(20)]
 		uint GetThreadGroupSize(uint* pSizeX, uint* pSizeY, uint* pSizeZ);

@@ -153,17 +153,17 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, uint, uint, Common.DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, uint, uint, DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult ResizeTarget(Common.DXGI_MODE_DESC* pNewTargetParameters)
+	public HResult ResizeTarget(DXGI_MODE_DESC* pNewTargetParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pNewTargetParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
@@ -265,17 +265,17 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult SetRotation(Common.DXGI_MODE_ROTATION Rotation)
+	public HResult SetRotation(DXGI_MODE_ROTATION Rotation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.DXGI_MODE_ROTATION, int>)(lpVtbl[27]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Rotation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_MODE_ROTATION, int>)(lpVtbl[27]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Rotation);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult GetRotation(Common.DXGI_MODE_ROTATION* pRotation)
+	public HResult GetRotation(DXGI_MODE_ROTATION* pRotation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, Common.DXGI_MODE_ROTATION*, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, DXGI_MODE_ROTATION*, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />

@@ -1,13 +1,13 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.DXGICommon;
 
 namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct D3D12_CLEAR_VALUE : IEquatable<D3D12_CLEAR_VALUE>
 {
-    public D3D12_CLEAR_VALUE(Format format, float* color)
+    public D3D12_CLEAR_VALUE(DXGI_FORMAT format, float* color)
     {
         Unsafe.SkipInit(out this);
 
@@ -18,7 +18,7 @@ public unsafe partial struct D3D12_CLEAR_VALUE : IEquatable<D3D12_CLEAR_VALUE>
         Anonymous.Color[3] = color[3];
     }
 
-    public D3D12_CLEAR_VALUE(Format format, float depth, byte stencil)
+    public D3D12_CLEAR_VALUE(DXGI_FORMAT format, float depth, byte stencil)
     {
         Format = format;
         Anonymous.DepthStencil.Depth = depth;
@@ -32,10 +32,10 @@ public unsafe partial struct D3D12_CLEAR_VALUE : IEquatable<D3D12_CLEAR_VALUE>
             return false;
         }
 
-        if (left.Format == Format.D24UnormS8Uint ||
-            left.Format == Format.D16Unorm ||
-            left.Format == Format.D32Float ||
-            left.Format == Format.D32FloatS8X24Uint)
+        if (left.Format == DXGI_FORMAT_D24_UNORM_S8_UINT ||
+            left.Format == DXGI_FORMAT_D16_UNORM ||
+            left.Format == DXGI_FORMAT_D32_FLOAT ||
+            left.Format == DXGI_FORMAT_D32_FLOAT_S8X24_UINT)
         {
             return (left.Anonymous.DepthStencil.Depth == right.Anonymous.DepthStencil.Depth) && (left.Anonymous.DepthStencil.Stencil == right.Anonymous.DepthStencil.Stencil);
         }
@@ -58,10 +58,10 @@ public unsafe partial struct D3D12_CLEAR_VALUE : IEquatable<D3D12_CLEAR_VALUE>
         {
             hashCode.Add(Format);
 
-            if (Format == Format.D24UnormS8Uint ||
-                Format == Format.D16Unorm ||
-                Format == Format.D32Float ||
-                Format == Format.D32FloatS8X24Uint)
+            if (Format == DXGI_FORMAT.DXGI_FORMAT_D24_UNORM_S8_UINT ||
+                Format == DXGI_FORMAT.DXGI_FORMAT_D16_UNORM ||
+                Format == DXGI_FORMAT.DXGI_FORMAT_D32_FLOAT ||
+                Format == DXGI_FORMAT.DXGI_FORMAT_D32_FLOAT_S8X24_UINT)
             {
                 hashCode.Add(Anonymous.DepthStencil);
             }

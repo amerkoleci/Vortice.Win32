@@ -161,9 +161,9 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::CreatePathGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreatePathGeometry(Common.D2D1_FILL_MODE fillMode, ID2D1PathGeometry1** pathGeometry)
+	public HResult CreatePathGeometry(D2D1_FILL_MODE fillMode, ID2D1PathGeometry1** pathGeometry)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, Common.D2D1_FILL_MODE, ID2D1PathGeometry1**, int>)(lpVtbl[14]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), fillMode, pathGeometry);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPathData*, D2D1_FILL_MODE, ID2D1PathGeometry1**, int>)(lpVtbl[14]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), fillMode, pathGeometry);
 	}
 
 	public interface Interface : ID2D1SvgAttribute.Interface
@@ -193,7 +193,7 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 		uint GetCommandsCount();
 
 		[VtblIndex(14)]
-		HResult CreatePathGeometry(Common.D2D1_FILL_MODE fillMode, ID2D1PathGeometry1** pathGeometry);
+		HResult CreatePathGeometry(D2D1_FILL_MODE fillMode, ID2D1PathGeometry1** pathGeometry);
 	}
 }
 

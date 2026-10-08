@@ -201,9 +201,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IASetIndexBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.DXGI_FORMAT Format, uint Offset)
+	public void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, DXGI_FORMAT Format, uint Offset)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, ID3D11Buffer*, Graphics.Dxgi.Common.DXGI_FORMAT, uint, void>)(lpVtbl[19]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, ID3D11Buffer*, DXGI_FORMAT, uint, void>)(lpVtbl[19]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::DrawIndexedInstanced"]/*' />
@@ -241,9 +241,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IASetPrimitiveTopology"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY Topology)
+	public void IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY Topology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[24]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), Topology);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, D3D_PRIMITIVE_TOPOLOGY, void>)(lpVtbl[24]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), Topology);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::VSSetShaderResources"]/*' />
@@ -505,9 +505,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::ResolveSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format)
+	public void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, DXGI_FORMAT Format)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, ID3D11Resource*, uint, ID3D11Resource*, uint, Graphics.Dxgi.Common.DXGI_FORMAT, void>)(lpVtbl[57]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, ID3D11Resource*, uint, ID3D11Resource*, uint, DXGI_FORMAT, void>)(lpVtbl[57]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::ExecuteCommandList"]/*' />
@@ -689,9 +689,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IAGetIndexBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.DXGI_FORMAT* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, DXGI_FORMAT* Format, uint* Offset)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, ID3D11Buffer**, Graphics.Dxgi.Common.DXGI_FORMAT*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, ID3D11Buffer**, DXGI_FORMAT*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GSGetConstantBuffers"]/*' />
@@ -713,9 +713,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IAGetPrimitiveTopology"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public void IAGetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY* pTopology)
+	public void IAGetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY* pTopology)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY*, void>)(lpVtbl[83]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pTopology);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext*, D3D_PRIMITIVE_TOPOLOGY*, void>)(lpVtbl[83]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pTopology);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::VSGetShaderResources"]/*' />
@@ -1005,7 +1005,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		void IASetVertexBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppVertexBuffers, uint* pStrides, uint* pOffsets);
 
 		[VtblIndex(19)]
-		void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.DXGI_FORMAT Format, uint Offset);
+		void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, DXGI_FORMAT Format, uint Offset);
 
 		[VtblIndex(20)]
 		void DrawIndexedInstanced(uint IndexCountPerInstance, uint InstanceCount, uint StartIndexLocation, int BaseVertexLocation, uint StartInstanceLocation);
@@ -1020,7 +1020,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		void GSSetShader(ID3D11GeometryShader* pShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0);
 
 		[VtblIndex(24)]
-		void IASetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY Topology);
+		void IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY Topology);
 
 		[VtblIndex(25)]
 		void VSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews);
@@ -1119,7 +1119,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		float GetResourceMinLOD(ID3D11Resource* pResource);
 
 		[VtblIndex(57)]
-		void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.DXGI_FORMAT Format);
+		void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, DXGI_FORMAT Format);
 
 		[VtblIndex(58)]
 		void ExecuteCommandList(ID3D11CommandList* pCommandList, Bool32 RestoreContextState);
@@ -1188,7 +1188,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		void IAGetVertexBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppVertexBuffers, uint* pStrides, uint* pOffsets);
 
 		[VtblIndex(80)]
-		void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.DXGI_FORMAT* Format, uint* Offset);
+		void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, DXGI_FORMAT* Format, uint* Offset);
 
 		[VtblIndex(81)]
 		void GSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers);
@@ -1197,7 +1197,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances);
 
 		[VtblIndex(83)]
-		void IAGetPrimitiveTopology(Graphics.Direct3D.D3D_PRIMITIVE_TOPOLOGY* pTopology);
+		void IAGetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY* pTopology);
 
 		[VtblIndex(84)]
 		void VSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews);

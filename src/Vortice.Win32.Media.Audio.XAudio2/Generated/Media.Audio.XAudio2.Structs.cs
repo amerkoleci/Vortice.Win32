@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Audio;
+namespace Vortice.Win32.Media.Audio;
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES"]/*' />
 /// <unmanaged>XAPO_REGISTRATION_PROPERTIES</unmanaged>
@@ -179,7 +179,7 @@ public partial struct XAUDIO2_SEND_DESCRIPTOR
 	public uint Flags;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_SEND_DESCRIPTOR::pOutputVoice"]/*' />
-	public IXAudio2Voice pOutputVoice;
+	public unsafe IXAudio2Voice* pOutputVoice;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_VOICE_SENDS"]/*' />
@@ -198,10 +198,10 @@ public partial struct XAUDIO2_VOICE_SENDS
 public partial struct XAUDIO2_EFFECT_DESCRIPTOR
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR::pEffect"]/*' />
-	public IUnknown pEffect;
+	public unsafe IUnknown* pEffect;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR::InitialState"]/*' />
-	public BOOL InitialState;
+	public Bool32 InitialState;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_EFFECT_DESCRIPTOR::OutputChannels"]/*' />
 	public uint OutputChannels;
@@ -347,16 +347,16 @@ public partial struct XAUDIO2_DEBUG_CONFIGURATION
 	public LogType BreakMask;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogThreadID"]/*' />
-	public BOOL LogThreadID;
+	public Bool32 LogThreadID;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogFileline"]/*' />
-	public BOOL LogFileline;
+	public Bool32 LogFileline;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogFunctionName"]/*' />
-	public BOOL LogFunctionName;
+	public Bool32 LogFunctionName;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogTiming"]/*' />
-	public BOOL LogTiming;
+	public Bool32 LogTiming;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_VOLUMEMETER_LEVELS"]/*' />
@@ -447,7 +447,7 @@ public partial struct XAUDIO2FX_REVERB_PARAMETERS
 	public float RoomSize;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_PARAMETERS::DisableLateField"]/*' />
-	public BOOL DisableLateField;
+	public Bool32 DisableLateField;
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2FX_REVERB_I3DL2_PARAMETERS"]/*' />

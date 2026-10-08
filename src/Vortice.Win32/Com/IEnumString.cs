@@ -6,7 +6,7 @@ namespace Vortice.Win32.Com;
 [Guid("00000101-0000-0000-C000-000000000046")]
 [NativeTypeName("struct IEnumString : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IEnumString
+public unsafe partial struct IEnumString : IEnumString.Interface, INativeGuid
 {
     public static ref readonly Guid IID_IEnumString
     {
@@ -31,7 +31,7 @@ public unsafe partial struct IEnumString
         }
     }
 
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IEnumString);
+    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(in IID_IEnumString);
 
     public void** lpVtbl;
 
@@ -63,9 +63,9 @@ public unsafe partial struct IEnumString
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] ushort** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
+    public HResult Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] uint** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
     {
-        return ((delegate* unmanaged[MemberFunction]<IEnumString*, uint, ushort**, uint*, int>)(lpVtbl[3]))((IEnumString*)Unsafe.AsPointer(ref this), celt, rgelt, pceltFetched);
+        return ((delegate* unmanaged[MemberFunction]<IEnumString*, uint, uint**, uint*, int>)(lpVtbl[3]))((IEnumString*)Unsafe.AsPointer(ref this), celt, rgelt, pceltFetched);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -87,5 +87,20 @@ public unsafe partial struct IEnumString
     public HResult Clone(IEnumString** ppenum)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumString*, IEnumString**, int>)(lpVtbl[6]))((IEnumString*)Unsafe.AsPointer(ref this), ppenum);
+    }
+
+    public interface Interface : IUnknown.Interface
+    {
+        [VtblIndex(3)]
+        HResult Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] uint** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched);
+
+        [VtblIndex(4)]
+        HResult Skip([NativeTypeName("ULONG")] uint celt);
+
+        [VtblIndex(5)]
+        HResult Reset();
+
+        [VtblIndex(6)]
+        HResult Clone(IEnumString** ppenum);
     }
 }

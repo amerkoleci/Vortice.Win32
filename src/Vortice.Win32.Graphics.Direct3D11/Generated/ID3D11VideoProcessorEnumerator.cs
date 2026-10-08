@@ -113,9 +113,9 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : ID3D11VideoProcess
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::CheckVideoProcessorFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint* pFlags)
+	public HResult CheckVideoProcessorFormat(DXGI_FORMAT Format, uint* pFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator*, Graphics.Dxgi.Common.DXGI_FORMAT, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), Format, pFlags);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator*, DXGI_FORMAT, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), Format, pFlags);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorCaps"]/*' />
@@ -156,7 +156,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : ID3D11VideoProcess
 		HResult GetVideoProcessorContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pContentDesc);
 
 		[VtblIndex(8)]
-		HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.DXGI_FORMAT Format, uint* pFlags);
+		HResult CheckVideoProcessorFormat(DXGI_FORMAT Format, uint* pFlags);
 
 		[VtblIndex(9)]
 		HResult GetVideoProcessorCaps(D3D11_VIDEO_PROCESSOR_CAPS* pCaps);

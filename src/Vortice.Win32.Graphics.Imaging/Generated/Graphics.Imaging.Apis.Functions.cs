@@ -9,7 +9,7 @@
 
 namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class WIC
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICConvertBitmapSource"]/*' />
 	[LibraryImport("WindowsCodecs.dll")]

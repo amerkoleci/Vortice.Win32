@@ -153,9 +153,9 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device2::GetDxgiDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetDxgiDevice(Graphics.Dxgi.IDXGIDevice** dxgiDevice)
+	public HResult GetDxgiDevice(IDXGIDevice** dxgiDevice)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device2*)Unsafe.AsPointer(ref this), dxgiDevice);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device2*)Unsafe.AsPointer(ref this), dxgiDevice);
 	}
 
 	public interface Interface : ID2D1Device1.Interface
@@ -167,7 +167,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 		void FlushDeviceContexts(ID2D1Bitmap* bitmap);
 
 		[VtblIndex(13)]
-		HResult GetDxgiDevice(Graphics.Dxgi.IDXGIDevice** dxgiDevice);
+		HResult GetDxgiDevice(IDXGIDevice** dxgiDevice);
 	}
 }
 

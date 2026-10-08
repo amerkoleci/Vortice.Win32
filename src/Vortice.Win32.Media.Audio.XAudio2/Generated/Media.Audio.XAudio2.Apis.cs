@@ -7,7 +7,7 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Vortice.Win32.Audio;
+namespace Vortice.Win32.Media.Audio;
 
 public static partial class XAudio2
 {

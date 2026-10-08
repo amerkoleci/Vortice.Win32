@@ -1,8 +1,6 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
-
 namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>D3DX12_MESH_SHADER_PIPELINE_STATE_DESC</unmanaged>
@@ -28,11 +26,13 @@ public unsafe partial struct D3DX12_MESH_SHADER_PIPELINE_STATE_DESC
 
     public uint NumRenderTargets;
 
+    /// <include file='D3DX12_MESH_SHADER_PIPELINE_STATE_DESC.xml' path='doc/member[@name="D3DX12_MESH_SHADER_PIPELINE_STATE_DESC.RTVFormats"]/*' />
+    [NativeTypeName("DXGI_FORMAT[8]")]
     public _RTVFormats_e__FixedBuffer RTVFormats;
 
-    public Format DSVFormat;
+    public DXGI_FORMAT DSVFormat;
 
-    public SampleDescription SampleDesc;
+    public DXGI_SAMPLE_DESC SampleDesc;
 
     public uint NodeMask;
 
@@ -40,29 +40,9 @@ public unsafe partial struct D3DX12_MESH_SHADER_PIPELINE_STATE_DESC
 
     public D3D12_PIPELINE_STATE_FLAGS Flags;
 
+    [InlineArray(8)]
     public partial struct _RTVFormats_e__FixedBuffer
     {
-        public Format e0;
-        public Format e1;
-        public Format e2;
-        public Format e3;
-        public Format e4;
-        public Format e5;
-        public Format e6;
-        public Format e7;
-
-        [UnscopedRef]
-        public ref Format this[int index]
-        {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get
-            {
-                return ref AsSpan()[index];
-            }
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        [UnscopedRef]
-        public Span<Format> AsSpan() => MemoryMarshal.CreateSpan(ref e0, 8);
+        public DXGI_FORMAT e0;
     }
 }

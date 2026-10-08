@@ -9,7 +9,7 @@
 
 namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class D2D1
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateFactory"]/*' />
 	[LibraryImport("d2d1.dll")]
@@ -33,11 +33,11 @@ public static unsafe partial class Apis
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateDevice"]/*' />
 	[LibraryImport("d2d1.dll")]
-	public static partial HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, D2D1_CREATION_PROPERTIES* creationProperties, ID2D1Device** d2dDevice);
+	public static partial HResult D2D1CreateDevice(IDXGIDevice* dxgiDevice, D2D1_CREATION_PROPERTIES* creationProperties, ID2D1Device** d2dDevice);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateDeviceContext"]/*' />
 	[LibraryImport("d2d1.dll")]
-	public static partial HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, D2D1_CREATION_PROPERTIES* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
+	public static partial HResult D2D1CreateDeviceContext(IDXGISurface* dxgiSurface, D2D1_CREATION_PROPERTIES* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1ConvertColorSpace"]/*' />
 	[LibraryImport("d2d1.dll")]

@@ -97,17 +97,17 @@ public unsafe partial struct ID2D1DrawingStateBlock1 : ID2D1DrawingStateBlock1.I
 	/// <inheritdoc cref="ID2D1DrawingStateBlock.SetTextRenderingParams" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams)
+	public void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, Graphics.DirectWrite.IDWriteRenderingParams*, void>)(lpVtbl[6]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), textRenderingParams);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, IDWriteRenderingParams*, void>)(lpVtbl[6]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	/// <inheritdoc cref="ID2D1DrawingStateBlock.GetTextRenderingParams" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams)
+	public void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[7]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), textRenderingParams);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock1*, IDWriteRenderingParams**, void>)(lpVtbl[7]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock1::GetDescription"]/*' />

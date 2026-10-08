@@ -5,8 +5,6 @@
 // Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D;
-using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Apis;
 
 namespace Vortice.Win32.Graphics;
@@ -83,7 +81,7 @@ public static unsafe partial class D3D12
         }
     }
 
-    public static byte D3D12GetFormatPlaneCount(ID3D12Device* device, Format format)
+    public static byte D3D12GetFormatPlaneCount(ID3D12Device* device, DXGI_FORMAT format)
     {
         D3D12_FEATURE_DATA_FORMAT_INFO formatInfo = new()
         {

@@ -2,17 +2,16 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Drawing;
-using Vortice.Win32.Graphics.Direct2D.Common;
-using Vortice.Win32.Graphics.Imaging;
 using static Vortice.Win32.Apis;
-using static Vortice.Win32.Graphics.Direct2D.Apis;
+using static Vortice.Win32.Graphics.D2D1Common;
+using static Vortice.Win32.Graphics.D2D1;
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 public static unsafe class ID2D1DeviceContextExtensions
 {
     public static HResult CreateBitmapt<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, Size size, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+        ref this TD2D1DeviceContext self, Size size, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmap(size, null, 0, bitmapProperties, bitmap);
@@ -33,7 +32,7 @@ public static unsafe class ID2D1DeviceContextExtensions
     }
 
     public static HResult CreateBitmapBrush<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, ID2D1Bitmap* bitmap, BitmapBrushProperties* bitmapBrushProperties, ID2D1BitmapBrush** bitmapBrush)
+        ref this TD2D1DeviceContext self, ID2D1Bitmap* bitmap, D2D1_BITMAP_BRUSH_PROPERTIES* bitmapBrushProperties, ID2D1BitmapBrush** bitmapBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmapBrush(bitmap, bitmapBrushProperties, null, bitmapBrush);
@@ -54,21 +53,21 @@ public static unsafe class ID2D1DeviceContextExtensions
     }
 
     public static HResult CreateGradientStopCollection<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, GradientStop* gradientStops, int gradientStopsCount, ID2D1GradientStopCollection** gradientStopCollection)
+        ref this TD2D1DeviceContext self, D2D1_GRADIENT_STOP* gradientStops, int gradientStopsCount, ID2D1GradientStopCollection** gradientStopCollection)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        return self.CreateGradientStopCollection(gradientStops, (uint)gradientStopsCount, Gamma.Gamma_2_2, ExtendMode.Clamp, gradientStopCollection);
+        return self.CreateGradientStopCollection(gradientStops, (uint)gradientStopsCount, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_CLAMP, gradientStopCollection);
     }
 
     public static HResult CreateLinearGradientBrush<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, LinearGradientBrushProperties* linearGradientBrushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush)
+        ref this TD2D1DeviceContext self, D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES* linearGradientBrushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateLinearGradientBrush(linearGradientBrushProperties, null, gradientStopCollection, linearGradientBrush);
     }
 
     public static HResult CreateRadialGradientBrush<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, RadialGradientBrushProperties* radialGradientBrushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush)
+        ref this TD2D1DeviceContext self, D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES* radialGradientBrushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateRadialGradientBrush(radialGradientBrushProperties, null, gradientStopCollection, radialGradientBrush);
@@ -78,32 +77,32 @@ public static unsafe class ID2D1DeviceContextExtensions
         ref this TD2D1DeviceContext self, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        return self.CreateCompatibleRenderTarget(null, null, null, CompatibleRenderTargetOptions.None, bitmapRenderTarget);
+        return self.CreateCompatibleRenderTarget(null, null, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
     public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF desiredSize, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        return self.CreateCompatibleRenderTarget(&desiredSize, null, null, CompatibleRenderTargetOptions.None, bitmapRenderTarget);
+        return self.CreateCompatibleRenderTarget(&desiredSize, null, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
     public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, null, CompatibleRenderTargetOptions.None, bitmapRenderTarget);
+        return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
     public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, PixelFormat desiredFormat, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+        ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, D2D1_PIXEL_FORMAT desiredFormat, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, &desiredFormat, CompatibleRenderTargetOptions.None, bitmapRenderTarget);
+        return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, &desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
     public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, PixelFormat desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+        ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, D2D1_PIXEL_FORMAT desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, &desiredFormat, options, bitmapRenderTarget);
@@ -130,7 +129,7 @@ public static unsafe class ID2D1DeviceContextExtensions
     }
 
     public static HResult CreateImageBrush<TD2D1DeviceContext>(
-        ref this TD2D1DeviceContext self, ID2D1Image* image, ImageBrushProperties* imageBrushProperties, ID2D1ImageBrush** imageBrush)
+        ref this TD2D1DeviceContext self, ID2D1Image* image, D2D1_IMAGE_BRUSH_PROPERTIES* imageBrushProperties, ID2D1ImageBrush** imageBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateImageBrush(image, imageBrushProperties, null, imageBrush);
@@ -155,7 +154,7 @@ public static unsafe class ID2D1DeviceContextExtensions
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         using ComPtr<ID2D1Effect> effect = default;
-        ThrowIfFailed(self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect.GetAddressOf()));
+        self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect.GetAddressOf()).ThrowIfFailed();
         return effect.Move();
     }
 
@@ -164,8 +163,8 @@ public static unsafe class ID2D1DeviceContextExtensions
         ID2D1Effect* effect,
         Vector2* targetOffset = null,
         RectF* imageRectangle = null,
-        InterpolationMode interpolationMode = InterpolationMode.Linear,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode = D2D1_INTERPOLATION_MODE_LINEAR,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         ID2D1Image* output = null;
@@ -178,8 +177,8 @@ public static unsafe class ID2D1DeviceContextExtensions
     public static void DrawImage<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self,
         ID2D1Image* image,
-        InterpolationMode interpolationMode,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         self.DrawImage(image, null, null, interpolationMode, compositeMode);
@@ -188,8 +187,8 @@ public static unsafe class ID2D1DeviceContextExtensions
     public static void DrawImage<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self,
         ID2D1Effect* effect,
-        InterpolationMode interpolationMode,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         self.DrawImage(effect, null, null, interpolationMode, compositeMode);
@@ -198,8 +197,8 @@ public static unsafe class ID2D1DeviceContextExtensions
     public static void DrawImage<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Image* image,
         Vector2 targetOffset,
-        InterpolationMode interpolationMode = InterpolationMode.Linear,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode = D2D1_INTERPOLATION_MODE_LINEAR,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         self.DrawImage(image, &targetOffset, null, interpolationMode, compositeMode);
@@ -208,8 +207,8 @@ public static unsafe class ID2D1DeviceContextExtensions
     public static void DrawImage<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Effect* effect,
         Vector2 targetOffset,
-        InterpolationMode interpolationMode = InterpolationMode.Linear,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode = D2D1_INTERPOLATION_MODE_LINEAR,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         self.DrawImage(effect, &targetOffset, null, interpolationMode, compositeMode);
@@ -219,8 +218,8 @@ public static unsafe class ID2D1DeviceContextExtensions
         ref this TD2D1DeviceContext self, ID2D1Image* image,
         Vector2 targetOffset,
         RectF* imageRectangle,
-        InterpolationMode interpolationMode = InterpolationMode.Linear,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode = D2D1_INTERPOLATION_MODE_LINEAR,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         self.DrawImage(image, &targetOffset, imageRectangle, interpolationMode, compositeMode);
@@ -230,8 +229,8 @@ public static unsafe class ID2D1DeviceContextExtensions
         ref this TD2D1DeviceContext self, ID2D1Effect* effect,
         Vector2 targetOffset,
         RectF* imageRectangle,
-        InterpolationMode interpolationMode = InterpolationMode.Linear,
-        CompositeMode compositeMode = CompositeMode.SourceOver)
+        D2D1_INTERPOLATION_MODE interpolationMode = D2D1_INTERPOLATION_MODE_LINEAR,
+        D2D1_COMPOSITE_MODE compositeMode = D2D1_COMPOSITE_MODE_SOURCE_OVER)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         self.DrawImage(effect, &targetOffset, imageRectangle, interpolationMode, compositeMode);
@@ -249,8 +248,8 @@ public static unsafe class ID2D1DeviceContextExtensions
         ID2D1Effect* effect,
         uint inputIndex,
         ID2D1Bitmap* inputBitmap,
-        InterpolationMode interpolationMode = InterpolationMode.Linear,
-        BorderMode borderMode = BorderMode.Hard)
+        D2D1_INTERPOLATION_MODE interpolationMode = D2D1_INTERPOLATION_MODE_LINEAR,
+        D2D1_BORDER_MODE borderMode = D2D1_BORDER_MODE_HARD)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         HResult hr = HResult.Ok;
@@ -272,17 +271,17 @@ public static unsafe class ID2D1DeviceContextExtensions
 
                 Vector2 bitmapDpi;
                 inputBitmap->GetDpi(&bitmapDpi.X, &bitmapDpi.Y);
-                hr = dpiCompensationEffect->SetValue(DpiCompensationProp.InputDpi, &bitmapDpi);
+                hr = dpiCompensationEffect->SetValue(D2D1_DPICOMPENSATION_PROP_INPUT_DPI, &bitmapDpi);
             }
 
             if (hr.Success)
             {
-                hr = dpiCompensationEffect->SetValue(DpiCompensationProp.InterpolationMode, &interpolationMode);
+                hr = dpiCompensationEffect->SetEnumValue((uint)D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE, interpolationMode);
             }
 
             if (hr.Success)
             {
-                hr = dpiCompensationEffect->SetValue(DpiCompensationProp.BorderMode, &borderMode);
+                hr = dpiCompensationEffect->SetValue(D2D1_DPICOMPENSATION_PROP_BORDER_MODE, &borderMode);
             }
 
             if (hr.Success)

@@ -113,9 +113,9 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::GetSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetSource(Graphics.Imaging.IWICBitmapSource** wicBitmapSource)
+	public void GetSource(IWICBitmapSource** wicBitmapSource)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Graphics.Imaging.IWICBitmapSource**, void>)(lpVtbl[8]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), wicBitmapSource);
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, IWICBitmapSource**, void>)(lpVtbl[8]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), wicBitmapSource);
 	}
 
 	public interface Interface : ID2D1ImageSource.Interface
@@ -127,7 +127,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 		HResult TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve);
 
 		[VtblIndex(8)]
-		void GetSource(Graphics.Imaging.IWICBitmapSource** wicBitmapSource);
+		void GetSource(IWICBitmapSource** wicBitmapSource);
 	}
 }
 

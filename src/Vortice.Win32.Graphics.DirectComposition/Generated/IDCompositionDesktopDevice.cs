@@ -113,17 +113,17 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
+	public HResult CreateSurface(uint width, uint height, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
 	}
 
 	/// <inheritdoc cref="IDCompositionDevice2.CreateVirtualSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.DXGI_FORMAT pixelFormat, Graphics.Dxgi.Common.DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
+	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, Graphics.Dxgi.Common.DXGI_FORMAT, Graphics.Dxgi.Common.DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
 
 	/// <inheritdoc cref="IDCompositionDevice2.CreateTranslateTransform" />

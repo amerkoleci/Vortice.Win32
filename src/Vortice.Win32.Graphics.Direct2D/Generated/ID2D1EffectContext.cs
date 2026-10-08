@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::GetMaximumSupportedFeatureLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, Graphics.Direct3D.D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel)
+	public HResult GetMaximumSupportedFeatureLevel(D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Graphics.Direct3D.D3D_FEATURE_LEVEL*, uint, Graphics.Direct3D.D3D_FEATURE_LEVEL*, int>)(lpVtbl[5]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), featureLevels, featureLevelsCount, maximumSupportedFeatureLevel);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, D3D_FEATURE_LEVEL*, uint, D3D_FEATURE_LEVEL*, int>)(lpVtbl[5]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), featureLevels, featureLevelsCount, maximumSupportedFeatureLevel);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateTransformNodeFromEffect"]/*' />
@@ -217,9 +217,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateColorContextFromWicColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContextFromWicColorContext(IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, Graphics.Imaging.IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[21]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[21]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CheckFeatureSupport"]/*' />
@@ -247,7 +247,7 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		HResult CreateEffect(Guid* effectId, ID2D1Effect** effect);
 
 		[VtblIndex(5)]
-		HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, Graphics.Direct3D.D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel);
+		HResult GetMaximumSupportedFeatureLevel(D3D_FEATURE_LEVEL* featureLevels, uint featureLevelsCount, D3D_FEATURE_LEVEL* maximumSupportedFeatureLevel);
 
 		[VtblIndex(6)]
 		HResult CreateTransformNodeFromEffect(ID2D1Effect* effect, ID2D1TransformNode** transformNode);
@@ -295,7 +295,7 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(21)]
-		HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
+		HResult CreateColorContextFromWicColorContext(IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(22)]
 		HResult CheckFeatureSupport(D2D1_FEATURE feature, void* featureSupportData, uint featureSupportDataSize);

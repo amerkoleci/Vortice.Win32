@@ -1,13 +1,11 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct2D.Common;
+namespace Vortice.Win32.Graphics;
 
-namespace Vortice.Win32.Graphics.Direct2D;
-
-public partial struct BitmapProperties
+public partial struct D2D1_BITMAP_PROPERTIES
 {
-    public BitmapProperties(PixelFormat pixelFormat = default, float dpiX = 96.0f, float dpiY = 96.0f)
+    public D2D1_BITMAP_PROPERTIES(D2D1_PIXEL_FORMAT pixelFormat = default, float dpiX = 96.0f, float dpiY = 96.0f)
     {
         this.pixelFormat = pixelFormat;
         this.dpiX = dpiX;

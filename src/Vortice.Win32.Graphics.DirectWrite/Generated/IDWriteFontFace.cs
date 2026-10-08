@@ -161,9 +161,9 @@ public unsafe partial struct IDWriteFontFace : IDWriteFontFace.Interface, INativ
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetGlyphRunOutline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace*, float, ushort*, float*, DWRITE_GLYPH_OFFSET*, uint, Bool32, Bool32, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[14]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, glyphIndices, glyphAdvances, glyphOffsets, glyphCount, isSideways, isRightToLeft, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace*, float, ushort*, float*, DWRITE_GLYPH_OFFSET*, uint, Bool32, Bool32, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[14]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, glyphIndices, glyphAdvances, glyphOffsets, glyphCount, isSideways, isRightToLeft, geometrySink);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetRecommendedRenderingMode"]/*' />
@@ -226,7 +226,7 @@ public unsafe partial struct IDWriteFontFace : IDWriteFontFace.Interface, INativ
 		void ReleaseFontTable(void* tableContext);
 
 		[VtblIndex(14)]
-		HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink* geometrySink);
+		HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, ID2D1SimplifiedGeometrySink* geometrySink);
 
 		[VtblIndex(15)]
 		HResult GetRecommendedRenderingMode(float emSize, float pixelsPerDip, DWRITE_MEASURING_MODE measuringMode, IDWriteRenderingParams* renderingParams, DWRITE_RENDERING_MODE* renderingMode);

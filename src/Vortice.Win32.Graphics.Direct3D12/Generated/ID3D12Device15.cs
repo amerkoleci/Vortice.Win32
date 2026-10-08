@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device15"]/*' />
@@ -297,9 +299,9 @@ public unsafe partial struct ID3D12Device15 : ID3D12Device15.Interface, INativeG
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[31]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, ID3D12DeviceChild*, SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[31]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -657,25 +659,25 @@ public unsafe partial struct ID3D12Device15 : ID3D12Device15.Interface, INativeG
 	/// <inheritdoc cref="ID3D12Device10.CreateCommittedResource3" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public HResult CreateCommittedResource3(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, D3D12_RESOURCE_DESC1* pDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, uint NumCastableFormats, Graphics.Dxgi.Common.DXGI_FORMAT* pCastableFormats, Guid* riidResource, void** ppvResource)
+	public HResult CreateCommittedResource3(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, D3D12_RESOURCE_DESC1* pDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, uint NumCastableFormats, DXGI_FORMAT* pCastableFormats, Guid* riidResource, void** ppvResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, D3D12_HEAP_PROPERTIES*, D3D12_HEAP_FLAGS, D3D12_RESOURCE_DESC1*, D3D12_BARRIER_LAYOUT, D3D12_CLEAR_VALUE*, ID3D12ProtectedResourceSession*, uint, Graphics.Dxgi.Common.DXGI_FORMAT*, Guid*, void**, int>)(lpVtbl[76]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialLayout, pOptimizedClearValue, pProtectedSession, NumCastableFormats, pCastableFormats, riidResource, ppvResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, D3D12_HEAP_PROPERTIES*, D3D12_HEAP_FLAGS, D3D12_RESOURCE_DESC1*, D3D12_BARRIER_LAYOUT, D3D12_CLEAR_VALUE*, ID3D12ProtectedResourceSession*, uint, DXGI_FORMAT*, Guid*, void**, int>)(lpVtbl[76]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialLayout, pOptimizedClearValue, pProtectedSession, NumCastableFormats, pCastableFormats, riidResource, ppvResource);
 	}
 
 	/// <inheritdoc cref="ID3D12Device10.CreatePlacedResource2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(77)]
-	public HResult CreatePlacedResource2(ID3D12Heap* pHeap, ulong HeapOffset, D3D12_RESOURCE_DESC1* pDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, uint NumCastableFormats, Graphics.Dxgi.Common.DXGI_FORMAT* pCastableFormats, Guid* riid, void** ppvResource)
+	public HResult CreatePlacedResource2(ID3D12Heap* pHeap, ulong HeapOffset, D3D12_RESOURCE_DESC1* pDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, uint NumCastableFormats, DXGI_FORMAT* pCastableFormats, Guid* riid, void** ppvResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, ID3D12Heap*, ulong, D3D12_RESOURCE_DESC1*, D3D12_BARRIER_LAYOUT, D3D12_CLEAR_VALUE*, uint, Graphics.Dxgi.Common.DXGI_FORMAT*, Guid*, void**, int>)(lpVtbl[77]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pHeap, HeapOffset, pDesc, InitialLayout, pOptimizedClearValue, NumCastableFormats, pCastableFormats, riid, ppvResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, ID3D12Heap*, ulong, D3D12_RESOURCE_DESC1*, D3D12_BARRIER_LAYOUT, D3D12_CLEAR_VALUE*, uint, DXGI_FORMAT*, Guid*, void**, int>)(lpVtbl[77]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pHeap, HeapOffset, pDesc, InitialLayout, pOptimizedClearValue, NumCastableFormats, pCastableFormats, riid, ppvResource);
 	}
 
 	/// <inheritdoc cref="ID3D12Device10.CreateReservedResource2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
-	public HResult CreateReservedResource2(D3D12_RESOURCE_DESC* pDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, uint NumCastableFormats, Graphics.Dxgi.Common.DXGI_FORMAT* pCastableFormats, Guid* riid, void** ppvResource)
+	public HResult CreateReservedResource2(D3D12_RESOURCE_DESC* pDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, uint NumCastableFormats, DXGI_FORMAT* pCastableFormats, Guid* riid, void** ppvResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, D3D12_RESOURCE_DESC*, D3D12_BARRIER_LAYOUT, D3D12_CLEAR_VALUE*, ID3D12ProtectedResourceSession*, uint, Graphics.Dxgi.Common.DXGI_FORMAT*, Guid*, void**, int>)(lpVtbl[78]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pDesc, InitialLayout, pOptimizedClearValue, pProtectedSession, NumCastableFormats, pCastableFormats, riid, ppvResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, D3D12_RESOURCE_DESC*, D3D12_BARRIER_LAYOUT, D3D12_CLEAR_VALUE*, ID3D12ProtectedResourceSession*, uint, DXGI_FORMAT*, Guid*, void**, int>)(lpVtbl[78]))((ID3D12Device15*)Unsafe.AsPointer(ref this), pDesc, InitialLayout, pOptimizedClearValue, pProtectedSession, NumCastableFormats, pCastableFormats, riid, ppvResource);
 	}
 
 	/// <inheritdoc cref="ID3D12Device11.CreateSampler2" />
@@ -689,9 +691,9 @@ public unsafe partial struct ID3D12Device15 : ID3D12Device15.Interface, INativeG
 	/// <inheritdoc cref="ID3D12Device12.GetResourceAllocationInfo3" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public D3D12_RESOURCE_ALLOCATION_INFO GetResourceAllocationInfo3(uint visibleMask, uint numResourceDescs, D3D12_RESOURCE_DESC1* pResourceDescs, uint* pNumCastableFormats, Graphics.Dxgi.Common.DXGI_FORMAT** ppCastableFormats, D3D12_RESOURCE_ALLOCATION_INFO1* pResourceAllocationInfo1)
+	public D3D12_RESOURCE_ALLOCATION_INFO GetResourceAllocationInfo3(uint visibleMask, uint numResourceDescs, D3D12_RESOURCE_DESC1* pResourceDescs, uint* pNumCastableFormats, DXGI_FORMAT** ppCastableFormats, D3D12_RESOURCE_ALLOCATION_INFO1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, uint, uint, D3D12_RESOURCE_DESC1*, uint*, Graphics.Dxgi.Common.DXGI_FORMAT**, D3D12_RESOURCE_ALLOCATION_INFO1*, D3D12_RESOURCE_ALLOCATION_INFO>)(lpVtbl[80]))((ID3D12Device15*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pNumCastableFormats, ppCastableFormats, pResourceAllocationInfo1);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device15*, uint, uint, D3D12_RESOURCE_DESC1*, uint*, DXGI_FORMAT**, D3D12_RESOURCE_ALLOCATION_INFO1*, D3D12_RESOURCE_ALLOCATION_INFO>)(lpVtbl[80]))((ID3D12Device15*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pNumCastableFormats, ppCastableFormats, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device13.OpenExistingHeapFromAddress1" />

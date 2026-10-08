@@ -121,9 +121,9 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	/// <inheritdoc cref="ID2D1Geometry.Simplify" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Simplify(D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult Simplify(D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, D2D1_GEOMETRY_SIMPLIFICATION_OPTION, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, D2D1_GEOMETRY_SIMPLIFICATION_OPTION, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Tessellate" />
@@ -137,17 +137,17 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	/// <inheritdoc cref="ID2D1Geometry.CombineWithGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, D2D1_COMBINE_MODE combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, D2D1_COMBINE_MODE combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, ID2D1Geometry*, D2D1_COMBINE_MODE, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, ID2D1Geometry*, D2D1_COMBINE_MODE, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Outline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult Outline(Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult Outline(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.ComputeArea" />
@@ -177,17 +177,17 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	/// <inheritdoc cref="ID2D1Geometry.Widen" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
+	public HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, float, ID2D1StrokeStyle*, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetFillMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public Common.D2D1_FILL_MODE GetFillMode()
+	public D2D1_FILL_MODE GetFillMode()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, Common.D2D1_FILL_MODE>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometryGroup*, D2D1_FILL_MODE>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometryCount"]/*' />
@@ -209,7 +209,7 @@ public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, 
 	public interface Interface : ID2D1Geometry.Interface
 	{
 		[VtblIndex(17)]
-		Common.D2D1_FILL_MODE GetFillMode();
+		D2D1_FILL_MODE GetFillMode();
 
 		[VtblIndex(18)]
 		uint GetSourceGeometryCount();

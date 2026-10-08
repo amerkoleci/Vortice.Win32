@@ -1046,57 +1046,6 @@ public static class Program
         "PF" // D3D_PF_
     };
 
-    private static readonly Dictionary<string, string> s_typesNameRemap = new()
-    {
-        // Generated
-        { "DXGI_MAP", "MapFlags" },
-        { "DXGI_ENUM_MODES", "EnumModesFlags" },
-        { "DXGI_MWA_FLAGS", "WindowAssociationFlags" },
-        { "DXGI_PRESENT", "PresentFlags" },
-        { "DXGI_DEBUG_RLO_FLAGS", "ReportLiveObjectFlags" },
-
-        // D3D11
-        { "D3D11_MAP", "MapMode" },
-        { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
-        { "D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG", "CreateDeviceContextStateFlags" },
-        { "D3D11_QUERY", "QueryType" },
-        { "D3D11_COMPARISON_FUNC", "ComparisonFunction" },
-        { "D3D11_STENCIL_OP", "StencilOperation" },
-        { "D3D11_BLEND_OP", "BlendOperation" },
-        { "D3D11_LOGIC_OP", "LogicOperation" },
-        { "D3D11_DEPTH_STENCILOP_DESC", "DepthStencilOperationDescription" },
-
-        // D3D12
-        { "D3D12_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
-        { "D3D12_COMPARISON_FUNC", "ComparisonFunction" },
-        { "D3D12_STENCIL_OP", "StencilOperation" },
-        { "D3D12_BLEND_OP", "BlendOperation" },
-        { "D3D12_LOGIC_OP", "LogicOperation" },
-        { "D3D12_PREDICATION_OP", "PredicationOperation" },
-        { "D3D12_AUTO_BREADCRUMB_OP", "AutoBreadcrumbOperation" },
-        { "D3D12_DEPTH_STENCILOP_DESC", "DepthStencilOperationDescription" },
-
-        // D2D1
-        { "D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE", "AffineTransform2DInterpolationMode" },
-        { "D2D1_3DTRANSFORM_PROP", "Transform3DProperties" },
-        { "D2D1_3DTRANSFORM_INTERPOLATION_MODE", "Transform3DInterpolationMode" },
-        { "D2D1_3DPERSPECTIVETRANSFORM_PROP", "PerspectiveTransform3DProperties" },
-        { "D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE", "PerspectiveTransform3DInteroplationMode" },
-        { "D2D1_2DAFFINETRANSFORM_PROP", "AffineTransform2DProperties" },
-
-        // Dxc
-        { "DXC_HASHFLAG", "DxcHashFlags" },
-        { "DxcValidatorFlags", "DxcValidatorFlags" },
-        { "DxcVersionInfoFlags", "DxcVersionInfoFlags" },
-
-        // FXC
-        {"D3DCOMPILE", "CompileFlags" },
-        {"D3DCOMPILE_FLAGS2", "CompileFlags2" },
-        {"D3DCOMPILE_EFFECT", "CompileEffectFlags" },
-        {"D3DCOMPILE_SECDATA", "CompileSecondaryFlags" },
-        {"D3D_COMPRESS_SHADER", "CompressShaderFlags" },
-        {"D3D_DISASM", "DisasmFlags" },
-    };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
     {
@@ -1285,11 +1234,15 @@ public static class Program
             bool cleanFolder = true;
             bool skipRename = true;
             string @namespace = "Vortice.Win32.Graphics";
-            string apiName = "Apis";
+            string apiName = string.Empty;
 
             if (jsonFile == "Graphics.Dxgi.Common.json")
             {
                 apiName = "DXGICommon";
+            }
+            else if (jsonFile == "Graphics.Direct2D.Common.json")
+            {
+                apiName = "D2D1Common";
             }
             else if (jsonFile == "Graphics.Direct3D.json")
             {
@@ -1323,18 +1276,20 @@ public static class Program
             {
                 outputPath = wicPath;
                 useSubFolders = false;
+                apiName = "WIC";
             }
             else if (jsonFile == "Graphics.Direct2D.json")
             {
                 outputPath = d2dPath;
                 useSubFolders = false;
+                apiName = "D2D1";
             }
             else if (jsonFile == "Graphics.Imaging.D2D.json")
             {
                 outputPath = d2dPath;
                 useSubFolders = false;
                 cleanFolder = false;
-                apiName = "D2D";
+                apiName = "D2D1";
             }
             else if (jsonFile == "Graphics.DirectWrite.json")
             {
@@ -1361,6 +1316,7 @@ public static class Program
             {
                 outputPath = directCompositionPath;
                 useSubFolders = false;
+                apiName = "DirectComposition";
             }
             else if (jsonFile == "Graphics.Direct3D9.json")
             {
@@ -1373,7 +1329,7 @@ public static class Program
             {
                 outputPath = XAudio2Path;
                 useSubFolders = false;
-                @namespace = "Vortice.Win32.Audio";
+                @namespace = "Vortice.Win32.Media.Audio";
                 apiName = "XAudio2";
             }
 
@@ -1509,40 +1465,38 @@ public static class Program
 
     private static void GenerateConstants(string folder, string apiName, string docFileName, ApiData api, GenerateOptions options)
     {
-        bool generateFile = false;
+        bool generateFile = s_enumConstants.Count > 0;
 
-        foreach (var constant in api.Constants)
+        if (!generateFile)
         {
-            if (ShouldSkipConstant(constant))
-                continue;
-
-            bool skipValue = false;
-            foreach (var enumToGenerate in s_generatedEnums)
+            foreach (var constant in api.Constants)
             {
-                if (constant.Name.StartsWith(enumToGenerate.Key))
+                if (ShouldSkipConstant(constant))
+                    continue;
+
+                bool skipValue = false;
+                foreach (var enumToGenerate in s_generatedEnums)
                 {
-                    skipValue = true;
-                    break;
+                    if (constant.Name.StartsWith(enumToGenerate.Key))
+                    {
+                        skipValue = true;
+                        break;
+                    }
                 }
+
+                if (skipValue)
+                    continue;
+
+                generateFile = true;
+                break;
             }
-
-            if (skipValue)
-                continue;
-
-            generateFile = true;
-            break;
         }
 
         if (!generateFile)
             return;
 
-        if (options.SkipRename)
-        {
-
-        }
-
         string @namespace = options.SkipRename ? options.Namespace : $"Vortice.Win32.{apiName}";
-        string[] usingNamespaces = apiName == "Graphics.Imaging" ? ["Vortice.Win32.Graphics.Direct2D.Common"] : [];
+        string[] usingNamespaces = [];
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Apis.cs"),
             apiName,
@@ -1717,7 +1671,7 @@ public static class Program
         needNewLine = false;
 
         // Unions
-        foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
+        foreach (ApiType structType in api.Types.Where(item => item.Kind.Equals("union", StringComparison.InvariantCultureIgnoreCase)))
         {
             if (structType.Name.StartsWith("D3DX11") ||
                 structType.Name.StartsWith("CD3D11"))
@@ -2230,32 +2184,32 @@ public static class Program
             {
                 // Add Xbox enums
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT</unmanaged>");
-                writer.WriteLine($"Xbox_R10G10B10_7E3_A2Float = 116u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT = {csTypeName}.Xbox_R10G10B10_7E3_A2Float");
+                writer.WriteLine($"DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT = 116u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT = {csTypeName}.DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT");
 
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT</unmanaged>");
-                writer.WriteLine($"Xbox_R10G10B10_6E4_A2Float = 117u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT = {csTypeName}.Xbox_R10G10B10_6E4_A2Float");
+                writer.WriteLine($"DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT = 117u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT = {csTypeName}.DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT");
 
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_D16_UNORM_S8_UINT</unmanaged>");
-                writer.WriteLine($"Xbox_D16Unorm_S8Uint = 118u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_D16_UNORM_S8_UINT = {csTypeName}.Xbox_D16Unorm_S8Uint");
+                writer.WriteLine($"DXGI_FORMAT_D16_UNORM_S8_UINT = 118u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_D16_UNORM_S8_UINT = {csTypeName}.DXGI_FORMAT_D16_UNORM_S8_UINT");
 
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R16_UNORM_X8_TYPELESS</unmanaged>");
-                writer.WriteLine($"Xbox_R16Unorm_X8Typeless = 119u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R16_UNORM_X8_TYPELESS = {csTypeName}.Xbox_R16Unorm_X8Typeless");
+                writer.WriteLine($"DXGI_FORMAT_R16_UNORM_X8_TYPELESS = 119u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R16_UNORM_X8_TYPELESS = {csTypeName}.DXGI_FORMAT_R16_UNORM_X8_TYPELESS");
 
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_X16_TYPELESS_G8_UINT</unmanaged>");
-                writer.WriteLine($"Xbox_X16Typeless_G8Uint = 120u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_X16_TYPELESS_G8_UINT = {csTypeName}.Xbox_X16Typeless_G8Uint");
+                writer.WriteLine($"DXGI_FORMAT_X16_TYPELESS_G8_UINT = 120u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_X16_TYPELESS_G8_UINT = {csTypeName}.DXGI_FORMAT_X16_TYPELESS_G8_UINT");
 
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM</unmanaged>");
-                writer.WriteLine($"Xbox_R10G10B10Snorm_A2Unorm = 189u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM = {csTypeName}.Xbox_R10G10B10Snorm_A2Unorm");
+                writer.WriteLine($"DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM = 189u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM = {csTypeName}.DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM");
 
                 writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R4G4_UNORM</unmanaged>");
-                writer.WriteLine($"Xbox_R4G4Unorm = 190u,");
-                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R4G4_UNORM = {csTypeName}.Xbox_R4G4Unorm");
+                writer.WriteLine($"DXGI_FORMAT_R4G4_UNORM = 190u,");
+                s_enumConstants.Add($"{csTypeName} DXGI_FORMAT_R4G4_UNORM = {csTypeName}.DXGI_FORMAT_R4G4_UNORM");
             }
         }
     }
@@ -2351,11 +2305,6 @@ public static class Program
                     }
                 }
 
-                if (structType.Name == "D2D1_PIXEL_FORMAT")
-                {
-
-                }
-
                 if (fieldTypeName == "Array")
                 {
                     bool canUseFixed = false;
@@ -2382,33 +2331,12 @@ public static class Program
                         writer.WriteLine($"public {fieldValueName}__FixedBuffer {fieldValueName};");
                         writer.WriteLine();
 
-                        using (writer.PushBlock($"public unsafe struct {fieldValueName}__FixedBuffer"))
+                        int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
+
+                        writer.WriteLine($"[InlineArray({arraySize})]");
+                        using (writer.PushBlock($"public partial struct {fieldValueName}__FixedBuffer"))
                         {
-                            int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
-
-                            for (int i = 0; i < arraySize; i++)
-                            {
-                                writer.WriteLine($"public {fieldTypeName} e{i};");
-                            }
-                            writer.WriteLine();
-
-                            writer.WriteLine("[UnscopedRef]");
-                            using (writer.PushBlock($"public ref {fieldTypeName} this[int index]"))
-                            {
-                                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
-                                using (writer.PushBlock("get"))
-                                {
-                                    writer.WriteLine($"return ref AsSpan()[index];");
-                                }
-                            }
-                            writer.WriteLine();
-
-                            writer.WriteLine("[UnscopedRef]");
-                            writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
-                            using (writer.PushBlock($"public Span<{fieldTypeName}> AsSpan()"))
-                            {
-                                writer.WriteLine($"return MemoryMarshal.CreateSpan(ref e0, {arraySize});");
-                            }
+                            writer.WriteLine($"public {fieldTypeName} e0;");
                         }
                     }
                 }
@@ -2427,7 +2355,22 @@ public static class Program
                         {
                             if (field.Type.Kind == "ApiRef")
                             {
-                                fieldTypeName = field.Type.Name;
+                                if (!s_csNameMappings.ContainsKey($"{field.Type.Api}.{field.Type.Name}"))
+                                {
+                                    string lookupApiName = GetApiName(field.Type);
+                                    string fullTypeName = $"{lookupApiName}.{field.Type.Name}";
+
+                                    if (IsKnownComType(fullTypeName) ||
+                                        s_visitedComTypeMethods.ContainsKey(fullTypeName) ||
+                                        api.Types.Any(item => item.Name == field.Type.Name && item.Kind.Equals("com", StringComparison.InvariantCultureIgnoreCase)))
+                                    {
+                                        //fieldTypeName = field.Type.Name + "*";
+                                    }
+                                    else
+                                    {
+                                        fieldTypeName = field.Type.Name;
+                                    }
+                                }
                             }
                             else
                             {
@@ -2501,6 +2444,11 @@ public static class Program
                                     unsafePrefix += "unsafe ";
                                 }
 
+                                if (field.Type.Kind == "ApiRef" && field.Type.Parents?.Length > 0)
+                                {
+                                    fieldTypeName = $"{nestedTypeToGenerate.Name}.{fieldTypeName}";
+                                }
+
                                 using (writer.PushBlock($"public {unsafePrefix}ref {fieldTypeName} {fieldName}"))
                                 {
                                     writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
@@ -2535,9 +2483,11 @@ public static class Program
         string csTypeName = comType.Name;
         List<string> namespaces = [];
 
-        if (comType.Name == "ID2D1GeometrySink")
+
+        if (comType.Name == "IDXGIResource1" ||
+            comType.Name.StartsWith("ID3D12Device"))
         {
-            namespaces.Add("Vortice.Win32.Graphics.Direct2D.Common");
+            namespaces.Add("Vortice.Win32.Security");
         }
 
         using CodeWriter writer = new(
@@ -2595,16 +2545,6 @@ public static class Program
 
             bool generateIUnknown = false;
             var iterateType = comType;
-
-            if (csTypeName == "IWICImagingFactory")
-            {
-
-            }
-
-            if (csTypeName == "IWICImagingFactory2")
-            {
-
-            }
 
             while (iterateType != null)
             {
@@ -2724,7 +2664,6 @@ public static class Program
 
                     foreach (ApiParameter parameter in method.Params)
                     {
-
                         GetParameterSignature(api, writer, parameter,
                             $"{comType.Name}::{method.Name}",
                             out string parameterType,
@@ -3071,11 +3010,6 @@ public static class Program
         if (s_knownTypesPrefixes.TryGetValue(typeName, out string? knowPrefix))
         {
             prefix = knowPrefix!;
-        }
-
-        if (s_typesNameRemap.TryGetValue(typeName, out string? remapName))
-        {
-            return remapName!;
         }
 
         string[] parts = typeName.Split(new[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
@@ -3449,7 +3383,7 @@ public static class Program
 
             if (IsKnownComType(fullTypeName) ||
                 s_visitedComTypeMethods.ContainsKey(fullTypeName) ||
-                api.Types.Any(item => item.Name == dataType.Name && item.Kind.ToLowerInvariant() == "com"))
+                api.Types.Any(item => item.Name == dataType.Name && item.Kind.Equals("com", StringComparison.InvariantCultureIgnoreCase)))
             {
                 asPointer = true;
             }
@@ -3464,7 +3398,17 @@ public static class Program
         {
             string apiName = GetApiName(dataType);
             string fullTypeName = $"{apiName}.{dataType.Name}";
-            string typeName = GetTypeName(fullTypeName);
+            string typeName;
+            string? mappedName;
+            if (s_csNameMappings.TryGetValue(fullTypeName, out mappedName))
+            {
+                typeName = mappedName!;
+            }
+            else
+            {
+                typeName = dataType.Name;
+            }
+
             return asPointer ? typeName + "*" : typeName;
         }
         else if (dataType.Kind == "Array")
@@ -3691,12 +3635,7 @@ public static class Program
 
     private static string GetTypeName(string name)
     {
-        string? mappedName;
-        if (s_csNameMappings.TryGetValue(name, out mappedName))
-        {
-            return mappedName!;
-        }
-        else if (s_typesNameRemap.TryGetValue(name, out mappedName))
+        if (s_csNameMappings.TryGetValue(name, out string? mappedName))
         {
             return mappedName!;
         }

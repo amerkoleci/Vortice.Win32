@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration"]/*' />
@@ -89,9 +91,9 @@ public unsafe partial struct ID3D12DeviceConfiguration : ID3D12DeviceConfigurati
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration::SerializeVersionedRootSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError)
+	public HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, ID3DBlob** ppResult, ID3DBlob** ppError)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration*, D3D12_VERSIONED_ROOT_SIGNATURE_DESC*, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[5]))((ID3D12DeviceConfiguration*)Unsafe.AsPointer(ref this), pDesc, ppResult, ppError);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration*, D3D12_VERSIONED_ROOT_SIGNATURE_DESC*, ID3DBlob**, ID3DBlob**, int>)(lpVtbl[5]))((ID3D12DeviceConfiguration*)Unsafe.AsPointer(ref this), pDesc, ppResult, ppError);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration::CreateVersionedRootSignatureDeserializer"]/*' />
@@ -111,7 +113,7 @@ public unsafe partial struct ID3D12DeviceConfiguration : ID3D12DeviceConfigurati
 		HResult GetEnabledExperimentalFeatures(Guid* pGuids, uint NumGuids);
 
 		[VtblIndex(5)]
-		HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, Graphics.Direct3D.ID3DBlob** ppResult, Graphics.Direct3D.ID3DBlob** ppError);
+		HResult SerializeVersionedRootSignature(D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pDesc, ID3DBlob** ppResult, ID3DBlob** ppError);
 
 		[VtblIndex(6)]
 		HResult CreateVersionedRootSignatureDeserializer(void* pBlob, nuint Size, Guid* riid, void** ppvDeserializer);

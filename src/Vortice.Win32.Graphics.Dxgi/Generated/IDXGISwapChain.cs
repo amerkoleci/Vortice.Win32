@@ -153,17 +153,17 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain*, uint, uint, uint, Common.DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain*, uint, uint, uint, DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult ResizeTarget(Common.DXGI_MODE_DESC* pNewTargetParameters)
+	public HResult ResizeTarget(DXGI_MODE_DESC* pNewTargetParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain*, Common.DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain*, DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pNewTargetParameters);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetContainingOutput"]/*' />
@@ -208,10 +208,10 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface, INativeG
 		HResult GetDesc(DXGI_SWAP_CHAIN_DESC* pDesc);
 
 		[VtblIndex(13)]
-		HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags);
+		HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags);
 
 		[VtblIndex(14)]
-		HResult ResizeTarget(Common.DXGI_MODE_DESC* pNewTargetParameters);
+		HResult ResizeTarget(DXGI_MODE_DESC* pNewTargetParameters);
 
 		[VtblIndex(15)]
 		HResult GetContainingOutput(IDXGIOutput** ppOutput);

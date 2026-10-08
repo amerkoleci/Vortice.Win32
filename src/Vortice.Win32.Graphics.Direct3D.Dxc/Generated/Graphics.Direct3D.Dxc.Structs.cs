@@ -30,15 +30,15 @@ public partial struct DxcBuffer
 /// <unmanaged>DxcDefine</unmanaged>
 public partial struct DxcDefine
 {
-	public PWSTR Name;
+	public unsafe char* Name;
 
-	public PWSTR Value;
+	public unsafe char* Value;
 }
 
 /// <unmanaged>DxcArgPair</unmanaged>
 public partial struct DxcArgPair
 {
-	public PWSTR pName;
+	public unsafe char* pName;
 
-	public PWSTR pValue;
+	public unsafe char* pValue;
 }

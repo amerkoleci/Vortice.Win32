@@ -3,12 +3,12 @@
 
 using static Vortice.Win32.Apis;
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 public static unsafe class ID2D1EffectContextExtensions
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TFeature CheckFeatureSupport<TID2D1EffectContext, TFeature>(ref this TID2D1EffectContext self, Feature feature)
+    public static TFeature CheckFeatureSupport<TID2D1EffectContext, TFeature>(ref this TID2D1EffectContext self, D2D1_FEATURE feature)
         where TID2D1EffectContext : unmanaged, ID2D1EffectContext.Interface
         where TFeature : unmanaged
     {
@@ -18,7 +18,7 @@ public static unsafe class ID2D1EffectContextExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CheckFeatureSupport<TID2D1EffectContext, TFeature>(ref this TID2D1EffectContext self, Feature feature, ref TFeature featureData)
+    public static HResult CheckFeatureSupport<TID2D1EffectContext, TFeature>(ref this TID2D1EffectContext self,  D2D1_FEATURE feature, ref TFeature featureData)
        where TID2D1EffectContext : unmanaged, ID2D1EffectContext.Interface
        where TFeature : unmanaged
     {

@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory"]/*' />
@@ -121,9 +123,9 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::CreateDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateDevice(IUnknown* adapter, Graphics.Direct3D.D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice)
+	public HResult CreateDevice(IUnknown* adapter, D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, IUnknown*, Graphics.Direct3D.D3D_FEATURE_LEVEL, Guid*, void**, int>)(lpVtbl[9]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), adapter, FeatureLevel, riid, ppvDevice);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, IUnknown*, D3D_FEATURE_LEVEL, Guid*, void**, int>)(lpVtbl[9]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), adapter, FeatureLevel, riid, ppvDevice);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -147,7 +149,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 		HResult EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes);
 
 		[VtblIndex(9)]
-		HResult CreateDevice(IUnknown* adapter, Graphics.Direct3D.D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice);
+		HResult CreateDevice(IUnknown* adapter, D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice);
 	}
 }
 

@@ -97,17 +97,17 @@ public unsafe partial struct ID2D1DrawingStateBlock : ID2D1DrawingStateBlock.Int
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetTextRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams)
+	public void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, Graphics.DirectWrite.IDWriteRenderingParams*, void>)(lpVtbl[6]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, IDWriteRenderingParams*, void>)(lpVtbl[6]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::GetTextRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams)
+	public void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[7]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
+		((delegate* unmanaged[MemberFunction]<ID2D1DrawingStateBlock*, IDWriteRenderingParams**, void>)(lpVtbl[7]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -119,10 +119,10 @@ public unsafe partial struct ID2D1DrawingStateBlock : ID2D1DrawingStateBlock.Int
 		void SetDescription(D2D1_DRAWING_STATE_DESCRIPTION* stateDescription);
 
 		[VtblIndex(6)]
-		void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams);
+		void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams);
 
 		[VtblIndex(7)]
-		void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams);
+		void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 	}
 }
 

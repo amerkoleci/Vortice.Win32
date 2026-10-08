@@ -3,11 +3,11 @@
 
 using System.Reflection;
 
-namespace Vortice.Win32.Graphics.Direct3D.Dxc;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class DXC
 {
-    static Apis()
+    static DXC()
     {
         NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
     }

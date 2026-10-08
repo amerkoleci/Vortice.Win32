@@ -33,7 +33,7 @@ public partial struct D3D11_AUTHENTICATED_PROTECTION_FLAGS
 public partial struct D3D11_INPUT_ELEMENT_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_ELEMENT_DESC::SemanticName"]/*' />
-	public PSTR SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_ELEMENT_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -62,7 +62,7 @@ public partial struct D3D11_SO_DECLARATION_ENTRY
 	public uint Stream;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SO_DECLARATION_ENTRY::SemanticName"]/*' />
-	public PSTR SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SO_DECLARATION_ENTRY::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -182,7 +182,7 @@ public partial struct D3D11_DEPTH_STENCILOP_DESC
 public partial struct D3D11_DEPTH_STENCIL_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::DepthEnable"]/*' />
-	public BOOL DepthEnable;
+	public Bool32 DepthEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::DepthWriteMask"]/*' />
 	public D3D11_DEPTH_WRITE_MASK DepthWriteMask;
@@ -191,7 +191,7 @@ public partial struct D3D11_DEPTH_STENCIL_DESC
 	public D3D11_COMPARISON_FUNC DepthFunc;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::StencilEnable"]/*' />
-	public BOOL StencilEnable;
+	public Bool32 StencilEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::StencilReadMask"]/*' />
 	public byte StencilReadMask;
@@ -211,7 +211,7 @@ public partial struct D3D11_DEPTH_STENCIL_DESC
 public partial struct D3D11_RENDER_TARGET_BLEND_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC::BlendEnable"]/*' />
-	public BOOL BlendEnable;
+	public Bool32 BlendEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC::SrcBlend"]/*' />
 	public D3D11_BLEND SrcBlend;
@@ -240,41 +240,18 @@ public partial struct D3D11_RENDER_TARGET_BLEND_DESC
 public partial struct D3D11_BLEND_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_DESC::AlphaToCoverageEnable"]/*' />
-	public BOOL AlphaToCoverageEnable;
+	public Bool32 AlphaToCoverageEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_DESC::IndependentBlendEnable"]/*' />
-	public BOOL IndependentBlendEnable;
+	public Bool32 IndependentBlendEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_DESC::RenderTarget"]/*' />
 	public RenderTarget__FixedBuffer RenderTarget;
 
-	public unsafe struct RenderTarget__FixedBuffer
+	[InlineArray(8)]
+	public partial struct RenderTarget__FixedBuffer
 	{
 		public D3D11_RENDER_TARGET_BLEND_DESC e0;
-		public D3D11_RENDER_TARGET_BLEND_DESC e1;
-		public D3D11_RENDER_TARGET_BLEND_DESC e2;
-		public D3D11_RENDER_TARGET_BLEND_DESC e3;
-		public D3D11_RENDER_TARGET_BLEND_DESC e4;
-		public D3D11_RENDER_TARGET_BLEND_DESC e5;
-		public D3D11_RENDER_TARGET_BLEND_DESC e6;
-		public D3D11_RENDER_TARGET_BLEND_DESC e7;
-
-		[UnscopedRef]
-		public ref D3D11_RENDER_TARGET_BLEND_DESC this[int index]
-		{
-			[MethodImpl(MethodImplOptions.AggressiveInlining)]
-			get
-			{
-				return ref AsSpan()[index];
-			}
-		}
-
-		[UnscopedRef]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public Span<D3D11_RENDER_TARGET_BLEND_DESC> AsSpan()
-		{
-			return MemoryMarshal.CreateSpan(ref e0, 8);
-		}
 	}
 }
 
@@ -289,7 +266,7 @@ public partial struct D3D11_RASTERIZER_DESC
 	public D3D11_CULL_MODE CullMode;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC::FrontCounterClockwise"]/*' />
-	public BOOL FrontCounterClockwise;
+	public Bool32 FrontCounterClockwise;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC::DepthBias"]/*' />
 	public int DepthBias;
@@ -301,16 +278,16 @@ public partial struct D3D11_RASTERIZER_DESC
 	public float SlopeScaledDepthBias;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC::DepthClipEnable"]/*' />
-	public BOOL DepthClipEnable;
+	public Bool32 DepthClipEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC::ScissorEnable"]/*' />
-	public BOOL ScissorEnable;
+	public Bool32 ScissorEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC::MultisampleEnable"]/*' />
-	public BOOL MultisampleEnable;
+	public Bool32 MultisampleEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC::AntialiasedLineEnable"]/*' />
-	public BOOL AntialiasedLineEnable;
+	public Bool32 AntialiasedLineEnable;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA"]/*' />
@@ -1511,7 +1488,7 @@ public partial struct D3D11_QUERY_DATA_TIMESTAMP_DISJOINT
 	public ulong Frequency;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT::Disjoint"]/*' />
-	public BOOL Disjoint;
+	public Bool32 Disjoint;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_PIPELINE_STATISTICS"]/*' />
@@ -1614,7 +1591,7 @@ public partial struct D3D11_CLASS_INSTANCE_DESC
 	public uint BaseSampler;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLASS_INSTANCE_DESC::Created"]/*' />
-	public BOOL Created;
+	public Bool32 Created;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING"]/*' />
@@ -1622,10 +1599,10 @@ public partial struct D3D11_CLASS_INSTANCE_DESC
 public partial struct D3D11_FEATURE_DATA_THREADING
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING::DriverConcurrentCreates"]/*' />
-	public BOOL DriverConcurrentCreates;
+	public Bool32 DriverConcurrentCreates;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING::DriverCommandLists"]/*' />
-	public BOOL DriverCommandLists;
+	public Bool32 DriverCommandLists;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DOUBLES"]/*' />
@@ -1633,7 +1610,7 @@ public partial struct D3D11_FEATURE_DATA_THREADING
 public partial struct D3D11_FEATURE_DATA_DOUBLES
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DOUBLES::DoublePrecisionFloatShaderOps"]/*' />
-	public BOOL DoublePrecisionFloatShaderOps;
+	public Bool32 DoublePrecisionFloatShaderOps;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT"]/*' />
@@ -1663,7 +1640,7 @@ public partial struct D3D11_FEATURE_DATA_FORMAT_SUPPORT2
 public partial struct D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
-	public BOOL ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;
+	public Bool32 ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS"]/*' />
@@ -1671,46 +1648,46 @@ public partial struct D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS
 public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::OutputMergerLogicOp"]/*' />
-	public BOOL OutputMergerLogicOp;
+	public Bool32 OutputMergerLogicOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::UAVOnlyRenderingForcedSampleCount"]/*' />
-	public BOOL UAVOnlyRenderingForcedSampleCount;
+	public Bool32 UAVOnlyRenderingForcedSampleCount;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::DiscardAPIsSeenByDriver"]/*' />
-	public BOOL DiscardAPIsSeenByDriver;
+	public Bool32 DiscardAPIsSeenByDriver;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::FlagsForUpdateAndCopySeenByDriver"]/*' />
-	public BOOL FlagsForUpdateAndCopySeenByDriver;
+	public Bool32 FlagsForUpdateAndCopySeenByDriver;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::ClearView"]/*' />
-	public BOOL ClearView;
+	public Bool32 ClearView;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::CopyWithOverlap"]/*' />
-	public BOOL CopyWithOverlap;
+	public Bool32 CopyWithOverlap;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::ConstantBufferPartialUpdate"]/*' />
-	public BOOL ConstantBufferPartialUpdate;
+	public Bool32 ConstantBufferPartialUpdate;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::ConstantBufferOffsetting"]/*' />
-	public BOOL ConstantBufferOffsetting;
+	public Bool32 ConstantBufferOffsetting;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::MapNoOverwriteOnDynamicConstantBuffer"]/*' />
-	public BOOL MapNoOverwriteOnDynamicConstantBuffer;
+	public Bool32 MapNoOverwriteOnDynamicConstantBuffer;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::MapNoOverwriteOnDynamicBufferSRV"]/*' />
-	public BOOL MapNoOverwriteOnDynamicBufferSRV;
+	public Bool32 MapNoOverwriteOnDynamicBufferSRV;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::MultisampleRTVWithForcedSampleCountOne"]/*' />
-	public BOOL MultisampleRTVWithForcedSampleCountOne;
+	public Bool32 MultisampleRTVWithForcedSampleCountOne;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::SAD4ShaderInstructions"]/*' />
-	public BOOL SAD4ShaderInstructions;
+	public Bool32 SAD4ShaderInstructions;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::ExtendedDoublesShaderInstructions"]/*' />
-	public BOOL ExtendedDoublesShaderInstructions;
+	public Bool32 ExtendedDoublesShaderInstructions;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::ExtendedResourceSharing"]/*' />
-	public BOOL ExtendedResourceSharing;
+	public Bool32 ExtendedResourceSharing;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_ARCHITECTURE_INFO"]/*' />
@@ -1718,7 +1695,7 @@ public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS
 public partial struct D3D11_FEATURE_DATA_ARCHITECTURE_INFO
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_ARCHITECTURE_INFO::TileBasedDeferredRenderer"]/*' />
-	public BOOL TileBasedDeferredRenderer;
+	public Bool32 TileBasedDeferredRenderer;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS"]/*' />
@@ -1726,7 +1703,7 @@ public partial struct D3D11_FEATURE_DATA_ARCHITECTURE_INFO
 public partial struct D3D11_FEATURE_DATA_D3D9_OPTIONS
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS::FullNonPow2TextureSupport"]/*' />
-	public BOOL FullNonPow2TextureSupport;
+	public Bool32 FullNonPow2TextureSupport;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT"]/*' />
@@ -1734,7 +1711,7 @@ public partial struct D3D11_FEATURE_DATA_D3D9_OPTIONS
 public partial struct D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT::SupportsDepthAsTextureWithLessEqualComparisonFilter"]/*' />
-	public BOOL SupportsDepthAsTextureWithLessEqualComparisonFilter;
+	public Bool32 SupportsDepthAsTextureWithLessEqualComparisonFilter;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT"]/*' />
@@ -1756,13 +1733,13 @@ public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS1
 	public D3D11_TILED_RESOURCES_TIER TiledResourcesTier;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS1::MinMaxFiltering"]/*' />
-	public BOOL MinMaxFiltering;
+	public Bool32 MinMaxFiltering;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS1::ClearViewAlsoSupportsDepthOnlyFormats"]/*' />
-	public BOOL ClearViewAlsoSupportsDepthOnlyFormats;
+	public Bool32 ClearViewAlsoSupportsDepthOnlyFormats;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS1::MapOnDefaultBuffers"]/*' />
-	public BOOL MapOnDefaultBuffers;
+	public Bool32 MapOnDefaultBuffers;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT"]/*' />
@@ -1770,7 +1747,7 @@ public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS1
 public partial struct D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT::SimpleInstancingSupported"]/*' />
-	public BOOL SimpleInstancingSupported;
+	public Bool32 SimpleInstancingSupported;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_MARKER_SUPPORT"]/*' />
@@ -1778,7 +1755,7 @@ public partial struct D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT
 public partial struct D3D11_FEATURE_DATA_MARKER_SUPPORT
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_MARKER_SUPPORT::Profile"]/*' />
-	public BOOL Profile;
+	public Bool32 Profile;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1"]/*' />
@@ -1786,16 +1763,16 @@ public partial struct D3D11_FEATURE_DATA_MARKER_SUPPORT
 public partial struct D3D11_FEATURE_DATA_D3D9_OPTIONS1
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::FullNonPow2TextureSupported"]/*' />
-	public BOOL FullNonPow2TextureSupported;
+	public Bool32 FullNonPow2TextureSupported;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::DepthAsTextureWithLessEqualComparisonFilterSupported"]/*' />
-	public BOOL DepthAsTextureWithLessEqualComparisonFilterSupported;
+	public Bool32 DepthAsTextureWithLessEqualComparisonFilterSupported;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::SimpleInstancingSupported"]/*' />
-	public BOOL SimpleInstancingSupported;
+	public Bool32 SimpleInstancingSupported;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported"]/*' />
-	public BOOL TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported;
+	public Bool32 TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2"]/*' />
@@ -1803,13 +1780,13 @@ public partial struct D3D11_FEATURE_DATA_D3D9_OPTIONS1
 public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS2
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::PSSpecifiedStencilRefSupported"]/*' />
-	public BOOL PSSpecifiedStencilRefSupported;
+	public Bool32 PSSpecifiedStencilRefSupported;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::TypedUAVLoadAdditionalFormats"]/*' />
-	public BOOL TypedUAVLoadAdditionalFormats;
+	public Bool32 TypedUAVLoadAdditionalFormats;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::ROVsSupported"]/*' />
-	public BOOL ROVsSupported;
+	public Bool32 ROVsSupported;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::ConservativeRasterizationTier"]/*' />
 	public D3D11_CONSERVATIVE_RASTERIZATION_TIER ConservativeRasterizationTier;
@@ -1818,13 +1795,13 @@ public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS2
 	public D3D11_TILED_RESOURCES_TIER TiledResourcesTier;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::MapOnDefaultTextures"]/*' />
-	public BOOL MapOnDefaultTextures;
+	public Bool32 MapOnDefaultTextures;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::StandardSwizzle"]/*' />
-	public BOOL StandardSwizzle;
+	public Bool32 StandardSwizzle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::UnifiedMemoryArchitecture"]/*' />
-	public BOOL UnifiedMemoryArchitecture;
+	public Bool32 UnifiedMemoryArchitecture;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3"]/*' />
@@ -1832,7 +1809,7 @@ public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS2
 public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS3
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3::VPAndRTArrayIndexFromAnyShaderFeedingRasterizer"]/*' />
-	public BOOL VPAndRTArrayIndexFromAnyShaderFeedingRasterizer;
+	public Bool32 VPAndRTArrayIndexFromAnyShaderFeedingRasterizer;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT"]/*' />
@@ -1859,7 +1836,7 @@ public partial struct D3D11_FEATURE_DATA_SHADER_CACHE
 public partial struct D3D11_FEATURE_DATA_DISPLAYABLE
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DISPLAYABLE::DisplayableTexture"]/*' />
-	public BOOL DisplayableTexture;
+	public Bool32 DisplayableTexture;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DISPLAYABLE::SharedResourceTier"]/*' />
 	public D3D11_SHARED_RESOURCE_TIER SharedResourceTier;
@@ -2020,7 +1997,7 @@ public partial struct D3D11_VIDEO_DECODER_BUFFER_DESC
 	public uint IVSize;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC::PartialEncryption"]/*' />
-	public BOOL PartialEncryption;
+	public Bool32 PartialEncryption;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC::EncryptedBlockInfo"]/*' />
 	public D3D11_ENCRYPTED_BLOCK_INFO EncryptedBlockInfo;
@@ -2132,7 +2109,7 @@ public partial struct D3D11_VIDEO_PROCESSOR_CUSTOM_RATE
 	public uint OutputFrames;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::InputInterlaced"]/*' />
-	public BOOL InputInterlaced;
+	public Bool32 InputInterlaced;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::InputFramesOrFields"]/*' />
 	public uint InputFramesOrFields;
@@ -2271,7 +2248,7 @@ public partial struct D3D11_VIDEO_PROCESSOR_COLOR_SPACE
 public partial struct D3D11_VIDEO_PROCESSOR_STREAM
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::Enable"]/*' />
-	public BOOL Enable;
+	public Bool32 Enable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::OutputIndex"]/*' />
 	public uint OutputIndex;
@@ -2289,7 +2266,7 @@ public partial struct D3D11_VIDEO_PROCESSOR_STREAM
 	public unsafe ID3D11VideoProcessorInputView* ppPastSurfaces;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::pInputSurface"]/*' />
-	public ID3D11VideoProcessorInputView pInputSurface;
+	public unsafe ID3D11VideoProcessorInputView* pInputSurface;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::ppFutureSurfaces"]/*' />
 	public unsafe ID3D11VideoProcessorInputView* ppFutureSurfaces;
@@ -2298,7 +2275,7 @@ public partial struct D3D11_VIDEO_PROCESSOR_STREAM
 	public unsafe ID3D11VideoProcessorInputView* ppPastSurfacesRight;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::pInputSurfaceRight"]/*' />
-	public ID3D11VideoProcessorInputView pInputSurfaceRight;
+	public unsafe ID3D11VideoProcessorInputView* pInputSurfaceRight;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::ppFutureSurfacesRight"]/*' />
 	public unsafe ID3D11VideoProcessorInputView* ppFutureSurfacesRight;
@@ -2320,7 +2297,7 @@ public partial struct D3D11_AUTHENTICATED_QUERY_INPUT
 	public Guid QueryType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_INPUT::hChannel"]/*' />
-	public HANDLE hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_INPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
@@ -2337,13 +2314,13 @@ public partial struct D3D11_AUTHENTICATED_QUERY_OUTPUT
 	public Guid QueryType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::hChannel"]/*' />
-	public HANDLE hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::ReturnCode"]/*' />
-	public HRESULT ReturnCode;
+	public HResult ReturnCode;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT"]/*' />
@@ -2376,7 +2353,7 @@ public partial struct D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT
 	public D3D11_AUTHENTICATED_QUERY_OUTPUT Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_INPUT"]/*' />
@@ -2387,7 +2364,7 @@ public partial struct D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_INPUT
 	public D3D11_AUTHENTICATED_QUERY_INPUT Input;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_INPUT::DecoderHandle"]/*' />
-	public HANDLE DecoderHandle;
+	public Handle DecoderHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT"]/*' />
@@ -2398,13 +2375,13 @@ public partial struct D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT
 	public D3D11_AUTHENTICATED_QUERY_OUTPUT Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT::DecoderHandle"]/*' />
-	public HANDLE DecoderHandle;
+	public Handle DecoderHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT::CryptoSessionHandle"]/*' />
-	public HANDLE CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS_COUNT_OUTPUT"]/*' />
@@ -2443,7 +2420,7 @@ public partial struct D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCE
 	public D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE ProcessIdentifier;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS_OUTPUT::ProcessHandle"]/*' />
-	public HANDLE ProcessHandle;
+	public Handle ProcessHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_UNRESTRICTED_PROTECTED_SHARED_RESOURCE_COUNT_OUTPUT"]/*' />
@@ -2465,10 +2442,10 @@ public partial struct D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT
 	public D3D11_AUTHENTICATED_QUERY_INPUT Input;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::CryptoSessionHandle"]/*' />
-	public HANDLE CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT"]/*' />
@@ -2479,10 +2456,10 @@ public partial struct D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT
 	public D3D11_AUTHENTICATED_QUERY_OUTPUT Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT::CryptoSessionHandle"]/*' />
-	public HANDLE CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT::OutputIDCount"]/*' />
 	public uint OutputIDCount;
@@ -2496,10 +2473,10 @@ public partial struct D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT
 	public D3D11_AUTHENTICATED_QUERY_INPUT Input;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT::CryptoSessionHandle"]/*' />
-	public HANDLE CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT::OutputIDIndex"]/*' />
 	public uint OutputIDIndex;
@@ -2513,10 +2490,10 @@ public partial struct D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT
 	public D3D11_AUTHENTICATED_QUERY_OUTPUT Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT::CryptoSessionHandle"]/*' />
-	public HANDLE CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT::OutputIDIndex"]/*' />
 	public uint OutputIDIndex;
@@ -2536,10 +2513,10 @@ public partial struct D3D11_AUTHENTICATED_QUERY_ACCESSIBILITY_OUTPUT
 	public D3D11_BUS_TYPE BusType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_ACCESSIBILITY_OUTPUT::AccessibleInContiguousBlocks"]/*' />
-	public BOOL AccessibleInContiguousBlocks;
+	public Bool32 AccessibleInContiguousBlocks;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_ACCESSIBILITY_OUTPUT::AccessibleInNonContiguousBlocks"]/*' />
-	public BOOL AccessibleInNonContiguousBlocks;
+	public Bool32 AccessibleInNonContiguousBlocks;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_ACCESSIBILITY_ENCRYPTION_GUID_COUNT_OUTPUT"]/*' />
@@ -2600,7 +2577,7 @@ public partial struct D3D11_AUTHENTICATED_CONFIGURE_INPUT
 	public Guid ConfigureType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::hChannel"]/*' />
-	public HANDLE hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
@@ -2617,13 +2594,13 @@ public partial struct D3D11_AUTHENTICATED_CONFIGURE_OUTPUT
 	public Guid ConfigureType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_OUTPUT::hChannel"]/*' />
-	public HANDLE hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_OUTPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_OUTPUT::ReturnCode"]/*' />
-	public HRESULT ReturnCode;
+	public HResult ReturnCode;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT"]/*' />
@@ -2659,13 +2636,13 @@ public partial struct D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT
 	public D3D11_AUTHENTICATED_CONFIGURE_INPUT Parameters;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DecoderHandle"]/*' />
-	public HANDLE DecoderHandle;
+	public Handle DecoderHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::CryptoSessionHandle"]/*' />
-	public HANDLE CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DeviceHandle"]/*' />
-	public HANDLE DeviceHandle;
+	public Handle DeviceHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT"]/*' />
@@ -2679,10 +2656,10 @@ public partial struct D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT
 	public D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE ProcessType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT::ProcessHandle"]/*' />
-	public HANDLE ProcessHandle;
+	public Handle ProcessHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT::AllowAccess"]/*' />
-	public BOOL AllowAccess;
+	public Bool32 AllowAccess;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_ACCESSIBLE_ENCRYPTION_INPUT"]/*' />
@@ -2903,10 +2880,10 @@ public partial struct D3D11_INFO_QUEUE_FILTER
 public partial struct D3D11_RENDER_TARGET_BLEND_DESC1
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::BlendEnable"]/*' />
-	public BOOL BlendEnable;
+	public Bool32 BlendEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::LogicOpEnable"]/*' />
-	public BOOL LogicOpEnable;
+	public Bool32 LogicOpEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::SrcBlend"]/*' />
 	public D3D11_BLEND SrcBlend;
@@ -2938,41 +2915,18 @@ public partial struct D3D11_RENDER_TARGET_BLEND_DESC1
 public partial struct D3D11_BLEND_DESC1
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_DESC1::AlphaToCoverageEnable"]/*' />
-	public BOOL AlphaToCoverageEnable;
+	public Bool32 AlphaToCoverageEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_DESC1::IndependentBlendEnable"]/*' />
-	public BOOL IndependentBlendEnable;
+	public Bool32 IndependentBlendEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_DESC1::RenderTarget"]/*' />
 	public RenderTarget__FixedBuffer RenderTarget;
 
-	public unsafe struct RenderTarget__FixedBuffer
+	[InlineArray(8)]
+	public partial struct RenderTarget__FixedBuffer
 	{
 		public D3D11_RENDER_TARGET_BLEND_DESC1 e0;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e1;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e2;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e3;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e4;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e5;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e6;
-		public D3D11_RENDER_TARGET_BLEND_DESC1 e7;
-
-		[UnscopedRef]
-		public ref D3D11_RENDER_TARGET_BLEND_DESC1 this[int index]
-		{
-			[MethodImpl(MethodImplOptions.AggressiveInlining)]
-			get
-			{
-				return ref AsSpan()[index];
-			}
-		}
-
-		[UnscopedRef]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public Span<D3D11_RENDER_TARGET_BLEND_DESC1> AsSpan()
-		{
-			return MemoryMarshal.CreateSpan(ref e0, 8);
-		}
 	}
 }
 
@@ -2987,7 +2941,7 @@ public partial struct D3D11_RASTERIZER_DESC1
 	public D3D11_CULL_MODE CullMode;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::FrontCounterClockwise"]/*' />
-	public BOOL FrontCounterClockwise;
+	public Bool32 FrontCounterClockwise;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthBias"]/*' />
 	public int DepthBias;
@@ -2999,16 +2953,16 @@ public partial struct D3D11_RASTERIZER_DESC1
 	public float SlopeScaledDepthBias;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthClipEnable"]/*' />
-	public BOOL DepthClipEnable;
+	public Bool32 DepthClipEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::ScissorEnable"]/*' />
-	public BOOL ScissorEnable;
+	public Bool32 ScissorEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::MultisampleEnable"]/*' />
-	public BOOL MultisampleEnable;
+	public Bool32 MultisampleEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::AntialiasedLineEnable"]/*' />
-	public BOOL AntialiasedLineEnable;
+	public Bool32 AntialiasedLineEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::ForcedSampleCount"]/*' />
 	public uint ForcedSampleCount;
@@ -3056,7 +3010,7 @@ public partial struct D3D11_VIDEO_DECODER_BUFFER_DESC1
 public partial struct D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pCryptoSession"]/*' />
-	public ID3D11CryptoSession pCryptoSession;
+	public unsafe ID3D11CryptoSession* pCryptoSession;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::BlobSize"]/*' />
 	public uint BlobSize;
@@ -3079,7 +3033,7 @@ public partial struct D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION
 public partial struct D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Enable"]/*' />
-	public BOOL Enable;
+	public Bool32 Enable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Width"]/*' />
 	public uint Width;
@@ -3142,7 +3096,7 @@ public partial struct D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA
 	public unsafe D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA* pOutputData;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::Status"]/*' />
-	public HRESULT Status;
+	public HResult Status;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC"]/*' />
@@ -3187,7 +3141,7 @@ public partial struct D3D11_TILE_REGION_SIZE
 	public uint NumTiles;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_REGION_SIZE::bUseBox"]/*' />
-	public BOOL bUseBox;
+	public Bool32 bUseBox;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_REGION_SIZE::Width"]/*' />
 	public uint Width;
@@ -3331,7 +3285,7 @@ public partial struct D3D11_RASTERIZER_DESC2
 	public D3D11_CULL_MODE CullMode;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::FrontCounterClockwise"]/*' />
-	public BOOL FrontCounterClockwise;
+	public Bool32 FrontCounterClockwise;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::DepthBias"]/*' />
 	public int DepthBias;
@@ -3343,16 +3297,16 @@ public partial struct D3D11_RASTERIZER_DESC2
 	public float SlopeScaledDepthBias;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::DepthClipEnable"]/*' />
-	public BOOL DepthClipEnable;
+	public Bool32 DepthClipEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::ScissorEnable"]/*' />
-	public BOOL ScissorEnable;
+	public Bool32 ScissorEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::MultisampleEnable"]/*' />
-	public BOOL MultisampleEnable;
+	public Bool32 MultisampleEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::AntialiasedLineEnable"]/*' />
-	public BOOL AntialiasedLineEnable;
+	public Bool32 AntialiasedLineEnable;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC2::ForcedSampleCount"]/*' />
 	public uint ForcedSampleCount;
@@ -3923,7 +3877,7 @@ public partial struct D3D11_VIDEO_DECODER_BUFFER_DESC2
 public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS4
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS4::ExtendedNV12SharedTextureSupported"]/*' />
-	public BOOL ExtendedNV12SharedTextureSupported;
+	public Bool32 ExtendedNV12SharedTextureSupported;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SIGNATURE_PARAMETER_DESC"]/*' />
@@ -3931,7 +3885,7 @@ public partial struct D3D11_FEATURE_DATA_D3D11_OPTIONS4
 public partial struct D3D11_SIGNATURE_PARAMETER_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SIGNATURE_PARAMETER_DESC::SemanticName"]/*' />
-	public PSTR SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SIGNATURE_PARAMETER_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -3963,7 +3917,7 @@ public partial struct D3D11_SIGNATURE_PARAMETER_DESC
 public partial struct D3D11_SHADER_BUFFER_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_BUFFER_DESC::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_BUFFER_DESC::Type"]/*' />
 	public D3D_CBUFFER_TYPE Type;
@@ -3983,7 +3937,7 @@ public partial struct D3D11_SHADER_BUFFER_DESC
 public partial struct D3D11_SHADER_VARIABLE_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartOffset"]/*' />
 	public uint StartOffset;
@@ -4036,7 +3990,7 @@ public partial struct D3D11_SHADER_TYPE_DESC
 	public uint Offset;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE_DESC::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC"]/*' />
@@ -4047,7 +4001,7 @@ public partial struct D3D11_SHADER_DESC
 	public uint Version;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Creator"]/*' />
-	public PSTR Creator;
+	public unsafe byte* Creator;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Flags"]/*' />
 	public uint Flags;
@@ -4163,7 +4117,7 @@ public partial struct D3D11_SHADER_DESC
 public partial struct D3D11_SHADER_INPUT_BIND_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_INPUT_BIND_DESC::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_INPUT_BIND_DESC::Type"]/*' />
 	public D3D_SHADER_INPUT_TYPE Type;
@@ -4192,7 +4146,7 @@ public partial struct D3D11_SHADER_INPUT_BIND_DESC
 public partial struct D3D11_LIBRARY_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Creator"]/*' />
-	public PSTR Creator;
+	public unsafe byte* Creator;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Flags"]/*' />
 	public uint Flags;
@@ -4209,7 +4163,7 @@ public partial struct D3D11_FUNCTION_DESC
 	public uint Version;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Creator"]/*' />
-	public PSTR Creator;
+	public unsafe byte* Creator;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Flags"]/*' />
 	public uint Flags;
@@ -4290,19 +4244,19 @@ public partial struct D3D11_FUNCTION_DESC
 	public ulong RequiredFeatureFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::FunctionParameterCount"]/*' />
 	public int FunctionParameterCount;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::HasReturn"]/*' />
-	public BOOL HasReturn;
+	public Bool32 HasReturn;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Has10Level9VertexShader"]/*' />
-	public BOOL Has10Level9VertexShader;
+	public Bool32 Has10Level9VertexShader;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Has10Level9PixelShader"]/*' />
-	public BOOL Has10Level9PixelShader;
+	public Bool32 Has10Level9PixelShader;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC"]/*' />
@@ -4310,10 +4264,10 @@ public partial struct D3D11_FUNCTION_DESC
 public partial struct D3D11_PARAMETER_DESC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC::Name"]/*' />
-	public PSTR Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC::SemanticName"]/*' />
-	public PSTR SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC::Type"]/*' />
 	public D3D_SHADER_VARIABLE_TYPE Type;
@@ -4567,16 +4521,16 @@ public partial struct D3D11_TRACE_STATS
 	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMaskDepthStencil[4];
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsDepth"]/*' />
-	public BOOL PSOutputsDepth;
+	public Bool32 PSOutputsDepth;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsMask"]/*' />
-	public BOOL PSOutputsMask;
+	public Bool32 PSOutputsMask;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputPrimitive"]/*' />
 	public D3D11_TRACE_GS_INPUT_PRIMITIVE GSInputPrimitive;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputsPrimitiveID"]/*' />
-	public BOOL GSInputsPrimitiveID;
+	public Bool32 GSInputsPrimitiveID;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::HSOutputPatchConstantMask"]/*' />
 	public unsafe fixed byte HSOutputPatchConstantMask[32];
@@ -4653,7 +4607,7 @@ public partial struct D3D11_TRACE_STEP
 	public uint ID;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STEP::InstructionActive"]/*' />
-	public BOOL InstructionActive;
+	public Bool32 InstructionActive;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STEP::NumRegistersWritten"]/*' />
 	public byte NumRegistersWritten;

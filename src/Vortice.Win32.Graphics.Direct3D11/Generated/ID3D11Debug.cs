@@ -105,17 +105,17 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetSwapChain(Graphics.Dxgi.IDXGISwapChain* pSwapChain)
+	public HResult SetSwapChain(IDXGISwapChain* pSwapChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain*, int>)(lpVtbl[7]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pSwapChain);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, IDXGISwapChain*, int>)(lpVtbl[7]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pSwapChain);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::GetSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetSwapChain(Graphics.Dxgi.IDXGISwapChain** ppSwapChain)
+	public HResult GetSwapChain(IDXGISwapChain** ppSwapChain)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain**, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, IDXGISwapChain**, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContext"]/*' />
@@ -157,10 +157,10 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 		uint GetPresentPerRenderOpDelay();
 
 		[VtblIndex(7)]
-		HResult SetSwapChain(Graphics.Dxgi.IDXGISwapChain* pSwapChain);
+		HResult SetSwapChain(IDXGISwapChain* pSwapChain);
 
 		[VtblIndex(8)]
-		HResult GetSwapChain(Graphics.Dxgi.IDXGISwapChain** ppSwapChain);
+		HResult GetSwapChain(IDXGISwapChain** ppSwapChain);
 
 		[VtblIndex(9)]
 		HResult ValidateContext(ID3D11DeviceContext* pContext);

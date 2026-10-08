@@ -81,15 +81,15 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBlendEffect::SetMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetMode(Graphics.Direct2D.Common.D2D1_BLEND_MODE mode)
+	public HResult SetMode(D2D1_BLEND_MODE mode)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, Graphics.Direct2D.Common.D2D1_BLEND_MODE, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, D2D1_BLEND_MODE, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetMode(Graphics.Direct2D.Common.D2D1_BLEND_MODE mode);
+		HResult SetMode(D2D1_BLEND_MODE mode);
 	}
 }
 

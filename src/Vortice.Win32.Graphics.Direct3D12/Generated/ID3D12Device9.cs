@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device9"]/*' />
@@ -297,9 +299,9 @@ public unsafe partial struct ID3D12Device9 : ID3D12Device9.Interface, INativeGui
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device9*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[31]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device9*, ID3D12DeviceChild*, SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[31]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />

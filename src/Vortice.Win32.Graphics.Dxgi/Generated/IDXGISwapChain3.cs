@@ -153,17 +153,17 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, DXGI_FORMAT NewFormat, DXGI_SWAP_CHAIN_FLAG SwapChainFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, uint, Common.DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, uint, DXGI_FORMAT, DXGI_SWAP_CHAIN_FLAG, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult ResizeTarget(Common.DXGI_MODE_DESC* pNewTargetParameters)
+	public HResult ResizeTarget(DXGI_MODE_DESC* pNewTargetParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, DXGI_MODE_DESC*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
@@ -265,17 +265,17 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult SetRotation(Common.DXGI_MODE_ROTATION Rotation)
+	public HResult SetRotation(DXGI_MODE_ROTATION Rotation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.DXGI_MODE_ROTATION, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, DXGI_MODE_ROTATION, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult GetRotation(Common.DXGI_MODE_ROTATION* pRotation)
+	public HResult GetRotation(DXGI_MODE_ROTATION* pRotation)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.DXGI_MODE_ROTATION*, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, DXGI_MODE_ROTATION*, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.SetSourceSize" />
@@ -345,25 +345,25 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult CheckColorSpaceSupport(Common.DXGI_COLOR_SPACE_TYPE ColorSpace, uint* pColorSpaceSupport)
+	public HResult CheckColorSpaceSupport(DXGI_COLOR_SPACE_TYPE ColorSpace, uint* pColorSpaceSupport)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.DXGI_COLOR_SPACE_TYPE, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, DXGI_COLOR_SPACE_TYPE, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult SetColorSpace1(Common.DXGI_COLOR_SPACE_TYPE ColorSpace)
+	public HResult SetColorSpace1(DXGI_COLOR_SPACE_TYPE ColorSpace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.DXGI_COLOR_SPACE_TYPE, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, DXGI_COLOR_SPACE_TYPE, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue)
+	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, DXGI_FORMAT Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, uint, Common.DXGI_FORMAT, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, uint, DXGI_FORMAT, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
 	}
 
 	public interface Interface : IDXGISwapChain2.Interface
@@ -372,13 +372,13 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 		uint GetCurrentBackBufferIndex();
 
 		[VtblIndex(37)]
-		HResult CheckColorSpaceSupport(Common.DXGI_COLOR_SPACE_TYPE ColorSpace, uint* pColorSpaceSupport);
+		HResult CheckColorSpaceSupport(DXGI_COLOR_SPACE_TYPE ColorSpace, uint* pColorSpaceSupport);
 
 		[VtblIndex(38)]
-		HResult SetColorSpace1(Common.DXGI_COLOR_SPACE_TYPE ColorSpace);
+		HResult SetColorSpace1(DXGI_COLOR_SPACE_TYPE ColorSpace);
 
 		[VtblIndex(39)]
-		HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.DXGI_FORMAT Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue);
+		HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, DXGI_FORMAT Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue);
 	}
 }
 

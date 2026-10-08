@@ -15,7 +15,7 @@ public static unsafe partial class Apis
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void ThrowIfFailed(HResult value, [CallerArgumentExpression("value")] string? valueExpression = null)
+    public static void ThrowIfFailed(this HResult value, [CallerArgumentExpression("value")] string? valueExpression = null)
     {
         if (value.Failure)
         {

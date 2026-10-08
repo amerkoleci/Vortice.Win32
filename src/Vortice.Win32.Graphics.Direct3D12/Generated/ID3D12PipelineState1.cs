@@ -113,9 +113,9 @@ public unsafe partial struct ID3D12PipelineState1 : ID3D12PipelineState1.Interfa
 	/// <inheritdoc cref="ID3D12PipelineState.GetCachedBlob" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetCachedBlob(Graphics.Direct3D.ID3DBlob** ppBlob)
+	public HResult GetCachedBlob(ID3DBlob** ppBlob)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineState1*, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[8]))((ID3D12PipelineState1*)Unsafe.AsPointer(ref this), ppBlob);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineState1*, ID3DBlob**, int>)(lpVtbl[8]))((ID3D12PipelineState1*)Unsafe.AsPointer(ref this), ppBlob);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState1::GetRootSignature"]/*' />

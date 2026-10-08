@@ -1,7 +1,7 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Vortice.Win32.Graphics.Direct2D;
+namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct ID2D1Effect
 {

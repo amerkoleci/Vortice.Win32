@@ -48,10 +48,10 @@ public partial struct COMPOSITION_FRAME_STATS
 public partial struct COMPOSITION_TARGET_ID
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID::displayAdapterLuid"]/*' />
-	public LUID displayAdapterLuid;
+	public Luid displayAdapterLuid;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID::renderAdapterLuid"]/*' />
-	public LUID renderAdapterLuid;
+	public Luid renderAdapterLuid;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_TARGET_ID::vidPnSourceId"]/*' />
 	public uint vidPnSourceId;

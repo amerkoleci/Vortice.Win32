@@ -1,13 +1,9 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Runtime.CompilerServices;
-using Vortice.Win32.Graphics.Direct3D;
-using Vortice.Win32.Graphics.Dxgi;
+namespace Vortice.Win32.Graphics;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
-
-public partial struct AuthenticatedProtectionFlags
+public partial struct D3D11_AUTHENTICATED_PROTECTION_FLAGS
 {
     public partial struct _Flags_e__Struct
     {

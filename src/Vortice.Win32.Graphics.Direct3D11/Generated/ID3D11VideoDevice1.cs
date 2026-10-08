@@ -153,9 +153,9 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CheckVideoDecoderFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, Graphics.Dxgi.Common.DXGI_FORMAT Format, Bool32* pSupported)
+	public HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, DXGI_FORMAT Format, Bool32* pSupported)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, Graphics.Dxgi.Common.DXGI_FORMAT, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, DXGI_FORMAT, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoDevice.GetVideoDecoderConfigCount" />
@@ -217,25 +217,25 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetVideoDecoderCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, Graphics.Dxgi.Common.DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps)
+	public HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, uint, uint, Graphics.Dxgi.Common.DXGI_RATIONAL*, uint, Guid*, uint*, int>)(lpVtbl[21]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, SampleWidth, SampleHeight, pFrameRate, BitRate, pCryptoType, pDecoderCaps);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, uint, uint, DXGI_RATIONAL*, uint, Guid*, uint*, int>)(lpVtbl[21]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, SampleWidth, SampleHeight, pFrameRate, BitRate, pCryptoType, pDecoderCaps);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::CheckVideoDecoderDownsampling"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, Graphics.Dxgi.Common.DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint)
+	public HResult CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_DECODER_CONFIG*, Graphics.Dxgi.Common.DXGI_RATIONAL*, D3D11_VIDEO_SAMPLE_DESC*, Bool32*, Bool32*, int>)(lpVtbl[22]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pOutputDesc, pSupported, pRealTimeHint);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_DECODER_CONFIG*, DXGI_RATIONAL*, D3D11_VIDEO_SAMPLE_DESC*, Bool32*, Bool32*, int>)(lpVtbl[22]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pOutputDesc, pSupported, pRealTimeHint);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::RecommendVideoDecoderDownsampleParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, Graphics.Dxgi.Common.DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc)
+	public HResult RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_DECODER_CONFIG*, Graphics.Dxgi.Common.DXGI_RATIONAL*, D3D11_VIDEO_SAMPLE_DESC*, int>)(lpVtbl[23]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pRecommendedOutputDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_DECODER_CONFIG*, DXGI_RATIONAL*, D3D11_VIDEO_SAMPLE_DESC*, int>)(lpVtbl[23]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pRecommendedOutputDesc);
 	}
 
 	public interface Interface : ID3D11VideoDevice.Interface
@@ -244,13 +244,13 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 		HResult GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize);
 
 		[VtblIndex(21)]
-		HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, Graphics.Dxgi.Common.DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps);
+		HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps);
 
 		[VtblIndex(22)]
-		HResult CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, Graphics.Dxgi.Common.DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint);
+		HResult CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint);
 
 		[VtblIndex(23)]
-		HResult RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, Graphics.Dxgi.Common.DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, Graphics.Dxgi.Common.DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc);
+		HResult RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc);
 	}
 }
 

@@ -2,11 +2,11 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using static Vortice.Win32.Apis;
-using static Vortice.Win32.Graphics.Imaging.Apis;
+using static Vortice.Win32.Graphics.WIC;
 
-namespace Vortice.Win32.Graphics.Imaging.D2D;
+namespace Vortice.Win32.Graphics;
 
-public static unsafe partial class Apis
+public static unsafe partial class D2D
 {
     public static HResult CreateWICImagingFactory(IWICImagingFactory2** factory)
     {

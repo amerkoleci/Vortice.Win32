@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Vortice.Win32.Security;
+
 namespace Vortice.Win32.Graphics;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceTools1"]/*' />
@@ -81,9 +83,9 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceTools1::GetApplicationSpecificDriverState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetApplicationSpecificDriverState(Graphics.Direct3D.ID3DBlob** ppBlob)
+	public HResult GetApplicationSpecificDriverState(ID3DBlob** ppBlob)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceTools1*, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[4]))((ID3D12DeviceTools1*)Unsafe.AsPointer(ref this), ppBlob);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceTools1*, ID3DBlob**, int>)(lpVtbl[4]))((ID3D12DeviceTools1*)Unsafe.AsPointer(ref this), ppBlob);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceTools1::GetApplicationSpecificDriverBlobStatus"]/*' />
@@ -97,7 +99,7 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 	public interface Interface : ID3D12DeviceTools.Interface
 	{
 		[VtblIndex(4)]
-		HResult GetApplicationSpecificDriverState(Graphics.Direct3D.ID3DBlob** ppBlob);
+		HResult GetApplicationSpecificDriverState(ID3DBlob** ppBlob);
 
 		[VtblIndex(5)]
 		D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS GetApplicationSpecificDriverBlobStatus();
