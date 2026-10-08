@@ -64,7 +64,7 @@ public static unsafe partial class FXC
                 }
             }
 
-            ThrowIfFailed(hr);
+            hr.ThrowIfFailed();
 
             return d3dBlobBytecode.Move();
         }

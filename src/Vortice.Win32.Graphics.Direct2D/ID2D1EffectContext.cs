@@ -13,7 +13,7 @@ public static unsafe class ID2D1EffectContextExtensions
         where TFeature : unmanaged
     {
         TFeature featureData = default;
-        ThrowIfFailed(self.CheckFeatureSupport(feature, &featureData, (uint)sizeof(TFeature)));
+        self.CheckFeatureSupport(feature, &featureData, (uint)sizeof(TFeature)).ThrowIfFailed();
         return featureData;
     }
 
@@ -40,7 +40,7 @@ public static unsafe class ID2D1EffectContextExtensions
        where TID2D1EffectContext : unmanaged, ID2D1EffectContext.Interface
     {
         using ComPtr<ID2D1Effect> effect = default;
-        ThrowIfFailed(self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect.GetAddressOf()));
+        self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect.GetAddressOf()).ThrowIfFailed();
         return effect.Move();
     }
 }

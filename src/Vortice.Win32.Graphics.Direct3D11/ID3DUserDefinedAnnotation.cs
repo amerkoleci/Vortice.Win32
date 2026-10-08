@@ -1,7 +1,7 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 unsafe partial struct ID3DUserDefinedAnnotation
 {

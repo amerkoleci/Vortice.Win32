@@ -1,8 +1,6 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
-
 namespace Vortice.Win32.Graphics;
 
 public static unsafe partial class D3D12MA
@@ -42,7 +40,7 @@ public static unsafe partial class D3D12MA
     [LibraryImport(LibraryName)]
     internal static partial HResult D3D12MA_Allocator_CreateResource2(nint pSelf, D3D12MA_ALLOCATION_DESC* allocationDesc, D3D12_RESOURCE_DESC1* pResourceDesc, D3D12_RESOURCE_STATES initialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, D3D12MA_Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateResource3(nint pSelf, D3D12MA_ALLOCATION_DESC* allocationDesc, D3D12_RESOURCE_DESC1* pResourceDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, uint NumCastableFormats, Format* pCastableFormats, D3D12MA_Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateResource3(nint pSelf, D3D12MA_ALLOCATION_DESC* allocationDesc, D3D12_RESOURCE_DESC1* pResourceDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, uint NumCastableFormats, DXGI_FORMAT* pCastableFormats, D3D12MA_Allocation* ppAllocation, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
     internal static partial HResult D3D12MA_Allocator_AllocateMemory(nint pSelf, D3D12MA_ALLOCATION_DESC* pAllocDesc, D3D12_RESOURCE_ALLOCATION_INFO* pAllocInfo, D3D12MA_Allocation* ppAllocation);
     [LibraryImport(LibraryName)]
@@ -50,7 +48,7 @@ public static unsafe partial class D3D12MA
     [LibraryImport(LibraryName)]
     internal static partial HResult D3D12MA_Allocator_CreateAliasingResource1(nint pSelf, D3D12MA_Allocation* pAllocation, ulong AllocationLocalOffset, D3D12_RESOURCE_DESC* pResourceDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
     [LibraryImport(LibraryName)]
-    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource2(nint pSelf, D3D12MA_Allocation* pAllocation, ulong AllocationLocalOffset, D3D12_RESOURCE_DESC* pResourceDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, uint NumCastableFormats, Format* pCastableFormats, Guid* riidResource, void** ppvResource);
+    internal static partial HResult D3D12MA_Allocator_CreateAliasingResource2(nint pSelf, D3D12MA_Allocation* pAllocation, ulong AllocationLocalOffset, D3D12_RESOURCE_DESC* pResourceDesc, D3D12_BARRIER_LAYOUT InitialLayout, D3D12_CLEAR_VALUE* pOptimizedClearValue, uint NumCastableFormats, DXGI_FORMAT* pCastableFormats, Guid* riidResource, void** ppvResource);
 
     [LibraryImport(LibraryName)]
     internal static partial HResult D3D12MA_Allocator_CreatePool(nint pSelf, D3D12MA_POOL_DESC* pPoolDesc, out D3D12MA_Pool pool);

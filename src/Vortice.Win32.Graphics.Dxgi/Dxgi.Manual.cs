@@ -60,7 +60,7 @@ public static unsafe class IDXGIFactory5Extensions
         where TFeature : unmanaged
     {
         TFeature featureData = default;
-        ThrowIfFailed(self.CheckFeatureSupport(feature, &featureData, sizeof(TFeature)));
+        self.CheckFeatureSupport(feature, &featureData, sizeof(TFeature)).ThrowIfFailed();
         return featureData;
     }
 }

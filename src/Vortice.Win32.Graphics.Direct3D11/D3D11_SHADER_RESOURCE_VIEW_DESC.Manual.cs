@@ -1,31 +1,32 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Direct3D;
-using Vortice.Win32.Graphics.Dxgi.Common;
+using static Vortice.Win32.Graphics.DXGICommon;
+using static Vortice.Win32.Graphics.D3D;
+using static Vortice.Win32.Graphics.D3D11;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
-public unsafe partial struct ShaderResourceViewDescription
+public unsafe partial struct D3D11_SHADER_RESOURCE_VIEW_DESC 
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="ShaderResourceViewDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SHADER_RESOURCE_VIEW_DESC"/> struct.
     /// </summary>
     /// <param name="viewDimension">The <see cref="SrvDimension"/></param>
     /// <param name="format">The <see cref="Format"/> to use or <see cref="Format.Unknown"/>.</param>
-    /// <param name="mostDetailedMip">Index of the most detailed mipmap level to use or first element for <see cref="SrvDimension.Buffer"/> or <see cref="SrvDimension.BufferExtended"/>.</param>
-    /// <param name="mipLevels">The maximum number of mipmap levels for the view of the texture or num elements for <see cref="SrvDimension.Buffer"/> or <see cref="SrvDimension.BufferExtended"/>.</param>
-    /// <param name="firstArraySlice">The index of the first texture to use in an array of textures or First2DArrayFace for <see cref="SrvDimension.TextureCubeArray"/>. </param>
-    /// <param name="arraySize">Number of textures in the array or num cubes for <see cref="SrvDimension.TextureCubeArray"/>. </param>
-    /// <param name="flags"><see cref="BufferExtendedSrvFlags"/> for <see cref="SrvDimension.BufferExtended"/>.</param>
-    public ShaderResourceViewDescription(
-        SrvDimension viewDimension,
-        Format format = Format.Unknown,
+    /// <param name="mostDetailedMip">Index of the most detailed mipmap level to use or first element for <see cref="D3D11_SRV_DIMENSION_BUFFER"/> or <see cref="D3D11_SRV_DIMENSION_BUFFEREX"/>.</param>
+    /// <param name="mipLevels">The maximum number of mipmap levels for the view of the texture or num elements for <see cref="D3D11_SRV_DIMENSION_BUFFER"/> or <see cref="D3D11_SRV_DIMENSION_BUFFEREX"/>.</param>
+    /// <param name="firstArraySlice">The index of the first texture to use in an array of textures or First2DArrayFace for <see cref="D3D11_SRV_DIMENSION_TEXTURECUBEARRAY"/>. </param>
+    /// <param name="arraySize">Number of textures in the array or num cubes for <see cref="D3D11_SRV_DIMENSION_TEXTURECUBEARRAY"/>. </param>
+    /// <param name="flags"><see cref="D3D11_BUFFEREX_SRV_FLAG"/> for <see cref="D3D11_SRV_DIMENSION_BUFFEREX"/>.</param>
+    public D3D11_SHADER_RESOURCE_VIEW_DESC(
+        D3D_SRV_DIMENSION viewDimension,
+        DXGI_FORMAT format = DXGI_FORMAT_UNKNOWN,
         uint mostDetailedMip = 0,
         uint mipLevels = unchecked((uint)-1),
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1),
-        BufferExtendedSrvFlags flags = BufferExtendedSrvFlags.None)
+        D3D11_BUFFEREX_SRV_FLAG flags = 0)
     {
         Format = format;
         ViewDimension = viewDimension;
@@ -33,54 +34,54 @@ public unsafe partial struct ShaderResourceViewDescription
 
         switch (viewDimension)
         {
-            case SrvDimension.Buffer:
+            case D3D_SRV_DIMENSION_BUFFER:
                 Anonymous.Buffer.FirstElement = mostDetailedMip;
                 Anonymous.Buffer.NumElements = mipLevels;
                 break;
-            case SrvDimension.Texture1D:
+            case D3D_SRV_DIMENSION_TEXTURE1D:
                 Anonymous.Texture1D.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture1D.MipLevels = mipLevels;
                 break;
-            case SrvDimension.Texture1DArray:
+            case D3D_SRV_DIMENSION_TEXTURE1DARRAY:
                 Anonymous.Texture1DArray.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture1DArray.MipLevels = mipLevels;
                 Anonymous.Texture1DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture1DArray.ArraySize = arraySize;
                 break;
-            case SrvDimension.Texture2D:
+            case D3D_SRV_DIMENSION_TEXTURE2D:
                 Anonymous.Texture2D.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture2D.MipLevels = mipLevels;
                 break;
-            case SrvDimension.Texture2DArray:
+            case D3D_SRV_DIMENSION_TEXTURE2DARRAY:
                 Anonymous.Texture2DArray.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture2DArray.MipLevels = mipLevels;
                 Anonymous.Texture2DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DArray.ArraySize = arraySize;
                 break;
-            case SrvDimension.Texture2DMs:
+            case D3D_SRV_DIMENSION_TEXTURE2DMS:
                 break;
-            case SrvDimension.Texture2DMsArray:
+            case D3D_SRV_DIMENSION_TEXTURE2DMSARRAY:
                 Anonymous.Texture2DMSArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DMSArray.ArraySize = arraySize;
                 break;
-            case SrvDimension.Texture3D:
+            case D3D_SRV_DIMENSION_TEXTURE3D:
                 Anonymous.Texture3D.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture3D.MipLevels = mipLevels;
                 break;
-            case SrvDimension.TextureCube:
+            case D3D_SRV_DIMENSION_TEXTURECUBE:
                 Anonymous.TextureCube.MostDetailedMip = mostDetailedMip;
                 Anonymous.TextureCube.MipLevels = mipLevels;
                 break;
-            case SrvDimension.TextureCubeArray:
+            case D3D_SRV_DIMENSION_TEXTURECUBEARRAY:
                 Anonymous.TextureCubeArray.MostDetailedMip = mostDetailedMip;
                 Anonymous.TextureCubeArray.MipLevels = mipLevels;
                 Anonymous.TextureCubeArray.First2DArrayFace = firstArraySlice;
                 Anonymous.TextureCubeArray.NumCubes = arraySize;
                 break;
-            case SrvDimension.BufferExtended:
+            case D3D_SRV_DIMENSION_BUFFEREX:
                 Anonymous.BufferEx.FirstElement = mostDetailedMip;
                 Anonymous.BufferEx.NumElements = mipLevels;
-                BufferEx.Flags = flags;
+                Anonymous.BufferEx.Flags = flags;
                 break;
             default:
                 break;
@@ -88,22 +89,22 @@ public unsafe partial struct ShaderResourceViewDescription
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ShaderResourceViewDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SHADER_RESOURCE_VIEW_DESC"/> struct.
     /// </summary>
     /// <param name="buffer">Unused <see cref="ID3D11Buffer"/> </param>
     /// <param name="format"></param>
     /// <param name="firstElement"></param>
     /// <param name="numElements"></param>
     /// <param name="flags"></param>
-    public ShaderResourceViewDescription(
+    public D3D11_SHADER_RESOURCE_VIEW_DESC(
         ID3D11Buffer* buffer,
-        Format format,
+        DXGI_FORMAT format,
         uint firstElement,
         uint numElements,
-        BufferExtendedSrvFlags flags = BufferExtendedSrvFlags.None)
+        D3D11_BUFFEREX_SRV_FLAG flags = 0)
     {
         Format = format;
-        ViewDimension = SrvDimension.BufferExtended;
+        ViewDimension = D3D_SRV_DIMENSION_BUFFEREX;
 
         Anonymous = default;
         Anonymous.BufferEx.FirstElement = firstElement;
@@ -111,24 +112,24 @@ public unsafe partial struct ShaderResourceViewDescription
         Anonymous.BufferEx.Flags = flags;
     }
 
-    public ShaderResourceViewDescription(
+    public D3D11_SHADER_RESOURCE_VIEW_DESC(
         ID3D11Texture1D* texture,
         bool isArray,
-        Format format = Format.Unknown,
+        DXGI_FORMAT format = DXGI_FORMAT_UNKNOWN,
         uint mostDetailedMip = 0,
         uint mipLevels = unchecked((uint)-1),
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1))
     {
-        ViewDimension = isArray ? SrvDimension.Texture1DArray : SrvDimension.Texture1D;
-        if (format == Format.Unknown
+        ViewDimension = isArray ? D3D_SRV_DIMENSION_TEXTURE1DARRAY : D3D_SRV_DIMENSION_TEXTURE1D;
+        if (format == DXGI_FORMAT_UNKNOWN
             || mipLevels == unchecked((uint)-1)
-            || (arraySize == unchecked((uint)-1) && SrvDimension.Texture1DArray == ViewDimension))
+            || (arraySize == unchecked((uint)-1) && D3D_SRV_DIMENSION_TEXTURE1DARRAY == ViewDimension))
         {
-            Texture1DDescription textureDesc;
+            D3D11_TEXTURE1D_DESC textureDesc;
             texture->GetDesc(&textureDesc);
 
-            if (format == Format.Unknown)
+            if (format == DXGI_FORMAT_UNKNOWN)
                 format = textureDesc.Format;
             if (mipLevels == unchecked((uint)-1))
                 mipLevels = textureDesc.MipLevels - mostDetailedMip;
@@ -141,11 +142,11 @@ public unsafe partial struct ShaderResourceViewDescription
 
         switch (ViewDimension)
         {
-            case SrvDimension.Texture1D:
+            case D3D_SRV_DIMENSION_TEXTURE1D:
                 Anonymous.Texture1D.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture1D.MipLevels = mipLevels;
                 break;
-            case SrvDimension.Texture1DArray:
+            case D3D_SRV_DIMENSION_TEXTURE1DARRAY:
                 Anonymous.Texture1DArray.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture1DArray.MipLevels = mipLevels;
                 Anonymous.Texture1DArray.FirstArraySlice = firstArraySlice;
@@ -157,7 +158,7 @@ public unsafe partial struct ShaderResourceViewDescription
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ShaderResourceViewDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SHADER_RESOURCE_VIEW_DESC"/> struct.
     /// </summary>
     /// <param name="texture"></param>
     /// <param name="viewDimension"></param>
@@ -166,31 +167,31 @@ public unsafe partial struct ShaderResourceViewDescription
     /// <param name="mipLevels"></param>
     /// <param name="firstArraySlice"></param>
     /// <param name="arraySize"></param>
-    public ShaderResourceViewDescription(
+    public D3D11_SHADER_RESOURCE_VIEW_DESC(
         ID3D11Texture2D* texture,
-        SrvDimension viewDimension,
-        Format format = Format.Unknown,
+        D3D_SRV_DIMENSION viewDimension,
+        DXGI_FORMAT format = DXGI_FORMAT_UNKNOWN,
         uint mostDetailedMip = 0,
         uint mipLevels = unchecked((uint)-1),
         uint firstArraySlice = 0,
         uint arraySize = unchecked((uint)-1))
     {
         ViewDimension = viewDimension;
-        if (format == Format.Unknown
-            || (mipLevels == unchecked((uint)-1) && viewDimension != SrvDimension.Texture2DMs && viewDimension != SrvDimension.Texture2DMsArray)
-            || (arraySize == unchecked((uint)-1) && (SrvDimension.Texture2DArray == viewDimension || SrvDimension.Texture2DMsArray == viewDimension || SrvDimension.TextureCubeArray == viewDimension)))
+        if (format == DXGI_FORMAT_UNKNOWN
+            || (mipLevels == unchecked((uint)-1) && viewDimension != D3D_SRV_DIMENSION_TEXTURE2DMS && viewDimension != D3D_SRV_DIMENSION_TEXTURE2DMSARRAY)
+            || (arraySize == unchecked((uint)-1) && (D3D_SRV_DIMENSION_TEXTURE2DARRAY == viewDimension || D3D_SRV_DIMENSION_TEXTURE2DMSARRAY == viewDimension || D3D_SRV_DIMENSION_TEXTURECUBEARRAY == viewDimension)))
         {
-            Texture2DDescription textureDesc;
+            D3D11_TEXTURE2D_DESC textureDesc;
             texture->GetDesc(&textureDesc);
 
-            if (format == Format.Unknown)
+            if (format == DXGI_FORMAT_UNKNOWN)
                 format = textureDesc.Format;
             if (unchecked((uint)-1) == mipLevels)
                 mipLevels = textureDesc.MipLevels - mostDetailedMip;
             if (unchecked((uint)-1) == arraySize)
             {
                 arraySize = textureDesc.ArraySize - firstArraySlice;
-                if (viewDimension == SrvDimension.TextureCubeArray)
+                if (viewDimension == D3D_SRV_DIMENSION_TEXTURECUBEARRAY)
                     arraySize /= 6;
             }
         }
@@ -200,27 +201,27 @@ public unsafe partial struct ShaderResourceViewDescription
 
         switch (viewDimension)
         {
-            case SrvDimension.Texture2D:
+            case D3D_SRV_DIMENSION_TEXTURE2D:
                 Anonymous.Texture2D.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture2D.MipLevels = mipLevels;
                 break;
-            case SrvDimension.Texture2DArray:
+            case D3D_SRV_DIMENSION_TEXTURE2DARRAY:
                 Anonymous.Texture2DArray.MostDetailedMip = mostDetailedMip;
                 Anonymous.Texture2DArray.MipLevels = mipLevels;
                 Anonymous.Texture2DArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DArray.ArraySize = arraySize;
                 break;
-            case SrvDimension.Texture2DMs:
+            case D3D_SRV_DIMENSION_TEXTURE2DMS:
                 break;
-            case SrvDimension.Texture2DMsArray:
+            case D3D_SRV_DIMENSION_TEXTURE2DMSARRAY:
                 Anonymous.Texture2DMSArray.FirstArraySlice = firstArraySlice;
                 Anonymous.Texture2DMSArray.ArraySize = arraySize;
                 break;
-            case SrvDimension.TextureCube:
+            case D3D_SRV_DIMENSION_TEXTURECUBE:
                 Anonymous.TextureCube.MostDetailedMip = mostDetailedMip;
                 Anonymous.TextureCube.MipLevels = mipLevels;
                 break;
-            case SrvDimension.TextureCubeArray:
+            case D3D_SRV_DIMENSION_TEXTURECUBEARRAY:
                 Anonymous.TextureCubeArray.MostDetailedMip = mostDetailedMip;
                 Anonymous.TextureCubeArray.MipLevels = mipLevels;
                 Anonymous.TextureCubeArray.First2DArrayFace = firstArraySlice;
@@ -232,25 +233,25 @@ public unsafe partial struct ShaderResourceViewDescription
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ShaderResourceViewDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SHADER_RESOURCE_VIEW_DESC"/> struct.
     /// </summary>
     /// <param name="texture"></param>
     /// <param name="format"></param>
     /// <param name="mostDetailedMip"></param>
     /// <param name="mipLevels"></param>
-    public ShaderResourceViewDescription(
+    public D3D11_SHADER_RESOURCE_VIEW_DESC(
         ID3D11Texture3D* texture,
-        Format format = Format.Unknown,
+        DXGI_FORMAT format = DXGI_FORMAT_UNKNOWN,
         uint mostDetailedMip = 0,
         uint mipLevels = unchecked((uint)-1))
     {
-        ViewDimension = SrvDimension.Texture3D;
-        if (format == Format.Unknown || mipLevels == unchecked((uint)-1))
+        ViewDimension = D3D_SRV_DIMENSION_TEXTURE3D;
+        if (format == DXGI_FORMAT_UNKNOWN || mipLevels == unchecked((uint)-1))
         {
-            Texture3DDescription textureDesc;
+            D3D11_TEXTURE3D_DESC textureDesc;
             texture->GetDesc(&textureDesc);
 
-            if (format == Format.Unknown)
+            if (format == DXGI_FORMAT_UNKNOWN)
                 format = textureDesc.Format;
             if (mipLevels == unchecked((uint)-1))
                 mipLevels = textureDesc.MipLevels - mostDetailedMip;

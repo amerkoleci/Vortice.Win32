@@ -1,11 +1,11 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Vortice.Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.D3D11;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
-public unsafe partial struct MappedSubresource
+public unsafe partial struct D3D11_MAPPED_SUBRESOURCE
 {
     public Span<byte> AsSpan(int length) => new(pData, length);
 
@@ -16,11 +16,11 @@ public unsafe partial struct MappedSubresource
 
     public Span<T> AsSpan<T>(ID3D11Buffer* buffer) where T : unmanaged
     {
-        BufferDescription desc;
+        D3D11_BUFFER_DESC desc;
         buffer->GetDesc(&desc);
 
         Span<byte> source = new(pData, (int)desc.ByteWidth);
-        return global::System.Runtime.InteropServices.MemoryMarshal.Cast<byte, T>(source);
+        return MemoryMarshal.Cast<byte, T>(source);
     }
 
     public Span<T> AsSpan<T>(ID3D11Texture1D* resource, uint mipSlice, uint arraySlice) where T : unmanaged
@@ -28,7 +28,7 @@ public unsafe partial struct MappedSubresource
         resource->CalculateSubResourceIndex(mipSlice, arraySlice, out uint mipSize);
 
         Span<byte> source = new(pData, (int)(mipSize * RowPitch));
-        return global::System.Runtime.InteropServices.MemoryMarshal.Cast<byte, T>(source);
+        return MemoryMarshal.Cast<byte, T>(source);
     }
 
     public Span<T> AsSpan<T>(ID3D11Texture2D* resource, uint mipSlice, uint arraySlice) where T : unmanaged
@@ -36,7 +36,7 @@ public unsafe partial struct MappedSubresource
         resource->CalculateSubResourceIndex(mipSlice, arraySlice, out uint mipSize);
 
         Span<byte> source = new Span<byte>(pData, (int)(mipSize * RowPitch));
-        return global::System.Runtime.InteropServices.MemoryMarshal.Cast<byte, T>(source);
+        return MemoryMarshal.Cast<byte, T>(source);
     }
 
     public Span<T> AsSpan<T>(ID3D11Texture3D* resource, uint mipSlice, uint arraySlice) where T : unmanaged

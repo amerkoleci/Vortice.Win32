@@ -1,0 +1,29 @@
+// Copyright (c) Amer Koleci and Contributors.
+// Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
+
+using static Vortice.Win32.Graphics.D3D11;
+
+namespace Vortice.Win32.Graphics;
+
+public partial struct D3D11_DEPTH_STENCILOP_DESC
+{
+    /// <summary>
+    /// A built-in description with default values.
+    /// </summary>
+    public static D3D11_DEPTH_STENCILOP_DESC Default => new(D3D11_STENCIL_OP_KEEP, D3D11_STENCIL_OP_KEEP, D3D11_STENCIL_OP_KEEP, D3D11_COMPARISON_ALWAYS);
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="D3D11_DEPTH_STENCILOP_DESC"/> struct.
+    /// </summary>
+    /// <param name="stencilFailOp">A <see cref="D3D11_STENCIL_OP"/> value that identifies the stencil operation to perform when stencil testing fails.</param>
+    /// <param name="stencilDepthFailOp">A <see cref="D3D11_STENCIL_OP"/> value that identifies the stencil operation to perform when stencil testing passes and depth testing fails.</param>
+    /// <param name="stencilPassOp">A <see cref="D3D11_STENCIL_OP"/> value that identifies the stencil operation to perform when stencil testing and depth testing both pass.</param>
+    /// <param name="stencilFunc">A <see cref="D3D11_COMPARISON_FUNC"/> value that identifies the function that compares stencil data against existing stencil data.</param>
+    public D3D11_DEPTH_STENCILOP_DESC(D3D11_STENCIL_OP stencilFailOp, D3D11_STENCIL_OP stencilDepthFailOp, D3D11_STENCIL_OP stencilPassOp, D3D11_COMPARISON_FUNC stencilFunc)
+    {
+        StencilFailOp = stencilFailOp;
+        StencilDepthFailOp = stencilDepthFailOp;
+        StencilPassOp = stencilPassOp;
+        StencilFunc = stencilFunc;
+    }
+}

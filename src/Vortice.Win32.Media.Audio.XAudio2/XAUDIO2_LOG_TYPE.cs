@@ -1,12 +1,12 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Vortice.Win32.Media.Audio.XAudio2.Apis;
+using static Vortice.Win32.Media.Audio.XAudio2;
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Media.Audio;
 
 [Flags]
-public enum LogType : uint
+public enum XAUDIO2_LOG_TYPE : uint
 {
     None,
     /// <unmanaged>XAUDIO2_LOG_ERRORS</unmanaged>

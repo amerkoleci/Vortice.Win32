@@ -1092,9 +1092,9 @@ public static class Program
         { "D3D11_BUFFER_UAV::Flags", "D3D11_BUFFER_UAV_FLAG" },
         { "D3D11_BUFFEREX_SRV::Flags", "D3D11_BUFFEREX_SRV_FLAG" },
 
-        { "D3D11_RESOURCE_FLAGS::BindFlags", "Graphics.Direct3D11.D3D11_BIND_FLAG" },
-        { "D3D11_RESOURCE_FLAGS::CPUAccessFlags", "Graphics.Direct3D11.D3D11_CPU_ACCESS_FLAG" },
-        { "D3D11_RESOURCE_FLAGS::MiscFlags", "Graphics.Direct3D11.D3D11_RESOURCE_MISC_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
 
         // D3D12
         { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
@@ -1104,8 +1104,8 @@ public static class Program
         { "DxcShaderHash::Flags", "DXC_HASHFLAG" },
 
         // XAudio2
-        { "XAUDIO2_DEBUG_CONFIGURATION::TraceMask", "LogType" },
-        { "XAUDIO2_DEBUG_CONFIGURATION::BreakMask", "LogType" },
+        { "XAUDIO2_DEBUG_CONFIGURATION::TraceMask", "XAUDIO2_LOG_TYPE" },
+        { "XAUDIO2_DEBUG_CONFIGURATION::BreakMask", "XAUDIO2_LOG_TYPE" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldNameRemap = new()
@@ -1156,7 +1156,7 @@ public static class Program
         { "D3DCompressShaders::uFlags", "D3D_COMPRESS_SHADER" },
         { "D3DDisassemble::Flags", "D3D_DISASM" },
 
-        { "D3D11On12CreateDevice::Flags", "Graphics.Direct3D11.D3D11_CREATE_DEVICE_FLAG" },
+        { "D3D11On12CreateDevice::Flags", "D3D11_CREATE_DEVICE_FLAG" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = [];
@@ -2485,6 +2485,7 @@ public static class Program
 
 
         if (comType.Name == "IDXGIResource1" ||
+            comType.Name == "ID3D11Fence" ||
             comType.Name.StartsWith("ID3D12Device"))
         {
             namespaces.Add("Vortice.Win32.Security");

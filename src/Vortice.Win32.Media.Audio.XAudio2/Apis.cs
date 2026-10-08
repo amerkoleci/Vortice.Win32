@@ -3,7 +3,7 @@
 
 namespace Vortice.Win32.Media.Audio;
 
-unsafe partial class XAudio2
+public static unsafe partial class XAudio2
 {
     public static void ReverbConvertI3DL2ToNative(
         [NativeTypeName("const XAUDIO2FX_REVERB_I3DL2_PARAMETERS *")] XAUDIO2FX_REVERB_I3DL2_PARAMETERS* pI3DL2,

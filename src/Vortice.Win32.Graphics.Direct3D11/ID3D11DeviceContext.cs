@@ -2,7 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using static Vortice.Win32.Apis;
-using static Vortice.Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.D3D11;
 
 namespace Vortice.Win32.Graphics;
 
@@ -21,7 +21,7 @@ public static unsafe class ID3D11DeviceContextExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static void RSSetViewport<TD3D11DeviceContext>(
         ref this TD3D11DeviceContext self,
-        Viewport viewport)
+        D3D11_VIEWPORT viewport)
         where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
         self.RSSetViewports(1, &viewport);
@@ -130,7 +130,7 @@ public static unsafe class ID3D11DeviceContextExtensions
         where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
         using ComPtr<ID3D11CommandList> commandList = default;
-        ThrowIfFailed(self.FinishCommandList(restoreDeferredContextState, commandList.GetAddressOf()));
+        self.FinishCommandList(restoreDeferredContextState, commandList.GetAddressOf()).ThrowIfFailed();
 
         return commandList.Move();
     }
@@ -138,8 +138,8 @@ public static unsafe class ID3D11DeviceContextExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static HResult Map<TD3D11DeviceContext>(ref this TD3D11DeviceContext self, ID3D11Texture2D* resource,
         uint mipSlice, uint arraySlice,
-        MapMode mode, MapFlags flags,
-        MappedSubresource* pMappedResource, out uint subresource, out uint mipSize)
+        D3D11_MAP mode, D3D11_MAP_FLAG flags,
+        D3D11_MAPPED_SUBRESOURCE* pMappedResource, out uint subresource, out uint mipSize)
         where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
         subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out mipSize);
@@ -149,16 +149,16 @@ public static unsafe class ID3D11DeviceContextExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Span<T> Map<TD3D11DeviceContext, T>(ref this TD3D11DeviceContext self, ID3D11Texture2D* resource,
         uint mipSlice, uint arraySlice,
-        MapMode mode = MapMode.Read, MapFlags flags = MapFlags.None)
+        D3D11_MAP mode = D3D11_MAP_READ, D3D11_MAP_FLAG flags = 0u)
         where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
         where T : unmanaged
     {
         uint subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out uint mipSize);
-        MappedSubresource mappedSubresource;
-        ThrowIfFailed(self.Map((ID3D11Resource*)resource, subresource, mode, flags, &mappedSubresource));
+        D3D11_MAPPED_SUBRESOURCE mappedSubresource;
+        self.Map((ID3D11Resource*)resource, subresource, mode, flags, &mappedSubresource).ThrowIfFailed();
 
         Span<byte> source = new(mappedSubresource.pData, (int)(mipSize * mappedSubresource.RowPitch));
-        return global::System.Runtime.InteropServices.MemoryMarshal.Cast<byte, T>(source);
+        return MemoryMarshal.Cast<byte, T>(source);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]

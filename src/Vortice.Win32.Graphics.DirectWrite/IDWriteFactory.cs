@@ -19,7 +19,7 @@ public unsafe partial struct IDWriteFactory
 
         fixed (char* fontFamilyNamePtr = fontFamilyName)
         {
-            ThrowIfFailed(CreateTextFormat(
+            CreateTextFormat(
                 fontFamilyNamePtr,
                 null,
                 fontWeight,
@@ -27,7 +27,7 @@ public unsafe partial struct IDWriteFactory
                 fontStretch,
                 fontSize,
                 null,
-                textFormat.GetAddressOf()));
+                textFormat.GetAddressOf()).ThrowIfFailed();
 
             return textFormat.Move();
         }
@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFactory
         {
             fixed (char* localeNamePtr = localeName)
             {
-                ThrowIfFailed(CreateTextFormat(
+                CreateTextFormat(
                     fontFamilyNamePtr,
                     null,
                     fontWeight,
@@ -55,8 +55,7 @@ public unsafe partial struct IDWriteFactory
                     fontStretch,
                     fontSize,
                     localeNamePtr,
-                    textFormat.GetAddressOf())
-                    );
+                    textFormat.GetAddressOf()).ThrowIfFailed();
             }
 
             return textFormat.Move();
@@ -78,7 +77,7 @@ public unsafe partial struct IDWriteFactory
         {
             fixed (char* localeNamePtr = localeName)
             {
-                ThrowIfFailed(CreateTextFormat(
+                CreateTextFormat(
                     fontFamilyNamePtr,
                     fontCollection,
                     fontWeight,
@@ -86,7 +85,7 @@ public unsafe partial struct IDWriteFactory
                     fontStretch,
                     fontSize,
                     localeNamePtr,
-                    textFormat.GetAddressOf()));
+                    textFormat.GetAddressOf()).ThrowIfFailed();
             }
 
             return textFormat.Move();

@@ -10,22 +10,22 @@ public partial struct D3D11_BLEND_DESC
     /// <summary>
     /// A built-in description with settings for opaque blend, that is overwriting the source with the destination data.
     /// </summary>
-    public static D3D11_BLEND_DESC Opaque => new(Blend.One, Blend.Zero);
+    public static D3D11_BLEND_DESC Opaque => new(D3D11_BLEND_ONE, D3D11_BLEND_ZERO);
 
     /// <summary>
     /// A built-in description with settings for alpha blend, that is blending the source and destination data using alpha.
     /// </summary>
-    public static D3D11_BLEND_DESC AlphaBlend => new(Blend.One, Blend.InverseSrcAlpha);
+    public static D3D11_BLEND_DESC AlphaBlend => new(D3D11_BLEND_ONE, D3D11_BLEND_INV_SRC_ALPHA);
 
     /// <summary>
     /// A built-in description with settings for additive blend, that is adding the destination data to the source data without using alpha.
     /// </summary>
-    public static D3D11_BLEND_DESC Additive => new(Blend.SrcAlpha, Blend.One);
+    public static D3D11_BLEND_DESC Additive => new(D3D11_BLEND_SRC_ALPHA, D3D11_BLEND_ONE);
 
     /// <summary>
     /// A built-in description with settings for blending with non-premultipled alpha, that is blending source and destination data using alpha while assuming the color data contains no alpha information.
     /// </summary>
-    public static D3D11_BLEND_DESC NonPremultiplied => new(Blend.SrcAlpha, Blend.InverseSrcAlpha);
+    public static D3D11_BLEND_DESC NonPremultiplied => new(D3D11_BLEND_SRC_ALPHA, D3D11_BLEND_INV_SRC_ALPHA);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="D3D11_BLEND_DESC"/> struct.
@@ -58,18 +58,18 @@ public partial struct D3D11_BLEND_DESC
             RenderTarget[i].SrcBlendAlpha = srcBlendAlpha;
             RenderTarget[i].DestBlendAlpha = destBlendAlpha;
             RenderTarget[i].BlendOpAlpha = D3D11_BLEND_OP_ADD;
-            RenderTarget[i].RenderTargetWriteMask = ColorWriteEnable.All;
-            RenderTarget[i].BlendEnable = IsBlendEnabled(ref RenderTarget[i]);
+            RenderTarget[i].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
+            RenderTarget[i].BlendEnable = IsBlendEnabled(in RenderTarget[i]);
         }
     }
 
-    private static bool IsBlendEnabled(ref RenderTargetBlendDescription renderTarget)
+    private static bool IsBlendEnabled(in D3D11_RENDER_TARGET_BLEND_DESC renderTarget)
     {
         return renderTarget.BlendOp != D3D11_BLEND_OP_ADD
                 || renderTarget.SrcBlend != D3D11_BLEND_ONE
                 || renderTarget.DestBlendAlpha != D3D11_BLEND_ZERO
-                || renderTarget.BlendOp != BlendOperation.Add
-                || renderTarget.SrcBlend != Blend.One
-                || renderTarget.DestBlend != Blend.Zero;
+                || renderTarget.BlendOp != D3D11_BLEND_OP_ADD
+                || renderTarget.SrcBlend != D3D11_BLEND_ONE
+                || renderTarget.DestBlend != D3D11_BLEND_ZERO;
     }
 }

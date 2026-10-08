@@ -102,8 +102,8 @@ public static unsafe class ID3D11DeviceExtensions
         ReadOnlySpan<T> data,
         D3D11_BIND_FLAG bindFlags,
         D3D11_USAGE usage = D3D11_USAGE_DEFAULT,
-        D3D11_CPU_ACCESS_FLAG accessFlags = D3D11_CPU_ACCESS_FLAG_NONE,
-        D3D11_RESOURCE_MISC_FLAG miscFlags = D3D11_RESOURCE_MISC_FLAG_NONE,
+        D3D11_CPU_ACCESS_FLAG accessFlags = 0,
+        D3D11_RESOURCE_MISC_FLAG miscFlags = 0,
         uint sizeInBytes = 0,
         uint structureByteStride = 0)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
@@ -143,7 +143,7 @@ public static unsafe class ID3D11DeviceExtensions
 
     public static ComPtr<ID3D11RenderTargetView> CreateRenderTargetView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
-        RenderTargetViewDescription* description)
+        D3D11_RENDER_TARGET_VIEW_DESC* description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11RenderTargetView> view = default;
@@ -153,7 +153,7 @@ public static unsafe class ID3D11DeviceExtensions
 
     public static ComPtr<ID3D11DepthStencilView> CreateDepthStencilView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
-        DepthStencilViewDescription* description)
+        D3D11_DEPTH_STENCIL_VIEW_DESC* description)
          where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11DepthStencilView> view = default;
@@ -164,7 +164,7 @@ public static unsafe class ID3D11DeviceExtensions
 
     public static ComPtr<ID3D11ShaderResourceView> CreateShaderResourceView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
-        ShaderResourceViewDescription* description)
+        D3D11_SHADER_RESOURCE_VIEW_DESC* description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11ShaderResourceView> view = default;
@@ -175,7 +175,7 @@ public static unsafe class ID3D11DeviceExtensions
 
     public static ComPtr<ID3D11UnorderedAccessView> CreateUnorderedAccessView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
-        UnorderedAccessViewDescription* description)
+        D3D11_UNORDERED_ACCESS_VIEW_DESC* description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11UnorderedAccessView> view = default;
@@ -184,7 +184,7 @@ public static unsafe class ID3D11DeviceExtensions
         return view.Move();
     }
 
-    public static ComPtr<ID3D11BlendState> CreateBlendState<TD3D11Device>(ref this ID3D11Device self, BlendDescription* description)
+    public static ComPtr<ID3D11BlendState> CreateBlendState<TD3D11Device>(ref this ID3D11Device self, D3D11_BLEND_DESC* description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11BlendState> state = default;
@@ -193,7 +193,7 @@ public static unsafe class ID3D11DeviceExtensions
         return state.Move();
     }
 
-    public static ComPtr<ID3D11BlendState> CreateBlendState<TD3D11Device>(ref this ID3D11Device self, BlendDescription description)
+    public static ComPtr<ID3D11BlendState> CreateBlendState<TD3D11Device>(ref this ID3D11Device self, D3D11_BLEND_DESC description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11BlendState> state = default;
@@ -202,7 +202,7 @@ public static unsafe class ID3D11DeviceExtensions
         return state.Move();
     }
 
-    public static ComPtr<ID3D11DepthStencilState> CreateDepthStencilState<TD3D11Device>(ref this ID3D11Device self, DepthStencilDescription* description)
+    public static ComPtr<ID3D11DepthStencilState> CreateDepthStencilState<TD3D11Device>(ref this ID3D11Device self, D3D11_DEPTH_STENCIL_DESC* description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11DepthStencilState> state = default;
@@ -211,7 +211,7 @@ public static unsafe class ID3D11DeviceExtensions
         return state.Move();
     }
 
-    public static ComPtr<ID3D11DepthStencilState> CreateDepthStencilState<TD3D11Device>(ref this ID3D11Device self, DepthStencilDescription description)
+    public static ComPtr<ID3D11DepthStencilState> CreateDepthStencilState<TD3D11Device>(ref this ID3D11Device self, D3D11_DEPTH_STENCIL_DESC description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11DepthStencilState> state = default;
@@ -220,7 +220,7 @@ public static unsafe class ID3D11DeviceExtensions
         return state.Move();
     }
 
-    public static ComPtr<ID3D11RasterizerState> CreateRasterizerState<TD3D11Device>(ref this ID3D11Device self, RasterizerDescription* description)
+    public static ComPtr<ID3D11RasterizerState> CreateRasterizerState<TD3D11Device>(ref this ID3D11Device self, D3D11_RASTERIZER_DESC* description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11RasterizerState> state = default;
@@ -256,7 +256,7 @@ public static unsafe class ID3D11DeviceExtensions
         return state.Move();
     }
 
-    public static ComPtr<ID3D11Texture1D> CreateTexture1D<TD3D11Device>(ref this TD3D11Device self, Texture1DDescription* description, D3D11_SUBRESOURCE_DATA* initialData = default)
+    public static ComPtr<ID3D11Texture1D> CreateTexture1D<TD3D11Device>(ref this TD3D11Device self, D3D11_TEXTURE1D_DESC* description, D3D11_SUBRESOURCE_DATA* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture1D> texture = default;
@@ -265,7 +265,7 @@ public static unsafe class ID3D11DeviceExtensions
         return texture.Move();
     }
 
-    public static ComPtr<ID3D11Texture1D> CreateTexture1D<TD3D11Device>(ref this TD3D11Device self, Texture1DDescription description, D3D11_SUBRESOURCE_DATA* initialData = default)
+    public static ComPtr<ID3D11Texture1D> CreateTexture1D<TD3D11Device>(ref this TD3D11Device self, D3D11_TEXTURE1D_DESC description, D3D11_SUBRESOURCE_DATA* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture1D> texture = default;
@@ -274,7 +274,7 @@ public static unsafe class ID3D11DeviceExtensions
         return texture.Move();
     }
 
-    public static ComPtr<ID3D11Texture2D> CreateTexture2D<TD3D11Device>(ref this TD3D11Device self, Texture2DDescription* description, D3D11_SUBRESOURCE_DATA* initialData = default)
+    public static ComPtr<ID3D11Texture2D> CreateTexture2D<TD3D11Device>(ref this TD3D11Device self, D3D11_TEXTURE2D_DESC* description, D3D11_SUBRESOURCE_DATA* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture2D> texture = default;
@@ -283,7 +283,7 @@ public static unsafe class ID3D11DeviceExtensions
         return texture.Move();
     }
 
-    public static ComPtr<ID3D11Texture2D> CreateTexture2D<TD3D11Device>(ref this TD3D11Device self, Texture2DDescription description, D3D11_SUBRESOURCE_DATA* initialData = default)
+    public static ComPtr<ID3D11Texture2D> CreateTexture2D<TD3D11Device>(ref this TD3D11Device self, D3D11_TEXTURE2D_DESC description, D3D11_SUBRESOURCE_DATA* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture2D> texture = default;
@@ -292,7 +292,7 @@ public static unsafe class ID3D11DeviceExtensions
         return texture.Move();
     }
 
-    public static ComPtr<ID3D11Texture3D> CreateTexture3D<TD3D11Device>(ref this TD3D11Device self, Texture3DDescription* description, D3D11_SUBRESOURCE_DATA* initialData = default)
+    public static ComPtr<ID3D11Texture3D> CreateTexture3D<TD3D11Device>(ref this TD3D11Device self, D3D11_TEXTURE3D_DESC* description, D3D11_SUBRESOURCE_DATA* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture3D> texture = default;
@@ -301,7 +301,7 @@ public static unsafe class ID3D11DeviceExtensions
         return texture.Move();
     }
 
-    public static ComPtr<ID3D11Texture3D> CreateTexture3D<TD3D11Device>(ref this TD3D11Device self, Texture3DDescription description, D3D11_SUBRESOURCE_DATA* initialData = default)
+    public static ComPtr<ID3D11Texture3D> CreateTexture3D<TD3D11Device>(ref this TD3D11Device self, D3D11_TEXTURE3D_DESC description, D3D11_SUBRESOURCE_DATA* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture3D> texture = default;

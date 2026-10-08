@@ -1,42 +1,42 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Vortice.Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.D3D11;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
-public unsafe partial struct SamplerDescription
+public unsafe partial struct D3D11_SAMPLER_DESC
 {
-    public static SamplerDescription PointWrap => new(Filter.MinMagMipPoint, TextureAddressMode.Wrap);
-    public static SamplerDescription PointClamp => new(Filter.MinMagMipPoint, TextureAddressMode.Clamp);
+    public static D3D11_SAMPLER_DESC PointWrap => new(D3D11_FILTER_MIN_MAG_MIP_POINT, D3D11_TEXTURE_ADDRESS_WRAP);
+    public static D3D11_SAMPLER_DESC PointClamp => new(D3D11_FILTER_MIN_MAG_MIP_POINT, D3D11_TEXTURE_ADDRESS_CLAMP);
 
-    public static SamplerDescription LinearWrap => new(Filter.MinMagMipLinear, TextureAddressMode.Wrap);
-    public static SamplerDescription LinearClamp => new(Filter.MinMagMipLinear, TextureAddressMode.Clamp);
+    public static D3D11_SAMPLER_DESC LinearWrap => new(D3D11_FILTER_MIN_MAG_MIP_LINEAR, D3D11_TEXTURE_ADDRESS_WRAP);
+    public static D3D11_SAMPLER_DESC LinearClamp => new(D3D11_FILTER_MIN_MAG_MIP_LINEAR, D3D11_TEXTURE_ADDRESS_CLAMP);
 
-    public static SamplerDescription AnisotropicWrap => new(Filter.Anisotropic, TextureAddressMode.Wrap, 0.0f, D3D11_MAX_MAXANISOTROPY);
-    public static SamplerDescription AnisotropicClamp => new(Filter.Anisotropic, TextureAddressMode.Clamp, 0.0f, D3D11_MAX_MAXANISOTROPY);
+    public static D3D11_SAMPLER_DESC AnisotropicWrap => new(D3D11_FILTER_ANISOTROPIC, D3D11_TEXTURE_ADDRESS_WRAP, 0.0f, D3D11_MAX_MAXANISOTROPY);
+    public static D3D11_SAMPLER_DESC AnisotropicClamp => new(D3D11_FILTER_ANISOTROPIC, D3D11_TEXTURE_ADDRESS_CLAMP, 0.0f, D3D11_MAX_MAXANISOTROPY);
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="SamplerDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SAMPLER_DESC"/> struct.
     /// </summary>
     /// <param name="filter">Filtering method to use when sampling a texture.</param>
     /// <param name="addressU">Method to use for resolving a u texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="addressV">Method to use for resolving a v texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="addressW">Method to use for resolving a w texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="mipLODBias">Offset from the calculated mipmap level.</param>
-    /// <param name="maxAnisotropy">Clamping value used if <see cref="Filter.Anisotropic"/> or <see cref="Filter.ComparisonAnisotropic"/> is specified in Filter. Valid values are between 1 and 16.</param>
+    /// <param name="maxAnisotropy">Clamping value used if <see cref="D3D11_FILTER_ANISOTROPIC"/> or <see cref="D3D11_FILTER_COMPARISON_ANISOTROPIC"/> is specified in Filter. Valid values are between 1 and 16.</param>
     /// <param name="comparisonFunction">A function that compares sampled data against existing sampled data. </param>
-    /// <param name="borderColor">Border color to use if <see cref="TextureAddressMode.Border"/> is specified for AddressU, AddressV, or AddressW.</param>
+    /// <param name="borderColor">Border color to use if <see cref="D3D11_TEXTURE_ADDRESS_MODE_BORDER"/> is specified for AddressU, AddressV, or AddressW.</param>
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
-    public SamplerDescription(
-        Filter filter,
-        TextureAddressMode addressU,
-        TextureAddressMode addressV,
-        TextureAddressMode addressW,
+    public D3D11_SAMPLER_DESC(
+        D3D11_FILTER filter,
+        D3D11_TEXTURE_ADDRESS_MODE addressU,
+        D3D11_TEXTURE_ADDRESS_MODE addressV,
+        D3D11_TEXTURE_ADDRESS_MODE addressW,
         float mipLODBias,
         uint maxAnisotropy,
-        ComparisonFunction comparisonFunction,
+        D3D11_COMPARISON_FUNC comparisonFunction,
         Color4 borderColor,
         float minLOD,
         float maxLOD)
@@ -57,25 +57,25 @@ public unsafe partial struct SamplerDescription
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="SamplerDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SAMPLER_DESC"/> struct.
     /// </summary>
     /// <param name="filter">Filtering method to use when sampling a texture.</param>
     /// <param name="addressU">Method to use for resolving a u texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="addressV">Method to use for resolving a v texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="addressW">Method to use for resolving a w texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="mipLODBias">Offset from the calculated mipmap level.</param>
-    /// <param name="maxAnisotropy">Clamping value used if <see cref="Filter.Anisotropic"/> or <see cref="Filter.ComparisonAnisotropic"/> is specified in Filter. Valid values are between 1 and 16.</param>
+    /// <param name="maxAnisotropy">Clamping value used if <see cref="D3D11_FILTER_ANISOTROPIC"/> or <see cref="D3D11_FILTER_COMPARISON_ANISOTROPIC"/> is specified in Filter. Valid values are between 1 and 16.</param>
     /// <param name="comparisonFunction">A function that compares sampled data against existing sampled data. </param>
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
-    public SamplerDescription(
-        Filter filter,
-        TextureAddressMode addressU,
-        TextureAddressMode addressV,
-        TextureAddressMode addressW,
+    public D3D11_SAMPLER_DESC(
+        D3D11_FILTER filter,
+        D3D11_TEXTURE_ADDRESS_MODE addressU,
+        D3D11_TEXTURE_ADDRESS_MODE addressV,
+        D3D11_TEXTURE_ADDRESS_MODE addressW,
         float mipLODBias = 0.0f,
         uint maxAnisotropy = 1,
-        ComparisonFunction comparisonFunction = ComparisonFunction.Never,
+        D3D11_COMPARISON_FUNC comparisonFunction = D3D11_COMPARISON_NEVER,
         float minLOD = float.MinValue,
         float maxLOD = float.MaxValue)
     {
@@ -95,21 +95,21 @@ public unsafe partial struct SamplerDescription
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="SamplerDescription"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_SAMPLER_DESC"/> struct.
     /// </summary>
     /// <param name="filter">Filtering method to use when sampling a texture.</param>
     /// <param name="address">Method to use for resolving a u, v e w texture coordinate that is outside the 0 to 1 range.</param>
     /// <param name="mipLODBias">Offset from the calculated mipmap level.</param>
-    /// <param name="maxAnisotropy">Clamping value used if <see cref="Filter.Anisotropic"/> or <see cref="Filter.ComparisonAnisotropic"/> is specified in Filter. Valid values are between 1 and 16.</param>
+    /// <param name="maxAnisotropy">Clamping value used if <see cref="D3D11_FILTER_ANISOTROPIC"/> or <see cref="D3D11_FILTER_COMPARISON_ANISOTROPIC"/> is specified in Filter. Valid values are between 1 and 16.</param>
     /// <param name="comparisonFunction">A function that compares sampled data against existing sampled data. </param>
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
-    public SamplerDescription(
-        Filter filter,
-        TextureAddressMode address,
+    public D3D11_SAMPLER_DESC(
+        D3D11_FILTER filter,
+        D3D11_TEXTURE_ADDRESS_MODE address,
         float mipLODBias = 0.0f,
         uint maxAnisotropy = 1,
-        ComparisonFunction comparisonFunction = ComparisonFunction.Never,
+        D3D11_COMPARISON_FUNC comparisonFunction = D3D11_COMPARISON_NEVER,
         float minLOD = float.MinValue,
         float maxLOD = float.MaxValue)
     {

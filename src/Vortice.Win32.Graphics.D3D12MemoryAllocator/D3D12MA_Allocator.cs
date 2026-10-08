@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
 using static Vortice.Win32.Apis;
 using static Vortice.Win32.Graphics.D3D12MA;
 
@@ -65,7 +64,7 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
         D3D12_RESOURCE_DESC1* pResourceDesc,
         D3D12_BARRIER_LAYOUT initialLayout,
         D3D12_CLEAR_VALUE* pOptimizedClearValue,
-        uint numCastableFormats, Format* pCastableFormats,
+        uint numCastableFormats, DXGI_FORMAT* pCastableFormats,
         D3D12MA_Allocation* allocation, Guid* riidResource, void** ppvResource)
     {
         return D3D12MA_Allocator_CreateResource3(Handle, pAllocDesc, pResourceDesc, initialLayout,

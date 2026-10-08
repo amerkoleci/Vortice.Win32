@@ -1,15 +1,15 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Vortice.Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.D3D11;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct ID3D11Texture2D
 {
     public uint CalculateSubResourceIndex(uint mipSlice, uint arraySlice, out uint mipSize)
     {
-        Texture2DDescription desc;
+        D3D11_TEXTURE2D_DESC desc;
         GetDesc(&desc);
 
         mipSize = D3D11CalculateMipSize(mipSlice, desc.Height);

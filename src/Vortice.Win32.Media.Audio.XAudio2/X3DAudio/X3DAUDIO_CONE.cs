@@ -1,11 +1,11 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-namespace Vortice.Win32.Media.Audio.XAudio2;
+namespace Vortice.Win32.Media.Audio;
 
 /// <unmanaged>X3DAUDIO_CONE</unmanaged>
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
-public partial struct X3DAudioCone
+public partial struct X3DAUDIO_CONE
 {
     [NativeTypeName("FLOAT32")]
     public float InnerAngle;

@@ -26,12 +26,12 @@ public unsafe partial struct IWICImagingFactory
 
         fixed (char* filenamePtr = filename)
         {
-            ThrowIfFailed(CreateDecoderFromFilename(
+            CreateDecoderFromFilename(
                 filenamePtr,
                 null,
                 nativeAccess,
                 metadataOptions,
-                decoder.GetAddressOf()));
+                decoder.GetAddressOf()).ThrowIfFailed();
 
             return decoder.Move();
         }

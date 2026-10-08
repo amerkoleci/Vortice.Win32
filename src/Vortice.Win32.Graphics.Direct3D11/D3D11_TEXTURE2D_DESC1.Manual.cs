@@ -1,43 +1,43 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi.Common;
-using static Vortice.Win32.Graphics.Direct3D11.Apis;
+using static Vortice.Win32.Graphics.DXGICommon;
+using static Vortice.Win32.Graphics.D3D11;
 
-namespace Vortice.Win32.Graphics.Direct3D11;
+namespace Vortice.Win32.Graphics;
 
-public partial struct Texture2DDescription1
+public partial struct D3D11_TEXTURE2D_DESC1
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="Texture2DDescription1"/> struct.
+    /// Initializes a new instance of the <see cref="D3D11_TEXTURE2D_DESC1"/> struct.
     /// </summary>
     /// <param name="format">Texture format.</param>
     /// <param name="width">Texture width (in texels).</param>
     /// <param name="height">Texture height (in texels).</param>
     /// <param name="arraySize">Number of textures in the array.</param>
     /// <param name="mipLevels">The maximum number of mipmap levels in the texture.</param>
-    /// <param name="bindFlags">The <see cref="Direct3D11.BindFlags"/> for binding to pipeline stages.</param>
+    /// <param name="bindFlags">The <see cref="D3D11_BIND_FLAG"/> for binding to pipeline stages.</param>
     /// <param name="usage">Value that identifies how the texture is to be read from and written to.</param>
-    /// <param name="cpuAccessFlags">The <see cref="CpuAccessFlags"/> to specify the types of CPU access allowed.</param>
+    /// <param name="cpuAccessFlags">The <see cref="D3D11_CPU_ACCESS_FLAG"/> to specify the types of CPU access allowed.</param>
     /// <param name="sampleCount">Specifies multisampling parameters for the texture.</param>
     /// <param name="sampleQuality">Specifies multisampling parameters for the texture.</param>
-    /// <param name="miscFlags">The <see cref="ResourceMiscFlags"/> that identify other, less common resource options. </param>
-    /// <param name="textureLayout">A <see cref="TextureLayout"/> value that identifies the layout of the texture.</param>
-    public Texture2DDescription1(
-        Format format,
+    /// <param name="miscFlags">The <see cref="D3D11_CPU_ACCESS_FLAG"/> that identify other, less common resource options. </param>
+    /// <param name="textureLayout">A <see cref="D3D11_TEXTURE_LAYOUT"/> value that identifies the layout of the texture.</param>
+    public D3D11_TEXTURE2D_DESC1(
+        DXGI_FORMAT format,
         uint width,
         uint height,
         uint arraySize = 1,
         uint mipLevels = 0,
-        BindFlags bindFlags = BindFlags.ShaderResource,
-        Usage usage = Usage.Default,
-        CpuAccessFlags cpuAccessFlags = CpuAccessFlags.None,
+        D3D11_BIND_FLAG bindFlags = D3D11_BIND_SHADER_RESOURCE,
+        D3D11_USAGE usage = D3D11_USAGE_DEFAULT,
+        D3D11_CPU_ACCESS_FLAG cpuAccessFlags = 0,
         uint sampleCount = 1,
         uint sampleQuality = 0,
-        ResourceMiscFlags miscFlags = ResourceMiscFlags.None,
-        TextureLayout textureLayout = TextureLayout.Undefined)
+        D3D11_RESOURCE_MISC_FLAG miscFlags = 0,
+        D3D11_TEXTURE_LAYOUT textureLayout = D3D11_TEXTURE_LAYOUT_UNDEFINED)
     {
-        if (format == Format.Unknown)
+        if (format == DXGI_FORMAT_UNKNOWN)
             throw new ArgumentException($"format need to be valid", nameof(format));
 
         if (width < 1 || width > D3D11_REQ_TEXTURE2D_U_OR_V_DIMENSION)

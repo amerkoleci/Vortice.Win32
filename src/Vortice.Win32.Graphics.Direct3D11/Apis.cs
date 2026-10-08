@@ -73,10 +73,10 @@ public static unsafe partial class D3D11
     }
     public static D3D11_FILTER D3D11_ENCODE_BASIC_FILTER(D3D11_FILTER_TYPE min, D3D11_FILTER_TYPE mag, D3D11_FILTER_TYPE mip, D3D11_FILTER_REDUCTION_TYPE reduction)
     {
-        return (D3D11_FILTER)((((int)min & D3D11_FILTER_TYPE_MASK) << D3D11_MIN_FILTER_SHIFT)
-                            | (((int)mag & D3D11_FILTER_TYPE_MASK) << D3D11_MAG_FILTER_SHIFT)
-                            | (((int)mip & D3D11_FILTER_TYPE_MASK) << D3D11_MIP_FILTER_SHIFT)
-                            | (((int)reduction & D3D11_FILTER_REDUCTION_TYPE_MASK) << D3D11_FILTER_REDUCTION_TYPE_SHIFT));
+        return (D3D11_FILTER)((((int)min & (int)D3D11_FILTER_TYPE_MASK) << (int)D3D11_MIN_FILTER_SHIFT)
+                            | (((int)mag & (int)D3D11_FILTER_TYPE_MASK) << (int)D3D11_MAG_FILTER_SHIFT)
+                            | (((int)mip & (int)D3D11_FILTER_TYPE_MASK) << (int)D3D11_MIP_FILTER_SHIFT)
+                            | (((int)reduction & (int)D3D11_FILTER_REDUCTION_TYPE_MASK) << (int)D3D11_FILTER_REDUCTION_TYPE_SHIFT));
     }
 
     public static D3D11_FILTER D3D11_ENCODE_ANISOTROPIC_FILTER(D3D11_FILTER_REDUCTION_TYPE reduction)
@@ -87,22 +87,22 @@ public static unsafe partial class D3D11
 
     public static D3D11_FILTER_TYPE D3D11_DECODE_MIN_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> D3D11_MIN_FILTER_SHIFT) & D3D11_FILTER_TYPE_MASK);
+        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> (int)D3D11_MIN_FILTER_SHIFT) & (int)D3D11_FILTER_TYPE_MASK);
     }
 
     public static D3D11_FILTER_TYPE D3D11_DECODE_MAG_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> D3D11_MAG_FILTER_SHIFT) & D3D11_FILTER_TYPE_MASK);
+        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> (int)D3D11_MAG_FILTER_SHIFT) & (int)D3D11_FILTER_TYPE_MASK);
     }
 
     public static D3D11_FILTER_TYPE D3D11_DECODE_MIP_FILTER(D3D11_FILTER D3D11Filter)
     {
-        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> D3D11_MIP_FILTER_SHIFT) & D3D11_FILTER_TYPE_MASK);
+        return (D3D11_FILTER_TYPE)(((int)D3D11Filter >> (int)D3D11_MIP_FILTER_SHIFT) & (int)D3D11_FILTER_TYPE_MASK);
     }
 
     public static D3D11_FILTER_REDUCTION_TYPE D3D11_DECODE_FILTER_REDUCTION(D3D11_FILTER D3D11Filter)
     {
-        return (D3D11_FILTER_REDUCTION_TYPE)(((int)D3D11Filter >> D3D11_FILTER_REDUCTION_TYPE_SHIFT) & D3D11_FILTER_REDUCTION_TYPE_MASK);
+        return (D3D11_FILTER_REDUCTION_TYPE)(((int)D3D11Filter >> (int)D3D11_FILTER_REDUCTION_TYPE_SHIFT) & (int)D3D11_FILTER_REDUCTION_TYPE_MASK);
     }
 
     public static bool D3D11_DECODE_IS_COMPARISON_FILTER(D3D11_FILTER D3D11Filter)

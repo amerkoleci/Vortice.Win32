@@ -1,8 +1,6 @@
 // Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Vortice.Win32.Graphics.Dxgi;
-
 namespace Vortice.Win32.Graphics;
 
 /// <unmanaged>D3D12MA_ALLOCATION_CALLBACKS</unmanaged>
