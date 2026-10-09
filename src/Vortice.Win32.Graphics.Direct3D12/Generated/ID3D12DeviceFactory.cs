@@ -49,7 +49,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -75,7 +75,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::InitializeFromGlobalState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult InitializeFromGlobalState()
+	public HRESULT InitializeFromGlobalState()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, int>)(lpVtbl[3]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this));
 	}
@@ -83,7 +83,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::ApplyToGlobalState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult ApplyToGlobalState()
+	public HRESULT ApplyToGlobalState()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, int>)(lpVtbl[4]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this));
 	}
@@ -91,7 +91,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::SetFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetFlags(D3D12_DEVICE_FACTORY_FLAGS flags)
+	public HRESULT SetFlags(D3D12_DEVICE_FACTORY_FLAGS flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, D3D12_DEVICE_FACTORY_FLAGS, int>)(lpVtbl[5]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), flags);
 	}
@@ -107,7 +107,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::GetConfigurationInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetConfigurationInterface(Guid* clsid, Guid* iid, void** ppv)
+	public HRESULT GetConfigurationInterface(Guid* clsid, Guid* iid, void** ppv)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, Guid*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), clsid, iid, ppv);
 	}
@@ -115,7 +115,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::EnableExperimentalFeatures"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes)
+	public HRESULT EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, uint, Guid*, void*, uint*, int>)(lpVtbl[8]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), NumFeatures, pIIDs, pConfigurationStructs, pConfigurationStructSizes);
 	}
@@ -123,7 +123,7 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceFactory::CreateDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateDevice(IUnknown* adapter, D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice)
+	public HRESULT CreateDevice(IUnknown* adapter, D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceFactory*, IUnknown*, D3D_FEATURE_LEVEL, Guid*, void**, int>)(lpVtbl[9]))((ID3D12DeviceFactory*)Unsafe.AsPointer(ref this), adapter, FeatureLevel, riid, ppvDevice);
 	}
@@ -131,25 +131,25 @@ public unsafe partial struct ID3D12DeviceFactory : ID3D12DeviceFactory.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult InitializeFromGlobalState();
+		HRESULT InitializeFromGlobalState();
 
 		[VtblIndex(4)]
-		HResult ApplyToGlobalState();
+		HRESULT ApplyToGlobalState();
 
 		[VtblIndex(5)]
-		HResult SetFlags(D3D12_DEVICE_FACTORY_FLAGS flags);
+		HRESULT SetFlags(D3D12_DEVICE_FACTORY_FLAGS flags);
 
 		[VtblIndex(6)]
 		D3D12_DEVICE_FACTORY_FLAGS GetFlags();
 
 		[VtblIndex(7)]
-		HResult GetConfigurationInterface(Guid* clsid, Guid* iid, void** ppv);
+		HRESULT GetConfigurationInterface(Guid* clsid, Guid* iid, void** ppv);
 
 		[VtblIndex(8)]
-		HResult EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes);
+		HRESULT EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes);
 
 		[VtblIndex(9)]
-		HResult CreateDevice(IUnknown* adapter, D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice);
+		HRESULT CreateDevice(IUnknown* adapter, D3D_FEATURE_LEVEL FeatureLevel, Guid* riid, void** ppvDevice);
 	}
 }
 

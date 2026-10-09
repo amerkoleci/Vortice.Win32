@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <inheritdoc cref="IDWriteFontFileLoader.CreateStreamFromKey" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)
+	public HRESULT CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader::CreateRemoteStreamFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateRemoteStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteRemoteFontFileStream** fontFileStream)
+	public HRESULT CreateRemoteStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteRemoteFontFileStream** fontFileStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, void*, uint, IDWriteRemoteFontFileStream**, int>)(lpVtbl[4]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader::GetLocalityFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, DWRITE_LOCALITY* locality)
+	public HRESULT GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, DWRITE_LOCALITY* locality)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, void*, uint, DWRITE_LOCALITY*, int>)(lpVtbl[5]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, locality);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader::CreateFontFileReferenceFromUrl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile)
+	public HRESULT CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, IDWriteFactory*, char*, char*, IDWriteFontFile**, int>)(lpVtbl[6]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), factory, baseUrl, fontFileUrl, fontFile);
 	}
@@ -105,13 +105,13 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	public interface Interface : IDWriteFontFileLoader.Interface
 	{
 		[VtblIndex(4)]
-		HResult CreateRemoteStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteRemoteFontFileStream** fontFileStream);
+		HRESULT CreateRemoteStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteRemoteFontFileStream** fontFileStream);
 
 		[VtblIndex(5)]
-		HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, DWRITE_LOCALITY* locality);
+		HRESULT GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, DWRITE_LOCALITY* locality);
 
 		[VtblIndex(6)]
-		HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile);
+		HRESULT CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile);
 	}
 }
 

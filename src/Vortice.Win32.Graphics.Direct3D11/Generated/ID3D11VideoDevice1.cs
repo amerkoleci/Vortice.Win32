@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateVideoDecoder" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateVideoDecoder(D3D11_VIDEO_DECODER_DESC* pVideoDesc, D3D11_VIDEO_DECODER_CONFIG* pConfig, ID3D11VideoDecoder** ppDecoder)
+	public HRESULT CreateVideoDecoder(D3D11_VIDEO_DECODER_DESC* pVideoDesc, D3D11_VIDEO_DECODER_CONFIG* pConfig, ID3D11VideoDecoder** ppDecoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, D3D11_VIDEO_DECODER_CONFIG*, ID3D11VideoDecoder**, int>)(lpVtbl[3]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pVideoDesc, pConfig, ppDecoder);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateVideoProcessor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateVideoProcessor(ID3D11VideoProcessorEnumerator* pEnum, uint RateConversionIndex, ID3D11VideoProcessor** ppVideoProcessor)
+	public HRESULT CreateVideoProcessor(ID3D11VideoProcessorEnumerator* pEnum, uint RateConversionIndex, ID3D11VideoProcessor** ppVideoProcessor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, ID3D11VideoProcessorEnumerator*, uint, ID3D11VideoProcessor**, int>)(lpVtbl[4]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pEnum, RateConversionIndex, ppVideoProcessor);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateAuthenticatedChannel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateAuthenticatedChannel(D3D11_AUTHENTICATED_CHANNEL_TYPE ChannelType, ID3D11AuthenticatedChannel** ppAuthenticatedChannel)
+	public HRESULT CreateAuthenticatedChannel(D3D11_AUTHENTICATED_CHANNEL_TYPE ChannelType, ID3D11AuthenticatedChannel** ppAuthenticatedChannel)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_AUTHENTICATED_CHANNEL_TYPE, ID3D11AuthenticatedChannel**, int>)(lpVtbl[5]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), ChannelType, ppAuthenticatedChannel);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateCryptoSession" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateCryptoSession(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, ID3D11CryptoSession** ppCryptoSession)
+	public HRESULT CreateCryptoSession(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, ID3D11CryptoSession** ppCryptoSession)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, Guid*, Guid*, ID3D11CryptoSession**, int>)(lpVtbl[6]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pKeyExchangeType, ppCryptoSession);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateVideoDecoderOutputView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateVideoDecoderOutputView(ID3D11Resource* pResource, D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC* pDesc, ID3D11VideoDecoderOutputView** ppVDOVView)
+	public HRESULT CreateVideoDecoderOutputView(ID3D11Resource* pResource, D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC* pDesc, ID3D11VideoDecoderOutputView** ppVDOVView)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, ID3D11Resource*, D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC*, ID3D11VideoDecoderOutputView**, int>)(lpVtbl[7]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pResource, pDesc, ppVDOVView);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateVideoProcessorInputView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateVideoProcessorInputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC* pDesc, ID3D11VideoProcessorInputView** ppVPIView)
+	public HRESULT CreateVideoProcessorInputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC* pDesc, ID3D11VideoProcessorInputView** ppVPIView)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC*, ID3D11VideoProcessorInputView**, int>)(lpVtbl[8]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pResource, pEnum, pDesc, ppVPIView);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateVideoProcessorOutputView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateVideoProcessorOutputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC* pDesc, ID3D11VideoProcessorOutputView** ppVPOView)
+	public HRESULT CreateVideoProcessorOutputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC* pDesc, ID3D11VideoProcessorOutputView** ppVPOView)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC*, ID3D11VideoProcessorOutputView**, int>)(lpVtbl[9]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pResource, pEnum, pDesc, ppVPOView);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CreateVideoProcessorEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateVideoProcessorEnumerator(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pDesc, ID3D11VideoProcessorEnumerator** ppEnum)
+	public HRESULT CreateVideoProcessorEnumerator(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pDesc, ID3D11VideoProcessorEnumerator** ppEnum)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_PROCESSOR_CONTENT_DESC*, ID3D11VideoProcessorEnumerator**, int>)(lpVtbl[10]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDesc, ppEnum);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.GetVideoDecoderProfile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetVideoDecoderProfile(uint Index, Guid* pDecoderProfile)
+	public HRESULT GetVideoDecoderProfile(uint Index, Guid* pDecoderProfile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, uint, Guid*, int>)(lpVtbl[12]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), Index, pDecoderProfile);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CheckVideoDecoderFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, DXGI_FORMAT Format, Bool32* pSupported)
+	public HRESULT CheckVideoDecoderFormat(Guid* pDecoderProfile, DXGI_FORMAT Format, Bool32* pSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, DXGI_FORMAT, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.GetVideoDecoderConfigCount" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetVideoDecoderConfigCount(D3D11_VIDEO_DECODER_DESC* pDesc, uint* pCount)
+	public HRESULT GetVideoDecoderConfigCount(D3D11_VIDEO_DECODER_DESC* pDesc, uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, uint*, int>)(lpVtbl[14]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDesc, pCount);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.GetVideoDecoderConfig" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetVideoDecoderConfig(D3D11_VIDEO_DECODER_DESC* pDesc, uint Index, D3D11_VIDEO_DECODER_CONFIG* pConfig)
+	public HRESULT GetVideoDecoderConfig(D3D11_VIDEO_DECODER_DESC* pDesc, uint Index, D3D11_VIDEO_DECODER_CONFIG* pConfig)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, uint, D3D11_VIDEO_DECODER_CONFIG*, int>)(lpVtbl[15]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDesc, Index, pConfig);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.GetContentProtectionCaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetContentProtectionCaps(Guid* pCryptoType, Guid* pDecoderProfile, D3D11_VIDEO_CONTENT_PROTECTION_CAPS* pCaps)
+	public HRESULT GetContentProtectionCaps(Guid* pCryptoType, Guid* pDecoderProfile, D3D11_VIDEO_CONTENT_PROTECTION_CAPS* pCaps)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, Guid*, D3D11_VIDEO_CONTENT_PROTECTION_CAPS*, int>)(lpVtbl[16]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pCaps);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.CheckCryptoKeyExchange" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CheckCryptoKeyExchange(Guid* pCryptoType, Guid* pDecoderProfile, uint Index, Guid* pKeyExchangeType)
+	public HRESULT CheckCryptoKeyExchange(Guid* pCryptoType, Guid* pDecoderProfile, uint Index, Guid* pKeyExchangeType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, Guid*, uint, Guid*, int>)(lpVtbl[17]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, Index, pKeyExchangeType);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, uint, void*, int>)(lpVtbl[18]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <inheritdoc cref="ID3D11VideoDevice.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetCryptoSessionPrivateDataSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize)
+	public HRESULT GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, Guid*, Guid*, uint*, uint*, int>)(lpVtbl[20]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pKeyExchangeType, pPrivateInputSize, pPrivateOutputSize);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetVideoDecoderCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps)
+	public HRESULT GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, Guid*, uint, uint, DXGI_RATIONAL*, uint, Guid*, uint*, int>)(lpVtbl[21]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, SampleWidth, SampleHeight, pFrameRate, BitRate, pCryptoType, pDecoderCaps);
 	}
@@ -225,7 +225,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::CheckVideoDecoderDownsampling"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint)
+	public HRESULT CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_DECODER_CONFIG*, DXGI_RATIONAL*, D3D11_VIDEO_SAMPLE_DESC*, Bool32*, Bool32*, int>)(lpVtbl[22]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pOutputDesc, pSupported, pRealTimeHint);
 	}
@@ -233,7 +233,7 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::RecommendVideoDecoderDownsampleParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc)
+	public HRESULT RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoDevice1*, D3D11_VIDEO_DECODER_DESC*, DXGI_COLOR_SPACE_TYPE, D3D11_VIDEO_DECODER_CONFIG*, DXGI_RATIONAL*, D3D11_VIDEO_SAMPLE_DESC*, int>)(lpVtbl[23]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pRecommendedOutputDesc);
 	}
@@ -241,16 +241,16 @@ public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, 
 	public interface Interface : ID3D11VideoDevice.Interface
 	{
 		[VtblIndex(20)]
-		HResult GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize);
+		HRESULT GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize);
 
 		[VtblIndex(21)]
-		HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps);
+		HRESULT GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, DXGI_RATIONAL* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps);
 
 		[VtblIndex(22)]
-		HResult CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint);
+		HRESULT CheckVideoDecoderDownsampling(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint);
 
 		[VtblIndex(23)]
-		HResult RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc);
+		HRESULT RecommendVideoDecoderDownsampleParameters(D3D11_VIDEO_DECODER_DESC* pInputDesc, DXGI_COLOR_SPACE_TYPE InputColorSpace, D3D11_VIDEO_DECODER_CONFIG* pInputConfig, DXGI_RATIONAL* pFrameRate, D3D11_VIDEO_SAMPLE_DESC* pRecommendedOutputDesc);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, Guid*, void**, int>)(lpVtbl[0]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <inheritdoc cref="IWICDisplayAdaptationControl.DoesSupportChangingMaxLuminance" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DoesSupportChangingMaxLuminance(Guid* pguidDstFormat, Bool32* pfIsSupported)
+	public HRESULT DoesSupportChangingMaxLuminance(Guid* pguidDstFormat, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, Guid*, Bool32*, int>)(lpVtbl[3]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), pguidDstFormat, pfIsSupported);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <inheritdoc cref="IWICDisplayAdaptationControl.SetDisplayMaxLuminance" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetDisplayMaxLuminance(float fLuminanceInNits)
+	public HRESULT SetDisplayMaxLuminance(float fLuminanceInNits)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, float, int>)(lpVtbl[4]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), fLuminanceInNits);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <inheritdoc cref="IWICDisplayAdaptationControl.GetDisplayMaxLuminance" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetDisplayMaxLuminance(float* pfLuminanceInNits)
+	public HRESULT GetDisplayMaxLuminance(float* pfLuminanceInNits)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, float*, int>)(lpVtbl[5]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), pfLuminanceInNits);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl2::SetSdrWhiteLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetSdrWhiteLevel(float fWhiteLevelInNits)
+	public HRESULT SetSdrWhiteLevel(float fWhiteLevelInNits)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, float, int>)(lpVtbl[6]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), fWhiteLevelInNits);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl2::GetSdrWhiteLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetSdrWhiteLevel(float* pfWhiteLevelInNits)
+	public HRESULT GetSdrWhiteLevel(float* pfWhiteLevelInNits)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, float*, int>)(lpVtbl[7]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), pfWhiteLevelInNits);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl2::SetToneMappingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetToneMappingMode(WICBitmapToneMappingMode mode)
+	public HRESULT SetToneMappingMode(WICBitmapToneMappingMode mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, WICBitmapToneMappingMode, int>)(lpVtbl[8]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), mode);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl2::GetToneMappingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetToneMappingMode(WICBitmapToneMappingMode* mode)
+	public HRESULT GetToneMappingMode(WICBitmapToneMappingMode* mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, WICBitmapToneMappingMode*, int>)(lpVtbl[9]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), mode);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl2::DoesSupportToneMappingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult DoesSupportToneMappingMode(WICBitmapToneMappingMode mode, Bool32* pfIsSupported)
+	public HRESULT DoesSupportToneMappingMode(WICBitmapToneMappingMode mode, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl2*, WICBitmapToneMappingMode, Bool32*, int>)(lpVtbl[10]))((IWICDisplayAdaptationControl2*)Unsafe.AsPointer(ref this), mode, pfIsSupported);
 	}
@@ -137,19 +137,19 @@ public unsafe partial struct IWICDisplayAdaptationControl2 : IWICDisplayAdaptati
 	public interface Interface : IWICDisplayAdaptationControl.Interface
 	{
 		[VtblIndex(6)]
-		HResult SetSdrWhiteLevel(float fWhiteLevelInNits);
+		HRESULT SetSdrWhiteLevel(float fWhiteLevelInNits);
 
 		[VtblIndex(7)]
-		HResult GetSdrWhiteLevel(float* pfWhiteLevelInNits);
+		HRESULT GetSdrWhiteLevel(float* pfWhiteLevelInNits);
 
 		[VtblIndex(8)]
-		HResult SetToneMappingMode(WICBitmapToneMappingMode mode);
+		HRESULT SetToneMappingMode(WICBitmapToneMappingMode mode);
 
 		[VtblIndex(9)]
-		HResult GetToneMappingMode(WICBitmapToneMappingMode* mode);
+		HRESULT GetToneMappingMode(WICBitmapToneMappingMode* mode);
 
 		[VtblIndex(10)]
-		HResult DoesSupportToneMappingMode(WICBitmapToneMappingMode mode, Bool32* pfIsSupported);
+		HRESULT DoesSupportToneMappingMode(WICBitmapToneMappingMode mode, Bool32* pfIsSupported);
 	}
 }
 

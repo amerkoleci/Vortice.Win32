@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPointCollection*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	/// <inheritdoc cref="ID2D1SvgAttribute.Clone" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Clone(ID2D1SvgAttribute** attribute)
+	public HRESULT Clone(ID2D1SvgAttribute** attribute)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPointCollection*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), attribute);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::RemovePointsAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult RemovePointsAtEnd(uint pointsCount)
+	public HRESULT RemovePointsAtEnd(uint pointsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPointCollection*, uint, int>)(lpVtbl[6]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), pointsCount);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::UpdatePoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult UpdatePoints(Vector2* points, uint pointsCount, uint startIndex)
+	public HRESULT UpdatePoints(Vector2* points, uint pointsCount, uint startIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPointCollection*, Vector2*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetPoints(Vector2* points, uint pointsCount, uint startIndex)
+	public HRESULT GetPoints(Vector2* points, uint pointsCount, uint startIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPointCollection*, Vector2*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
 	}
@@ -129,13 +129,13 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]
-		HResult RemovePointsAtEnd(uint pointsCount);
+		HRESULT RemovePointsAtEnd(uint pointsCount);
 
 		[VtblIndex(7)]
-		HResult UpdatePoints(Vector2* points, uint pointsCount, uint startIndex);
+		HRESULT UpdatePoints(Vector2* points, uint pointsCount, uint startIndex);
 
 		[VtblIndex(8)]
-		HResult GetPoints(Vector2* points, uint pointsCount, uint startIndex);
+		HRESULT GetPoints(Vector2* points, uint pointsCount, uint startIndex);
 
 		[VtblIndex(9)]
 		uint GetPointsCount();

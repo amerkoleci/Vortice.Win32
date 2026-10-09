@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalizedStrings*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalizedStrings::FindLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult FindLocaleName(char* localeName, uint* index, Bool32* exists)
+	public HRESULT FindLocaleName(char* localeName, uint* index, Bool32* exists)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalizedStrings*, char*, uint*, Bool32*, int>)(lpVtbl[4]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), localeName, index, exists);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalizedStrings::GetLocaleNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetLocaleNameLength(uint index, uint* length)
+	public HRESULT GetLocaleNameLength(uint index, uint* length)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalizedStrings*, uint, uint*, int>)(lpVtbl[5]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), index, length);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalizedStrings::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetLocaleName(uint index, char* localeName, uint size)
+	public HRESULT GetLocaleName(uint index, char* localeName, uint size)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalizedStrings*, uint, char*, uint, int>)(lpVtbl[6]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), index, localeName, size);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalizedStrings::GetStringLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetStringLength(uint index, uint* length)
+	public HRESULT GetStringLength(uint index, uint* length)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalizedStrings*, uint, uint*, int>)(lpVtbl[7]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), index, length);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalizedStrings::GetString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetString(uint index, char* stringBuffer, uint size)
+	public HRESULT GetString(uint index, char* stringBuffer, uint size)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalizedStrings*, uint, char*, uint, int>)(lpVtbl[8]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), index, stringBuffer, size);
 	}
@@ -124,19 +124,19 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 		uint GetCount();
 
 		[VtblIndex(4)]
-		HResult FindLocaleName(char* localeName, uint* index, Bool32* exists);
+		HRESULT FindLocaleName(char* localeName, uint* index, Bool32* exists);
 
 		[VtblIndex(5)]
-		HResult GetLocaleNameLength(uint index, uint* length);
+		HRESULT GetLocaleNameLength(uint index, uint* length);
 
 		[VtblIndex(6)]
-		HResult GetLocaleName(uint index, char* localeName, uint size);
+		HRESULT GetLocaleName(uint index, char* localeName, uint size);
 
 		[VtblIndex(7)]
-		HResult GetStringLength(uint index, uint* length);
+		HRESULT GetStringLength(uint index, uint* length);
 
 		[VtblIndex(8)]
-		HResult GetString(uint index, char* stringBuffer, uint size);
+		HRESULT GetString(uint index, char* stringBuffer, uint size);
 	}
 }
 

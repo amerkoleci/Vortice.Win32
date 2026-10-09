@@ -38,7 +38,7 @@ public unsafe partial struct IErrorLog
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IErrorLog*, Guid*, void**, int>)(lpVtbl[0]))((IErrorLog*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }

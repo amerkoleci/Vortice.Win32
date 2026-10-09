@@ -47,7 +47,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetComponentType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetComponentType(WICComponentType* pType)
+	public HRESULT GetComponentType(WICComponentType* pType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pType);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetCLSID" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCLSID(Guid* pclsid)
+	public HRESULT GetCLSID(Guid* pclsid)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[4]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pclsid);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetSigningStatus" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetSigningStatus(uint* pStatus)
+	public HRESULT GetSigningStatus(uint* pStatus)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint*, int>)(lpVtbl[5]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pStatus);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
+	public HRESULT GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, char*, uint*, int>)(lpVtbl[6]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetVendorGUID(Guid* pguidVendor)
+	public HRESULT GetVendorGUID(Guid* pguidVendor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[7]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pguidVendor);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
+	public HRESULT GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, char*, uint*, int>)(lpVtbl[8]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
+	public HRESULT GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, char*, uint*, int>)(lpVtbl[9]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
+	public HRESULT GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, char*, uint*, int>)(lpVtbl[10]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetMetadataFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetMetadataFormat(Guid* pguidMetadataFormat)
+	public HRESULT GetMetadataFormat(Guid* pguidMetadataFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[11]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pguidMetadataFormat);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetContainerFormats" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetContainerFormats(uint cContainerFormats, Guid* pguidContainerFormats, uint* pcchActual)
+	public HRESULT GetContainerFormats(uint cContainerFormats, Guid* pguidContainerFormats, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cContainerFormats, pguidContainerFormats, pcchActual);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetDeviceManufacturer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char* wzDeviceManufacturer, uint* pcchActual)
+	public HRESULT GetDeviceManufacturer(uint cchDeviceManufacturer, char* wzDeviceManufacturer, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, char*, uint*, int>)(lpVtbl[13]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetDeviceModels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetDeviceModels(uint cchDeviceModels, char* wzDeviceModels, uint* pcchActual)
+	public HRESULT GetDeviceModels(uint cchDeviceModels, char* wzDeviceModels, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, uint, char*, uint*, int>)(lpVtbl[14]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesRequireFullStream" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult DoesRequireFullStream(Bool32* pfRequiresFullStream)
+	public HRESULT DoesRequireFullStream(Bool32* pfRequiresFullStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[15]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfRequiresFullStream);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesSupportPadding" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult DoesSupportPadding(Bool32* pfSupportsPadding)
+	public HRESULT DoesSupportPadding(Bool32* pfSupportsPadding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[16]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfSupportsPadding);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesRequireFixedSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult DoesRequireFixedSize(Bool32* pfFixedSize)
+	public HRESULT DoesRequireFixedSize(Bool32* pfFixedSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::GetPatterns"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual)
+	public HRESULT GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Guid*, uint, WICMetadataPattern*, uint*, uint*, int>)(lpVtbl[18]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pPattern, pcCount, pcbActual);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::MatchesPattern"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches)
+	public HRESULT MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, Guid*, Com.IStream*, Bool32*, int>)(lpVtbl[19]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, pIStream, pfMatches);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateInstance(IWICMetadataReader** ppIReader)
+	public HRESULT CreateInstance(IWICMetadataReader** ppIReader)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReaderInfo*, IWICMetadataReader**, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
 	}
@@ -217,13 +217,13 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	public interface Interface : IWICMetadataHandlerInfo.Interface
 	{
 		[VtblIndex(18)]
-		HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual);
+		HRESULT GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual);
 
 		[VtblIndex(19)]
-		HResult MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches);
+		HRESULT MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches);
 
 		[VtblIndex(20)]
-		HResult CreateInstance(IWICMetadataReader** ppIReader);
+		HRESULT CreateInstance(IWICMetadataReader** ppIReader);
 	}
 }
 

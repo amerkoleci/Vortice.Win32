@@ -49,7 +49,7 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Fence*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -83,7 +83,7 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11Fence*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -91,7 +91,7 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11Fence*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -99,7 +99,7 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11Fence*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -107,9 +107,9 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle)
+	public HRESULT CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, HANDLE* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, SECURITY_ATTRIBUTES*, uint, char*, HANDLE*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::GetCompletedValue"]/*' />
@@ -123,21 +123,21 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::SetEventOnCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetEventOnCompletion(ulong Value, Handle hEvent)
+	public HRESULT SetEventOnCompletion(ulong Value, HANDLE hEvent)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, ulong, Handle, int>)(lpVtbl[9]))((ID3D11Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, ulong, HANDLE, int>)(lpVtbl[9]))((ID3D11Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		HResult CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle);
+		HRESULT CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, HANDLE* pHandle);
 
 		[VtblIndex(8)]
 		ulong GetCompletedValue();
 
 		[VtblIndex(9)]
-		HResult SetEventOnCompletion(ulong Value, Handle hEvent);
+		HRESULT SetEventOnCompletion(ulong Value, HANDLE hEvent);
 	}
 }
 

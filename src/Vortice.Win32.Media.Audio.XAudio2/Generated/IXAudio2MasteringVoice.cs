@@ -28,7 +28,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputVoices" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public HResult SetOutputVoices(XAUDIO2_VOICE_SENDS* pSendList)
+	public HRESULT SetOutputVoices(XAUDIO2_VOICE_SENDS* pSendList)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, XAUDIO2_VOICE_SENDS*, int>)(lpVtbl[1]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), pSendList);
 	}
@@ -36,7 +36,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetEffectChain" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public HResult SetEffectChain(XAUDIO2_EFFECT_CHAIN* pEffectChain)
+	public HRESULT SetEffectChain(XAUDIO2_EFFECT_CHAIN* pEffectChain)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, XAUDIO2_EFFECT_CHAIN*, int>)(lpVtbl[2]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), pEffectChain);
 	}
@@ -44,7 +44,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.EnableEffect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult EnableEffect(uint EffectIndex, uint OperationSet)
+	public HRESULT EnableEffect(uint EffectIndex, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, uint, uint, int>)(lpVtbl[3]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), EffectIndex, OperationSet);
 	}
@@ -52,7 +52,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.DisableEffect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult DisableEffect(uint EffectIndex, uint OperationSet)
+	public HRESULT DisableEffect(uint EffectIndex, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, uint, uint, int>)(lpVtbl[4]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), EffectIndex, OperationSet);
 	}
@@ -68,7 +68,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetEffectParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetEffectParameters(uint EffectIndex, void* pParameters, uint ParametersByteSize, uint OperationSet)
+	public HRESULT SetEffectParameters(uint EffectIndex, void* pParameters, uint ParametersByteSize, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, uint, void*, uint, uint, int>)(lpVtbl[6]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), EffectIndex, pParameters, ParametersByteSize, OperationSet);
 	}
@@ -76,7 +76,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.GetEffectParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetEffectParameters(uint EffectIndex, void* pParameters, uint ParametersByteSize)
+	public HRESULT GetEffectParameters(uint EffectIndex, void* pParameters, uint ParametersByteSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, uint, void*, uint, int>)(lpVtbl[7]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), EffectIndex, pParameters, ParametersByteSize);
 	}
@@ -84,7 +84,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetFilterParameters(XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
+	public HRESULT SetFilterParameters(XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, XAUDIO2_FILTER_PARAMETERS*, uint, int>)(lpVtbl[8]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), pParameters, OperationSet);
 	}
@@ -100,7 +100,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputFilterParameters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
+	public HRESULT SetOutputFilterParameters(IXAudio2Voice* pDestinationVoice, XAUDIO2_FILTER_PARAMETERS* pParameters, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, IXAudio2Voice*, XAUDIO2_FILTER_PARAMETERS*, uint, int>)(lpVtbl[10]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, pParameters, OperationSet);
 	}
@@ -116,7 +116,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetVolume" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetVolume(float Volume, uint OperationSet)
+	public HRESULT SetVolume(float Volume, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, float, uint, int>)(lpVtbl[12]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), Volume, OperationSet);
 	}
@@ -132,7 +132,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetChannelVolumes" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetChannelVolumes(uint Channels, float* pVolumes, uint OperationSet)
+	public HRESULT SetChannelVolumes(uint Channels, float* pVolumes, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, uint, float*, uint, int>)(lpVtbl[14]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), Channels, pVolumes, OperationSet);
 	}
@@ -148,7 +148,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <inheritdoc cref="IXAudio2Voice.SetOutputMatrix" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult SetOutputMatrix(IXAudio2Voice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix, uint OperationSet)
+	public HRESULT SetOutputMatrix(IXAudio2Voice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix, uint OperationSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, IXAudio2Voice*, uint, uint, float*, uint, int>)(lpVtbl[16]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), pDestinationVoice, SourceChannels, DestinationChannels, pLevelMatrix, OperationSet);
 	}
@@ -172,7 +172,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2MasteringVoice::GetChannelMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetChannelMask(uint* pChannelmask)
+	public HRESULT GetChannelMask(uint* pChannelmask)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAudio2MasteringVoice*, uint*, int>)(lpVtbl[19]))((IXAudio2MasteringVoice*)Unsafe.AsPointer(ref this), pChannelmask);
 	}
@@ -180,7 +180,7 @@ public unsafe partial struct IXAudio2MasteringVoice : IXAudio2MasteringVoice.Int
 	public interface Interface : IXAudio2Voice.Interface
 	{
 		[VtblIndex(19)]
-		HResult GetChannelMask(uint* pChannelmask);
+		HRESULT GetChannelMask(uint* pChannelmask);
 	}
 }
 

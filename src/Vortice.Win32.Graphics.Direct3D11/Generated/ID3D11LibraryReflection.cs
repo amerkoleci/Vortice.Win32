@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11LibraryReflection*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetDesc(D3D11_LIBRARY_DESC* pDesc)
+	public HRESULT GetDesc(D3D11_LIBRARY_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11LibraryReflection*, D3D11_LIBRARY_DESC*, int>)(lpVtbl[3]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetDesc(D3D11_LIBRARY_DESC* pDesc);
+		HRESULT GetDesc(D3D11_LIBRARY_DESC* pDesc);
 
 		[VtblIndex(4)]
 		ID3D11FunctionReflection* GetFunctionByIndex(int FunctionIndex);

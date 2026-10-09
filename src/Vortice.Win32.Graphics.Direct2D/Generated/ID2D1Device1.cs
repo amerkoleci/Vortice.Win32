@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Device1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device1*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext1);
 	}
@@ -143,7 +143,7 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 		void SetRenderingPriority(D2D1_RENDERING_PRIORITY renderingPriority);
 
 		[VtblIndex(10)]
-		HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1);
+		HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1);
 	}
 }
 

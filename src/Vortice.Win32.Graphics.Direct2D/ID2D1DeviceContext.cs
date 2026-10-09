@@ -10,139 +10,139 @@ namespace Vortice.Win32.Graphics;
 
 public static unsafe class ID2D1DeviceContextExtensions
 {
-    public static HResult CreateBitmapt<TD2D1DeviceContext>(
+    public static HRESULT CreateBitmapt<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, Size size, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmap(size, null, 0, bitmapProperties, bitmap);
     }
 
-    public static HResult CreateBitmapFromWicBitmapt<TD2D1DeviceContext>(
+    public static HRESULT CreateBitmapFromWicBitmapt<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, IWICBitmapSource* wicBitmapSource, ID2D1Bitmap** bitmap)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmapFromWicBitmap(wicBitmapSource, null, bitmap);
     }
 
-    public static HResult CreateBitmapBrusht<TD2D1DeviceContext>(
+    public static HRESULT CreateBitmapBrusht<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Bitmap* bitmap, ID2D1BitmapBrush** bitmapBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmapBrush(bitmap, null, null, bitmapBrush);
     }
 
-    public static HResult CreateBitmapBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateBitmapBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Bitmap* bitmap, D2D1_BITMAP_BRUSH_PROPERTIES* bitmapBrushProperties, ID2D1BitmapBrush** bitmapBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmapBrush(bitmap, bitmapBrushProperties, null, bitmapBrush);
     }
 
-    public static HResult CreateSolidColorBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateSolidColorBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, Color4* color, ID2D1SolidColorBrush** solidColorBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateSolidColorBrush(color, null, solidColorBrush);
     }
 
-    public static HResult CreateSolidColorBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateSolidColorBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, Color4 color, ID2D1SolidColorBrush** solidColorBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateSolidColorBrush(&color, null, solidColorBrush);
     }
 
-    public static HResult CreateGradientStopCollection<TD2D1DeviceContext>(
+    public static HRESULT CreateGradientStopCollection<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, D2D1_GRADIENT_STOP* gradientStops, int gradientStopsCount, ID2D1GradientStopCollection** gradientStopCollection)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateGradientStopCollection(gradientStops, (uint)gradientStopsCount, D2D1_GAMMA_2_2, D2D1_EXTEND_MODE_CLAMP, gradientStopCollection);
     }
 
-    public static HResult CreateLinearGradientBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateLinearGradientBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES* linearGradientBrushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateLinearGradientBrush(linearGradientBrushProperties, null, gradientStopCollection, linearGradientBrush);
     }
 
-    public static HResult CreateRadialGradientBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateRadialGradientBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES* radialGradientBrushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateRadialGradientBrush(radialGradientBrushProperties, null, gradientStopCollection, radialGradientBrush);
     }
 
-    public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
+    public static HRESULT CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateCompatibleRenderTarget(null, null, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
-    public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
+    public static HRESULT CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF desiredSize, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateCompatibleRenderTarget(&desiredSize, null, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
-    public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
+    public static HRESULT CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, null, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
-    public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
+    public static HRESULT CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, D2D1_PIXEL_FORMAT desiredFormat, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, &desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE, bitmapRenderTarget);
     }
 
-    public static HResult CreateCompatibleRenderTarget<TD2D1DeviceContext>(
+    public static HRESULT CreateCompatibleRenderTarget<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF desiredSize, Size desiredPixelSize, D2D1_PIXEL_FORMAT desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateCompatibleRenderTarget(&desiredSize, &desiredPixelSize, &desiredFormat, options, bitmapRenderTarget);
     }
 
-    public static HResult CreateLayer<TD2D1DeviceContext>(
+    public static HRESULT CreateLayer<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, SizeF size, ID2D1Layer** layer)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateLayer(&size, layer);
     }
 
-    public static HResult CreateLayer<TD2D1DeviceContext>(
+    public static HRESULT CreateLayer<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Layer** layer)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateLayer(null, layer);
     }
-    public static HResult CreateBitmapFromWicBitmap<TD2D1DeviceContext>(
+    public static HRESULT CreateBitmapFromWicBitmap<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, IWICBitmapSource* wicBitmapSource, ID2D1Bitmap1** bitmap)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmapFromWicBitmap(wicBitmapSource, null, bitmap);
     }
 
-    public static HResult CreateImageBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateImageBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Image* image, D2D1_IMAGE_BRUSH_PROPERTIES* imageBrushProperties, ID2D1ImageBrush** imageBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateImageBrush(image, imageBrushProperties, null, imageBrush);
     }
 
-    public static HResult CreateBitmapBrush<TD2D1DeviceContext>(
+    public static HRESULT CreateBitmapBrush<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, ID2D1Bitmap* bitmap, ID2D1BitmapBrush1** bitmapBrush)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
         return self.CreateBitmapBrush(bitmap, null, null, bitmapBrush);
     }
 
-    public static HResult CreateEffect<TD2D1DeviceContext>(
+    public static HRESULT CreateEffect<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self, in Guid effectId, ID2D1Effect** effect)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
@@ -243,7 +243,7 @@ public static unsafe class ID2D1DeviceContextExtensions
         self.DrawGdiMetafile(gdiMetafile, &targetOffset);
     }
 
-    public static HResult SetDpiCompensatedEffectInput<TD2D1DeviceContext>(
+    public static HRESULT SetDpiCompensatedEffectInput<TD2D1DeviceContext>(
         ref this TD2D1DeviceContext self,
         ID2D1Effect* effect,
         uint inputIndex,
@@ -252,7 +252,7 @@ public static unsafe class ID2D1DeviceContextExtensions
         D2D1_BORDER_MODE borderMode = D2D1_BORDER_MODE_HARD)
         where TD2D1DeviceContext : unmanaged, ID2D1DeviceContext.Interface
     {
-        HResult hr = HResult.Ok;
+        HRESULT hr = S_OK;
         ID2D1Effect* dpiCompensationEffect = null;
 
         if (inputBitmap == null)

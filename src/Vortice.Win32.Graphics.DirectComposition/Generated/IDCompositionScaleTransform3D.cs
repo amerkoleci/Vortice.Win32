@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetScaleX(IDCompositionAnimation* animation)
+	public HRESULT SetScaleX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetScaleX(float scaleX)
+	public HRESULT SetScaleX(float scaleX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[4]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleX);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetScaleY(IDCompositionAnimation* animation)
+	public HRESULT SetScaleY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetScaleY(float scaleY)
+	public HRESULT SetScaleY(float scaleY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[6]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleY);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleZ"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetScaleZ(IDCompositionAnimation* animation)
+	public HRESULT SetScaleZ(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleZ"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetScaleZ(float scaleZ)
+	public HRESULT SetScaleZ(float scaleZ)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[8]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleZ);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetCenterX(IDCompositionAnimation* animation)
+	public HRESULT SetCenterX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetCenterX(float centerX)
+	public HRESULT SetCenterX(float centerX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[10]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerX);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetCenterY(IDCompositionAnimation* animation)
+	public HRESULT SetCenterY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetCenterY(float centerY)
+	public HRESULT SetCenterY(float centerY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[12]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerY);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterZ"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult SetCenterZ(IDCompositionAnimation* animation)
+	public HRESULT SetCenterZ(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterZ"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetCenterZ(float centerZ)
+	public HRESULT SetCenterZ(float centerZ)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[14]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerZ);
 	}
@@ -169,40 +169,40 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	public interface Interface : IDCompositionTransform3D.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetScaleX(IDCompositionAnimation* animation);
+		HRESULT SetScaleX(IDCompositionAnimation* animation);
 
 		[VtblIndex(4)]
-		HResult SetScaleX(float scaleX);
+		HRESULT SetScaleX(float scaleX);
 
 		[VtblIndex(5)]
-		HResult SetScaleY(IDCompositionAnimation* animation);
+		HRESULT SetScaleY(IDCompositionAnimation* animation);
 
 		[VtblIndex(6)]
-		HResult SetScaleY(float scaleY);
+		HRESULT SetScaleY(float scaleY);
 
 		[VtblIndex(7)]
-		HResult SetScaleZ(IDCompositionAnimation* animation);
+		HRESULT SetScaleZ(IDCompositionAnimation* animation);
 
 		[VtblIndex(8)]
-		HResult SetScaleZ(float scaleZ);
+		HRESULT SetScaleZ(float scaleZ);
 
 		[VtblIndex(9)]
-		HResult SetCenterX(IDCompositionAnimation* animation);
+		HRESULT SetCenterX(IDCompositionAnimation* animation);
 
 		[VtblIndex(10)]
-		HResult SetCenterX(float centerX);
+		HRESULT SetCenterX(float centerX);
 
 		[VtblIndex(11)]
-		HResult SetCenterY(IDCompositionAnimation* animation);
+		HRESULT SetCenterY(IDCompositionAnimation* animation);
 
 		[VtblIndex(12)]
-		HResult SetCenterY(float centerY);
+		HRESULT SetCenterY(float centerY);
 
 		[VtblIndex(13)]
-		HResult SetCenterZ(IDCompositionAnimation* animation);
+		HRESULT SetCenterZ(IDCompositionAnimation* animation);
 
 		[VtblIndex(14)]
-		HResult SetCenterZ(float centerZ);
+		HRESULT SetCenterZ(float centerZ);
 	}
 }
 

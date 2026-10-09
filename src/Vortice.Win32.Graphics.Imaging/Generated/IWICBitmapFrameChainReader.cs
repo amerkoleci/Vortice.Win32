@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapFrameChainReader : IWICBitmapFrameChainRe
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapFrameChainReader*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapFrameChainReader*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapFrameChainReader : IWICBitmapFrameChainRe
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameChainReader::GetChainedFrameCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetChainedFrameCount(WICBitmapChainType chainType, uint* pCount)
+	public HRESULT GetChainedFrameCount(WICBitmapChainType chainType, uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapFrameChainReader*, WICBitmapChainType, uint*, int>)(lpVtbl[3]))((IWICBitmapFrameChainReader*)Unsafe.AsPointer(ref this), chainType, pCount);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapFrameChainReader : IWICBitmapFrameChainRe
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameChainReader::GetChainedFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetChainedFrame(WICBitmapChainType chainType, uint index, IWICBitmapFrameDecode** ppIBitmapFrame)
+	public HRESULT GetChainedFrame(WICBitmapChainType chainType, uint index, IWICBitmapFrameDecode** ppIBitmapFrame)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapFrameChainReader*, WICBitmapChainType, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[4]))((IWICBitmapFrameChainReader*)Unsafe.AsPointer(ref this), chainType, index, ppIBitmapFrame);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IWICBitmapFrameChainReader : IWICBitmapFrameChainRe
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetChainedFrameCount(WICBitmapChainType chainType, uint* pCount);
+		HRESULT GetChainedFrameCount(WICBitmapChainType chainType, uint* pCount);
 
 		[VtblIndex(4)]
-		HResult GetChainedFrame(WICBitmapChainType chainType, uint index, IWICBitmapFrameDecode** ppIBitmapFrame);
+		HRESULT GetChainedFrame(WICBitmapChainType chainType, uint index, IWICBitmapFrameDecode** ppIBitmapFrame);
 	}
 }
 

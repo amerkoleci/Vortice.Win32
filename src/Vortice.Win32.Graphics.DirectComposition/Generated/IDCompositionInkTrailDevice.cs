@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionInkTrailDevice : IDCompositionInkTrail
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionInkTrailDevice*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionInkTrailDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionInkTrailDevice : IDCompositionInkTrail
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionInkTrailDevice::CreateDelegatedInkTrail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateDelegatedInkTrail(IDCompositionDelegatedInkTrail** inkTrail)
+	public HRESULT CreateDelegatedInkTrail(IDCompositionDelegatedInkTrail** inkTrail)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionInkTrailDevice*, IDCompositionDelegatedInkTrail**, int>)(lpVtbl[3]))((IDCompositionInkTrailDevice*)Unsafe.AsPointer(ref this), inkTrail);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionInkTrailDevice : IDCompositionInkTrail
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionInkTrailDevice::CreateDelegatedInkTrailForSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDelegatedInkTrailForSwapChain(IUnknown* swapChain, IDCompositionDelegatedInkTrail** inkTrail)
+	public HRESULT CreateDelegatedInkTrailForSwapChain(IUnknown* swapChain, IDCompositionDelegatedInkTrail** inkTrail)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionInkTrailDevice*, IUnknown*, IDCompositionDelegatedInkTrail**, int>)(lpVtbl[4]))((IDCompositionInkTrailDevice*)Unsafe.AsPointer(ref this), swapChain, inkTrail);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IDCompositionInkTrailDevice : IDCompositionInkTrail
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateDelegatedInkTrail(IDCompositionDelegatedInkTrail** inkTrail);
+		HRESULT CreateDelegatedInkTrail(IDCompositionDelegatedInkTrail** inkTrail);
 
 		[VtblIndex(4)]
-		HResult CreateDelegatedInkTrailForSwapChain(IUnknown* swapChain, IDCompositionDelegatedInkTrail** inkTrail);
+		HRESULT CreateDelegatedInkTrailForSwapChain(IUnknown* swapChain, IDCompositionDelegatedInkTrail** inkTrail);
 	}
 }
 

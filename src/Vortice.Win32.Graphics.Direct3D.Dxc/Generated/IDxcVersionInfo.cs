@@ -46,7 +46,7 @@ public unsafe partial struct IDxcVersionInfo : IDxcVersionInfo.Interface, INativ
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo*, Guid*, void**, int>)(lpVtbl[0]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,14 +71,14 @@ public unsafe partial struct IDxcVersionInfo : IDxcVersionInfo.Interface, INativ
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetVersion(uint* pMajor, uint* pMinor)
+	public HRESULT GetVersion(uint* pMajor, uint* pMinor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo*, uint*, uint*, int>)(lpVtbl[3]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), pMajor, pMinor);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFlags(DxcVersionInfoFlags* pFlags)
+	public HRESULT GetFlags(DxcVersionInfoFlags* pFlags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), pFlags);
 	}
@@ -86,10 +86,10 @@ public unsafe partial struct IDxcVersionInfo : IDxcVersionInfo.Interface, INativ
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetVersion(uint* pMajor, uint* pMinor);
+		HRESULT GetVersion(uint* pMajor, uint* pMinor);
 
 		[VtblIndex(4)]
-		HResult GetFlags(DxcVersionInfoFlags* pFlags);
+		HRESULT GetFlags(DxcVersionInfoFlags* pFlags);
 	}
 }
 

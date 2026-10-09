@@ -38,7 +38,7 @@ public unsafe partial struct IEnumString : IEnumString.Interface, INativeGuid
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumString*, Guid*, void**, int>)(lpVtbl[0]))((IEnumString*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -63,28 +63,28 @@ public unsafe partial struct IEnumString : IEnumString.Interface, INativeGuid
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] uint** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
+    public HRESULT Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] uint** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumString*, uint, uint**, uint*, int>)(lpVtbl[3]))((IEnumString*)Unsafe.AsPointer(ref this), celt, rgelt, pceltFetched);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult Skip([NativeTypeName("ULONG")] uint celt)
+    public HRESULT Skip([NativeTypeName("ULONG")] uint celt)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumString*, uint, int>)(lpVtbl[4]))((IEnumString*)Unsafe.AsPointer(ref this), celt);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Reset()
+    public HRESULT Reset()
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumString*, int>)(lpVtbl[5]))((IEnumString*)Unsafe.AsPointer(ref this));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult Clone(IEnumString** ppenum)
+    public HRESULT Clone(IEnumString** ppenum)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumString*, IEnumString**, int>)(lpVtbl[6]))((IEnumString*)Unsafe.AsPointer(ref this), ppenum);
     }
@@ -92,15 +92,15 @@ public unsafe partial struct IEnumString : IEnumString.Interface, INativeGuid
     public interface Interface : IUnknown.Interface
     {
         [VtblIndex(3)]
-        HResult Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] uint** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched);
+        HRESULT Next([NativeTypeName("ULONG")] uint celt, [NativeTypeName("LPOLESTR *")] uint** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched);
 
         [VtblIndex(4)]
-        HResult Skip([NativeTypeName("ULONG")] uint celt);
+        HRESULT Skip([NativeTypeName("ULONG")] uint celt);
 
         [VtblIndex(5)]
-        HResult Reset();
+        HRESULT Reset();
 
         [VtblIndex(6)]
-        HResult Clone(IEnumString** ppenum);
+        HRESULT Clone(IEnumString** ppenum);
     }
 }

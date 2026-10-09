@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetScriptAnalysis" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetScriptAnalysis(uint textPosition, uint textLength, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis)
+	public HRESULT SetScriptAnalysis(uint textPosition, uint textLength, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink1*, uint, uint, DWRITE_SCRIPT_ANALYSIS*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, scriptAnalysis);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetLineBreakpoints" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetLineBreakpoints(uint textPosition, uint textLength, DWRITE_LINE_BREAKPOINT* lineBreakpoints)
+	public HRESULT SetLineBreakpoints(uint textPosition, uint textLength, DWRITE_LINE_BREAKPOINT* lineBreakpoints)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink1*, uint, uint, DWRITE_LINE_BREAKPOINT*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, lineBreakpoints);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetBidiLevel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel)
+	public HRESULT SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink1*, uint, uint, byte, byte, int>)(lpVtbl[5]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, explicitLevel, resolvedLevel);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetNumberSubstitution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)
+	public HRESULT SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink1*, uint, uint, IDWriteNumberSubstitution*, int>)(lpVtbl[6]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink1::SetGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetGlyphOrientation(uint textPosition, uint textLength, DWRITE_GLYPH_ORIENTATION_ANGLE glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft)
+	public HRESULT SetGlyphOrientation(uint textPosition, uint textLength, DWRITE_GLYPH_ORIENTATION_ANGLE glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink1*, uint, uint, DWRITE_GLYPH_ORIENTATION_ANGLE, byte, Bool32, Bool32, int>)(lpVtbl[7]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientationAngle, adjustedBidiLevel, isSideways, isRightToLeft);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	public interface Interface : IDWriteTextAnalysisSink.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetGlyphOrientation(uint textPosition, uint textLength, DWRITE_GLYPH_ORIENTATION_ANGLE glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft);
+		HRESULT SetGlyphOrientation(uint textPosition, uint textLength, DWRITE_GLYPH_ORIENTATION_ANGLE glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, Guid*, void**, int>)(lpVtbl[0]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromFilename" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateDecoderFromFilename(char* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
+	public HRESULT CreateDecoderFromFilename(char* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, char*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromStream" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDecoderFromStream(Com.IStream* pIStream, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
+	public HRESULT CreateDecoderFromStream(Com.IStream* pIStream, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, Com.IStream*, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[4]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pIStream, pguidVendor, metadataOptions, ppIDecoder);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromFileHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateDecoderFromFileHandle(nuint hFile, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
+	public HRESULT CreateDecoderFromFileHandle(nuint hFile, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, nuint, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[5]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), hFile, pguidVendor, metadataOptions, ppIDecoder);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateComponentInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo** ppIInfo)
+	public HRESULT CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo** ppIInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, Guid*, IWICComponentInfo**, int>)(lpVtbl[6]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoder" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateDecoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapDecoder** ppIDecoder)
+	public HRESULT CreateDecoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapDecoder** ppIDecoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, Guid*, Guid*, IWICBitmapDecoder**, int>)(lpVtbl[7]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIDecoder);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateEncoder" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateEncoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapEncoder** ppIEncoder)
+	public HRESULT CreateEncoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapEncoder** ppIEncoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, Guid*, Guid*, IWICBitmapEncoder**, int>)(lpVtbl[8]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIEncoder);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreatePalette" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreatePalette(IWICPalette** ppIPalette)
+	public HRESULT CreatePalette(IWICPalette** ppIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICPalette**, int>)(lpVtbl[9]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIPalette);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateFormatConverter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateFormatConverter(IWICFormatConverter** ppIFormatConverter)
+	public HRESULT CreateFormatConverter(IWICFormatConverter** ppIFormatConverter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICFormatConverter**, int>)(lpVtbl[10]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIFormatConverter);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapScaler" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateBitmapScaler(IWICBitmapScaler** ppIBitmapScaler)
+	public HRESULT CreateBitmapScaler(IWICBitmapScaler** ppIBitmapScaler)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapScaler**, int>)(lpVtbl[11]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapClipper" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateBitmapClipper(IWICBitmapClipper** ppIBitmapClipper)
+	public HRESULT CreateBitmapClipper(IWICBitmapClipper** ppIBitmapClipper)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapClipper**, int>)(lpVtbl[12]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFlipRotator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator** ppIBitmapFlipRotator)
+	public HRESULT CreateBitmapFlipRotator(IWICBitmapFlipRotator** ppIBitmapFlipRotator)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapFlipRotator**, int>)(lpVtbl[13]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateStream" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateStream(IWICStream** ppIWICStream)
+	public HRESULT CreateStream(IWICStream** ppIWICStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICStream**, int>)(lpVtbl[14]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIWICStream);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateColorContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateColorContext(IWICColorContext** ppIWICColorContext)
+	public HRESULT CreateColorContext(IWICColorContext** ppIWICColorContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICColorContext**, int>)(lpVtbl[15]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIWICColorContext);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateColorTransformer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateColorTransformer(IWICColorTransform** ppIWICColorTransform)
+	public HRESULT CreateColorTransformer(IWICColorTransform** ppIWICColorTransform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICColorTransform**, int>)(lpVtbl[16]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
+	public HRESULT CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[17]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromSource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
+	public HRESULT CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[18]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromSourceRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap** ppIBitmap)
+	public HRESULT CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap** ppIBitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int>)(lpVtbl[19]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromMemory" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap** ppIBitmap)
+	public HRESULT CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap** ppIBitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int>)(lpVtbl[20]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromHBITMAP" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap** ppIBitmap)
+	public HRESULT CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap** ppIBitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int>)(lpVtbl[21]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
 	}
@@ -225,7 +225,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromHICON" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap** ppIBitmap)
+	public HRESULT CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap** ppIBitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IntPtr, IWICBitmap**, int>)(lpVtbl[22]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
 	}
@@ -233,7 +233,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateComponentEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown** ppIEnumUnknown)
+	public HRESULT CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown** ppIEnumUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, uint, uint, Com.IEnumUnknown**, int>)(lpVtbl[23]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
 	}
@@ -241,7 +241,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateFastMetadataEncoderFromDecoder" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
+	public HRESULT CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int>)(lpVtbl[24]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
 	}
@@ -249,7 +249,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateFastMetadataEncoderFromFrameDecode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
+	public HRESULT CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int>)(lpVtbl[25]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
 	}
@@ -257,7 +257,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateQueryWriter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
+	public HRESULT CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, Guid*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[26]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
 	}
@@ -265,7 +265,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory.CreateQueryWriterFromReader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
+	public HRESULT CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
@@ -273,7 +273,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <inheritdoc cref="IWICImagingFactory2.CreateImageEncoder" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult CreateImageEncoder(ID2D1Device* pD2DDevice, IWICImageEncoder** ppWICImageEncoder)
+	public HRESULT CreateImageEncoder(ID2D1Device* pD2DDevice, IWICImageEncoder** ppWICImageEncoder)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, ID2D1Device*, IWICImageEncoder**, int>)(lpVtbl[28]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), pD2DDevice, ppWICImageEncoder);
 	}
@@ -281,7 +281,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	/// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImagingFactory3::CreateBitmapToneMapper"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult CreateBitmapToneMapper(IWICBitmapToneMapper** ppToneMapper)
+	public HRESULT CreateBitmapToneMapper(IWICBitmapToneMapper** ppToneMapper)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory3*, IWICBitmapToneMapper**, int>)(lpVtbl[29]))((IWICImagingFactory3*)Unsafe.AsPointer(ref this), ppToneMapper);
 	}
@@ -289,7 +289,7 @@ public unsafe partial struct IWICImagingFactory3 : IWICImagingFactory3.Interface
 	public interface Interface : IWICImagingFactory2.Interface
 	{
 		[VtblIndex(29)]
-		HResult CreateBitmapToneMapper(IWICBitmapToneMapper** ppToneMapper);
+		HRESULT CreateBitmapToneMapper(IWICBitmapToneMapper** ppToneMapper);
 	}
 }
 

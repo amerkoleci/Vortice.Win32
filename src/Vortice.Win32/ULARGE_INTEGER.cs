@@ -5,7 +5,7 @@ namespace Vortice.Win32;
 
 [StructLayout(LayoutKind.Explicit)]
 [NativeTypeName("ULARGE_INTEGER")]
-public partial struct ULargeInteger
+public partial struct ULARGE_INTEGER
 {
     [FieldOffset(0)]
     public _Anonymous_e__Struct Anonymous;

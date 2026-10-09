@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12DebugDevice : ID3D12DebugDevice.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12DebugDevice : ID3D12DebugDevice.Interface, IN
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::SetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetFeatureMask(D3D12_DEBUG_FEATURE Mask)
+	public HRESULT SetFeatureMask(D3D12_DEBUG_FEATURE Mask)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice*, D3D12_DEBUG_FEATURE, int>)(lpVtbl[3]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this), Mask);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12DebugDevice : ID3D12DebugDevice.Interface, IN
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::ReportLiveDeviceObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult ReportLiveDeviceObjects(D3D12_RLDO_FLAGS Flags)
+	public HRESULT ReportLiveDeviceObjects(D3D12_RLDO_FLAGS Flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice*, D3D12_RLDO_FLAGS, int>)(lpVtbl[5]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this), Flags);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct ID3D12DebugDevice : ID3D12DebugDevice.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetFeatureMask(D3D12_DEBUG_FEATURE Mask);
+		HRESULT SetFeatureMask(D3D12_DEBUG_FEATURE Mask);
 
 		[VtblIndex(4)]
 		D3D12_DEBUG_FEATURE GetFeatureMask();
 
 		[VtblIndex(5)]
-		HResult ReportLiveDeviceObjects(D3D12_RLDO_FLAGS Flags);
+		HRESULT ReportLiveDeviceObjects(D3D12_RLDO_FLAGS Flags);
 	}
 }
 

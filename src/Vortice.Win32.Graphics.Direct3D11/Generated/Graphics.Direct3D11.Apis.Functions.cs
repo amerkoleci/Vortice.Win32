@@ -13,9 +13,9 @@ public static unsafe partial class D3D11
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11CreateDevice"]/*' />
 	[LibraryImport("d3d11.dll")]
-	public static partial HResult D3D11CreateDevice(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, nint Software, D3D11_CREATE_DEVICE_FLAG Flags, D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+	public static partial HRESULT D3D11CreateDevice(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, nint Software, D3D11_CREATE_DEVICE_FLAG Flags, D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11CreateDeviceAndSwapChain"]/*' />
 	[LibraryImport("d3d11.dll")]
-	public static partial HResult D3D11CreateDeviceAndSwapChain(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, nint Software, D3D11_CREATE_DEVICE_FLAG Flags, D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+	public static partial HRESULT D3D11CreateDeviceAndSwapChain(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, nint Software, D3D11_CREATE_DEVICE_FLAG Flags, D3D_FEATURE_LEVEL* pFeatureLevels, uint FeatureLevels, uint SDKVersion, DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
 }

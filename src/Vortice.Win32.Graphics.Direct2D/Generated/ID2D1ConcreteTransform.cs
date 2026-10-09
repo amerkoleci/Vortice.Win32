@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ConcreteTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ConcreteTransform::SetOutputBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
+	public HRESULT SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ConcreteTransform*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth);
+		HRESULT SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth);
 
 		[VtblIndex(5)]
 		void SetCached(Bool32 isCached);

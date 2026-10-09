@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::CreateWrappedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
+	public HRESULT CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device*, IUnknown*, D3D11_RESOURCE_FLAGS*, D3D12_RESOURCE_STATES, D3D12_RESOURCE_STATES, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11);
+		HRESULT CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11);
 
 		[VtblIndex(4)]
 		void ReleaseWrappedResources(ID3D11Resource** ppResources, uint NumResources);

@@ -46,7 +46,7 @@ public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, Guid*, void**, int>)(lpVtbl[0]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,35 +71,35 @@ public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, IN
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetOptionName(char** ppResult)
+	public HRESULT GetOptionName(char** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, char**, int>)(lpVtbl[3]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetDescription(char** ppResult)
+	public HRESULT GetDescription(char** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, char**, int>)(lpVtbl[4]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetOptionArgCount(uint* pCount)
+	public HRESULT GetOptionArgCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint*, int>)(lpVtbl[5]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetOptionArgName(uint argIndex, char** ppResult)
+	public HRESULT GetOptionArgName(uint argIndex, char** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint, char**, int>)(lpVtbl[6]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetOptionArgDescription(uint argIndex, char** ppResult)
+	public HRESULT GetOptionArgDescription(uint argIndex, char** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint, char**, int>)(lpVtbl[7]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
@@ -107,19 +107,19 @@ public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetOptionName(char** ppResult);
+		HRESULT GetOptionName(char** ppResult);
 
 		[VtblIndex(4)]
-		HResult GetDescription(char** ppResult);
+		HRESULT GetDescription(char** ppResult);
 
 		[VtblIndex(5)]
-		HResult GetOptionArgCount(uint* pCount);
+		HRESULT GetOptionArgCount(uint* pCount);
 
 		[VtblIndex(6)]
-		HResult GetOptionArgName(uint argIndex, char** ppResult);
+		HRESULT GetOptionArgName(uint argIndex, char** ppResult);
 
 		[VtblIndex(7)]
-		HResult GetOptionArgDescription(uint argIndex, char** ppResult);
+		HRESULT GetOptionArgDescription(uint argIndex, char** ppResult);
 	}
 }
 

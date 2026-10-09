@@ -47,7 +47,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPO*, Guid*, void**, int>)(lpVtbl[0]))((IXAPO*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::GetRegistrationProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetRegistrationProperties(XAPO_REGISTRATION_PROPERTIES** ppRegistrationProperties)
+	public HRESULT GetRegistrationProperties(XAPO_REGISTRATION_PROPERTIES** ppRegistrationProperties)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPO*, XAPO_REGISTRATION_PROPERTIES**, int>)(lpVtbl[3]))((IXAPO*)Unsafe.AsPointer(ref this), ppRegistrationProperties);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::IsInputFormatSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult IsInputFormatSupported(Media.Audio.WaveFormatEx* pOutputFormat, Media.Audio.WaveFormatEx* pRequestedInputFormat, Media.Audio.WaveFormatEx** ppSupportedInputFormat)
+	public HRESULT IsInputFormatSupported(Media.Audio.WaveFormatEx* pOutputFormat, Media.Audio.WaveFormatEx* pRequestedInputFormat, Media.Audio.WaveFormatEx** ppSupportedInputFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[4]))((IXAPO*)Unsafe.AsPointer(ref this), pOutputFormat, pRequestedInputFormat, ppSupportedInputFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::IsOutputFormatSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult IsOutputFormatSupported(Media.Audio.WaveFormatEx* pInputFormat, Media.Audio.WaveFormatEx* pRequestedOutputFormat, Media.Audio.WaveFormatEx** ppSupportedOutputFormat)
+	public HRESULT IsOutputFormatSupported(Media.Audio.WaveFormatEx* pInputFormat, Media.Audio.WaveFormatEx* pRequestedOutputFormat, Media.Audio.WaveFormatEx** ppSupportedOutputFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[5]))((IXAPO*)Unsafe.AsPointer(ref this), pInputFormat, pRequestedOutputFormat, ppSupportedOutputFormat);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult Initialize(void* pData, uint DataByteSize)
+	public HRESULT Initialize(void* pData, uint DataByteSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPO*, void*, uint, int>)(lpVtbl[6]))((IXAPO*)Unsafe.AsPointer(ref this), pData, DataByteSize);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::LockForProcess"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult LockForProcess(uint InputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pInputLockedParameters, uint OutputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pOutputLockedParameters)
+	public HRESULT LockForProcess(uint InputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pInputLockedParameters, uint OutputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pOutputLockedParameters)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPO_LOCKFORPROCESS_PARAMETERS*, uint, XAPO_LOCKFORPROCESS_PARAMETERS*, int>)(lpVtbl[8]))((IXAPO*)Unsafe.AsPointer(ref this), InputLockedParameterCount, pInputLockedParameters, OutputLockedParameterCount, pOutputLockedParameters);
 	}
@@ -153,22 +153,22 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetRegistrationProperties(XAPO_REGISTRATION_PROPERTIES** ppRegistrationProperties);
+		HRESULT GetRegistrationProperties(XAPO_REGISTRATION_PROPERTIES** ppRegistrationProperties);
 
 		[VtblIndex(4)]
-		HResult IsInputFormatSupported(Media.Audio.WaveFormatEx* pOutputFormat, Media.Audio.WaveFormatEx* pRequestedInputFormat, Media.Audio.WaveFormatEx** ppSupportedInputFormat);
+		HRESULT IsInputFormatSupported(Media.Audio.WaveFormatEx* pOutputFormat, Media.Audio.WaveFormatEx* pRequestedInputFormat, Media.Audio.WaveFormatEx** ppSupportedInputFormat);
 
 		[VtblIndex(5)]
-		HResult IsOutputFormatSupported(Media.Audio.WaveFormatEx* pInputFormat, Media.Audio.WaveFormatEx* pRequestedOutputFormat, Media.Audio.WaveFormatEx** ppSupportedOutputFormat);
+		HRESULT IsOutputFormatSupported(Media.Audio.WaveFormatEx* pInputFormat, Media.Audio.WaveFormatEx* pRequestedOutputFormat, Media.Audio.WaveFormatEx** ppSupportedOutputFormat);
 
 		[VtblIndex(6)]
-		HResult Initialize(void* pData, uint DataByteSize);
+		HRESULT Initialize(void* pData, uint DataByteSize);
 
 		[VtblIndex(7)]
 		void Reset();
 
 		[VtblIndex(8)]
-		HResult LockForProcess(uint InputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pInputLockedParameters, uint OutputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pOutputLockedParameters);
+		HRESULT LockForProcess(uint InputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pInputLockedParameters, uint OutputLockedParameterCount, XAPO_LOCKFORPROCESS_PARAMETERS* pOutputLockedParameters);
 
 		[VtblIndex(9)]
 		void UnlockForProcess();

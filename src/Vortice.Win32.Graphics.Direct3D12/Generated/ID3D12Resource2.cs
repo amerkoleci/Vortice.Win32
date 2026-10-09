@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, char*, int>)(lpVtbl[6]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Resource.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Map(uint Subresource, D3D12_RANGE* pReadRange, void** ppData)
+	public HRESULT Map(uint Subresource, D3D12_RANGE* pReadRange, void** ppData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, uint, D3D12_RANGE*, void**, int>)(lpVtbl[8]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), Subresource, pReadRange, ppData);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Resource.WriteToSubresource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult WriteToSubresource(uint DstSubresource, D3D12_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
+	public HRESULT WriteToSubresource(uint DstSubresource, D3D12_BOX* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, uint, D3D12_BOX*, void*, uint, uint, int>)(lpVtbl[12]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Resource.ReadFromSubresource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, D3D12_BOX* pSrcBox)
+	public HRESULT ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, D3D12_BOX* pSrcBox)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, void*, uint, uint, uint, D3D12_BOX*, int>)(lpVtbl[13]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, SrcSubresource, pSrcBox);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Resource.GetHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetHeapProperties(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags)
+	public HRESULT GetHeapProperties(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS* pHeapFlags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, D3D12_HEAP_PROPERTIES*, D3D12_HEAP_FLAGS*, int>)(lpVtbl[14]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 	/// <inheritdoc cref="ID3D12Resource1.GetProtectedResourceSession" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetProtectedResourceSession(Guid* riid, void** ppProtectedSession)
+	public HRESULT GetProtectedResourceSession(Guid* riid, void** ppProtectedSession)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Resource2*, Guid*, void**, int>)(lpVtbl[15]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), riid, ppProtectedSession);
 	}

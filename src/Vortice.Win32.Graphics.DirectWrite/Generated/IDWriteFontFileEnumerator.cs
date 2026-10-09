@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileEnumerator*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFileEnumerator*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator::MoveNext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult MoveNext(Bool32* hasCurrentFile)
+	public HRESULT MoveNext(Bool32* hasCurrentFile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileEnumerator*, Bool32*, int>)(lpVtbl[3]))((IDWriteFontFileEnumerator*)Unsafe.AsPointer(ref this), hasCurrentFile);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator::GetCurrentFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCurrentFontFile(IDWriteFontFile** fontFile)
+	public HRESULT GetCurrentFontFile(IDWriteFontFile** fontFile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileEnumerator*, IDWriteFontFile**, int>)(lpVtbl[4]))((IDWriteFontFileEnumerator*)Unsafe.AsPointer(ref this), fontFile);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult MoveNext(Bool32* hasCurrentFile);
+		HRESULT MoveNext(Bool32* hasCurrentFile);
 
 		[VtblIndex(4)]
-		HResult GetCurrentFontFile(IDWriteFontFile** fontFile);
+		HRESULT GetCurrentFontFile(IDWriteFontFile** fontFile);
 	}
 }
 

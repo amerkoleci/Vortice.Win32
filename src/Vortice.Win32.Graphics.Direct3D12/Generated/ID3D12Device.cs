@@ -49,7 +49,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Device*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -75,7 +75,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12Device*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -83,7 +83,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12Device*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -91,7 +91,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12Device*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -99,7 +99,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, char*, int>)(lpVtbl[6]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -115,7 +115,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommandQueue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateCommandQueue(D3D12_COMMAND_QUEUE_DESC* pDesc, Guid* riid, void** ppCommandQueue)
+	public HRESULT CreateCommandQueue(D3D12_COMMAND_QUEUE_DESC* pDesc, Guid* riid, void** ppCommandQueue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_COMMAND_QUEUE_DESC*, Guid*, void**, int>)(lpVtbl[8]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, riid, ppCommandQueue);
 	}
@@ -123,7 +123,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommandAllocator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE type, Guid* riid, void** ppCommandAllocator)
+	public HRESULT CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE type, Guid* riid, void** ppCommandAllocator)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_COMMAND_LIST_TYPE, Guid*, void**, int>)(lpVtbl[9]))((ID3D12Device*)Unsafe.AsPointer(ref this), type, riid, ppCommandAllocator);
 	}
@@ -131,7 +131,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateGraphicsPipelineState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateGraphicsPipelineState(D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
+	public HRESULT CreateGraphicsPipelineState(D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_GRAPHICS_PIPELINE_STATE_DESC*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, riid, ppPipelineState);
 	}
@@ -139,7 +139,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateComputePipelineState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateComputePipelineState(D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
+	public HRESULT CreateComputePipelineState(D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_COMPUTE_PIPELINE_STATE_DESC*, Guid*, void**, int>)(lpVtbl[11]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, riid, ppPipelineState);
 	}
@@ -147,7 +147,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommandList"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateCommandList(uint nodeMask, D3D12_COMMAND_LIST_TYPE type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList)
+	public HRESULT CreateCommandList(uint nodeMask, D3D12_COMMAND_LIST_TYPE type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, D3D12_COMMAND_LIST_TYPE, ID3D12CommandAllocator*, ID3D12PipelineState*, Guid*, void**, int>)(lpVtbl[12]))((ID3D12Device*)Unsafe.AsPointer(ref this), nodeMask, type, pCommandAllocator, pInitialState, riid, ppCommandList);
 	}
@@ -155,7 +155,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckFeatureSupport(D3D12_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
+	public HRESULT CheckFeatureSupport(D3D12_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_FEATURE, void*, int, int>)(lpVtbl[13]))((ID3D12Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
@@ -163,7 +163,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateDescriptorHeap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateDescriptorHeap(D3D12_DESCRIPTOR_HEAP_DESC* pDescriptorHeapDesc, Guid* riid, void** ppvHeap)
+	public HRESULT CreateDescriptorHeap(D3D12_DESCRIPTOR_HEAP_DESC* pDescriptorHeapDesc, Guid* riid, void** ppvHeap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_DESCRIPTOR_HEAP_DESC*, Guid*, void**, int>)(lpVtbl[14]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDescriptorHeapDesc, riid, ppvHeap);
 	}
@@ -179,7 +179,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateRootSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateRootSignature(uint nodeMask, void* pBlobWithRootSignature, nuint blobLengthInBytes, Guid* riid, void** ppvRootSignature)
+	public HRESULT CreateRootSignature(uint nodeMask, void* pBlobWithRootSignature, nuint blobLengthInBytes, Guid* riid, void** ppvRootSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, void*, nuint, Guid*, void**, int>)(lpVtbl[16]))((ID3D12Device*)Unsafe.AsPointer(ref this), nodeMask, pBlobWithRootSignature, blobLengthInBytes, riid, ppvRootSignature);
 	}
@@ -267,7 +267,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommittedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult CreateCommittedResource(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
+	public HRESULT CreateCommittedResource(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_HEAP_PROPERTIES*, D3D12_HEAP_FLAGS, D3D12_RESOURCE_DESC*, D3D12_RESOURCE_STATES, D3D12_CLEAR_VALUE*, Guid*, void**, int>)(lpVtbl[27]))((ID3D12Device*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialResourceState, pOptimizedClearValue, riidResource, ppvResource);
 	}
@@ -275,7 +275,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateHeap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult CreateHeap(D3D12_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap)
+	public HRESULT CreateHeap(D3D12_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_HEAP_DESC*, Guid*, void**, int>)(lpVtbl[28]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, riid, ppvHeap);
 	}
@@ -283,7 +283,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreatePlacedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource)
+	public HRESULT CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ID3D12Heap*, ulong, D3D12_RESOURCE_DESC*, D3D12_RESOURCE_STATES, D3D12_CLEAR_VALUE*, Guid*, void**, int>)(lpVtbl[29]))((ID3D12Device*)Unsafe.AsPointer(ref this), pHeap, HeapOffset, pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
 	}
@@ -291,7 +291,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateReservedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CreateReservedResource(D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource)
+	public HRESULT CreateReservedResource(D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_RESOURCE_DESC*, D3D12_RESOURCE_STATES, D3D12_CLEAR_VALUE*, Guid*, void**, int>)(lpVtbl[30]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
 	}
@@ -299,31 +299,31 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle)
+	public HRESULT CreateSharedHandle(ID3D12DeviceChild* pObject, SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, HANDLE* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ID3D12DeviceChild*, SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[31]))((ID3D12Device*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ID3D12DeviceChild*, SECURITY_ATTRIBUTES*, uint, char*, HANDLE*, int>)(lpVtbl[31]))((ID3D12Device*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::OpenSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult OpenSharedHandle(Handle NTHandle, Guid* riid, void** ppvObj)
+	public HRESULT OpenSharedHandle(HANDLE NTHandle, Guid* riid, void** ppvObj)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Handle, Guid*, void**, int>)(lpVtbl[32]))((ID3D12Device*)Unsafe.AsPointer(ref this), NTHandle, riid, ppvObj);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, HANDLE, Guid*, void**, int>)(lpVtbl[32]))((ID3D12Device*)Unsafe.AsPointer(ref this), NTHandle, riid, ppvObj);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::OpenSharedHandleByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult OpenSharedHandleByName(char* Name, uint Access, Handle* pNTHandle)
+	public HRESULT OpenSharedHandleByName(char* Name, uint Access, HANDLE* pNTHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, char*, uint, Handle*, int>)(lpVtbl[33]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, char*, uint, HANDLE*, int>)(lpVtbl[33]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::MakeResident"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
+	public HRESULT MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, ID3D12Pageable**, int>)(lpVtbl[34]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
@@ -331,7 +331,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::Evict"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
+	public HRESULT Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, uint, ID3D12Pageable**, int>)(lpVtbl[35]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
@@ -339,7 +339,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult CreateFence(ulong InitialValue, D3D12_FENCE_FLAGS Flags, Guid* riid, void** ppFence)
+	public HRESULT CreateFence(ulong InitialValue, D3D12_FENCE_FLAGS Flags, Guid* riid, void** ppFence)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, ulong, D3D12_FENCE_FLAGS, Guid*, void**, int>)(lpVtbl[36]))((ID3D12Device*)Unsafe.AsPointer(ref this), InitialValue, Flags, riid, ppFence);
 	}
@@ -347,7 +347,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetDeviceRemovedReason"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult GetDeviceRemovedReason()
+	public HRESULT GetDeviceRemovedReason()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, int>)(lpVtbl[37]))((ID3D12Device*)Unsafe.AsPointer(ref this));
 	}
@@ -363,7 +363,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateQueryHeap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public HResult CreateQueryHeap(D3D12_QUERY_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap)
+	public HRESULT CreateQueryHeap(D3D12_QUERY_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_QUERY_HEAP_DESC*, Guid*, void**, int>)(lpVtbl[39]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, riid, ppvHeap);
 	}
@@ -371,7 +371,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::SetStablePowerState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult SetStablePowerState(Bool32 Enable)
+	public HRESULT SetStablePowerState(Bool32 Enable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Bool32, int>)(lpVtbl[40]))((ID3D12Device*)Unsafe.AsPointer(ref this), Enable);
 	}
@@ -379,7 +379,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommandSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public HResult CreateCommandSignature(D3D12_COMMAND_SIGNATURE_DESC* pDesc, ID3D12RootSignature* pRootSignature, Guid* riid, void** ppvCommandSignature)
+	public HRESULT CreateCommandSignature(D3D12_COMMAND_SIGNATURE_DESC* pDesc, ID3D12RootSignature* pRootSignature, Guid* riid, void** ppvCommandSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, D3D12_COMMAND_SIGNATURE_DESC*, ID3D12RootSignature*, Guid*, void**, int>)(lpVtbl[41]))((ID3D12Device*)Unsafe.AsPointer(ref this), pDesc, pRootSignature, riid, ppvCommandSignature);
 	}
@@ -395,9 +395,9 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetAdapterLuid"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public Luid GetAdapterLuid()
+	public LUID GetAdapterLuid()
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, Luid>)(lpVtbl[43]))((ID3D12Device*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device*, LUID>)(lpVtbl[43]))((ID3D12Device*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12Object.Interface
@@ -406,31 +406,31 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		uint GetNodeCount();
 
 		[VtblIndex(8)]
-		HResult CreateCommandQueue(D3D12_COMMAND_QUEUE_DESC* pDesc, Guid* riid, void** ppCommandQueue);
+		HRESULT CreateCommandQueue(D3D12_COMMAND_QUEUE_DESC* pDesc, Guid* riid, void** ppCommandQueue);
 
 		[VtblIndex(9)]
-		HResult CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE type, Guid* riid, void** ppCommandAllocator);
+		HRESULT CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE type, Guid* riid, void** ppCommandAllocator);
 
 		[VtblIndex(10)]
-		HResult CreateGraphicsPipelineState(D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState);
+		HRESULT CreateGraphicsPipelineState(D3D12_GRAPHICS_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(11)]
-		HResult CreateComputePipelineState(D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState);
+		HRESULT CreateComputePipelineState(D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(12)]
-		HResult CreateCommandList(uint nodeMask, D3D12_COMMAND_LIST_TYPE type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList);
+		HRESULT CreateCommandList(uint nodeMask, D3D12_COMMAND_LIST_TYPE type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList);
 
 		[VtblIndex(13)]
-		HResult CheckFeatureSupport(D3D12_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
+		HRESULT CheckFeatureSupport(D3D12_FEATURE Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
 
 		[VtblIndex(14)]
-		HResult CreateDescriptorHeap(D3D12_DESCRIPTOR_HEAP_DESC* pDescriptorHeapDesc, Guid* riid, void** ppvHeap);
+		HRESULT CreateDescriptorHeap(D3D12_DESCRIPTOR_HEAP_DESC* pDescriptorHeapDesc, Guid* riid, void** ppvHeap);
 
 		[VtblIndex(15)]
 		uint GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapType);
 
 		[VtblIndex(16)]
-		HResult CreateRootSignature(uint nodeMask, void* pBlobWithRootSignature, nuint blobLengthInBytes, Guid* riid, void** ppvRootSignature);
+		HRESULT CreateRootSignature(uint nodeMask, void* pBlobWithRootSignature, nuint blobLengthInBytes, Guid* riid, void** ppvRootSignature);
 
 		[VtblIndex(17)]
 		void CreateConstantBufferView(D3D12_CONSTANT_BUFFER_VIEW_DESC* pDesc, D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptor);
@@ -463,55 +463,55 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		D3D12_HEAP_PROPERTIES GetCustomHeapProperties(uint nodeMask, D3D12_HEAP_TYPE heapType);
 
 		[VtblIndex(27)]
-		HResult CreateCommittedResource(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
+		HRESULT CreateCommittedResource(D3D12_HEAP_PROPERTIES* pHeapProperties, D3D12_HEAP_FLAGS HeapFlags, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
 
 		[VtblIndex(28)]
-		HResult CreateHeap(D3D12_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap);
+		HRESULT CreateHeap(D3D12_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap);
 
 		[VtblIndex(29)]
-		HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource);
+		HRESULT CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource);
 
 		[VtblIndex(30)]
-		HResult CreateReservedResource(D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource);
+		HRESULT CreateReservedResource(D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riid, void** ppvResource);
 
 		[VtblIndex(31)]
-		HResult CreateSharedHandle(ID3D12DeviceChild* pObject, SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle);
+		HRESULT CreateSharedHandle(ID3D12DeviceChild* pObject, SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, HANDLE* pHandle);
 
 		[VtblIndex(32)]
-		HResult OpenSharedHandle(Handle NTHandle, Guid* riid, void** ppvObj);
+		HRESULT OpenSharedHandle(HANDLE NTHandle, Guid* riid, void** ppvObj);
 
 		[VtblIndex(33)]
-		HResult OpenSharedHandleByName(char* Name, uint Access, Handle* pNTHandle);
+		HRESULT OpenSharedHandleByName(char* Name, uint Access, HANDLE* pNTHandle);
 
 		[VtblIndex(34)]
-		HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects);
+		HRESULT MakeResident(uint NumObjects, ID3D12Pageable** ppObjects);
 
 		[VtblIndex(35)]
-		HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects);
+		HRESULT Evict(uint NumObjects, ID3D12Pageable** ppObjects);
 
 		[VtblIndex(36)]
-		HResult CreateFence(ulong InitialValue, D3D12_FENCE_FLAGS Flags, Guid* riid, void** ppFence);
+		HRESULT CreateFence(ulong InitialValue, D3D12_FENCE_FLAGS Flags, Guid* riid, void** ppFence);
 
 		[VtblIndex(37)]
-		HResult GetDeviceRemovedReason();
+		HRESULT GetDeviceRemovedReason();
 
 		[VtblIndex(38)]
 		void GetCopyableFootprints(D3D12_RESOURCE_DESC* pResourceDesc, uint FirstSubresource, uint NumSubresources, ulong BaseOffset, D3D12_PLACED_SUBRESOURCE_FOOTPRINT* pLayouts, uint* pNumRows, ulong* pRowSizeInBytes, ulong* pTotalBytes);
 
 		[VtblIndex(39)]
-		HResult CreateQueryHeap(D3D12_QUERY_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap);
+		HRESULT CreateQueryHeap(D3D12_QUERY_HEAP_DESC* pDesc, Guid* riid, void** ppvHeap);
 
 		[VtblIndex(40)]
-		HResult SetStablePowerState(Bool32 Enable);
+		HRESULT SetStablePowerState(Bool32 Enable);
 
 		[VtblIndex(41)]
-		HResult CreateCommandSignature(D3D12_COMMAND_SIGNATURE_DESC* pDesc, ID3D12RootSignature* pRootSignature, Guid* riid, void** ppvCommandSignature);
+		HRESULT CreateCommandSignature(D3D12_COMMAND_SIGNATURE_DESC* pDesc, ID3D12RootSignature* pRootSignature, Guid* riid, void** ppvCommandSignature);
 
 		[VtblIndex(42)]
 		void GetResourceTiling(ID3D12Resource* pTiledResource, uint* pNumTilesForEntireResource, D3D12_PACKED_MIP_INFO* pPackedMipDesc, D3D12_TILE_SHAPE* pStandardTileShapeForNonPackedMips, uint* pNumSubresourceTilings, uint FirstSubresourceTilingToGet, D3D12_SUBRESOURCE_TILING* pSubresourceTilingsForNonPackedMips);
 
 		[VtblIndex(43)]
-		Luid GetAdapterLuid();
+		LUID GetAdapterLuid();
 	}
 }
 

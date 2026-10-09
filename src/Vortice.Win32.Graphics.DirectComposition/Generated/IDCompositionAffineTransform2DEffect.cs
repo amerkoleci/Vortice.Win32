@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetInterpolationMode(D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode)
+	public HRESULT SetInterpolationMode(D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE, int>)(lpVtbl[4]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetBorderMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetBorderMode(D2D1_BORDER_MODE borderMode)
+	public HRESULT SetBorderMode(D2D1_BORDER_MODE borderMode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, D2D1_BORDER_MODE, int>)(lpVtbl[5]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), borderMode);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrix"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetTransformMatrix(Matrix3x2* transformMatrix)
+	public HRESULT SetTransformMatrix(Matrix3x2* transformMatrix)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, Matrix3x2*, int>)(lpVtbl[6]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), transformMatrix);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrixElement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetTransformMatrixElement(int row, int column, IDCompositionAnimation* animation)
+	public HRESULT SetTransformMatrixElement(int row, int column, IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, int, int, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), row, column, animation);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrixElement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetTransformMatrixElement(int row, int column, float value)
+	public HRESULT SetTransformMatrixElement(int row, int column, float value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, int, int, float, int>)(lpVtbl[8]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), row, column, value);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetSharpness"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetSharpness(IDCompositionAnimation* animation)
+	public HRESULT SetSharpness(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetSharpness"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetSharpness(float sharpness)
+	public HRESULT SetSharpness(float sharpness)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAffineTransform2DEffect*, float, int>)(lpVtbl[10]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), sharpness);
 	}
@@ -137,25 +137,25 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetInterpolationMode(D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode);
+		HRESULT SetInterpolationMode(D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE interpolationMode);
 
 		[VtblIndex(5)]
-		HResult SetBorderMode(D2D1_BORDER_MODE borderMode);
+		HRESULT SetBorderMode(D2D1_BORDER_MODE borderMode);
 
 		[VtblIndex(6)]
-		HResult SetTransformMatrix(Matrix3x2* transformMatrix);
+		HRESULT SetTransformMatrix(Matrix3x2* transformMatrix);
 
 		[VtblIndex(7)]
-		HResult SetTransformMatrixElement(int row, int column, IDCompositionAnimation* animation);
+		HRESULT SetTransformMatrixElement(int row, int column, IDCompositionAnimation* animation);
 
 		[VtblIndex(8)]
-		HResult SetTransformMatrixElement(int row, int column, float value);
+		HRESULT SetTransformMatrixElement(int row, int column, float value);
 
 		[VtblIndex(9)]
-		HResult SetSharpness(IDCompositionAnimation* animation);
+		HRESULT SetSharpness(IDCompositionAnimation* animation);
 
 		[VtblIndex(10)]
-		HResult SetSharpness(float sharpness);
+		HRESULT SetSharpness(float sharpness);
 	}
 }
 

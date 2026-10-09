@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12ApplicationIdentity : ID3D12ApplicationIdenti
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ApplicationIdentity*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12ApplicationIdentity*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12ApplicationIdentity : ID3D12ApplicationIdenti
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ApplicationIdentity::SetApplicationIdentity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetApplicationIdentity(D3D12_APPLICATION_DESC* pDesc, Guid* AppId)
+	public HRESULT SetApplicationIdentity(D3D12_APPLICATION_DESC* pDesc, Guid* AppId)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ApplicationIdentity*, D3D12_APPLICATION_DESC*, Guid*, int>)(lpVtbl[3]))((ID3D12ApplicationIdentity*)Unsafe.AsPointer(ref this), pDesc, AppId);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12ApplicationIdentity : ID3D12ApplicationIdenti
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetApplicationIdentity(D3D12_APPLICATION_DESC* pDesc, Guid* AppId);
+		HRESULT SetApplicationIdentity(D3D12_APPLICATION_DESC* pDesc, Guid* AppId);
 	}
 }
 

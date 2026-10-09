@@ -13,5 +13,5 @@ public static unsafe partial class DWrite
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWriteCreateFactory"]/*' />
 	[LibraryImport("DWrite.dll")]
-	public static partial HResult DWriteCreateFactory(DWRITE_FACTORY_TYPE factoryType, Guid* iid, void** factory);
+	public static partial HRESULT DWriteCreateFactory(DWRITE_FACTORY_TYPE factoryType, Guid* iid, void** factory);
 }

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetFontFile(IDWriteFontFile** fontFile)
+	public HRESULT GetFontFile(IDWriteFontFile** fontFile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, IDWriteFontFile**, int>)(lpVtbl[3]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), fontFile);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetDefaultFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetDefaultFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount)
+	public HRESULT GetDefaultFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, DWRITE_FONT_AXIS_VALUE*, uint, int>)(lpVtbl[6]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetFontAxisRanges"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetFontAxisRanges(DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount)
+	public HRESULT GetFontAxisRanges(DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, DWRITE_FONT_AXIS_RANGE*, uint, int>)(lpVtbl[7]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), fontAxisRanges, fontAxisRangeCount);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetAxisNames"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetAxisNames(uint axisIndex, IDWriteLocalizedStrings** names)
+	public HRESULT GetAxisNames(uint axisIndex, IDWriteLocalizedStrings** names)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, uint, IDWriteLocalizedStrings**, int>)(lpVtbl[9]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), axisIndex, names);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetAxisValueNames"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetAxisValueNames(uint axisIndex, uint axisValueIndex, DWRITE_FONT_AXIS_RANGE* fontAxisRange, IDWriteLocalizedStrings** names)
+	public HRESULT GetAxisValueNames(uint axisIndex, uint axisValueIndex, DWRITE_FONT_AXIS_RANGE* fontAxisRange, IDWriteLocalizedStrings** names)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, uint, uint, DWRITE_FONT_AXIS_RANGE*, IDWriteLocalizedStrings**, int>)(lpVtbl[11]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), axisIndex, axisValueIndex, fontAxisRange, names);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::CreateFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateFontFace(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFace5** fontFace)
+	public HRESULT CreateFontFace(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFace5** fontFace)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, DWRITE_FONT_SIMULATIONS, DWRITE_FONT_AXIS_VALUE*, uint, IDWriteFontFace5**, int>)(lpVtbl[13]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), fontSimulations, fontAxisValues, fontAxisValueCount, fontFace);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::CreateFontFaceReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateFontFaceReference(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference)
+	public HRESULT CreateFontFaceReference(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontResource*, DWRITE_FONT_SIMULATIONS, DWRITE_FONT_AXIS_VALUE*, uint, IDWriteFontFaceReference1**, int>)(lpVtbl[14]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), fontSimulations, fontAxisValues, fontAxisValueCount, fontFaceReference);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetFontFile(IDWriteFontFile** fontFile);
+		HRESULT GetFontFile(IDWriteFontFile** fontFile);
 
 		[VtblIndex(4)]
 		uint GetFontFaceIndex();
@@ -178,31 +178,31 @@ public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface
 		uint GetFontAxisCount();
 
 		[VtblIndex(6)]
-		HResult GetDefaultFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount);
+		HRESULT GetDefaultFontAxisValues(DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount);
 
 		[VtblIndex(7)]
-		HResult GetFontAxisRanges(DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount);
+		HRESULT GetFontAxisRanges(DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount);
 
 		[VtblIndex(8)]
 		DWRITE_FONT_AXIS_ATTRIBUTES GetFontAxisAttributes(uint axisIndex);
 
 		[VtblIndex(9)]
-		HResult GetAxisNames(uint axisIndex, IDWriteLocalizedStrings** names);
+		HRESULT GetAxisNames(uint axisIndex, IDWriteLocalizedStrings** names);
 
 		[VtblIndex(10)]
 		uint GetAxisValueNameCount(uint axisIndex);
 
 		[VtblIndex(11)]
-		HResult GetAxisValueNames(uint axisIndex, uint axisValueIndex, DWRITE_FONT_AXIS_RANGE* fontAxisRange, IDWriteLocalizedStrings** names);
+		HRESULT GetAxisValueNames(uint axisIndex, uint axisValueIndex, DWRITE_FONT_AXIS_RANGE* fontAxisRange, IDWriteLocalizedStrings** names);
 
 		[VtblIndex(12)]
 		Bool32 HasVariations();
 
 		[VtblIndex(13)]
-		HResult CreateFontFace(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFace5** fontFace);
+		HRESULT CreateFontFace(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFace5** fontFace);
 
 		[VtblIndex(14)]
-		HResult CreateFontFaceReference(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference);
+		HRESULT CreateFontFaceReference(DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference);
 	}
 }
 

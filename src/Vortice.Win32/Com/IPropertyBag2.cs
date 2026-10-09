@@ -40,7 +40,7 @@ public unsafe partial struct IPropertyBag2
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, Guid*, void**, int>)(lpVtbl[0]))((IPropertyBag2*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -65,35 +65,35 @@ public unsafe partial struct IPropertyBag2
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult Read(uint cProperties, PropertyBagMetadata* pPropBag, IErrorLog* pErrLog, Variant* pvarValue, HResult* phrError)
+    public HRESULT Read(uint cProperties, PropertyBagMetadata* pPropBag, IErrorLog* pErrLog, Variant* pvarValue, HRESULT* phrError)
     {
-        return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, uint, PropertyBagMetadata*, IErrorLog*, Variant*, HResult*, int>)(lpVtbl[3]))((IPropertyBag2*)Unsafe.AsPointer(ref this), cProperties, pPropBag, pErrLog, pvarValue, phrError);
+        return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, uint, PropertyBagMetadata*, IErrorLog*, Variant*, HRESULT*, int>)(lpVtbl[3]))((IPropertyBag2*)Unsafe.AsPointer(ref this), cProperties, pPropBag, pErrLog, pvarValue, phrError);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult Write([NativeTypeName("ULONG")] uint cProperties, PropertyBagMetadata* pPropBag, Variant* pvarValue)
+    public HRESULT Write([NativeTypeName("ULONG")] uint cProperties, PropertyBagMetadata* pPropBag, Variant* pvarValue)
     {
         return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, uint, PropertyBagMetadata*, Variant*, int>)(lpVtbl[4]))((IPropertyBag2*)Unsafe.AsPointer(ref this), cProperties, pPropBag, pvarValue);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult CountProperties(uint* pcProperties)
+    public HRESULT CountProperties(uint* pcProperties)
     {
         return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, uint*, int>)(lpVtbl[5]))((IPropertyBag2*)Unsafe.AsPointer(ref this), pcProperties);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult GetPropertyInfo(uint iProperty, uint cProperties, PropertyBagMetadata* pPropBag, uint* pcProperties)
+    public HRESULT GetPropertyInfo(uint iProperty, uint cProperties, PropertyBagMetadata* pPropBag, uint* pcProperties)
     {
         return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, uint, uint, PropertyBagMetadata*, uint*, int>)(lpVtbl[6]))((IPropertyBag2*)Unsafe.AsPointer(ref this), iProperty, cProperties, pPropBag, pcProperties);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
-    public HResult LoadObject(ushort* pstrName, uint dwHint, IUnknown* pUnkObject, IErrorLog* pErrLog)
+    public HRESULT LoadObject(ushort* pstrName, uint dwHint, IUnknown* pUnkObject, IErrorLog* pErrLog)
     {
         return ((delegate* unmanaged[MemberFunction]<IPropertyBag2*, ushort*, uint, IUnknown*, IErrorLog*, int>)(lpVtbl[7]))((IPropertyBag2*)Unsafe.AsPointer(ref this), pstrName, dwHint, pUnkObject, pErrLog);
     }

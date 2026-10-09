@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionEffectGroup*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionEffectGroup*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionEffectGroup::SetOpacity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetOpacity(IDCompositionAnimation* animation)
+	public HRESULT SetOpacity(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionEffectGroup*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionEffectGroup*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionEffectGroup::SetOpacity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOpacity(float opacity)
+	public HRESULT SetOpacity(float opacity)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionEffectGroup*, float, int>)(lpVtbl[4]))((IDCompositionEffectGroup*)Unsafe.AsPointer(ref this), opacity);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionEffectGroup::SetTransform3D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetTransform3D(IDCompositionTransform3D* transform3D)
+	public HRESULT SetTransform3D(IDCompositionTransform3D* transform3D)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionEffectGroup*, IDCompositionTransform3D*, int>)(lpVtbl[5]))((IDCompositionEffectGroup*)Unsafe.AsPointer(ref this), transform3D);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup
 	public interface Interface : IDCompositionEffect.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetOpacity(IDCompositionAnimation* animation);
+		HRESULT SetOpacity(IDCompositionAnimation* animation);
 
 		[VtblIndex(4)]
-		HResult SetOpacity(float opacity);
+		HRESULT SetOpacity(float opacity);
 
 		[VtblIndex(5)]
-		HResult SetTransform3D(IDCompositionTransform3D* transform3D);
+		HRESULT SetTransform3D(IDCompositionTransform3D* transform3D);
 	}
 }
 

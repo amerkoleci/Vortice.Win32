@@ -46,7 +46,7 @@ public unsafe partial struct IDxcCompiler3 : IDxcCompiler3.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler3*, Guid*, void**, int>)(lpVtbl[0]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,14 +71,14 @@ public unsafe partial struct IDxcCompiler3 : IDxcCompiler3.Interface, INativeGui
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Compile(DxcBuffer* pSource, char** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult)
+	public HRESULT Compile(DxcBuffer* pSource, char** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler3*, DxcBuffer*, char**, uint, IDxcIncludeHandler*, Guid*, void**, int>)(lpVtbl[3]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), pSource, pArguments, argCount, pIncludeHandler, riid, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Disassemble(DxcBuffer* pObject, Guid* riid, void** ppResult)
+	public HRESULT Disassemble(DxcBuffer* pObject, Guid* riid, void** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler3*, DxcBuffer*, Guid*, void**, int>)(lpVtbl[4]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), pObject, riid, ppResult);
 	}
@@ -86,10 +86,10 @@ public unsafe partial struct IDxcCompiler3 : IDxcCompiler3.Interface, INativeGui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Compile(DxcBuffer* pSource, char** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult);
+		HRESULT Compile(DxcBuffer* pSource, char** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult);
 
 		[VtblIndex(4)]
-		HResult Disassemble(DxcBuffer* pObject, Guid* riid, void** ppResult);
+		HRESULT Disassemble(DxcBuffer* pObject, Guid* riid, void** ppResult);
 	}
 }
 

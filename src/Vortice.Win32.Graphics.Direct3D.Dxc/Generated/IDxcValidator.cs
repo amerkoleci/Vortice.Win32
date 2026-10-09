@@ -46,7 +46,7 @@ public unsafe partial struct IDxcValidator : IDxcValidator.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcValidator*, Guid*, void**, int>)(lpVtbl[0]))((IDxcValidator*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,7 +71,7 @@ public unsafe partial struct IDxcValidator : IDxcValidator.Interface, INativeGui
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)
+	public HRESULT Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcValidator*, IDxcBlob*, DxcValidatorFlags, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
 	}
@@ -79,7 +79,7 @@ public unsafe partial struct IDxcValidator : IDxcValidator.Interface, INativeGui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult);
+		HRESULT Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult);
 	}
 }
 

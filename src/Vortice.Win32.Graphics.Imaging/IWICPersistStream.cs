@@ -10,7 +10,7 @@ public unsafe partial struct IWICPersistStream
     /// <inheritdoc cref="IPersist.GetClassID" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult GetClassID(Guid* pClassID)
+    public HRESULT GetClassID(Guid* pClassID)
     {
         return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Guid*, int>)(lpVtbl[3]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pClassID);
     }
@@ -18,7 +18,7 @@ public unsafe partial struct IWICPersistStream
     /// <inheritdoc cref="IPersistStream.IsDirty" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult IsDirty()
+    public HRESULT IsDirty()
     {
         return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, int>)(lpVtbl[4]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
     }
@@ -26,7 +26,7 @@ public unsafe partial struct IWICPersistStream
     /// <inheritdoc cref="IPersistStream.Load" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Load(IStream* pStm)
+    public HRESULT Load(IStream* pStm)
     {
         return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, IStream*, int>)(lpVtbl[5]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pStm);
     }
@@ -34,7 +34,7 @@ public unsafe partial struct IWICPersistStream
     /// <inheritdoc cref="IPersistStream.Save" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult Save(IStream* pStm, Bool32 fClearDirty)
+    public HRESULT Save(IStream* pStm, Bool32 fClearDirty)
     {
         return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, IStream*, Bool32, int>)(lpVtbl[6]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pStm, fClearDirty);
     }
@@ -42,9 +42,9 @@ public unsafe partial struct IWICPersistStream
     /// <inheritdoc cref="IPersistStream.GetSizeMax" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
-    public HResult GetSizeMax(ULargeInteger* pcbSize)
+    public HRESULT GetSizeMax(ULARGE_INTEGER* pcbSize)
     {
-        return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, ULargeInteger*, int>)(lpVtbl[7]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pcbSize);
+        return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, ULARGE_INTEGER*, int>)(lpVtbl[7]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pcbSize);
     }
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFont2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.GetFontFamily" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetFontFamily(IDWriteFontFamily** fontFamily)
+	public HRESULT GetFontFamily(IDWriteFontFamily** fontFamily)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, IDWriteFontFamily**, int>)(lpVtbl[3]))((IDWriteFont2*)Unsafe.AsPointer(ref this), fontFamily);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.GetFaceNames" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetFaceNames(IDWriteLocalizedStrings** names)
+	public HRESULT GetFaceNames(IDWriteLocalizedStrings** names)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, IDWriteLocalizedStrings**, int>)(lpVtbl[8]))((IDWriteFont2*)Unsafe.AsPointer(ref this), names);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.GetInformationalStrings" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetInformationalStrings(DWRITE_INFORMATIONAL_STRING_ID informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
+	public HRESULT GetInformationalStrings(DWRITE_INFORMATIONAL_STRING_ID informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, DWRITE_INFORMATIONAL_STRING_ID, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont2*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.HasCharacter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult HasCharacter(uint unicodeValue, Bool32* exists)
+	public HRESULT HasCharacter(uint unicodeValue, Bool32* exists)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, uint, Bool32*, int>)(lpVtbl[12]))((IDWriteFont2*)Unsafe.AsPointer(ref this), unicodeValue, exists);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont.CreateFontFace" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateFontFace(IDWriteFontFace** fontFace)
+	public HRESULT CreateFontFace(IDWriteFontFace** fontFace)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, IDWriteFontFace**, int>)(lpVtbl[13]))((IDWriteFont2*)Unsafe.AsPointer(ref this), fontFace);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 	/// <inheritdoc cref="IDWriteFont1.GetUnicodeRanges" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetUnicodeRanges(uint maxRangeCount, DWRITE_UNICODE_RANGE* unicodeRanges, uint* actualRangeCount)
+	public HRESULT GetUnicodeRanges(uint maxRangeCount, DWRITE_UNICODE_RANGE* unicodeRanges, uint* actualRangeCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFont2*, uint, DWRITE_UNICODE_RANGE*, uint*, int>)(lpVtbl[16]))((IDWriteFont2*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
 	}

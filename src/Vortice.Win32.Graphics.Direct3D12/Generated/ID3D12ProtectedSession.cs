@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, char*, int>)(lpVtbl[6]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetStatusFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetStatusFence(Guid* riid, void** ppFence)
+	public HRESULT GetStatusFence(Guid* riid, void** ppFence)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, Guid*, void**, int>)(lpVtbl[8]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), riid, ppFence);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]
-		HResult GetStatusFence(Guid* riid, void** ppFence);
+		HRESULT GetStatusFence(Guid* riid, void** ppFence);
 
 		[VtblIndex(9)]
 		D3D12_PROTECTED_SESSION_STATUS GetSessionStatus();

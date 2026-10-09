@@ -46,7 +46,7 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf16*, Guid*, void**, int>)(lpVtbl[0]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -88,7 +88,7 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	/// <inheritdoc cref="IDxcBlobEncoding.GetEncoding" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
+	public HRESULT GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf16*, Bool32*, DXC_CP*, int>)(lpVtbl[5]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}

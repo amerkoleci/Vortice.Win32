@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallbackBuilder*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddMapping(DWRITE_UNICODE_RANGE* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale)
+	public HRESULT AddMapping(DWRITE_UNICODE_RANGE* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallbackBuilder*, DWRITE_UNICODE_RANGE*, uint, ushort**, uint, IDWriteFontCollection*, char*, char*, float, int>)(lpVtbl[3]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), ranges, rangesCount, targetFamilyNames, targetFamilyNamesCount, fontCollection, localeName, baseFamilyName, scale);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMappings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddMappings(IDWriteFontFallback* fontFallback)
+	public HRESULT AddMappings(IDWriteFontFallback* fontFallback)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallbackBuilder*, IDWriteFontFallback*, int>)(lpVtbl[4]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), fontFallback);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::CreateFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateFontFallback(IDWriteFontFallback** fontFallback)
+	public HRESULT CreateFontFallback(IDWriteFontFallback** fontFallback)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallbackBuilder*, IDWriteFontFallback**, int>)(lpVtbl[5]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), fontFallback);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddMapping(DWRITE_UNICODE_RANGE* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale);
+		HRESULT AddMapping(DWRITE_UNICODE_RANGE* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, char* localeName, char* baseFamilyName, float scale);
 
 		[VtblIndex(4)]
-		HResult AddMappings(IDWriteFontFallback* fontFallback);
+		HRESULT AddMappings(IDWriteFontFallback* fontFallback);
 
 		[VtblIndex(5)]
-		HResult CreateFontFallback(IDWriteFontFallback** fontFallback);
+		HRESULT CreateFontFallback(IDWriteFontFallback** fontFallback);
 	}
 }
 

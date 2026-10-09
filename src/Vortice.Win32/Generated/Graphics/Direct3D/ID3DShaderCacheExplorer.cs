@@ -47,7 +47,7 @@ public unsafe partial struct ID3DShaderCacheExplorer : ID3DShaderCacheExplorer.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheExplorer*, Guid*, void**, int>)(lpVtbl[0]))((ID3DShaderCacheExplorer*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3DShaderCacheExplorer : ID3DShaderCacheExplorer.I
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheExplorer::GetApplicationFromExePath"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetApplicationFromExePath(char* pFullExePath, Guid* riid, void** ppvApp)
+	public HRESULT GetApplicationFromExePath(char* pFullExePath, Guid* riid, void** ppvApp)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheExplorer*, char*, Guid*, void**, int>)(lpVtbl[3]))((ID3DShaderCacheExplorer*)Unsafe.AsPointer(ref this), pFullExePath, riid, ppvApp);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3DShaderCacheExplorer : ID3DShaderCacheExplorer.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetApplicationFromExePath(char* pFullExePath, Guid* riid, void** ppvApp);
+		HRESULT GetApplicationFromExePath(char* pFullExePath, Guid* riid, void** ppvApp);
 	}
 }
 

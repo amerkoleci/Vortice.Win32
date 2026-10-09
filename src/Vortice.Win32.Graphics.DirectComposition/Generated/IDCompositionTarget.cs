@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTarget : IDCompositionTarget.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTarget*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTarget*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionTarget : IDCompositionTarget.Interface
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTarget::SetRoot"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetRoot(IDCompositionVisual* visual)
+	public HRESULT SetRoot(IDCompositionVisual* visual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTarget*, IDCompositionVisual*, int>)(lpVtbl[3]))((IDCompositionTarget*)Unsafe.AsPointer(ref this), visual);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionTarget : IDCompositionTarget.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetRoot(IDCompositionVisual* visual);
+		HRESULT SetRoot(IDCompositionVisual* visual);
 	}
 }
 

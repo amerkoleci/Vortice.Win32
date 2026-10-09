@@ -171,13 +171,13 @@ public static partial class XAudio2
 
 	public const uint FACILITY_XAUDIO2 = 2198;
 
-	public static readonly HResult XAUDIO2_E_INVALID_CALL = -2003435519;
+	public static  HRESULT XAUDIO2_E_INVALID_CALL => -2003435519;
 
-	public static readonly HResult XAUDIO2_E_XMA_DECODER_ERROR = -2003435518;
+	public static  HRESULT XAUDIO2_E_XMA_DECODER_ERROR => -2003435518;
 
-	public static readonly HResult XAUDIO2_E_XAPO_CREATION_FAILED = -2003435517;
+	public static  HRESULT XAUDIO2_E_XAPO_CREATION_FAILED => -2003435517;
 
-	public static readonly HResult XAUDIO2_E_DEVICE_INVALIDATED = -2003435516;
+	public static  HRESULT XAUDIO2_E_DEVICE_INVALIDATED => -2003435516;
 
 	public const uint Processor1 = 1;
 
@@ -407,7 +407,7 @@ public static partial class XAudio2
 
 	public const uint FACILITY_XAPO = 2199;
 
-	public static readonly HResult XAPO_E_FORMAT_UNSUPPORTED = -2003369983;
+	public static  HRESULT XAPO_E_FORMAT_UNSUPPORTED => -2003369983;
 
 	public const uint XAPO_MIN_CHANNELS = 1;
 

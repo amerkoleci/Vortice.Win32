@@ -47,7 +47,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetMetadataFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetMetadataFormat(Guid* pguidMetadataFormat)
+	public HRESULT GetMetadataFormat(Guid* pguidMetadataFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, Guid*, int>)(lpVtbl[3]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), pguidMetadataFormat);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetMetadataHandlerInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler)
+	public HRESULT GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, IWICMetadataHandlerInfo**, int>)(lpVtbl[4]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIHandler);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetCount(uint* pcCount)
+	public HRESULT GetCount(uint* pcCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, uint*, int>)(lpVtbl[5]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), pcCount);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetValueByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue)
+	public HRESULT GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, uint, Com.Variant**, Com.Variant**, Com.Variant**, int>)(lpVtbl[6]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue)
+	public HRESULT GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, Com.Variant*, Com.Variant*, Com.Variant**, int>)(lpVtbl[7]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetEnumerator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
+	public HRESULT GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataReader*, IWICEnumMetadataItem**, int>)(lpVtbl[8]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
@@ -121,22 +121,22 @@ public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetMetadataFormat(Guid* pguidMetadataFormat);
+		HRESULT GetMetadataFormat(Guid* pguidMetadataFormat);
 
 		[VtblIndex(4)]
-		HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler);
+		HRESULT GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler);
 
 		[VtblIndex(5)]
-		HResult GetCount(uint* pcCount);
+		HRESULT GetCount(uint* pcCount);
 
 		[VtblIndex(6)]
-		HResult GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue);
+		HRESULT GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue);
 
 		[VtblIndex(7)]
-		HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue);
+		HRESULT GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue);
 
 		[VtblIndex(8)]
-		HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata);
+		HRESULT GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1Mesh : ID2D1Mesh.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Mesh*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Mesh*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1Mesh : ID2D1Mesh.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Mesh::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Open(ID2D1TessellationSink** tessellationSink)
+	public HRESULT Open(ID2D1TessellationSink** tessellationSink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Mesh*, ID2D1TessellationSink**, int>)(lpVtbl[4]))((ID2D1Mesh*)Unsafe.AsPointer(ref this), tessellationSink);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1Mesh : ID2D1Mesh.Interface, INativeGuid
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult Open(ID2D1TessellationSink** tessellationSink);
+		HRESULT Open(ID2D1TessellationSink** tessellationSink);
 	}
 }
 

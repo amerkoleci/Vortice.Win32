@@ -46,7 +46,7 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo2*, Guid*, void**, int>)(lpVtbl[0]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -72,7 +72,7 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	/// <inheritdoc cref="IDxcVersionInfo.GetVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetVersion(uint* pMajor, uint* pMinor)
+	public HRESULT GetVersion(uint* pMajor, uint* pMinor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo2*, uint*, uint*, int>)(lpVtbl[3]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pMajor, pMinor);
 	}
@@ -80,14 +80,14 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	/// <inheritdoc cref="IDxcVersionInfo.GetFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFlags(DxcVersionInfoFlags* pFlags)
+	public HRESULT GetFlags(DxcVersionInfoFlags* pFlags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo2*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash)
+	public HRESULT GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcVersionInfo2*, uint*, sbyte**, int>)(lpVtbl[5]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pCommitCount, pCommitHash);
 	}
@@ -95,7 +95,7 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	public interface Interface : IDxcVersionInfo.Interface
 	{
 		[VtblIndex(5)]
-		HResult GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash);
+		HRESULT GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash);
 	}
 }
 

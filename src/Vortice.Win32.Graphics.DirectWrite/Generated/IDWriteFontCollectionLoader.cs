@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontCollectionLoader : IDWriteFontCollection
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollectionLoader*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontCollectionLoader*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontCollectionLoader : IDWriteFontCollection
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader::CreateEnumeratorFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator)
+	public HRESULT CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollectionLoader*, IDWriteFactory*, void*, uint, IDWriteFontFileEnumerator**, int>)(lpVtbl[3]))((IDWriteFontCollectionLoader*)Unsafe.AsPointer(ref this), factory, collectionKey, collectionKeySize, fontFileEnumerator);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontCollectionLoader : IDWriteFontCollection
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator);
+		HRESULT CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator);
 	}
 }
 

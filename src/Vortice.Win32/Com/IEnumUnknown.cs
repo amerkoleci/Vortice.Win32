@@ -42,7 +42,7 @@ public unsafe partial struct IEnumUnknown
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IEnumUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -67,28 +67,28 @@ public unsafe partial struct IEnumUnknown
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult Next([NativeTypeName("ULONG")] uint celt, IUnknown** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
+    public HRESULT Next([NativeTypeName("ULONG")] uint celt, IUnknown** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumUnknown*, uint, IUnknown**, uint*, int>)(lpVtbl[3]))((IEnumUnknown*)Unsafe.AsPointer(ref this), celt, rgelt, pceltFetched);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult Skip([NativeTypeName("ULONG")] uint celt)
+    public HRESULT Skip([NativeTypeName("ULONG")] uint celt)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumUnknown*, uint, int>)(lpVtbl[4]))((IEnumUnknown*)Unsafe.AsPointer(ref this), celt);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Reset()
+    public HRESULT Reset()
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumUnknown*, int>)(lpVtbl[5]))((IEnumUnknown*)Unsafe.AsPointer(ref this));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult Clone(IEnumUnknown** ppenum)
+    public HRESULT Clone(IEnumUnknown** ppenum)
     {
         return ((delegate* unmanaged[MemberFunction]<IEnumUnknown*, IEnumUnknown**, int>)(lpVtbl[6]))((IEnumUnknown*)Unsafe.AsPointer(ref this), ppenum);
     }

@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	/// <inheritdoc cref="ID3D11On12Device.CreateWrappedResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
+	public HRESULT CreateWrappedResource(IUnknown* pResource12, D3D11_RESOURCE_FLAGS* pFlags11, D3D12_RESOURCE_STATES InState, D3D12_RESOURCE_STATES OutState, Guid* riid, void** ppResource11)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, IUnknown*, D3D11_RESOURCE_FLAGS*, D3D12_RESOURCE_STATES, D3D12_RESOURCE_STATES, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	/// <inheritdoc cref="ID3D11On12Device1.GetD3D12Device" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetD3D12Device(Guid* riid, void** ppvDevice)
+	public HRESULT GetD3D12Device(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, Guid*, void**, int>)(lpVtbl[6]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device2::UnwrapUnderlyingResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult UnwrapUnderlyingResource(ID3D11Resource* pResource11, ID3D12CommandQueue* pCommandQueue, Guid* riid, void** ppvResource12)
+	public HRESULT UnwrapUnderlyingResource(ID3D11Resource* pResource11, ID3D12CommandQueue* pCommandQueue, Guid* riid, void** ppvResource12)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, ID3D11Resource*, ID3D12CommandQueue*, Guid*, void**, int>)(lpVtbl[7]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource11, pCommandQueue, riid, ppvResource12);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device2::ReturnUnderlyingResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult ReturnUnderlyingResource(ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, ID3D12Fence** ppFences)
+	public HRESULT ReturnUnderlyingResource(ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, ID3D12Fence** ppFences)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11On12Device2*, ID3D11Resource*, uint, ulong*, ID3D12Fence**, int>)(lpVtbl[8]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource11, NumSync, pSignalValues, ppFences);
 	}
@@ -121,10 +121,10 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	public interface Interface : ID3D11On12Device1.Interface
 	{
 		[VtblIndex(7)]
-		HResult UnwrapUnderlyingResource(ID3D11Resource* pResource11, ID3D12CommandQueue* pCommandQueue, Guid* riid, void** ppvResource12);
+		HRESULT UnwrapUnderlyingResource(ID3D11Resource* pResource11, ID3D12CommandQueue* pCommandQueue, Guid* riid, void** ppvResource12);
 
 		[VtblIndex(8)]
-		HResult ReturnUnderlyingResource(ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, ID3D12Fence** ppFences);
+		HRESULT ReturnUnderlyingResource(ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, ID3D12Fence** ppFences);
 	}
 }
 

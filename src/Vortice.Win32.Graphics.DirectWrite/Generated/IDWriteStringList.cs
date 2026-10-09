@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteStringList*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetLocaleNameLength(uint listIndex, uint* length)
+	public HRESULT GetLocaleNameLength(uint listIndex, uint* length)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, uint*, int>)(lpVtbl[4]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetLocaleName(uint listIndex, char* localeName, uint size)
+	public HRESULT GetLocaleName(uint listIndex, char* localeName, uint size)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, char*, uint, int>)(lpVtbl[5]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, localeName, size);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetStringLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetStringLength(uint listIndex, uint* length)
+	public HRESULT GetStringLength(uint listIndex, uint* length)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, uint*, int>)(lpVtbl[6]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetString(uint listIndex, char* stringBuffer, uint stringBufferSize)
+	public HRESULT GetString(uint listIndex, char* stringBuffer, uint stringBufferSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, char*, uint, int>)(lpVtbl[7]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
 	}
@@ -116,16 +116,16 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 		uint GetCount();
 
 		[VtblIndex(4)]
-		HResult GetLocaleNameLength(uint listIndex, uint* length);
+		HRESULT GetLocaleNameLength(uint listIndex, uint* length);
 
 		[VtblIndex(5)]
-		HResult GetLocaleName(uint listIndex, char* localeName, uint size);
+		HRESULT GetLocaleName(uint listIndex, char* localeName, uint size);
 
 		[VtblIndex(6)]
-		HResult GetStringLength(uint listIndex, uint* length);
+		HRESULT GetStringLength(uint listIndex, uint* length);
 
 		[VtblIndex(7)]
-		HResult GetString(uint listIndex, char* stringBuffer, uint stringBufferSize);
+		HRESULT GetString(uint listIndex, char* stringBuffer, uint stringBufferSize);
 	}
 }
 

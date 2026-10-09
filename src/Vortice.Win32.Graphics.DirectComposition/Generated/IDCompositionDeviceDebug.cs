@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDeviceDebug::EnableDebugCounters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult EnableDebugCounters()
+	public HRESULT EnableDebugCounters()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, int>)(lpVtbl[3]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDeviceDebug::DisableDebugCounters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult DisableDebugCounters()
+	public HRESULT DisableDebugCounters()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, int>)(lpVtbl[4]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult EnableDebugCounters();
+		HRESULT EnableDebugCounters();
 
 		[VtblIndex(4)]
-		HResult DisableDebugCounters();
+		HRESULT DisableDebugCounters();
 	}
 }
 

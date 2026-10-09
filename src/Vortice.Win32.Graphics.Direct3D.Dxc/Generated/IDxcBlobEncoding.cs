@@ -46,7 +46,7 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcBlobEncoding*, Guid*, void**, int>)(lpVtbl[0]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -87,7 +87,7 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
+	public HRESULT GetEncoding(Bool32* pKnown, DXC_CP* pCodePage)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcBlobEncoding*, Bool32*, DXC_CP*, int>)(lpVtbl[5]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
@@ -95,7 +95,7 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 	public interface Interface : IDxcBlob.Interface
 	{
 		[VtblIndex(5)]
-		HResult GetEncoding(Bool32* pKnown, DXC_CP* pCodePage);
+		HRESULT GetEncoding(Bool32* pKnown, DXC_CP* pCodePage);
 	}
 }
 

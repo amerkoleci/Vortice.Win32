@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <inheritdoc cref="IDWriteFontList.GetFontCollection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetFontCollection(IDWriteFontCollection** fontCollection)
+	public HRESULT GetFontCollection(IDWriteFontCollection** fontCollection)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, IDWriteFontCollection**, int>)(lpVtbl[3]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), fontCollection);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <inheritdoc cref="IDWriteFontList.GetFont" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFont(uint index, IDWriteFont** font)
+	public HRESULT GetFont(uint index, IDWriteFont** font)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, uint, IDWriteFont**, int>)(lpVtbl[5]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), index, font);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <inheritdoc cref="IDWriteFontList1.GetFont" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetFont(uint listIndex, IDWriteFont3** font)
+	public HRESULT GetFont(uint listIndex, IDWriteFont3** font)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, uint, IDWriteFont3**, int>)(lpVtbl[7]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex, font);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <inheritdoc cref="IDWriteFontList1.GetFontFaceReference" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference** fontFaceReference)
+	public HRESULT GetFontFaceReference(uint listIndex, IDWriteFontFaceReference** fontFaceReference)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, uint, IDWriteFontFaceReference**, int>)(lpVtbl[8]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex, fontFaceReference);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList2::GetFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFontSet(IDWriteFontSet1** fontSet)
+	public HRESULT GetFontSet(IDWriteFontSet1** fontSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontList2*, IDWriteFontSet1**, int>)(lpVtbl[9]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), fontSet);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteFontList2 : IDWriteFontList2.Interface, INat
 	public interface Interface : IDWriteFontList1.Interface
 	{
 		[VtblIndex(9)]
-		HResult GetFontSet(IDWriteFontSet1** fontSet);
+		HRESULT GetFontSet(IDWriteFontSet1** fontSet);
 	}
 }
 

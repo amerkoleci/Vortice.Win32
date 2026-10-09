@@ -38,7 +38,7 @@ public unsafe partial struct ISequentialStream : ISequentialStream.Interface, IN
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface(Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface(Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<ISequentialStream*, Guid*, void**, int>)(lpVtbl[0]))((ISequentialStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -63,14 +63,14 @@ public unsafe partial struct ISequentialStream : ISequentialStream.Interface, IN
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult Read(void* pv, uint cb, uint* pcbRead)
+    public HRESULT Read(void* pv, uint cb, uint* pcbRead)
     {
         return ((delegate* unmanaged[MemberFunction]<ISequentialStream*, void*, uint, uint*, int>)(lpVtbl[3]))((ISequentialStream*)Unsafe.AsPointer(ref this), pv, cb, pcbRead);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult Write(void* pv, uint cb, uint* pcbWritten)
+    public HRESULT Write(void* pv, uint cb, uint* pcbWritten)
     {
         return ((delegate* unmanaged[MemberFunction]<ISequentialStream*, void*, uint, uint*, int>)(lpVtbl[4]))((ISequentialStream*)Unsafe.AsPointer(ref this), pv, cb, pcbWritten);
     }
@@ -78,9 +78,9 @@ public unsafe partial struct ISequentialStream : ISequentialStream.Interface, IN
     public interface Interface : IUnknown.Interface
     {
         [VtblIndex(3)]
-        HResult Read(void* pv, uint cb, uint* pcbRead);
+        HRESULT Read(void* pv, uint cb, uint* pcbRead);
 
         [VtblIndex(4)]
-        HResult Write(void* pv, uint cb, uint* pcbWritten);
+        HRESULT Write(void* pv, uint cb, uint* pcbWritten);
     }
 }

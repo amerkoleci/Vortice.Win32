@@ -47,7 +47,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, Guid*, void**, int>)(lpVtbl[0]))((IWICPalette*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::InitializePredefined"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult InitializePredefined(WICBitmapPaletteType ePaletteType, Bool32 fAddTransparentColor)
+	public HRESULT InitializePredefined(WICBitmapPaletteType ePaletteType, Bool32 fAddTransparentColor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, WICBitmapPaletteType, Bool32, int>)(lpVtbl[3]))((IWICPalette*)Unsafe.AsPointer(ref this), ePaletteType, fAddTransparentColor);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::InitializeCustom"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult InitializeCustom(uint* pColors, uint cCount)
+	public HRESULT InitializeCustom(uint* pColors, uint cCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, uint*, uint, int>)(lpVtbl[4]))((IWICPalette*)Unsafe.AsPointer(ref this), pColors, cCount);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::InitializeFromBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult InitializeFromBitmap(IWICBitmapSource* pISurface, uint cCount, Bool32 fAddTransparentColor)
+	public HRESULT InitializeFromBitmap(IWICBitmapSource* pISurface, uint cCount, Bool32 fAddTransparentColor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, IWICBitmapSource*, uint, Bool32, int>)(lpVtbl[5]))((IWICPalette*)Unsafe.AsPointer(ref this), pISurface, cCount, fAddTransparentColor);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::InitializeFromPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult InitializeFromPalette(IWICPalette* pIPalette)
+	public HRESULT InitializeFromPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, IWICPalette*, int>)(lpVtbl[6]))((IWICPalette*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetType(WICBitmapPaletteType* pePaletteType)
+	public HRESULT GetType(WICBitmapPaletteType* pePaletteType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, WICBitmapPaletteType*, int>)(lpVtbl[7]))((IWICPalette*)Unsafe.AsPointer(ref this), pePaletteType);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::GetColorCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetColorCount(uint* pcCount)
+	public HRESULT GetColorCount(uint* pcCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, uint*, int>)(lpVtbl[8]))((IWICPalette*)Unsafe.AsPointer(ref this), pcCount);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::GetColors"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetColors(uint cCount, uint* pColors, uint* pcActualColors)
+	public HRESULT GetColors(uint cCount, uint* pColors, uint* pcActualColors)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, uint, uint*, uint*, int>)(lpVtbl[9]))((IWICPalette*)Unsafe.AsPointer(ref this), cCount, pColors, pcActualColors);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::IsBlackWhite"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult IsBlackWhite(Bool32* pfIsBlackWhite)
+	public HRESULT IsBlackWhite(Bool32* pfIsBlackWhite)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, Bool32*, int>)(lpVtbl[10]))((IWICPalette*)Unsafe.AsPointer(ref this), pfIsBlackWhite);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::IsGrayscale"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult IsGrayscale(Bool32* pfIsGrayscale)
+	public HRESULT IsGrayscale(Bool32* pfIsGrayscale)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, Bool32*, int>)(lpVtbl[11]))((IWICPalette*)Unsafe.AsPointer(ref this), pfIsGrayscale);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPalette::HasAlpha"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult HasAlpha(Bool32* pfHasAlpha)
+	public HRESULT HasAlpha(Bool32* pfHasAlpha)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPalette*, Bool32*, int>)(lpVtbl[12]))((IWICPalette*)Unsafe.AsPointer(ref this), pfHasAlpha);
 	}
@@ -153,34 +153,34 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult InitializePredefined(WICBitmapPaletteType ePaletteType, Bool32 fAddTransparentColor);
+		HRESULT InitializePredefined(WICBitmapPaletteType ePaletteType, Bool32 fAddTransparentColor);
 
 		[VtblIndex(4)]
-		HResult InitializeCustom(uint* pColors, uint cCount);
+		HRESULT InitializeCustom(uint* pColors, uint cCount);
 
 		[VtblIndex(5)]
-		HResult InitializeFromBitmap(IWICBitmapSource* pISurface, uint cCount, Bool32 fAddTransparentColor);
+		HRESULT InitializeFromBitmap(IWICBitmapSource* pISurface, uint cCount, Bool32 fAddTransparentColor);
 
 		[VtblIndex(6)]
-		HResult InitializeFromPalette(IWICPalette* pIPalette);
+		HRESULT InitializeFromPalette(IWICPalette* pIPalette);
 
 		[VtblIndex(7)]
-		HResult GetType(WICBitmapPaletteType* pePaletteType);
+		HRESULT GetType(WICBitmapPaletteType* pePaletteType);
 
 		[VtblIndex(8)]
-		HResult GetColorCount(uint* pcCount);
+		HRESULT GetColorCount(uint* pcCount);
 
 		[VtblIndex(9)]
-		HResult GetColors(uint cCount, uint* pColors, uint* pcActualColors);
+		HRESULT GetColors(uint cCount, uint* pColors, uint* pcActualColors);
 
 		[VtblIndex(10)]
-		HResult IsBlackWhite(Bool32* pfIsBlackWhite);
+		HRESULT IsBlackWhite(Bool32* pfIsBlackWhite);
 
 		[VtblIndex(11)]
-		HResult IsGrayscale(Bool32* pfIsGrayscale);
+		HRESULT IsGrayscale(Bool32* pfIsGrayscale);
 
 		[VtblIndex(12)]
-		HResult HasAlpha(Bool32* pfHasAlpha);
+		HRESULT HasAlpha(Bool32* pfHasAlpha);
 	}
 }
 

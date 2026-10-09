@@ -6,11 +6,11 @@ namespace Vortice.Win32.Graphics.Direct3D11;
 public static unsafe partial class Apis
 {
     [DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
-    public static extern HResult D3DCreateLinker(ID3D11Linker** ppLinker);
+    public static extern HRESULT D3DCreateLinker(ID3D11Linker** ppLinker);
 
     [DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
-    public static extern HResult D3DLoadModule(void* pSrcData, nuint cbSrcDataSize, ID3D11Module** ppModule);
+    public static extern HRESULT D3DLoadModule(void* pSrcData, nuint cbSrcDataSize, ID3D11Module** ppModule);
 
     [DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
-    public static extern HResult D3DCreateFunctionLinkingGraph(uint uFlags, ID3D11FunctionLinkingGraph** ppFunctionLinkingGraph);
+    public static extern HRESULT D3DCreateFunctionLinkingGraph(uint uFlags, ID3D11FunctionLinkingGraph** ppFunctionLinkingGraph);
 }

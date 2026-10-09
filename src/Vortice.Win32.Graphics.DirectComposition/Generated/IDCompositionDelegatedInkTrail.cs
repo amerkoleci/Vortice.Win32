@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::AddTrailPoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddTrailPoints(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId)
+	public HRESULT AddTrailPoints(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, DCompositionInkTrailPoint*, uint, uint*, int>)(lpVtbl[3]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, generationId);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::AddTrailPointsWithPrediction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddTrailPointsWithPrediction(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, DCompositionInkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId)
+	public HRESULT AddTrailPointsWithPrediction(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, DCompositionInkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, DCompositionInkTrailPoint*, uint, DCompositionInkTrailPoint*, uint, uint*, int>)(lpVtbl[4]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, predictedInkPoints, predictedInkPointsCount, generationId);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::RemoveTrailPoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult RemoveTrailPoints(uint generationId)
+	public HRESULT RemoveTrailPoints(uint generationId)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, uint, int>)(lpVtbl[5]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), generationId);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::StartNewTrail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult StartNewTrail(Color4* color)
+	public HRESULT StartNewTrail(Color4* color)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDelegatedInkTrail*, Color4*, int>)(lpVtbl[6]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), color);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddTrailPoints(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId);
+		HRESULT AddTrailPoints(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId);
 
 		[VtblIndex(4)]
-		HResult AddTrailPointsWithPrediction(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, DCompositionInkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId);
+		HRESULT AddTrailPointsWithPrediction(DCompositionInkTrailPoint* inkPoints, uint inkPointsCount, DCompositionInkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId);
 
 		[VtblIndex(5)]
-		HResult RemoveTrailPoints(uint generationId);
+		HRESULT RemoveTrailPoints(uint generationId);
 
 		[VtblIndex(6)]
-		HResult StartNewTrail(Color4* color);
+		HRESULT StartNewTrail(Color4* color);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetTextAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetTextAlignment(DWRITE_TEXT_ALIGNMENT textAlignment)
+	public HRESULT SetTextAlignment(DWRITE_TEXT_ALIGNMENT textAlignment)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_TEXT_ALIGNMENT, int>)(lpVtbl[3]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), textAlignment);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetParagraphAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment)
+	public HRESULT SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_PARAGRAPH_ALIGNMENT, int>)(lpVtbl[4]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), paragraphAlignment);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetWordWrapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetWordWrapping(DWRITE_WORD_WRAPPING wordWrapping)
+	public HRESULT SetWordWrapping(DWRITE_WORD_WRAPPING wordWrapping)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_WORD_WRAPPING, int>)(lpVtbl[5]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), wordWrapping);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetReadingDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetReadingDirection(DWRITE_READING_DIRECTION readingDirection)
+	public HRESULT SetReadingDirection(DWRITE_READING_DIRECTION readingDirection)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_READING_DIRECTION, int>)(lpVtbl[6]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), readingDirection);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetFlowDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetFlowDirection(DWRITE_FLOW_DIRECTION flowDirection)
+	public HRESULT SetFlowDirection(DWRITE_FLOW_DIRECTION flowDirection)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_FLOW_DIRECTION, int>)(lpVtbl[7]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), flowDirection);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetIncrementalTabStop"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetIncrementalTabStop(float incrementalTabStop)
+	public HRESULT SetIncrementalTabStop(float incrementalTabStop)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, float, int>)(lpVtbl[8]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), incrementalTabStop);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetTrimming"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject* trimmingSign)
+	public HRESULT SetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject* trimmingSign)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_TRIMMING*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::SetLineSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetLineSpacing(DWRITE_LINE_SPACING_METHOD lineSpacingMethod, float lineSpacing, float baseline)
+	public HRESULT SetLineSpacing(DWRITE_LINE_SPACING_METHOD lineSpacingMethod, float lineSpacing, float baseline)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_LINE_SPACING_METHOD, float, float, int>)(lpVtbl[10]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetTrimming"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject** trimmingSign)
+	public HRESULT GetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject** trimmingSign)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_TRIMMING*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetLineSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetLineSpacing(DWRITE_LINE_SPACING_METHOD* lineSpacingMethod, float* lineSpacing, float* baseline)
+	public HRESULT GetLineSpacing(DWRITE_LINE_SPACING_METHOD* lineSpacingMethod, float* lineSpacing, float* baseline)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, DWRITE_LINE_SPACING_METHOD*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetFontCollection(IDWriteFontCollection** fontCollection)
+	public HRESULT GetFontCollection(IDWriteFontCollection** fontCollection)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, IDWriteFontCollection**, int>)(lpVtbl[19]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), fontCollection);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetFontFamilyName(char* fontFamilyName, uint nameSize)
+	public HRESULT GetFontFamilyName(char* fontFamilyName, uint nameSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, char*, uint, int>)(lpVtbl[21]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
 	}
@@ -265,7 +265,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult GetLocaleName(char* localeName, uint nameSize)
+	public HRESULT GetLocaleName(char* localeName, uint nameSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, char*, uint, int>)(lpVtbl[27]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
@@ -273,28 +273,28 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetTextAlignment(DWRITE_TEXT_ALIGNMENT textAlignment);
+		HRESULT SetTextAlignment(DWRITE_TEXT_ALIGNMENT textAlignment);
 
 		[VtblIndex(4)]
-		HResult SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment);
+		HRESULT SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment);
 
 		[VtblIndex(5)]
-		HResult SetWordWrapping(DWRITE_WORD_WRAPPING wordWrapping);
+		HRESULT SetWordWrapping(DWRITE_WORD_WRAPPING wordWrapping);
 
 		[VtblIndex(6)]
-		HResult SetReadingDirection(DWRITE_READING_DIRECTION readingDirection);
+		HRESULT SetReadingDirection(DWRITE_READING_DIRECTION readingDirection);
 
 		[VtblIndex(7)]
-		HResult SetFlowDirection(DWRITE_FLOW_DIRECTION flowDirection);
+		HRESULT SetFlowDirection(DWRITE_FLOW_DIRECTION flowDirection);
 
 		[VtblIndex(8)]
-		HResult SetIncrementalTabStop(float incrementalTabStop);
+		HRESULT SetIncrementalTabStop(float incrementalTabStop);
 
 		[VtblIndex(9)]
-		HResult SetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject* trimmingSign);
+		HRESULT SetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject* trimmingSign);
 
 		[VtblIndex(10)]
-		HResult SetLineSpacing(DWRITE_LINE_SPACING_METHOD lineSpacingMethod, float lineSpacing, float baseline);
+		HRESULT SetLineSpacing(DWRITE_LINE_SPACING_METHOD lineSpacingMethod, float lineSpacing, float baseline);
 
 		[VtblIndex(11)]
 		DWRITE_TEXT_ALIGNMENT GetTextAlignment();
@@ -315,19 +315,19 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 		float GetIncrementalTabStop();
 
 		[VtblIndex(17)]
-		HResult GetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject** trimmingSign);
+		HRESULT GetTrimming(DWRITE_TRIMMING* trimmingOptions, IDWriteInlineObject** trimmingSign);
 
 		[VtblIndex(18)]
-		HResult GetLineSpacing(DWRITE_LINE_SPACING_METHOD* lineSpacingMethod, float* lineSpacing, float* baseline);
+		HRESULT GetLineSpacing(DWRITE_LINE_SPACING_METHOD* lineSpacingMethod, float* lineSpacing, float* baseline);
 
 		[VtblIndex(19)]
-		HResult GetFontCollection(IDWriteFontCollection** fontCollection);
+		HRESULT GetFontCollection(IDWriteFontCollection** fontCollection);
 
 		[VtblIndex(20)]
 		uint GetFontFamilyNameLength();
 
 		[VtblIndex(21)]
-		HResult GetFontFamilyName(char* fontFamilyName, uint nameSize);
+		HRESULT GetFontFamilyName(char* fontFamilyName, uint nameSize);
 
 		[VtblIndex(22)]
 		DWRITE_FONT_WEIGHT GetFontWeight();
@@ -345,7 +345,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 		uint GetLocaleNameLength();
 
 		[VtblIndex(27)]
-		HResult GetLocaleName(char* localeName, uint nameSize);
+		HRESULT GetLocaleName(char* localeName, uint nameSize);
 	}
 }
 

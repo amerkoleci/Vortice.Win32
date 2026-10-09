@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(ID3D11Resource* pResource, uint Subresource, D3D11_MAP MapType, D3D11_MAP_FLAG MapFlags, D3D11_MAPPED_SUBRESOURCE* pMappedResource)
+	public HRESULT Map(ID3D11Resource* pResource, uint Subresource, D3D11_MAP MapType, D3D11_MAP_FLAG MapFlags, D3D11_MAPPED_SUBRESOURCE* pMappedResource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Resource*, uint, D3D11_MAP, D3D11_MAP_FLAG, D3D11_MAPPED_SUBRESOURCE*, int>)(lpVtbl[14]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
 	}
@@ -281,7 +281,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.GetData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult GetData(ID3D11Asynchronous* pAsync, void* pData, uint DataSize, uint GetDataFlags)
+	public HRESULT GetData(ID3D11Asynchronous* pAsync, void* pData, uint DataSize, uint GetDataFlags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, ID3D11Asynchronous*, void*, uint, uint, int>)(lpVtbl[29]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pAsync, pData, DataSize, GetDataFlags);
 	}
@@ -961,7 +961,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.FinishCommandList" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(114)]
-	public HResult FinishCommandList(Bool32 RestoreDeferredContextState, ID3D11CommandList** ppCommandList)
+	public HRESULT FinishCommandList(Bool32 RestoreDeferredContextState, ID3D11CommandList** ppCommandList)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext1*, Bool32, ID3D11CommandList**, int>)(lpVtbl[114]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), RestoreDeferredContextState, ppCommandList);
 	}

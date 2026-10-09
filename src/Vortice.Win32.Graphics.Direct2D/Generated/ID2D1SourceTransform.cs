@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SourceTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	/// <inheritdoc cref="ID2D1Transform.MapOutputRectToInputRects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount)
+	public HRESULT MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SourceTransform*, Rect*, Rect*, uint, int>)(lpVtbl[4]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	/// <inheritdoc cref="ID2D1Transform.MapInputRectsToOutputRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect)
+	public HRESULT MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SourceTransform*, Rect*, Rect*, uint, Rect*, Rect*, int>)(lpVtbl[5]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	/// <inheritdoc cref="ID2D1Transform.MapInvalidRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect)
+	public HRESULT MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SourceTransform*, uint, Rect, Rect*, int>)(lpVtbl[6]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::SetRenderInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetRenderInfo(ID2D1RenderInfo* renderInfo)
+	public HRESULT SetRenderInfo(ID2D1RenderInfo* renderInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SourceTransform*, ID2D1RenderInfo*, int>)(lpVtbl[7]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), renderInfo);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::Draw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Draw(ID2D1Bitmap1* target, Rect* drawRect, System.Drawing.Point targetOrigin)
+	public HRESULT Draw(ID2D1Bitmap1* target, Rect* drawRect, System.Drawing.Point targetOrigin)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SourceTransform*, ID2D1Bitmap1*, Rect*, System.Drawing.Point, int>)(lpVtbl[8]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), target, drawRect, targetOrigin);
 	}
@@ -121,10 +121,10 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	public interface Interface : ID2D1Transform.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetRenderInfo(ID2D1RenderInfo* renderInfo);
+		HRESULT SetRenderInfo(ID2D1RenderInfo* renderInfo);
 
 		[VtblIndex(8)]
-		HResult Draw(ID2D1Bitmap1* target, Rect* drawRect, System.Drawing.Point targetOrigin);
+		HRESULT Draw(ID2D1Bitmap1* target, Rect* drawRect, System.Drawing.Point targetOrigin);
 	}
 }
 

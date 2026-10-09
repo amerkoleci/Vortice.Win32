@@ -47,7 +47,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, Guid*, void**, int>)(lpVtbl[0]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, uint*, uint*, int>)(lpVtbl[3]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPixelFormat(Guid* pPixelFormat)
+	public HRESULT GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, Guid*, int>)(lpVtbl[4]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResolution(double* pDpiX, double* pDpiY)
+	public HRESULT GetResolution(double* pDpiX, double* pDpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, double*, double*, int>)(lpVtbl[5]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CopyPalette(IWICPalette* pIPalette)
+	public HRESULT CopyPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, IWICPalette*, int>)(lpVtbl[6]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate)
+	public HRESULT Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, IWICBitmapSource**, uint, Guid*, WICBitmapDitherType, IWICPalette*, double, WICBitmapPaletteType, int>)(lpVtbl[8]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, dstFormat, dither, pIPalette, alphaThresholdPercent, paletteTranslate);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::CanConvert"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert)
+	public HRESULT CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, Guid*, uint, Guid*, Bool32*, int>)(lpVtbl[9]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pSrcPixelFormats, cSrcPlanes, dstPixelFormat, pfCanConvert);
 	}
@@ -129,10 +129,10 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]
-		HResult Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate);
+		HRESULT Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate);
 
 		[VtblIndex(9)]
-		HResult CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert);
+		HRESULT CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert);
 	}
 }
 

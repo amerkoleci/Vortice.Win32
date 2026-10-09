@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SvgAttribute : ID2D1SvgAttribute.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgAttribute*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgAttribute*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1SvgAttribute : ID2D1SvgAttribute.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute::Clone"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Clone(ID2D1SvgAttribute** attribute)
+	public HRESULT Clone(ID2D1SvgAttribute** attribute)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgAttribute*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgAttribute*)Unsafe.AsPointer(ref this), attribute);
 	}
@@ -100,7 +100,7 @@ public unsafe partial struct ID2D1SvgAttribute : ID2D1SvgAttribute.Interface, IN
 		void GetElement(ID2D1SvgElement** element);
 
 		[VtblIndex(5)]
-		HResult Clone(ID2D1SvgAttribute** attribute);
+		HRESULT Clone(ID2D1SvgAttribute** attribute);
 	}
 }
 

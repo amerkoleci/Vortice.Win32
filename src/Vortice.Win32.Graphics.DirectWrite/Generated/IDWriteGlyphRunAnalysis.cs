@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGlyphRunAnalysis*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaTextureBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAlphaTextureBounds(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds)
+	public HRESULT GetAlphaTextureBounds(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGlyphRunAnalysis*, DWRITE_TEXTURE_TYPE, Rect*, int>)(lpVtbl[3]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::CreateAlphaTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateAlphaTexture(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize)
+	public HRESULT CreateAlphaTexture(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGlyphRunAnalysis*, DWRITE_TEXTURE_TYPE, Rect*, byte*, uint, int>)(lpVtbl[4]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds, alphaValues, bufferSize);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaBlendParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel)
+	public HRESULT GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGlyphRunAnalysis*, IDWriteRenderingParams*, float*, float*, float*, int>)(lpVtbl[5]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), renderingParams, blendGamma, blendEnhancedContrast, blendClearTypeLevel);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetAlphaTextureBounds(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds);
+		HRESULT GetAlphaTextureBounds(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds);
 
 		[VtblIndex(4)]
-		HResult CreateAlphaTexture(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize);
+		HRESULT CreateAlphaTexture(DWRITE_TEXTURE_TYPE textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize);
 
 		[VtblIndex(5)]
-		HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel);
+		HRESULT GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel);
 	}
 }
 

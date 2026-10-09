@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Bitmap.CopyFromBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.Rect* srcRect)
+	public HRESULT CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Vortice.Win32.Numerics.Rect* srcRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, System.Drawing.Point*, ID2D1Bitmap*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[8]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Bitmap.CopyFromRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Vortice.Win32.Numerics.Rect* srcRect)
+	public HRESULT CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Vortice.Win32.Numerics.Rect* srcRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, System.Drawing.Point*, ID2D1RenderTarget*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[9]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Bitmap.CopyFromMemory" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CopyFromMemory(Vortice.Win32.Numerics.Rect* dstRect, void* srcData, uint pitch)
+	public HRESULT CopyFromMemory(Vortice.Win32.Numerics.Rect* dstRect, void* srcData, uint pitch)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, Vortice.Win32.Numerics.Rect*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetSurface(IDXGISurface** dxgiSurface)
+	public HRESULT GetSurface(IDXGISurface** dxgiSurface)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, IDXGISurface**, int>)(lpVtbl[13]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), dxgiSurface);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT* mappedRect)
+	public HRESULT Map(D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT* mappedRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, D2D1_MAP_OPTIONS, D2D1_MAPPED_RECT*, int>)(lpVtbl[14]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), options, mappedRect);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult Unmap()
+	public HRESULT Unmap()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Bitmap1*, int>)(lpVtbl[15]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
@@ -183,13 +183,13 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 		D2D1_BITMAP_OPTIONS GetOptions();
 
 		[VtblIndex(13)]
-		HResult GetSurface(IDXGISurface** dxgiSurface);
+		HRESULT GetSurface(IDXGISurface** dxgiSurface);
 
 		[VtblIndex(14)]
-		HResult Map(D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT* mappedRect);
+		HRESULT Map(D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT* mappedRect);
 
 		[VtblIndex(15)]
-		HResult Unmap();
+		HRESULT Unmap();
 	}
 }
 

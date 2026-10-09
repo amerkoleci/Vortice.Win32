@@ -46,7 +46,7 @@ public unsafe partial struct IDxcOperationResult : IDxcOperationResult.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOperationResult*, Guid*, void**, int>)(lpVtbl[0]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,21 +71,21 @@ public unsafe partial struct IDxcOperationResult : IDxcOperationResult.Interface
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetStatus(HResult* pStatus)
+	public HRESULT GetStatus(HRESULT* pStatus)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcOperationResult*, HResult*, int>)(lpVtbl[3]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), pStatus);
+		return ((delegate* unmanaged[MemberFunction]<IDxcOperationResult*, HRESULT*, int>)(lpVtbl[3]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), pStatus);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetResult(IDxcBlob** ppResult)
+	public HRESULT GetResult(IDxcBlob** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOperationResult*, IDxcBlob**, int>)(lpVtbl[4]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetErrorBuffer(IDxcBlobEncoding** ppErrors)
+	public HRESULT GetErrorBuffer(IDxcBlobEncoding** ppErrors)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOperationResult*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), ppErrors);
 	}
@@ -93,13 +93,13 @@ public unsafe partial struct IDxcOperationResult : IDxcOperationResult.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetStatus(HResult* pStatus);
+		HRESULT GetStatus(HRESULT* pStatus);
 
 		[VtblIndex(4)]
-		HResult GetResult(IDxcBlob** ppResult);
+		HRESULT GetResult(IDxcBlob** ppResult);
 
 		[VtblIndex(5)]
-		HResult GetErrorBuffer(IDxcBlobEncoding** ppErrors);
+		HRESULT GetErrorBuffer(IDxcBlobEncoding** ppErrors);
 	}
 }
 

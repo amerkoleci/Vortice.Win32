@@ -47,7 +47,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::LoadEx"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions)
+	public HRESULT LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Com.IStream*, Guid*, WICPersistOptions, int>)(lpVtbl[8]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::SaveEx"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty)
+	public HRESULT SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Com.IStream*, WICPersistOptions, Bool32, int>)(lpVtbl[9]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	public interface Interface : Vortice.Win32.Com.IPersistStream.Interface
 	{
 		[VtblIndex(8)]
-		HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions);
+		HRESULT LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions);
 
 		[VtblIndex(9)]
-		HResult SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty);
+		HRESULT SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty);
 	}
 }
 

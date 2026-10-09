@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderTraceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory::CreateShaderTrace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateShaderTrace(IUnknown* pShader, D3D11_SHADER_TRACE_DESC* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)
+	public HRESULT CreateShaderTrace(IUnknown* pShader, D3D11_SHADER_TRACE_DESC* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderTraceFactory*, IUnknown*, D3D11_SHADER_TRACE_DESC*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateShaderTrace(IUnknown* pShader, D3D11_SHADER_TRACE_DESC* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace);
+		HRESULT CreateShaderTrace(IUnknown* pShader, D3D11_SHADER_TRACE_DESC* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace);
 	}
 }
 

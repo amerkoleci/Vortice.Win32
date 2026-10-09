@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapFrameChainWriter : IWICBitmapFrameChainWr
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapFrameChainWriter*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapFrameChainWriter*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapFrameChainWriter : IWICBitmapFrameChainWr
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameChainWriter::AppendFrameToChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AppendFrameToChain(WICBitmapChainType chainType, IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
+	public HRESULT AppendFrameToChain(WICBitmapChainType chainType, IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapFrameChainWriter*, WICBitmapChainType, IWICBitmapFrameEncode**, Com.IPropertyBag2**, int>)(lpVtbl[3]))((IWICBitmapFrameChainWriter*)Unsafe.AsPointer(ref this), chainType, ppIFrameEncode, ppIEncoderOptions);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapFrameChainWriter : IWICBitmapFrameChainWr
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameChainWriter::DoesSupportChainType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult DoesSupportChainType(WICBitmapChainType chainType, Bool32* pfIsSupported)
+	public HRESULT DoesSupportChainType(WICBitmapChainType chainType, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapFrameChainWriter*, WICBitmapChainType, Bool32*, int>)(lpVtbl[4]))((IWICBitmapFrameChainWriter*)Unsafe.AsPointer(ref this), chainType, pfIsSupported);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IWICBitmapFrameChainWriter : IWICBitmapFrameChainWr
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AppendFrameToChain(WICBitmapChainType chainType, IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions);
+		HRESULT AppendFrameToChain(WICBitmapChainType chainType, IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions);
 
 		[VtblIndex(4)]
-		HResult DoesSupportChainType(WICBitmapChainType chainType, Bool32* pfIsSupported);
+		HRESULT DoesSupportChainType(WICBitmapChainType chainType, Bool32* pfIsSupported);
 	}
 }
 

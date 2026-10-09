@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetRedTable(float* tableValues, uint count)
+	public HRESULT SetRedTable(float* tableValues, uint count)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[4]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetGreenTable(float* tableValues, uint count)
+	public HRESULT SetGreenTable(float* tableValues, uint count)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[5]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetBlueTable(float* tableValues, uint count)
+	public HRESULT SetBlueTable(float* tableValues, uint count)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[6]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetAlphaTable(float* tableValues, uint count)
+	public HRESULT SetAlphaTable(float* tableValues, uint count)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[7]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetRedDisable(Bool32 redDisable)
+	public HRESULT SetRedDisable(Bool32 redDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), redDisable);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetGreenDisable(Bool32 greenDisable)
+	public HRESULT SetGreenDisable(Bool32 greenDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[9]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), greenDisable);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetBlueDisable(Bool32 blueDisable)
+	public HRESULT SetBlueDisable(Bool32 blueDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), blueDisable);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetAlphaDisable(Bool32 alphaDisable)
+	public HRESULT SetAlphaDisable(Bool32 alphaDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[11]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), alphaDisable);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetClampOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetClampOutput(Bool32 clampOutput)
+	public HRESULT SetClampOutput(Bool32 clampOutput)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[12]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult SetRedTableValue(uint index, IDCompositionAnimation* animation)
+	public HRESULT SetRedTableValue(uint index, IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetRedTableValue(uint index, float value)
+	public HRESULT SetRedTableValue(uint index, float value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[14]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult SetGreenTableValue(uint index, IDCompositionAnimation* animation)
+	public HRESULT SetGreenTableValue(uint index, IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[15]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult SetGreenTableValue(uint index, float value)
+	public HRESULT SetGreenTableValue(uint index, float value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[16]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult SetBlueTableValue(uint index, IDCompositionAnimation* animation)
+	public HRESULT SetBlueTableValue(uint index, IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[17]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult SetBlueTableValue(uint index, float value)
+	public HRESULT SetBlueTableValue(uint index, float value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[18]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetAlphaTableValue(uint index, IDCompositionAnimation* animation)
+	public HRESULT SetAlphaTableValue(uint index, IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaTableValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult SetAlphaTableValue(uint index, float value)
+	public HRESULT SetAlphaTableValue(uint index, float value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[20]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
@@ -217,55 +217,55 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetRedTable(float* tableValues, uint count);
+		HRESULT SetRedTable(float* tableValues, uint count);
 
 		[VtblIndex(5)]
-		HResult SetGreenTable(float* tableValues, uint count);
+		HRESULT SetGreenTable(float* tableValues, uint count);
 
 		[VtblIndex(6)]
-		HResult SetBlueTable(float* tableValues, uint count);
+		HRESULT SetBlueTable(float* tableValues, uint count);
 
 		[VtblIndex(7)]
-		HResult SetAlphaTable(float* tableValues, uint count);
+		HRESULT SetAlphaTable(float* tableValues, uint count);
 
 		[VtblIndex(8)]
-		HResult SetRedDisable(Bool32 redDisable);
+		HRESULT SetRedDisable(Bool32 redDisable);
 
 		[VtblIndex(9)]
-		HResult SetGreenDisable(Bool32 greenDisable);
+		HRESULT SetGreenDisable(Bool32 greenDisable);
 
 		[VtblIndex(10)]
-		HResult SetBlueDisable(Bool32 blueDisable);
+		HRESULT SetBlueDisable(Bool32 blueDisable);
 
 		[VtblIndex(11)]
-		HResult SetAlphaDisable(Bool32 alphaDisable);
+		HRESULT SetAlphaDisable(Bool32 alphaDisable);
 
 		[VtblIndex(12)]
-		HResult SetClampOutput(Bool32 clampOutput);
+		HRESULT SetClampOutput(Bool32 clampOutput);
 
 		[VtblIndex(13)]
-		HResult SetRedTableValue(uint index, IDCompositionAnimation* animation);
+		HRESULT SetRedTableValue(uint index, IDCompositionAnimation* animation);
 
 		[VtblIndex(14)]
-		HResult SetRedTableValue(uint index, float value);
+		HRESULT SetRedTableValue(uint index, float value);
 
 		[VtblIndex(15)]
-		HResult SetGreenTableValue(uint index, IDCompositionAnimation* animation);
+		HRESULT SetGreenTableValue(uint index, IDCompositionAnimation* animation);
 
 		[VtblIndex(16)]
-		HResult SetGreenTableValue(uint index, float value);
+		HRESULT SetGreenTableValue(uint index, float value);
 
 		[VtblIndex(17)]
-		HResult SetBlueTableValue(uint index, IDCompositionAnimation* animation);
+		HRESULT SetBlueTableValue(uint index, IDCompositionAnimation* animation);
 
 		[VtblIndex(18)]
-		HResult SetBlueTableValue(uint index, float value);
+		HRESULT SetBlueTableValue(uint index, float value);
 
 		[VtblIndex(19)]
-		HResult SetAlphaTableValue(uint index, IDCompositionAnimation* animation);
+		HRESULT SetAlphaTableValue(uint index, IDCompositionAnimation* animation);
 
 		[VtblIndex(20)]
-		HResult SetAlphaTableValue(uint index, float value);
+		HRESULT SetAlphaTableValue(uint index, float value);
 	}
 }
 

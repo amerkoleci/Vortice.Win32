@@ -13,85 +13,85 @@ public static unsafe partial class FXC
 {
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DReadFileToBlob"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DReadFileToBlob(char* pFileName, ID3DBlob** ppContents);
+	public static partial HRESULT D3DReadFileToBlob(char* pFileName, ID3DBlob** ppContents);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DWriteBlobToFile"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DWriteBlobToFile(ID3DBlob* pBlob, char* pFileName, Bool32 bOverwrite);
+	public static partial HRESULT D3DWriteBlobToFile(ID3DBlob* pBlob, char* pFileName, Bool32 bOverwrite);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCompile"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DCompile(void* pSrcData, nuint SrcDataSize, byte* pSourceName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, byte* pEntrypoint, byte* pTarget, D3DCOMPILE Flags1, uint Flags2, ID3DBlob** ppCode, ID3DBlob** ppErrorMsgs);
+	public static partial HRESULT D3DCompile(void* pSrcData, nuint SrcDataSize, byte* pSourceName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, byte* pEntrypoint, byte* pTarget, D3DCOMPILE Flags1, uint Flags2, ID3DBlob** ppCode, ID3DBlob** ppErrorMsgs);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCompile2"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DCompile2(void* pSrcData, nuint SrcDataSize, byte* pSourceName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, byte* pEntrypoint, byte* pTarget, D3DCOMPILE Flags1, uint Flags2, uint SecondaryDataFlags, void* pSecondaryData, nuint SecondaryDataSize, ID3DBlob** ppCode, ID3DBlob** ppErrorMsgs);
+	public static partial HRESULT D3DCompile2(void* pSrcData, nuint SrcDataSize, byte* pSourceName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, byte* pEntrypoint, byte* pTarget, D3DCOMPILE Flags1, uint Flags2, uint SecondaryDataFlags, void* pSecondaryData, nuint SecondaryDataSize, ID3DBlob** ppCode, ID3DBlob** ppErrorMsgs);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCompileFromFile"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DCompileFromFile(char* pFileName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, byte* pEntrypoint, byte* pTarget, D3DCOMPILE Flags1, uint Flags2, ID3DBlob** ppCode, ID3DBlob** ppErrorMsgs);
+	public static partial HRESULT D3DCompileFromFile(char* pFileName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, byte* pEntrypoint, byte* pTarget, D3DCOMPILE Flags1, uint Flags2, ID3DBlob** ppCode, ID3DBlob** ppErrorMsgs);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DPreprocess"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DPreprocess(void* pSrcData, nuint SrcDataSize, byte* pSourceName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, ID3DBlob** ppCodeText, ID3DBlob** ppErrorMsgs);
+	public static partial HRESULT D3DPreprocess(void* pSrcData, nuint SrcDataSize, byte* pSourceName, D3D_SHADER_MACRO* pDefines, ID3DInclude* pInclude, ID3DBlob** ppCodeText, ID3DBlob** ppErrorMsgs);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DGetDebugInfo"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DGetDebugInfo(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppDebugInfo);
+	public static partial HRESULT D3DGetDebugInfo(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppDebugInfo);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DReflect"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DReflect(void* pSrcData, nuint SrcDataSize, Guid* pInterface, void** ppReflector);
+	public static partial HRESULT D3DReflect(void* pSrcData, nuint SrcDataSize, Guid* pInterface, void** ppReflector);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DReflectLibrary"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DReflectLibrary(void* pSrcData, nuint SrcDataSize, Guid* riid, void** ppReflector);
+	public static partial HRESULT D3DReflectLibrary(void* pSrcData, nuint SrcDataSize, Guid* riid, void** ppReflector);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DDisassemble"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DDisassemble(void* pSrcData, nuint SrcDataSize, D3D_DISASM Flags, byte* szComments, ID3DBlob** ppDisassembly);
+	public static partial HRESULT D3DDisassemble(void* pSrcData, nuint SrcDataSize, D3D_DISASM Flags, byte* szComments, ID3DBlob** ppDisassembly);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DDisassembleRegion"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DDisassembleRegion(void* pSrcData, nuint SrcDataSize, uint Flags, byte* szComments, nuint StartByteOffset, nuint NumInsts, nuint* pFinishByteOffset, ID3DBlob** ppDisassembly);
+	public static partial HRESULT D3DDisassembleRegion(void* pSrcData, nuint SrcDataSize, uint Flags, byte* szComments, nuint StartByteOffset, nuint NumInsts, nuint* pFinishByteOffset, ID3DBlob** ppDisassembly);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DGetTraceInstructionOffsets"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DGetTraceInstructionOffsets(void* pSrcData, nuint SrcDataSize, uint Flags, nuint StartInstIndex, nuint NumInsts, nuint* pOffsets, nuint* pTotalInsts);
+	public static partial HRESULT D3DGetTraceInstructionOffsets(void* pSrcData, nuint SrcDataSize, uint Flags, nuint StartInstIndex, nuint NumInsts, nuint* pOffsets, nuint* pTotalInsts);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DGetInputSignatureBlob"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DGetInputSignatureBlob(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppSignatureBlob);
+	public static partial HRESULT D3DGetInputSignatureBlob(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppSignatureBlob);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DGetOutputSignatureBlob"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DGetOutputSignatureBlob(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppSignatureBlob);
+	public static partial HRESULT D3DGetOutputSignatureBlob(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppSignatureBlob);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DGetInputAndOutputSignatureBlob"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DGetInputAndOutputSignatureBlob(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppSignatureBlob);
+	public static partial HRESULT D3DGetInputAndOutputSignatureBlob(void* pSrcData, nuint SrcDataSize, ID3DBlob** ppSignatureBlob);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DStripShader"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DStripShader(void* pShaderBytecode, nuint BytecodeLength, uint uStripFlags, ID3DBlob** ppStrippedBlob);
+	public static partial HRESULT D3DStripShader(void* pShaderBytecode, nuint BytecodeLength, uint uStripFlags, ID3DBlob** ppStrippedBlob);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DGetBlobPart"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DGetBlobPart(void* pSrcData, nuint SrcDataSize, D3D_BLOB_PART Part, uint Flags, ID3DBlob** ppPart);
+	public static partial HRESULT D3DGetBlobPart(void* pSrcData, nuint SrcDataSize, D3D_BLOB_PART Part, uint Flags, ID3DBlob** ppPart);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DSetBlobPart"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DSetBlobPart(void* pSrcData, nuint SrcDataSize, D3D_BLOB_PART Part, uint Flags, void* pPart, nuint PartSize, ID3DBlob** ppNewShader);
+	public static partial HRESULT D3DSetBlobPart(void* pSrcData, nuint SrcDataSize, D3D_BLOB_PART Part, uint Flags, void* pPart, nuint PartSize, ID3DBlob** ppNewShader);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCreateBlob"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DCreateBlob(nuint Size, ID3DBlob** ppBlob);
+	public static partial HRESULT D3DCreateBlob(nuint Size, ID3DBlob** ppBlob);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCompressShaders"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DCompressShaders(uint uNumShaders, D3D_SHADER_DATA* pShaderData, D3D_COMPRESS_SHADER uFlags, ID3DBlob** ppCompressedData);
+	public static partial HRESULT D3DCompressShaders(uint uNumShaders, D3D_SHADER_DATA* pShaderData, D3D_COMPRESS_SHADER uFlags, ID3DBlob** ppCompressedData);
 
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DDecompressShaders"]/*' />
 	[LibraryImport("D3DCOMPILER_47.dll")]
-	public static partial HResult D3DDecompressShaders(void* pSrcData, nuint SrcDataSize, uint uNumShaders, uint uStartIndex, uint* pIndices, uint uFlags, ID3DBlob** ppShaders, uint* pTotalShaders);
+	public static partial HRESULT D3DDecompressShaders(void* pSrcData, nuint SrcDataSize, uint uNumShaders, uint uStartIndex, uint* pIndices, uint uFlags, ID3DBlob** ppShaders, uint* pTotalShaders);
 }

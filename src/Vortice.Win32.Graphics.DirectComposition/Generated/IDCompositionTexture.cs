@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect)
+	public HRESULT SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[3]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), sourceRect);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetColorSpace(DXGI_COLOR_SPACE_TYPE colorSpace)
+	public HRESULT SetColorSpace(DXGI_COLOR_SPACE_TYPE colorSpace)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, DXGI_COLOR_SPACE_TYPE, int>)(lpVtbl[4]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), colorSpace);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::SetAlphaMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetAlphaMode(DXGI_ALPHA_MODE alphaMode)
+	public HRESULT SetAlphaMode(DXGI_ALPHA_MODE alphaMode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, DXGI_ALPHA_MODE, int>)(lpVtbl[5]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), alphaMode);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTexture::GetAvailableFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAvailableFence(ulong* fenceValue, Guid* iid, void** availableFence)
+	public HRESULT GetAvailableFence(ulong* fenceValue, Guid* iid, void** availableFence)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTexture*, ulong*, Guid*, void**, int>)(lpVtbl[6]))((IDCompositionTexture*)Unsafe.AsPointer(ref this), fenceValue, iid, availableFence);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IDCompositionTexture : IDCompositionTexture.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect);
+		HRESULT SetSourceRect(Vortice.Win32.Numerics.Rect* sourceRect);
 
 		[VtblIndex(4)]
-		HResult SetColorSpace(DXGI_COLOR_SPACE_TYPE colorSpace);
+		HRESULT SetColorSpace(DXGI_COLOR_SPACE_TYPE colorSpace);
 
 		[VtblIndex(5)]
-		HResult SetAlphaMode(DXGI_ALPHA_MODE alphaMode);
+		HRESULT SetAlphaMode(DXGI_ALPHA_MODE alphaMode);
 
 		[VtblIndex(6)]
-		HResult GetAvailableFence(ulong* fenceValue, Guid* iid, void** availableFence);
+		HRESULT GetAvailableFence(ulong* fenceValue, Guid* iid, void** availableFence);
 	}
 }
 

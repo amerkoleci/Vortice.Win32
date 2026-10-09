@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Ink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::AddSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult AddSegments(D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
+	public HRESULT AddSegments(D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, D2D1_INK_BEZIER_SEGMENT*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::RemoveSegmentsAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult RemoveSegmentsAtEnd(uint segmentsCount)
+	public HRESULT RemoveSegmentsAtEnd(uint segmentsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, int>)(lpVtbl[7]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segmentsCount);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
+	public HRESULT SetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, D2D1_INK_BEZIER_SEGMENT*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegmentAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetSegmentAtEnd(D2D1_INK_BEZIER_SEGMENT* segment)
+	public HRESULT SetSegmentAtEnd(D2D1_INK_BEZIER_SEGMENT* segment)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, D2D1_INK_BEZIER_SEGMENT*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
+	public HRESULT GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, D2D1_INK_BEZIER_SEGMENT*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::StreamAsGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
+	public HRESULT StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds)
+	public HRESULT GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
 	}
@@ -167,28 +167,28 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 		D2D1_INK_POINT GetStartPoint();
 
 		[VtblIndex(6)]
-		HResult AddSegments(D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
+		HRESULT AddSegments(D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(7)]
-		HResult RemoveSegmentsAtEnd(uint segmentsCount);
+		HRESULT RemoveSegmentsAtEnd(uint segmentsCount);
 
 		[VtblIndex(8)]
-		HResult SetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
+		HRESULT SetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(9)]
-		HResult SetSegmentAtEnd(D2D1_INK_BEZIER_SEGMENT* segment);
+		HRESULT SetSegmentAtEnd(D2D1_INK_BEZIER_SEGMENT* segment);
 
 		[VtblIndex(10)]
 		uint GetSegmentCount();
 
 		[VtblIndex(11)]
-		HResult GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
+		HRESULT GetSegments(uint startSegment, D2D1_INK_BEZIER_SEGMENT* segments, uint segmentsCount);
 
 		[VtblIndex(12)]
-		HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink);
+		HRESULT StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink);
 
 		[VtblIndex(13)]
-		HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds);
+		HRESULT GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds);
 	}
 }
 

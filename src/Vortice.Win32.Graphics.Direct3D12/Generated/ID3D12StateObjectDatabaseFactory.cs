@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12StateObjectDatabaseFactory : ID3D12StateObjec
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabaseFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObjectDatabaseFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12StateObjectDatabaseFactory : ID3D12StateObjec
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabaseFactory::CreateStateObjectDatabaseFromFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateStateObjectDatabaseFromFile(char* pDatabaseFile, D3D12_STATE_OBJECT_DATABASE_FLAGS flags, Guid* riid, void** ppvStateObjectDatabase)
+	public HRESULT CreateStateObjectDatabaseFromFile(char* pDatabaseFile, D3D12_STATE_OBJECT_DATABASE_FLAGS flags, Guid* riid, void** ppvStateObjectDatabase)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabaseFactory*, char*, D3D12_STATE_OBJECT_DATABASE_FLAGS, Guid*, void**, int>)(lpVtbl[3]))((ID3D12StateObjectDatabaseFactory*)Unsafe.AsPointer(ref this), pDatabaseFile, flags, riid, ppvStateObjectDatabase);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12StateObjectDatabaseFactory : ID3D12StateObjec
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateStateObjectDatabaseFromFile(char* pDatabaseFile, D3D12_STATE_OBJECT_DATABASE_FLAGS flags, Guid* riid, void** ppvStateObjectDatabase);
+		HRESULT CreateStateObjectDatabaseFromFile(char* pDatabaseFile, D3D12_STATE_OBJECT_DATABASE_FLAGS flags, Guid* riid, void** ppvStateObjectDatabase);
 	}
 }
 

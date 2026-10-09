@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTypography*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddFontFeature(DWRITE_FONT_FEATURE fontFeature)
+	public HRESULT AddFontFeature(DWRITE_FONT_FEATURE fontFeature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, DWRITE_FONT_FEATURE, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFontFeature(uint fontFeatureIndex, DWRITE_FONT_FEATURE* fontFeature)
+	public HRESULT GetFontFeature(uint fontFeatureIndex, DWRITE_FONT_FEATURE* fontFeature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTypography*, uint, DWRITE_FONT_FEATURE*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddFontFeature(DWRITE_FONT_FEATURE fontFeature);
+		HRESULT AddFontFeature(DWRITE_FONT_FEATURE fontFeature);
 
 		[VtblIndex(4)]
 		uint GetFontFeatureCount();
 
 		[VtblIndex(5)]
-		HResult GetFontFeature(uint fontFeatureIndex, DWRITE_FONT_FEATURE* fontFeature);
+		HRESULT GetFontFeature(uint fontFeatureIndex, DWRITE_FONT_FEATURE* fontFeature);
 	}
 }
 

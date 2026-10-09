@@ -47,7 +47,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	public HRESULT SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetParent(Guid* riid, void** ppParent)
+	public HRESULT GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::AcquireNextFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult AcquireNextFrame(uint TimeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* pFrameInfo, IDXGIResource** ppDesktopResource)
+	public HRESULT AcquireNextFrame(uint TimeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* pFrameInfo, IDXGIResource** ppDesktopResource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, DXGI_OUTDUPL_FRAME_INFO*, IDXGIResource**, int>)(lpVtbl[8]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), TimeoutInMilliseconds, pFrameInfo, ppDesktopResource);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameDirtyRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired)
+	public HRESULT GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, Rect*, uint*, int>)(lpVtbl[9]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), DirtyRectsBufferSize, pDirtyRectsBuffer, pDirtyRectsBufferSizeRequired);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameMoveRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFrameMoveRects(uint MoveRectsBufferSize, DXGI_OUTDUPL_MOVE_RECT* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired)
+	public HRESULT GetFrameMoveRects(uint MoveRectsBufferSize, DXGI_OUTDUPL_MOVE_RECT* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, DXGI_OUTDUPL_MOVE_RECT*, uint*, int>)(lpVtbl[10]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), MoveRectsBufferSize, pMoveRectBuffer, pMoveRectsBufferSizeRequired);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFramePointerShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, DXGI_OUTDUPL_POINTER_SHAPE_INFO* pPointerShapeInfo)
+	public HRESULT GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, DXGI_OUTDUPL_POINTER_SHAPE_INFO* pPointerShapeInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, uint, void*, uint*, DXGI_OUTDUPL_POINTER_SHAPE_INFO*, int>)(lpVtbl[11]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), PointerShapeBufferSize, pPointerShapeBuffer, pPointerShapeBufferSizeRequired, pPointerShapeInfo);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::MapDesktopSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult MapDesktopSurface(DXGI_MAPPED_RECT* pLockedRect)
+	public HRESULT MapDesktopSurface(DXGI_MAPPED_RECT* pLockedRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, DXGI_MAPPED_RECT*, int>)(lpVtbl[12]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pLockedRect);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::UnMapDesktopSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult UnMapDesktopSurface()
+	public HRESULT UnMapDesktopSurface()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, int>)(lpVtbl[13]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::ReleaseFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult ReleaseFrame()
+	public HRESULT ReleaseFrame()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIOutputDuplication*, int>)(lpVtbl[14]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
 	}
@@ -172,25 +172,25 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 		void GetDesc(DXGI_OUTDUPL_DESC* pDesc);
 
 		[VtblIndex(8)]
-		HResult AcquireNextFrame(uint TimeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* pFrameInfo, IDXGIResource** ppDesktopResource);
+		HRESULT AcquireNextFrame(uint TimeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* pFrameInfo, IDXGIResource** ppDesktopResource);
 
 		[VtblIndex(9)]
-		HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired);
+		HRESULT GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired);
 
 		[VtblIndex(10)]
-		HResult GetFrameMoveRects(uint MoveRectsBufferSize, DXGI_OUTDUPL_MOVE_RECT* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired);
+		HRESULT GetFrameMoveRects(uint MoveRectsBufferSize, DXGI_OUTDUPL_MOVE_RECT* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired);
 
 		[VtblIndex(11)]
-		HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, DXGI_OUTDUPL_POINTER_SHAPE_INFO* pPointerShapeInfo);
+		HRESULT GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, DXGI_OUTDUPL_POINTER_SHAPE_INFO* pPointerShapeInfo);
 
 		[VtblIndex(12)]
-		HResult MapDesktopSurface(DXGI_MAPPED_RECT* pLockedRect);
+		HRESULT MapDesktopSurface(DXGI_MAPPED_RECT* pLockedRect);
 
 		[VtblIndex(13)]
-		HResult UnMapDesktopSurface();
+		HRESULT UnMapDesktopSurface();
 
 		[VtblIndex(14)]
-		HResult ReleaseFrame();
+		HRESULT ReleaseFrame();
 	}
 }
 

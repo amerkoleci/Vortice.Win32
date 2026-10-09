@@ -47,7 +47,7 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICD3DTextureSource*, Guid*, void**, int>)(lpVtbl[0]))((IWICD3DTextureSource*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICD3DTextureSource::GetTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetTexture(IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture)
+	public HRESULT GetTexture(IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICD3DTextureSource*, IUnknown*, Com.IPropertyBag2*, Guid*, void**, int>)(lpVtbl[3]))((IWICD3DTextureSource*)Unsafe.AsPointer(ref this), pD3DDevice, pID3DTextureOptions, riid, ppTexture);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICD3DTextureSource::GetTransformedTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetTransformedTexture(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture)
+	public HRESULT GetTransformedTexture(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICD3DTextureSource*, System.Drawing.Rectangle*, uint, uint, Guid*, WICBitmapTransformOptions, IUnknown*, Com.IPropertyBag2*, Guid*, void**, int>)(lpVtbl[4]))((IWICD3DTextureSource*)Unsafe.AsPointer(ref this), prc, uiWidth, uiHeight, pguidDstFormat, dstTransform, pD3DDevice, pID3DTextureOptions, riid, ppTexture);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICD3DTextureSource::DoesSupportD3DDeviceType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult DoesSupportD3DDeviceType(Guid* riid, Bool32* pfIsSupported)
+	public HRESULT DoesSupportD3DDeviceType(Guid* riid, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICD3DTextureSource*, Guid*, Bool32*, int>)(lpVtbl[5]))((IWICD3DTextureSource*)Unsafe.AsPointer(ref this), riid, pfIsSupported);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICD3DTextureSource::GetD3DTextureOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetD3DTextureOptions(Com.IPropertyBag2** ppID3DTextureOptions)
+	public HRESULT GetD3DTextureOptions(Com.IPropertyBag2** ppID3DTextureOptions)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICD3DTextureSource*, Com.IPropertyBag2**, int>)(lpVtbl[6]))((IWICD3DTextureSource*)Unsafe.AsPointer(ref this), ppID3DTextureOptions);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICD3DTextureSource : IWICD3DTextureSource.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetTexture(IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture);
+		HRESULT GetTexture(IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture);
 
 		[VtblIndex(4)]
-		HResult GetTransformedTexture(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture);
+		HRESULT GetTransformedTexture(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, IUnknown* pD3DDevice, Com.IPropertyBag2* pID3DTextureOptions, Guid* riid, void** ppTexture);
 
 		[VtblIndex(5)]
-		HResult DoesSupportD3DDeviceType(Guid* riid, Bool32* pfIsSupported);
+		HRESULT DoesSupportD3DDeviceType(Guid* riid, Bool32* pfIsSupported);
 
 		[VtblIndex(6)]
-		HResult GetD3DTextureOptions(Com.IPropertyBag2** ppID3DTextureOptions);
+		HRESULT GetD3DTextureOptions(Com.IPropertyBag2** ppID3DTextureOptions);
 	}
 }
 

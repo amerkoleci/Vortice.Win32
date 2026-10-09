@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, char*, int>)(lpVtbl[6]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignature1::GetSerializedData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSerializedData(void* pData, nuint Size)
+	public HRESULT GetSerializedData(void* pData, nuint Size)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12RootSignature1*, void*, nuint, int>)(lpVtbl[9]))((ID3D12RootSignature1*)Unsafe.AsPointer(ref this), pData, Size);
 	}
@@ -132,7 +132,7 @@ public unsafe partial struct ID3D12RootSignature1 : ID3D12RootSignature1.Interfa
 		nuint GetSerializedSize();
 
 		[VtblIndex(9)]
-		HResult GetSerializedData(void* pData, nuint Size);
+		HRESULT GetSerializedData(void* pData, nuint Size);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRenderingParams3*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}

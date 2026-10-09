@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Initialize(Com.IStream* pIStream, WICBitmapEncoderCacheOption cacheOption)
+	public HRESULT Initialize(Com.IStream* pIStream, WICBitmapEncoderCacheOption cacheOption)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, Com.IStream*, WICBitmapEncoderCacheOption, int>)(lpVtbl[3]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIStream, cacheOption);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetContainerFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetContainerFormat(Guid* pguidContainerFormat)
+	public HRESULT GetContainerFormat(Guid* pguidContainerFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, Guid*, int>)(lpVtbl[4]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pguidContainerFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetEncoderInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo)
+	public HRESULT GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, IWICBitmapEncoderInfo**, int>)(lpVtbl[5]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIEncoderInfo);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetColorContexts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetColorContexts(uint cCount, IWICColorContext** ppIColorContext)
+	public HRESULT SetColorContexts(uint cCount, IWICColorContext** ppIColorContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, uint, IWICColorContext**, int>)(lpVtbl[6]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), cCount, ppIColorContext);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetPalette(IWICPalette* pIPalette)
+	public HRESULT SetPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, IWICPalette*, int>)(lpVtbl[7]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetThumbnail(IWICBitmapSource* pIThumbnail)
+	public HRESULT SetThumbnail(IWICBitmapSource* pIThumbnail)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[8]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIThumbnail);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPreview"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetPreview(IWICBitmapSource* pIPreview)
+	public HRESULT SetPreview(IWICBitmapSource* pIPreview)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[9]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPreview);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::CreateNewFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
+	public HRESULT CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, IWICBitmapFrameEncode**, Com.IPropertyBag2**, int>)(lpVtbl[10]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, ppIEncoderOptions);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Commit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult Commit()
+	public HRESULT Commit()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, int>)(lpVtbl[11]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
+	public HRESULT GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[12]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
 	}
@@ -153,34 +153,34 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Initialize(Com.IStream* pIStream, WICBitmapEncoderCacheOption cacheOption);
+		HRESULT Initialize(Com.IStream* pIStream, WICBitmapEncoderCacheOption cacheOption);
 
 		[VtblIndex(4)]
-		HResult GetContainerFormat(Guid* pguidContainerFormat);
+		HRESULT GetContainerFormat(Guid* pguidContainerFormat);
 
 		[VtblIndex(5)]
-		HResult GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo);
+		HRESULT GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo);
 
 		[VtblIndex(6)]
-		HResult SetColorContexts(uint cCount, IWICColorContext** ppIColorContext);
+		HRESULT SetColorContexts(uint cCount, IWICColorContext** ppIColorContext);
 
 		[VtblIndex(7)]
-		HResult SetPalette(IWICPalette* pIPalette);
+		HRESULT SetPalette(IWICPalette* pIPalette);
 
 		[VtblIndex(8)]
-		HResult SetThumbnail(IWICBitmapSource* pIThumbnail);
+		HRESULT SetThumbnail(IWICBitmapSource* pIThumbnail);
 
 		[VtblIndex(9)]
-		HResult SetPreview(IWICBitmapSource* pIPreview);
+		HRESULT SetPreview(IWICBitmapSource* pIPreview);
 
 		[VtblIndex(10)]
-		HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions);
+		HRESULT CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions);
 
 		[VtblIndex(11)]
-		HResult Commit();
+		HRESULT Commit();
 
 		[VtblIndex(12)]
-		HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter);
+		HRESULT GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter);
 	}
 }
 

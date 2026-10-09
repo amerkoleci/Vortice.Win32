@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1VertexBuffer*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Map(byte** data, uint bufferSize)
+	public HRESULT Map(byte** data, uint bufferSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1VertexBuffer*, byte**, uint, int>)(lpVtbl[3]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), data, bufferSize);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Unmap()
+	public HRESULT Unmap()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1VertexBuffer*, int>)(lpVtbl[4]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Map(byte** data, uint bufferSize);
+		HRESULT Map(byte** data, uint bufferSize);
 
 		[VtblIndex(4)]
-		HResult Unmap();
+		HRESULT Unmap();
 	}
 }
 

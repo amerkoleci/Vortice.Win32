@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ImageSource : ID2D1ImageSource.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSource*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageSource*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1ImageSource : ID2D1ImageSource.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSource::OfferResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult OfferResources()
+	public HRESULT OfferResources()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSource*, int>)(lpVtbl[4]))((ID2D1ImageSource*)Unsafe.AsPointer(ref this));
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1ImageSource : ID2D1ImageSource.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSource::TryReclaimResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult TryReclaimResources(Bool32* resourcesDiscarded)
+	public HRESULT TryReclaimResources(Bool32* resourcesDiscarded)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSource*, Bool32*, int>)(lpVtbl[5]))((ID2D1ImageSource*)Unsafe.AsPointer(ref this), resourcesDiscarded);
 	}
@@ -97,10 +97,10 @@ public unsafe partial struct ID2D1ImageSource : ID2D1ImageSource.Interface, INat
 	public interface Interface : ID2D1Image.Interface
 	{
 		[VtblIndex(4)]
-		HResult OfferResources();
+		HRESULT OfferResources();
 
 		[VtblIndex(5)]
-		HResult TryReclaimResources(Bool32* resourcesDiscarded);
+		HRESULT TryReclaimResources(Bool32* resourcesDiscarded);
 	}
 }
 

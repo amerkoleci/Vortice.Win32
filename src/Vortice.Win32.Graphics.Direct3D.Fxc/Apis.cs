@@ -41,7 +41,7 @@ public static unsafe partial class FXC
             using ComPtr<ID3DBlob> d3dBlobBytecode = default;
             using ComPtr<ID3DBlob> d3dBlobErrors = default;
 
-            HResult hr = D3DCompile(
+            HRESULT hr = D3DCompile(
                 pSrcData: sourcePtr,
                 SrcDataSize: (nuint)source.Length,
                 pSourceName: sourceNamePtr,
@@ -76,7 +76,7 @@ public static unsafe partial class FXC
         }
     }
 
-    public static HResult D3DCompile(
+    public static HRESULT D3DCompile(
         ReadOnlySpan<byte> source,
         ReadOnlySpan<byte> entryPoint,
         ReadOnlySpan<byte> target,
@@ -88,7 +88,7 @@ public static unsafe partial class FXC
         fixed (byte* entryPointPtr = entryPoint)
         fixed (byte* targetPtr = target)
         {
-            HResult hr = D3DCompile(
+            HRESULT hr = D3DCompile(
                 pSrcData: sourcePtr,
                 SrcDataSize: (nuint)source.Length,
                 pSourceName: null,
@@ -104,7 +104,7 @@ public static unsafe partial class FXC
         }
     }
 
-    public static HResult D3DCompile(
+    public static HRESULT D3DCompile(
         ReadOnlySpan<byte> source,
         ReadOnlySpan<byte> entryPoint,
         ReadOnlySpan<byte> target,
@@ -117,7 +117,7 @@ public static unsafe partial class FXC
         fixed (byte* entryPointPtr = entryPoint)
         fixed (byte* targetPtr = target)
         {
-            HResult hr = D3DCompile(
+            HRESULT hr = D3DCompile(
                 pSrcData: sourcePtr,
                 SrcDataSize: (nuint)source.Length,
                 pSourceName: null,

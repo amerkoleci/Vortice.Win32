@@ -47,7 +47,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	public HRESULT SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetParent(Guid* riid, void** ppParent)
+	public HRESULT GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult AcquireSync(ulong Key, uint dwMilliseconds)
+	public HRESULT AcquireSync(ulong Key, uint dwMilliseconds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, ulong, uint, int>)(lpVtbl[8]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key, dwMilliseconds);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult ReleaseSync(ulong Key)
+	public HRESULT ReleaseSync(ulong Key)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIKeyedMutex*, ulong, int>)(lpVtbl[9]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key);
 	}
@@ -129,10 +129,10 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	public interface Interface : IDXGIDeviceSubObject.Interface
 	{
 		[VtblIndex(8)]
-		HResult AcquireSync(ulong Key, uint dwMilliseconds);
+		HRESULT AcquireSync(ulong Key, uint dwMilliseconds);
 
 		[VtblIndex(9)]
-		HResult ReleaseSync(ulong Key);
+		HRESULT ReleaseSync(ulong Key);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFile*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::GetReferenceKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetReferenceKey(void** fontFileReferenceKey, uint* fontFileReferenceKeySize)
+	public HRESULT GetReferenceKey(void** fontFileReferenceKey, uint* fontFileReferenceKeySize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFile*, void**, uint*, int>)(lpVtbl[3]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::GetLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetLoader(IDWriteFontFileLoader** fontFileLoader)
+	public HRESULT GetLoader(IDWriteFontFileLoader** fontFileLoader)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFile*, IDWriteFontFileLoader**, int>)(lpVtbl[4]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), fontFileLoader);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::Analyze"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Analyze(Bool32* isSupportedFontType, DWRITE_FONT_FILE_TYPE* fontFileType, DWRITE_FONT_FACE_TYPE* fontFaceType, uint* numberOfFaces)
+	public HRESULT Analyze(Bool32* isSupportedFontType, DWRITE_FONT_FILE_TYPE* fontFileType, DWRITE_FONT_FACE_TYPE* fontFaceType, uint* numberOfFaces)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFile*, Bool32*, DWRITE_FONT_FILE_TYPE*, DWRITE_FONT_FACE_TYPE*, uint*, int>)(lpVtbl[5]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), isSupportedFontType, fontFileType, fontFaceType, numberOfFaces);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetReferenceKey(void** fontFileReferenceKey, uint* fontFileReferenceKeySize);
+		HRESULT GetReferenceKey(void** fontFileReferenceKey, uint* fontFileReferenceKeySize);
 
 		[VtblIndex(4)]
-		HResult GetLoader(IDWriteFontFileLoader** fontFileLoader);
+		HRESULT GetLoader(IDWriteFontFileLoader** fontFileLoader);
 
 		[VtblIndex(5)]
-		HResult Analyze(Bool32* isSupportedFontType, DWRITE_FONT_FILE_TYPE* fontFileType, DWRITE_FONT_FACE_TYPE* fontFaceType, uint* numberOfFaces);
+		HRESULT Analyze(Bool32* isSupportedFontType, DWRITE_FONT_FILE_TYPE* fontFileType, DWRITE_FONT_FACE_TYPE* fontFaceType, uint* numberOfFaces);
 	}
 }
 

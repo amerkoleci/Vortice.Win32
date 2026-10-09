@@ -47,7 +47,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, Guid*, void**, int>)(lpVtbl[0]))((IWICColorTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, uint*, uint*, int>)(lpVtbl[3]))((IWICColorTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPixelFormat(Guid* pPixelFormat)
+	public HRESULT GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, Guid*, int>)(lpVtbl[4]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResolution(double* pDpiX, double* pDpiY)
+	public HRESULT GetResolution(double* pDpiX, double* pDpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, double*, double*, int>)(lpVtbl[5]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CopyPalette(IWICPalette* pIPalette)
+	public HRESULT CopyPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, IWICPalette*, int>)(lpVtbl[6]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICColorTransform*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorTransform::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest)
+	public HRESULT Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorTransform*, IWICBitmapSource*, IWICColorContext*, IWICColorContext*, Guid*, int>)(lpVtbl[8]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIBitmapSource, pIContextSource, pIContextDest, pixelFmtDest);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]
-		HResult Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest);
+		HRESULT Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInlineObject*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::Draw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
+	public HRESULT Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInlineObject*, void*, IDWriteTextRenderer*, float, float, Bool32, Bool32, IUnknown*, int>)(lpVtbl[3]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY, isSideways, isRightToLeft, clientDrawingEffect);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetrics(DWRITE_INLINE_OBJECT_METRICS* metrics)
+	public HRESULT GetMetrics(DWRITE_INLINE_OBJECT_METRICS* metrics)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInlineObject*, DWRITE_INLINE_OBJECT_METRICS*, int>)(lpVtbl[4]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), metrics);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetOverhangMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetOverhangMetrics(DWRITE_OVERHANG_METRICS* overhangs)
+	public HRESULT GetOverhangMetrics(DWRITE_OVERHANG_METRICS* overhangs)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInlineObject*, DWRITE_OVERHANG_METRICS*, int>)(lpVtbl[5]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), overhangs);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetBreakConditions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetBreakConditions(DWRITE_BREAK_CONDITION* breakConditionBefore, DWRITE_BREAK_CONDITION* breakConditionAfter)
+	public HRESULT GetBreakConditions(DWRITE_BREAK_CONDITION* breakConditionBefore, DWRITE_BREAK_CONDITION* breakConditionAfter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInlineObject*, DWRITE_BREAK_CONDITION*, DWRITE_BREAK_CONDITION*, int>)(lpVtbl[6]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), breakConditionBefore, breakConditionAfter);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect);
+		HRESULT Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect);
 
 		[VtblIndex(4)]
-		HResult GetMetrics(DWRITE_INLINE_OBJECT_METRICS* metrics);
+		HRESULT GetMetrics(DWRITE_INLINE_OBJECT_METRICS* metrics);
 
 		[VtblIndex(5)]
-		HResult GetOverhangMetrics(DWRITE_OVERHANG_METRICS* overhangs);
+		HRESULT GetOverhangMetrics(DWRITE_OVERHANG_METRICS* overhangs);
 
 		[VtblIndex(6)]
-		HResult GetBreakConditions(DWRITE_BREAK_CONDITION* breakConditionBefore, DWRITE_BREAK_CONDITION* breakConditionAfter);
+		HRESULT GetBreakConditions(DWRITE_BREAK_CONDITION* breakConditionBefore, DWRITE_BREAK_CONDITION* breakConditionAfter);
 	}
 }
 

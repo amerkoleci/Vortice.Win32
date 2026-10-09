@@ -26,7 +26,7 @@ public static unsafe partial class D3D11
         return baseSize > 0 ? baseSize : 1;
     }
 
-    public static HResult D3D11CreateDevice(
+    public static HRESULT D3D11CreateDevice(
         IDXGIAdapter* adapter,
         D3D_DRIVER_TYPE driverType,
         D3D11_CREATE_DEVICE_FLAG flags,
@@ -47,7 +47,7 @@ public static unsafe partial class D3D11
             ppImmediateContext);
     }
 
-    public static HResult D3D11CreateDevice(
+    public static HRESULT D3D11CreateDevice(
         IDXGIAdapter* pAdapter,
         D3D_DRIVER_TYPE driverType,
         D3D11_CREATE_DEVICE_FLAG flags,

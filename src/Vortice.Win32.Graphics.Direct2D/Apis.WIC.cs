@@ -8,7 +8,7 @@ namespace Vortice.Win32.Graphics;
 
 public static unsafe partial class D2D1
 {
-    public static HResult CreateWICImagingFactory2(IWICImagingFactory2** factory)
+    public static HRESULT CreateWICImagingFactory2(IWICImagingFactory2** factory)
     {
         return CoCreateInstance(
             (Guid*)Unsafe.AsPointer(in CLSID_WICImagingFactory2),

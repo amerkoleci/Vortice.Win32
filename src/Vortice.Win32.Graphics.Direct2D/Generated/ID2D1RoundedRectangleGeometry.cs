@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.GetBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetBounds(Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds)
+	public HRESULT GetBounds(Matrix3x2* worldTransform, Vortice.Win32.Numerics.RectF** bounds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Matrix3x2*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.GetWidenedBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Vortice.Win32.Numerics.RectF** bounds)
+	public HRESULT GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Vortice.Win32.Numerics.RectF** bounds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.StrokeContainsPoint" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult StrokeContainsPoint(Vector2 point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
+	public HRESULT StrokeContainsPoint(Vector2 point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Vector2, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.FillContainsPoint" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult FillContainsPoint(Vector2 point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
+	public HRESULT FillContainsPoint(Vector2 point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Vector2, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.CompareWithGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, D2D1_GEOMETRY_RELATION* relation)
+	public HRESULT CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, D2D1_GEOMETRY_RELATION* relation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, ID2D1Geometry*, Matrix3x2*, float, D2D1_GEOMETRY_RELATION*, int>)(lpVtbl[8]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), inputGeometry, inputGeometryTransform, flatteningTolerance, relation);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.Simplify" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Simplify(D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
+	public HRESULT Simplify(D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, D2D1_GEOMETRY_SIMPLIFICATION_OPTION, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.Tessellate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult Tessellate(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1TessellationSink* tessellationSink)
+	public HRESULT Tessellate(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1TessellationSink* tessellationSink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Matrix3x2*, float, ID2D1TessellationSink*, int>)(lpVtbl[10]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, tessellationSink);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.CombineWithGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, D2D1_COMBINE_MODE combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
+	public HRESULT CombineWithGeometry(ID2D1Geometry* inputGeometry, D2D1_COMBINE_MODE combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, ID2D1Geometry*, D2D1_COMBINE_MODE, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.Outline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult Outline(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
+	public HRESULT Outline(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, geometrySink);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.ComputeArea" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ComputeArea(Matrix3x2* worldTransform, float flatteningTolerance, float* area)
+	public HRESULT ComputeArea(Matrix3x2* worldTransform, float flatteningTolerance, float* area)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[13]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, area);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.ComputeLength" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult ComputeLength(Matrix3x2* worldTransform, float flatteningTolerance, float* length)
+	public HRESULT ComputeLength(Matrix3x2* worldTransform, float flatteningTolerance, float* length)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[14]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, length);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.ComputePointAtLength" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, Vector2* point, Vector2* unitTangentVector)
+	public HRESULT ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, Vector2* point, Vector2* unitTangentVector)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, float, Matrix3x2*, float, Vector2*, Vector2*, int>)(lpVtbl[15]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	/// <inheritdoc cref="ID2D1Geometry.Widen" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
+	public HRESULT Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, ID2D1SimplifiedGeometrySink* geometrySink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RoundedRectangleGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}

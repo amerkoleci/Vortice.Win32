@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorContentDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetVideoProcessorContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pContentDesc)
+	public HRESULT GetVideoProcessorContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* pContentDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, D3D11_VIDEO_PROCESSOR_CONTENT_DESC*, int>)(lpVtbl[7]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pContentDesc);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.CheckVideoProcessorFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CheckVideoProcessorFormat(DXGI_FORMAT Format, uint* pFlags)
+	public HRESULT CheckVideoProcessorFormat(DXGI_FORMAT Format, uint* pFlags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, DXGI_FORMAT, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Format, pFlags);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorCaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetVideoProcessorCaps(D3D11_VIDEO_PROCESSOR_CAPS* pCaps)
+	public HRESULT GetVideoProcessorCaps(D3D11_VIDEO_PROCESSOR_CAPS* pCaps)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, D3D11_VIDEO_PROCESSOR_CAPS*, int>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pCaps);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorRateConversionCaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetVideoProcessorRateConversionCaps(uint TypeIndex, D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS* pCaps)
+	public HRESULT GetVideoProcessorRateConversionCaps(uint TypeIndex, D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS* pCaps)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, uint, D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS*, int>)(lpVtbl[10]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, pCaps);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorCustomRate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, D3D11_VIDEO_PROCESSOR_CUSTOM_RATE* pRate)
+	public HRESULT GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, D3D11_VIDEO_PROCESSOR_CUSTOM_RATE* pRate)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, uint, uint, D3D11_VIDEO_PROCESSOR_CUSTOM_RATE*, int>)(lpVtbl[11]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, CustomRateIndex, pRate);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorFilterRange" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetVideoProcessorFilterRange(D3D11_VIDEO_PROCESSOR_FILTER Filter, D3D11_VIDEO_PROCESSOR_FILTER_RANGE* pRange)
+	public HRESULT GetVideoProcessorFilterRange(D3D11_VIDEO_PROCESSOR_FILTER Filter, D3D11_VIDEO_PROCESSOR_FILTER_RANGE* pRange)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, D3D11_VIDEO_PROCESSOR_FILTER, D3D11_VIDEO_PROCESSOR_FILTER_RANGE*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Filter, pRange);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1::CheckVideoProcessorFormatConversion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckVideoProcessorFormatConversion(DXGI_FORMAT InputFormat, DXGI_COLOR_SPACE_TYPE InputColorSpace, DXGI_FORMAT OutputFormat, DXGI_COLOR_SPACE_TYPE OutputColorSpace, Bool32* pSupported)
+	public HRESULT CheckVideoProcessorFormatConversion(DXGI_FORMAT InputFormat, DXGI_COLOR_SPACE_TYPE InputColorSpace, DXGI_FORMAT OutputFormat, DXGI_COLOR_SPACE_TYPE OutputColorSpace, Bool32* pSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11VideoProcessorEnumerator1*, DXGI_FORMAT, DXGI_COLOR_SPACE_TYPE, DXGI_FORMAT, DXGI_COLOR_SPACE_TYPE, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	public interface Interface : ID3D11VideoProcessorEnumerator.Interface
 	{
 		[VtblIndex(13)]
-		HResult CheckVideoProcessorFormatConversion(DXGI_FORMAT InputFormat, DXGI_COLOR_SPACE_TYPE InputColorSpace, DXGI_FORMAT OutputFormat, DXGI_COLOR_SPACE_TYPE OutputColorSpace, Bool32* pSupported);
+		HRESULT CheckVideoProcessorFormatConversion(DXGI_FORMAT InputFormat, DXGI_COLOR_SPACE_TYPE InputColorSpace, DXGI_FORMAT OutputFormat, DXGI_COLOR_SPACE_TYPE OutputColorSpace, Bool32* pSupported);
 	}
 }
 

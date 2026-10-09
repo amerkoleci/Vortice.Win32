@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1PrintControl*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::AddPage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2)
+	public HRESULT AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1PrintControl*, ID2D1CommandList*, System.Drawing.SizeF, Com.IStream*, ulong*, ulong*, int>)(lpVtbl[3]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), commandList, pageSize, pagePrintTicketStream, tag1, tag2);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Close()
+	public HRESULT Close()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1PrintControl*, int>)(lpVtbl[4]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2);
+		HRESULT AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2);
 
 		[VtblIndex(4)]
-		HResult Close();
+		HRESULT Close();
 	}
 }
 

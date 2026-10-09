@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSource*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSource*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPixelFormat(Guid* pPixelFormat)
+	public HRESULT GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSource*, Guid*, int>)(lpVtbl[4]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetResolution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResolution(double* pDpiX, double* pDpiY)
+	public HRESULT GetResolution(double* pDpiX, double* pDpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSource*, double*, double*, int>)(lpVtbl[5]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CopyPalette(IWICPalette* pIPalette)
+	public HRESULT CopyPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSource*, IWICPalette*, int>)(lpVtbl[6]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSource*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
@@ -113,19 +113,19 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetSize(uint* puiWidth, uint* puiHeight);
+		HRESULT GetSize(uint* puiWidth, uint* puiHeight);
 
 		[VtblIndex(4)]
-		HResult GetPixelFormat(Guid* pPixelFormat);
+		HRESULT GetPixelFormat(Guid* pPixelFormat);
 
 		[VtblIndex(5)]
-		HResult GetResolution(double* pDpiX, double* pDpiY);
+		HRESULT GetResolution(double* pDpiX, double* pDpiY);
 
 		[VtblIndex(6)]
-		HResult CopyPalette(IWICPalette* pIPalette);
+		HRESULT CopyPalette(IWICPalette* pIPalette);
 
 		[VtblIndex(7)]
-		HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer);
+		HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer);
 	}
 }
 

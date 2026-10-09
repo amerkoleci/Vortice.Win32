@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTransform : IDCompositionTransform.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}

@@ -13,25 +13,25 @@ public static unsafe partial class DXGI
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult CreateDXGIFactory(Guid* riid, void** ppFactory);
+	public static partial HRESULT CreateDXGIFactory(Guid* riid, void** ppFactory);
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory1"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult CreateDXGIFactory1(Guid* riid, void** ppFactory);
+	public static partial HRESULT CreateDXGIFactory1(Guid* riid, void** ppFactory);
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory2"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult CreateDXGIFactory2(DXGI_CREATE_FACTORY_FLAGS Flags, Guid* riid, void** ppFactory);
+	public static partial HRESULT CreateDXGIFactory2(DXGI_CREATE_FACTORY_FLAGS Flags, Guid* riid, void** ppFactory);
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIGetDebugInterface1"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult DXGIGetDebugInterface1(uint Flags, Guid* riid, void** pDebug);
+	public static partial HRESULT DXGIGetDebugInterface1(uint Flags, Guid* riid, void** pDebug);
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIDeclareAdapterRemovalSupport"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult DXGIDeclareAdapterRemovalSupport();
+	public static partial HRESULT DXGIDeclareAdapterRemovalSupport();
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIDisableVBlankVirtualization"]/*' />
 	[LibraryImport("dxgi.dll")]
-	public static partial HResult DXGIDisableVBlankVirtualization();
+	public static partial HRESULT DXGIDisableVBlankVirtualization();
 }

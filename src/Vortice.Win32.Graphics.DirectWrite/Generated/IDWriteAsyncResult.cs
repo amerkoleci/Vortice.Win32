@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteAsyncResult : IDWriteAsyncResult.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteAsyncResult*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,15 +73,15 @@ public unsafe partial struct IDWriteAsyncResult : IDWriteAsyncResult.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetWaitHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Handle GetWaitHandle()
+	public HANDLE GetWaitHandle()
 	{
-		return ((Handle)(((delegate* unmanaged[MemberFunction]<IDWriteAsyncResult*, void*>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this))));
+		return ((HANDLE)(((delegate* unmanaged[MemberFunction]<IDWriteAsyncResult*, void*>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this))));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetResult"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetResult()
+	public HRESULT GetResult()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteAsyncResult*, int>)(lpVtbl[4]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IDWriteAsyncResult : IDWriteAsyncResult.Interface, 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		Handle GetWaitHandle();
+		HANDLE GetWaitHandle();
 
 		[VtblIndex(4)]
-		HResult GetResult();
+		HRESULT GetResult();
 	}
 }
 

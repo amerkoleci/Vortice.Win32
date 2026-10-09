@@ -16,7 +16,7 @@ public static unsafe class ID3D11VideoDevice2Extensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CheckFeatureSupport<TD3D11VideoDevice2, TFeature>(ref this TD3D11VideoDevice2 self, D3D11_FEATURE_VIDEO feature, ref TFeature featureData)
+    public static HRESULT CheckFeatureSupport<TD3D11VideoDevice2, TFeature>(ref this TD3D11VideoDevice2 self, D3D11_FEATURE_VIDEO feature, ref TFeature featureData)
        where TD3D11VideoDevice2 : unmanaged, ID3D11VideoDevice2.Interface
        where TFeature : unmanaged
     {

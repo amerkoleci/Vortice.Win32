@@ -47,7 +47,7 @@ public unsafe partial struct IWICDdsDecoder : IWICDdsDecoder.Interface, INativeG
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsDecoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICDdsDecoder : IWICDdsDecoder.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetParameters(WICDdsParameters* pParameters)
+	public HRESULT GetParameters(WICDdsParameters* pParameters)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsDecoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICDdsDecoder : IWICDdsDecoder.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame)
+	public HRESULT GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsDecoder*, uint, uint, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[4]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), arrayIndex, mipLevel, sliceIndex, ppIBitmapFrame);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IWICDdsDecoder : IWICDdsDecoder.Interface, INativeG
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetParameters(WICDdsParameters* pParameters);
+		HRESULT GetParameters(WICDdsParameters* pParameters);
 
 		[VtblIndex(4)]
-		HResult GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame);
+		HRESULT GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame);
 	}
 }
 

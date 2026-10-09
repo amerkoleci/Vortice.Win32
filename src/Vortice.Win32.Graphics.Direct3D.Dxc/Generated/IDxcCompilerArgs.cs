@@ -46,7 +46,7 @@ public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompilerArgs*, Guid*, void**, int>)(lpVtbl[0]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -85,21 +85,21 @@ public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INat
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult AddArguments(char** pArguments, uint argCount)
+	public HRESULT AddArguments(char** pArguments, uint argCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompilerArgs*, char**, uint, int>)(lpVtbl[5]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pArguments, argCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult AddArgumentsUTF8(byte** pArguments, uint argCount)
+	public HRESULT AddArgumentsUTF8(byte** pArguments, uint argCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompilerArgs*, byte**, uint, int>)(lpVtbl[6]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pArguments, argCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult AddDefines(DxcDefine* pDefines, uint defineCount)
+	public HRESULT AddDefines(DxcDefine* pDefines, uint defineCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompilerArgs*, DxcDefine*, uint, int>)(lpVtbl[7]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pDefines, defineCount);
 	}
@@ -113,13 +113,13 @@ public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INat
 		uint GetCount();
 
 		[VtblIndex(5)]
-		HResult AddArguments(char** pArguments, uint argCount);
+		HRESULT AddArguments(char** pArguments, uint argCount);
 
 		[VtblIndex(6)]
-		HResult AddArgumentsUTF8(byte** pArguments, uint argCount);
+		HRESULT AddArgumentsUTF8(byte** pArguments, uint argCount);
 
 		[VtblIndex(7)]
-		HResult AddDefines(DxcDefine* pDefines, uint defineCount);
+		HRESULT AddDefines(DxcDefine* pDefines, uint defineCount);
 	}
 }
 

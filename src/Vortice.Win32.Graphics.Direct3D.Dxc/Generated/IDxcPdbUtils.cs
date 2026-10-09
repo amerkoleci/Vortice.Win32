@@ -46,7 +46,7 @@ public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, Guid*, void**, int>)(lpVtbl[0]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,119 +71,119 @@ public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Load(IDxcBlob* pPdbOrDxil)
+	public HRESULT Load(IDxcBlob* pPdbOrDxil)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pPdbOrDxil);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetSourceCount(uint* pCount)
+	public HRESULT GetSourceCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint*, int>)(lpVtbl[4]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetSource(uint uIndex, IDxcBlobEncoding** ppResult)
+	public HRESULT GetSource(uint uIndex, IDxcBlobEncoding** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetSourceName(uint uIndex, char** pResult)
+	public HRESULT GetSourceName(uint uIndex, char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[6]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetFlagCount(uint* pCount)
+	public HRESULT GetFlagCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint*, int>)(lpVtbl[7]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetFlag(uint uIndex, char** pResult)
+	public HRESULT GetFlag(uint uIndex, char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[8]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetArgCount(uint* pCount)
+	public HRESULT GetArgCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint*, int>)(lpVtbl[9]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetArg(uint uIndex, char** pResult)
+	public HRESULT GetArg(uint uIndex, char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[10]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetArgPairCount(uint* pCount)
+	public HRESULT GetArgPairCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint*, int>)(lpVtbl[11]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetArgPair(uint uIndex, char** pName, char** pValue)
+	public HRESULT GetArgPair(uint uIndex, char** pName, char** pValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint, char**, char**, int>)(lpVtbl[12]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pName, pValue);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetDefineCount(uint* pCount)
+	public HRESULT GetDefineCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint*, int>)(lpVtbl[13]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetDefine(uint uIndex, char** pResult)
+	public HRESULT GetDefine(uint uIndex, char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[14]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetTargetProfile(char** pResult)
+	public HRESULT GetTargetProfile(char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, char**, int>)(lpVtbl[15]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetEntryPoint(char** pResult)
+	public HRESULT GetEntryPoint(char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, char**, int>)(lpVtbl[16]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetMainFileName(char** pResult)
+	public HRESULT GetMainFileName(char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, char**, int>)(lpVtbl[17]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetHash(IDxcBlob** ppResult)
+	public HRESULT GetHash(IDxcBlob** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, IDxcBlob**, int>)(lpVtbl[18]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetName(char** pResult)
+	public HRESULT GetName(char** pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, char**, int>)(lpVtbl[19]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
@@ -197,42 +197,42 @@ public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetFullPDB(IDxcBlob** ppFullPDB)
+	public HRESULT GetFullPDB(IDxcBlob** ppFullPDB)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, IDxcBlob**, int>)(lpVtbl[21]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppFullPDB);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult GetVersionInfo(IDxcVersionInfo** ppVersionInfo)
+	public HRESULT GetVersionInfo(IDxcVersionInfo** ppVersionInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, IDxcVersionInfo**, int>)(lpVtbl[22]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppVersionInfo);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult SetCompiler(IDxcCompiler3* pCompiler)
+	public HRESULT SetCompiler(IDxcCompiler3* pCompiler)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, IDxcCompiler3*, int>)(lpVtbl[23]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCompiler);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CompileForFullPDB(IDxcResult** ppResult)
+	public HRESULT CompileForFullPDB(IDxcResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, IDxcResult**, int>)(lpVtbl[24]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs)
+	public HRESULT OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, DxcArgPair*, uint, int>)(lpVtbl[25]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pArgPairs, uNumArgPairs);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult OverrideRootSignature(char* pRootSignature)
+	public HRESULT OverrideRootSignature(char* pRootSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, char*, int>)(lpVtbl[26]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pRootSignature);
 	}
@@ -240,76 +240,76 @@ public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Load(IDxcBlob* pPdbOrDxil);
+		HRESULT Load(IDxcBlob* pPdbOrDxil);
 
 		[VtblIndex(4)]
-		HResult GetSourceCount(uint* pCount);
+		HRESULT GetSourceCount(uint* pCount);
 
 		[VtblIndex(5)]
-		HResult GetSource(uint uIndex, IDxcBlobEncoding** ppResult);
+		HRESULT GetSource(uint uIndex, IDxcBlobEncoding** ppResult);
 
 		[VtblIndex(6)]
-		HResult GetSourceName(uint uIndex, char** pResult);
+		HRESULT GetSourceName(uint uIndex, char** pResult);
 
 		[VtblIndex(7)]
-		HResult GetFlagCount(uint* pCount);
+		HRESULT GetFlagCount(uint* pCount);
 
 		[VtblIndex(8)]
-		HResult GetFlag(uint uIndex, char** pResult);
+		HRESULT GetFlag(uint uIndex, char** pResult);
 
 		[VtblIndex(9)]
-		HResult GetArgCount(uint* pCount);
+		HRESULT GetArgCount(uint* pCount);
 
 		[VtblIndex(10)]
-		HResult GetArg(uint uIndex, char** pResult);
+		HRESULT GetArg(uint uIndex, char** pResult);
 
 		[VtblIndex(11)]
-		HResult GetArgPairCount(uint* pCount);
+		HRESULT GetArgPairCount(uint* pCount);
 
 		[VtblIndex(12)]
-		HResult GetArgPair(uint uIndex, char** pName, char** pValue);
+		HRESULT GetArgPair(uint uIndex, char** pName, char** pValue);
 
 		[VtblIndex(13)]
-		HResult GetDefineCount(uint* pCount);
+		HRESULT GetDefineCount(uint* pCount);
 
 		[VtblIndex(14)]
-		HResult GetDefine(uint uIndex, char** pResult);
+		HRESULT GetDefine(uint uIndex, char** pResult);
 
 		[VtblIndex(15)]
-		HResult GetTargetProfile(char** pResult);
+		HRESULT GetTargetProfile(char** pResult);
 
 		[VtblIndex(16)]
-		HResult GetEntryPoint(char** pResult);
+		HRESULT GetEntryPoint(char** pResult);
 
 		[VtblIndex(17)]
-		HResult GetMainFileName(char** pResult);
+		HRESULT GetMainFileName(char** pResult);
 
 		[VtblIndex(18)]
-		HResult GetHash(IDxcBlob** ppResult);
+		HRESULT GetHash(IDxcBlob** ppResult);
 
 		[VtblIndex(19)]
-		HResult GetName(char** pResult);
+		HRESULT GetName(char** pResult);
 
 		[VtblIndex(20)]
 		Bool32 IsFullPDB();
 
 		[VtblIndex(21)]
-		HResult GetFullPDB(IDxcBlob** ppFullPDB);
+		HRESULT GetFullPDB(IDxcBlob** ppFullPDB);
 
 		[VtblIndex(22)]
-		HResult GetVersionInfo(IDxcVersionInfo** ppVersionInfo);
+		HRESULT GetVersionInfo(IDxcVersionInfo** ppVersionInfo);
 
 		[VtblIndex(23)]
-		HResult SetCompiler(IDxcCompiler3* pCompiler);
+		HRESULT SetCompiler(IDxcCompiler3* pCompiler);
 
 		[VtblIndex(24)]
-		HResult CompileForFullPDB(IDxcResult** ppResult);
+		HRESULT CompileForFullPDB(IDxcResult** ppResult);
 
 		[VtblIndex(25)]
-		HResult OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs);
+		HRESULT OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs);
 
 		[VtblIndex(26)]
-		HResult OverrideRootSignature(char* pRootSignature);
+		HRESULT OverrideRootSignature(char* pRootSignature);
 	}
 }
 

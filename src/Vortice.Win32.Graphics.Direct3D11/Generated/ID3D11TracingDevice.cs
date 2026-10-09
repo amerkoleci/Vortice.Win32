@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11TracingDevice : ID3D11TracingDevice.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11TracingDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11TracingDevice : ID3D11TracingDevice.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice::SetShaderTrackingOptionsByType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetShaderTrackingOptionsByType(uint ResourceTypeFlags, uint Options)
+	public HRESULT SetShaderTrackingOptionsByType(uint ResourceTypeFlags, uint Options)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11TracingDevice*, uint, uint, int>)(lpVtbl[3]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11TracingDevice : ID3D11TracingDevice.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice::SetShaderTrackingOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetShaderTrackingOptions(IUnknown* pShader, uint Options)
+	public HRESULT SetShaderTrackingOptions(IUnknown* pShader, uint Options)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11TracingDevice*, IUnknown*, uint, int>)(lpVtbl[4]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), pShader, Options);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID3D11TracingDevice : ID3D11TracingDevice.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetShaderTrackingOptionsByType(uint ResourceTypeFlags, uint Options);
+		HRESULT SetShaderTrackingOptionsByType(uint ResourceTypeFlags, uint Options);
 
 		[VtblIndex(4)]
-		HResult SetShaderTrackingOptions(IUnknown* pShader, uint Options);
+		HRESULT SetShaderTrackingOptions(IUnknown* pShader, uint Options);
 	}
 }
 

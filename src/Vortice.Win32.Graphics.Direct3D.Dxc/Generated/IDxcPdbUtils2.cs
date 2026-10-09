@@ -46,7 +46,7 @@ public unsafe partial struct IDxcPdbUtils2 : IDxcPdbUtils2.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, Guid*, void**, int>)(lpVtbl[0]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,161 +71,161 @@ public unsafe partial struct IDxcPdbUtils2 : IDxcPdbUtils2.Interface, INativeGui
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Load(IDxcBlob* pPdbOrDxil)
+	public HRESULT Load(IDxcBlob* pPdbOrDxil)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pPdbOrDxil);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetSourceCount(uint* pCount)
+	public HRESULT GetSourceCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[4]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetSource(uint uIndex, IDxcBlobEncoding** ppResult)
+	public HRESULT GetSource(uint uIndex, IDxcBlobEncoding** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetSourceName(uint uIndex, IDxcBlobUtf16** ppResult)
+	public HRESULT GetSourceName(uint uIndex, IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcBlobUtf16**, int>)(lpVtbl[6]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetLibraryPDBCount(uint* pCount)
+	public HRESULT GetLibraryPDBCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[7]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetLibraryPDB(uint uIndex, IDxcPdbUtils2** ppOutPdbUtils, IDxcBlobUtf16** ppLibraryName)
+	public HRESULT GetLibraryPDB(uint uIndex, IDxcPdbUtils2** ppOutPdbUtils, IDxcBlobUtf16** ppLibraryName)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcPdbUtils2**, IDxcBlobUtf16**, int>)(lpVtbl[8]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppOutPdbUtils, ppLibraryName);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFlagCount(uint* pCount)
+	public HRESULT GetFlagCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[9]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFlag(uint uIndex, IDxcBlobUtf16** ppResult)
+	public HRESULT GetFlag(uint uIndex, IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcBlobUtf16**, int>)(lpVtbl[10]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetArgCount(uint* pCount)
+	public HRESULT GetArgCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[11]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetArg(uint uIndex, IDxcBlobUtf16** ppResult)
+	public HRESULT GetArg(uint uIndex, IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcBlobUtf16**, int>)(lpVtbl[12]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetArgPairCount(uint* pCount)
+	public HRESULT GetArgPairCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[13]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetArgPair(uint uIndex, IDxcBlobUtf16** ppName, IDxcBlobUtf16** ppValue)
+	public HRESULT GetArgPair(uint uIndex, IDxcBlobUtf16** ppName, IDxcBlobUtf16** ppValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcBlobUtf16**, IDxcBlobUtf16**, int>)(lpVtbl[14]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppName, ppValue);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetDefineCount(uint* pCount)
+	public HRESULT GetDefineCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[15]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetDefine(uint uIndex, IDxcBlobUtf16** ppResult)
+	public HRESULT GetDefine(uint uIndex, IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint, IDxcBlobUtf16**, int>)(lpVtbl[16]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetTargetProfile(IDxcBlobUtf16** ppResult)
+	public HRESULT GetTargetProfile(IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlobUtf16**, int>)(lpVtbl[17]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetEntryPoint(IDxcBlobUtf16** ppResult)
+	public HRESULT GetEntryPoint(IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlobUtf16**, int>)(lpVtbl[18]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetMainFileName(IDxcBlobUtf16** ppResult)
+	public HRESULT GetMainFileName(IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlobUtf16**, int>)(lpVtbl[19]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetHash(IDxcBlob** ppResult)
+	public HRESULT GetHash(IDxcBlob** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlob**, int>)(lpVtbl[20]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetName(IDxcBlobUtf16** ppResult)
+	public HRESULT GetName(IDxcBlobUtf16** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlobUtf16**, int>)(lpVtbl[21]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult GetVersionInfo(IDxcVersionInfo** ppVersionInfo)
+	public HRESULT GetVersionInfo(IDxcVersionInfo** ppVersionInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcVersionInfo**, int>)(lpVtbl[22]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppVersionInfo);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult GetCustomToolchainID(uint* pID)
+	public HRESULT GetCustomToolchainID(uint* pID)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, uint*, int>)(lpVtbl[23]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), pID);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult GetCustomToolchainData(IDxcBlob** ppBlob)
+	public HRESULT GetCustomToolchainData(IDxcBlob** ppBlob)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlob**, int>)(lpVtbl[24]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppBlob);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult GetWholeDxil(IDxcBlob** ppResult)
+	public HRESULT GetWholeDxil(IDxcBlob** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils2*, IDxcBlob**, int>)(lpVtbl[25]))((IDxcPdbUtils2*)Unsafe.AsPointer(ref this), ppResult);
 	}
@@ -247,73 +247,73 @@ public unsafe partial struct IDxcPdbUtils2 : IDxcPdbUtils2.Interface, INativeGui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Load(IDxcBlob* pPdbOrDxil);
+		HRESULT Load(IDxcBlob* pPdbOrDxil);
 
 		[VtblIndex(4)]
-		HResult GetSourceCount(uint* pCount);
+		HRESULT GetSourceCount(uint* pCount);
 
 		[VtblIndex(5)]
-		HResult GetSource(uint uIndex, IDxcBlobEncoding** ppResult);
+		HRESULT GetSource(uint uIndex, IDxcBlobEncoding** ppResult);
 
 		[VtblIndex(6)]
-		HResult GetSourceName(uint uIndex, IDxcBlobUtf16** ppResult);
+		HRESULT GetSourceName(uint uIndex, IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(7)]
-		HResult GetLibraryPDBCount(uint* pCount);
+		HRESULT GetLibraryPDBCount(uint* pCount);
 
 		[VtblIndex(8)]
-		HResult GetLibraryPDB(uint uIndex, IDxcPdbUtils2** ppOutPdbUtils, IDxcBlobUtf16** ppLibraryName);
+		HRESULT GetLibraryPDB(uint uIndex, IDxcPdbUtils2** ppOutPdbUtils, IDxcBlobUtf16** ppLibraryName);
 
 		[VtblIndex(9)]
-		HResult GetFlagCount(uint* pCount);
+		HRESULT GetFlagCount(uint* pCount);
 
 		[VtblIndex(10)]
-		HResult GetFlag(uint uIndex, IDxcBlobUtf16** ppResult);
+		HRESULT GetFlag(uint uIndex, IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(11)]
-		HResult GetArgCount(uint* pCount);
+		HRESULT GetArgCount(uint* pCount);
 
 		[VtblIndex(12)]
-		HResult GetArg(uint uIndex, IDxcBlobUtf16** ppResult);
+		HRESULT GetArg(uint uIndex, IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(13)]
-		HResult GetArgPairCount(uint* pCount);
+		HRESULT GetArgPairCount(uint* pCount);
 
 		[VtblIndex(14)]
-		HResult GetArgPair(uint uIndex, IDxcBlobUtf16** ppName, IDxcBlobUtf16** ppValue);
+		HRESULT GetArgPair(uint uIndex, IDxcBlobUtf16** ppName, IDxcBlobUtf16** ppValue);
 
 		[VtblIndex(15)]
-		HResult GetDefineCount(uint* pCount);
+		HRESULT GetDefineCount(uint* pCount);
 
 		[VtblIndex(16)]
-		HResult GetDefine(uint uIndex, IDxcBlobUtf16** ppResult);
+		HRESULT GetDefine(uint uIndex, IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(17)]
-		HResult GetTargetProfile(IDxcBlobUtf16** ppResult);
+		HRESULT GetTargetProfile(IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(18)]
-		HResult GetEntryPoint(IDxcBlobUtf16** ppResult);
+		HRESULT GetEntryPoint(IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(19)]
-		HResult GetMainFileName(IDxcBlobUtf16** ppResult);
+		HRESULT GetMainFileName(IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(20)]
-		HResult GetHash(IDxcBlob** ppResult);
+		HRESULT GetHash(IDxcBlob** ppResult);
 
 		[VtblIndex(21)]
-		HResult GetName(IDxcBlobUtf16** ppResult);
+		HRESULT GetName(IDxcBlobUtf16** ppResult);
 
 		[VtblIndex(22)]
-		HResult GetVersionInfo(IDxcVersionInfo** ppVersionInfo);
+		HRESULT GetVersionInfo(IDxcVersionInfo** ppVersionInfo);
 
 		[VtblIndex(23)]
-		HResult GetCustomToolchainID(uint* pID);
+		HRESULT GetCustomToolchainID(uint* pID);
 
 		[VtblIndex(24)]
-		HResult GetCustomToolchainData(IDxcBlob** ppBlob);
+		HRESULT GetCustomToolchainData(IDxcBlob** ppBlob);
 
 		[VtblIndex(25)]
-		HResult GetWholeDxil(IDxcBlob** ppResult);
+		HRESULT GetWholeDxil(IDxcBlob** ppResult);
 
 		[VtblIndex(26)]
 		Bool32 IsFullPDB();

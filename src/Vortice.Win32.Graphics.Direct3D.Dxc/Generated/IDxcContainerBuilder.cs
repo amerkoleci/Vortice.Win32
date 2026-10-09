@@ -46,7 +46,7 @@ public unsafe partial struct IDxcContainerBuilder : IDxcContainerBuilder.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerBuilder*, Guid*, void**, int>)(lpVtbl[0]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,28 +71,28 @@ public unsafe partial struct IDxcContainerBuilder : IDxcContainerBuilder.Interfa
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Load(IDxcBlob* pDxilContainerHeader)
+	public HRESULT Load(IDxcBlob* pDxilContainerHeader)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerBuilder*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), pDxilContainerHeader);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddPart(uint fourCC, IDxcBlob* pSource)
+	public HRESULT AddPart(uint fourCC, IDxcBlob* pSource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerBuilder*, uint, IDxcBlob*, int>)(lpVtbl[4]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), fourCC, pSource);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult RemovePart(uint fourCC)
+	public HRESULT RemovePart(uint fourCC)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerBuilder*, uint, int>)(lpVtbl[5]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), fourCC);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SerializeContainer(IDxcOperationResult** ppResult)
+	public HRESULT SerializeContainer(IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerBuilder*, IDxcOperationResult**, int>)(lpVtbl[6]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), ppResult);
 	}
@@ -100,16 +100,16 @@ public unsafe partial struct IDxcContainerBuilder : IDxcContainerBuilder.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Load(IDxcBlob* pDxilContainerHeader);
+		HRESULT Load(IDxcBlob* pDxilContainerHeader);
 
 		[VtblIndex(4)]
-		HResult AddPart(uint fourCC, IDxcBlob* pSource);
+		HRESULT AddPart(uint fourCC, IDxcBlob* pSource);
 
 		[VtblIndex(5)]
-		HResult RemovePart(uint fourCC);
+		HRESULT RemovePart(uint fourCC);
 
 		[VtblIndex(6)]
-		HResult SerializeContainer(IDxcOperationResult** ppResult);
+		HRESULT SerializeContainer(IDxcOperationResult** ppResult);
 	}
 }
 

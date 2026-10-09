@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink1.Inter
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafileSink1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiMetafileSink1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink1.Inter
 	/// <inheritdoc cref="ID2D1GdiMetafileSink.ProcessRecord" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize)
+	public HRESULT ProcessRecord(uint recordType, void* recordData, uint recordDataSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafileSink1*, uint, void*, uint, int>)(lpVtbl[3]))((ID2D1GdiMetafileSink1*)Unsafe.AsPointer(ref this), recordType, recordData, recordDataSize);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink1.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink1::ProcessRecord"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags)
+	public HRESULT ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafileSink1*, uint, void*, uint, uint, int>)(lpVtbl[4]))((ID2D1GdiMetafileSink1*)Unsafe.AsPointer(ref this), recordType, recordData, recordDataSize, flags);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink1.Inter
 	public interface Interface : ID2D1GdiMetafileSink.Interface
 	{
 		[VtblIndex(4)]
-		HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags);
+		HRESULT ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, Guid*, void**, int>)(lpVtbl[0]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetSourcePosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSourcePosition(HrtfPosition* position)
+	public HRESULT SetSourcePosition(HrtfPosition* position)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, HrtfPosition*, int>)(lpVtbl[3]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), position);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetSourceOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetSourceOrientation(HrtfOrientation* orientation)
+	public HRESULT SetSourceOrientation(HrtfOrientation* orientation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, HrtfOrientation*, int>)(lpVtbl[4]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), orientation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetSourceGain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetSourceGain(float gain)
+	public HRESULT SetSourceGain(float gain)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, float, int>)(lpVtbl[5]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), gain);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetEnvironment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetEnvironment(HrtfEnvironment environment)
+	public HRESULT SetEnvironment(HrtfEnvironment environment)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, HrtfEnvironment, int>)(lpVtbl[6]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), environment);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetSourcePosition(HrtfPosition* position);
+		HRESULT SetSourcePosition(HrtfPosition* position);
 
 		[VtblIndex(4)]
-		HResult SetSourceOrientation(HrtfOrientation* orientation);
+		HRESULT SetSourceOrientation(HrtfOrientation* orientation);
 
 		[VtblIndex(5)]
-		HResult SetSourceGain(float gain);
+		HRESULT SetSourceGain(float gain);
 
 		[VtblIndex(6)]
-		HResult SetEnvironment(HrtfEnvironment environment);
+		HRESULT SetEnvironment(HrtfEnvironment environment);
 	}
 }
 

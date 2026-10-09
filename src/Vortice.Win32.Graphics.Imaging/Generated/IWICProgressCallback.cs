@@ -47,7 +47,7 @@ public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICProgressCallback*, Guid*, void**, int>)(lpVtbl[0]))((IWICProgressCallback*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressCallback::Notify"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress)
+	public HRESULT Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICProgressCallback*, uint, WICProgressOperation, double, int>)(lpVtbl[3]))((IWICProgressCallback*)Unsafe.AsPointer(ref this), uFrameNum, operation, dblProgress);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress);
+		HRESULT Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress);
 	}
 }
 

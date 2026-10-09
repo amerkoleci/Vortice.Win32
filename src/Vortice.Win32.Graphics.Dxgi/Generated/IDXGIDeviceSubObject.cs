@@ -47,7 +47,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDeviceSubObject*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	public HRESULT SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDeviceSubObject*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDeviceSubObject*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetParent(Guid* riid, void** ppParent)
+	public HRESULT GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDeviceSubObject::GetDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	public interface Interface : IDXGIObject.Interface
 	{
 		[VtblIndex(7)]
-		HResult GetDevice(Guid* riid, void** ppDevice);
+		HRESULT GetDevice(Guid* riid, void** ppDevice);
 	}
 }
 

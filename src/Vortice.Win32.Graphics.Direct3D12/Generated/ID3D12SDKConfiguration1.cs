@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	/// <inheritdoc cref="ID3D12SDKConfiguration.SetSDKVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSDKVersion(uint SDKVersion, byte* SDKPath)
+	public HRESULT SetSDKVersion(uint SDKVersion, byte* SDKPath)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, byte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration1::CreateDeviceFactory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceFactory(uint SDKVersion, byte* SDKPath, Guid* riid, void** ppvFactory)
+	public HRESULT CreateDeviceFactory(uint SDKVersion, byte* SDKPath, Guid* riid, void** ppvFactory)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, byte*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath, riid, ppvFactory);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	public interface Interface : ID3D12SDKConfiguration.Interface
 	{
 		[VtblIndex(4)]
-		HResult CreateDeviceFactory(uint SDKVersion, byte* SDKPath, Guid* riid, void** ppvFactory);
+		HRESULT CreateDeviceFactory(uint SDKVersion, byte* SDKPath, Guid* riid, void** ppvFactory);
 
 		[VtblIndex(5)]
 		void FreeUnusedSDKs();

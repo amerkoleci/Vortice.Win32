@@ -47,7 +47,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DDestructionNotifier*, Guid*, void**, int>)(lpVtbl[0]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::RegisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID)
+	public HRESULT RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::UnregisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult UnregisterDestructionCallback(uint callbackID)
+	public HRESULT UnregisterDestructionCallback(uint callbackID)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DDestructionNotifier*, uint, int>)(lpVtbl[4]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackID);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID);
+		HRESULT RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID);
 
 		[VtblIndex(4)]
-		HResult UnregisterDestructionCallback(uint callbackID);
+		HRESULT UnregisterDestructionCallback(uint callbackID);
 	}
 }
 

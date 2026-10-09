@@ -47,7 +47,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarBitmapFrameEncode*, Guid*, void**, int>)(lpVtbl[0]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WritePixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes)
+	public HRESULT WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarBitmapFrameEncode*, uint, WICBitmapPlane*, uint, int>)(lpVtbl[3]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), lineCount, pPlanes, cPlanes);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WriteSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource)
+	public HRESULT WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPlanarBitmapFrameEncode*, IWICBitmapSource**, uint, System.Drawing.Rectangle*, int>)(lpVtbl[4]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, prcSource);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes);
+		HRESULT WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes);
 
 		[VtblIndex(4)]
-		HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource);
+		HRESULT WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource);
 	}
 }
 

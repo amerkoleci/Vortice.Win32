@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <inheritdoc cref="ID2D1SvgAttribute.Clone" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Clone(ID2D1SvgAttribute** attribute)
+	public HRESULT Clone(ID2D1SvgAttribute** attribute)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), attribute);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::RemoveDashesAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult RemoveDashesAtEnd(uint dashesCount)
+	public HRESULT RemoveDashesAtEnd(uint dashesCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, uint, int>)(lpVtbl[6]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashesCount);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult UpdateDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex)
+	public HRESULT UpdateDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, D2D1_SVG_LENGTH*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult UpdateDashes(float* dashes, uint dashesCount, uint startIndex)
+	public HRESULT UpdateDashes(float* dashes, uint dashesCount, uint startIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex)
+	public HRESULT GetDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, D2D1_SVG_LENGTH*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetDashes(float* dashes, uint dashesCount, uint startIndex)
+	public HRESULT GetDashes(float* dashes, uint dashesCount, uint startIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[10]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
@@ -145,19 +145,19 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]
-		HResult RemoveDashesAtEnd(uint dashesCount);
+		HRESULT RemoveDashesAtEnd(uint dashesCount);
 
 		[VtblIndex(7)]
-		HResult UpdateDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex);
+		HRESULT UpdateDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(8)]
-		HResult UpdateDashes(float* dashes, uint dashesCount, uint startIndex);
+		HRESULT UpdateDashes(float* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(9)]
-		HResult GetDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex);
+		HRESULT GetDashes(D2D1_SVG_LENGTH* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(10)]
-		HResult GetDashes(float* dashes, uint dashesCount, uint startIndex);
+		HRESULT GetDashes(float* dashes, uint dashesCount, uint startIndex);
 
 		[VtblIndex(11)]
 		uint GetDashesCount();

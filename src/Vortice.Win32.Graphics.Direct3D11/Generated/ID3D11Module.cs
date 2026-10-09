@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11Module : ID3D11Module.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Module*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Module*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11Module : ID3D11Module.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Module::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateInstance(byte* pNamespace, ID3D11ModuleInstance** ppModuleInstance)
+	public HRESULT CreateInstance(byte* pNamespace, ID3D11ModuleInstance** ppModuleInstance)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Module*, byte*, ID3D11ModuleInstance**, int>)(lpVtbl[3]))((ID3D11Module*)Unsafe.AsPointer(ref this), pNamespace, ppModuleInstance);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11Module : ID3D11Module.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateInstance(byte* pNamespace, ID3D11ModuleInstance** ppModuleInstance);
+		HRESULT CreateInstance(byte* pNamespace, ID3D11ModuleInstance** ppModuleInstance);
 	}
 }
 

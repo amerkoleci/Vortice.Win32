@@ -88,7 +88,7 @@ public static unsafe partial class DXC
         return false;
     }
 
-    public static HResult DxcCreateInstance(in Guid rclsid, Guid* riid, void** ppv)
+    public static HRESULT DxcCreateInstance(in Guid rclsid, Guid* riid, void** ppv)
     {
         return DxcCreateInstance(
             (Guid*)Unsafe.AsPointer(in rclsid),
@@ -96,7 +96,7 @@ public static unsafe partial class DXC
             ppv);
     }
 
-    public static HResult DxcCreateInstance2(Com.IMalloc* pMalloc, in Guid rclsid, Guid* riid, void** ppv)
+    public static HRESULT DxcCreateInstance2(Com.IMalloc* pMalloc, in Guid rclsid, Guid* riid, void** ppv)
     {
         return DxcCreateInstance2(
             pMalloc,

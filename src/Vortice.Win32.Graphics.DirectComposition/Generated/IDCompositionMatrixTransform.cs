@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionMatrixTransform : IDCompositionMatrixT
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionMatrixTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionMatrixTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionMatrixTransform : IDCompositionMatrixT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionMatrixTransform::SetMatrix"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetMatrix(Matrix3x2* matrix)
+	public HRESULT SetMatrix(Matrix3x2* matrix)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionMatrixTransform*, Matrix3x2*, int>)(lpVtbl[3]))((IDCompositionMatrixTransform*)Unsafe.AsPointer(ref this), matrix);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionMatrixTransform : IDCompositionMatrixT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionMatrixTransform::SetMatrixElement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetMatrixElement(int row, int column, IDCompositionAnimation* animation)
+	public HRESULT SetMatrixElement(int row, int column, IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionMatrixTransform*, int, int, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionMatrixTransform*)Unsafe.AsPointer(ref this), row, column, animation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionMatrixTransform : IDCompositionMatrixT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionMatrixTransform::SetMatrixElement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetMatrixElement(int row, int column, float value)
+	public HRESULT SetMatrixElement(int row, int column, float value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionMatrixTransform*, int, int, float, int>)(lpVtbl[5]))((IDCompositionMatrixTransform*)Unsafe.AsPointer(ref this), row, column, value);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDCompositionMatrixTransform : IDCompositionMatrixT
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetMatrix(Matrix3x2* matrix);
+		HRESULT SetMatrix(Matrix3x2* matrix);
 
 		[VtblIndex(4)]
-		HResult SetMatrixElement(int row, int column, IDCompositionAnimation* animation);
+		HRESULT SetMatrixElement(int row, int column, IDCompositionAnimation* animation);
 
 		[VtblIndex(5)]
-		HResult SetMatrixElement(int row, int column, float value);
+		HRESULT SetMatrixElement(int row, int column, float value);
 	}
 }
 

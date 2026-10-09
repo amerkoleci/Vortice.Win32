@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadQueue*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::AddListener"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddListener(IDWriteFontDownloadListener* listener, uint* token)
+	public HRESULT AddListener(IDWriteFontDownloadListener* listener, uint* token)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadQueue*, IDWriteFontDownloadListener*, uint*, int>)(lpVtbl[3]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), listener, token);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::RemoveListener"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult RemoveListener(uint token)
+	public HRESULT RemoveListener(uint token)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadQueue*, uint, int>)(lpVtbl[4]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), token);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::BeginDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult BeginDownload(IUnknown* context)
+	public HRESULT BeginDownload(IUnknown* context)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadQueue*, IUnknown*, int>)(lpVtbl[6]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), context);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::CancelDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CancelDownload()
+	public HRESULT CancelDownload()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadQueue*, int>)(lpVtbl[7]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this));
 	}
@@ -121,19 +121,19 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AddListener(IDWriteFontDownloadListener* listener, uint* token);
+		HRESULT AddListener(IDWriteFontDownloadListener* listener, uint* token);
 
 		[VtblIndex(4)]
-		HResult RemoveListener(uint token);
+		HRESULT RemoveListener(uint token);
 
 		[VtblIndex(5)]
 		Bool32 IsEmpty();
 
 		[VtblIndex(6)]
-		HResult BeginDownload(IUnknown* context);
+		HRESULT BeginDownload(IUnknown* context);
 
 		[VtblIndex(7)]
-		HResult CancelDownload();
+		HRESULT CancelDownload();
 
 		[VtblIndex(8)]
 		ulong GetGenerationCount();

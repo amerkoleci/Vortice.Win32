@@ -57,10 +57,10 @@ public static class Program
         { "Foundation.BOOL", "Bool32" },
         { "Foundation.BOOLEAN", "byte" },
         { "Foundation.BSTR", "char*" },
-        { "Foundation.HANDLE", "Handle" },
+        { "Foundation.HANDLE", "HANDLE" },
         { "Foundation.HINSTANCE", "nint" },
         { "Foundation.HMODULE", "nint" },
-        { "Foundation.HRESULT", "HResult" },
+        { "Foundation.HRESULT", "HRESULT" },
         { "Foundation.HWND", "nint" },
         { "Foundation.LPARAM", "nint" },
         { "Foundation.LRESULT", "nint" },
@@ -70,9 +70,9 @@ public static class Program
         { "Foundation.CHAR", "byte" },
         { "Foundation.COLORREF", "uint" },
 
-        { "Foundation.LUID", "Luid" },
-        { "Foundation.LARGE_INTEGER", "LargeInteger" },
-        { "Foundation.ULARGE_INTEGER", "ULargeInteger" },
+        { "Foundation.LUID", "LUID" },
+        { "Foundation.LARGE_INTEGER", "LARGE_INTEGER" },
+        { "Foundation.ULARGE_INTEGER", "ULARGE_INTEGER" },
         { "Foundation.FILETIME", "ulong" },
 
         { "System.Com.IUnknown", "IUnknown" },
@@ -1535,9 +1535,9 @@ public static class Program
                 {
                     WriteGuid(writer, constant.Value!.ToString(), constant.Name);
                 }
-                else if (typeName == "HResult")
+                else if (typeName == "HRESULT")
                 {
-                    writer.WriteLine($"public static readonly HResult {constant.Name} = {constant.Value};");
+                    writer.WriteLine($"public static  HRESULT {constant.Name} => {constant.Value};");
                 }
                 else if (typeName == "float")
                 {
@@ -1839,12 +1839,19 @@ public static class Program
         if (api.Functions.Length == 0)
             return;
 
+        List<string> namespaces = [];
+        if (apiName == "Graphics.DirectComposition")
+        {
+            namespaces.Add("Vortice.Win32.Security");
+        }
+
         string @namespace = options.SkipRename ? options.Namespace : $"Vortice.Win32.{apiName}";
         using CodeWriter writer = new(
             Path.Combine(folder, $"{apiName}.Apis.Functions.cs"),
             apiName,
             docFileName,
-            @namespace);
+            @namespace,
+            [.. namespaces]);
 
         using (writer.PushBlock($"public static unsafe partial class {options.ApiName}"))
         {
@@ -2483,7 +2490,6 @@ public static class Program
         string csTypeName = comType.Name;
         List<string> namespaces = [];
 
-
         if (comType.Name == "IDXGIResource1" ||
             comType.Name == "ID3D11Fence" ||
             comType.Name.StartsWith("ID3D12Device"))
@@ -2586,7 +2592,7 @@ public static class Program
                 writer.WriteLine("/// <inheritdoc cref=\"IUnknown.QueryInterface\" />");
                 writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                 writer.WriteLine("[VtblIndex(0)]");
-                using (writer.PushBlock($"public HResult QueryInterface([NativeTypeName(\"const IID &\")] Guid* riid, void** ppvObject)"))
+                using (writer.PushBlock($"public HRESULT QueryInterface([NativeTypeName(\"const IID &\")] Guid* riid, void** ppvObject)"))
                 {
                     writer.WriteLine($"return ((delegate* unmanaged[MemberFunction]<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
                 }
@@ -2760,11 +2766,6 @@ public static class Program
                     }
                     else
                     {
-                        if (docName == "ID2D1SimplifiedGeometrySink")
-                        {
-                            docName = "Vortice.Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink";
-                        }
-
                         writer.WriteLine($"/// <inheritdoc cref=\"{docName}.{method.Name}\" />");
                         needToAddInterfaceMethod = false;
                     }
@@ -3470,11 +3471,11 @@ public static class Program
                 return true;
 
             case "Bool32":
-            case "LargeInteger":
-            case "ULargeInteger":
-            case "Luid":
-            case "HResult":
-            case "Handle":
+            case "LARGE_INTEGER":
+            case "ULARGE_INTEGER":
+            case "LUID":
+            case "HRESULT":
+            case "HANDLE":
                 return true;
 
             case "System.Drawing.Point":
@@ -3524,71 +3525,6 @@ public static class Program
 
         string typeName = GetTypeName(dataType.Name);
         return IsPrimitive(typeName);
-    }
-
-    private static bool IsStructAsReturnMarshal(ApiDataType dataType)
-    {
-        if (dataType.Kind != "ApiRef")
-        {
-            throw new InvalidOperationException();
-        }
-
-        string apiRefType = GetTypeName($"{dataType.Api}.{dataType.Name}");
-        if (apiRefType.EndsWith("*"))
-        {
-            apiRefType = apiRefType.Substring(0, apiRefType.Length - 1);
-        }
-
-        switch (apiRefType)
-        {
-            case "void":
-            case "bool":
-            case "byte":
-            case "sbyte":
-            case "int":
-            case "uint":
-            case "short":
-            case "ushort":
-            case "long":
-            case "ulong":
-            case "float":
-            case "double":
-                return false;
-
-            case "nint":
-            case "nuint":
-            case "IntPtr":
-            case "UIntPtr":
-            case "Guid":
-                return false;
-
-            case "Bool32":
-            case "HResult":
-            case "Handle":
-                return false;
-
-            case "LargeInteger":
-            case "ULargeInteger":
-                return true;
-
-            case "Luid":
-                return true;
-
-            default:
-                return true;
-        }
-    }
-
-
-    private static bool IsEnum(ApiDataType dataType)
-    {
-        if (dataType.Kind == "ApiRef")
-        {
-            string apiRefType = $"{dataType.Api}.{dataType.Name}";
-            return IsEnum(apiRefType);
-        }
-
-        return false;
     }
 
     private static bool IsEnum(string typeName)

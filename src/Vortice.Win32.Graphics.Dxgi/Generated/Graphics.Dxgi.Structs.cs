@@ -69,7 +69,7 @@ public partial struct DXGI_ADAPTER_DESC
 	public nuint SharedSystemMemory;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
-	public Luid AdapterLuid;
+	public LUID AdapterLuid;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
@@ -97,7 +97,7 @@ public partial struct DXGI_OUTPUT_DESC
 public partial struct DXGI_SHARED_RESOURCE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
-	public Handle Handle;
+	public HANDLE Handle;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
@@ -175,7 +175,7 @@ public partial struct DXGI_ADAPTER_DESC1
 	public nuint SharedSystemMemory;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::AdapterLuid"]/*' />
-	public Luid AdapterLuid;
+	public LUID AdapterLuid;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Flags"]/*' />
 	public DXGI_ADAPTER_FLAG Flags;
@@ -404,7 +404,7 @@ public partial struct DXGI_ADAPTER_DESC2
 	public nuint SharedSystemMemory;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::AdapterLuid"]/*' />
-	public Luid AdapterLuid;
+	public LUID AdapterLuid;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Flags"]/*' />
 	public uint Flags;
@@ -533,7 +533,7 @@ public partial struct DXGI_ADAPTER_DESC3
 	public nuint SharedSystemMemory;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::AdapterLuid"]/*' />
-	public Luid AdapterLuid;
+	public LUID AdapterLuid;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
 	public DXGI_ADAPTER_FLAG3 Flags;

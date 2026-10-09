@@ -19,7 +19,7 @@ public static unsafe class ID3D11DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CheckFeatureSupport<TD3D11Device, TFeature>(ref this TD3D11Device self, D3D11_FEATURE feature, ref TFeature featureData)
+    public static HRESULT CheckFeatureSupport<TD3D11Device, TFeature>(ref this TD3D11Device self, D3D11_FEATURE feature, ref TFeature featureData)
        where TD3D11Device : unmanaged, ID3D11Device.Interface
        where TFeature : unmanaged
     {
@@ -310,7 +310,7 @@ public static unsafe class ID3D11DeviceExtensions
         return texture.Move();
     }
 
-    public static HResult CreateVertexShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader)
+    public static HRESULT CreateVertexShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         fixed (byte* pShaderBytecode = shaderBytecode)
@@ -333,7 +333,7 @@ public static unsafe class ID3D11DeviceExtensions
         return shader.Move();
     }
 
-    public static HResult CreatePixelShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader)
+    public static HRESULT CreatePixelShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         fixed (byte* pShaderBytecode = shaderBytecode)
@@ -356,7 +356,7 @@ public static unsafe class ID3D11DeviceExtensions
         return shader.Move();
     }
 
-    public static HResult CreateComputeShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11ComputeShader** ppComputeShader)
+    public static HRESULT CreateComputeShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11ComputeShader** ppComputeShader)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         fixed (byte* pShaderBytecode = shaderBytecode)
@@ -379,7 +379,7 @@ public static unsafe class ID3D11DeviceExtensions
         return shader.Move();
     }
 
-    public static HResult CreateInputLayout<TD3D11Device>(ref this TD3D11Device self,
+    public static HRESULT CreateInputLayout<TD3D11Device>(ref this TD3D11Device self,
         ReadOnlySpan<D3D11_INPUT_ELEMENT_DESC> inputElements,
         ReadOnlySpan<byte> shaderBytecode,
         ID3D11InputLayout** ppInputLayout)
@@ -395,7 +395,7 @@ public static unsafe class ID3D11DeviceExtensions
         }
     }
 
-    public static HResult CreateInputLayout<TD3D11Device>(ref this TD3D11Device self,
+    public static HRESULT CreateInputLayout<TD3D11Device>(ref this TD3D11Device self,
         ReadOnlySpan<D3D11_INPUT_ELEMENT_DESC> inputElements,
         uint inputElementsCount,
         ReadOnlySpan<byte> shaderBytecode,

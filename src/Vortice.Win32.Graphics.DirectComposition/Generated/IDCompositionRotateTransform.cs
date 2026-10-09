@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetAngle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetAngle(IDCompositionAnimation* animation)
+	public HRESULT SetAngle(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetAngle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetAngle(float angle)
+	public HRESULT SetAngle(float angle)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, float, int>)(lpVtbl[4]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), angle);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetCenterX(IDCompositionAnimation* animation)
+	public HRESULT SetCenterX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetCenterX(float centerX)
+	public HRESULT SetCenterX(float centerX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, float, int>)(lpVtbl[6]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerX);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetCenterY(IDCompositionAnimation* animation)
+	public HRESULT SetCenterY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetCenterY(float centerY)
+	public HRESULT SetCenterY(float centerY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, float, int>)(lpVtbl[8]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerY);
 	}
@@ -121,22 +121,22 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetAngle(IDCompositionAnimation* animation);
+		HRESULT SetAngle(IDCompositionAnimation* animation);
 
 		[VtblIndex(4)]
-		HResult SetAngle(float angle);
+		HRESULT SetAngle(float angle);
 
 		[VtblIndex(5)]
-		HResult SetCenterX(IDCompositionAnimation* animation);
+		HRESULT SetCenterX(IDCompositionAnimation* animation);
 
 		[VtblIndex(6)]
-		HResult SetCenterX(float centerX);
+		HRESULT SetCenterX(float centerX);
 
 		[VtblIndex(7)]
-		HResult SetCenterY(IDCompositionAnimation* animation);
+		HRESULT SetCenterY(IDCompositionAnimation* animation);
 
 		[VtblIndex(8)]
-		HResult SetCenterY(float centerY);
+		HRESULT SetCenterY(float centerY);
 	}
 }
 

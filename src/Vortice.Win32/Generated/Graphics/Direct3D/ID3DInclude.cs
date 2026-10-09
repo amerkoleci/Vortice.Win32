@@ -18,7 +18,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult Open(D3D_INCLUDE_TYPE IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes)
+	public HRESULT Open(D3D_INCLUDE_TYPE IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DInclude*, D3D_INCLUDE_TYPE, byte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
 	}
@@ -26,7 +26,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public HResult Close(void* pData)
+	public HRESULT Close(void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
 	}
@@ -34,10 +34,10 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult Open(D3D_INCLUDE_TYPE IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes);
+		HRESULT Open(D3D_INCLUDE_TYPE IncludeType, byte* pFileName, void* pParentData, void** ppData, uint* pBytes);
 
 		[VtblIndex(1)]
-		HResult Close(void* pData);
+		HRESULT Close(void* pData);
 	}
 }
 

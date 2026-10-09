@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Debug*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetFeatureMask(uint Mask)
+	public HRESULT SetFeatureMask(uint Mask)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, uint, int>)(lpVtbl[3]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Mask);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetPresentPerRenderOpDelay"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPresentPerRenderOpDelay(uint Milliseconds)
+	public HRESULT SetPresentPerRenderOpDelay(uint Milliseconds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, uint, int>)(lpVtbl[5]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Milliseconds);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetSwapChain(IDXGISwapChain* pSwapChain)
+	public HRESULT SetSwapChain(IDXGISwapChain* pSwapChain)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, IDXGISwapChain*, int>)(lpVtbl[7]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pSwapChain);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::GetSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetSwapChain(IDXGISwapChain** ppSwapChain)
+	public HRESULT GetSwapChain(IDXGISwapChain** ppSwapChain)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, IDXGISwapChain**, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult ValidateContext(ID3D11DeviceContext* pContext)
+	public HRESULT ValidateContext(ID3D11DeviceContext* pContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[9]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ReportLiveDeviceObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult ReportLiveDeviceObjects(D3D11_RLDO_FLAGS Flags)
+	public HRESULT ReportLiveDeviceObjects(D3D11_RLDO_FLAGS Flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, D3D11_RLDO_FLAGS, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContextForDispatch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult ValidateContextForDispatch(ID3D11DeviceContext* pContext)
+	public HRESULT ValidateContextForDispatch(ID3D11DeviceContext* pContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[11]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
 	}
@@ -145,31 +145,31 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetFeatureMask(uint Mask);
+		HRESULT SetFeatureMask(uint Mask);
 
 		[VtblIndex(4)]
 		uint GetFeatureMask();
 
 		[VtblIndex(5)]
-		HResult SetPresentPerRenderOpDelay(uint Milliseconds);
+		HRESULT SetPresentPerRenderOpDelay(uint Milliseconds);
 
 		[VtblIndex(6)]
 		uint GetPresentPerRenderOpDelay();
 
 		[VtblIndex(7)]
-		HResult SetSwapChain(IDXGISwapChain* pSwapChain);
+		HRESULT SetSwapChain(IDXGISwapChain* pSwapChain);
 
 		[VtblIndex(8)]
-		HResult GetSwapChain(IDXGISwapChain** ppSwapChain);
+		HRESULT GetSwapChain(IDXGISwapChain** ppSwapChain);
 
 		[VtblIndex(9)]
-		HResult ValidateContext(ID3D11DeviceContext* pContext);
+		HRESULT ValidateContext(ID3D11DeviceContext* pContext);
 
 		[VtblIndex(10)]
-		HResult ReportLiveDeviceObjects(D3D11_RLDO_FLAGS Flags);
+		HRESULT ReportLiveDeviceObjects(D3D11_RLDO_FLAGS Flags);
 
 		[VtblIndex(11)]
-		HResult ValidateContextForDispatch(ID3D11DeviceContext* pContext);
+		HRESULT ValidateContextForDispatch(ID3D11DeviceContext* pContext);
 	}
 }
 

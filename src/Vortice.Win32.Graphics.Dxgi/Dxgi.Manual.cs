@@ -50,7 +50,7 @@ public static unsafe class IDXGIFactory5Extensions
         where TDXGIFactory5 : unmanaged, IDXGIFactory5.Interface
     {
         Bool32 supported = default;
-        HResult hr = self.CheckFeatureSupport(DXGI_FEATURE_PRESENT_ALLOW_TEARING, &supported, sizeof(Bool32));
+        HRESULT hr = self.CheckFeatureSupport(DXGI_FEATURE_PRESENT_ALLOW_TEARING, &supported, sizeof(Bool32));
         return hr.Success && supported == true;
     }
 

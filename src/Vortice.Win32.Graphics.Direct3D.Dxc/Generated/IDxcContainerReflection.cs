@@ -46,7 +46,7 @@ public unsafe partial struct IDxcContainerReflection : IDxcContainerReflection.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, Guid*, void**, int>)(lpVtbl[0]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,42 +71,42 @@ public unsafe partial struct IDxcContainerReflection : IDxcContainerReflection.I
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Load(IDxcBlob* pContainer)
+	public HRESULT Load(IDxcBlob* pContainer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), pContainer);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPartCount(uint* pResult)
+	public HRESULT GetPartCount(uint* pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, uint*, int>)(lpVtbl[4]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPartKind(uint idx, uint* pResult)
+	public HRESULT GetPartKind(uint idx, uint* pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, uint, uint*, int>)(lpVtbl[5]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetPartContent(uint idx, IDxcBlob** ppResult)
+	public HRESULT GetPartContent(uint idx, IDxcBlob** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, uint, IDxcBlob**, int>)(lpVtbl[6]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult FindFirstPartKind(uint kind, uint* pResult)
+	public HRESULT FindFirstPartKind(uint kind, uint* pResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, uint, uint*, int>)(lpVtbl[7]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), kind, pResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetPartReflection(uint idx, Guid* iid, void** ppvObject)
+	public HRESULT GetPartReflection(uint idx, Guid* iid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcContainerReflection*, uint, Guid*, void**, int>)(lpVtbl[8]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, iid, ppvObject);
 	}
@@ -114,22 +114,22 @@ public unsafe partial struct IDxcContainerReflection : IDxcContainerReflection.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Load(IDxcBlob* pContainer);
+		HRESULT Load(IDxcBlob* pContainer);
 
 		[VtblIndex(4)]
-		HResult GetPartCount(uint* pResult);
+		HRESULT GetPartCount(uint* pResult);
 
 		[VtblIndex(5)]
-		HResult GetPartKind(uint idx, uint* pResult);
+		HRESULT GetPartKind(uint idx, uint* pResult);
 
 		[VtblIndex(6)]
-		HResult GetPartContent(uint idx, IDxcBlob** ppResult);
+		HRESULT GetPartContent(uint idx, IDxcBlob** ppResult);
 
 		[VtblIndex(7)]
-		HResult FindFirstPartKind(uint kind, uint* pResult);
+		HRESULT FindFirstPartKind(uint kind, uint* pResult);
 
 		[VtblIndex(8)]
-		HResult GetPartReflection(uint idx, Guid* iid, void** ppvObject);
+		HRESULT GetPartReflection(uint idx, Guid* iid, void** ppvObject);
 	}
 }
 

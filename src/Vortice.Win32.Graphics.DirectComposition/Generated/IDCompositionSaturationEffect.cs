@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSaturationEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionSaturationEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSaturationEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionSaturationEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSaturationEffect::SetSaturation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetSaturation(IDCompositionAnimation* animation)
+	public HRESULT SetSaturation(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSaturationEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionSaturationEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSaturationEffect::SetSaturation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetSaturation(float ratio)
+	public HRESULT SetSaturation(float ratio)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSaturationEffect*, float, int>)(lpVtbl[5]))((IDCompositionSaturationEffect*)Unsafe.AsPointer(ref this), ratio);
 	}
@@ -97,10 +97,10 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetSaturation(IDCompositionAnimation* animation);
+		HRESULT SetSaturation(IDCompositionAnimation* animation);
 
 		[VtblIndex(5)]
-		HResult SetSaturation(float ratio);
+		HRESULT SetSaturation(float ratio);
 	}
 }
 

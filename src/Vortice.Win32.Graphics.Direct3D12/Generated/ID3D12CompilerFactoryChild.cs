@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12CompilerFactoryChild : ID3D12CompilerFactoryC
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactoryChild*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12CompilerFactoryChild*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12CompilerFactoryChild : ID3D12CompilerFactoryC
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerFactoryChild::GetFactory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetFactory(Guid* riid, void** ppCompilerFactory)
+	public HRESULT GetFactory(Guid* riid, void** ppCompilerFactory)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerFactoryChild*, Guid*, void**, int>)(lpVtbl[3]))((ID3D12CompilerFactoryChild*)Unsafe.AsPointer(ref this), riid, ppCompilerFactory);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12CompilerFactoryChild : ID3D12CompilerFactoryC
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetFactory(Guid* riid, void** ppCompilerFactory);
+		HRESULT GetFactory(Guid* riid, void** ppCompilerFactory);
 	}
 }
 

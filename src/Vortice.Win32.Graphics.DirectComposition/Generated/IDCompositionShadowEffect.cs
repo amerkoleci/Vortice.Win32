@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetStandardDeviation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetStandardDeviation(IDCompositionAnimation* animation)
+	public HRESULT SetStandardDeviation(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetStandardDeviation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetStandardDeviation(float amount)
+	public HRESULT SetStandardDeviation(float amount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, float, int>)(lpVtbl[5]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetColor(Vector4* color)
+	public HRESULT SetColor(Vector4* color)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, Vector4*, int>)(lpVtbl[6]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), color);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetRed"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetRed(IDCompositionAnimation* animation)
+	public HRESULT SetRed(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetRed"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetRed(float amount)
+	public HRESULT SetRed(float amount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, float, int>)(lpVtbl[8]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetGreen"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetGreen(IDCompositionAnimation* animation)
+	public HRESULT SetGreen(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetGreen"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetGreen(float amount)
+	public HRESULT SetGreen(float amount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, float, int>)(lpVtbl[10]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetBlue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetBlue(IDCompositionAnimation* animation)
+	public HRESULT SetBlue(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetBlue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetBlue(float amount)
+	public HRESULT SetBlue(float amount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, float, int>)(lpVtbl[12]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetAlpha"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult SetAlpha(IDCompositionAnimation* animation)
+	public HRESULT SetAlpha(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetAlpha"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetAlpha(float amount)
+	public HRESULT SetAlpha(float amount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionShadowEffect*, float, int>)(lpVtbl[14]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
 	}
@@ -169,37 +169,37 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetStandardDeviation(IDCompositionAnimation* animation);
+		HRESULT SetStandardDeviation(IDCompositionAnimation* animation);
 
 		[VtblIndex(5)]
-		HResult SetStandardDeviation(float amount);
+		HRESULT SetStandardDeviation(float amount);
 
 		[VtblIndex(6)]
-		HResult SetColor(Vector4* color);
+		HRESULT SetColor(Vector4* color);
 
 		[VtblIndex(7)]
-		HResult SetRed(IDCompositionAnimation* animation);
+		HRESULT SetRed(IDCompositionAnimation* animation);
 
 		[VtblIndex(8)]
-		HResult SetRed(float amount);
+		HRESULT SetRed(float amount);
 
 		[VtblIndex(9)]
-		HResult SetGreen(IDCompositionAnimation* animation);
+		HRESULT SetGreen(IDCompositionAnimation* animation);
 
 		[VtblIndex(10)]
-		HResult SetGreen(float amount);
+		HRESULT SetGreen(float amount);
 
 		[VtblIndex(11)]
-		HResult SetBlue(IDCompositionAnimation* animation);
+		HRESULT SetBlue(IDCompositionAnimation* animation);
 
 		[VtblIndex(12)]
-		HResult SetBlue(float amount);
+		HRESULT SetBlue(float amount);
 
 		[VtblIndex(13)]
-		HResult SetAlpha(IDCompositionAnimation* animation);
+		HRESULT SetAlpha(IDCompositionAnimation* animation);
 
 		[VtblIndex(14)]
-		HResult SetAlpha(float amount);
+		HRESULT SetAlpha(float amount);
 	}
 }
 

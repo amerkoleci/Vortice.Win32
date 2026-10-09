@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBlendEffect::SetMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetMode(D2D1_BLEND_MODE mode)
+	public HRESULT SetMode(D2D1_BLEND_MODE mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBlendEffect*, D2D1_BLEND_MODE, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetMode(D2D1_BLEND_MODE mode);
+		HRESULT SetMode(D2D1_BLEND_MODE mode);
 	}
 }
 

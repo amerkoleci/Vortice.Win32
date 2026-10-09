@@ -47,7 +47,7 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsFrameDecode*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetSizeInBlocks"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks)
+	public HRESULT GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsFrameDecode*, uint*, uint*, int>)(lpVtbl[3]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pWidthInBlocks, pHeightInBlocks);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetFormatInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFormatInfo(WICDdsFormatInfo* pFormatInfo)
+	public HRESULT GetFormatInfo(WICDdsFormatInfo* pFormatInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsFrameDecode*, WICDdsFormatInfo*, int>)(lpVtbl[4]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pFormatInfo);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::CopyBlocks"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks);
+		HRESULT GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks);
 
 		[VtblIndex(4)]
-		HResult GetFormatInfo(WICDdsFormatInfo* pFormatInfo);
+		HRESULT GetFormatInfo(WICDdsFormatInfo* pFormatInfo);
 
 		[VtblIndex(5)]
-		HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer);
+		HRESULT CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer);
 	}
 }
 

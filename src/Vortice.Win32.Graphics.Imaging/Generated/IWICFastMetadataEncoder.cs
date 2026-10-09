@@ -47,7 +47,7 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICFastMetadataEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::Commit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Commit()
+	public HRESULT Commit()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICFastMetadataEncoder*, int>)(lpVtbl[3]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this));
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
+	public HRESULT GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICFastMetadataEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[4]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Commit();
+		HRESULT Commit();
 
 		[VtblIndex(4)]
-		HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter);
+		HRESULT GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter);
 	}
 }
 

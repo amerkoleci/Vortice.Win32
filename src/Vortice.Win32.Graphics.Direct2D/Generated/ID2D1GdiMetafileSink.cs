@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : ID2D1GdiMetafileSink.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafileSink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiMetafileSink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : ID2D1GdiMetafileSink.Interfa
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink::ProcessRecord"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize)
+	public HRESULT ProcessRecord(uint recordType, void* recordData, uint recordDataSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafileSink*, uint, void*, uint, int>)(lpVtbl[3]))((ID2D1GdiMetafileSink*)Unsafe.AsPointer(ref this), recordType, recordData, recordDataSize);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : ID2D1GdiMetafileSink.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize);
+		HRESULT ProcessRecord(uint recordType, void* recordData, uint recordDataSize);
 	}
 }
 

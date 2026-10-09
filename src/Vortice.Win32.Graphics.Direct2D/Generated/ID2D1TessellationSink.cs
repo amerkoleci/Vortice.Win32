@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TessellationSink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Close()
+	public HRESULT Close()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TessellationSink*, int>)(lpVtbl[4]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this));
 	}
@@ -92,7 +92,7 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 		void AddTriangles(D2D1_TRIANGLE* triangles, uint trianglesCount);
 
 		[VtblIndex(4)]
-		HResult Close();
+		HRESULT Close();
 	}
 }
 

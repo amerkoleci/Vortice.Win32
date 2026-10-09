@@ -136,7 +136,7 @@ public static unsafe class ID3D11DeviceContextExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult Map<TD3D11DeviceContext>(ref this TD3D11DeviceContext self, ID3D11Texture2D* resource,
+    public static HRESULT Map<TD3D11DeviceContext>(ref this TD3D11DeviceContext self, ID3D11Texture2D* resource,
         uint mipSlice, uint arraySlice,
         D3D11_MAP mode, D3D11_MAP_FLAG flags,
         D3D11_MAPPED_SUBRESOURCE* pMappedResource, out uint subresource, out uint mipSize)

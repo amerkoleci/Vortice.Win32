@@ -13,21 +13,21 @@ public static unsafe partial class XAudio2
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateFX"]/*' />
 	[LibraryImport("xaudio2_9")]
-	public static partial HResult CreateFX(Guid* clsid, IUnknown** pEffect, void* pInitDat, uint InitDataByteSize);
+	public static partial HRESULT CreateFX(Guid* clsid, IUnknown** pEffect, void* pInitDat, uint InitDataByteSize);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAudio2CreateWithVersionInfo"]/*' />
 	[LibraryImport("xaudio2_9")]
-	public static partial HResult XAudio2CreateWithVersionInfo(IXAudio2** ppXAudio2, uint Flags, uint XAudio2Processor, uint ntddiVersion);
+	public static partial HRESULT XAudio2CreateWithVersionInfo(IXAudio2** ppXAudio2, uint Flags, uint XAudio2Processor, uint ntddiVersion);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateAudioVolumeMeter"]/*' />
 	[LibraryImport("xaudio2_9")]
-	public static partial HResult CreateAudioVolumeMeter(IUnknown** ppApo);
+	public static partial HRESULT CreateAudioVolumeMeter(IUnknown** ppApo);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateAudioReverb"]/*' />
 	[LibraryImport("xaudio2_9")]
-	public static partial HResult CreateAudioReverb(IUnknown** ppApo);
+	public static partial HRESULT CreateAudioReverb(IUnknown** ppApo);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateHrtfApo"]/*' />
 	[LibraryImport("HrtfApo.dll")]
-	public static partial HResult CreateHrtfApo(HrtfApoInit* init, IXAPO** xApo);
+	public static partial HRESULT CreateHrtfApo(HrtfApoInit* init, IXAPO** xApo);
 }

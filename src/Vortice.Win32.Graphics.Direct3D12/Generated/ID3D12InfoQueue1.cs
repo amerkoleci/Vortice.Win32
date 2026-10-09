@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.SetMessageCountLimit" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetMessageCountLimit(ulong MessageCountLimit)
+	public HRESULT SetMessageCountLimit(ulong MessageCountLimit)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, ulong, int>)(lpVtbl[3]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), MessageCountLimit);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.GetMessage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMessage(ulong MessageIndex, D3D12_MESSAGE* pMessage, nuint* pMessageByteLength)
+	public HRESULT GetMessage(ulong MessageIndex, D3D12_MESSAGE* pMessage, nuint* pMessageByteLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, ulong, D3D12_MESSAGE*, nuint*, int>)(lpVtbl[5]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.AddStorageFilterEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult AddStorageFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter)
+	public HRESULT AddStorageFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[12]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), pFilter);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.GetStorageFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
+	public HRESULT GetStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[13]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.PushEmptyStorageFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult PushEmptyStorageFilter()
+	public HRESULT PushEmptyStorageFilter()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, int>)(lpVtbl[15]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this));
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.PushCopyOfStorageFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult PushCopyOfStorageFilter()
+	public HRESULT PushCopyOfStorageFilter()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, int>)(lpVtbl[16]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this));
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.PushStorageFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult PushStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter)
+	public HRESULT PushStorageFilter(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[17]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), pFilter);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.AddRetrievalFilterEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult AddRetrievalFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter)
+	public HRESULT AddRetrievalFilterEntries(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[20]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), pFilter);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.GetRetrievalFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
+	public HRESULT GetRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter, nuint* pFilterByteLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_INFO_QUEUE_FILTER*, nuint*, int>)(lpVtbl[21]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
@@ -233,7 +233,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.PushEmptyRetrievalFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult PushEmptyRetrievalFilter()
+	public HRESULT PushEmptyRetrievalFilter()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, int>)(lpVtbl[23]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this));
 	}
@@ -241,7 +241,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.PushCopyOfRetrievalFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult PushCopyOfRetrievalFilter()
+	public HRESULT PushCopyOfRetrievalFilter()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, int>)(lpVtbl[24]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this));
 	}
@@ -249,7 +249,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.PushRetrievalFilter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult PushRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter)
+	public HRESULT PushRetrievalFilter(D3D12_INFO_QUEUE_FILTER* pFilter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_INFO_QUEUE_FILTER*, int>)(lpVtbl[25]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), pFilter);
 	}
@@ -273,7 +273,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.AddMessage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(D3D12_MESSAGE_CATEGORY Category, D3D12_MESSAGE_SEVERITY Severity, D3D12_MESSAGE_ID ID, byte* pDescription)
+	public HRESULT AddMessage(D3D12_MESSAGE_CATEGORY Category, D3D12_MESSAGE_SEVERITY Severity, D3D12_MESSAGE_ID ID, byte* pDescription)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, int>)(lpVtbl[28]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
@@ -281,7 +281,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.AddApplicationMessage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(D3D12_MESSAGE_SEVERITY Severity, byte* pDescription)
+	public HRESULT AddApplicationMessage(D3D12_MESSAGE_SEVERITY Severity, byte* pDescription)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_MESSAGE_SEVERITY, byte*, int>)(lpVtbl[29]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
@@ -289,7 +289,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.SetBreakOnCategory" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult SetBreakOnCategory(D3D12_MESSAGE_CATEGORY Category, Bool32 bEnable)
+	public HRESULT SetBreakOnCategory(D3D12_MESSAGE_CATEGORY Category, Bool32 bEnable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_MESSAGE_CATEGORY, Bool32, int>)(lpVtbl[30]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Category, bEnable);
 	}
@@ -297,7 +297,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.SetBreakOnSeverity" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetBreakOnSeverity(D3D12_MESSAGE_SEVERITY Severity, Bool32 bEnable)
+	public HRESULT SetBreakOnSeverity(D3D12_MESSAGE_SEVERITY Severity, Bool32 bEnable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_MESSAGE_SEVERITY, Bool32, int>)(lpVtbl[31]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Severity, bEnable);
 	}
@@ -305,7 +305,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <inheritdoc cref="ID3D12InfoQueue.SetBreakOnID" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetBreakOnID(D3D12_MESSAGE_ID ID, Bool32 bEnable)
+	public HRESULT SetBreakOnID(D3D12_MESSAGE_ID ID, Bool32 bEnable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, D3D12_MESSAGE_ID, Bool32, int>)(lpVtbl[32]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), ID, bEnable);
 	}
@@ -353,7 +353,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::RegisterMessageCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult RegisterMessageCallback(delegate* unmanaged[Stdcall]<D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, void*, void> CallbackFunc, D3D12_MESSAGE_CALLBACK_FLAGS CallbackFilterFlags, void* pContext, uint* pCallbackCookie)
+	public HRESULT RegisterMessageCallback(delegate* unmanaged[Stdcall]<D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, void*, void> CallbackFunc, D3D12_MESSAGE_CALLBACK_FLAGS CallbackFilterFlags, void* pContext, uint* pCallbackCookie)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, delegate* unmanaged[Stdcall]<D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, void*, void>, D3D12_MESSAGE_CALLBACK_FLAGS, void*, uint*, int>)(lpVtbl[38]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), CallbackFunc, CallbackFilterFlags, pContext, pCallbackCookie);
 	}
@@ -361,7 +361,7 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::UnregisterMessageCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public HResult UnregisterMessageCallback(uint CallbackCookie)
+	public HRESULT UnregisterMessageCallback(uint CallbackCookie)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12InfoQueue1*, uint, int>)(lpVtbl[39]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), CallbackCookie);
 	}
@@ -369,10 +369,10 @@ public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INat
 	public interface Interface : ID3D12InfoQueue.Interface
 	{
 		[VtblIndex(38)]
-		HResult RegisterMessageCallback(delegate* unmanaged[Stdcall]<D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, void*, void> CallbackFunc, D3D12_MESSAGE_CALLBACK_FLAGS CallbackFilterFlags, void* pContext, uint* pCallbackCookie);
+		HRESULT RegisterMessageCallback(delegate* unmanaged[Stdcall]<D3D12_MESSAGE_CATEGORY, D3D12_MESSAGE_SEVERITY, D3D12_MESSAGE_ID, byte*, void*, void> CallbackFunc, D3D12_MESSAGE_CALLBACK_FLAGS CallbackFilterFlags, void* pContext, uint* pCallbackCookie);
 
 		[VtblIndex(39)]
-		HResult UnregisterMessageCallback(uint CallbackCookie);
+		HRESULT UnregisterMessageCallback(uint CallbackCookie);
 	}
 }
 

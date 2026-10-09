@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::AnalyzeScript"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AnalyzeScript(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
+	public HRESULT AnalyzeScript(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, IDWriteTextAnalysisSource*, uint, uint, IDWriteTextAnalysisSink*, int>)(lpVtbl[3]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, analysisSink);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::AnalyzeBidi"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AnalyzeBidi(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
+	public HRESULT AnalyzeBidi(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, IDWriteTextAnalysisSource*, uint, uint, IDWriteTextAnalysisSink*, int>)(lpVtbl[4]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, analysisSink);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::AnalyzeNumberSubstitution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult AnalyzeNumberSubstitution(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
+	public HRESULT AnalyzeNumberSubstitution(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, IDWriteTextAnalysisSource*, uint, uint, IDWriteTextAnalysisSink*, int>)(lpVtbl[5]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, analysisSink);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::AnalyzeLineBreakpoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult AnalyzeLineBreakpoints(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
+	public HRESULT AnalyzeLineBreakpoints(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, IDWriteTextAnalysisSource*, uint, uint, IDWriteTextAnalysisSink*, int>)(lpVtbl[6]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, analysisSink);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::GetGlyphs"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetGlyphs(char* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, IDWriteNumberSubstitution* numberSubstitution, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint* actualGlyphCount)
+	public HRESULT GetGlyphs(char* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, IDWriteNumberSubstitution* numberSubstitution, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint* actualGlyphCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, char*, uint, IDWriteFontFace*, Bool32, Bool32, DWRITE_SCRIPT_ANALYSIS*, char*, IDWriteNumberSubstitution*, DWRITE_TYPOGRAPHIC_FEATURES**, uint*, uint, uint, ushort*, DWRITE_SHAPING_TEXT_PROPERTIES*, ushort*, DWRITE_SHAPING_GLYPH_PROPERTIES*, uint*, int>)(lpVtbl[7]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), textString, textLength, fontFace, isSideways, isRightToLeft, scriptAnalysis, localeName, numberSubstitution, features, featureRangeLengths, featureRanges, maxGlyphCount, clusterMap, textProps, glyphIndices, glyphProps, actualGlyphCount);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::GetGlyphPlacements"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets)
+	public HRESULT GetGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, char*, ushort*, DWRITE_SHAPING_TEXT_PROPERTIES*, uint, ushort*, DWRITE_SHAPING_GLYPH_PROPERTIES*, uint, IDWriteFontFace*, float, Bool32, Bool32, DWRITE_SCRIPT_ANALYSIS*, char*, DWRITE_TYPOGRAPHIC_FEATURES**, uint*, uint, float*, DWRITE_GLYPH_OFFSET*, int>)(lpVtbl[8]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer::GetGdiCompatibleGlyphPlacements"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetGdiCompatibleGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets)
+	public HRESULT GetGdiCompatibleGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer*, char*, ushort*, DWRITE_SHAPING_TEXT_PROPERTIES*, uint, ushort*, DWRITE_SHAPING_GLYPH_PROPERTIES*, uint, IDWriteFontFace*, float, float, Matrix3x2*, Bool32, Bool32, Bool32, DWRITE_SCRIPT_ANALYSIS*, char*, DWRITE_TYPOGRAPHIC_FEATURES**, uint*, uint, float*, DWRITE_GLYPH_OFFSET*, int>)(lpVtbl[9]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, pixelsPerDip, transform, useGdiNatural, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
 	}
@@ -129,25 +129,25 @@ public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult AnalyzeScript(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+		HRESULT AnalyzeScript(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
 
 		[VtblIndex(4)]
-		HResult AnalyzeBidi(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+		HRESULT AnalyzeBidi(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
 
 		[VtblIndex(5)]
-		HResult AnalyzeNumberSubstitution(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+		HRESULT AnalyzeNumberSubstitution(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
 
 		[VtblIndex(6)]
-		HResult AnalyzeLineBreakpoints(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+		HRESULT AnalyzeLineBreakpoints(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
 
 		[VtblIndex(7)]
-		HResult GetGlyphs(char* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, IDWriteNumberSubstitution* numberSubstitution, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint* actualGlyphCount);
+		HRESULT GetGlyphs(char* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, IDWriteNumberSubstitution* numberSubstitution, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint* actualGlyphCount);
 
 		[VtblIndex(8)]
-		HResult GetGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets);
+		HRESULT GetGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets);
 
 		[VtblIndex(9)]
-		HResult GetGdiCompatibleGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets);
+		HRESULT GetGdiCompatibleGlyphPlacements(char* textString, ushort* clusterMap, DWRITE_SHAPING_TEXT_PROPERTIES* textProps, uint textLength, ushort* glyphIndices, DWRITE_SHAPING_GLYPH_PROPERTIES* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis, char* localeName, DWRITE_TYPOGRAPHIC_FEATURES** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, DWRITE_GLYPH_OFFSET* glyphOffsets);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCertificateSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetCertificateSize(uint* pCertificateSize)
+	public HRESULT GetCertificateSize(uint* pCertificateSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, uint*, int>)(lpVtbl[9]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCertificateSize);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCertificate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetCertificate(uint CertificateSize, byte* pCertificate)
+	public HRESULT GetCertificate(uint CertificateSize, byte* pCertificate)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, uint, byte*, int>)(lpVtbl[10]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), CertificateSize, pCertificate);
 	}
@@ -137,9 +137,9 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCryptoSessionHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetCryptoSessionHandle(Handle* pCryptoSessionHandle)
+	public void GetCryptoSessionHandle(HANDLE* pCryptoSessionHandle)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, Handle*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
+		((delegate* unmanaged[MemberFunction]<ID3D11CryptoSession*, HANDLE*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface
@@ -151,13 +151,13 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 		void GetDecoderProfile(Guid* pDecoderProfile);
 
 		[VtblIndex(9)]
-		HResult GetCertificateSize(uint* pCertificateSize);
+		HRESULT GetCertificateSize(uint* pCertificateSize);
 
 		[VtblIndex(10)]
-		HResult GetCertificate(uint CertificateSize, byte* pCertificate);
+		HRESULT GetCertificate(uint CertificateSize, byte* pCertificate);
 
 		[VtblIndex(11)]
-		void GetCryptoSessionHandle(Handle* pCryptoSessionHandle);
+		void GetCryptoSessionHandle(HANDLE* pCryptoSessionHandle);
 	}
 }
 

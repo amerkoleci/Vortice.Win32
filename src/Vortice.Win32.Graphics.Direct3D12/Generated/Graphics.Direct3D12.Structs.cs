@@ -5155,7 +5155,7 @@ public partial struct D3D12_DRED_PAGE_FAULT_OUTPUT2
 public partial struct D3D12_DEVICE_REMOVED_EXTENDED_DATA1
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA1::DeviceRemovedReason"]/*' />
-	public HResult DeviceRemovedReason;
+	public HRESULT DeviceRemovedReason;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA1::AutoBreadcrumbsOutput"]/*' />
 	public D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT AutoBreadcrumbsOutput;
@@ -5169,7 +5169,7 @@ public partial struct D3D12_DEVICE_REMOVED_EXTENDED_DATA1
 public partial struct D3D12_DEVICE_REMOVED_EXTENDED_DATA2
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA2::DeviceRemovedReason"]/*' />
-	public HResult DeviceRemovedReason;
+	public HRESULT DeviceRemovedReason;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA2::AutoBreadcrumbsOutput"]/*' />
 	public D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1 AutoBreadcrumbsOutput;
@@ -5183,7 +5183,7 @@ public partial struct D3D12_DEVICE_REMOVED_EXTENDED_DATA2
 public partial struct D3D12_DEVICE_REMOVED_EXTENDED_DATA3
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::DeviceRemovedReason"]/*' />
-	public HResult DeviceRemovedReason;
+	public HRESULT DeviceRemovedReason;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::AutoBreadcrumbsOutput"]/*' />
 	public D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1 AutoBreadcrumbsOutput;

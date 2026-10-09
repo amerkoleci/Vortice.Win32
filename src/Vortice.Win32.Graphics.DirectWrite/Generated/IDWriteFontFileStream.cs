@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileStream*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::ReadFileFragment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext)
+	public HRESULT ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileStream*, void**, ulong, ulong, void**, int>)(lpVtbl[3]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), fragmentStart, fileOffset, fragmentSize, fragmentContext);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::GetFileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFileSize(ulong* fileSize)
+	public HRESULT GetFileSize(ulong* fileSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileStream*, ulong*, int>)(lpVtbl[5]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), fileSize);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::GetLastWriteTime"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetLastWriteTime(ulong* lastWriteTime)
+	public HRESULT GetLastWriteTime(ulong* lastWriteTime)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFileStream*, ulong*, int>)(lpVtbl[6]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), lastWriteTime);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext);
+		HRESULT ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext);
 
 		[VtblIndex(4)]
 		void ReleaseFileFragment(void* fragmentContext);
 
 		[VtblIndex(5)]
-		HResult GetFileSize(ulong* fileSize);
+		HRESULT GetFileSize(ulong* fileSize);
 
 		[VtblIndex(6)]
-		HResult GetLastWriteTime(ulong* lastWriteTime);
+		HRESULT GetLastWriteTime(ulong* lastWriteTime);
 	}
 }
 

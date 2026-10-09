@@ -7,7 +7,7 @@ namespace Vortice.Win32.Graphics;
 
 public static unsafe partial class WIC
 {
-    public static HResult CreateWICImagingFactory(IWICImagingFactory** factory)
+    public static HRESULT CreateWICImagingFactory(IWICImagingFactory** factory)
     {
         return CoCreateInstance(
             (Guid*)Unsafe.AsPointer(in CLSID_WICImagingFactory),

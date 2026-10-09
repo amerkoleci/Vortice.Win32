@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectImpl*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph)
+	public HRESULT Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectImpl*, ID2D1EffectContext*, ID2D1TransformGraph*, int>)(lpVtbl[3]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), effectContext, transformGraph);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::PrepareForRender"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult PrepareForRender(D2D1_CHANGE_TYPE changeType)
+	public HRESULT PrepareForRender(D2D1_CHANGE_TYPE changeType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectImpl*, D2D1_CHANGE_TYPE, int>)(lpVtbl[4]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), changeType);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::SetGraph"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetGraph(ID2D1TransformGraph* transformGraph)
+	public HRESULT SetGraph(ID2D1TransformGraph* transformGraph)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectImpl*, ID2D1TransformGraph*, int>)(lpVtbl[5]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), transformGraph);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph);
+		HRESULT Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph);
 
 		[VtblIndex(4)]
-		HResult PrepareForRender(D2D1_CHANGE_TYPE changeType);
+		HRESULT PrepareForRender(D2D1_CHANGE_TYPE changeType);
 
 		[VtblIndex(5)]
-		HResult SetGraph(ID2D1TransformGraph* transformGraph);
+		HRESULT SetGraph(ID2D1TransformGraph* transformGraph);
 	}
 }
 

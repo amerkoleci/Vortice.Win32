@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapLock*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapLock*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetStride"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetStride(uint* pcbStride)
+	public HRESULT GetStride(uint* pcbStride)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapLock*, uint*, int>)(lpVtbl[4]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbStride);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetDataPointer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetDataPointer(uint* pcbBufferSize, byte** ppbData)
+	public HRESULT GetDataPointer(uint* pcbBufferSize, byte** ppbData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapLock*, uint*, byte**, int>)(lpVtbl[5]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbBufferSize, ppbData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetPixelFormat(Guid* pPixelFormat)
+	public HRESULT GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapLock*, Guid*, int>)(lpVtbl[6]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetSize(uint* puiWidth, uint* puiHeight);
+		HRESULT GetSize(uint* puiWidth, uint* puiHeight);
 
 		[VtblIndex(4)]
-		HResult GetStride(uint* pcbStride);
+		HRESULT GetStride(uint* pcbStride);
 
 		[VtblIndex(5)]
-		HResult GetDataPointer(uint* pcbBufferSize, byte** ppbData);
+		HRESULT GetDataPointer(uint* pcbBufferSize, byte** ppbData);
 
 		[VtblIndex(6)]
-		HResult GetPixelFormat(Guid* pPixelFormat);
+		HRESULT GetPixelFormat(Guid* pPixelFormat);
 	}
 }
 

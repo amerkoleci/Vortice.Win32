@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionGaussianBlurEffect::SetStandardDeviation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetStandardDeviation(IDCompositionAnimation* animation)
+	public HRESULT SetStandardDeviation(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionGaussianBlurEffect::SetStandardDeviation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetStandardDeviation(float amount)
+	public HRESULT SetStandardDeviation(float amount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, float, int>)(lpVtbl[5]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), amount);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionGaussianBlurEffect::SetBorderMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetBorderMode(D2D1_BORDER_MODE mode)
+	public HRESULT SetBorderMode(D2D1_BORDER_MODE mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionGaussianBlurEffect*, D2D1_BORDER_MODE, int>)(lpVtbl[6]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), mode);
 	}
@@ -105,13 +105,13 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetStandardDeviation(IDCompositionAnimation* animation);
+		HRESULT SetStandardDeviation(IDCompositionAnimation* animation);
 
 		[VtblIndex(5)]
-		HResult SetStandardDeviation(float amount);
+		HRESULT SetStandardDeviation(float amount);
 
 		[VtblIndex(6)]
-		HResult SetBorderMode(D2D1_BORDER_MODE mode);
+		HRESULT SetBorderMode(D2D1_BORDER_MODE mode);
 	}
 }
 

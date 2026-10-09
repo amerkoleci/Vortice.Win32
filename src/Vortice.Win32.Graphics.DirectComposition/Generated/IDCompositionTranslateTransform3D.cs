@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform3D::SetOffsetX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetOffsetX(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform3D::SetOffsetX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOffsetX(float offsetX)
+	public HRESULT SetOffsetX(float offsetX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, float, int>)(lpVtbl[4]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), offsetX);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform3D::SetOffsetY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetOffsetY(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform3D::SetOffsetY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetOffsetY(float offsetY)
+	public HRESULT SetOffsetY(float offsetY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, float, int>)(lpVtbl[6]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), offsetY);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform3D::SetOffsetZ"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetOffsetZ(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetZ(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform3D::SetOffsetZ"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetOffsetZ(float offsetZ)
+	public HRESULT SetOffsetZ(float offsetZ)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform3D*, float, int>)(lpVtbl[8]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), offsetZ);
 	}
@@ -121,22 +121,22 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	public interface Interface : IDCompositionTransform3D.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetOffsetX(IDCompositionAnimation* animation);
+		HRESULT SetOffsetX(IDCompositionAnimation* animation);
 
 		[VtblIndex(4)]
-		HResult SetOffsetX(float offsetX);
+		HRESULT SetOffsetX(float offsetX);
 
 		[VtblIndex(5)]
-		HResult SetOffsetY(IDCompositionAnimation* animation);
+		HRESULT SetOffsetY(IDCompositionAnimation* animation);
 
 		[VtblIndex(6)]
-		HResult SetOffsetY(float offsetY);
+		HRESULT SetOffsetY(float offsetY);
 
 		[VtblIndex(7)]
-		HResult SetOffsetZ(IDCompositionAnimation* animation);
+		HRESULT SetOffsetZ(IDCompositionAnimation* animation);
 
 		[VtblIndex(8)]
-		HResult SetOffsetZ(float offsetZ);
+		HRESULT SetOffsetZ(float offsetZ);
 	}
 }
 

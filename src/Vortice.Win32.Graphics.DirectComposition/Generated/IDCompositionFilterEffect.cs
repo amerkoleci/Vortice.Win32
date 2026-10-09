@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionFilterEffect : IDCompositionFilterEffe
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionFilterEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionFilterEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionFilterEffect : IDCompositionFilterEffe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionFilterEffect::SetInput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionFilterEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionFilterEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionFilterEffect : IDCompositionFilterEffe
 	public interface Interface : IDCompositionEffect.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetInput(uint index, IUnknown* input, uint flags);
+		HRESULT SetInput(uint index, IUnknown* input, uint flags);
 	}
 }
 

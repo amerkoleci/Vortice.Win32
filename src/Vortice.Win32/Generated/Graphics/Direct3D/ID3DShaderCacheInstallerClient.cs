@@ -45,7 +45,7 @@ public unsafe partial struct ID3DShaderCacheInstallerClient : ID3DShaderCacheIns
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerClient::GetInstallerName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetInstallerName(nuint* pNameLength, char* pName)
+	public HRESULT GetInstallerName(nuint* pNameLength, char* pName)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerClient*, nuint*, char*, int>)(lpVtbl[0]))((ID3DShaderCacheInstallerClient*)Unsafe.AsPointer(ref this), pNameLength, pName);
 	}
@@ -61,7 +61,7 @@ public unsafe partial struct ID3DShaderCacheInstallerClient : ID3DShaderCacheIns
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerClient::HandleDriverUpdate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public HResult HandleDriverUpdate(ID3DShaderCacheInstaller* pInstaller)
+	public HRESULT HandleDriverUpdate(ID3DShaderCacheInstaller* pInstaller)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerClient*, ID3DShaderCacheInstaller*, int>)(lpVtbl[2]))((ID3DShaderCacheInstallerClient*)Unsafe.AsPointer(ref this), pInstaller);
 	}
@@ -69,13 +69,13 @@ public unsafe partial struct ID3DShaderCacheInstallerClient : ID3DShaderCacheIns
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetInstallerName(nuint* pNameLength, char* pName);
+		HRESULT GetInstallerName(nuint* pNameLength, char* pName);
 
 		[VtblIndex(1)]
 		D3D_SHADER_CACHE_APP_REGISTRATION_SCOPE GetInstallerScope();
 
 		[VtblIndex(2)]
-		HResult HandleDriverUpdate(ID3DShaderCacheInstaller* pInstaller);
+		HRESULT HandleDriverUpdate(ID3DShaderCacheInstaller* pInstaller);
 	}
 }
 

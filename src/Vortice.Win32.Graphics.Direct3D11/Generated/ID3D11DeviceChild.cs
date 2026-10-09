@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11DeviceChild : ID3D11DeviceChild.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceChild*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11DeviceChild : ID3D11DeviceChild.Interface, IN
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceChild*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11DeviceChild : ID3D11DeviceChild.Interface, IN
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::SetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceChild*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11DeviceChild : ID3D11DeviceChild.Interface, IN
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11DeviceChild*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -108,13 +108,13 @@ public unsafe partial struct ID3D11DeviceChild : ID3D11DeviceChild.Interface, IN
 		void GetDevice(ID3D11Device** ppDevice);
 
 		[VtblIndex(4)]
-		HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData);
+		HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData);
 
 		[VtblIndex(5)]
-		HResult SetPrivateData(Guid* guid, uint DataSize, void* pData);
+		HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData);
 
 		[VtblIndex(6)]
-		HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData);
+		HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData);
 	}
 }
 

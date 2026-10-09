@@ -43,7 +43,7 @@ public unsafe partial struct IPersist : IPersist.Interface, INativeGuid
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IPersist*, Guid*, void**, int>)(lpVtbl[0]))((IPersist*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -68,7 +68,7 @@ public unsafe partial struct IPersist : IPersist.Interface, INativeGuid
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult GetClassID([NativeTypeName("CLSID *")] Guid* pClassID)
+    public HRESULT GetClassID([NativeTypeName("CLSID *")] Guid* pClassID)
     {
         return ((delegate* unmanaged[MemberFunction]<IPersist*, Guid*, int>)(lpVtbl[3]))((IPersist*)Unsafe.AsPointer(ref this), pClassID);
     }
@@ -76,6 +76,6 @@ public unsafe partial struct IPersist : IPersist.Interface, INativeGuid
     public interface Interface : IUnknown.Interface
     {
         [VtblIndex(3)]
-        HResult GetClassID([NativeTypeName("CLSID *")] Guid* pClassID);
+        HRESULT GetClassID([NativeTypeName("CLSID *")] Guid* pClassID);
     }
 }

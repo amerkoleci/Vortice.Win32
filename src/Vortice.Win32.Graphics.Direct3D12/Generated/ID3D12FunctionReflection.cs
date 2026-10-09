@@ -45,7 +45,7 @@ public unsafe partial struct ID3D12FunctionReflection : ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetDesc(D3D12_FUNCTION_DESC* pDesc)
+	public HRESULT GetDesc(D3D12_FUNCTION_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12FunctionReflection*, D3D12_FUNCTION_DESC*, int>)(lpVtbl[0]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
@@ -69,7 +69,7 @@ public unsafe partial struct ID3D12FunctionReflection : ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetResourceBindingDesc(uint ResourceIndex, D3D12_SHADER_INPUT_BIND_DESC* pDesc)
+	public HRESULT GetResourceBindingDesc(uint ResourceIndex, D3D12_SHADER_INPUT_BIND_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12FunctionReflection*, uint, D3D12_SHADER_INPUT_BIND_DESC*, int>)(lpVtbl[3]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), ResourceIndex, pDesc);
 	}
@@ -85,7 +85,7 @@ public unsafe partial struct ID3D12FunctionReflection : ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResourceBindingDescByName(byte* Name, D3D12_SHADER_INPUT_BIND_DESC* pDesc)
+	public HRESULT GetResourceBindingDescByName(byte* Name, D3D12_SHADER_INPUT_BIND_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12FunctionReflection*, byte*, D3D12_SHADER_INPUT_BIND_DESC*, int>)(lpVtbl[5]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
@@ -101,7 +101,7 @@ public unsafe partial struct ID3D12FunctionReflection : ID3D12FunctionReflection
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetDesc(D3D12_FUNCTION_DESC* pDesc);
+		HRESULT GetDesc(D3D12_FUNCTION_DESC* pDesc);
 
 		[VtblIndex(1)]
 		ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByIndex(uint BufferIndex);
@@ -110,13 +110,13 @@ public unsafe partial struct ID3D12FunctionReflection : ID3D12FunctionReflection
 		ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByName(byte* Name);
 
 		[VtblIndex(3)]
-		HResult GetResourceBindingDesc(uint ResourceIndex, D3D12_SHADER_INPUT_BIND_DESC* pDesc);
+		HRESULT GetResourceBindingDesc(uint ResourceIndex, D3D12_SHADER_INPUT_BIND_DESC* pDesc);
 
 		[VtblIndex(4)]
 		ID3D12ShaderReflectionVariable* GetVariableByName(byte* Name);
 
 		[VtblIndex(5)]
-		HResult GetResourceBindingDescByName(byte* Name, D3D12_SHADER_INPUT_BIND_DESC* pDesc);
+		HRESULT GetResourceBindingDescByName(byte* Name, D3D12_SHADER_INPUT_BIND_DESC* pDesc);
 
 		[VtblIndex(6)]
 		ID3D12FunctionParameterReflection* GetFunctionParameter(int ParameterIndex);

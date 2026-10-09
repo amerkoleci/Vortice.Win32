@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12StateObjectProperties2 : ID3D12StateObjectPro
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObjectProperties2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D12StateObjectProperties2 : ID3D12StateObjectPro
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties2::GetGlobalRootSignatureForProgram"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetGlobalRootSignatureForProgram(char* pProgramName, Guid* riid, void** ppvRootSignature)
+	public HRESULT GetGlobalRootSignatureForProgram(char* pProgramName, Guid* riid, void** ppvRootSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties2*, char*, Guid*, void**, int>)(lpVtbl[8]))((ID3D12StateObjectProperties2*)Unsafe.AsPointer(ref this), pProgramName, riid, ppvRootSignature);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D12StateObjectProperties2 : ID3D12StateObjectPro
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties2::GetGlobalRootSignatureForShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetGlobalRootSignatureForShader(char* pExportName, Guid* riid, void** ppvRootSignature)
+	public HRESULT GetGlobalRootSignatureForShader(char* pExportName, Guid* riid, void** ppvRootSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties2*, char*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12StateObjectProperties2*)Unsafe.AsPointer(ref this), pExportName, riid, ppvRootSignature);
 	}
@@ -129,10 +129,10 @@ public unsafe partial struct ID3D12StateObjectProperties2 : ID3D12StateObjectPro
 	public interface Interface : ID3D12StateObjectProperties1.Interface
 	{
 		[VtblIndex(8)]
-		HResult GetGlobalRootSignatureForProgram(char* pProgramName, Guid* riid, void** ppvRootSignature);
+		HRESULT GetGlobalRootSignatureForProgram(char* pProgramName, Guid* riid, void** ppvRootSignature);
 
 		[VtblIndex(9)]
-		HResult GetGlobalRootSignatureForShader(char* pExportName, Guid* riid, void** ppvRootSignature);
+		HRESULT GetGlobalRootSignatureForShader(char* pExportName, Guid* riid, void** ppvRootSignature);
 	}
 }
 

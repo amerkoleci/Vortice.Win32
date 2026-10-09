@@ -7,7 +7,7 @@ namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct IWICBitmapSource
 {
-    public HResult CopyPixels<T>(int stride, ReadOnlySpan<T> data)
+    public HRESULT CopyPixels<T>(int stride, ReadOnlySpan<T> data)
         where T : unmanaged
     {
         fixed (T* dataPtr = data)
@@ -16,7 +16,7 @@ public unsafe partial struct IWICBitmapSource
         }
     }
 
-    public HResult CopyPixels<T>(Rectangle rect, int stride, ReadOnlySpan<T> data)
+    public HRESULT CopyPixels<T>(Rectangle rect, int stride, ReadOnlySpan<T> data)
         where T : unmanaged
     {
         fixed (T* dataPtr = data)

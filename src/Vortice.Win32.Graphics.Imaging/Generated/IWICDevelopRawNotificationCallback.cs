@@ -47,7 +47,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDevelopRawNotificationCallback*, Guid*, void**, int>)(lpVtbl[0]))((IWICDevelopRawNotificationCallback*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRawNotificationCallback::Notify"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Notify(uint NotificationMask)
+	public HRESULT Notify(uint NotificationMask)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDevelopRawNotificationCallback*, uint, int>)(lpVtbl[3]))((IWICDevelopRawNotificationCallback*)Unsafe.AsPointer(ref this), NotificationMask);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Notify(uint NotificationMask);
+		HRESULT Notify(uint NotificationMask);
 	}
 }
 

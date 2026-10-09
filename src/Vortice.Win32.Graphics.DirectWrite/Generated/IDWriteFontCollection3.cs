@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection.GetFontFamily" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFontFamily(uint index, IDWriteFontFamily** fontFamily)
+	public HRESULT GetFontFamily(uint index, IDWriteFontFamily** fontFamily)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, uint, IDWriteFontFamily**, int>)(lpVtbl[4]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), index, fontFamily);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection.FindFamilyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult FindFamilyName(char* familyName, uint* index, Bool32* exists)
+	public HRESULT FindFamilyName(char* familyName, uint* index, Bool32* exists)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, char*, uint*, Bool32*, int>)(lpVtbl[5]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), familyName, index, exists);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection.GetFontFromFontFace" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetFontFromFontFace(IDWriteFontFace* fontFace, IDWriteFont** font)
+	public HRESULT GetFontFromFontFace(IDWriteFontFace* fontFace, IDWriteFont** font)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, IDWriteFontFace*, IDWriteFont**, int>)(lpVtbl[6]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), fontFace, font);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection1.GetFontSet" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetFontSet(IDWriteFontSet** fontSet)
+	public HRESULT GetFontSet(IDWriteFontSet** fontSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, IDWriteFontSet**, int>)(lpVtbl[7]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), fontSet);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection1.GetFontFamily" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetFontFamily(uint index, IDWriteFontFamily1** fontFamily)
+	public HRESULT GetFontFamily(uint index, IDWriteFontFamily1** fontFamily)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, uint, IDWriteFontFamily1**, int>)(lpVtbl[8]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), index, fontFamily);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection2.GetFontFamily" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFontFamily(uint index, IDWriteFontFamily2** fontFamily)
+	public HRESULT GetFontFamily(uint index, IDWriteFontFamily2** fontFamily)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, uint, IDWriteFontFamily2**, int>)(lpVtbl[9]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), index, fontFamily);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection2.GetMatchingFonts" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetMatchingFonts(char* familyName, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
+	public HRESULT GetMatchingFonts(char* familyName, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, char*, DWRITE_FONT_AXIS_VALUE*, uint, IDWriteFontList2**, int>)(lpVtbl[10]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), familyName, fontAxisValues, fontAxisValueCount, fontList);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <inheritdoc cref="IDWriteFontCollection2.GetFontSet" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetFontSet(IDWriteFontSet1** fontSet)
+	public HRESULT GetFontSet(IDWriteFontSet1** fontSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, IDWriteFontSet1**, int>)(lpVtbl[12]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this), fontSet);
 	}
@@ -153,15 +153,15 @@ public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection3::GetExpirationEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Handle GetExpirationEvent()
+	public HANDLE GetExpirationEvent()
 	{
-		return ((Handle)(((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, void*>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this))));
+		return ((HANDLE)(((delegate* unmanaged[MemberFunction]<IDWriteFontCollection3*, void*>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this))));
 	}
 
 	public interface Interface : IDWriteFontCollection2.Interface
 	{
 		[VtblIndex(13)]
-		Handle GetExpirationEvent();
+		HANDLE GetExpirationEvent();
 	}
 }
 

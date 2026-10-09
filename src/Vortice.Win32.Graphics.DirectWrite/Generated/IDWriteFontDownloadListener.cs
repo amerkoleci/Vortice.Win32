@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontDownloadListener : IDWriteFontDownloadLi
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadListener*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontDownloadListener*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,15 +73,15 @@ public unsafe partial struct IDWriteFontDownloadListener : IDWriteFontDownloadLi
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadListener::DownloadCompleted"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HResult downloadResult)
+	public void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HRESULT downloadResult)
 	{
-		((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadListener*, IDWriteFontDownloadQueue*, IUnknown*, HResult, void>)(lpVtbl[3]))((IDWriteFontDownloadListener*)Unsafe.AsPointer(ref this), downloadQueue, context, downloadResult);
+		((delegate* unmanaged[MemberFunction]<IDWriteFontDownloadListener*, IDWriteFontDownloadQueue*, IUnknown*, HRESULT, void>)(lpVtbl[3]))((IDWriteFontDownloadListener*)Unsafe.AsPointer(ref this), downloadQueue, context, downloadResult);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HResult downloadResult);
+		void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HRESULT downloadResult);
 	}
 }
 

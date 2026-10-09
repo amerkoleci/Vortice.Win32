@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSurface*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::BeginDraw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
+	public HRESULT BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSurface*, Rect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::EndDraw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult EndDraw()
+	public HRESULT EndDraw()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSurface*, int>)(lpVtbl[4]))((IDCompositionSurface*)Unsafe.AsPointer(ref this));
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::SuspendDraw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SuspendDraw()
+	public HRESULT SuspendDraw()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSurface*, int>)(lpVtbl[5]))((IDCompositionSurface*)Unsafe.AsPointer(ref this));
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::ResumeDraw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult ResumeDraw()
+	public HRESULT ResumeDraw()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSurface*, int>)(lpVtbl[6]))((IDCompositionSurface*)Unsafe.AsPointer(ref this));
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::Scroll"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY)
+	public HRESULT Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSurface*, Rect*, Rect*, int, int, int>)(lpVtbl[7]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
 	}
@@ -113,19 +113,19 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset);
+		HRESULT BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset);
 
 		[VtblIndex(4)]
-		HResult EndDraw();
+		HRESULT EndDraw();
 
 		[VtblIndex(5)]
-		HResult SuspendDraw();
+		HRESULT SuspendDraw();
 
 		[VtblIndex(6)]
-		HResult ResumeDraw();
+		HRESULT ResumeDraw();
 
 		[VtblIndex(7)]
-		HResult Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY);
+		HRESULT Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY);
 	}
 }
 

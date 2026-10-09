@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiInteropRenderTarget*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::GetDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetDC(D2D1_DC_INITIALIZE_MODE mode, IntPtr* hdc)
+	public HRESULT GetDC(D2D1_DC_INITIALIZE_MODE mode, IntPtr* hdc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiInteropRenderTarget*, D2D1_DC_INITIALIZE_MODE, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::ReleaseDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult ReleaseDC(Rect* update)
+	public HRESULT ReleaseDC(Rect* update)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiInteropRenderTarget*, Rect*, int>)(lpVtbl[4]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), update);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetDC(D2D1_DC_INITIALIZE_MODE mode, IntPtr* hdc);
+		HRESULT GetDC(D2D1_DC_INITIALIZE_MODE mode, IntPtr* hdc);
 
 		[VtblIndex(4)]
-		HResult ReleaseDC(Rect* update);
+		HRESULT ReleaseDC(Rect* update);
 	}
 }
 

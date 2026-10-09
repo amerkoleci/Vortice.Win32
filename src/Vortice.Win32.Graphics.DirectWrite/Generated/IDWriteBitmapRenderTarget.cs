@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
+	public HRESULT DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, float, float, DWRITE_MEASURING_MODE, DWRITE_GLYPH_RUN*, IDWriteRenderingParams*, uint, Rect*, int>)(lpVtbl[3]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, measuringMode, glyphRun, renderingParams, textColor, blackBoxRect);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::SetPixelsPerDip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPixelsPerDip(float pixelsPerDip)
+	public HRESULT SetPixelsPerDip(float pixelsPerDip)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, float, int>)(lpVtbl[6]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), pixelsPerDip);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::GetCurrentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetCurrentTransform(Matrix3x2* transform)
+	public HRESULT GetCurrentTransform(Matrix3x2* transform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, Matrix3x2*, int>)(lpVtbl[7]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), transform);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::SetCurrentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetCurrentTransform(Matrix3x2* transform)
+	public HRESULT SetCurrentTransform(Matrix3x2* transform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, Matrix3x2*, int>)(lpVtbl[8]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), transform);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSize(System.Drawing.Size* size)
+	public HRESULT GetSize(System.Drawing.Size* size)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, System.Drawing.Size*, int>)(lpVtbl[9]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), size);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::Resize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult Resize(uint width, uint height)
+	public HRESULT Resize(uint width, uint height)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteBitmapRenderTarget*, uint, uint, int>)(lpVtbl[10]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), width, height);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect);
+		HRESULT DrawGlyphRun(float baselineOriginX, float baselineOriginY, DWRITE_MEASURING_MODE measuringMode, DWRITE_GLYPH_RUN* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, Rect* blackBoxRect);
 
 		[VtblIndex(4)]
 		IntPtr GetMemoryDC();
@@ -146,19 +146,19 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 		float GetPixelsPerDip();
 
 		[VtblIndex(6)]
-		HResult SetPixelsPerDip(float pixelsPerDip);
+		HRESULT SetPixelsPerDip(float pixelsPerDip);
 
 		[VtblIndex(7)]
-		HResult GetCurrentTransform(Matrix3x2* transform);
+		HRESULT GetCurrentTransform(Matrix3x2* transform);
 
 		[VtblIndex(8)]
-		HResult SetCurrentTransform(Matrix3x2* transform);
+		HRESULT SetCurrentTransform(Matrix3x2* transform);
 
 		[VtblIndex(9)]
-		HResult GetSize(System.Drawing.Size* size);
+		HRESULT GetSize(System.Drawing.Size* size);
 
 		[VtblIndex(10)]
-		HResult Resize(uint width, uint height);
+		HRESULT Resize(uint width, uint height);
 	}
 }
 

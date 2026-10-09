@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetAngleX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetAngleX(IDCompositionAnimation* animation)
+	public HRESULT SetAngleX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetAngleX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetAngleX(float angleX)
+	public HRESULT SetAngleX(float angleX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, float, int>)(lpVtbl[4]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), angleX);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetAngleY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetAngleY(IDCompositionAnimation* animation)
+	public HRESULT SetAngleY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetAngleY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetAngleY(float angleY)
+	public HRESULT SetAngleY(float angleY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, float, int>)(lpVtbl[6]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), angleY);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetCenterX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetCenterX(IDCompositionAnimation* animation)
+	public HRESULT SetCenterX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetCenterX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetCenterX(float centerX)
+	public HRESULT SetCenterX(float centerX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, float, int>)(lpVtbl[8]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), centerX);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetCenterY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetCenterY(IDCompositionAnimation* animation)
+	public HRESULT SetCenterY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSkewTransform::SetCenterY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetCenterY(float centerY)
+	public HRESULT SetCenterY(float centerY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionSkewTransform*, float, int>)(lpVtbl[10]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), centerY);
 	}
@@ -137,28 +137,28 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetAngleX(IDCompositionAnimation* animation);
+		HRESULT SetAngleX(IDCompositionAnimation* animation);
 
 		[VtblIndex(4)]
-		HResult SetAngleX(float angleX);
+		HRESULT SetAngleX(float angleX);
 
 		[VtblIndex(5)]
-		HResult SetAngleY(IDCompositionAnimation* animation);
+		HRESULT SetAngleY(IDCompositionAnimation* animation);
 
 		[VtblIndex(6)]
-		HResult SetAngleY(float angleY);
+		HRESULT SetAngleY(float angleY);
 
 		[VtblIndex(7)]
-		HResult SetCenterX(IDCompositionAnimation* animation);
+		HRESULT SetCenterX(IDCompositionAnimation* animation);
 
 		[VtblIndex(8)]
-		HResult SetCenterX(float centerX);
+		HRESULT SetCenterX(float centerX);
 
 		[VtblIndex(9)]
-		HResult SetCenterY(IDCompositionAnimation* animation);
+		HRESULT SetCenterY(IDCompositionAnimation* animation);
 
 		[VtblIndex(10)]
-		HResult SetCenterY(float centerY);
+		HRESULT SetCenterY(float centerY);
 	}
 }
 

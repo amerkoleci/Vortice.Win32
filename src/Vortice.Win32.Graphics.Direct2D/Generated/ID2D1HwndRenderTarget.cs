@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HRESULT CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, System.Drawing.Size, void*, uint, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int>)(lpVtbl[4]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateBitmapFromWicBitmap(IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HRESULT CreateBitmapFromWicBitmap(IWICBitmapSource* wicBitmapSource, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, IWICBitmapSource*, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int>)(lpVtbl[5]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateSharedBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateSharedBitmap(Guid* riid, void* data, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HRESULT CreateSharedBitmap(Guid* riid, void* data, D2D1_BITMAP_PROPERTIES* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Guid*, void*, D2D1_BITMAP_PROPERTIES*, ID2D1Bitmap**, int>)(lpVtbl[6]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), riid, data, bitmapProperties, bitmap);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapBrush" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateBitmapBrush(ID2D1Bitmap* bitmap, D2D1_BITMAP_BRUSH_PROPERTIES* bitmapBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1BitmapBrush** bitmapBrush)
+	public HRESULT CreateBitmapBrush(ID2D1Bitmap* bitmap, D2D1_BITMAP_BRUSH_PROPERTIES* bitmapBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1BitmapBrush** bitmapBrush)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ID2D1Bitmap*, D2D1_BITMAP_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1BitmapBrush**, int>)(lpVtbl[7]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateSolidColorBrush" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSolidColorBrush(Color4* color, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1SolidColorBrush** solidColorBrush)
+	public HRESULT CreateSolidColorBrush(Color4* color, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1SolidColorBrush** solidColorBrush)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, Color4*, D2D1_BRUSH_PROPERTIES*, ID2D1SolidColorBrush**, int>)(lpVtbl[8]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), color, brushProperties, solidColorBrush);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateGradientStopCollection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateGradientStopCollection(D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, ID2D1GradientStopCollection** gradientStopCollection)
+	public HRESULT CreateGradientStopCollection(D2D1_GRADIENT_STOP* gradientStops, uint gradientStopsCount, D2D1_GAMMA colorInterpolationGamma, D2D1_EXTEND_MODE extendMode, ID2D1GradientStopCollection** gradientStopCollection)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, D2D1_GRADIENT_STOP*, uint, D2D1_GAMMA, D2D1_EXTEND_MODE, ID2D1GradientStopCollection**, int>)(lpVtbl[9]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLinearGradientBrush" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateLinearGradientBrush(D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES* linearGradientBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush)
+	public HRESULT CreateLinearGradientBrush(D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES* linearGradientBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1GradientStopCollection*, ID2D1LinearGradientBrush**, int>)(lpVtbl[10]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), linearGradientBrushProperties, brushProperties, gradientStopCollection, linearGradientBrush);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateRadialGradientBrush" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateRadialGradientBrush(D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES* radialGradientBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush)
+	public HRESULT CreateRadialGradientBrush(D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES* radialGradientBrushProperties, D2D1_BRUSH_PROPERTIES* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES*, D2D1_BRUSH_PROPERTIES*, ID2D1GradientStopCollection*, ID2D1RadialGradientBrush**, int>)(lpVtbl[11]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), radialGradientBrushProperties, brushProperties, gradientStopCollection, radialGradientBrush);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, D2D1_PIXEL_FORMAT* desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HRESULT CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, D2D1_PIXEL_FORMAT* desiredFormat, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, System.Drawing.SizeF*, System.Drawing.Size*, D2D1_PIXEL_FORMAT*, D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateLayer(System.Drawing.SizeF* size, ID2D1Layer** layer)
+	public HRESULT CreateLayer(System.Drawing.SizeF* size, ID2D1Layer** layer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, System.Drawing.SizeF*, ID2D1Layer**, int>)(lpVtbl[13]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), size, layer);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateMesh" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateMesh(ID2D1Mesh** mesh)
+	public HRESULT CreateMesh(ID2D1Mesh** mesh)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ID2D1Mesh**, int>)(lpVtbl[14]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), mesh);
 	}
@@ -385,7 +385,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.Flush" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public HResult Flush(ulong* tag1, ulong* tag2)
+	public HRESULT Flush(ulong* tag1, ulong* tag2)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ulong*, ulong*, int>)(lpVtbl[42]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -441,7 +441,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
+	public HRESULT EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, ulong*, ulong*, int>)(lpVtbl[49]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -513,7 +513,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::Resize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
-	public HResult Resize(System.Drawing.Size* pixelSize)
+	public HRESULT Resize(System.Drawing.Size* pixelSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1HwndRenderTarget*, System.Drawing.Size*, int>)(lpVtbl[58]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), pixelSize);
 	}
@@ -532,7 +532,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 		D2D1_WINDOW_STATE CheckWindowState();
 
 		[VtblIndex(58)]
-		HResult Resize(System.Drawing.Size* pixelSize);
+		HRESULT Resize(System.Drawing.Size* pixelSize);
 
 		[VtblIndex(59)]
 		nint GetHwnd();

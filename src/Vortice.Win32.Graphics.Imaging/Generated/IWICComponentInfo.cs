@@ -47,7 +47,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetComponentType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetComponentType(WICComponentType* pType)
+	public HRESULT GetComponentType(WICComponentType* pType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pType);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetCLSID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCLSID(Guid* pclsid)
+	public HRESULT GetCLSID(Guid* pclsid)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, Guid*, int>)(lpVtbl[4]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pclsid);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSigningStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetSigningStatus(uint* pStatus)
+	public HRESULT GetSigningStatus(uint* pStatus)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint*, int>)(lpVtbl[5]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pStatus);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetAuthor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
+	public HRESULT GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[6]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVendorGUID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetVendorGUID(Guid* pguidVendor)
+	public HRESULT GetVendorGUID(Guid* pguidVendor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, Guid*, int>)(lpVtbl[7]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pguidVendor);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
+	public HRESULT GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[8]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSpecVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
+	public HRESULT GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[9]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetFriendlyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
+	public HRESULT GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
@@ -137,28 +137,28 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetComponentType(WICComponentType* pType);
+		HRESULT GetComponentType(WICComponentType* pType);
 
 		[VtblIndex(4)]
-		HResult GetCLSID(Guid* pclsid);
+		HRESULT GetCLSID(Guid* pclsid);
 
 		[VtblIndex(5)]
-		HResult GetSigningStatus(uint* pStatus);
+		HRESULT GetSigningStatus(uint* pStatus);
 
 		[VtblIndex(6)]
-		HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual);
+		HRESULT GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual);
 
 		[VtblIndex(7)]
-		HResult GetVendorGUID(Guid* pguidVendor);
+		HRESULT GetVendorGUID(Guid* pguidVendor);
 
 		[VtblIndex(8)]
-		HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual);
+		HRESULT GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual);
 
 		[VtblIndex(9)]
-		HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual);
+		HRESULT GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual);
 
 		[VtblIndex(10)]
-		HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual);
+		HRESULT GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual);
 	}
 }
 

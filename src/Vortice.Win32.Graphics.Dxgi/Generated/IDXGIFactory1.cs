@@ -47,7 +47,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	public HRESULT SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetParent(Guid* riid, void** ppParent)
+	public HRESULT GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	public HRESULT EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, uint, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult MakeWindowAssociation(nint WindowHandle, DXGI_MWA_FLAGS Flags)
+	public HRESULT MakeWindowAssociation(nint WindowHandle, DXGI_MWA_FLAGS Flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, nint, DXGI_MWA_FLAGS, int>)(lpVtbl[8]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetWindowAssociation(nint* pWindowHandle)
+	public HRESULT GetWindowAssociation(nint* pWindowHandle)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, nint*, int>)(lpVtbl[9]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pWindowHandle);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateSwapChain(IUnknown* pDevice, DXGI_SWAP_CHAIN_DESC* pDesc, IDXGISwapChain** ppSwapChain)
+	public HRESULT CreateSwapChain(IUnknown* pDevice, DXGI_SWAP_CHAIN_DESC* pDesc, IDXGISwapChain** ppSwapChain)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, IUnknown*, DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateSoftwareAdapter(nint Module, IDXGIAdapter** ppAdapter)
+	public HRESULT CreateSoftwareAdapter(nint Module, IDXGIAdapter** ppAdapter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, nint, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Module, ppAdapter);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory1::EnumAdapters1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	public HRESULT EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory1*, uint, IDXGIAdapter1**, int>)(lpVtbl[12]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGui
 	public interface Interface : IDXGIFactory.Interface
 	{
 		[VtblIndex(12)]
-		HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter);
+		HRESULT EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter);
 
 		[VtblIndex(13)]
 		Bool32 IsCurrent();

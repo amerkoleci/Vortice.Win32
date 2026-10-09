@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetRedYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetRedYIntercept(IDCompositionAnimation* animation)
+	public HRESULT SetRedYIntercept(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetRedYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetRedYIntercept(float redYIntercept)
+	public HRESULT SetRedYIntercept(float redYIntercept)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[5]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), redYIntercept);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetRedSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetRedSlope(IDCompositionAnimation* animation)
+	public HRESULT SetRedSlope(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[6]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetRedSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetRedSlope(float redSlope)
+	public HRESULT SetRedSlope(float redSlope)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[7]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), redSlope);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetRedDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetRedDisable(Bool32 redDisable)
+	public HRESULT SetRedDisable(Bool32 redDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), redDisable);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetGreenYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetGreenYIntercept(IDCompositionAnimation* animation)
+	public HRESULT SetGreenYIntercept(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetGreenYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetGreenYIntercept(float greenYIntercept)
+	public HRESULT SetGreenYIntercept(float greenYIntercept)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[10]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), greenYIntercept);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetGreenSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetGreenSlope(IDCompositionAnimation* animation)
+	public HRESULT SetGreenSlope(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetGreenSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetGreenSlope(float greenSlope)
+	public HRESULT SetGreenSlope(float greenSlope)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[12]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), greenSlope);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetGreenDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult SetGreenDisable(Bool32 greenDisable)
+	public HRESULT SetGreenDisable(Bool32 greenDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[13]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), greenDisable);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetBlueYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetBlueYIntercept(IDCompositionAnimation* animation)
+	public HRESULT SetBlueYIntercept(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[14]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetBlueYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult SetBlueYIntercept(float blueYIntercept)
+	public HRESULT SetBlueYIntercept(float blueYIntercept)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[15]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), blueYIntercept);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetBlueSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult SetBlueSlope(IDCompositionAnimation* animation)
+	public HRESULT SetBlueSlope(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[16]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetBlueSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult SetBlueSlope(float blueSlope)
+	public HRESULT SetBlueSlope(float blueSlope)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[17]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), blueSlope);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetBlueDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult SetBlueDisable(Bool32 blueDisable)
+	public HRESULT SetBlueDisable(Bool32 blueDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[18]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), blueDisable);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetAlphaYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetAlphaYIntercept(IDCompositionAnimation* animation)
+	public HRESULT SetAlphaYIntercept(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetAlphaYIntercept"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult SetAlphaYIntercept(float alphaYIntercept)
+	public HRESULT SetAlphaYIntercept(float alphaYIntercept)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[20]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), alphaYIntercept);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetAlphaSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SetAlphaSlope(IDCompositionAnimation* animation)
+	public HRESULT SetAlphaSlope(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, IDCompositionAnimation*, int>)(lpVtbl[21]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -225,7 +225,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetAlphaSlope"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult SetAlphaSlope(float alphaSlope)
+	public HRESULT SetAlphaSlope(float alphaSlope)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, float, int>)(lpVtbl[22]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), alphaSlope);
 	}
@@ -233,7 +233,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetAlphaDisable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult SetAlphaDisable(Bool32 alphaDisable)
+	public HRESULT SetAlphaDisable(Bool32 alphaDisable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[23]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), alphaDisable);
 	}
@@ -241,7 +241,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionLinearTransferEffect::SetClampOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult SetClampOutput(Bool32 clampOutput)
+	public HRESULT SetClampOutput(Bool32 clampOutput)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[24]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
 	}
@@ -249,67 +249,67 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetRedYIntercept(IDCompositionAnimation* animation);
+		HRESULT SetRedYIntercept(IDCompositionAnimation* animation);
 
 		[VtblIndex(5)]
-		HResult SetRedYIntercept(float redYIntercept);
+		HRESULT SetRedYIntercept(float redYIntercept);
 
 		[VtblIndex(6)]
-		HResult SetRedSlope(IDCompositionAnimation* animation);
+		HRESULT SetRedSlope(IDCompositionAnimation* animation);
 
 		[VtblIndex(7)]
-		HResult SetRedSlope(float redSlope);
+		HRESULT SetRedSlope(float redSlope);
 
 		[VtblIndex(8)]
-		HResult SetRedDisable(Bool32 redDisable);
+		HRESULT SetRedDisable(Bool32 redDisable);
 
 		[VtblIndex(9)]
-		HResult SetGreenYIntercept(IDCompositionAnimation* animation);
+		HRESULT SetGreenYIntercept(IDCompositionAnimation* animation);
 
 		[VtblIndex(10)]
-		HResult SetGreenYIntercept(float greenYIntercept);
+		HRESULT SetGreenYIntercept(float greenYIntercept);
 
 		[VtblIndex(11)]
-		HResult SetGreenSlope(IDCompositionAnimation* animation);
+		HRESULT SetGreenSlope(IDCompositionAnimation* animation);
 
 		[VtblIndex(12)]
-		HResult SetGreenSlope(float greenSlope);
+		HRESULT SetGreenSlope(float greenSlope);
 
 		[VtblIndex(13)]
-		HResult SetGreenDisable(Bool32 greenDisable);
+		HRESULT SetGreenDisable(Bool32 greenDisable);
 
 		[VtblIndex(14)]
-		HResult SetBlueYIntercept(IDCompositionAnimation* animation);
+		HRESULT SetBlueYIntercept(IDCompositionAnimation* animation);
 
 		[VtblIndex(15)]
-		HResult SetBlueYIntercept(float blueYIntercept);
+		HRESULT SetBlueYIntercept(float blueYIntercept);
 
 		[VtblIndex(16)]
-		HResult SetBlueSlope(IDCompositionAnimation* animation);
+		HRESULT SetBlueSlope(IDCompositionAnimation* animation);
 
 		[VtblIndex(17)]
-		HResult SetBlueSlope(float blueSlope);
+		HRESULT SetBlueSlope(float blueSlope);
 
 		[VtblIndex(18)]
-		HResult SetBlueDisable(Bool32 blueDisable);
+		HRESULT SetBlueDisable(Bool32 blueDisable);
 
 		[VtblIndex(19)]
-		HResult SetAlphaYIntercept(IDCompositionAnimation* animation);
+		HRESULT SetAlphaYIntercept(IDCompositionAnimation* animation);
 
 		[VtblIndex(20)]
-		HResult SetAlphaYIntercept(float alphaYIntercept);
+		HRESULT SetAlphaYIntercept(float alphaYIntercept);
 
 		[VtblIndex(21)]
-		HResult SetAlphaSlope(IDCompositionAnimation* animation);
+		HRESULT SetAlphaSlope(IDCompositionAnimation* animation);
 
 		[VtblIndex(22)]
-		HResult SetAlphaSlope(float alphaSlope);
+		HRESULT SetAlphaSlope(float alphaSlope);
 
 		[VtblIndex(23)]
-		HResult SetAlphaDisable(Bool32 alphaDisable);
+		HRESULT SetAlphaDisable(Bool32 alphaDisable);
 
 		[VtblIndex(24)]
-		HResult SetClampOutput(Bool32 clampOutput);
+		HRESULT SetClampOutput(Bool32 clampOutput);
 	}
 }
 

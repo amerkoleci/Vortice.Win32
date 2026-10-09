@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <inheritdoc cref="IDWriteFontFileStream.ReadFileFragment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext)
+	public HRESULT ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, void**, ulong, ulong, void**, int>)(lpVtbl[3]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), fragmentStart, fileOffset, fragmentSize, fragmentContext);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <inheritdoc cref="IDWriteFontFileStream.GetFileSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFileSize(ulong* fileSize)
+	public HRESULT GetFileSize(ulong* fileSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, ulong*, int>)(lpVtbl[5]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), fileSize);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <inheritdoc cref="IDWriteFontFileStream.GetLastWriteTime" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetLastWriteTime(ulong* lastWriteTime)
+	public HRESULT GetLastWriteTime(ulong* lastWriteTime)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, ulong*, int>)(lpVtbl[6]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), lastWriteTime);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocalFileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetLocalFileSize(ulong* localFileSize)
+	public HRESULT GetLocalFileSize(ulong* localFileSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, ulong*, int>)(lpVtbl[7]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), localFileSize);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetFileFragmentLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize)
+	public HRESULT GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, ulong, ulong, Bool32*, ulong*, int>)(lpVtbl[8]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize, isLocal, partialSize);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::BeginDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult BeginDownload(Guid* downloadOperationID, DWRITE_FILE_FRAGMENT* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult)
+	public HRESULT BeginDownload(Guid* downloadOperationID, DWRITE_FILE_FRAGMENT* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileStream*, Guid*, DWRITE_FILE_FRAGMENT*, uint, IDWriteAsyncResult**, int>)(lpVtbl[10]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), downloadOperationID, fileFragments, fragmentCount, asyncResult);
 	}
@@ -137,16 +137,16 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	public interface Interface : IDWriteFontFileStream.Interface
 	{
 		[VtblIndex(7)]
-		HResult GetLocalFileSize(ulong* localFileSize);
+		HRESULT GetLocalFileSize(ulong* localFileSize);
 
 		[VtblIndex(8)]
-		HResult GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize);
+		HRESULT GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize);
 
 		[VtblIndex(9)]
 		DWRITE_LOCALITY GetLocality();
 
 		[VtblIndex(10)]
-		HResult BeginDownload(Guid* downloadOperationID, DWRITE_FILE_FRAGMENT* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult);
+		HRESULT BeginDownload(Guid* downloadOperationID, DWRITE_FILE_FRAGMENT* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult);
 	}
 }
 

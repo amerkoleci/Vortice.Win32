@@ -12,8 +12,8 @@ namespace Vortice.Win32.Graphics;
 public static unsafe partial class DXC
 {
 	[LibraryImport("dxcompiler.dll")]
-	public static partial HResult DxcCreateInstance(Guid* rclsid, Guid* riid, void** ppv);
+	public static partial HRESULT DxcCreateInstance(Guid* rclsid, Guid* riid, void** ppv);
 
 	[LibraryImport("dxcompiler.dll")]
-	public static partial HResult DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
+	public static partial HRESULT DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
 }

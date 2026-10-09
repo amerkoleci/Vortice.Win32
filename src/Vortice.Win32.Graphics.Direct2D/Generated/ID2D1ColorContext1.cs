@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 	/// <inheritdoc cref="ID2D1ColorContext.GetProfile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetProfile(byte* profile, uint profileSize)
+	public HRESULT GetProfile(byte* profile, uint profileSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, byte*, uint, int>)(lpVtbl[6]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), profile, profileSize);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1::GetSimpleColorProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSimpleColorProfile(D2D1_SIMPLE_COLOR_PROFILE* simpleProfile)
+	public HRESULT GetSimpleColorProfile(D2D1_SIMPLE_COLOR_PROFILE* simpleProfile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext1*, D2D1_SIMPLE_COLOR_PROFILE*, int>)(lpVtbl[9]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), simpleProfile);
 	}
@@ -135,7 +135,7 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 		DXGI_COLOR_SPACE_TYPE GetDXGIColorSpace();
 
 		[VtblIndex(9)]
-		HResult GetSimpleColorProfile(D2D1_SIMPLE_COLOR_PROFILE* simpleProfile);
+		HRESULT GetSimpleColorProfile(D2D1_SIMPLE_COLOR_PROFILE* simpleProfile);
 	}
 }
 

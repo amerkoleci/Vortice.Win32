@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOffset(Vector2* offset)
+	public HRESULT SetOffset(Vector2* offset)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[4]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), offset);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetBaseFrequency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetBaseFrequency(Vector2* frequency)
+	public HRESULT SetBaseFrequency(Vector2* frequency)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[5]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), frequency);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetSize(Vector2* size)
+	public HRESULT SetSize(Vector2* size)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[6]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), size);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetNumOctaves"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetNumOctaves(uint numOctaves)
+	public HRESULT SetNumOctaves(uint numOctaves)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, uint, int>)(lpVtbl[7]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), numOctaves);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetSeed"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetSeed(uint seed)
+	public HRESULT SetSeed(uint seed)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, uint, int>)(lpVtbl[8]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), seed);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetNoise"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetNoise(D2D1_TURBULENCE_NOISE noise)
+	public HRESULT SetNoise(D2D1_TURBULENCE_NOISE noise)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, D2D1_TURBULENCE_NOISE, int>)(lpVtbl[9]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), noise);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetStitchable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetStitchable(Bool32 stitchable)
+	public HRESULT SetStitchable(Bool32 stitchable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTurbulenceEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), stitchable);
 	}
@@ -137,25 +137,25 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetOffset(Vector2* offset);
+		HRESULT SetOffset(Vector2* offset);
 
 		[VtblIndex(5)]
-		HResult SetBaseFrequency(Vector2* frequency);
+		HRESULT SetBaseFrequency(Vector2* frequency);
 
 		[VtblIndex(6)]
-		HResult SetSize(Vector2* size);
+		HRESULT SetSize(Vector2* size);
 
 		[VtblIndex(7)]
-		HResult SetNumOctaves(uint numOctaves);
+		HRESULT SetNumOctaves(uint numOctaves);
 
 		[VtblIndex(8)]
-		HResult SetSeed(uint seed);
+		HRESULT SetSeed(uint seed);
 
 		[VtblIndex(9)]
-		HResult SetNoise(D2D1_TURBULENCE_NOISE noise);
+		HRESULT SetNoise(D2D1_TURBULENCE_NOISE noise);
 
 		[VtblIndex(10)]
-		HResult SetStitchable(Bool32 stitchable);
+		HRESULT SetStitchable(Bool32 stitchable);
 	}
 }
 

@@ -46,7 +46,7 @@ public unsafe partial struct IDxcValidator2 : IDxcValidator2.Interface, INativeG
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcValidator2*, Guid*, void**, int>)(lpVtbl[0]))((IDxcValidator2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -72,14 +72,14 @@ public unsafe partial struct IDxcValidator2 : IDxcValidator2.Interface, INativeG
 	/// <inheritdoc cref="IDxcValidator.Validate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)
+	public HRESULT Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcValidator2*, IDxcBlob*, DxcValidatorFlags, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult)
+	public HRESULT ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcValidator2*, IDxcBlob*, DxcValidatorFlags, DxcBuffer*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, pOptDebugBitcode, ppResult);
 	}
@@ -87,7 +87,7 @@ public unsafe partial struct IDxcValidator2 : IDxcValidator2.Interface, INativeG
 	public interface Interface : IDxcValidator.Interface
 	{
 		[VtblIndex(4)]
-		HResult ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult);
+		HRESULT ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult);
 	}
 }
 

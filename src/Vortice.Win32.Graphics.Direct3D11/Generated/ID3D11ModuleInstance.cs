@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult BindConstantBuffer(uint uSrcSlot, uint uDstSlot, uint cbDstOffset)
+	public HRESULT BindConstantBuffer(uint uSrcSlot, uint uDstSlot, uint cbDstOffset)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, uint, uint, uint, int>)(lpVtbl[3]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), uSrcSlot, uDstSlot, cbDstOffset);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult BindConstantBufferByName(byte* pName, uint uDstSlot, uint cbDstOffset)
+	public HRESULT BindConstantBufferByName(byte* pName, uint uDstSlot, uint cbDstOffset)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, byte*, uint, uint, int>)(lpVtbl[4]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, cbDstOffset);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult BindResource(uint uSrcSlot, uint uDstSlot, uint uCount)
+	public HRESULT BindResource(uint uSrcSlot, uint uDstSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, uint, uint, uint, int>)(lpVtbl[5]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), uSrcSlot, uDstSlot, uCount);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResourceByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult BindResourceByName(byte* pName, uint uDstSlot, uint uCount)
+	public HRESULT BindResourceByName(byte* pName, uint uDstSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, byte*, uint, uint, int>)(lpVtbl[6]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindSampler"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult BindSampler(uint uSrcSlot, uint uDstSlot, uint uCount)
+	public HRESULT BindSampler(uint uSrcSlot, uint uDstSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, uint, uint, uint, int>)(lpVtbl[7]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), uSrcSlot, uDstSlot, uCount);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindSamplerByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult BindSamplerByName(byte* pName, uint uDstSlot, uint uCount)
+	public HRESULT BindSamplerByName(byte* pName, uint uDstSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, byte*, uint, uint, int>)(lpVtbl[8]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindUnorderedAccessView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult BindUnorderedAccessView(uint uSrcSlot, uint uDstSlot, uint uCount)
+	public HRESULT BindUnorderedAccessView(uint uSrcSlot, uint uDstSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, uint, uint, uint, int>)(lpVtbl[9]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), uSrcSlot, uDstSlot, uCount);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindUnorderedAccessViewByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult BindUnorderedAccessViewByName(byte* pName, uint uDstSlot, uint uCount)
+	public HRESULT BindUnorderedAccessViewByName(byte* pName, uint uDstSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, byte*, uint, uint, int>)(lpVtbl[10]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResourceAsUnorderedAccessView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult BindResourceAsUnorderedAccessView(uint uSrcSrvSlot, uint uDstUavSlot, uint uCount)
+	public HRESULT BindResourceAsUnorderedAccessView(uint uSrcSrvSlot, uint uDstUavSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, uint, uint, uint, int>)(lpVtbl[11]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), uSrcSrvSlot, uDstUavSlot, uCount);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResourceAsUnorderedAccessViewByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult BindResourceAsUnorderedAccessViewByName(byte* pSrvName, uint uDstUavSlot, uint uCount)
+	public HRESULT BindResourceAsUnorderedAccessViewByName(byte* pSrvName, uint uDstUavSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ModuleInstance*, byte*, uint, uint, int>)(lpVtbl[12]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pSrvName, uDstUavSlot, uCount);
 	}
@@ -153,34 +153,34 @@ public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult BindConstantBuffer(uint uSrcSlot, uint uDstSlot, uint cbDstOffset);
+		HRESULT BindConstantBuffer(uint uSrcSlot, uint uDstSlot, uint cbDstOffset);
 
 		[VtblIndex(4)]
-		HResult BindConstantBufferByName(byte* pName, uint uDstSlot, uint cbDstOffset);
+		HRESULT BindConstantBufferByName(byte* pName, uint uDstSlot, uint cbDstOffset);
 
 		[VtblIndex(5)]
-		HResult BindResource(uint uSrcSlot, uint uDstSlot, uint uCount);
+		HRESULT BindResource(uint uSrcSlot, uint uDstSlot, uint uCount);
 
 		[VtblIndex(6)]
-		HResult BindResourceByName(byte* pName, uint uDstSlot, uint uCount);
+		HRESULT BindResourceByName(byte* pName, uint uDstSlot, uint uCount);
 
 		[VtblIndex(7)]
-		HResult BindSampler(uint uSrcSlot, uint uDstSlot, uint uCount);
+		HRESULT BindSampler(uint uSrcSlot, uint uDstSlot, uint uCount);
 
 		[VtblIndex(8)]
-		HResult BindSamplerByName(byte* pName, uint uDstSlot, uint uCount);
+		HRESULT BindSamplerByName(byte* pName, uint uDstSlot, uint uCount);
 
 		[VtblIndex(9)]
-		HResult BindUnorderedAccessView(uint uSrcSlot, uint uDstSlot, uint uCount);
+		HRESULT BindUnorderedAccessView(uint uSrcSlot, uint uDstSlot, uint uCount);
 
 		[VtblIndex(10)]
-		HResult BindUnorderedAccessViewByName(byte* pName, uint uDstSlot, uint uCount);
+		HRESULT BindUnorderedAccessViewByName(byte* pName, uint uDstSlot, uint uCount);
 
 		[VtblIndex(11)]
-		HResult BindResourceAsUnorderedAccessView(uint uSrcSrvSlot, uint uDstUavSlot, uint uCount);
+		HRESULT BindResourceAsUnorderedAccessView(uint uSrcSrvSlot, uint uDstUavSlot, uint uCount);
 
 		[VtblIndex(12)]
-		HResult BindResourceAsUnorderedAccessViewByName(byte* pSrvName, uint uDstUavSlot, uint uCount);
+		HRESULT BindResourceAsUnorderedAccessViewByName(byte* pSrvName, uint uDstUavSlot, uint uCount);
 	}
 }
 

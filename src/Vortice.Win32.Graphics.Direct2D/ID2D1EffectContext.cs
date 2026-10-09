@@ -18,7 +18,7 @@ public static unsafe class ID2D1EffectContextExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CheckFeatureSupport<TID2D1EffectContext, TFeature>(ref this TID2D1EffectContext self,  D2D1_FEATURE feature, ref TFeature featureData)
+    public static HRESULT CheckFeatureSupport<TID2D1EffectContext, TFeature>(ref this TID2D1EffectContext self,  D2D1_FEATURE feature, ref TFeature featureData)
        where TID2D1EffectContext : unmanaged, ID2D1EffectContext.Interface
        where TFeature : unmanaged
     {
@@ -29,7 +29,7 @@ public static unsafe class ID2D1EffectContextExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CreateEffect<TID2D1EffectContext>(ref this TID2D1EffectContext self, in Guid effectId, ID2D1Effect** effect)
+    public static HRESULT CreateEffect<TID2D1EffectContext>(ref this TID2D1EffectContext self, in Guid effectId, ID2D1Effect** effect)
        where TID2D1EffectContext : unmanaged, ID2D1EffectContext.Interface
     {
         return self.CreateEffect((Guid*)Unsafe.AsPointer(in effectId), effect);

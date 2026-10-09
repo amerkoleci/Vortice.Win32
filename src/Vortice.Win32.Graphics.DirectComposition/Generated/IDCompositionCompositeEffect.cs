@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionCompositeEffect::SetMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetMode(D2D1_COMPOSITE_MODE mode)
+	public HRESULT SetMode(D2D1_COMPOSITE_MODE mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, D2D1_COMPOSITE_MODE, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetMode(D2D1_COMPOSITE_MODE mode);
+		HRESULT SetMode(D2D1_COMPOSITE_MODE mode);
 	}
 }
 

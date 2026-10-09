@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	/// <inheritdoc cref="ID2D1RenderInfo.SetInputDescription" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
+	public HRESULT SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint, D2D1_INPUT_DESCRIPTION, int>)(lpVtbl[3]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	/// <inheritdoc cref="ID2D1RenderInfo.SetOutputBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
+	public HRESULT SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShaderConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount)
+	public HRESULT SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetComputeShader(Guid* shaderId)
+	public HRESULT SetComputeShader(Guid* shaderId)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, Guid*, int>)(lpVtbl[8]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), shaderId);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetResourceTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
+	public HRESULT SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[9]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
 	}
@@ -129,13 +129,13 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	public interface Interface : ID2D1RenderInfo.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount);
+		HRESULT SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount);
 
 		[VtblIndex(8)]
-		HResult SetComputeShader(Guid* shaderId);
+		HRESULT SetComputeShader(Guid* shaderId);
 
 		[VtblIndex(9)]
-		HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture);
+		HRESULT SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture);
 	}
 }
 

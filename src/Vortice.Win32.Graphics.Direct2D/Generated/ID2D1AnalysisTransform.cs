@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1AnalysisTransform : ID2D1AnalysisTransform.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1AnalysisTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1AnalysisTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1AnalysisTransform : ID2D1AnalysisTransform.Int
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1AnalysisTransform::ProcessAnalysisResults"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ProcessAnalysisResults(byte* analysisData, uint analysisDataCount)
+	public HRESULT ProcessAnalysisResults(byte* analysisData, uint analysisDataCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1AnalysisTransform*, byte*, uint, int>)(lpVtbl[3]))((ID2D1AnalysisTransform*)Unsafe.AsPointer(ref this), analysisData, analysisDataCount);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1AnalysisTransform : ID2D1AnalysisTransform.Int
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult ProcessAnalysisResults(byte* analysisData, uint analysisDataCount);
+		HRESULT ProcessAnalysisResults(byte* analysisData, uint analysisDataCount);
 	}
 }
 

@@ -5,7 +5,7 @@ namespace Vortice.Win32.Graphics;
 
 unsafe partial class DXGI
 {
-    public static HResult CreateDXGIFactory2(bool debug, Guid* riid, void** ppFactory)
+    public static HRESULT CreateDXGIFactory2(bool debug, Guid* riid, void** ppFactory)
     {
         return CreateDXGIFactory2(debug ? DXGI_CREATE_FACTORY_DEBUG : 0u, riid, ppFactory);
     }

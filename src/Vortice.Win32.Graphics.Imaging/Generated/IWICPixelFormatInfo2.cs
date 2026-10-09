@@ -47,7 +47,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, Guid*, void**, int>)(lpVtbl[0]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetComponentType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetComponentType(WICComponentType* pType)
+	public HRESULT GetComponentType(WICComponentType* pType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, WICComponentType*, int>)(lpVtbl[3]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pType);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetCLSID" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCLSID(Guid* pclsid)
+	public HRESULT GetCLSID(Guid* pclsid)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, Guid*, int>)(lpVtbl[4]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pclsid);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetSigningStatus" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetSigningStatus(uint* pStatus)
+	public HRESULT GetSigningStatus(uint* pStatus)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint*, int>)(lpVtbl[5]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pStatus);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
+	public HRESULT GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint, char*, uint*, int>)(lpVtbl[6]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetVendorGUID(Guid* pguidVendor)
+	public HRESULT GetVendorGUID(Guid* pguidVendor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, Guid*, int>)(lpVtbl[7]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pguidVendor);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
+	public HRESULT GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint, char*, uint*, int>)(lpVtbl[8]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
+	public HRESULT GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint, char*, uint*, int>)(lpVtbl[9]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
+	public HRESULT GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint, char*, uint*, int>)(lpVtbl[10]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetFormatGUID" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetFormatGUID(Guid* pFormat)
+	public HRESULT GetFormatGUID(Guid* pFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, Guid*, int>)(lpVtbl[11]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pFormat);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetColorContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetColorContext(IWICColorContext** ppIColorContext)
+	public HRESULT GetColorContext(IWICColorContext** ppIColorContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, IWICColorContext**, int>)(lpVtbl[12]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), ppIColorContext);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetBitsPerPixel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetBitsPerPixel(uint* puiBitsPerPixel)
+	public HRESULT GetBitsPerPixel(uint* puiBitsPerPixel)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint*, int>)(lpVtbl[13]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), puiBitsPerPixel);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetChannelCount" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetChannelCount(uint* puiChannelCount)
+	public HRESULT GetChannelCount(uint* puiChannelCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint*, int>)(lpVtbl[14]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), puiChannelCount);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetChannelMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetChannelMask(uint uiChannelIndex, uint cbMaskBuffer, byte* pbMaskBuffer, uint* pcbActual)
+	public HRESULT GetChannelMask(uint uiChannelIndex, uint cbMaskBuffer, byte* pbMaskBuffer, uint* pcbActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2::SupportsTransparency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult SupportsTransparency(Bool32* pfSupportsTransparency)
+	public HRESULT SupportsTransparency(Bool32* pfSupportsTransparency)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, Bool32*, int>)(lpVtbl[16]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pfSupportsTransparency);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2::GetNumericRepresentation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation)
+	public HRESULT GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo2*, WICPixelFormatNumericRepresentation*, int>)(lpVtbl[17]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pNumericRepresentation);
 	}
@@ -193,10 +193,10 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	public interface Interface : IWICPixelFormatInfo.Interface
 	{
 		[VtblIndex(16)]
-		HResult SupportsTransparency(Bool32* pfSupportsTransparency);
+		HRESULT SupportsTransparency(Bool32* pfSupportsTransparency);
 
 		[VtblIndex(17)]
-		HResult GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation);
+		HRESULT GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation);
 	}
 }
 

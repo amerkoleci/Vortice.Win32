@@ -47,7 +47,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChainMedia*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* pStats)
+	public HRESULT GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* pStats)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChainMedia*, DXGI_FRAME_STATISTICS_MEDIA*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPresentDuration(uint Duration)
+	public HRESULT SetPresentDuration(uint Duration)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)
+	public HRESULT CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* pStats);
+		HRESULT GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* pStats);
 
 		[VtblIndex(4)]
-		HResult SetPresentDuration(uint Duration);
+		HRESULT SetPresentDuration(uint Duration);
 
 		[VtblIndex(5)]
-		HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration);
+		HRESULT CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration);
 	}
 }
 

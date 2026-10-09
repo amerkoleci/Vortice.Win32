@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform2*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapSourceTransform2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	/// <inheritdoc cref="IWICBitmapSourceTransform.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform2*, System.Drawing.Rectangle*, uint, uint, Guid*, WICBitmapTransformOptions, uint, uint, byte*, int>)(lpVtbl[3]))((IWICBitmapSourceTransform2*)Unsafe.AsPointer(ref this), prc, uiWidth, uiHeight, pguidDstFormat, dstTransform, nStride, cbBufferSize, pbBuffer);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	/// <inheritdoc cref="IWICBitmapSourceTransform.GetClosestSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetClosestSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetClosestSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform2*, uint*, uint*, int>)(lpVtbl[4]))((IWICBitmapSourceTransform2*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	/// <inheritdoc cref="IWICBitmapSourceTransform.GetClosestPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetClosestPixelFormat(Guid* pguidDstFormat)
+	public HRESULT GetClosestPixelFormat(Guid* pguidDstFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform2*, Guid*, int>)(lpVtbl[5]))((IWICBitmapSourceTransform2*)Unsafe.AsPointer(ref this), pguidDstFormat);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	/// <inheritdoc cref="IWICBitmapSourceTransform.DoesSupportTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported)
+	public HRESULT DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform2*, WICBitmapTransformOptions, Bool32*, int>)(lpVtbl[6]))((IWICBitmapSourceTransform2*)Unsafe.AsPointer(ref this), dstTransform, pfIsSupported);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform2::GetColorContextsForPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetColorContextsForPixelFormat(Guid* pPixelFormat, uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount)
+	public HRESULT GetColorContextsForPixelFormat(Guid* pPixelFormat, uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform2*, Guid*, uint, IWICColorContext**, uint*, int>)(lpVtbl[7]))((IWICBitmapSourceTransform2*)Unsafe.AsPointer(ref this), pPixelFormat, cCount, ppIColorContexts, pcActualCount);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICBitmapSourceTransform2 : IWICBitmapSourceTransf
 	public interface Interface : IWICBitmapSourceTransform.Interface
 	{
 		[VtblIndex(7)]
-		HResult GetColorContextsForPixelFormat(Guid* pPixelFormat, uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount);
+		HRESULT GetColorContextsForPixelFormat(Guid* pPixelFormat, uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <inheritdoc cref="ID2D1ImageSource.OfferResources" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult OfferResources()
+	public HRESULT OfferResources()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, int>)(lpVtbl[4]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <inheritdoc cref="ID2D1ImageSource.TryReclaimResources" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult TryReclaimResources(Bool32* resourcesDiscarded)
+	public HRESULT TryReclaimResources(Bool32* resourcesDiscarded)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Bool32*, int>)(lpVtbl[5]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), resourcesDiscarded);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::EnsureCached"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult EnsureCached(Vortice.Win32.Numerics.Rect* rectangleToFill)
+	public HRESULT EnsureCached(Vortice.Win32.Numerics.Rect* rectangleToFill)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::TrimCache"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve)
+	public HRESULT TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageSourceFromWic*, Vortice.Win32.Numerics.Rect*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
 	}
@@ -121,10 +121,10 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	public interface Interface : ID2D1ImageSource.Interface
 	{
 		[VtblIndex(6)]
-		HResult EnsureCached(Vortice.Win32.Numerics.Rect* rectangleToFill);
+		HRESULT EnsureCached(Vortice.Win32.Numerics.Rect* rectangleToFill);
 
 		[VtblIndex(7)]
-		HResult TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve);
+		HRESULT TrimCache(Vortice.Win32.Numerics.Rect* rectangleToPreserve);
 
 		[VtblIndex(8)]
 		void GetSource(IWICBitmapSource** wicBitmapSource);

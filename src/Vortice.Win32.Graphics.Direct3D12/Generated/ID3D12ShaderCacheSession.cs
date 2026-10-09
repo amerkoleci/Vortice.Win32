@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, char*, int>)(lpVtbl[6]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::FindValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult FindValue(void* pKey, uint KeySize, void* pValue, uint* pValueSize)
+	public HRESULT FindValue(void* pKey, uint KeySize, void* pValue, uint* pValueSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, void*, uint, void*, uint*, int>)(lpVtbl[8]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), pKey, KeySize, pValue, pValueSize);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::StoreValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult StoreValue(void* pKey, uint KeySize, void* pValue, uint ValueSize)
+	public HRESULT StoreValue(void* pKey, uint KeySize, void* pValue, uint ValueSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderCacheSession*, void*, uint, void*, uint, int>)(lpVtbl[9]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), pKey, KeySize, pValue, ValueSize);
 	}
@@ -145,10 +145,10 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]
-		HResult FindValue(void* pKey, uint KeySize, void* pValue, uint* pValueSize);
+		HRESULT FindValue(void* pKey, uint KeySize, void* pValue, uint* pValueSize);
 
 		[VtblIndex(9)]
-		HResult StoreValue(void* pKey, uint KeySize, void* pValue, uint ValueSize);
+		HRESULT StoreValue(void* pKey, uint KeySize, void* pValue, uint ValueSize);
 
 		[VtblIndex(10)]
 		void SetDeleteOnDestroy();

@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::SetViewportSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetViewportSize(System.Drawing.SizeF viewportSize)
+	public HRESULT SetViewportSize(System.Drawing.SizeF viewportSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, System.Drawing.SizeF, int>)(lpVtbl[4]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), viewportSize);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::SetRoot"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetRoot(ID2D1SvgElement* root)
+	public HRESULT SetRoot(ID2D1SvgElement* root)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, ID2D1SvgElement*, int>)(lpVtbl[6]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), root);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::FindElementById"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult FindElementById(char* id, ID2D1SvgElement** svgElement)
+	public HRESULT FindElementById(char* id, ID2D1SvgElement** svgElement)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, char*, ID2D1SvgElement**, int>)(lpVtbl[8]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), id, svgElement);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::Serialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Serialize(Com.IStream* outputXmlStream, ID2D1SvgElement* subtree)
+	public HRESULT Serialize(Com.IStream* outputXmlStream, ID2D1SvgElement* subtree)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, Com.IStream*, ID2D1SvgElement*, int>)(lpVtbl[9]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), outputXmlStream, subtree);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::Deserialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult Deserialize(Com.IStream* inputXmlStream, ID2D1SvgElement** subtree)
+	public HRESULT Deserialize(Com.IStream* inputXmlStream, ID2D1SvgElement** subtree)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, Com.IStream*, ID2D1SvgElement**, int>)(lpVtbl[10]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), inputXmlStream, subtree);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePaint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreatePaint(D2D1_SVG_PAINT_TYPE paintType, Color4* color, char* id, ID2D1SvgPaint** paint)
+	public HRESULT CreatePaint(D2D1_SVG_PAINT_TYPE paintType, Color4* color, char* id, ID2D1SvgPaint** paint)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, D2D1_SVG_PAINT_TYPE, Color4*, char*, ID2D1SvgPaint**, int>)(lpVtbl[11]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), paintType, color, id, paint);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreateStrokeDashArray"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateStrokeDashArray(D2D1_SVG_LENGTH* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray)
+	public HRESULT CreateStrokeDashArray(D2D1_SVG_LENGTH* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, D2D1_SVG_LENGTH*, uint, ID2D1SvgStrokeDashArray**, int>)(lpVtbl[12]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), dashes, dashesCount, strokeDashArray);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePointCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreatePointCollection(Vector2* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection)
+	public HRESULT CreatePointCollection(Vector2* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, Vector2*, uint, ID2D1SvgPointCollection**, int>)(lpVtbl[13]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), points, pointsCount, pointCollection);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePathData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreatePathData(float* segmentData, uint segmentDataCount, D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, ID2D1SvgPathData** pathData)
+	public HRESULT CreatePathData(float* segmentData, uint segmentDataCount, D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, ID2D1SvgPathData** pathData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, float*, uint, D2D1_SVG_PATH_COMMAND*, uint, ID2D1SvgPathData**, int>)(lpVtbl[14]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), segmentData, segmentDataCount, commands, commandsCount, pathData);
 	}
@@ -169,37 +169,37 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetViewportSize(System.Drawing.SizeF viewportSize);
+		HRESULT SetViewportSize(System.Drawing.SizeF viewportSize);
 
 		[VtblIndex(5)]
 		System.Drawing.SizeF GetViewportSize();
 
 		[VtblIndex(6)]
-		HResult SetRoot(ID2D1SvgElement* root);
+		HRESULT SetRoot(ID2D1SvgElement* root);
 
 		[VtblIndex(7)]
 		void GetRoot(ID2D1SvgElement** root);
 
 		[VtblIndex(8)]
-		HResult FindElementById(char* id, ID2D1SvgElement** svgElement);
+		HRESULT FindElementById(char* id, ID2D1SvgElement** svgElement);
 
 		[VtblIndex(9)]
-		HResult Serialize(Com.IStream* outputXmlStream, ID2D1SvgElement* subtree);
+		HRESULT Serialize(Com.IStream* outputXmlStream, ID2D1SvgElement* subtree);
 
 		[VtblIndex(10)]
-		HResult Deserialize(Com.IStream* inputXmlStream, ID2D1SvgElement** subtree);
+		HRESULT Deserialize(Com.IStream* inputXmlStream, ID2D1SvgElement** subtree);
 
 		[VtblIndex(11)]
-		HResult CreatePaint(D2D1_SVG_PAINT_TYPE paintType, Color4* color, char* id, ID2D1SvgPaint** paint);
+		HRESULT CreatePaint(D2D1_SVG_PAINT_TYPE paintType, Color4* color, char* id, ID2D1SvgPaint** paint);
 
 		[VtblIndex(12)]
-		HResult CreateStrokeDashArray(D2D1_SVG_LENGTH* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray);
+		HRESULT CreateStrokeDashArray(D2D1_SVG_LENGTH* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray);
 
 		[VtblIndex(13)]
-		HResult CreatePointCollection(Vector2* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection);
+		HRESULT CreatePointCollection(Vector2* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection);
 
 		[VtblIndex(14)]
-		HResult CreatePathData(float* segmentData, uint segmentDataCount, D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, ID2D1SvgPathData** pathData);
+		HRESULT CreatePathData(float* segmentData, uint segmentDataCount, D2D1_SVG_PATH_COMMAND* commands, uint commandsCount, ID2D1SvgPathData** pathData);
 	}
 }
 

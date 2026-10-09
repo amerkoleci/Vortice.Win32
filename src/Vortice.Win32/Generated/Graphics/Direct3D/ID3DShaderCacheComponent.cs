@@ -47,7 +47,7 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, Guid*, void**, int>)(lpVtbl[0]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheComponent::GetComponentName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetComponentName(ushort** pName)
+	public HRESULT GetComponentName(ushort** pName)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, ushort**, int>)(lpVtbl[3]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), pName);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheComponent::GetStateObjectDatabasePath"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetStateObjectDatabasePath(ushort** pPath)
+	public HRESULT GetStateObjectDatabasePath(ushort** pPath)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, ushort**, int>)(lpVtbl[4]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), pPath);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheComponent::GetPrecompiledCachePath"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrecompiledCachePath(char* pAdapterFamily, ushort** pPath)
+	public HRESULT GetPrecompiledCachePath(char* pAdapterFamily, ushort** pPath)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, char*, ushort**, int>)(lpVtbl[5]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), pAdapterFamily, pPath);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheComponent::GetPrecompiledShaderDatabases"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetPrecompiledShaderDatabases(uint ArraySize, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs)
+	public HRESULT GetPrecompiledShaderDatabases(uint ArraySize, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheComponent*, uint, D3D_SHADER_CACHE_PSDB_PROPERTIES*, int>)(lpVtbl[7]))((ID3DShaderCacheComponent*)Unsafe.AsPointer(ref this), ArraySize, pPSDBs);
 	}
@@ -113,19 +113,19 @@ public unsafe partial struct ID3DShaderCacheComponent : ID3DShaderCacheComponent
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetComponentName(ushort** pName);
+		HRESULT GetComponentName(ushort** pName);
 
 		[VtblIndex(4)]
-		HResult GetStateObjectDatabasePath(ushort** pPath);
+		HRESULT GetStateObjectDatabasePath(ushort** pPath);
 
 		[VtblIndex(5)]
-		HResult GetPrecompiledCachePath(char* pAdapterFamily, ushort** pPath);
+		HRESULT GetPrecompiledCachePath(char* pAdapterFamily, ushort** pPath);
 
 		[VtblIndex(6)]
 		uint GetPrecompiledShaderDatabaseCount();
 
 		[VtblIndex(7)]
-		HResult GetPrecompiledShaderDatabases(uint ArraySize, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs);
+		HRESULT GetPrecompiledShaderDatabases(uint ArraySize, D3D_SHADER_CACHE_PSDB_PROPERTIES* pPSDBs);
 	}
 }
 

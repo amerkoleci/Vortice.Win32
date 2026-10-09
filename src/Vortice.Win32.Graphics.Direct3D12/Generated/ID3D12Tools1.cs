@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12Tools1 : ID3D12Tools1.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Tools1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12Tools1 : ID3D12Tools1.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools1::ReserveGPUVARangesAtCreate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges)
+	public HRESULT ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools1*, D3D12_GPU_VIRTUAL_ADDRESS_RANGE*, uint, int>)(lpVtbl[5]))((ID3D12Tools1*)Unsafe.AsPointer(ref this), pRanges, uiNumRanges);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12Tools1 : ID3D12Tools1.Interface, INativeGuid
 	public interface Interface : ID3D12Tools.Interface
 	{
 		[VtblIndex(5)]
-		HResult ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges);
+		HRESULT ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges);
 
 		[VtblIndex(6)]
 		void ClearReservedGPUVARangesList();

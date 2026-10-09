@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VirtualizationGuestDevice::ShareWithHost"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ShareWithHost(ID3D12DeviceChild* pObject, Handle* pHandle)
+	public HRESULT ShareWithHost(ID3D12DeviceChild* pObject, HANDLE* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, ID3D12DeviceChild*, Handle*, int>)(lpVtbl[3]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pObject, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, ID3D12DeviceChild*, HANDLE*, int>)(lpVtbl[3]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pObject, pHandle);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VirtualizationGuestDevice::CreateFenceFd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateFenceFd(ID3D12Fence* pFence, ulong FenceValue, int* pFenceFd)
+	public HRESULT CreateFenceFd(ID3D12Fence* pFence, ulong FenceValue, int* pFenceFd)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, ID3D12Fence*, ulong, int*, int>)(lpVtbl[4]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pFence, FenceValue, pFenceFd);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult ShareWithHost(ID3D12DeviceChild* pObject, Handle* pHandle);
+		HRESULT ShareWithHost(ID3D12DeviceChild* pObject, HANDLE* pHandle);
 
 		[VtblIndex(4)]
-		HResult CreateFenceFd(ID3D12Fence* pFence, ulong FenceValue, int* pFenceFd);
+		HRESULT CreateFenceFd(ID3D12Fence* pFence, ulong FenceValue, int* pFenceFd);
 	}
 }
 

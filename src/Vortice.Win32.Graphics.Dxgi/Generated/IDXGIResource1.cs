@@ -49,7 +49,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -75,7 +75,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
@@ -83,7 +83,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	public HRESULT SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
@@ -91,7 +91,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
@@ -99,7 +99,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetParent(Guid* riid, void** ppParent)
+	public HRESULT GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
@@ -107,7 +107,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
@@ -115,15 +115,15 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIResource.GetSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetSharedHandle(Handle* pSharedHandle)
+	public HRESULT GetSharedHandle(HANDLE* pSharedHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Handle*, int>)(lpVtbl[8]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pSharedHandle);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, HANDLE*, int>)(lpVtbl[8]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pSharedHandle);
 	}
 
 	/// <inheritdoc cref="IDXGIResource.GetUsage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetUsage(DXGI_USAGE* pUsage)
+	public HRESULT GetUsage(DXGI_USAGE* pUsage)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, DXGI_USAGE*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
 	}
@@ -131,7 +131,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIResource.SetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEvictionPriority(DXGI_RESOURCE_PRIORITY EvictionPriority)
+	public HRESULT SetEvictionPriority(DXGI_RESOURCE_PRIORITY EvictionPriority)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, DXGI_RESOURCE_PRIORITY, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
 	}
@@ -139,7 +139,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIResource.GetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetEvictionPriority(DXGI_RESOURCE_PRIORITY* pEvictionPriority)
+	public HRESULT GetEvictionPriority(DXGI_RESOURCE_PRIORITY* pEvictionPriority)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, DXGI_RESOURCE_PRIORITY*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
@@ -147,7 +147,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface)
+	public HRESULT CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, uint, IDXGISurface2**, int>)(lpVtbl[12]))((IDXGIResource1*)Unsafe.AsPointer(ref this), index, ppSurface);
 	}
@@ -155,18 +155,18 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle)
+	public HRESULT CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, HANDLE* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, SECURITY_ATTRIBUTES*, uint, char*, HANDLE*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 	public interface Interface : IDXGIResource.Interface
 	{
 		[VtblIndex(12)]
-		HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface);
+		HRESULT CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface);
 
 		[VtblIndex(13)]
-		HResult CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle);
+		HRESULT CreateSharedHandle(SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, HANDLE* pHandle);
 	}
 }
 

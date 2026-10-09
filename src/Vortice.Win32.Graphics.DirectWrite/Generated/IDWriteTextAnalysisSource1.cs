@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetTextAtPosition" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength)
+	public HRESULT GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, ushort**, uint*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetTextBeforePosition" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength)
+	public HRESULT GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, ushort**, uint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetLocaleName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName)
+	public HRESULT GetLocaleName(uint textPosition, uint* textLength, ushort** localeName)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, uint*, ushort**, int>)(lpVtbl[6]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, localeName);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetNumberSubstitution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)
+	public HRESULT GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, uint*, IDWriteNumberSubstitution**, int>)(lpVtbl[7]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, DWRITE_VERTICAL_GLYPH_ORIENTATION* glyphOrientation, byte* bidiLevel)
+	public HRESULT GetVerticalGlyphOrientation(uint textPosition, uint* textLength, DWRITE_VERTICAL_GLYPH_ORIENTATION* glyphOrientation, byte* bidiLevel)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource1*, uint, uint*, DWRITE_VERTICAL_GLYPH_ORIENTATION*, byte*, int>)(lpVtbl[8]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientation, bidiLevel);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	public interface Interface : IDWriteTextAnalysisSource.Interface
 	{
 		[VtblIndex(8)]
-		HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, DWRITE_VERTICAL_GLYPH_ORIENTATION* glyphOrientation, byte* bidiLevel);
+		HRESULT GetVerticalGlyphOrientation(uint textPosition, uint* textLength, DWRITE_VERTICAL_GLYPH_ORIENTATION* glyphOrientation, byte* bidiLevel);
 	}
 }
 

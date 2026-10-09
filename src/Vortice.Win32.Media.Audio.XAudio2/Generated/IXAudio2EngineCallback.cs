@@ -34,9 +34,9 @@ public unsafe partial struct IXAudio2EngineCallback : IXAudio2EngineCallback.Int
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2EngineCallback::OnCriticalError"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public void OnCriticalError(HResult Error)
+	public void OnCriticalError(HRESULT Error)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2EngineCallback*, HResult, void>)(lpVtbl[2]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this), Error);
+		((delegate* unmanaged[MemberFunction]<IXAudio2EngineCallback*, HRESULT, void>)(lpVtbl[2]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this), Error);
 	}
 
 	public interface Interface 
@@ -48,7 +48,7 @@ public unsafe partial struct IXAudio2EngineCallback : IXAudio2EngineCallback.Int
 		void OnProcessingPassEnd();
 
 		[VtblIndex(2)]
-		void OnCriticalError(HResult Error);
+		void OnCriticalError(HRESULT Error);
 	}
 }
 

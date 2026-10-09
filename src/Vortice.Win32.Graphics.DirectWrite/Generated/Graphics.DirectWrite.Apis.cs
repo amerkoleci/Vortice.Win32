@@ -17,13 +17,13 @@ public static partial class DWrite
 
 	public const uint DWRITE_ERR_BASE = 20480;
 
-	public static readonly HResult DWRITE_E_REMOTEFONT = -2003283955;
+	public static  HRESULT DWRITE_E_REMOTEFONT => -2003283955;
 
-	public static readonly HResult DWRITE_E_DOWNLOADCANCELLED = -2003283954;
+	public static  HRESULT DWRITE_E_DOWNLOADCANCELLED => -2003283954;
 
-	public static readonly HResult DWRITE_E_DOWNLOADFAILED = -2003283953;
+	public static  HRESULT DWRITE_E_DOWNLOADFAILED => -2003283953;
 
-	public static readonly HResult DWRITE_E_TOOMANYDOWNLOADS = -2003283952;
+	public static  HRESULT DWRITE_E_TOOMANYDOWNLOADS => -2003283952;
 
 	public const uint DWRITE_STANDARD_FONT_AXIS_COUNT = 5;
 

@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionDynamicTexture : IDCompositionDynamicT
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDynamicTexture*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDynamicTexture*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionDynamicTexture : IDCompositionDynamicT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDynamicTexture::SetTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetTexture(IDCompositionTexture* pTexture, Rect* pRects, nuint rectCount)
+	public HRESULT SetTexture(IDCompositionTexture* pTexture, Rect* pRects, nuint rectCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDynamicTexture*, IDCompositionTexture*, Rect*, nuint, int>)(lpVtbl[3]))((IDCompositionDynamicTexture*)Unsafe.AsPointer(ref this), pTexture, pRects, rectCount);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionDynamicTexture : IDCompositionDynamicT
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDynamicTexture::SetTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetTexture(IDCompositionTexture* pTexture)
+	public HRESULT SetTexture(IDCompositionTexture* pTexture)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDynamicTexture*, IDCompositionTexture*, int>)(lpVtbl[4]))((IDCompositionDynamicTexture*)Unsafe.AsPointer(ref this), pTexture);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct IDCompositionDynamicTexture : IDCompositionDynamicT
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetTexture(IDCompositionTexture* pTexture, Rect* pRects, nuint rectCount);
+		HRESULT SetTexture(IDCompositionTexture* pTexture, Rect* pRects, nuint rectCount);
 
 		[VtblIndex(4)]
-		HResult SetTexture(IDCompositionTexture* pTexture);
+		HRESULT SetTexture(IDCompositionTexture* pTexture);
 	}
 }
 

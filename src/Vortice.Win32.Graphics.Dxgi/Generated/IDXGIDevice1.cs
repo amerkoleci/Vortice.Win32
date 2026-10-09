@@ -47,7 +47,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	public HRESULT SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetParent(Guid* riid, void** ppParent)
+	public HRESULT GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice.GetAdapter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetAdapter(IDXGIAdapter** pAdapter)
+	public HRESULT GetAdapter(IDXGIAdapter** pAdapter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pAdapter);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice.CreateSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(DXGI_SURFACE_DESC* pDesc, uint NumSurfaces, DXGI_USAGE Usage, DXGI_SHARED_RESOURCE* pSharedResource, IDXGISurface** ppSurface)
+	public HRESULT CreateSurface(DXGI_SURFACE_DESC* pDesc, uint NumSurfaces, DXGI_USAGE Usage, DXGI_SHARED_RESOURCE* pSharedResource, IDXGISurface** ppSurface)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, DXGI_SURFACE_DESC*, uint, DXGI_USAGE, DXGI_SHARED_RESOURCE*, IDXGISurface**, int>)(lpVtbl[8]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice.QueryResourceResidency" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult QueryResourceResidency(IUnknown** ppResources, DXGI_RESIDENCY* pResidencyStatus, uint NumResources)
+	public HRESULT QueryResourceResidency(IUnknown** ppResources, DXGI_RESIDENCY* pResidencyStatus, uint NumResources)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, IUnknown**, DXGI_RESIDENCY*, uint, int>)(lpVtbl[9]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice.SetGPUThreadPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetGPUThreadPriority(int Priority)
+	public HRESULT SetGPUThreadPriority(int Priority)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, int, int>)(lpVtbl[10]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Priority);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIDevice.GetGPUThreadPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetGPUThreadPriority(int* pPriority)
+	public HRESULT GetGPUThreadPriority(int* pPriority)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, int*, int>)(lpVtbl[11]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pPriority);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1::SetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	public HRESULT SetMaximumFrameLatency(uint MaxLatency)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, uint, int>)(lpVtbl[12]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), MaxLatency);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1::GetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	public HRESULT GetMaximumFrameLatency(uint* pMaxLatency)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIDevice1*, uint*, int>)(lpVtbl[13]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pMaxLatency);
 	}
@@ -161,10 +161,10 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	public interface Interface : IDXGIDevice.Interface
 	{
 		[VtblIndex(12)]
-		HResult SetMaximumFrameLatency(uint MaxLatency);
+		HRESULT SetMaximumFrameLatency(uint MaxLatency);
 
 		[VtblIndex(13)]
-		HResult GetMaximumFrameLatency(uint* pMaxLatency);
+		HRESULT GetMaximumFrameLatency(uint* pMaxLatency);
 	}
 }
 

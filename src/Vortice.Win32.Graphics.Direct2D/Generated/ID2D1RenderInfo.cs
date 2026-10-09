@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInputDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
+	public HRESULT SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, uint, D2D1_INPUT_DESCRIPTION, int>)(lpVtbl[3]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetOutputBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
+	public HRESULT SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1RenderInfo*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
@@ -105,10 +105,10 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription);
+		HRESULT SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription);
 
 		[VtblIndex(4)]
-		HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth);
+		HRESULT SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth);
 
 		[VtblIndex(5)]
 		void SetCached(Bool32 isCached);

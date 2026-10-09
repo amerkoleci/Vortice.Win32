@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, 
 	/// <inheritdoc cref="ID3D12DebugDevice.SetFeatureMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetFeatureMask(D3D12_DEBUG_FEATURE Mask)
+	public HRESULT SetFeatureMask(D3D12_DEBUG_FEATURE Mask)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice2*, D3D12_DEBUG_FEATURE, int>)(lpVtbl[3]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Mask);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, 
 	/// <inheritdoc cref="ID3D12DebugDevice.ReportLiveDeviceObjects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult ReportLiveDeviceObjects(D3D12_RLDO_FLAGS Flags)
+	public HRESULT ReportLiveDeviceObjects(D3D12_RLDO_FLAGS Flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice2*, D3D12_RLDO_FLAGS, int>)(lpVtbl[5]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Flags);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2::SetDebugParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize)
+	public HRESULT SetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice2*, D3D12_DEBUG_DEVICE_PARAMETER_TYPE, void*, uint, int>)(lpVtbl[6]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2::GetDebugParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize)
+	public HRESULT GetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugDevice2*, D3D12_DEBUG_DEVICE_PARAMETER_TYPE, void*, uint, int>)(lpVtbl[7]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
@@ -113,10 +113,10 @@ public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, 
 	public interface Interface : ID3D12DebugDevice.Interface
 	{
 		[VtblIndex(6)]
-		HResult SetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize);
+		HRESULT SetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize);
 
 		[VtblIndex(7)]
-		HResult GetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize);
+		HRESULT GetDebugParameter(D3D12_DEBUG_DEVICE_PARAMETER_TYPE Type, void* pData, uint DataSize);
 	}
 }
 

@@ -45,7 +45,7 @@ public unsafe partial struct ID3D11FunctionParameterReflection : ID3D11FunctionP
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetDesc(D3D11_PARAMETER_DESC* pDesc)
+	public HRESULT GetDesc(D3D11_PARAMETER_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionParameterReflection*, D3D11_PARAMETER_DESC*, int>)(lpVtbl[0]))((ID3D11FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
@@ -53,7 +53,7 @@ public unsafe partial struct ID3D11FunctionParameterReflection : ID3D11FunctionP
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetDesc(D3D11_PARAMETER_DESC* pDesc);
+		HRESULT GetDesc(D3D11_PARAMETER_DESC* pDesc);
 	}
 }
 

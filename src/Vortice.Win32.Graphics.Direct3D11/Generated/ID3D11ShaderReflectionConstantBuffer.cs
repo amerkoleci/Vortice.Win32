@@ -45,7 +45,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetDesc(D3D11_SHADER_BUFFER_DESC* pDesc)
+	public HRESULT GetDesc(D3D11_SHADER_BUFFER_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionConstantBuffer*, D3D11_SHADER_BUFFER_DESC*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), pDesc);
 	}
@@ -69,7 +69,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetDesc(D3D11_SHADER_BUFFER_DESC* pDesc);
+		HRESULT GetDesc(D3D11_SHADER_BUFFER_DESC* pDesc);
 
 		[VtblIndex(1)]
 		ID3D11ShaderReflectionVariable* GetVariableByIndex(uint Index);

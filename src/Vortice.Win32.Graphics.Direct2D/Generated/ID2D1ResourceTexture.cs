@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ResourceTexture : ID2D1ResourceTexture.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ResourceTexture*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ResourceTexture*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1ResourceTexture : ID2D1ResourceTexture.Interfa
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture::Update"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount)
+	public HRESULT Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ResourceTexture*, uint*, uint*, uint*, uint, byte*, uint, int>)(lpVtbl[3]))((ID2D1ResourceTexture*)Unsafe.AsPointer(ref this), minimumExtents, maximimumExtents, strides, dimensions, data, dataCount);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1ResourceTexture : ID2D1ResourceTexture.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount);
+		HRESULT Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount);
 	}
 }
 

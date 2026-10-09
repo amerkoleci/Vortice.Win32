@@ -66,9 +66,9 @@ public unsafe partial struct IXAudio2VoiceCallback : IXAudio2VoiceCallback.Inter
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2VoiceCallback::OnVoiceError"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void OnVoiceError(void* pBufferContext, HResult Error)
+	public void OnVoiceError(void* pBufferContext, HRESULT Error)
 	{
-		((delegate* unmanaged[MemberFunction]<IXAudio2VoiceCallback*, void*, HResult, void>)(lpVtbl[6]))((IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this), pBufferContext, Error);
+		((delegate* unmanaged[MemberFunction]<IXAudio2VoiceCallback*, void*, HRESULT, void>)(lpVtbl[6]))((IXAudio2VoiceCallback*)Unsafe.AsPointer(ref this), pBufferContext, Error);
 	}
 
 	public interface Interface 
@@ -92,7 +92,7 @@ public unsafe partial struct IXAudio2VoiceCallback : IXAudio2VoiceCallback.Inter
 		void OnLoopEnd(void* pBufferContext);
 
 		[VtblIndex(6)]
-		void OnVoiceError(void* pBufferContext, HResult Error);
+		void OnVoiceError(void* pBufferContext, HRESULT Error);
 	}
 }
 

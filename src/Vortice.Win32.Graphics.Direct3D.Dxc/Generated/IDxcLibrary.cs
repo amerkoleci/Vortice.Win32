@@ -46,7 +46,7 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, Guid*, void**, int>)(lpVtbl[0]))((IDxcLibrary*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,70 +71,70 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetMalloc(Com.IMalloc* pMalloc)
+	public HRESULT SetMalloc(Com.IMalloc* pMalloc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, Com.IMalloc*, int>)(lpVtbl[3]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pMalloc);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult)
+	public HRESULT CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, IDxcBlob*, uint, uint, IDxcBlob**, int>)(lpVtbl[4]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, offset, length, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateBlobFromFile(char* pFileName, DXC_CP* codePage, IDxcBlobEncoding** pBlobEncoding)
+	public HRESULT CreateBlobFromFile(char* pFileName, DXC_CP* codePage, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, char*, DXC_CP*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pFileName, codePage, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateBlobWithEncodingFromPinned(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding)
+	public HRESULT CreateBlobWithEncodingFromPinned(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, void*, uint, DXC_CP, IDxcBlobEncoding**, int>)(lpVtbl[6]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pText, size, codePage, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateBlobWithEncodingOnHeapCopy(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding)
+	public HRESULT CreateBlobWithEncodingOnHeapCopy(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, void*, uint, DXC_CP, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pText, size, codePage, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateBlobWithEncodingOnMalloc(void* pText, Com.IMalloc* pIMalloc, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding)
+	public HRESULT CreateBlobWithEncodingOnMalloc(void* pText, Com.IMalloc* pIMalloc, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, void*, Com.IMalloc*, uint, DXC_CP, IDxcBlobEncoding**, int>)(lpVtbl[8]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pText, pIMalloc, size, codePage, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateIncludeHandler(IDxcIncludeHandler** ppResult)
+	public HRESULT CreateIncludeHandler(IDxcIncludeHandler** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, IDxcIncludeHandler**, int>)(lpVtbl[9]))((IDxcLibrary*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateStreamFromBlobReadOnly(IDxcBlob* pBlob, Com.IStream** ppStream)
+	public HRESULT CreateStreamFromBlobReadOnly(IDxcBlob* pBlob, Com.IStream** ppStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, IDxcBlob*, Com.IStream**, int>)(lpVtbl[10]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, ppStream);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
+	public HRESULT GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[11]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetBlobAsWide(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
+	public HRESULT GetBlobAsWide(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[12]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
@@ -142,34 +142,34 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetMalloc(Com.IMalloc* pMalloc);
+		HRESULT SetMalloc(Com.IMalloc* pMalloc);
 
 		[VtblIndex(4)]
-		HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult);
+		HRESULT CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult);
 
 		[VtblIndex(5)]
-		HResult CreateBlobFromFile(char* pFileName, DXC_CP* codePage, IDxcBlobEncoding** pBlobEncoding);
+		HRESULT CreateBlobFromFile(char* pFileName, DXC_CP* codePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(6)]
-		HResult CreateBlobWithEncodingFromPinned(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding);
+		HRESULT CreateBlobWithEncodingFromPinned(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(7)]
-		HResult CreateBlobWithEncodingOnHeapCopy(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding);
+		HRESULT CreateBlobWithEncodingOnHeapCopy(void* pText, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(8)]
-		HResult CreateBlobWithEncodingOnMalloc(void* pText, Com.IMalloc* pIMalloc, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding);
+		HRESULT CreateBlobWithEncodingOnMalloc(void* pText, Com.IMalloc* pIMalloc, uint size, DXC_CP codePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(9)]
-		HResult CreateIncludeHandler(IDxcIncludeHandler** ppResult);
+		HRESULT CreateIncludeHandler(IDxcIncludeHandler** ppResult);
 
 		[VtblIndex(10)]
-		HResult CreateStreamFromBlobReadOnly(IDxcBlob* pBlob, Com.IStream** ppStream);
+		HRESULT CreateStreamFromBlobReadOnly(IDxcBlob* pBlob, Com.IStream** ppStream);
 
 		[VtblIndex(11)]
-		HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
+		HRESULT GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(12)]
-		HResult GetBlobAsWide(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
+		HRESULT GetBlobAsWide(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
 	}
 }
 

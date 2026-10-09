@@ -47,7 +47,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult InitializeFromIStream(Com.IStream* pIStream)
+	public HRESULT InitializeFromIStream(Com.IStream* pIStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Com.IStream*, int>)(lpVtbl[14]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult InitializeFromFilename(char* wzFileName, uint dwDesiredAccess)
+	public HRESULT InitializeFromFilename(char* wzFileName, uint dwDesiredAccess)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStream*, char*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
+	public HRESULT InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStream*, byte*, uint, int>)(lpVtbl[16]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStreamRegion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ulong ulOffset, ulong ulMaxSize)
+	public HRESULT InitializeFromIStreamRegion(Com.IStream* pIStream, ulong ulOffset, ulong ulMaxSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Com.IStream*, ulong, ulong, int>)(lpVtbl[17]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	public interface Interface : Vortice.Win32.Com.IStream.Interface
 	{
 		[VtblIndex(14)]
-		HResult InitializeFromIStream(Com.IStream* pIStream);
+		HRESULT InitializeFromIStream(Com.IStream* pIStream);
 
 		[VtblIndex(15)]
-		HResult InitializeFromFilename(char* wzFileName, uint dwDesiredAccess);
+		HRESULT InitializeFromFilename(char* wzFileName, uint dwDesiredAccess);
 
 		[VtblIndex(16)]
-		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
+		HRESULT InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
 
 		[VtblIndex(17)]
-		HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ulong ulOffset, ulong ulMaxSize);
+		HRESULT InitializeFromIStreamRegion(Com.IStream* pIStream, ulong ulOffset, ulong ulMaxSize);
 	}
 }
 

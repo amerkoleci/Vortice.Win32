@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Device5*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext** deviceContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device5*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device1.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext1** deviceContext1)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device5*)Unsafe.AsPointer(ref this), options, deviceContext1);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device2.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext2** deviceContext2)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext2** deviceContext2)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext2**, int>)(lpVtbl[11]))((ID2D1Device5*)Unsafe.AsPointer(ref this), options, deviceContext2);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device2.GetDxgiDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetDxgiDevice(IDXGIDevice** dxgiDevice)
+	public HRESULT GetDxgiDevice(IDXGIDevice** dxgiDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device5*)Unsafe.AsPointer(ref this), dxgiDevice);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device3.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext3** deviceContext3)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext3** deviceContext3)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext3**, int>)(lpVtbl[14]))((ID2D1Device5*)Unsafe.AsPointer(ref this), options, deviceContext3);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Device4.CreateDeviceContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext4** deviceContext4)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext4** deviceContext4)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext4**, int>)(lpVtbl[15]))((ID2D1Device5*)Unsafe.AsPointer(ref this), options, deviceContext4);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device5::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext5** deviceContext5)
+	public HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext5** deviceContext5)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Device5*, D2D1_DEVICE_CONTEXT_OPTIONS, ID2D1DeviceContext5**, int>)(lpVtbl[18]))((ID2D1Device5*)Unsafe.AsPointer(ref this), options, deviceContext5);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct ID2D1Device5 : ID2D1Device5.Interface, INativeGuid
 	public interface Interface : ID2D1Device4.Interface
 	{
 		[VtblIndex(18)]
-		HResult CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext5** deviceContext5);
+		HRESULT CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS options, ID2D1DeviceContext5** deviceContext5);
 	}
 }
 

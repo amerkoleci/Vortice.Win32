@@ -20,7 +20,7 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CheckFeatureSupport<TD3D12Device, TFeature>(ref this TD3D12Device self, D3D12_FEATURE feature, ref TFeature featureData)
+    public static HRESULT CheckFeatureSupport<TD3D12Device, TFeature>(ref this TD3D12Device self, D3D12_FEATURE feature, ref TFeature featureData)
        where TD3D12Device : unmanaged, ID3D12Device.Interface
        where TFeature : unmanaged
     {
@@ -31,7 +31,7 @@ public static unsafe partial class ID3D12DeviceExtensions
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static HResult CreateCommittedResource<TD3D12Device>(ref this TD3D12Device self, D3D12_HEAP_TYPE heapType, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
+    public static HRESULT CreateCommittedResource<TD3D12Device>(ref this TD3D12Device self, D3D12_HEAP_TYPE heapType, D3D12_RESOURCE_DESC* pDesc, D3D12_RESOURCE_STATES InitialResourceState, D3D12_CLEAR_VALUE* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
         where TD3D12Device : unmanaged, ID3D12Device.Interface
     {
         D3D12_HEAP_PROPERTIES heapProperties = new(heapType);

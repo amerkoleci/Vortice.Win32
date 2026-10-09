@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1RenderInfo.SetInputDescription" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
+	public HRESULT SetInputDescription(uint inputIndex, D2D1_INPUT_DESCRIPTION inputDescription)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, uint, D2D1_INPUT_DESCRIPTION, int>)(lpVtbl[3]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1RenderInfo.SetOutputBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
+	public HRESULT SetOutputBuffer(D2D1_BUFFER_PRECISION bufferPrecision, D2D1_CHANNEL_DEPTH channelDepth)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, D2D1_BUFFER_PRECISION, D2D1_CHANNEL_DEPTH, int>)(lpVtbl[4]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetPixelShaderConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetPixelShaderConstantBuffer(byte* buffer, uint bufferCount)
+	public HRESULT SetPixelShaderConstantBuffer(byte* buffer, uint bufferCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetResourceTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
+	public HRESULT SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[8]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetVertexShaderConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetVertexShaderConstantBuffer(byte* buffer, uint bufferCount)
+	public HRESULT SetVertexShaderConstantBuffer(byte* buffer, uint bufferCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, byte*, uint, int>)(lpVtbl[9]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetPixelShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetPixelShader(Guid* shaderId, D2D1_PIXEL_OPTIONS pixelOptions)
+	public HRESULT SetPixelShader(Guid* shaderId, D2D1_PIXEL_OPTIONS pixelOptions)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, Guid*, D2D1_PIXEL_OPTIONS, int>)(lpVtbl[10]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), shaderId, pixelOptions);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetVertexProcessing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, D2D1_VERTEX_OPTIONS vertexOptions, D2D1_BLEND_DESCRIPTION* blendDescription, D2D1_VERTEX_RANGE* vertexRange, Guid* vertexShader)
+	public HRESULT SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, D2D1_VERTEX_OPTIONS vertexOptions, D2D1_BLEND_DESCRIPTION* blendDescription, D2D1_VERTEX_RANGE* vertexRange, Guid* vertexShader)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1DrawInfo*, ID2D1VertexBuffer*, D2D1_VERTEX_OPTIONS, D2D1_BLEND_DESCRIPTION*, D2D1_VERTEX_RANGE*, Guid*, int>)(lpVtbl[11]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), vertexBuffer, vertexOptions, blendDescription, vertexRange, vertexShader);
 	}
@@ -145,19 +145,19 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	public interface Interface : ID2D1RenderInfo.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetPixelShaderConstantBuffer(byte* buffer, uint bufferCount);
+		HRESULT SetPixelShaderConstantBuffer(byte* buffer, uint bufferCount);
 
 		[VtblIndex(8)]
-		HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture);
+		HRESULT SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture);
 
 		[VtblIndex(9)]
-		HResult SetVertexShaderConstantBuffer(byte* buffer, uint bufferCount);
+		HRESULT SetVertexShaderConstantBuffer(byte* buffer, uint bufferCount);
 
 		[VtblIndex(10)]
-		HResult SetPixelShader(Guid* shaderId, D2D1_PIXEL_OPTIONS pixelOptions);
+		HRESULT SetPixelShader(Guid* shaderId, D2D1_PIXEL_OPTIONS pixelOptions);
 
 		[VtblIndex(11)]
-		HResult SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, D2D1_VERTEX_OPTIONS vertexOptions, D2D1_BLEND_DESCRIPTION* blendDescription, D2D1_VERTEX_RANGE* vertexRange, Guid* vertexShader);
+		HRESULT SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, D2D1_VERTEX_OPTIONS vertexOptions, D2D1_BLEND_DESCRIPTION* blendDescription, D2D1_VERTEX_RANGE* vertexRange, Guid* vertexShader);
 	}
 }
 

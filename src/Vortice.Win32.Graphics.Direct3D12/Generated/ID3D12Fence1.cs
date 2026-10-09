@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, char*, int>)(lpVtbl[6]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -121,15 +121,15 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Fence.SetEventOnCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetEventOnCompletion(ulong Value, Handle hEvent)
+	public HRESULT SetEventOnCompletion(ulong Value, HANDLE hEvent)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, ulong, Handle, int>)(lpVtbl[9]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Value, hEvent);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, ulong, HANDLE, int>)(lpVtbl[9]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Value, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Fence.Signal" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult Signal(ulong Value)
+	public HRESULT Signal(ulong Value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Fence1*, ulong, int>)(lpVtbl[10]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Value);
 	}

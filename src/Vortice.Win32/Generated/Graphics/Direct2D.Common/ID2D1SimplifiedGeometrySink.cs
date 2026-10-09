@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SimplifiedGeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Close()
+	public HRESULT Close()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
 	}
@@ -147,7 +147,7 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 		void EndFigure(D2D1_FIGURE_END figureEnd);
 
 		[VtblIndex(9)]
-		HResult Close();
+		HRESULT Close();
 	}
 }
 

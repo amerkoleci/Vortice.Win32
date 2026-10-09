@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1OffsetTransform : ID2D1OffsetTransform.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1OffsetTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}

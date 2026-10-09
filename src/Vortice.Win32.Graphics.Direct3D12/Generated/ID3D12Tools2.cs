@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12Tools2 : ID3D12Tools2.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12Tools2 : ID3D12Tools2.Interface, INativeGuid
 	/// <inheritdoc cref="ID3D12Tools1.ReserveGPUVARangesAtCreate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges)
+	public HRESULT ReserveGPUVARangesAtCreate(D3D12_GPU_VIRTUAL_ADDRESS_RANGE* pRanges, uint uiNumRanges)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, D3D12_GPU_VIRTUAL_ADDRESS_RANGE*, uint, int>)(lpVtbl[5]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), pRanges, uiNumRanges);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12Tools2 : ID3D12Tools2.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools2::SetApplicationSpecificDriverState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetApplicationSpecificDriverState(IUnknown* pAdapter, ID3DBlob* pBlob)
+	public HRESULT SetApplicationSpecificDriverState(IUnknown* pAdapter, ID3DBlob* pBlob)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12Tools2*, IUnknown*, ID3DBlob*, int>)(lpVtbl[7]))((ID3D12Tools2*)Unsafe.AsPointer(ref this), pAdapter, pBlob);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D12Tools2 : ID3D12Tools2.Interface, INativeGuid
 	public interface Interface : ID3D12Tools1.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetApplicationSpecificDriverState(IUnknown* pAdapter, ID3DBlob* pBlob);
+		HRESULT SetApplicationSpecificDriverState(IUnknown* pAdapter, ID3DBlob* pBlob);
 	}
 }
 

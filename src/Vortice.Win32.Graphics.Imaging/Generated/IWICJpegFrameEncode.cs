@@ -47,7 +47,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameEncode*, Guid*, void**, int>)(lpVtbl[0]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::GetAcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable)
+	public HRESULT GetAcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameEncode*, uint, uint, DXGI_JPEG_AC_HUFFMAN_TABLE*, int>)(lpVtbl[3]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::GetDcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable)
+	public HRESULT GetDcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameEncode*, uint, uint, DXGI_JPEG_DC_HUFFMAN_TABLE*, int>)(lpVtbl[4]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::GetQuantizationTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetQuantizationTable(uint scanIndex, uint tableIndex, DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable)
+	public HRESULT GetQuantizationTable(uint scanIndex, uint tableIndex, DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameEncode*, uint, uint, DXGI_JPEG_QUANTIZATION_TABLE*, int>)(lpVtbl[5]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::WriteScan"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult WriteScan(uint cbScanData, byte* pbScanData)
+	public HRESULT WriteScan(uint cbScanData, byte* pbScanData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameEncode*, uint, byte*, int>)(lpVtbl[6]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), cbScanData, pbScanData);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable);
+		HRESULT GetAcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_AC_HUFFMAN_TABLE* pAcHuffmanTable);
 
 		[VtblIndex(4)]
-		HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable);
+		HRESULT GetDcHuffmanTable(uint scanIndex, uint tableIndex, DXGI_JPEG_DC_HUFFMAN_TABLE* pDcHuffmanTable);
 
 		[VtblIndex(5)]
-		HResult GetQuantizationTable(uint scanIndex, uint tableIndex, DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable);
+		HRESULT GetQuantizationTable(uint scanIndex, uint tableIndex, DXGI_JPEG_QUANTIZATION_TABLE* pQuantizationTable);
 
 		[VtblIndex(6)]
-		HResult WriteScan(uint cbScanData, byte* pbScanData);
+		HRESULT WriteScan(uint cbScanData, byte* pbScanData);
 	}
 }
 

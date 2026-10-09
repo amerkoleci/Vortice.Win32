@@ -47,7 +47,7 @@ public unsafe partial struct ID3DShaderCacheInstallerFactory : ID3DShaderCacheIn
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3DShaderCacheInstallerFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3DShaderCacheInstallerFactory : ID3DShaderCacheIn
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerFactory::CreateInstaller"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateInstaller(ID3DShaderCacheInstallerClient* pClient, Guid* riid, void** ppvInstaller)
+	public HRESULT CreateInstaller(ID3DShaderCacheInstallerClient* pClient, Guid* riid, void** ppvInstaller)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerFactory*, ID3DShaderCacheInstallerClient*, Guid*, void**, int>)(lpVtbl[3]))((ID3DShaderCacheInstallerFactory*)Unsafe.AsPointer(ref this), pClient, riid, ppvInstaller);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3DShaderCacheInstallerFactory : ID3DShaderCacheIn
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DShaderCacheInstallerFactory::CreateExplorer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateExplorer(IUnknown* pUnknown, Guid* riid, void** ppvExplorer)
+	public HRESULT CreateExplorer(IUnknown* pUnknown, Guid* riid, void** ppvExplorer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3DShaderCacheInstallerFactory*, IUnknown*, Guid*, void**, int>)(lpVtbl[4]))((ID3DShaderCacheInstallerFactory*)Unsafe.AsPointer(ref this), pUnknown, riid, ppvExplorer);
 	}
@@ -89,10 +89,10 @@ public unsafe partial struct ID3DShaderCacheInstallerFactory : ID3DShaderCacheIn
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateInstaller(ID3DShaderCacheInstallerClient* pClient, Guid* riid, void** ppvInstaller);
+		HRESULT CreateInstaller(ID3DShaderCacheInstallerClient* pClient, Guid* riid, void** ppvInstaller);
 
 		[VtblIndex(4)]
-		HResult CreateExplorer(IUnknown* pUnknown, Guid* riid, void** ppvExplorer);
+		HRESULT CreateExplorer(IUnknown* pUnknown, Guid* riid, void** ppvExplorer);
 	}
 }
 

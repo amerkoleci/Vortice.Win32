@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionHueRotationEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionHueRotationEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionHueRotationEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionHueRotationEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionHueRotationEffect::SetAngle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetAngle(IDCompositionAnimation* animation)
+	public HRESULT SetAngle(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionHueRotationEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionHueRotationEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionHueRotationEffect::SetAngle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetAngle(float amountDegrees)
+	public HRESULT SetAngle(float amountDegrees)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionHueRotationEffect*, float, int>)(lpVtbl[5]))((IDCompositionHueRotationEffect*)Unsafe.AsPointer(ref this), amountDegrees);
 	}
@@ -97,10 +97,10 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetAngle(IDCompositionAnimation* animation);
+		HRESULT SetAngle(IDCompositionAnimation* animation);
 
 		[VtblIndex(5)]
-		HResult SetAngle(float amountDegrees);
+		HRESULT SetAngle(float amountDegrees);
 	}
 }
 

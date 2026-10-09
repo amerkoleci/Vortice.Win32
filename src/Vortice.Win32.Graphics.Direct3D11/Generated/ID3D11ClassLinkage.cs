@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ClassLinkage*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ClassLinkage*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ClassLinkage*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ClassLinkage*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::GetClassInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetClassInstance(byte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance)
+	public HRESULT GetClassInstance(byte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ClassLinkage*, byte*, uint, ID3D11ClassInstance**, int>)(lpVtbl[7]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassInstanceName, InstanceIndex, ppInstance);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::CreateClassInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateClassInstance(byte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance)
+	public HRESULT CreateClassInstance(byte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11ClassLinkage*, byte*, uint, uint, uint, uint, ID3D11ClassInstance**, int>)(lpVtbl[8]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassTypeName, ConstantBufferOffset, ConstantVectorOffset, TextureOffset, SamplerOffset, ppInstance);
 	}
@@ -121,10 +121,10 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		HResult GetClassInstance(byte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance);
+		HRESULT GetClassInstance(byte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance);
 
 		[VtblIndex(8)]
-		HResult CreateClassInstance(byte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance);
+		HRESULT CreateClassInstance(byte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance);
 	}
 }
 

@@ -28,7 +28,7 @@ public partial struct DXGI_SWAP_CHAIN_DESC1
     /// </param>
     /// <param name="swapEffect">
     /// A <see cref="DXGI_SWAP_EFFECT"/> value that describes the presentation model that is used by the swap chain and options for handling the contents of the presentation buffer after presenting a surface.
-    /// You must specify the <see cref="DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"/> value when you call the <see cref="IDXGIFactory2.CreateSwapChainForComposition(IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**)"/> method because this method supports only flip presentation model.
+    /// You must specify the <see cref="DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"/> value when you call the <see cref="IDXGIFactory2.CreateSwapChainForComposition(IUnknown*, DXGI_SWAP_CHAIN_DESC1*, IDXGIOutput*, IDXGISwapChain1**)"/> method because this method supports only flip presentation model.
     /// </param>
     /// <param name="alphaMode">
     /// A <see cref="DXGI_ALPHA_MODE"/> value that identifies the transparency behavior of the swap-chain back buffer.

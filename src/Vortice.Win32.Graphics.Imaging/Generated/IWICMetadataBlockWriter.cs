@@ -47,7 +47,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetContainerFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetContainerFormat(Guid* pguidContainerFormat)
+	public HRESULT GetContainerFormat(Guid* pguidContainerFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, Guid*, int>)(lpVtbl[3]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pguidContainerFormat);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetCount" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCount(uint* pcCount)
+	public HRESULT GetCount(uint* pcCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, uint*, int>)(lpVtbl[4]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pcCount);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetReaderByIndex" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader)
+	public HRESULT GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
+	public HRESULT GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::InitializeFromBlockReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader)
+	public HRESULT InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, IWICMetadataBlockReader*, int>)(lpVtbl[7]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMDBlockReader);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::GetWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter)
+	public HRESULT GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter**, int>)(lpVtbl[8]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataWriter);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::AddWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult AddWriter(IWICMetadataWriter* pIMetadataWriter)
+	public HRESULT AddWriter(IWICMetadataWriter* pIMetadataWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, IWICMetadataWriter*, int>)(lpVtbl[9]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMetadataWriter);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::SetWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter)
+	public HRESULT SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter*, int>)(lpVtbl[10]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, pIMetadataWriter);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::RemoveWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult RemoveWriterByIndex(uint nIndex)
+	public HRESULT RemoveWriterByIndex(uint nIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataBlockWriter*, uint, int>)(lpVtbl[11]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex);
 	}
@@ -145,19 +145,19 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	public interface Interface : IWICMetadataBlockReader.Interface
 	{
 		[VtblIndex(7)]
-		HResult InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader);
+		HRESULT InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader);
 
 		[VtblIndex(8)]
-		HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter);
+		HRESULT GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter);
 
 		[VtblIndex(9)]
-		HResult AddWriter(IWICMetadataWriter* pIMetadataWriter);
+		HRESULT AddWriter(IWICMetadataWriter* pIMetadataWriter);
 
 		[VtblIndex(10)]
-		HResult SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter);
+		HRESULT SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter);
 
 		[VtblIndex(11)]
-		HResult RemoveWriterByIndex(uint nIndex);
+		HRESULT RemoveWriterByIndex(uint nIndex);
 	}
 }
 

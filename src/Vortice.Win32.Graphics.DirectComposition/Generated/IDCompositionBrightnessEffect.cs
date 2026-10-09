@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInput(uint index, IUnknown* input, uint flags)
+	public HRESULT SetInput(uint index, IUnknown* input, uint flags)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetWhitePoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetWhitePoint(Vector2* whitePoint)
+	public HRESULT SetWhitePoint(Vector2* whitePoint)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, Vector2*, int>)(lpVtbl[4]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), whitePoint);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetBlackPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetBlackPoint(Vector2* blackPoint)
+	public HRESULT SetBlackPoint(Vector2* blackPoint)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, Vector2*, int>)(lpVtbl[5]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), blackPoint);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetWhitePointX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetWhitePointX(IDCompositionAnimation* animation)
+	public HRESULT SetWhitePointX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, IDCompositionAnimation*, int>)(lpVtbl[6]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetWhitePointX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetWhitePointX(float whitePointX)
+	public HRESULT SetWhitePointX(float whitePointX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, float, int>)(lpVtbl[7]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), whitePointX);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetWhitePointY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetWhitePointY(IDCompositionAnimation* animation)
+	public HRESULT SetWhitePointY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, IDCompositionAnimation*, int>)(lpVtbl[8]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetWhitePointY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetWhitePointY(float whitePointY)
+	public HRESULT SetWhitePointY(float whitePointY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, float, int>)(lpVtbl[9]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), whitePointY);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetBlackPointX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetBlackPointX(IDCompositionAnimation* animation)
+	public HRESULT SetBlackPointX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, IDCompositionAnimation*, int>)(lpVtbl[10]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetBlackPointX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetBlackPointX(float blackPointX)
+	public HRESULT SetBlackPointX(float blackPointX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, float, int>)(lpVtbl[11]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), blackPointX);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetBlackPointY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetBlackPointY(IDCompositionAnimation* animation)
+	public HRESULT SetBlackPointY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, IDCompositionAnimation*, int>)(lpVtbl[12]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionBrightnessEffect::SetBlackPointY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult SetBlackPointY(float blackPointY)
+	public HRESULT SetBlackPointY(float blackPointY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionBrightnessEffect*, float, int>)(lpVtbl[13]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), blackPointY);
 	}
@@ -161,34 +161,34 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetWhitePoint(Vector2* whitePoint);
+		HRESULT SetWhitePoint(Vector2* whitePoint);
 
 		[VtblIndex(5)]
-		HResult SetBlackPoint(Vector2* blackPoint);
+		HRESULT SetBlackPoint(Vector2* blackPoint);
 
 		[VtblIndex(6)]
-		HResult SetWhitePointX(IDCompositionAnimation* animation);
+		HRESULT SetWhitePointX(IDCompositionAnimation* animation);
 
 		[VtblIndex(7)]
-		HResult SetWhitePointX(float whitePointX);
+		HRESULT SetWhitePointX(float whitePointX);
 
 		[VtblIndex(8)]
-		HResult SetWhitePointY(IDCompositionAnimation* animation);
+		HRESULT SetWhitePointY(IDCompositionAnimation* animation);
 
 		[VtblIndex(9)]
-		HResult SetWhitePointY(float whitePointY);
+		HRESULT SetWhitePointY(float whitePointY);
 
 		[VtblIndex(10)]
-		HResult SetBlackPointX(IDCompositionAnimation* animation);
+		HRESULT SetBlackPointX(IDCompositionAnimation* animation);
 
 		[VtblIndex(11)]
-		HResult SetBlackPointX(float blackPointX);
+		HRESULT SetBlackPointX(float blackPointX);
 
 		[VtblIndex(12)]
-		HResult SetBlackPointY(IDCompositionAnimation* animation);
+		HRESULT SetBlackPointY(IDCompositionAnimation* animation);
 
 		[VtblIndex(13)]
-		HResult SetBlackPointY(float blackPointY);
+		HRESULT SetBlackPointY(float blackPointY);
 	}
 }
 

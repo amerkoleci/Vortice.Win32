@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Linker*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Linker*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::Link"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Link(ID3D11ModuleInstance* pEntry, byte* pEntryName, byte* pTargetName, uint uFlags, ID3DBlob** ppShaderBlob, ID3DBlob** ppErrorBuffer)
+	public HRESULT Link(ID3D11ModuleInstance* pEntry, byte* pEntryName, byte* pTargetName, uint uFlags, ID3DBlob** ppShaderBlob, ID3DBlob** ppErrorBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Linker*, ID3D11ModuleInstance*, byte*, byte*, uint, ID3DBlob**, ID3DBlob**, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::UseLibrary"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult UseLibrary(ID3D11ModuleInstance* pLibraryMI)
+	public HRESULT UseLibrary(ID3D11ModuleInstance* pLibraryMI)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Linker*, ID3D11ModuleInstance*, int>)(lpVtbl[4]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pLibraryMI);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::AddClipPlaneFromCBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry)
+	public HRESULT AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11Linker*, uint, uint, int>)(lpVtbl[5]))((ID3D11Linker*)Unsafe.AsPointer(ref this), uCBufferSlot, uCBufferEntry);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Link(ID3D11ModuleInstance* pEntry, byte* pEntryName, byte* pTargetName, uint uFlags, ID3DBlob** ppShaderBlob, ID3DBlob** ppErrorBuffer);
+		HRESULT Link(ID3D11ModuleInstance* pEntry, byte* pEntryName, byte* pTargetName, uint uFlags, ID3DBlob** ppShaderBlob, ID3DBlob** ppErrorBuffer);
 
 		[VtblIndex(4)]
-		HResult UseLibrary(ID3D11ModuleInstance* pLibraryMI);
+		HRESULT UseLibrary(ID3D11ModuleInstance* pLibraryMI);
 
 		[VtblIndex(5)]
-		HResult AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry);
+		HRESULT AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry);
 	}
 }
 

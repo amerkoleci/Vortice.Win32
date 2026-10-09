@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetProfile(byte* profile, uint profileSize)
+	public HRESULT GetProfile(byte* profile, uint profileSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ColorContext*, byte*, uint, int>)(lpVtbl[6]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this), profile, profileSize);
 	}
@@ -111,7 +111,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 		uint GetProfileSize();
 
 		[VtblIndex(6)]
-		HResult GetProfile(byte* profile, uint profileSize);
+		HRESULT GetProfile(byte* profile, uint profileSize);
 	}
 }
 

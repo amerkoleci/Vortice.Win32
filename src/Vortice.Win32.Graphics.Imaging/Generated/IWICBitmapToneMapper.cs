@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPixelFormat(Guid* pPixelFormat)
+	public HRESULT GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, Guid*, int>)(lpVtbl[4]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResolution(double* pDpiX, double* pDpiY)
+	public HRESULT GetResolution(double* pDpiX, double* pDpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, double*, double*, int>)(lpVtbl[5]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CopyPalette(IWICPalette* pIPalette)
+	public HRESULT CopyPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, IWICPalette*, int>)(lpVtbl[6]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapToneMapper::InitializeForHdrTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult InitializeForHdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, float fLuminanceInNits, float fWhiteLevelInNits, WICBitmapToneMappingMode mode)
+	public HRESULT InitializeForHdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, float fLuminanceInNits, float fWhiteLevelInNits, WICBitmapToneMappingMode mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, IWICBitmapSource*, Guid*, float, float, WICBitmapToneMappingMode, int>)(lpVtbl[8]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), pISource, guidDstFormat, fLuminanceInNits, fWhiteLevelInNits, mode);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapToneMapper::InitializeForSdrTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult InitializeForSdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, WICBitmapToneMappingMode mode)
+	public HRESULT InitializeForSdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, WICBitmapToneMappingMode mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapToneMapper*, IWICBitmapSource*, Guid*, WICBitmapToneMappingMode, int>)(lpVtbl[9]))((IWICBitmapToneMapper*)Unsafe.AsPointer(ref this), pISource, guidDstFormat, mode);
 	}
@@ -129,10 +129,10 @@ public unsafe partial struct IWICBitmapToneMapper : IWICBitmapToneMapper.Interfa
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]
-		HResult InitializeForHdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, float fLuminanceInNits, float fWhiteLevelInNits, WICBitmapToneMappingMode mode);
+		HRESULT InitializeForHdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, float fLuminanceInNits, float fWhiteLevelInNits, WICBitmapToneMappingMode mode);
 
 		[VtblIndex(9)]
-		HResult InitializeForSdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, WICBitmapToneMappingMode mode);
+		HRESULT InitializeForSdrTarget(IWICBitmapSource* pISource, Guid* guidDstFormat, WICBitmapToneMappingMode mode);
 	}
 }
 

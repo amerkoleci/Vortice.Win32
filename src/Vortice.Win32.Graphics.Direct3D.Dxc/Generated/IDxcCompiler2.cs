@@ -46,7 +46,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler2*, Guid*, void**, int>)(lpVtbl[0]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -72,7 +72,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 	/// <inheritdoc cref="IDxcCompiler.Compile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Compile(IDxcBlob* pSource, char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult)
+	public HRESULT Compile(IDxcBlob* pSource, char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler2*, IDxcBlob*, char*, char*, char*, char**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult);
 	}
@@ -80,7 +80,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 	/// <inheritdoc cref="IDxcCompiler.Preprocess" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Preprocess(IDxcBlob* pSource, char* pSourceName, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult)
+	public HRESULT Preprocess(IDxcBlob* pSource, char* pSourceName, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler2*, IDxcBlob*, char*, char**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, pSourceName, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult);
 	}
@@ -88,14 +88,14 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 	/// <inheritdoc cref="IDxcCompiler.Disassemble" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Disassemble(IDxcBlob* pSource, IDxcBlobEncoding** ppDisassembly)
+	public HRESULT Disassemble(IDxcBlob* pSource, IDxcBlobEncoding** ppDisassembly)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler2*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, ppDisassembly);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CompileWithDebug(IDxcBlob* pSource, char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, char** ppDebugBlobName, IDxcBlob** ppDebugBlob)
+	public HRESULT CompileWithDebug(IDxcBlob* pSource, char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, char** ppDebugBlobName, IDxcBlob** ppDebugBlob)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler2*, IDxcBlob*, char*, char*, char*, char**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, char**, IDxcBlob**, int>)(lpVtbl[6]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult, ppDebugBlobName, ppDebugBlob);
 	}
@@ -103,7 +103,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 	public interface Interface : IDxcCompiler.Interface
 	{
 		[VtblIndex(6)]
-		HResult CompileWithDebug(IDxcBlob* pSource, char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, char** ppDebugBlobName, IDxcBlob** ppDebugBlob);
+		HRESULT CompileWithDebug(IDxcBlob* pSource, char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, char** ppDebugBlobName, IDxcBlob** ppDebugBlob);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	/// <inheritdoc cref="ID2D1GdiMetafile.Stream" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Stream(ID2D1GdiMetafileSink* sink)
+	public HRESULT Stream(ID2D1GdiMetafileSink* sink)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, ID2D1GdiMetafileSink*, int>)(lpVtbl[4]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), sink);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	/// <inheritdoc cref="ID2D1GdiMetafile.GetBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetBounds(Vortice.Win32.Numerics.RectF** bounds)
+	public HRESULT GetBounds(Vortice.Win32.Numerics.RectF** bounds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetDpi"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetDpi(float* dpiX, float* dpiY)
+	public HRESULT GetDpi(float* dpiX, float* dpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, float*, float*, int>)(lpVtbl[6]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), dpiX, dpiY);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetSourceBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetSourceBounds(Vortice.Win32.Numerics.RectF** bounds)
+	public HRESULT GetSourceBounds(Vortice.Win32.Numerics.RectF** bounds)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, Vortice.Win32.Numerics.RectF**, int>)(lpVtbl[7]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
 	}
@@ -113,10 +113,10 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	public interface Interface : ID2D1GdiMetafile.Interface
 	{
 		[VtblIndex(6)]
-		HResult GetDpi(float* dpiX, float* dpiY);
+		HRESULT GetDpi(float* dpiX, float* dpiY);
 
 		[VtblIndex(7)]
-		HResult GetSourceBounds(Vortice.Win32.Numerics.RectF** bounds);
+		HRESULT GetSourceBounds(Vortice.Win32.Numerics.RectF** bounds);
 	}
 }
 

@@ -8,7 +8,7 @@ namespace Vortice.Win32;
 /// </summary>
 /// <unmanaged>LUID</unmanaged>
 [NativeTypeName("LUID")]
-public struct Luid : IEquatable<Luid>
+public struct LUID : IEquatable<LUID>
     , ISpanFormattable
 {
     /// <summary>
@@ -23,7 +23,7 @@ public struct Luid : IEquatable<Luid>
 
     /// <inheritdoc/>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public readonly bool Equals(Luid other)
+    public readonly bool Equals(LUID other)
     {
         return
             LowPart == other.LowPart &&
@@ -33,7 +33,7 @@ public struct Luid : IEquatable<Luid>
     /// <inheritdoc/>
     public override readonly bool Equals(object? other)
     {
-        return other is Luid luid && Equals(luid);
+        return other is LUID luid && Equals(luid);
     }
 
     /// <inheritdoc/>
@@ -51,20 +51,20 @@ public struct Luid : IEquatable<Luid>
 
     public readonly long ToInt64()
     {
-        LargeInteger val = new();
+        LARGE_INTEGER val = new();
         val.Anonymous.LowPart = LowPart;
         val.Anonymous.HighPart = HighPart;
         return val.QuadPart;
     }
 
-    public static Luid FromInt64(long Int64)
+    public static LUID FromInt64(long Int64)
     {
-        LargeInteger val = new()
+        LARGE_INTEGER val = new()
         {
             QuadPart = Int64
         };
 
-        Luid luid = new()
+        LUID luid = new()
         {
             LowPart = val.Anonymous.LowPart,
             HighPart = val.Anonymous.HighPart
@@ -85,20 +85,20 @@ public struct Luid : IEquatable<Luid>
     }
 
     /// <summary>
-    /// Check whether two <see cref="Luid"/> values are equal.
+    /// Check whether two <see cref="LUID"/> values are equal.
     /// </summary>
-    /// <param name="left">The first <see cref="Luid"/> value to compare.</param>
-    /// <param name="right">The second <see cref="Luid"/> value to compare.</param>
+    /// <param name="left">The first <see cref="LUID"/> value to compare.</param>
+    /// <param name="right">The second <see cref="LUID"/> value to compare.</param>
     /// <returns>Whether <paramref name="left"/> and <paramref name="right"/> are the same.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static bool operator ==(Luid left, Luid right) => left.Equals(right);
+    public static bool operator ==(LUID left, LUID right) => left.Equals(right);
 
     /// <summary>
-    /// Check whether two <see cref="Luid"/> values are different.
+    /// Check whether two <see cref="LUID"/> values are different.
     /// </summary>
-    /// <param name="left">The first <see cref="Luid"/> value to compare.</param>
-    /// <param name="right">The second <see cref="Luid"/> value to compare.</param>
+    /// <param name="left">The first <see cref="LUID"/> value to compare.</param>
+    /// <param name="right">The second <see cref="LUID"/> value to compare.</param>
     /// <returns>Whether <paramref name="left"/> and <paramref name="right"/> are different.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static bool operator !=(Luid left, Luid right) => !left.Equals(right);
+    public static bool operator !=(LUID left, LUID right) => !left.Equals(right);
 }

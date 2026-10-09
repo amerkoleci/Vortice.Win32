@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <inheritdoc cref="ID2D1Transform.MapOutputRectToInputRects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount)
+	public HRESULT MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeTransform*, Rect*, Rect*, uint, int>)(lpVtbl[4]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <inheritdoc cref="ID2D1Transform.MapInputRectsToOutputRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect)
+	public HRESULT MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeTransform*, Rect*, Rect*, uint, Rect*, Rect*, int>)(lpVtbl[5]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <inheritdoc cref="ID2D1Transform.MapInvalidRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect)
+	public HRESULT MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeTransform*, uint, Rect, Rect*, int>)(lpVtbl[6]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::SetComputeInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetComputeInfo(ID2D1ComputeInfo* computeInfo)
+	public HRESULT SetComputeInfo(ID2D1ComputeInfo* computeInfo)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeTransform*, ID2D1ComputeInfo*, int>)(lpVtbl[7]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), computeInfo);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::CalculateThreadgroups"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CalculateThreadgroups(Rect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ)
+	public HRESULT CalculateThreadgroups(Rect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeTransform*, Rect*, uint*, uint*, uint*, int>)(lpVtbl[8]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, dimensionX, dimensionY, dimensionZ);
 	}
@@ -121,10 +121,10 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	public interface Interface : ID2D1Transform.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetComputeInfo(ID2D1ComputeInfo* computeInfo);
+		HRESULT SetComputeInfo(ID2D1ComputeInfo* computeInfo);
 
 		[VtblIndex(8)]
-		HResult CalculateThreadgroups(Rect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ);
+		HRESULT CalculateThreadgroups(Rect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ);
 	}
 }
 

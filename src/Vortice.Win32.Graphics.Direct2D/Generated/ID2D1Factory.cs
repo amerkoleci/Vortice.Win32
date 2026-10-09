@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Factory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::ReloadSystemMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReloadSystemMetrics()
+	public HRESULT ReloadSystemMetrics()
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, int>)(lpVtbl[3]))((ID2D1Factory*)Unsafe.AsPointer(ref this));
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateRectangleGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateRectangleGeometry(Vortice.Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
+	public HRESULT CreateRectangleGeometry(Vortice.Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, Vortice.Win32.Numerics.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateRoundedRectangleGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateRoundedRectangleGeometry(D2D1_ROUNDED_RECT* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry)
+	public HRESULT CreateRoundedRectangleGeometry(D2D1_ROUNDED_RECT* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_ROUNDED_RECT*, ID2D1RoundedRectangleGeometry**, int>)(lpVtbl[6]))((ID2D1Factory*)Unsafe.AsPointer(ref this), roundedRectangle, roundedRectangleGeometry);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateEllipseGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateEllipseGeometry(D2D1_ELLIPSE* ellipse, ID2D1EllipseGeometry** ellipseGeometry)
+	public HRESULT CreateEllipseGeometry(D2D1_ELLIPSE* ellipse, ID2D1EllipseGeometry** ellipseGeometry)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_ELLIPSE*, ID2D1EllipseGeometry**, int>)(lpVtbl[7]))((ID2D1Factory*)Unsafe.AsPointer(ref this), ellipse, ellipseGeometry);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateGeometryGroup"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateGeometryGroup(D2D1_FILL_MODE fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup)
+	public HRESULT CreateGeometryGroup(D2D1_FILL_MODE fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_FILL_MODE, ID2D1Geometry**, uint, ID2D1GeometryGroup**, int>)(lpVtbl[8]))((ID2D1Factory*)Unsafe.AsPointer(ref this), fillMode, geometries, geometriesCount, geometryGroup);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateTransformedGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateTransformedGeometry(ID2D1Geometry* sourceGeometry, Matrix3x2* transform, ID2D1TransformedGeometry** transformedGeometry)
+	public HRESULT CreateTransformedGeometry(ID2D1Geometry* sourceGeometry, Matrix3x2* transform, ID2D1TransformedGeometry** transformedGeometry)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, ID2D1Geometry*, Matrix3x2*, ID2D1TransformedGeometry**, int>)(lpVtbl[9]))((ID2D1Factory*)Unsafe.AsPointer(ref this), sourceGeometry, transform, transformedGeometry);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreatePathGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreatePathGeometry(ID2D1PathGeometry** pathGeometry)
+	public HRESULT CreatePathGeometry(ID2D1PathGeometry** pathGeometry)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, ID2D1PathGeometry**, int>)(lpVtbl[10]))((ID2D1Factory*)Unsafe.AsPointer(ref this), pathGeometry);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateStrokeStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle)
+	public HRESULT CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_STROKE_STYLE_PROPERTIES*, float*, uint, ID2D1StrokeStyle**, int>)(lpVtbl[11]))((ID2D1Factory*)Unsafe.AsPointer(ref this), strokeStyleProperties, dashes, dashesCount, strokeStyle);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateDrawingStateBlock"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION* drawingStateDescription, IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock)
+	public HRESULT CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION* drawingStateDescription, IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_DRAWING_STATE_DESCRIPTION*, IDWriteRenderingParams*, ID2D1DrawingStateBlock**, int>)(lpVtbl[12]))((ID2D1Factory*)Unsafe.AsPointer(ref this), drawingStateDescription, textRenderingParams, drawingStateBlock);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateWicBitmapRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateWicBitmapRenderTarget(IWICBitmap* target, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget)
+	public HRESULT CreateWicBitmapRenderTarget(IWICBitmap* target, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, IWICBitmap*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1RenderTarget**, int>)(lpVtbl[13]))((ID2D1Factory*)Unsafe.AsPointer(ref this), target, renderTargetProperties, renderTarget);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateHwndRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateHwndRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, D2D1_HWND_RENDER_TARGET_PROPERTIES* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget)
+	public HRESULT CreateHwndRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, D2D1_HWND_RENDER_TARGET_PROPERTIES* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_RENDER_TARGET_PROPERTIES*, D2D1_HWND_RENDER_TARGET_PROPERTIES*, ID2D1HwndRenderTarget**, int>)(lpVtbl[14]))((ID2D1Factory*)Unsafe.AsPointer(ref this), renderTargetProperties, hwndRenderTargetProperties, hwndRenderTarget);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateDxgiSurfaceRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateDxgiSurfaceRenderTarget(IDXGISurface* dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget)
+	public HRESULT CreateDxgiSurfaceRenderTarget(IDXGISurface* dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, IDXGISurface*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1RenderTarget**, int>)(lpVtbl[15]))((ID2D1Factory*)Unsafe.AsPointer(ref this), dxgiSurface, renderTargetProperties, renderTarget);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateDCRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateDCRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget)
+	public HRESULT CreateDCRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory*, D2D1_RENDER_TARGET_PROPERTIES*, ID2D1DCRenderTarget**, int>)(lpVtbl[16]))((ID2D1Factory*)Unsafe.AsPointer(ref this), renderTargetProperties, dcRenderTarget);
 	}
@@ -185,46 +185,46 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult ReloadSystemMetrics();
+		HRESULT ReloadSystemMetrics();
 
 		[VtblIndex(4)]
 		void GetDesktopDpi(float* dpiX, float* dpiY);
 
 		[VtblIndex(5)]
-		HResult CreateRectangleGeometry(Vortice.Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry);
+		HRESULT CreateRectangleGeometry(Vortice.Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry);
 
 		[VtblIndex(6)]
-		HResult CreateRoundedRectangleGeometry(D2D1_ROUNDED_RECT* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry);
+		HRESULT CreateRoundedRectangleGeometry(D2D1_ROUNDED_RECT* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry);
 
 		[VtblIndex(7)]
-		HResult CreateEllipseGeometry(D2D1_ELLIPSE* ellipse, ID2D1EllipseGeometry** ellipseGeometry);
+		HRESULT CreateEllipseGeometry(D2D1_ELLIPSE* ellipse, ID2D1EllipseGeometry** ellipseGeometry);
 
 		[VtblIndex(8)]
-		HResult CreateGeometryGroup(D2D1_FILL_MODE fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup);
+		HRESULT CreateGeometryGroup(D2D1_FILL_MODE fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup);
 
 		[VtblIndex(9)]
-		HResult CreateTransformedGeometry(ID2D1Geometry* sourceGeometry, Matrix3x2* transform, ID2D1TransformedGeometry** transformedGeometry);
+		HRESULT CreateTransformedGeometry(ID2D1Geometry* sourceGeometry, Matrix3x2* transform, ID2D1TransformedGeometry** transformedGeometry);
 
 		[VtblIndex(10)]
-		HResult CreatePathGeometry(ID2D1PathGeometry** pathGeometry);
+		HRESULT CreatePathGeometry(ID2D1PathGeometry** pathGeometry);
 
 		[VtblIndex(11)]
-		HResult CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle);
+		HRESULT CreateStrokeStyle(D2D1_STROKE_STYLE_PROPERTIES* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle);
 
 		[VtblIndex(12)]
-		HResult CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION* drawingStateDescription, IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock);
+		HRESULT CreateDrawingStateBlock(D2D1_DRAWING_STATE_DESCRIPTION* drawingStateDescription, IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock);
 
 		[VtblIndex(13)]
-		HResult CreateWicBitmapRenderTarget(IWICBitmap* target, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget);
+		HRESULT CreateWicBitmapRenderTarget(IWICBitmap* target, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget);
 
 		[VtblIndex(14)]
-		HResult CreateHwndRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, D2D1_HWND_RENDER_TARGET_PROPERTIES* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget);
+		HRESULT CreateHwndRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, D2D1_HWND_RENDER_TARGET_PROPERTIES* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget);
 
 		[VtblIndex(15)]
-		HResult CreateDxgiSurfaceRenderTarget(IDXGISurface* dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget);
+		HRESULT CreateDxgiSurfaceRenderTarget(IDXGISurface* dxgiSurface, D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1RenderTarget** renderTarget);
 
 		[VtblIndex(16)]
-		HResult CreateDCRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget);
+		HRESULT CreateDCRenderTarget(D2D1_RENDER_TARGET_PROPERTIES* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget);
 	}
 }
 

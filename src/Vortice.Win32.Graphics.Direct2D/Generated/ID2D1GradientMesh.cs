@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientMesh*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatches"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPatches(uint startIndex, D2D1_GRADIENT_MESH_PATCH* patches, uint patchesCount)
+	public HRESULT GetPatches(uint startIndex, D2D1_GRADIENT_MESH_PATCH* patches, uint patchesCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1GradientMesh*, uint, D2D1_GRADIENT_MESH_PATCH*, uint, int>)(lpVtbl[5]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), startIndex, patches, patchesCount);
 	}
@@ -100,7 +100,7 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 		uint GetPatchCount();
 
 		[VtblIndex(5)]
-		HResult GetPatches(uint startIndex, D2D1_GRADIENT_MESH_PATCH* patches, uint patchesCount);
+		HRESULT GetPatches(uint startIndex, D2D1_GRADIENT_MESH_PATCH* patches, uint patchesCount);
 	}
 }
 

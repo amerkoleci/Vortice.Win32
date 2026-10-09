@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, char*, int>)(lpVtbl[6]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.Signal" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Signal(ID3D12Fence* pFence, ulong Value)
+	public HRESULT Signal(ID3D12Fence* pFence, ulong Value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Fence*, ulong, int>)(lpVtbl[14]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.Wait" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult Wait(ID3D12Fence* pFence, ulong Value)
+	public HRESULT Wait(ID3D12Fence* pFence, ulong Value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ID3D12Fence*, ulong, int>)(lpVtbl[15]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.GetTimestampFrequency" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetTimestampFrequency(ulong* pFrequency)
+	public HRESULT GetTimestampFrequency(ulong* pFrequency)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ulong*, int>)(lpVtbl[16]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pFrequency);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <inheritdoc cref="ID3D12CommandQueue.GetClockCalibration" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp)
+	public HRESULT GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, ulong*, ulong*, int>)(lpVtbl[17]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pGpuTimestamp, pCpuTimestamp);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::SetProcessPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY Priority)
+	public HRESULT SetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY Priority)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_PROCESS_PRIORITY, int>)(lpVtbl[19]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Priority);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::GetProcessPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY* pOutValue)
+	public HRESULT GetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY* pOutValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_PROCESS_PRIORITY*, int>)(lpVtbl[20]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pOutValue);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::SetGlobalPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY Priority)
+	public HRESULT SetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY Priority)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY, int>)(lpVtbl[21]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), Priority);
 	}
@@ -225,7 +225,7 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue1::GetGlobalPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult GetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY* pOutValue)
+	public HRESULT GetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY* pOutValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue1*, D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY*, int>)(lpVtbl[22]))((ID3D12CommandQueue1*)Unsafe.AsPointer(ref this), pOutValue);
 	}
@@ -233,16 +233,16 @@ public unsafe partial struct ID3D12CommandQueue1 : ID3D12CommandQueue1.Interface
 	public interface Interface : ID3D12CommandQueue.Interface
 	{
 		[VtblIndex(19)]
-		HResult SetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY Priority);
+		HRESULT SetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY Priority);
 
 		[VtblIndex(20)]
-		HResult GetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY* pOutValue);
+		HRESULT GetProcessPriority(D3D12_COMMAND_QUEUE_PROCESS_PRIORITY* pOutValue);
 
 		[VtblIndex(21)]
-		HResult SetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY Priority);
+		HRESULT SetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY Priority);
 
 		[VtblIndex(22)]
-		HResult GetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY* pOutValue);
+		HRESULT GetGlobalPriority(D3D12_COMMAND_QUEUE_GLOBAL_PRIORITY* pOutValue);
 	}
 }
 

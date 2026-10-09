@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform*, System.Drawing.Rectangle*, uint, uint, Guid*, WICBitmapTransformOptions, uint, uint, byte*, int>)(lpVtbl[3]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), prc, uiWidth, uiHeight, pguidDstFormat, dstTransform, nStride, cbBufferSize, pbBuffer);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetClosestSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetClosestSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform*, uint*, uint*, int>)(lpVtbl[4]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetClosestPixelFormat(Guid* pguidDstFormat)
+	public HRESULT GetClosestPixelFormat(Guid* pguidDstFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform*, Guid*, int>)(lpVtbl[5]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), pguidDstFormat);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::DoesSupportTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported)
+	public HRESULT DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapSourceTransform*, WICBitmapTransformOptions, Bool32*, int>)(lpVtbl[6]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), dstTransform, pfIsSupported);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer);
+		HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer);
 
 		[VtblIndex(4)]
-		HResult GetClosestSize(uint* puiWidth, uint* puiHeight);
+		HRESULT GetClosestSize(uint* puiWidth, uint* puiHeight);
 
 		[VtblIndex(5)]
-		HResult GetClosestPixelFormat(Guid* pguidDstFormat);
+		HRESULT GetClosestPixelFormat(Guid* pguidDstFormat);
 
 		[VtblIndex(6)]
-		HResult DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported);
+		HRESULT DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported);
 	}
 }
 

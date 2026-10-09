@@ -38,7 +38,7 @@ public unsafe partial struct IStream : IStream.Interface, INativeGuid
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IStream*, Guid*, void**, int>)(lpVtbl[0]))((IStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -64,7 +64,7 @@ public unsafe partial struct IStream : IStream.Interface, INativeGuid
     /// <inheritdoc cref="ISequentialStream.Read" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult Read(void* pv, uint cb, uint* pcbRead)
+    public HRESULT Read(void* pv, uint cb, uint* pcbRead)
     {
         return ((delegate* unmanaged[MemberFunction]<IStream*, void*, uint, uint*, int>)(lpVtbl[3]))((IStream*)Unsafe.AsPointer(ref this), pv, cb, pcbRead);
     }
@@ -72,58 +72,58 @@ public unsafe partial struct IStream : IStream.Interface, INativeGuid
     /// <inheritdoc cref="ISequentialStream.Write" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult Write(void* pv, uint cb, uint* pcbWritten)
+    public HRESULT Write(void* pv, uint cb, uint* pcbWritten)
     {
         return ((delegate* unmanaged[MemberFunction]<IStream*, void*, uint, uint*, int>)(lpVtbl[4]))((IStream*)Unsafe.AsPointer(ref this), pv, cb, pcbWritten);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Seek(LargeInteger dlibMove, uint dwOrigin, ULargeInteger* plibNewPosition)
+    public HRESULT Seek(LARGE_INTEGER dlibMove, uint dwOrigin, ULARGE_INTEGER* plibNewPosition)
     {
-        return ((delegate* unmanaged[MemberFunction]<IStream*, LargeInteger, uint, ULargeInteger*, int>)(lpVtbl[5]))((IStream*)Unsafe.AsPointer(ref this), dlibMove, dwOrigin, plibNewPosition);
+        return ((delegate* unmanaged[MemberFunction]<IStream*, LARGE_INTEGER, uint, ULARGE_INTEGER*, int>)(lpVtbl[5]))((IStream*)Unsafe.AsPointer(ref this), dlibMove, dwOrigin, plibNewPosition);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult SetSize(ULargeInteger libNewSize)
+    public HRESULT SetSize(ULARGE_INTEGER libNewSize)
     {
-        return ((delegate* unmanaged[MemberFunction]<IStream*, ULargeInteger, int>)(lpVtbl[6]))((IStream*)Unsafe.AsPointer(ref this), libNewSize);
+        return ((delegate* unmanaged[MemberFunction]<IStream*, ULARGE_INTEGER, int>)(lpVtbl[6]))((IStream*)Unsafe.AsPointer(ref this), libNewSize);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
-    public HResult CopyTo(IStream* pstm, ULargeInteger cb, ULargeInteger* pcbRead, ULargeInteger* pcbWritten)
+    public HRESULT CopyTo(IStream* pstm, ULARGE_INTEGER cb, ULARGE_INTEGER* pcbRead, ULARGE_INTEGER* pcbWritten)
     {
-        return ((delegate* unmanaged[MemberFunction]<IStream*, IStream*, ULargeInteger, ULargeInteger*, ULargeInteger*, int>)(lpVtbl[7]))((IStream*)Unsafe.AsPointer(ref this), pstm, cb, pcbRead, pcbWritten);
+        return ((delegate* unmanaged[MemberFunction]<IStream*, IStream*, ULARGE_INTEGER, ULARGE_INTEGER*, ULARGE_INTEGER*, int>)(lpVtbl[7]))((IStream*)Unsafe.AsPointer(ref this), pstm, cb, pcbRead, pcbWritten);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(8)]
-    public HResult Commit(uint grfCommitFlags)
+    public HRESULT Commit(uint grfCommitFlags)
     {
         return ((delegate* unmanaged[MemberFunction]<IStream*, uint, int>)(lpVtbl[8]))((IStream*)Unsafe.AsPointer(ref this), grfCommitFlags);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(9)]
-    public HResult Revert()
+    public HRESULT Revert()
     {
         return ((delegate* unmanaged[MemberFunction]<IStream*, int>)(lpVtbl[9]))((IStream*)Unsafe.AsPointer(ref this));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(10)]
-    public HResult LockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType)
+    public HRESULT LockRegion(ULARGE_INTEGER libOffset, ULARGE_INTEGER cb, uint dwLockType)
     {
-        return ((delegate* unmanaged[MemberFunction]<IStream*, ULargeInteger, ULargeInteger, uint, int>)(lpVtbl[10]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
+        return ((delegate* unmanaged[MemberFunction]<IStream*, ULARGE_INTEGER, ULARGE_INTEGER, uint, int>)(lpVtbl[10]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(11)]
-    public HResult UnlockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType)
+    public HRESULT UnlockRegion(ULARGE_INTEGER libOffset, ULARGE_INTEGER cb, uint dwLockType)
     {
-        return ((delegate* unmanaged[MemberFunction]<IStream*, ULargeInteger, ULargeInteger, uint, int>)(lpVtbl[11]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
+        return ((delegate* unmanaged[MemberFunction]<IStream*, ULARGE_INTEGER, ULARGE_INTEGER, uint, int>)(lpVtbl[11]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
     }
 
     ///// <include file='IStream.xml' path='doc/member[@name="IStream.Stat"]/*' />
@@ -136,7 +136,7 @@ public unsafe partial struct IStream : IStream.Interface, INativeGuid
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(13)]
-    public HResult Clone(IStream** ppstm)
+    public HRESULT Clone(IStream** ppstm)
     {
         return ((delegate* unmanaged[MemberFunction]<IStream*, IStream**, int>)(lpVtbl[13]))((IStream*)Unsafe.AsPointer(ref this), ppstm);
     }
@@ -144,30 +144,30 @@ public unsafe partial struct IStream : IStream.Interface, INativeGuid
     public interface Interface : ISequentialStream.Interface
     {
         [VtblIndex(5)]
-        HResult Seek(LargeInteger dlibMove, uint dwOrigin, ULargeInteger* plibNewPosition);
+        HRESULT Seek(LARGE_INTEGER dlibMove, uint dwOrigin, ULARGE_INTEGER* plibNewPosition);
 
         [VtblIndex(6)]
-        HResult SetSize(ULargeInteger libNewSize);
+        HRESULT SetSize(ULARGE_INTEGER libNewSize);
 
         [VtblIndex(7)]
-        HResult CopyTo(IStream* pstm, ULargeInteger cb, ULargeInteger* pcbRead, ULargeInteger* pcbWritten);
+        HRESULT CopyTo(IStream* pstm, ULARGE_INTEGER cb, ULARGE_INTEGER* pcbRead, ULARGE_INTEGER* pcbWritten);
 
         [VtblIndex(8)]
-        HResult Commit( uint grfCommitFlags);
+        HRESULT Commit( uint grfCommitFlags);
 
         [VtblIndex(9)]
-        HResult Revert();
+        HRESULT Revert();
 
         [VtblIndex(10)]
-        HResult LockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType);
+        HRESULT LockRegion(ULARGE_INTEGER libOffset, ULARGE_INTEGER cb, uint dwLockType);
 
         [VtblIndex(11)]
-        HResult UnlockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType);
+        HRESULT UnlockRegion(ULARGE_INTEGER libOffset, ULARGE_INTEGER cb, uint dwLockType);
 
         //[VtblIndex(12)]
         //HResult Stat(STATSTG* pstatstg, [NativeTypeName("DWORD")] uint grfStatFlag);
 
         [VtblIndex(13)]
-        HResult Clone(IStream** ppstm);
+        HRESULT Clone(IStream** ppstm);
     }
 }

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetScriptAnalysis"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetScriptAnalysis(uint textPosition, uint textLength, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis)
+	public HRESULT SetScriptAnalysis(uint textPosition, uint textLength, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink*, uint, uint, DWRITE_SCRIPT_ANALYSIS*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, scriptAnalysis);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetLineBreakpoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetLineBreakpoints(uint textPosition, uint textLength, DWRITE_LINE_BREAKPOINT* lineBreakpoints)
+	public HRESULT SetLineBreakpoints(uint textPosition, uint textLength, DWRITE_LINE_BREAKPOINT* lineBreakpoints)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink*, uint, uint, DWRITE_LINE_BREAKPOINT*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, lineBreakpoints);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetBidiLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel)
+	public HRESULT SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink*, uint, uint, byte, byte, int>)(lpVtbl[5]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, explicitLevel, resolvedLevel);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetNumberSubstitution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)
+	public HRESULT SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSink*, uint, uint, IDWriteNumberSubstitution*, int>)(lpVtbl[6]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetScriptAnalysis(uint textPosition, uint textLength, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis);
+		HRESULT SetScriptAnalysis(uint textPosition, uint textLength, DWRITE_SCRIPT_ANALYSIS* scriptAnalysis);
 
 		[VtblIndex(4)]
-		HResult SetLineBreakpoints(uint textPosition, uint textLength, DWRITE_LINE_BREAKPOINT* lineBreakpoints);
+		HRESULT SetLineBreakpoints(uint textPosition, uint textLength, DWRITE_LINE_BREAKPOINT* lineBreakpoints);
 
 		[VtblIndex(5)]
-		HResult SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel);
+		HRESULT SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel);
 
 		[VtblIndex(6)]
-		HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution);
+		HRESULT SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution);
 	}
 }
 

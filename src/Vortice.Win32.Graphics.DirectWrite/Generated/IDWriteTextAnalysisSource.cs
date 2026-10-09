@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextAtPosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength)
+	public HRESULT GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextBeforePosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength)
+	public HRESULT GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName)
+	public HRESULT GetLocaleName(uint textPosition, uint* textLength, ushort** localeName)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, uint, uint*, ushort**, int>)(lpVtbl[6]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, localeName);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetNumberSubstitution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)
+	public HRESULT GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalysisSource*, uint, uint*, IDWriteNumberSubstitution**, int>)(lpVtbl[7]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
 	}
@@ -113,19 +113,19 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength);
+		HRESULT GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength);
 
 		[VtblIndex(4)]
-		HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength);
+		HRESULT GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength);
 
 		[VtblIndex(5)]
 		DWRITE_READING_DIRECTION GetParagraphReadingDirection();
 
 		[VtblIndex(6)]
-		HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName);
+		HRESULT GetLocaleName(uint textPosition, uint* textLength, ushort** localeName);
 
 		[VtblIndex(7)]
-		HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution);
+		HRESULT GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution);
 	}
 }
 

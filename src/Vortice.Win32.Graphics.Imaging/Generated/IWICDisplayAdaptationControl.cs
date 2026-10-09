@@ -47,7 +47,7 @@ public unsafe partial struct IWICDisplayAdaptationControl : IWICDisplayAdaptatio
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl*, Guid*, void**, int>)(lpVtbl[0]))((IWICDisplayAdaptationControl*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICDisplayAdaptationControl : IWICDisplayAdaptatio
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl::DoesSupportChangingMaxLuminance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DoesSupportChangingMaxLuminance(Guid* pguidDstFormat, Bool32* pfIsSupported)
+	public HRESULT DoesSupportChangingMaxLuminance(Guid* pguidDstFormat, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl*, Guid*, Bool32*, int>)(lpVtbl[3]))((IWICDisplayAdaptationControl*)Unsafe.AsPointer(ref this), pguidDstFormat, pfIsSupported);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICDisplayAdaptationControl : IWICDisplayAdaptatio
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl::SetDisplayMaxLuminance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetDisplayMaxLuminance(float fLuminanceInNits)
+	public HRESULT SetDisplayMaxLuminance(float fLuminanceInNits)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl*, float, int>)(lpVtbl[4]))((IWICDisplayAdaptationControl*)Unsafe.AsPointer(ref this), fLuminanceInNits);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICDisplayAdaptationControl : IWICDisplayAdaptatio
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDisplayAdaptationControl::GetDisplayMaxLuminance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetDisplayMaxLuminance(float* pfLuminanceInNits)
+	public HRESULT GetDisplayMaxLuminance(float* pfLuminanceInNits)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDisplayAdaptationControl*, float*, int>)(lpVtbl[5]))((IWICDisplayAdaptationControl*)Unsafe.AsPointer(ref this), pfLuminanceInNits);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IWICDisplayAdaptationControl : IWICDisplayAdaptatio
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult DoesSupportChangingMaxLuminance(Guid* pguidDstFormat, Bool32* pfIsSupported);
+		HRESULT DoesSupportChangingMaxLuminance(Guid* pguidDstFormat, Bool32* pfIsSupported);
 
 		[VtblIndex(4)]
-		HResult SetDisplayMaxLuminance(float fLuminanceInNits);
+		HRESULT SetDisplayMaxLuminance(float fLuminanceInNits);
 
 		[VtblIndex(5)]
-		HResult GetDisplayMaxLuminance(float* pfLuminanceInNits);
+		HRESULT GetDisplayMaxLuminance(float* pfLuminanceInNits);
 	}
 }
 

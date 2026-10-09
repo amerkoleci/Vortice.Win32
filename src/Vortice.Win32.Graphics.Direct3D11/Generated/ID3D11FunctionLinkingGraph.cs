@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::CreateModuleInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, ID3DBlob** ppErrorBuffer)
+	public HRESULT CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, ID3DBlob** ppErrorBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, ID3D11ModuleInstance**, ID3DBlob**, int>)(lpVtbl[3]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), ppModuleInstance, ppErrorBuffer);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::SetInputSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetInputSignature(D3D11_PARAMETER_DESC* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode)
+	public HRESULT SetInputSignature(D3D11_PARAMETER_DESC* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, D3D11_PARAMETER_DESC*, uint, ID3D11LinkingNode**, int>)(lpVtbl[4]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pInputParameters, cInputParameters, ppInputNode);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::SetOutputSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetOutputSignature(D3D11_PARAMETER_DESC* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode)
+	public HRESULT SetOutputSignature(D3D11_PARAMETER_DESC* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, D3D11_PARAMETER_DESC*, uint, ID3D11LinkingNode**, int>)(lpVtbl[5]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pOutputParameters, cOutputParameters, ppOutputNode);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::CallFunction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CallFunction(byte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, byte* pFunctionName, ID3D11LinkingNode** ppCallNode)
+	public HRESULT CallFunction(byte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, byte* pFunctionName, ID3D11LinkingNode** ppCallNode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, byte*, ID3D11Module*, byte*, ID3D11LinkingNode**, int>)(lpVtbl[6]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pModuleInstanceNamespace, pModuleWithFunctionPrototype, pFunctionName, ppCallNode);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::PassValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult PassValue(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, ID3D11LinkingNode* pDstNode, int DstParameterIndex)
+	public HRESULT PassValue(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, ID3D11LinkingNode* pDstNode, int DstParameterIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, ID3D11LinkingNode*, int, ID3D11LinkingNode*, int, int>)(lpVtbl[7]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pSrcNode, SrcParameterIndex, pDstNode, DstParameterIndex);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::PassValueWithSwizzle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, byte* pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, byte* pDstSwizzle)
+	public HRESULT PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, byte* pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, byte* pDstSwizzle)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, ID3D11LinkingNode*, int, byte*, ID3D11LinkingNode*, int, byte*, int>)(lpVtbl[8]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pSrcNode, SrcParameterIndex, pSrcSwizzle, pDstNode, DstParameterIndex, pDstSwizzle);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::GetLastError"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetLastError(ID3DBlob** ppErrorBuffer)
+	public HRESULT GetLastError(ID3DBlob** ppErrorBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, ID3DBlob**, int>)(lpVtbl[9]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), ppErrorBuffer);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::GenerateHlsl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GenerateHlsl(uint uFlags, ID3DBlob** ppBuffer)
+	public HRESULT GenerateHlsl(uint uFlags, ID3DBlob** ppBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11FunctionLinkingGraph*, uint, ID3DBlob**, int>)(lpVtbl[10]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), uFlags, ppBuffer);
 	}
@@ -137,28 +137,28 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingG
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, ID3DBlob** ppErrorBuffer);
+		HRESULT CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, ID3DBlob** ppErrorBuffer);
 
 		[VtblIndex(4)]
-		HResult SetInputSignature(D3D11_PARAMETER_DESC* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode);
+		HRESULT SetInputSignature(D3D11_PARAMETER_DESC* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode);
 
 		[VtblIndex(5)]
-		HResult SetOutputSignature(D3D11_PARAMETER_DESC* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode);
+		HRESULT SetOutputSignature(D3D11_PARAMETER_DESC* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode);
 
 		[VtblIndex(6)]
-		HResult CallFunction(byte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, byte* pFunctionName, ID3D11LinkingNode** ppCallNode);
+		HRESULT CallFunction(byte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, byte* pFunctionName, ID3D11LinkingNode** ppCallNode);
 
 		[VtblIndex(7)]
-		HResult PassValue(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, ID3D11LinkingNode* pDstNode, int DstParameterIndex);
+		HRESULT PassValue(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, ID3D11LinkingNode* pDstNode, int DstParameterIndex);
 
 		[VtblIndex(8)]
-		HResult PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, byte* pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, byte* pDstSwizzle);
+		HRESULT PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, byte* pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, byte* pDstSwizzle);
 
 		[VtblIndex(9)]
-		HResult GetLastError(ID3DBlob** ppErrorBuffer);
+		HRESULT GetLastError(ID3DBlob** ppErrorBuffer);
 
 		[VtblIndex(10)]
-		HResult GenerateHlsl(uint uFlags, ID3DBlob** ppBuffer);
+		HRESULT GenerateHlsl(uint uFlags, ID3DBlob** ppBuffer);
 	}
 }
 

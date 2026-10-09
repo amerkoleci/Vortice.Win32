@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontFaceReference" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
+	public HRESULT AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFaceReference*, DWRITE_FONT_PROPERTY*, uint, int>)(lpVtbl[3]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFaceReference, properties, propertyCount);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontFaceReference" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference)
+	public HRESULT AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFaceReference*, int>)(lpVtbl[4]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFaceReference);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder.AddFontSet" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult AddFontSet(IDWriteFontSet* fontSet)
+	public HRESULT AddFontSet(IDWriteFontSet* fontSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontSet*, int>)(lpVtbl[5]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontSet);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder.CreateFontSet" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateFontSet(IDWriteFontSet** fontSet)
+	public HRESULT CreateFontSet(IDWriteFontSet** fontSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontSet**, int>)(lpVtbl[6]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontSet);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <inheritdoc cref="IDWriteFontSetBuilder1.AddFontFile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult AddFontFile(IDWriteFontFile* fontFile)
+	public HRESULT AddFontFile(IDWriteFontFile* fontFile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFile*, int>)(lpVtbl[7]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFile);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
+	public HRESULT AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount, DWRITE_FONT_PROPERTY* properties, uint propertyCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, IDWriteFontFile*, uint, DWRITE_FONT_SIMULATIONS, DWRITE_FONT_AXIS_VALUE*, uint, DWRITE_FONT_AXIS_RANGE*, uint, DWRITE_FONT_PROPERTY*, uint, int>)(lpVtbl[8]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFile, fontFaceIndex, fontSimulations, fontAxisValues, fontAxisValueCount, fontAxisRanges, fontAxisRangeCount, properties, propertyCount);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult AddFontFile(char* filePath)
+	public HRESULT AddFontFile(char* filePath)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, char*, int>)(lpVtbl[9]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), filePath);
 	}
@@ -129,10 +129,10 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	public interface Interface : IDWriteFontSetBuilder1.Interface
 	{
 		[VtblIndex(8)]
-		HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount, DWRITE_FONT_PROPERTY* properties, uint propertyCount);
+		HRESULT AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, DWRITE_FONT_SIMULATIONS fontSimulations, DWRITE_FONT_AXIS_VALUE* fontAxisValues, uint fontAxisValueCount, DWRITE_FONT_AXIS_RANGE* fontAxisRanges, uint fontAxisRangeCount, DWRITE_FONT_PROPERTY* properties, uint propertyCount);
 
 		[VtblIndex(9)]
-		HResult AddFontFile(char* filePath);
+		HRESULT AddFontFile(char* filePath);
 	}
 }
 

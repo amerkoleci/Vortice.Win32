@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::AddSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult AddSprites(uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
+	public HRESULT AddSprites(uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[4]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::SetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
+	public HRESULT SetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, uint, Vortice.Win32.Numerics.RectF*, Vortice.Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[5]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF** destinationRectangles, Vortice.Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms)
+	public HRESULT GetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF** destinationRectangles, Vortice.Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SpriteBatch*, uint, uint, Vortice.Win32.Numerics.RectF**, Vortice.Win32.Numerics.Rect**, Color4**, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
 	}
@@ -121,13 +121,13 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult AddSprites(uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
+		HRESULT AddSprites(uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
 
 		[VtblIndex(5)]
-		HResult SetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
+		HRESULT SetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF* destinationRectangles, Vortice.Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
 
 		[VtblIndex(6)]
-		HResult GetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF** destinationRectangles, Vortice.Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms);
+		HRESULT GetSprites(uint startIndex, uint spriteCount, Vortice.Win32.Numerics.RectF** destinationRectangles, Vortice.Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms);
 
 		[VtblIndex(7)]
 		uint GetSpriteCount();

@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.Commit" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Commit()
+	public HRESULT Commit()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, int>)(lpVtbl[3]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this));
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.WaitForCommitCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult WaitForCommitCompletion()
+	public HRESULT WaitForCommitCompletion()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, int>)(lpVtbl[4]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this));
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.GetFrameStatistics" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFrameStatistics(DCOMPOSITION_FRAME_STATISTICS* statistics)
+	public HRESULT GetFrameStatistics(DCOMPOSITION_FRAME_STATISTICS* statistics)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, DCOMPOSITION_FRAME_STATISTICS*, int>)(lpVtbl[5]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), statistics);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateVisual" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateVisual(IDCompositionVisual2** visual)
+	public HRESULT CreateVisual(IDCompositionVisual2** visual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionVisual2**, int>)(lpVtbl[6]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), visual);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateSurfaceFactory" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateSurfaceFactory(IUnknown* renderingDevice, IDCompositionSurfaceFactory** surfaceFactory)
+	public HRESULT CreateSurfaceFactory(IUnknown* renderingDevice, IDCompositionSurfaceFactory** surfaceFactory)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IUnknown*, IDCompositionSurfaceFactory**, int>)(lpVtbl[7]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), renderingDevice, surfaceFactory);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSurface(uint width, uint height, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
+	public HRESULT CreateSurface(uint width, uint height, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionSurface** surface)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateVirtualSurface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
+	public HRESULT CreateVirtualSurface(uint initialWidth, uint initialHeight, DXGI_FORMAT pixelFormat, DXGI_ALPHA_MODE alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, uint, uint, DXGI_FORMAT, DXGI_ALPHA_MODE, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateTranslateTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateTranslateTransform(IDCompositionTranslateTransform** translateTransform)
+	public HRESULT CreateTranslateTransform(IDCompositionTranslateTransform** translateTransform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionTranslateTransform**, int>)(lpVtbl[10]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), translateTransform);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateScaleTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateScaleTransform(IDCompositionScaleTransform** scaleTransform)
+	public HRESULT CreateScaleTransform(IDCompositionScaleTransform** scaleTransform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionScaleTransform**, int>)(lpVtbl[11]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), scaleTransform);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateRotateTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateRotateTransform(IDCompositionRotateTransform** rotateTransform)
+	public HRESULT CreateRotateTransform(IDCompositionRotateTransform** rotateTransform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionRotateTransform**, int>)(lpVtbl[12]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), rotateTransform);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateSkewTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateSkewTransform(IDCompositionSkewTransform** skewTransform)
+	public HRESULT CreateSkewTransform(IDCompositionSkewTransform** skewTransform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionSkewTransform**, int>)(lpVtbl[13]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), skewTransform);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateMatrixTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateMatrixTransform(IDCompositionMatrixTransform** matrixTransform)
+	public HRESULT CreateMatrixTransform(IDCompositionMatrixTransform** matrixTransform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionMatrixTransform**, int>)(lpVtbl[14]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), matrixTransform);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateTransformGroup" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateTransformGroup(IDCompositionTransform** transforms, uint elements, IDCompositionTransform** transformGroup)
+	public HRESULT CreateTransformGroup(IDCompositionTransform** transforms, uint elements, IDCompositionTransform** transformGroup)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionTransform**, uint, IDCompositionTransform**, int>)(lpVtbl[15]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), transforms, elements, transformGroup);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateTranslateTransform3D" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateTranslateTransform3D(IDCompositionTranslateTransform3D** translateTransform3D)
+	public HRESULT CreateTranslateTransform3D(IDCompositionTranslateTransform3D** translateTransform3D)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionTranslateTransform3D**, int>)(lpVtbl[16]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), translateTransform3D);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateScaleTransform3D" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CreateScaleTransform3D(IDCompositionScaleTransform3D** scaleTransform3D)
+	public HRESULT CreateScaleTransform3D(IDCompositionScaleTransform3D** scaleTransform3D)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionScaleTransform3D**, int>)(lpVtbl[17]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), scaleTransform3D);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateRotateTransform3D" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateRotateTransform3D(IDCompositionRotateTransform3D** rotateTransform3D)
+	public HRESULT CreateRotateTransform3D(IDCompositionRotateTransform3D** rotateTransform3D)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionRotateTransform3D**, int>)(lpVtbl[18]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), rotateTransform3D);
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateMatrixTransform3D" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateMatrixTransform3D(IDCompositionMatrixTransform3D** matrixTransform3D)
+	public HRESULT CreateMatrixTransform3D(IDCompositionMatrixTransform3D** matrixTransform3D)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionMatrixTransform3D**, int>)(lpVtbl[19]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), matrixTransform3D);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateTransform3DGroup" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateTransform3DGroup(IDCompositionTransform3D** transforms3D, uint elements, IDCompositionTransform3D** transform3DGroup)
+	public HRESULT CreateTransform3DGroup(IDCompositionTransform3D** transforms3D, uint elements, IDCompositionTransform3D** transform3DGroup)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionTransform3D**, uint, IDCompositionTransform3D**, int>)(lpVtbl[20]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), transforms3D, elements, transform3DGroup);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateEffectGroup" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateEffectGroup(IDCompositionEffectGroup** effectGroup)
+	public HRESULT CreateEffectGroup(IDCompositionEffectGroup** effectGroup)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionEffectGroup**, int>)(lpVtbl[21]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), effectGroup);
 	}
@@ -225,7 +225,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateRectangleClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateRectangleClip(IDCompositionRectangleClip** clip)
+	public HRESULT CreateRectangleClip(IDCompositionRectangleClip** clip)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionRectangleClip**, int>)(lpVtbl[22]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), clip);
 	}
@@ -233,7 +233,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <inheritdoc cref="IDCompositionDevice2.CreateAnimation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult CreateAnimation(IDCompositionAnimation** animation)
+	public HRESULT CreateAnimation(IDCompositionAnimation** animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, IDCompositionAnimation**, int>)(lpVtbl[23]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -241,7 +241,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDesktopDevice::CreateTargetForHwnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CreateTargetForHwnd(nint hwnd, Bool32 topmost, IDCompositionTarget** target)
+	public HRESULT CreateTargetForHwnd(nint hwnd, Bool32 topmost, IDCompositionTarget** target)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, nint, Bool32, IDCompositionTarget**, int>)(lpVtbl[24]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), hwnd, topmost, target);
 	}
@@ -249,15 +249,15 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDesktopDevice::CreateSurfaceFromHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult CreateSurfaceFromHandle(Handle handle, IUnknown** surface)
+	public HRESULT CreateSurfaceFromHandle(HANDLE handle, IUnknown** surface)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, Handle, IUnknown**, int>)(lpVtbl[25]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), handle, surface);
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, HANDLE, IUnknown**, int>)(lpVtbl[25]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), handle, surface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDesktopDevice::CreateSurfaceFromHwnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult CreateSurfaceFromHwnd(nint hwnd, IUnknown** surface)
+	public HRESULT CreateSurfaceFromHwnd(nint hwnd, IUnknown** surface)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionDesktopDevice*, nint, IUnknown**, int>)(lpVtbl[26]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), hwnd, surface);
 	}
@@ -265,13 +265,13 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	public interface Interface : IDCompositionDevice2.Interface
 	{
 		[VtblIndex(24)]
-		HResult CreateTargetForHwnd(nint hwnd, Bool32 topmost, IDCompositionTarget** target);
+		HRESULT CreateTargetForHwnd(nint hwnd, Bool32 topmost, IDCompositionTarget** target);
 
 		[VtblIndex(25)]
-		HResult CreateSurfaceFromHandle(Handle handle, IUnknown** surface);
+		HRESULT CreateSurfaceFromHandle(HANDLE handle, IUnknown** surface);
 
 		[VtblIndex(26)]
-		HResult CreateSurfaceFromHwnd(nint hwnd, IUnknown** surface);
+		HRESULT CreateSurfaceFromHwnd(nint hwnd, IUnknown** surface);
 	}
 }
 

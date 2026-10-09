@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetSingleTransformNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetSingleTransformNode(ID2D1TransformNode* node)
+	public HRESULT SetSingleTransformNode(ID2D1TransformNode* node)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[4]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::AddNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult AddNode(ID2D1TransformNode* node)
+	public HRESULT AddNode(ID2D1TransformNode* node)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[5]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::RemoveNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult RemoveNode(ID2D1TransformNode* node)
+	public HRESULT RemoveNode(ID2D1TransformNode* node)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[6]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetOutputNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetOutputNode(ID2D1TransformNode* node)
+	public HRESULT SetOutputNode(ID2D1TransformNode* node)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[7]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex)
+	public HRESULT ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, ID2D1TransformNode*, uint, int>)(lpVtbl[8]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), fromNode, toNode, toNodeInputIndex);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectToEffectInput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex)
+	public HRESULT ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint, ID2D1TransformNode*, uint, int>)(lpVtbl[9]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), toEffectInputIndex, node, toNodeInputIndex);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetPassthroughGraph"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetPassthroughGraph(uint effectInputIndex)
+	public HRESULT SetPassthroughGraph(uint effectInputIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint, int>)(lpVtbl[11]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), effectInputIndex);
 	}
@@ -148,28 +148,28 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 		uint GetInputCount();
 
 		[VtblIndex(4)]
-		HResult SetSingleTransformNode(ID2D1TransformNode* node);
+		HRESULT SetSingleTransformNode(ID2D1TransformNode* node);
 
 		[VtblIndex(5)]
-		HResult AddNode(ID2D1TransformNode* node);
+		HRESULT AddNode(ID2D1TransformNode* node);
 
 		[VtblIndex(6)]
-		HResult RemoveNode(ID2D1TransformNode* node);
+		HRESULT RemoveNode(ID2D1TransformNode* node);
 
 		[VtblIndex(7)]
-		HResult SetOutputNode(ID2D1TransformNode* node);
+		HRESULT SetOutputNode(ID2D1TransformNode* node);
 
 		[VtblIndex(8)]
-		HResult ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex);
+		HRESULT ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex);
 
 		[VtblIndex(9)]
-		HResult ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex);
+		HRESULT ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex);
 
 		[VtblIndex(10)]
 		void Clear();
 
 		[VtblIndex(11)]
-		HResult SetPassthroughGraph(uint effectInputIndex);
+		HRESULT SetPassthroughGraph(uint effectInputIndex);
 	}
 }
 

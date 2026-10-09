@@ -47,7 +47,7 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgGlyphStyle*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::SetFill"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetFill(ID2D1Brush* brush)
+	public HRESULT SetFill(ID2D1Brush* brush)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgGlyphStyle*, ID2D1Brush*, int>)(lpVtbl[4]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::SetStroke"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetStroke(ID2D1Brush* brush, float strokeWidth, float* dashes, uint dashesCount, float dashOffset)
+	public HRESULT SetStroke(ID2D1Brush* brush, float strokeWidth, float* dashes, uint dashesCount, float dashOffset)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgGlyphStyle*, ID2D1Brush*, float, float*, uint, float, int>)(lpVtbl[6]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush, strokeWidth, dashes, dashesCount, dashOffset);
 	}
@@ -121,13 +121,13 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]
-		HResult SetFill(ID2D1Brush* brush);
+		HRESULT SetFill(ID2D1Brush* brush);
 
 		[VtblIndex(5)]
 		void GetFill(ID2D1Brush** brush);
 
 		[VtblIndex(6)]
-		HResult SetStroke(ID2D1Brush* brush, float strokeWidth, float* dashes, uint dashesCount, float dashOffset);
+		HRESULT SetStroke(ID2D1Brush* brush, float strokeWidth, float* dashes, uint dashesCount, float dashOffset);
 
 		[VtblIndex(7)]
 		uint GetStrokeDashesCount();

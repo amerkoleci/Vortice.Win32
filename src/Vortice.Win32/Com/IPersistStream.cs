@@ -43,7 +43,7 @@ public unsafe partial struct IPersistStream : IPersistStream.Interface, INativeG
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[MemberFunction]<IPersistStream*, Guid*, void**, int>)(lpVtbl[0]))((IPersistStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -69,51 +69,51 @@ public unsafe partial struct IPersistStream : IPersistStream.Interface, INativeG
     /// <inheritdoc cref="IPersist.GetClassID" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public HResult GetClassID([NativeTypeName("CLSID *")] Guid* pClassID)
+    public HRESULT GetClassID([NativeTypeName("CLSID *")] Guid* pClassID)
     {
         return ((delegate* unmanaged[MemberFunction]<IPersistStream*, Guid*, int>)(lpVtbl[3]))((IPersistStream*)Unsafe.AsPointer(ref this), pClassID);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult IsDirty()
+    public HRESULT IsDirty()
     {
         return ((delegate* unmanaged[MemberFunction]<IPersistStream*, int>)(lpVtbl[4]))((IPersistStream*)Unsafe.AsPointer(ref this));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Load(IStream* pStm)
+    public HRESULT Load(IStream* pStm)
     {
         return ((delegate* unmanaged[MemberFunction]<IPersistStream*, IStream*, int>)(lpVtbl[5]))((IPersistStream*)Unsafe.AsPointer(ref this), pStm);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult Save(IStream* pStm, Bool32 fClearDirty)
+    public HRESULT Save(IStream* pStm, Bool32 fClearDirty)
     {
         return ((delegate* unmanaged[MemberFunction]<IPersistStream*, IStream*, Bool32, int>)(lpVtbl[6]))((IPersistStream*)Unsafe.AsPointer(ref this), pStm, fClearDirty);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
-    public HResult GetSizeMax(ULargeInteger* pcbSize)
+    public HRESULT GetSizeMax(ULARGE_INTEGER* pcbSize)
     {
-        return ((delegate* unmanaged[MemberFunction]<IPersistStream*, ULargeInteger*, int>)(lpVtbl[7]))((IPersistStream*)Unsafe.AsPointer(ref this), pcbSize);
+        return ((delegate* unmanaged[MemberFunction]<IPersistStream*, ULARGE_INTEGER*, int>)(lpVtbl[7]))((IPersistStream*)Unsafe.AsPointer(ref this), pcbSize);
     }
 
     public interface Interface : IPersist.Interface
     {
         [VtblIndex(4)]
-        HResult IsDirty();
+        HRESULT IsDirty();
 
         [VtblIndex(5)]
-        HResult Load(IStream* pStm);
+        HRESULT Load(IStream* pStm);
 
         [VtblIndex(6)]
-        HResult Save(IStream* pStm, Bool32 fClearDirty);
+        HRESULT Save(IStream* pStm, Bool32 fClearDirty);
 
         [VtblIndex(7)]
-        HResult GetSizeMax(ULargeInteger* pcbSize);
+        HRESULT GetSizeMax(ULARGE_INTEGER* pcbSize);
     }
 }

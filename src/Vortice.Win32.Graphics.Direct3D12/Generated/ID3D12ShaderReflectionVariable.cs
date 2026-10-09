@@ -45,7 +45,7 @@ public unsafe partial struct ID3D12ShaderReflectionVariable : ID3D12ShaderReflec
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionVariable::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult GetDesc(D3D12_SHADER_VARIABLE_DESC* pDesc)
+	public HRESULT GetDesc(D3D12_SHADER_VARIABLE_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflectionVariable*, D3D12_SHADER_VARIABLE_DESC*, int>)(lpVtbl[0]))((ID3D12ShaderReflectionVariable*)Unsafe.AsPointer(ref this), pDesc);
 	}
@@ -77,7 +77,7 @@ public unsafe partial struct ID3D12ShaderReflectionVariable : ID3D12ShaderReflec
 	public interface Interface 
 	{
 		[VtblIndex(0)]
-		HResult GetDesc(D3D12_SHADER_VARIABLE_DESC* pDesc);
+		HRESULT GetDesc(D3D12_SHADER_VARIABLE_DESC* pDesc);
 
 		[VtblIndex(1)]
 		ID3D12ShaderReflectionType* GetType();

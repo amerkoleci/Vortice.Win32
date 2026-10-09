@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::Reset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Reset()
+	public HRESULT Reset()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::SetAbsoluteBeginTime"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetAbsoluteBeginTime(long beginTime)
+	public HRESULT SetAbsoluteBeginTime(long beginTime)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, long, int>)(lpVtbl[4]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginTime);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::AddCubic"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult AddCubic(double beginOffset, float constantCoefficient, float linearCoefficient, float quadraticCoefficient, float cubicCoefficient)
+	public HRESULT AddCubic(double beginOffset, float constantCoefficient, float linearCoefficient, float quadraticCoefficient, float cubicCoefficient)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[5]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, constantCoefficient, linearCoefficient, quadraticCoefficient, cubicCoefficient);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::AddSinusoidal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult AddSinusoidal(double beginOffset, float bias, float amplitude, float frequency, float phase)
+	public HRESULT AddSinusoidal(double beginOffset, float bias, float amplitude, float frequency, float phase)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[6]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, bias, amplitude, frequency, phase);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::AddRepeat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult AddRepeat(double beginOffset, double durationToRepeat)
+	public HRESULT AddRepeat(double beginOffset, double durationToRepeat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, double, int>)(lpVtbl[7]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, durationToRepeat);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::End"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult End(double endOffset, float endValue)
+	public HRESULT End(double endOffset, float endValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, float, int>)(lpVtbl[8]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), endOffset, endValue);
 	}
@@ -121,22 +121,22 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Reset();
+		HRESULT Reset();
 
 		[VtblIndex(4)]
-		HResult SetAbsoluteBeginTime(long beginTime);
+		HRESULT SetAbsoluteBeginTime(long beginTime);
 
 		[VtblIndex(5)]
-		HResult AddCubic(double beginOffset, float constantCoefficient, float linearCoefficient, float quadraticCoefficient, float cubicCoefficient);
+		HRESULT AddCubic(double beginOffset, float constantCoefficient, float linearCoefficient, float quadraticCoefficient, float cubicCoefficient);
 
 		[VtblIndex(6)]
-		HResult AddSinusoidal(double beginOffset, float bias, float amplitude, float frequency, float phase);
+		HRESULT AddSinusoidal(double beginOffset, float bias, float amplitude, float frequency, float phase);
 
 		[VtblIndex(7)]
-		HResult AddRepeat(double beginOffset, double durationToRepeat);
+		HRESULT AddRepeat(double beginOffset, double durationToRepeat);
 
 		[VtblIndex(8)]
-		HResult End(double endOffset, float endValue);
+		HRESULT End(double endOffset, float endValue);
 	}
 }
 

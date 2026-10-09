@@ -47,7 +47,7 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::SetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetParameters(WICDdsParameters* pParameters)
+	public HRESULT SetParameters(WICDdsParameters* pParameters)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::GetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetParameters(WICDdsParameters* pParameters)
+	public HRESULT GetParameters(WICDdsParameters* pParameters)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[4]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::CreateNewFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex)
+	public HRESULT CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICDdsEncoder*, IWICBitmapFrameEncode**, uint*, uint*, uint*, int>)(lpVtbl[5]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, pArrayIndex, pMipLevel, pSliceIndex);
 	}
@@ -97,13 +97,13 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetParameters(WICDdsParameters* pParameters);
+		HRESULT SetParameters(WICDdsParameters* pParameters);
 
 		[VtblIndex(4)]
-		HResult GetParameters(WICDdsParameters* pParameters);
+		HRESULT GetParameters(WICDdsParameters* pParameters);
 
 		[VtblIndex(5)]
-		HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex);
+		HRESULT CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex);
 	}
 }
 

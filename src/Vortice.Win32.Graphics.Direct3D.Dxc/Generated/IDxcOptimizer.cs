@@ -46,7 +46,7 @@ public unsafe partial struct IDxcOptimizer : IDxcOptimizer.Interface, INativeGui
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizer*, Guid*, void**, int>)(lpVtbl[0]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -71,21 +71,21 @@ public unsafe partial struct IDxcOptimizer : IDxcOptimizer.Interface, INativeGui
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAvailablePassCount(uint* pCount)
+	public HRESULT GetAvailablePassCount(uint* pCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizer*, uint*, int>)(lpVtbl[3]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetAvailablePass(uint index, IDxcOptimizerPass** ppResult)
+	public HRESULT GetAvailablePass(uint index, IDxcOptimizerPass** ppResult)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizer*, uint, IDxcOptimizerPass**, int>)(lpVtbl[4]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), index, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult RunOptimizer(IDxcBlob* pBlob, char** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText)
+	public HRESULT RunOptimizer(IDxcBlob* pBlob, char** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizer*, IDxcBlob*, char**, uint, IDxcBlob**, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pBlob, ppOptions, optionCount, pOutputModule, ppOutputText);
 	}
@@ -93,13 +93,13 @@ public unsafe partial struct IDxcOptimizer : IDxcOptimizer.Interface, INativeGui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetAvailablePassCount(uint* pCount);
+		HRESULT GetAvailablePassCount(uint* pCount);
 
 		[VtblIndex(4)]
-		HResult GetAvailablePass(uint index, IDxcOptimizerPass** ppResult);
+		HRESULT GetAvailablePass(uint index, IDxcOptimizerPass** ppResult);
 
 		[VtblIndex(5)]
-		HResult RunOptimizer(IDxcBlob* pBlob, char** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText);
+		HRESULT RunOptimizer(IDxcBlob* pBlob, char** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText);
 	}
 }
 

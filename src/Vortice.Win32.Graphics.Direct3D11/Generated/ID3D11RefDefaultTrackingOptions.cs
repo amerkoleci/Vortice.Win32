@@ -47,7 +47,7 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11RefDefaultTrackingOptions*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions::SetTrackingOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetTrackingOptions(uint ResourceTypeFlags, uint Options)
+	public HRESULT SetTrackingOptions(uint ResourceTypeFlags, uint Options)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D11RefDefaultTrackingOptions*, uint, uint, int>)(lpVtbl[3]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetTrackingOptions(uint ResourceTypeFlags, uint Options);
+		HRESULT SetTrackingOptions(uint ResourceTypeFlags, uint Options);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, Guid*, void**, int>)(lpVtbl[0]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetStream(Com.IStream** ppIStream)
+	public HRESULT GetStream(Com.IStream** ppIStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, Com.IStream**, int>)(lpVtbl[3]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), ppIStream);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetPersistOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPersistOptions(uint* pdwPersistOptions)
+	public HRESULT GetPersistOptions(uint* pdwPersistOptions)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, uint*, int>)(lpVtbl[4]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pdwPersistOptions);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetPreferredVendorGUID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetPreferredVendorGUID(Guid* pguidPreferredVendor)
+	public HRESULT GetPreferredVendorGUID(Guid* pguidPreferredVendor)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, Guid*, int>)(lpVtbl[5]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pguidPreferredVendor);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::RefreshStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult RefreshStream()
+	public HRESULT RefreshStream()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, int>)(lpVtbl[6]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetStream(Com.IStream** ppIStream);
+		HRESULT GetStream(Com.IStream** ppIStream);
 
 		[VtblIndex(4)]
-		HResult GetPersistOptions(uint* pdwPersistOptions);
+		HRESULT GetPersistOptions(uint* pdwPersistOptions);
 
 		[VtblIndex(5)]
-		HResult GetPreferredVendorGUID(Guid* pguidPreferredVendor);
+		HRESULT GetPreferredVendorGUID(Guid* pguidPreferredVendor);
 
 		[VtblIndex(6)]
-		HResult RefreshStream();
+		HRESULT RefreshStream();
 	}
 }
 

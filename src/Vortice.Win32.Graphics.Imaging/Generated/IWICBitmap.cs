@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmap*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetSize(uint* puiWidth, uint* puiHeight)
+	public HRESULT GetSize(uint* puiWidth, uint* puiHeight)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmap*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPixelFormat(Guid* pPixelFormat)
+	public HRESULT GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, Guid*, int>)(lpVtbl[4]))((IWICBitmap*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResolution(double* pDpiX, double* pDpiY)
+	public HRESULT GetResolution(double* pDpiX, double* pDpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, double*, double*, int>)(lpVtbl[5]))((IWICBitmap*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CopyPalette(IWICPalette* pIPalette)
+	public HRESULT CopyPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, IWICPalette*, int>)(lpVtbl[6]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HRESULT CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmap*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::Lock"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock)
+	public HRESULT Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, System.Drawing.Rectangle*, WICBitmapLockFlags, IWICBitmapLock**, int>)(lpVtbl[8]))((IWICBitmap*)Unsafe.AsPointer(ref this), prcLock, flags, ppILock);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::SetPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetPalette(IWICPalette* pIPalette)
+	public HRESULT SetPalette(IWICPalette* pIPalette)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, IWICPalette*, int>)(lpVtbl[9]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::SetResolution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetResolution(double dpiX, double dpiY)
+	public HRESULT SetResolution(double dpiX, double dpiY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmap*, double, double, int>)(lpVtbl[10]))((IWICBitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
 	}
@@ -137,13 +137,13 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]
-		HResult Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock);
+		HRESULT Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock);
 
 		[VtblIndex(9)]
-		HResult SetPalette(IWICPalette* pIPalette);
+		HRESULT SetPalette(IWICPalette* pIPalette);
 
 		[VtblIndex(10)]
-		HResult SetResolution(double dpiX, double dpiY);
+		HRESULT SetResolution(double dpiX, double dpiY);
 	}
 }
 

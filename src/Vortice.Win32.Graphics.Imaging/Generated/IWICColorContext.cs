@@ -47,7 +47,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, Guid*, void**, int>)(lpVtbl[0]))((IWICColorContext*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult InitializeFromFilename(char* wzFilename)
+	public HRESULT InitializeFromFilename(char* wzFilename)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, char*, int>)(lpVtbl[3]))((IWICColorContext*)Unsafe.AsPointer(ref this), wzFilename);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
+	public HRESULT InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, byte*, uint, int>)(lpVtbl[4]))((IWICColorContext*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromExifColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult InitializeFromExifColorSpace(uint value)
+	public HRESULT InitializeFromExifColorSpace(uint value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, uint, int>)(lpVtbl[5]))((IWICColorContext*)Unsafe.AsPointer(ref this), value);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetType(WICColorContextType* pType)
+	public HRESULT GetType(WICColorContextType* pType)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, WICColorContextType*, int>)(lpVtbl[6]))((IWICColorContext*)Unsafe.AsPointer(ref this), pType);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::GetProfileBytes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual)
+	public HRESULT GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, uint, byte*, uint*, int>)(lpVtbl[7]))((IWICColorContext*)Unsafe.AsPointer(ref this), cbBuffer, pbBuffer, pcbActual);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::GetExifColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetExifColorSpace(uint* pValue)
+	public HRESULT GetExifColorSpace(uint* pValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, uint*, int>)(lpVtbl[8]))((IWICColorContext*)Unsafe.AsPointer(ref this), pValue);
 	}
@@ -121,22 +121,22 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult InitializeFromFilename(char* wzFilename);
+		HRESULT InitializeFromFilename(char* wzFilename);
 
 		[VtblIndex(4)]
-		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
+		HRESULT InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
 
 		[VtblIndex(5)]
-		HResult InitializeFromExifColorSpace(uint value);
+		HRESULT InitializeFromExifColorSpace(uint value);
 
 		[VtblIndex(6)]
-		HResult GetType(WICColorContextType* pType);
+		HRESULT GetType(WICColorContextType* pType);
 
 		[VtblIndex(7)]
-		HResult GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual);
+		HRESULT GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual);
 
 		[VtblIndex(8)]
-		HResult GetExifColorSpace(uint* pValue);
+		HRESULT GetExifColorSpace(uint* pValue);
 	}
 }
 

@@ -47,7 +47,7 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICEnumMetadataItem*, Guid*, void**, int>)(lpVtbl[0]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Next"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Next(uint celt, Com.Variant** rgeltSchema, Com.Variant** rgeltId, Com.Variant** rgeltValue, uint* pceltFetched)
+	public HRESULT Next(uint celt, Com.Variant** rgeltSchema, Com.Variant** rgeltId, Com.Variant** rgeltValue, uint* pceltFetched)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICEnumMetadataItem*, uint, Com.Variant**, Com.Variant**, Com.Variant**, uint*, int>)(lpVtbl[3]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), celt, rgeltSchema, rgeltId, rgeltValue, pceltFetched);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Skip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Skip(uint celt)
+	public HRESULT Skip(uint celt)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICEnumMetadataItem*, uint, int>)(lpVtbl[4]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), celt);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Reset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult Reset()
+	public HRESULT Reset()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICEnumMetadataItem*, int>)(lpVtbl[5]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this));
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Clone"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult Clone(IWICEnumMetadataItem** ppIEnumMetadataItem)
+	public HRESULT Clone(IWICEnumMetadataItem** ppIEnumMetadataItem)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICEnumMetadataItem*, IWICEnumMetadataItem**, int>)(lpVtbl[6]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), ppIEnumMetadataItem);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Next(uint celt, Com.Variant** rgeltSchema, Com.Variant** rgeltId, Com.Variant** rgeltValue, uint* pceltFetched);
+		HRESULT Next(uint celt, Com.Variant** rgeltSchema, Com.Variant** rgeltId, Com.Variant** rgeltValue, uint* pceltFetched);
 
 		[VtblIndex(4)]
-		HResult Skip(uint celt);
+		HRESULT Skip(uint celt);
 
 		[VtblIndex(5)]
-		HResult Reset();
+		HRESULT Reset();
 
 		[VtblIndex(6)]
-		HResult Clone(IWICEnumMetadataItem** ppIEnumMetadataItem);
+		HRESULT Clone(IWICEnumMetadataItem** ppIEnumMetadataItem);
 	}
 }
 

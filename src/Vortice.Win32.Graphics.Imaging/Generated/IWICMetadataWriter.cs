@@ -47,7 +47,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IWICMetadataReader.GetMetadataFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetMetadataFormat(Guid* pguidMetadataFormat)
+	public HRESULT GetMetadataFormat(Guid* pguidMetadataFormat)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, Guid*, int>)(lpVtbl[3]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pguidMetadataFormat);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IWICMetadataReader.GetMetadataHandlerInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler)
+	public HRESULT GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, IWICMetadataHandlerInfo**, int>)(lpVtbl[4]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIHandler);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IWICMetadataReader.GetCount" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetCount(uint* pcCount)
+	public HRESULT GetCount(uint* pcCount)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, uint*, int>)(lpVtbl[5]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pcCount);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IWICMetadataReader.GetValueByIndex" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue)
+	public HRESULT GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, uint, Com.Variant**, Com.Variant**, Com.Variant**, int>)(lpVtbl[6]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IWICMetadataReader.GetValue" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue)
+	public HRESULT GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, Com.Variant**, int>)(lpVtbl[7]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <inheritdoc cref="IWICMetadataReader.GetEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
+	public HRESULT GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, IWICEnumMetadataItem**, int>)(lpVtbl[8]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
+	public HRESULT SetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[9]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValueByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
+	public HRESULT SetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, uint, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[10]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::RemoveValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult RemoveValue(Com.Variant* pvarSchema, Com.Variant* pvarId)
+	public HRESULT RemoveValue(Com.Variant* pvarSchema, Com.Variant* pvarId)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, int>)(lpVtbl[11]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::RemoveValueByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult RemoveValueByIndex(uint nIndex)
+	public HRESULT RemoveValueByIndex(uint nIndex)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriter*, uint, int>)(lpVtbl[12]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex);
 	}
@@ -153,16 +153,16 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	public interface Interface : IWICMetadataReader.Interface
 	{
 		[VtblIndex(9)]
-		HResult SetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue);
+		HRESULT SetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue);
 
 		[VtblIndex(10)]
-		HResult SetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue);
+		HRESULT SetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue);
 
 		[VtblIndex(11)]
-		HResult RemoveValue(Com.Variant* pvarSchema, Com.Variant* pvarId);
+		HRESULT RemoveValue(Com.Variant* pvarSchema, Com.Variant* pvarId);
 
 		[VtblIndex(12)]
-		HResult RemoveValueByIndex(uint nIndex);
+		HRESULT RemoveValueByIndex(uint nIndex);
 	}
 }
 

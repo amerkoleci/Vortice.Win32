@@ -20,7 +20,7 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
 
     public ulong GetMemoryCapacity(uint memorySegmentGroup) => D3D12MA_Allocator_GetMemoryCapacity(Handle, memorySegmentGroup);
 
-    public HResult CreateResource(D3D12MA_ALLOCATION_DESC* pAllocDesc,
+    public HRESULT CreateResource(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         in D3D12_RESOURCE_DESC resourceDesc,
         D3D12_RESOURCE_STATES initialResourceState,
         D3D12_CLEAR_VALUE* pOptimizedClearValue,
@@ -32,7 +32,7 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
         }
     }
 
-    public HResult CreateResource<TResource>(D3D12MA_ALLOCATION_DESC* pAllocDesc,
+    public HRESULT CreateResource<TResource>(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         in D3D12_RESOURCE_DESC resourceDesc,
         D3D12_RESOURCE_STATES initialResourceState,
         D3D12_CLEAR_VALUE* pOptimizedClearValue,
@@ -51,7 +51,7 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
         }
     }
 
-    public HResult CreateResource2(D3D12MA_ALLOCATION_DESC* pAllocDesc,
+    public HRESULT CreateResource2(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         D3D12_RESOURCE_DESC1* pResourceDesc,
         D3D12_RESOURCE_STATES initialResourceState,
         D3D12_CLEAR_VALUE* pOptimizedClearValue,
@@ -60,7 +60,7 @@ public readonly unsafe record struct D3D12MA_Allocator(nint Handle)
         return D3D12MA_Allocator_CreateResource2(Handle, pAllocDesc, pResourceDesc, initialResourceState, pOptimizedClearValue, allocation, riidResource, ppvResource);
     }
 
-    public HResult CreateResource3(D3D12MA_ALLOCATION_DESC* pAllocDesc,
+    public HRESULT CreateResource3(D3D12MA_ALLOCATION_DESC* pAllocDesc,
         D3D12_RESOURCE_DESC1* pResourceDesc,
         D3D12_BARRIER_LAYOUT initialLayout,
         D3D12_CLEAR_VALUE* pOptimizedClearValue,

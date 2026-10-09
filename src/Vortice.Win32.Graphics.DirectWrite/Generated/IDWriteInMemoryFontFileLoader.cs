@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader : IDWriteInMemoryFont
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInMemoryFontFileLoader*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader : IDWriteInMemoryFont
 	/// <inheritdoc cref="IDWriteFontFileLoader.CreateStreamFromKey" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)
+	public HRESULT CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInMemoryFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader : IDWriteInMemoryFont
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader::CreateInMemoryFontFileReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateInMemoryFontFileReference(IDWriteFactory* factory, void* fontData, uint fontDataSize, IUnknown* ownerObject, IDWriteFontFile** fontFile)
+	public HRESULT CreateInMemoryFontFileReference(IDWriteFactory* factory, void* fontData, uint fontDataSize, IUnknown* ownerObject, IDWriteFontFile** fontFile)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteInMemoryFontFileLoader*, IDWriteFactory*, void*, uint, IUnknown*, IDWriteFontFile**, int>)(lpVtbl[4]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this), factory, fontData, fontDataSize, ownerObject, fontFile);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader : IDWriteInMemoryFont
 	public interface Interface : IDWriteFontFileLoader.Interface
 	{
 		[VtblIndex(4)]
-		HResult CreateInMemoryFontFileReference(IDWriteFactory* factory, void* fontData, uint fontDataSize, IUnknown* ownerObject, IDWriteFontFile** fontFile);
+		HRESULT CreateInMemoryFontFileReference(IDWriteFactory* factory, void* fontData, uint fontDataSize, IUnknown* ownerObject, IDWriteFontFile** fontFile);
 
 		[VtblIndex(5)]
 		uint GetFileCount();

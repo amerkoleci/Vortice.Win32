@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetX" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetOffsetX(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetX" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOffsetX(float offsetX)
+	public HRESULT SetOffsetX(float offsetX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, float, int>)(lpVtbl[4]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetX);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetY" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetOffsetY(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetY" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetOffsetY(float offsetY)
+	public HRESULT SetOffsetY(float offsetY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, float, int>)(lpVtbl[6]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetY);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetTransform(IDCompositionTransform* transform)
+	public HRESULT SetTransform(IDCompositionTransform* transform)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionTransform*, int>)(lpVtbl[7]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), transform);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetTransform(Matrix3x2* matrix)
+	public HRESULT SetTransform(Matrix3x2* matrix)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Matrix3x2*, int>)(lpVtbl[8]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), matrix);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetTransformParent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetTransformParent(IDCompositionVisual* visual)
+	public HRESULT SetTransformParent(IDCompositionVisual* visual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[9]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetEffect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEffect(IDCompositionEffect* effect)
+	public HRESULT SetEffect(IDCompositionEffect* effect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionEffect*, int>)(lpVtbl[10]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), effect);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetBitmapInterpolationMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult SetBitmapInterpolationMode(DCOMPOSITION_BITMAP_INTERPOLATION_MODE interpolationMode)
+	public HRESULT SetBitmapInterpolationMode(DCOMPOSITION_BITMAP_INTERPOLATION_MODE interpolationMode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_BITMAP_INTERPOLATION_MODE, int>)(lpVtbl[11]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
@@ -145,7 +145,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetBorderMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetBorderMode(DCOMPOSITION_BORDER_MODE borderMode)
+	public HRESULT SetBorderMode(DCOMPOSITION_BORDER_MODE borderMode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_BORDER_MODE, int>)(lpVtbl[12]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), borderMode);
 	}
@@ -153,7 +153,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult SetClip(IDCompositionClip* clip)
+	public HRESULT SetClip(IDCompositionClip* clip)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionClip*, int>)(lpVtbl[13]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), clip);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetClip(Vortice.Win32.Numerics.RectF* rect)
+	public HRESULT SetClip(Vortice.Win32.Numerics.RectF* rect)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Vortice.Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), rect);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetContent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult SetContent(IUnknown* content)
+	public HRESULT SetContent(IUnknown* content)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IUnknown*, int>)(lpVtbl[15]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), content);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.AddVisual" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult AddVisual(IDCompositionVisual* visual, Bool32 insertAbove, IDCompositionVisual* referenceVisual)
+	public HRESULT AddVisual(IDCompositionVisual* visual, Bool32 insertAbove, IDCompositionVisual* referenceVisual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionVisual*, Bool32, IDCompositionVisual*, int>)(lpVtbl[16]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual, insertAbove, referenceVisual);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.RemoveVisual" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult RemoveVisual(IDCompositionVisual* visual)
+	public HRESULT RemoveVisual(IDCompositionVisual* visual)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[17]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
 	}
@@ -193,7 +193,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.RemoveAllVisuals" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult RemoveAllVisuals()
+	public HRESULT RemoveAllVisuals()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[18]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
@@ -201,7 +201,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual.SetCompositeMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult SetCompositeMode(DCOMPOSITION_COMPOSITE_MODE compositeMode)
+	public HRESULT SetCompositeMode(DCOMPOSITION_COMPOSITE_MODE compositeMode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_COMPOSITE_MODE, int>)(lpVtbl[19]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), compositeMode);
 	}
@@ -209,7 +209,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual2.SetOpacityMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult SetOpacityMode(DCOMPOSITION_OPACITY_MODE mode)
+	public HRESULT SetOpacityMode(DCOMPOSITION_OPACITY_MODE mode)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_OPACITY_MODE, int>)(lpVtbl[20]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), mode);
 	}
@@ -217,7 +217,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <inheritdoc cref="IDCompositionVisual2.SetBackFaceVisibility" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult SetBackFaceVisibility(DCOMPOSITION_BACKFACE_VISIBILITY visibility)
+	public HRESULT SetBackFaceVisibility(DCOMPOSITION_BACKFACE_VISIBILITY visibility)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, DCOMPOSITION_BACKFACE_VISIBILITY, int>)(lpVtbl[21]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visibility);
 	}
@@ -225,7 +225,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::EnableHeatMap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult EnableHeatMap(Color4* color)
+	public HRESULT EnableHeatMap(Color4* color)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Color4*, int>)(lpVtbl[22]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), color);
 	}
@@ -233,7 +233,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::DisableHeatMap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult DisableHeatMap()
+	public HRESULT DisableHeatMap()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[23]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
@@ -241,7 +241,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::EnableRedrawRegions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult EnableRedrawRegions()
+	public HRESULT EnableRedrawRegions()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[24]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
@@ -249,7 +249,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::DisableRedrawRegions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult DisableRedrawRegions()
+	public HRESULT DisableRedrawRegions()
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[25]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
@@ -257,16 +257,16 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	public interface Interface : IDCompositionVisual2.Interface
 	{
 		[VtblIndex(22)]
-		HResult EnableHeatMap(Color4* color);
+		HRESULT EnableHeatMap(Color4* color);
 
 		[VtblIndex(23)]
-		HResult DisableHeatMap();
+		HRESULT DisableHeatMap();
 
 		[VtblIndex(24)]
-		HResult EnableRedrawRegions();
+		HRESULT EnableRedrawRegions();
 
 		[VtblIndex(25)]
-		HResult DisableRedrawRegions();
+		HRESULT DisableRedrawRegions();
 	}
 }
 

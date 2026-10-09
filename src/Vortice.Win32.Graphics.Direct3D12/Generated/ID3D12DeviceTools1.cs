@@ -49,7 +49,7 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceTools1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceTools1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -83,7 +83,7 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceTools1::GetApplicationSpecificDriverState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetApplicationSpecificDriverState(ID3DBlob** ppBlob)
+	public HRESULT GetApplicationSpecificDriverState(ID3DBlob** ppBlob)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceTools1*, ID3DBlob**, int>)(lpVtbl[4]))((ID3D12DeviceTools1*)Unsafe.AsPointer(ref this), ppBlob);
 	}
@@ -99,7 +99,7 @@ public unsafe partial struct ID3D12DeviceTools1 : ID3D12DeviceTools1.Interface, 
 	public interface Interface : ID3D12DeviceTools.Interface
 	{
 		[VtblIndex(4)]
-		HResult GetApplicationSpecificDriverState(ID3DBlob** ppBlob);
+		HRESULT GetApplicationSpecificDriverState(ID3DBlob** ppBlob);
 
 		[VtblIndex(5)]
 		D3D12_APPLICATION_SPECIFIC_DRIVER_BLOB_STATUS GetApplicationSpecificDriverBlobStatus();

@@ -47,7 +47,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <inheritdoc cref="IDWriteGdiInterop.CreateFontFromLOGFONT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateFontFromLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFont** font)
+	public HRESULT CreateFontFromLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFont** font)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, Vortice.Win32.Graphics.Gdi.LogFontW*, IDWriteFont**, int>)(lpVtbl[3]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, font);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <inheritdoc cref="IDWriteGdiInterop.ConvertFontToLOGFONT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult ConvertFontToLOGFONT(IDWriteFont* font, Vortice.Win32.Graphics.Gdi.LogFontW** logFont, Bool32* isSystemFont)
+	public HRESULT ConvertFontToLOGFONT(IDWriteFont* font, Vortice.Win32.Graphics.Gdi.LogFontW** logFont, Bool32* isSystemFont)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, IDWriteFont*, Vortice.Win32.Graphics.Gdi.LogFontW**, Bool32*, int>)(lpVtbl[4]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, logFont, isSystemFont);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <inheritdoc cref="IDWriteGdiInterop.ConvertFontFaceToLOGFONT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult ConvertFontFaceToLOGFONT(IDWriteFontFace* font, Vortice.Win32.Graphics.Gdi.LogFontW** logFont)
+	public HRESULT ConvertFontFaceToLOGFONT(IDWriteFontFace* font, Vortice.Win32.Graphics.Gdi.LogFontW** logFont)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, IDWriteFontFace*, Vortice.Win32.Graphics.Gdi.LogFontW**, int>)(lpVtbl[5]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, logFont);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <inheritdoc cref="IDWriteGdiInterop.CreateFontFaceFromHdc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateFontFaceFromHdc(IntPtr hdc, IDWriteFontFace** fontFace)
+	public HRESULT CreateFontFaceFromHdc(IntPtr hdc, IDWriteFontFace** fontFace)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, IntPtr, IDWriteFontFace**, int>)(lpVtbl[6]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), hdc, fontFace);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <inheritdoc cref="IDWriteGdiInterop.CreateBitmapRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateBitmapRenderTarget(IntPtr hdc, uint width, uint height, IDWriteBitmapRenderTarget** renderTarget)
+	public HRESULT CreateBitmapRenderTarget(IntPtr hdc, uint width, uint height, IDWriteBitmapRenderTarget** renderTarget)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, IntPtr, uint, uint, IDWriteBitmapRenderTarget**, int>)(lpVtbl[7]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), hdc, width, height, renderTarget);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::CreateFontFromLOGFONT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateFontFromLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFontCollection* fontCollection, IDWriteFont** font)
+	public HRESULT CreateFontFromLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFontCollection* fontCollection, IDWriteFont** font)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, Vortice.Win32.Graphics.Gdi.LogFontW*, IDWriteFontCollection*, IDWriteFont**, int>)(lpVtbl[8]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontCollection, font);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::GetFontSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFontSignature(IDWriteFontFace* fontFace, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature)
+	public HRESULT GetFontSignature(IDWriteFontFace* fontFace, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, IDWriteFontFace*, Vortice.Win32.Graphics.Gdi.FontSignature**, int>)(lpVtbl[9]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), fontFace, fontSignature);
 	}
@@ -129,7 +129,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::GetFontSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFontSignature(IDWriteFont* font, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature)
+	public HRESULT GetFontSignature(IDWriteFont* font, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, IDWriteFont*, Vortice.Win32.Graphics.Gdi.FontSignature**, int>)(lpVtbl[10]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, fontSignature);
 	}
@@ -137,7 +137,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::GetMatchingFontsByLOGFONT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetMatchingFontsByLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet)
+	public HRESULT GetMatchingFontsByLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDWriteGdiInterop1*, Vortice.Win32.Graphics.Gdi.LogFontA*, IDWriteFontSet*, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontSet, filteredSet);
 	}
@@ -145,16 +145,16 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	public interface Interface : IDWriteGdiInterop.Interface
 	{
 		[VtblIndex(8)]
-		HResult CreateFontFromLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFontCollection* fontCollection, IDWriteFont** font);
+		HRESULT CreateFontFromLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFontCollection* fontCollection, IDWriteFont** font);
 
 		[VtblIndex(9)]
-		HResult GetFontSignature(IDWriteFontFace* fontFace, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature);
+		HRESULT GetFontSignature(IDWriteFontFace* fontFace, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature);
 
 		[VtblIndex(10)]
-		HResult GetFontSignature(IDWriteFont* font, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature);
+		HRESULT GetFontSignature(IDWriteFont* font, Vortice.Win32.Graphics.Gdi.FontSignature** fontSignature);
 
 		[VtblIndex(11)]
-		HResult GetMatchingFontsByLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet);
+		HRESULT GetMatchingFontsByLOGFONT(Vortice.Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet);
 	}
 }
 

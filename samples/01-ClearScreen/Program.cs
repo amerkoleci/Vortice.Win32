@@ -25,7 +25,7 @@ public static unsafe class Program
 #if DEBUG
     static bool SdkLayersAvailable()
     {
-        HResult hr = D3D11CreateDevice(
+        HRESULT hr = D3D11CreateDevice(
             null,
             D3D_DRIVER_TYPE_NULL,       // There is no need to create a real hardware device.
             IntPtr.Zero,
@@ -124,7 +124,7 @@ public static unsafe class Program
         }
 #endif
 
-        HResult hr = CreateDXGIFactory2(factoryFlags, __uuidof<IDXGIFactory2>(), (void**)&factory);
+        HRESULT hr = CreateDXGIFactory2(factoryFlags, __uuidof<IDXGIFactory2>(), (void**)&factory);
 
         {
             using ComPtr<IDXGIFactory5> factory5 = default;

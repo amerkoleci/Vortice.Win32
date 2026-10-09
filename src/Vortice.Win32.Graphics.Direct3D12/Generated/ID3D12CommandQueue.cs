@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
+	public HRESULT GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
+	public HRESULT SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
+	public HRESULT SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), guid, pData);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char* Name)
+	public HRESULT SetName(char* Name)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, char*, int>)(lpVtbl[6]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), Name);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDevice(Guid* riid, void** ppvDevice)
+	public HRESULT GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
@@ -161,7 +161,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::Signal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Signal(ID3D12Fence* pFence, ulong Value)
+	public HRESULT Signal(ID3D12Fence* pFence, ulong Value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, ID3D12Fence*, ulong, int>)(lpVtbl[14]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
@@ -169,7 +169,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::Wait"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult Wait(ID3D12Fence* pFence, ulong Value)
+	public HRESULT Wait(ID3D12Fence* pFence, ulong Value)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, ID3D12Fence*, ulong, int>)(lpVtbl[15]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
@@ -177,7 +177,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetTimestampFrequency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetTimestampFrequency(ulong* pFrequency)
+	public HRESULT GetTimestampFrequency(ulong* pFrequency)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, ulong*, int>)(lpVtbl[16]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pFrequency);
 	}
@@ -185,7 +185,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetClockCalibration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp)
+	public HRESULT GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12CommandQueue*, ulong*, ulong*, int>)(lpVtbl[17]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pGpuTimestamp, pCpuTimestamp);
 	}
@@ -219,16 +219,16 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 		void EndEvent();
 
 		[VtblIndex(14)]
-		HResult Signal(ID3D12Fence* pFence, ulong Value);
+		HRESULT Signal(ID3D12Fence* pFence, ulong Value);
 
 		[VtblIndex(15)]
-		HResult Wait(ID3D12Fence* pFence, ulong Value);
+		HRESULT Wait(ID3D12Fence* pFence, ulong Value);
 
 		[VtblIndex(16)]
-		HResult GetTimestampFrequency(ulong* pFrequency);
+		HRESULT GetTimestampFrequency(ulong* pFrequency);
 
 		[VtblIndex(17)]
-		HResult GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp);
+		HRESULT GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp);
 
 		[VtblIndex(18)]
 		D3D12_COMMAND_QUEUE_DESC GetDesc();

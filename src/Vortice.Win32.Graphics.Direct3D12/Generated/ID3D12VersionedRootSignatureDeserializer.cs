@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : ID3D12Ve
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : ID3D12Ve
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetRootSignatureDescAtVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, D3D12_VERSIONED_ROOT_SIGNATURE_DESC** ppDesc)
+	public HRESULT GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, D3D12_VERSIONED_ROOT_SIGNATURE_DESC** ppDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12VersionedRootSignatureDeserializer*, D3D_ROOT_SIGNATURE_VERSION, D3D12_VERSIONED_ROOT_SIGNATURE_DESC**, int>)(lpVtbl[3]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), convertToVersion, ppDesc);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : ID3D12Ve
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, D3D12_VERSIONED_ROOT_SIGNATURE_DESC** ppDesc);
+		HRESULT GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION convertToVersion, D3D12_VERSIONED_ROOT_SIGNATURE_DESC** ppDesc);
 
 		[VtblIndex(4)]
 		D3D12_VERSIONED_ROOT_SIGNATURE_DESC* GetUnconvertedRootSignatureDesc();

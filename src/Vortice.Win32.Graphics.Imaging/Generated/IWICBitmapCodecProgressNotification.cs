@@ -47,7 +47,7 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : IWICBitmapCod
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecProgressNotification*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,15 +73,15 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : IWICBitmapCod
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification::RegisterProgressNotification"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult> pfnProgressNotification, void* pvData, uint dwProgressFlags)
+	public HRESULT RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HRESULT> pfnProgressNotification, void* pvData, uint dwProgressFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HRESULT>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult> pfnProgressNotification, void* pvData, uint dwProgressFlags);
+		HRESULT RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HRESULT> pfnProgressNotification, void* pvData, uint dwProgressFlags);
 	}
 }
 

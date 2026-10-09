@@ -47,7 +47,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetOffsetX(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetX(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetOffsetX(float offsetX)
+	public HRESULT SetOffsetX(float offsetX)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[4]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetX);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetOffsetY(IDCompositionAnimation* animation)
+	public HRESULT SetOffsetY(IDCompositionAnimation* animation)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetOffsetY(float offsetY)
+	public HRESULT SetOffsetY(float offsetY)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[6]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetY);
 	}
@@ -105,16 +105,16 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetOffsetX(IDCompositionAnimation* animation);
+		HRESULT SetOffsetX(IDCompositionAnimation* animation);
 
 		[VtblIndex(4)]
-		HResult SetOffsetX(float offsetX);
+		HRESULT SetOffsetX(float offsetX);
 
 		[VtblIndex(5)]
-		HResult SetOffsetY(IDCompositionAnimation* animation);
+		HRESULT SetOffsetY(IDCompositionAnimation* animation);
 
 		[VtblIndex(6)]
-		HResult SetOffsetY(float offsetY);
+		HRESULT SetOffsetY(float offsetY);
 	}
 }
 

@@ -5,7 +5,7 @@ namespace Vortice.Win32;
 
 [StructLayout(LayoutKind.Explicit)]
 [NativeTypeName("LARGE_INTEGER")]
-public partial struct LargeInteger
+public partial struct LARGE_INTEGER
 {
     [FieldOffset(0)]
     public _Anonymous_e__Struct Anonymous;
@@ -54,11 +54,12 @@ public partial struct LargeInteger
         public int HighPart;
     }
 
-    public static implicit operator long(LargeInteger value) => value.QuadPart;
+    public static implicit operator long(LARGE_INTEGER value) => value.QuadPart;
 
-    public static implicit operator LargeInteger(long value)
+    public static implicit operator LARGE_INTEGER(long value)
     {
-        Unsafe.SkipInit(out LargeInteger result);
+        Unsafe.SkipInit(out LARGE_INTEGER result);
+
         result.QuadPart = value;
         return result;
     }

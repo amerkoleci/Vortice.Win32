@@ -47,7 +47,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	public HRESULT QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
@@ -73,7 +73,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::SetApplicationDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetApplicationDesc(D3D12_APPLICATION_DESC* pApplicationDesc)
+	public HRESULT SetApplicationDesc(D3D12_APPLICATION_DESC* pApplicationDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, D3D12_APPLICATION_DESC*, int>)(lpVtbl[3]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), pApplicationDesc);
 	}
@@ -81,7 +81,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::GetApplicationDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetApplicationDesc(delegate* unmanaged[Stdcall]<D3D12_APPLICATION_DESC*, void*, void> CallbackFunc, void* pContext)
+	public HRESULT GetApplicationDesc(delegate* unmanaged[Stdcall]<D3D12_APPLICATION_DESC*, void*, void> CallbackFunc, void* pContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, delegate* unmanaged[Stdcall]<D3D12_APPLICATION_DESC*, void*, void>, void*, int>)(lpVtbl[4]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), CallbackFunc, pContext);
 	}
@@ -89,7 +89,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::StorePipelineStateDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult StorePipelineStateDesc(void* pKey, uint KeySize, uint Version, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc)
+	public HRESULT StorePipelineStateDesc(void* pKey, uint KeySize, uint Version, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, void*, uint, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, int>)(lpVtbl[5]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), pKey, KeySize, Version, pDesc);
 	}
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::FindPipelineStateDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult FindPipelineStateDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, void*, void> CallbackFunc, void* pContext)
+	public HRESULT FindPipelineStateDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, void*, void> CallbackFunc, void* pContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, void*, uint, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, void*, void>, void*, int>)(lpVtbl[6]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), pKey, KeySize, CallbackFunc, pContext);
 	}
@@ -105,7 +105,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::StoreStateObjectDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult StoreStateObjectDesc(void* pKey, uint KeySize, uint Version, D3D12_STATE_OBJECT_DESC* pDesc, void* pStateObjectToGrowFromKey, uint StateObjectToGrowFromKeySize)
+	public HRESULT StoreStateObjectDesc(void* pKey, uint KeySize, uint Version, D3D12_STATE_OBJECT_DESC* pDesc, void* pStateObjectToGrowFromKey, uint StateObjectToGrowFromKeySize)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, void*, uint, uint, D3D12_STATE_OBJECT_DESC*, void*, uint, int>)(lpVtbl[7]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), pKey, KeySize, Version, pDesc, pStateObjectToGrowFromKey, StateObjectToGrowFromKeySize);
 	}
@@ -113,7 +113,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::FindStateObjectDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult FindStateObjectDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_STATE_OBJECT_DESC*, void*, uint, void*, void> CallbackFunc, void* pContext)
+	public HRESULT FindStateObjectDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_STATE_OBJECT_DESC*, void*, uint, void*, void> CallbackFunc, void* pContext)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, void*, uint, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_STATE_OBJECT_DESC*, void*, uint, void*, void>, void*, int>)(lpVtbl[8]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), pKey, KeySize, CallbackFunc, pContext);
 	}
@@ -121,7 +121,7 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectDatabase::FindObjectVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult FindObjectVersion(void* pKey, uint KeySize, uint* pVersion)
+	public HRESULT FindObjectVersion(void* pKey, uint KeySize, uint* pVersion)
 	{
 		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectDatabase*, void*, uint, uint*, int>)(lpVtbl[9]))((ID3D12StateObjectDatabase*)Unsafe.AsPointer(ref this), pKey, KeySize, pVersion);
 	}
@@ -129,25 +129,25 @@ public unsafe partial struct ID3D12StateObjectDatabase : ID3D12StateObjectDataba
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetApplicationDesc(D3D12_APPLICATION_DESC* pApplicationDesc);
+		HRESULT SetApplicationDesc(D3D12_APPLICATION_DESC* pApplicationDesc);
 
 		[VtblIndex(4)]
-		HResult GetApplicationDesc(delegate* unmanaged[Stdcall]<D3D12_APPLICATION_DESC*, void*, void> CallbackFunc, void* pContext);
+		HRESULT GetApplicationDesc(delegate* unmanaged[Stdcall]<D3D12_APPLICATION_DESC*, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(5)]
-		HResult StorePipelineStateDesc(void* pKey, uint KeySize, uint Version, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc);
+		HRESULT StorePipelineStateDesc(void* pKey, uint KeySize, uint Version, D3D12_PIPELINE_STATE_STREAM_DESC* pDesc);
 
 		[VtblIndex(6)]
-		HResult FindPipelineStateDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, void*, void> CallbackFunc, void* pContext);
+		HRESULT FindPipelineStateDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_PIPELINE_STATE_STREAM_DESC*, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(7)]
-		HResult StoreStateObjectDesc(void* pKey, uint KeySize, uint Version, D3D12_STATE_OBJECT_DESC* pDesc, void* pStateObjectToGrowFromKey, uint StateObjectToGrowFromKeySize);
+		HRESULT StoreStateObjectDesc(void* pKey, uint KeySize, uint Version, D3D12_STATE_OBJECT_DESC* pDesc, void* pStateObjectToGrowFromKey, uint StateObjectToGrowFromKeySize);
 
 		[VtblIndex(8)]
-		HResult FindStateObjectDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_STATE_OBJECT_DESC*, void*, uint, void*, void> CallbackFunc, void* pContext);
+		HRESULT FindStateObjectDesc(void* pKey, uint KeySize, delegate* unmanaged[Stdcall]<void*, uint, uint, D3D12_STATE_OBJECT_DESC*, void*, uint, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(9)]
-		HResult FindObjectVersion(void* pKey, uint KeySize, uint* pVersion);
+		HRESULT FindObjectVersion(void* pKey, uint KeySize, uint* pVersion);
 	}
 }
 
