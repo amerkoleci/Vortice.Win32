@@ -14,9 +14,27 @@ public partial struct D3D12_RENDER_PASS_ENDING_ACCESS : IEquatable<D3D12_RENDER_
             return false;
         }
 
-        if (left.Type == D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE && !(left.Anonymous.Resolve == right.Anonymous.Resolve))
+        switch (left.Type)
         {
-            return false;
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE:
+            {
+                if (left.Anonymous.Resolve != right.Anonymous.Resolve)
+                {
+                    return false;
+                }
+                break;
+            }
+
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER:
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_SRV:
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_UAV:
+            {
+                if (left.Anonymous.PreserveLocal != right.Anonymous.PreserveLocal)
+                {
+                    return false;
+                }
+                break;
+            }
         }
 
         return true;
@@ -25,21 +43,34 @@ public partial struct D3D12_RENDER_PASS_ENDING_ACCESS : IEquatable<D3D12_RENDER_
     public static bool operator !=(in D3D12_RENDER_PASS_ENDING_ACCESS left, in D3D12_RENDER_PASS_ENDING_ACCESS right)
         => !(left == right);
 
-    public override bool Equals(object? obj) => (obj is D3D12_RENDER_PASS_ENDING_ACCESS other) && Equals(other);
+    public override readonly bool Equals([NotNullWhen(true)] object? obj)
+        => (obj is D3D12_RENDER_PASS_ENDING_ACCESS other) && Equals(other);
 
-    public bool Equals(D3D12_RENDER_PASS_ENDING_ACCESS other) => this == other;
+    public readonly bool Equals(D3D12_RENDER_PASS_ENDING_ACCESS other) => this == other;
 
-    public override int GetHashCode()
+    public override readonly int GetHashCode()
     {
         var hashCode = new HashCode();
-        {
-            hashCode.Add(Type);
+        hashCode.Add(Type);
 
-            if (Type == D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE)
+        switch (Type)
+        {
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE:
             {
                 hashCode.Add(Anonymous.Resolve);
+                break;
+            }
+
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER:
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_SRV:
+            case D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_UAV:
+            {
+                hashCode.Add(Anonymous.PreserveLocal);
+                break;
             }
         }
+
         return hashCode.ToHashCode();
     }
 }
+

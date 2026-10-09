@@ -12,22 +12,22 @@ public partial struct D3D12_RENDER_PASS_DEPTH_STENCIL_DESC : IEquatable<D3D12_RE
             return false;
         }
 
-        if (!(left.DepthBeginningAccess == right.DepthBeginningAccess))
+        if (left.DepthBeginningAccess != right.DepthBeginningAccess)
         {
             return false;
         }
 
-        if (!(left.StencilBeginningAccess == right.StencilBeginningAccess))
+        if (left.StencilBeginningAccess != right.StencilBeginningAccess)
         {
             return false;
         }
 
-        if (!(left.DepthEndingAccess == right.DepthEndingAccess))
+        if (left.DepthEndingAccess != right.DepthEndingAccess)
         {
             return false;
         }
 
-        if (!(left.StencilEndingAccess == right.StencilEndingAccess))
+        if (left.StencilEndingAccess != right.StencilEndingAccess)
         {
             return false;
         }
@@ -38,12 +38,10 @@ public partial struct D3D12_RENDER_PASS_DEPTH_STENCIL_DESC : IEquatable<D3D12_RE
     public static bool operator !=(in D3D12_RENDER_PASS_DEPTH_STENCIL_DESC left, in D3D12_RENDER_PASS_DEPTH_STENCIL_DESC right)
         => !(left == right);
 
-    public override bool Equals(object? obj) => (obj is D3D12_RENDER_PASS_DEPTH_STENCIL_DESC other) && Equals(other);
+    public override readonly bool Equals([NotNullWhen(true)] object? obj)
+        => (obj is D3D12_RENDER_PASS_DEPTH_STENCIL_DESC other) && Equals(other);
 
-    public bool Equals(D3D12_RENDER_PASS_DEPTH_STENCIL_DESC other) => this == other;
+    public readonly bool Equals(D3D12_RENDER_PASS_DEPTH_STENCIL_DESC other) => this == other;
 
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(cpuDescriptor, DepthBeginningAccess, StencilBeginningAccess, DepthEndingAccess, StencilEndingAccess);
-    }
+    public override readonly int GetHashCode() => HashCode.Combine(cpuDescriptor.ptr, DepthBeginningAccess, StencilBeginningAccess, DepthEndingAccess, StencilEndingAccess);
 }

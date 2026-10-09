@@ -1,0 +1,47 @@
+// Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+
+// Ported from d3dx12_pipeline_state_stream.h in microsoft/DirectX-Headers tag v1.619.2
+// Original source is Copyright © Microsoft. Licensed under the MIT license
+
+using static Vortice.Win32.Graphics.D3D12;
+
+namespace Vortice.Win32.Graphics;
+
+[StructLayout(LayoutKind.Explicit)]
+public struct CD3DX12_PIPELINE_STATE_STREAM_RASTERIZER
+{
+    [FieldOffset(0)]
+    private readonly unsafe void* _Anonymous_e__Alignment;
+
+    [FieldOffset(0)]
+    public _Anonymous_e__Struct Anonymous;
+
+    [UnscopedRef]
+    public ref D3D12_PIPELINE_STATE_SUBOBJECT_TYPE pssType => ref Anonymous.pssType;
+
+    [UnscopedRef]
+    public ref D3D12_RASTERIZER_DESC pssInner => ref Anonymous.pssInner;
+
+    public CD3DX12_PIPELINE_STATE_STREAM_RASTERIZER()
+    {
+        pssType = D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER;
+        pssInner = D3D12_RASTERIZER_DESC.DEFAULT;
+    }
+
+    public CD3DX12_PIPELINE_STATE_STREAM_RASTERIZER([NativeTypeName("D3D12_RASTERIZER_DESC const &")] in D3D12_RASTERIZER_DESC i)
+    {
+        pssType = D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER;
+        pssInner = i;
+    }
+
+    public static implicit operator CD3DX12_PIPELINE_STATE_STREAM_RASTERIZER(in D3D12_RASTERIZER_DESC value) => new CD3DX12_PIPELINE_STATE_STREAM_RASTERIZER(value);
+
+    public static implicit operator D3D12_RASTERIZER_DESC(in CD3DX12_PIPELINE_STATE_STREAM_RASTERIZER value) => value.pssInner;
+
+    public struct _Anonymous_e__Struct
+    {
+        public D3D12_PIPELINE_STATE_SUBOBJECT_TYPE pssType;
+
+        public D3D12_RASTERIZER_DESC pssInner;
+    }
+}

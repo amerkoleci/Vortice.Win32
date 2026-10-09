@@ -7,32 +7,35 @@ namespace Vortice.Win32.Graphics;
 
 public unsafe partial struct D3D12_DEPTH_STENCIL_DESC2
 {
-    /// <summary>
-    /// A built-in description with settings for not using a depth stencil buffer.
-    /// </summary>
-    public static D3D12_DEPTH_STENCIL_DESC1 None => new(false, false, D3D12_COMPARISON_FUNC_LESS_EQUAL);
+    public static ref readonly D3D12_DEPTH_STENCIL_DESC2 DEFAULT
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            ReadOnlySpan<byte> data = [
+                0x01, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x02, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x08, 0x00, 0x00, 0x00,
+                0xFF, 0xFF, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x08, 0x00, 0x00, 0x00,
+                0xFF, 0xFF, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+            ];
 
-    /// <summary>
-    /// A built-in description with default settings for using a depth stencil buffer.
-    /// </summary>
-    public static D3D12_DEPTH_STENCIL_DESC1 Default => new(true, true, D3D12_COMPARISON_FUNC_LESS_EQUAL);
+            Debug.Assert(data.Length == Unsafe.SizeOf<D3D12_DEPTH_STENCIL_DESC2>());
+            return ref Unsafe.As<byte, D3D12_DEPTH_STENCIL_DESC2>(ref MemoryMarshal.GetReference(data));
+        }
+    }
 
-    /// <summary>
-    /// A built-in description with settings for enabling a read-only depth stencil buffer.
-    /// </summary>
-    public static D3D12_DEPTH_STENCIL_DESC1 Read => new(true, false, D3D12_COMPARISON_FUNC_LESS_EQUAL);
-
-    /// <summary>
-    /// A built-in description with default settings for using a reverse depth stencil buffer.
-    /// </summary>
-    public static D3D12_DEPTH_STENCIL_DESC1 ReverseZ => new(true, true, D3D12_COMPARISON_FUNC_GREATER_EQUAL);
-
-    /// <summary>
-    /// A built-in description with default settings for using a reverse read-only depth stencil buffer.
-    /// </summary>
-    public static D3D12_DEPTH_STENCIL_DESC1 ReadReverseZ => new(true, false, D3D12_COMPARISON_FUNC_GREATER_EQUAL);
-
-    public D3D12_DEPTH_STENCIL_DESC2([NativeTypeName("const D3D12_DEPTH_STENCIL_DESC1 &")] D3D12_DEPTH_STENCIL_DESC1* o)
+    public D3D12_DEPTH_STENCIL_DESC2(D3D12_DEPTH_STENCIL_DESC1* o)
     {
         DepthEnable = o->DepthEnable;
         DepthWriteMask = o->DepthWriteMask;
@@ -74,6 +77,49 @@ public unsafe partial struct D3D12_DEPTH_STENCIL_DESC2
         DepthBoundsTestEnable = 0;
     }
 
+
+    public D3D12_DEPTH_STENCIL_DESC2(in D3D12_DEPTH_STENCIL_DESC1 o)
+    {
+        DepthEnable = o.DepthEnable;
+        DepthWriteMask = o.DepthWriteMask;
+        DepthFunc = o.DepthFunc;
+        StencilEnable = o.StencilEnable;
+        FrontFace.StencilFailOp = o.FrontFace.StencilFailOp;
+        FrontFace.StencilDepthFailOp = o.FrontFace.StencilDepthFailOp;
+        FrontFace.StencilPassOp = o.FrontFace.StencilPassOp;
+        FrontFace.StencilFunc = o.FrontFace.StencilFunc;
+        FrontFace.StencilReadMask = o.StencilReadMask;
+        FrontFace.StencilWriteMask = o.StencilWriteMask;
+        BackFace.StencilFailOp = o.BackFace.StencilFailOp;
+        BackFace.StencilDepthFailOp = o.BackFace.StencilDepthFailOp;
+        BackFace.StencilPassOp = o.BackFace.StencilPassOp;
+        BackFace.StencilFunc = o.BackFace.StencilFunc;
+        BackFace.StencilReadMask = o.StencilReadMask;
+        BackFace.StencilWriteMask = o.StencilWriteMask;
+        DepthBoundsTestEnable = o.DepthBoundsTestEnable;
+    }
+
+    public D3D12_DEPTH_STENCIL_DESC2(in D3D12_DEPTH_STENCIL_DESC o)
+    {
+        DepthEnable = o.DepthEnable;
+        DepthWriteMask = o.DepthWriteMask;
+        DepthFunc = o.DepthFunc;
+        StencilEnable = o.StencilEnable;
+        FrontFace.StencilFailOp = o.FrontFace.StencilFailOp;
+        FrontFace.StencilDepthFailOp = o.FrontFace.StencilDepthFailOp;
+        FrontFace.StencilPassOp = o.FrontFace.StencilPassOp;
+        FrontFace.StencilFunc = o.FrontFace.StencilFunc;
+        FrontFace.StencilReadMask = o.StencilReadMask;
+        FrontFace.StencilWriteMask = o.StencilWriteMask;
+        BackFace.StencilFailOp = o.BackFace.StencilFailOp;
+        BackFace.StencilDepthFailOp = o.BackFace.StencilDepthFailOp;
+        BackFace.StencilPassOp = o.BackFace.StencilPassOp;
+        BackFace.StencilFunc = o.BackFace.StencilFunc;
+        BackFace.StencilReadMask = o.StencilReadMask;
+        BackFace.StencilWriteMask = o.StencilWriteMask;
+        DepthBoundsTestEnable = 0;
+    }
+
     /// <summary>
     /// Initializes a new instance of the <see cref="D3D12_DEPTH_STENCIL_DESC2"/> struct.
     /// </summary>
@@ -104,4 +150,28 @@ public unsafe partial struct D3D12_DEPTH_STENCIL_DESC2
         BackFace = new(backStencilFailOp, backStencilDepthFailOp, backStencilPassOp, backStencilFunc, backStencilReadMask, backStencilWriteMask);
         DepthBoundsTestEnable = depthBoundsTestEnable;
     }
+
+    public static explicit operator D3D12_DEPTH_STENCIL_DESC(in D3D12_DEPTH_STENCIL_DESC2 value) => new D3D12_DEPTH_STENCIL_DESC
+    {
+        DepthEnable = value.DepthEnable,
+        DepthWriteMask = value.DepthWriteMask,
+        DepthFunc = value.DepthFunc,
+        StencilEnable = value.StencilEnable,
+        StencilReadMask = value.FrontFace.StencilReadMask,
+        StencilWriteMask = value.FrontFace.StencilWriteMask,
+        FrontFace = new D3D12_DEPTH_STENCILOP_DESC
+        {
+            StencilFailOp = value.FrontFace.StencilFailOp,
+            StencilDepthFailOp = value.FrontFace.StencilDepthFailOp,
+            StencilPassOp = value.FrontFace.StencilPassOp,
+            StencilFunc = value.FrontFace.StencilFunc,
+        },
+        BackFace = new D3D12_DEPTH_STENCILOP_DESC
+        {
+            StencilFailOp = value.BackFace.StencilFailOp,
+            StencilDepthFailOp = value.BackFace.StencilDepthFailOp,
+            StencilPassOp = value.BackFace.StencilPassOp,
+            StencilFunc = value.BackFace.StencilFunc,
+        },
+    };
 }

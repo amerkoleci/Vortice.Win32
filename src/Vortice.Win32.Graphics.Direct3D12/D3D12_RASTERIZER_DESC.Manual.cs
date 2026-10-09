@@ -7,25 +7,29 @@ namespace Vortice.Win32.Graphics;
 
 public partial struct D3D12_RASTERIZER_DESC
 {
-    /// <summary>
-    /// A built-in description with settings with settings for not culling any primitives.
-    /// </summary>
-    public static D3D12_RASTERIZER_DESC CullNone => new(D3D12_FILL_MODE_SOLID, D3D12_CULL_MODE_NONE);
+    public static ref readonly D3D12_RASTERIZER_DESC DEFAULT
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            ReadOnlySpan<byte> data = [
+                0x03, 0x00, 0x00, 0x00,
+                0x03, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x01, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+            ];
 
-    /// <summary>
-    /// A built-in description with settings for culling primitives with clockwise winding order.
-    /// </summary>
-    public static D3D12_RASTERIZER_DESC CullClockwise => new(D3D12_FILL_MODE_SOLID, D3D12_CULL_MODE_FRONT);
-
-    /// <summary>
-    /// A built-in description with settings for culling primitives with counter-clockwise winding order.
-    /// </summary>
-    public static D3D12_RASTERIZER_DESC CullCounterClockwise => new(D3D12_FILL_MODE_SOLID, D3D12_CULL_MODE_BACK);
-
-    /// <summary>
-    /// A built-in description with settings for not culling any primitives and wireframe fill mode.
-    /// </summary>
-    public static D3D12_RASTERIZER_DESC Wireframe => new(D3D12_FILL_MODE_WIREFRAME, D3D12_CULL_MODE_BACK);
+            Debug.Assert(data.Length == Unsafe.SizeOf<D3D12_RASTERIZER_DESC>());
+            return ref Unsafe.As<byte, D3D12_RASTERIZER_DESC>(ref MemoryMarshal.GetReference(data));
+        }
+    }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="D3D12_RASTERIZER_DESC"/> class.

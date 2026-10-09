@@ -43,19 +43,9 @@ public unsafe partial struct D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS 
     public static bool operator !=(in D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS left, in D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS right)
         => !(left == right);
 
-    public override bool Equals(object? obj) => (obj is D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS other) && Equals(other);
+    public override bool Equals([NotNullWhen(true)] object? obj) => (obj is D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS other) && Equals(other);
 
-    public bool Equals(D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS other) => this == other;
+    public readonly bool Equals(D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS other) => this == other;
 
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(
-            (nuint)pSrcResource,
-            (nuint)pDstResource,
-            SubresourceCount,
-            (nuint)pSubresourceParameters,
-            Format,
-            ResolveMode,
-            PreserveResolveSource);
-    }
+    public override readonly int GetHashCode() => HashCode.Combine((nuint)pSrcResource, (nuint)(pDstResource), SubresourceCount, Format, ResolveMode, PreserveResolveSource);
 }
