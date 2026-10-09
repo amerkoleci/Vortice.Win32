@@ -73,15 +73,15 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : IWICBitmapCod
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification::RegisterProgressNotification"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HRESULT RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HRESULT> pfnProgressNotification, void* pvData, uint dwProgressFlags)
+	public HRESULT RegisterProgressNotification(delegate* unmanaged<void*, uint, WICProgressOperation, double, HRESULT> pfnProgressNotification, void* pvData, uint dwProgressFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HRESULT>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecProgressNotification*, delegate* unmanaged<void*, uint, WICProgressOperation, double, HRESULT>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HRESULT RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HRESULT> pfnProgressNotification, void* pvData, uint dwProgressFlags);
+		HRESULT RegisterProgressNotification(delegate* unmanaged<void*, uint, WICProgressOperation, double, HRESULT> pfnProgressNotification, void* pvData, uint dwProgressFlags);
 	}
 }
 

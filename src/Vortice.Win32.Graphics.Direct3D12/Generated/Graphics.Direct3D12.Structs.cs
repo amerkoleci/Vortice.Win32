@@ -5961,7 +5961,7 @@ public partial struct D3D12_TRIM_NOTIFICATION
 public partial struct D3D12_REGISTER_TRIM_NOTIFICATION
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_REGISTER_TRIM_NOTIFICATION::pfnCallback"]/*' />
-	public unsafe delegate* unmanaged[Stdcall]<D3D12_TRIM_NOTIFICATION*, void> pfnCallback;
+	public unsafe delegate* unmanaged<D3D12_TRIM_NOTIFICATION*, void> pfnCallback;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_REGISTER_TRIM_NOTIFICATION::pContext"]/*' />
 	public unsafe void* pContext;

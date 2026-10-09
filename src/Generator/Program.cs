@@ -1967,7 +1967,7 @@ public static class Program
 
         if (asCallback)
         {
-            signature += $"delegate* unmanaged[Stdcall]<{argumentsString}, {returnType}>";
+            signature += $"delegate* unmanaged<{argumentsString}, {returnType}>";
 
             if (!asParameter)
             {

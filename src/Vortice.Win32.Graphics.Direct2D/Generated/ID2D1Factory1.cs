@@ -225,17 +225,17 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::RegisterEffectFromStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HRESULT RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HRESULT> effectFactory)
+	public HRESULT RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged<IUnknown**, HRESULT> effectFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, Com.IStream*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HRESULT>, int>)(lpVtbl[22]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, Com.IStream*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged<IUnknown**, HRESULT>, int>)(lpVtbl[22]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::RegisterEffectFromString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HRESULT RegisterEffectFromString(Guid* classId, char* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HRESULT> effectFactory)
+	public HRESULT RegisterEffectFromString(Guid* classId, char* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged<IUnknown**, HRESULT> effectFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, char*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HRESULT>, int>)(lpVtbl[23]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, char*, D2D1_PROPERTY_BINDING*, uint, delegate* unmanaged<IUnknown**, HRESULT>, int>)(lpVtbl[23]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::UnregisterEffect"]/*' />
@@ -280,10 +280,10 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 		HRESULT CreateGdiMetafile(Com.IStream* metafileStream, ID2D1GdiMetafile** metafile);
 
 		[VtblIndex(22)]
-		HRESULT RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HRESULT> effectFactory);
+		HRESULT RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged<IUnknown**, HRESULT> effectFactory);
 
 		[VtblIndex(23)]
-		HRESULT RegisterEffectFromString(Guid* classId, char* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HRESULT> effectFactory);
+		HRESULT RegisterEffectFromString(Guid* classId, char* propertyXml, D2D1_PROPERTY_BINDING* bindings, uint bindingsCount, delegate* unmanaged<IUnknown**, HRESULT> effectFactory);
 
 		[VtblIndex(24)]
 		HRESULT UnregisterEffect(Guid* classId);

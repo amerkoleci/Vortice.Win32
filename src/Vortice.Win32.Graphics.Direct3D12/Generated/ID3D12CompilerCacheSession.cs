@@ -89,25 +89,25 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::FindGroupValueKeys"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HRESULT FindGroupValueKeys(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, delegate* unmanaged[Stdcall]<D3D12_COMPILER_CACHE_VALUE_KEY*, void*, void> CallbackFunc, void* pContext)
+	public HRESULT FindGroupValueKeys(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, delegate* unmanaged<D3D12_COMPILER_CACHE_VALUE_KEY*, void*, void> CallbackFunc, void* pContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint*, delegate* unmanaged[Stdcall]<D3D12_COMPILER_CACHE_VALUE_KEY*, void*, void>, void*, int>)(lpVtbl[5]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pGroupKey, pExpectedGroupVersion, CallbackFunc, pContext);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint*, delegate* unmanaged<D3D12_COMPILER_CACHE_VALUE_KEY*, void*, void>, void*, int>)(lpVtbl[5]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pGroupKey, pExpectedGroupVersion, CallbackFunc, pContext);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::FindGroupValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HRESULT FindGroupValues(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, D3D12_COMPILER_VALUE_TYPE_FLAGS ValueTypeFlags, delegate* unmanaged[Stdcall]<uint, D3D12_COMPILER_CACHE_TYPED_CONST_VALUE*, void*, void> CallbackFunc, void* pContext)
+	public HRESULT FindGroupValues(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, D3D12_COMPILER_VALUE_TYPE_FLAGS ValueTypeFlags, delegate* unmanaged<uint, D3D12_COMPILER_CACHE_TYPED_CONST_VALUE*, void*, void> CallbackFunc, void* pContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint*, D3D12_COMPILER_VALUE_TYPE_FLAGS, delegate* unmanaged[Stdcall]<uint, D3D12_COMPILER_CACHE_TYPED_CONST_VALUE*, void*, void>, void*, int>)(lpVtbl[6]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pGroupKey, pExpectedGroupVersion, ValueTypeFlags, CallbackFunc, pContext);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_CACHE_GROUP_KEY*, uint*, D3D12_COMPILER_VALUE_TYPE_FLAGS, delegate* unmanaged<uint, D3D12_COMPILER_CACHE_TYPED_CONST_VALUE*, void*, void>, void*, int>)(lpVtbl[6]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pGroupKey, pExpectedGroupVersion, ValueTypeFlags, CallbackFunc, pContext);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::FindValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HRESULT FindValue(D3D12_COMPILER_CACHE_VALUE_KEY* pValueKey, D3D12_COMPILER_CACHE_TYPED_VALUE* pTypedValues, uint NumTypedValues, delegate* unmanaged[Stdcall]<nuint, void*, void*> pCallbackFunc, void* pContext)
+	public HRESULT FindValue(D3D12_COMPILER_CACHE_VALUE_KEY* pValueKey, D3D12_COMPILER_CACHE_TYPED_VALUE* pTypedValues, uint NumTypedValues, delegate* unmanaged<nuint, void*, void*> pCallbackFunc, void* pContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_CACHE_VALUE_KEY*, D3D12_COMPILER_CACHE_TYPED_VALUE*, uint, delegate* unmanaged[Stdcall]<nuint, void*, void*>, void*, int>)(lpVtbl[7]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pValueKey, pTypedValues, NumTypedValues, pCallbackFunc, pContext);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12CompilerCacheSession*, D3D12_COMPILER_CACHE_VALUE_KEY*, D3D12_COMPILER_CACHE_TYPED_VALUE*, uint, delegate* unmanaged<nuint, void*, void*>, void*, int>)(lpVtbl[7]))((ID3D12CompilerCacheSession*)Unsafe.AsPointer(ref this), pValueKey, pTypedValues, NumTypedValues, pCallbackFunc, pContext);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CompilerCacheSession::GetApplicationDesc"]/*' />
@@ -156,13 +156,13 @@ public unsafe partial struct ID3D12CompilerCacheSession : ID3D12CompilerCacheSes
 		HRESULT FindGroup(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pGroupVersion);
 
 		[VtblIndex(5)]
-		HRESULT FindGroupValueKeys(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, delegate* unmanaged[Stdcall]<D3D12_COMPILER_CACHE_VALUE_KEY*, void*, void> CallbackFunc, void* pContext);
+		HRESULT FindGroupValueKeys(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, delegate* unmanaged<D3D12_COMPILER_CACHE_VALUE_KEY*, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(6)]
-		HRESULT FindGroupValues(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, D3D12_COMPILER_VALUE_TYPE_FLAGS ValueTypeFlags, delegate* unmanaged[Stdcall]<uint, D3D12_COMPILER_CACHE_TYPED_CONST_VALUE*, void*, void> CallbackFunc, void* pContext);
+		HRESULT FindGroupValues(D3D12_COMPILER_CACHE_GROUP_KEY* pGroupKey, uint* pExpectedGroupVersion, D3D12_COMPILER_VALUE_TYPE_FLAGS ValueTypeFlags, delegate* unmanaged<uint, D3D12_COMPILER_CACHE_TYPED_CONST_VALUE*, void*, void> CallbackFunc, void* pContext);
 
 		[VtblIndex(7)]
-		HRESULT FindValue(D3D12_COMPILER_CACHE_VALUE_KEY* pValueKey, D3D12_COMPILER_CACHE_TYPED_VALUE* pTypedValues, uint NumTypedValues, delegate* unmanaged[Stdcall]<nuint, void*, void*> pCallbackFunc, void* pContext);
+		HRESULT FindValue(D3D12_COMPILER_CACHE_VALUE_KEY* pValueKey, D3D12_COMPILER_CACHE_TYPED_VALUE* pTypedValues, uint NumTypedValues, delegate* unmanaged<nuint, void*, void*> pCallbackFunc, void* pContext);
 
 		[VtblIndex(8)]
 		D3D12_APPLICATION_DESC* GetApplicationDesc();

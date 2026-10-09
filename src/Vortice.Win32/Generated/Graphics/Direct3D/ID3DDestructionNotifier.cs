@@ -73,9 +73,9 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::RegisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HRESULT RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID)
+	public HRESULT RegisterDestructionCallback(delegate* unmanaged<void*, void> callbackFn, void* pData, uint* pCallbackID)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
+		return ((delegate* unmanaged[MemberFunction]<ID3DDestructionNotifier*, delegate* unmanaged<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::UnregisterDestructionCallback"]/*' />
@@ -89,7 +89,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HRESULT RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID);
+		HRESULT RegisterDestructionCallback(delegate* unmanaged<void*, void> callbackFn, void* pData, uint* pCallbackID);
 
 		[VtblIndex(4)]
 		HRESULT UnregisterDestructionCallback(uint callbackID);

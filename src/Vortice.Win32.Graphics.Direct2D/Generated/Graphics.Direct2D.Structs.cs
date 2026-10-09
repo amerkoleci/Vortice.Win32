@@ -490,10 +490,10 @@ public partial struct D2D1_PROPERTY_BINDING
 	public unsafe char* propertyName;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::setFunction"]/*' />
-	public unsafe delegate* unmanaged[Stdcall]<IUnknown*, byte*, uint, HRESULT> setFunction;
+	public unsafe delegate* unmanaged<IUnknown*, byte*, uint, HRESULT> setFunction;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::getFunction"]/*' />
-	public unsafe delegate* unmanaged[Stdcall]<IUnknown*, byte*, uint, uint*, HRESULT> getFunction;
+	public unsafe delegate* unmanaged<IUnknown*, byte*, uint, uint*, HRESULT> getFunction;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES"]/*' />
