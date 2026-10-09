@@ -2641,11 +2641,6 @@ public static class Program
                         writer.WriteLine();
                     }
 
-                    if (method.Name == "GetFrameLatencyWaitableObject")
-                    {
-
-                    }
-
                     // TODO: Handle inherit
                     string returnType = GetTypeNameWithPointerCheck(api, method.ReturnType);
 
@@ -2680,6 +2675,11 @@ public static class Program
                             parameterName == "FeatureSupportDataSize")
                         {
                             parameterType = "int";
+                        }
+                        else if (method.Name == "CheckInterfaceSupport" &&
+                            parameterName == "pUMDVersion")
+                        {
+                            parameterType = "LARGE_INTEGER*";
                         }
 
                         argumentBuilder

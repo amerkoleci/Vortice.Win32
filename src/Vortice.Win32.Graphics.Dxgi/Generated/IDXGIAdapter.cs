@@ -121,12 +121,12 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HRESULT CheckInterfaceSupport(Guid* InterfaceName, long* pUMDVersion)
+	public HRESULT CheckInterfaceSupport(Guid* InterfaceName, LARGE_INTEGER* pUMDVersion)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter*, Guid*, long*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
-	}
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter*, Guid*, LARGE_INTEGER*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+    }
 
-	public interface Interface : IDXGIObject.Interface
+    public interface Interface : IDXGIObject.Interface
 	{
 		[VtblIndex(7)]
 		HRESULT EnumOutputs(uint Output, IDXGIOutput** ppOutput);
@@ -135,7 +135,7 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface, INativeGuid
 		HRESULT GetDesc(DXGI_ADAPTER_DESC* pDesc);
 
 		[VtblIndex(9)]
-		HRESULT CheckInterfaceSupport(Guid* InterfaceName, long* pUMDVersion);
+		HRESULT CheckInterfaceSupport(Guid* InterfaceName, LARGE_INTEGER* pUMDVersion);
 	}
 }
 

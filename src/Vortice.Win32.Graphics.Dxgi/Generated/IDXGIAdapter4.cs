@@ -121,9 +121,9 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HRESULT CheckInterfaceSupport(Guid* InterfaceName, long* pUMDVersion)
+	public HRESULT CheckInterfaceSupport(Guid* InterfaceName, LARGE_INTEGER* pUMDVersion)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, Guid*, long*, int>)(lpVtbl[9]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter4*, Guid*, LARGE_INTEGER*, int>)(lpVtbl[9]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
