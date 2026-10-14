@@ -14,7 +14,13 @@ public partial struct DxcShaderHash
 {
 	public DXC_HASHFLAG Flags;
 
-	public unsafe fixed byte HashDigest[16];
+	public HashDigest__FixedBuffer HashDigest;
+
+	[InlineArray(16)]
+	public partial struct HashDigest__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <unmanaged>DxcBuffer</unmanaged>

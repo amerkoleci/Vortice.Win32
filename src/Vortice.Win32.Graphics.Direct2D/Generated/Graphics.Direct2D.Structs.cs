@@ -610,7 +610,13 @@ public partial struct D2D1_BLEND_DESCRIPTION
 	public D2D1_BLEND_OPERATION blendOperationAlpha;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendFactor"]/*' />
-	public unsafe fixed float blendFactor[4];
+	public blendFactor__FixedBuffer blendFactor;
+
+	[InlineArray(4)]
+	public partial struct blendFactor__FixedBuffer
+	{
+		public float e0;
+	}
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION"]/*' />

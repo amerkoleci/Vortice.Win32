@@ -1460,7 +1460,13 @@ public partial struct D3D11_SAMPLER_DESC
 	public D3D11_COMPARISON_FUNC ComparisonFunc;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SAMPLER_DESC::BorderColor"]/*' />
-	public unsafe fixed float BorderColor[4];
+	public BorderColor__FixedBuffer BorderColor;
+
+	[InlineArray(4)]
+	public partial struct BorderColor__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SAMPLER_DESC::MinLOD"]/*' />
 	public float MinLOD;
@@ -2286,7 +2292,13 @@ public partial struct D3D11_VIDEO_PROCESSOR_STREAM
 public partial struct D3D11_OMAC
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_OMAC::Omac"]/*' />
-	public unsafe fixed byte Omac[16];
+	public Omac__FixedBuffer Omac;
+
+	[InlineArray(16)]
+	public partial struct Omac__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_INPUT"]/*' />
@@ -3056,7 +3068,13 @@ public partial struct D3D11_KEY_EXCHANGE_HW_PROTECTION_INPUT_DATA
 	public uint HWProtectionDataSize;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_INPUT_DATA::pbInput"]/*' />
-	public unsafe fixed byte pbInput[4];
+	public pbInput__FixedBuffer pbInput;
+
+	[InlineArray(4)]
+	public partial struct pbInput__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA"]/*' />
@@ -3079,7 +3097,13 @@ public partial struct D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA
 	public ulong ExecutionTime;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::pbOutput"]/*' />
-	public unsafe fixed byte pbOutput[4];
+	public pbOutput__FixedBuffer pbOutput;
+
+	[InlineArray(4)]
+	public partial struct pbOutput__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA"]/*' />
@@ -4357,10 +4381,22 @@ public partial struct D3D11_COMPUTE_SHADER_TRACE_DESC
 	public ulong Invocation;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPUTE_SHADER_TRACE_DESC::ThreadIDInGroup"]/*' />
-	public unsafe fixed uint ThreadIDInGroup[3];
+	public ThreadIDInGroup__FixedBuffer ThreadIDInGroup;
+
+	[InlineArray(3)]
+	public partial struct ThreadIDInGroup__FixedBuffer
+	{
+		public uint e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPUTE_SHADER_TRACE_DESC::ThreadGroupID"]/*' />
-	public unsafe fixed uint ThreadGroupID[3];
+	public ThreadGroupID__FixedBuffer ThreadGroupID;
+
+	[InlineArray(3)]
+	public partial struct ThreadGroupID__FixedBuffer
+	{
+		public uint e0;
+	}
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC"]/*' />
@@ -4482,10 +4518,22 @@ public partial struct D3D11_TRACE_STATS
 	public uint NumTraceSteps;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::InputMask"]/*' />
-	public unsafe fixed byte InputMask[32];
+	public InputMask__FixedBuffer InputMask;
+
+	[InlineArray(32)]
+	public partial struct InputMask__FixedBuffer
+	{
+		public byte e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::OutputMask"]/*' />
-	public unsafe fixed byte OutputMask[32];
+	public OutputMask__FixedBuffer OutputMask;
+
+	[InlineArray(32)]
+	public partial struct OutputMask__FixedBuffer
+	{
+		public byte e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumTemps"]/*' />
 	public ushort NumTemps;
@@ -4494,31 +4542,79 @@ public partial struct D3D11_TRACE_STATS
 	public ushort MaxIndexableTempIndex;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::IndexableTempSize"]/*' />
-	public unsafe fixed ushort IndexableTempSize[4096];
+	public IndexableTempSize__FixedBuffer IndexableTempSize;
+
+	[InlineArray(4096)]
+	public partial struct IndexableTempSize__FixedBuffer
+	{
+		public ushort e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::ImmediateConstantBufferSize"]/*' />
 	public ushort ImmediateConstantBufferSize;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelPosition"]/*' />
-	public unsafe fixed uint PixelPosition[8];
+	public PixelPosition__FixedBuffer PixelPosition;
+
+	[InlineArray(8)]
+	public partial struct PixelPosition__FixedBuffer
+	{
+		public uint e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMask"]/*' />
-	public unsafe fixed ulong PixelCoverageMask[4];
+	public PixelCoverageMask__FixedBuffer PixelCoverageMask;
+
+	[InlineArray(4)]
+	public partial struct PixelCoverageMask__FixedBuffer
+	{
+		public ulong e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelDiscardedMask"]/*' />
-	public unsafe fixed ulong PixelDiscardedMask[4];
+	public PixelDiscardedMask__FixedBuffer PixelDiscardedMask;
+
+	[InlineArray(4)]
+	public partial struct PixelDiscardedMask__FixedBuffer
+	{
+		public ulong e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterShader"]/*' />
-	public unsafe fixed ulong PixelCoverageMaskAfterShader[4];
+	public PixelCoverageMaskAfterShader__FixedBuffer PixelCoverageMaskAfterShader;
+
+	[InlineArray(4)]
+	public partial struct PixelCoverageMaskAfterShader__FixedBuffer
+	{
+		public ulong e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMask"]/*' />
-	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMask[4];
+	public PixelCoverageMaskAfterA2CSampleMask__FixedBuffer PixelCoverageMaskAfterA2CSampleMask;
+
+	[InlineArray(4)]
+	public partial struct PixelCoverageMaskAfterA2CSampleMask__FixedBuffer
+	{
+		public ulong e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMaskDepth"]/*' />
-	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMaskDepth[4];
+	public PixelCoverageMaskAfterA2CSampleMaskDepth__FixedBuffer PixelCoverageMaskAfterA2CSampleMaskDepth;
+
+	[InlineArray(4)]
+	public partial struct PixelCoverageMaskAfterA2CSampleMaskDepth__FixedBuffer
+	{
+		public ulong e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMaskDepthStencil"]/*' />
-	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMaskDepthStencil[4];
+	public PixelCoverageMaskAfterA2CSampleMaskDepthStencil__FixedBuffer PixelCoverageMaskAfterA2CSampleMaskDepthStencil;
+
+	[InlineArray(4)]
+	public partial struct PixelCoverageMaskAfterA2CSampleMaskDepthStencil__FixedBuffer
+	{
+		public ulong e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsDepth"]/*' />
 	public Bool32 PSOutputsDepth;
@@ -4533,10 +4629,22 @@ public partial struct D3D11_TRACE_STATS
 	public Bool32 GSInputsPrimitiveID;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::HSOutputPatchConstantMask"]/*' />
-	public unsafe fixed byte HSOutputPatchConstantMask[32];
+	public HSOutputPatchConstantMask__FixedBuffer HSOutputPatchConstantMask;
+
+	[InlineArray(32)]
+	public partial struct HSOutputPatchConstantMask__FixedBuffer
+	{
+		public byte e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::DSInputPatchConstantMask"]/*' />
-	public unsafe fixed byte DSInputPatchConstantMask[32];
+	public DSInputPatchConstantMask__FixedBuffer DSInputPatchConstantMask;
+
+	[InlineArray(32)]
+	public partial struct DSInputPatchConstantMask__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE"]/*' />
@@ -4544,7 +4652,13 @@ public partial struct D3D11_TRACE_STATS
 public partial struct D3D11_TRACE_VALUE
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE::Bits"]/*' />
-	public unsafe fixed uint Bits[4];
+	public Bits__FixedBuffer Bits;
+
+	[InlineArray(4)]
+	public partial struct Bits__FixedBuffer
+	{
+		public uint e0;
+	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE::ValidMask"]/*' />
 	public byte ValidMask;
@@ -4582,7 +4696,7 @@ public partial struct D3D11_TRACE_REGISTER
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			return MemoryMarshal.CreateSpan(ref Anonymous.Index2D[0], 2);
+			return Anonymous.Index2D;
 		}
 	}
 
@@ -4595,7 +4709,13 @@ public partial struct D3D11_TRACE_REGISTER
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index2D"]/*' />
 		[FieldOffset(0)]
-		public unsafe fixed ushort Index2D[2];
+		public Index2D__FixedBuffer Index2D;
+
+		[InlineArray(2)]
+		public partial struct Index2D__FixedBuffer
+		{
+			public ushort e0;
+		}
 	}
 }
 

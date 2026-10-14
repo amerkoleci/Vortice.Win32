@@ -20,7 +20,13 @@ public partial struct D3D12_VERSION_NUMBER
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSION_NUMBER::VersionParts"]/*' />
 	[FieldOffset(0)]
-	public unsafe fixed ushort VersionParts[4];
+	public VersionParts__FixedBuffer VersionParts;
+
+	[InlineArray(4)]
+	public partial struct VersionParts__FixedBuffer
+	{
+		public ushort e0;
+	}
 }
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_DESC</unmanaged>
@@ -1453,7 +1459,7 @@ public partial struct D3D12_CLEAR_VALUE
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			return MemoryMarshal.CreateSpan(ref Anonymous.Color[0], 4);
+			return Anonymous.Color;
 		}
 	}
 
@@ -1472,7 +1478,13 @@ public partial struct D3D12_CLEAR_VALUE
 	{
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Color"]/*' />
 		[FieldOffset(0)]
-		public unsafe fixed float Color[4];
+		public Color__FixedBuffer Color;
+
+		[InlineArray(4)]
+		public partial struct Color__FixedBuffer
+		{
+			public float e0;
+		}
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::DepthStencil"]/*' />
 		[FieldOffset(0)]
@@ -2230,7 +2242,13 @@ public partial struct D3D12_SAMPLER_DESC
 	public D3D12_COMPARISON_FUNC ComparisonFunc;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::BorderColor"]/*' />
-	public unsafe fixed float BorderColor[4];
+	public BorderColor__FixedBuffer BorderColor;
+
+	[InlineArray(4)]
+	public partial struct BorderColor__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MinLOD"]/*' />
 	public float MinLOD;
@@ -2282,7 +2300,7 @@ public partial struct D3D12_SAMPLER_DESC2
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			return MemoryMarshal.CreateSpan(ref Anonymous.FloatBorderColor[0], 4);
+			return Anonymous.FloatBorderColor;
 		}
 	}
 
@@ -2292,7 +2310,7 @@ public partial struct D3D12_SAMPLER_DESC2
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-			return MemoryMarshal.CreateSpan(ref Anonymous.UintBorderColor[0], 4);
+			return Anonymous.UintBorderColor;
 		}
 	}
 
@@ -2301,11 +2319,23 @@ public partial struct D3D12_SAMPLER_DESC2
 	{
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::FloatBorderColor"]/*' />
 		[FieldOffset(0)]
-		public unsafe fixed float FloatBorderColor[4];
+		public FloatBorderColor__FixedBuffer FloatBorderColor;
+
+		[InlineArray(4)]
+		public partial struct FloatBorderColor__FixedBuffer
+		{
+			public float e0;
+		}
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::UintBorderColor"]/*' />
 		[FieldOffset(0)]
-		public unsafe fixed uint UintBorderColor[4];
+		public UintBorderColor__FixedBuffer UintBorderColor;
+
+		[InlineArray(4)]
+		public partial struct UintBorderColor__FixedBuffer
+		{
+			public uint e0;
+		}
 	}
 }
 
@@ -3892,7 +3922,13 @@ public partial struct D3D12_META_COMMAND_DESC
 public partial struct D3D12_PROGRAM_IDENTIFIER
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAM_IDENTIFIER::OpaqueData"]/*' />
-	public unsafe fixed ulong OpaqueData[4];
+	public OpaqueData__FixedBuffer OpaqueData;
+
+	[InlineArray(4)]
+	public partial struct OpaqueData__FixedBuffer
+	{
+		public ulong e0;
+	}
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_ID"]/*' />
@@ -4617,7 +4653,13 @@ public partial struct D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER
 	public Guid DriverOpaqueGUID;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER::DriverOpaqueVersioningData"]/*' />
-	public unsafe fixed byte DriverOpaqueVersioningData[16];
+	public DriverOpaqueVersioningData__FixedBuffer DriverOpaqueVersioningData;
+
+	[InlineArray(16)]
+	public partial struct DriverOpaqueVersioningData__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER"]/*' />
@@ -4713,7 +4755,13 @@ public partial struct D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_CUR
 public partial struct D3D12_RAYTRACING_INSTANCE_DESC
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::Transform"]/*' />
-	public unsafe fixed float Transform[12];
+	public Transform__FixedBuffer Transform;
+
+	[InlineArray(12)]
+	public partial struct Transform__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::_bitfield1"]/*' />
 	public uint _bitfield1;
@@ -5975,7 +6023,13 @@ public partial struct D3D12_REGISTER_TRIM_NOTIFICATION
 public partial struct D3D12_FEATURE_DATA_SHADERCACHE_ABI_SUPPORT
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADERCACHE_ABI_SUPPORT::szAdapterFamily"]/*' />
-	public unsafe fixed char szAdapterFamily[128];
+	public szAdapterFamily__FixedBuffer szAdapterFamily;
+
+	[InlineArray(128)]
+	public partial struct szAdapterFamily__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADERCACHE_ABI_SUPPORT::MinimumABISupportVersion"]/*' />
 	public ulong MinimumABISupportVersion;
@@ -6632,7 +6686,13 @@ public partial struct D3D12_PARAMETER_DESC
 public partial struct D3D12_ADAPTER_FAMILY
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ADAPTER_FAMILY::szAdapterFamily"]/*' />
-	public unsafe fixed char szAdapterFamily[128];
+	public szAdapterFamily__FixedBuffer szAdapterFamily;
+
+	[InlineArray(128)]
+	public partial struct szAdapterFamily__FixedBuffer
+	{
+		public char e0;
+	}
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPILER_DATABASE_PATH"]/*' />

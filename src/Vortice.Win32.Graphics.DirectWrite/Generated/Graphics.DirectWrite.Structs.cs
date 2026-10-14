@@ -16,7 +16,13 @@ public partial struct DWRITE_PANOSE
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE::values"]/*' />
 	[FieldOffset(0)]
-	public unsafe fixed byte values[10];
+	public values__FixedBuffer values;
+
+	[InlineArray(10)]
+	public partial struct values__FixedBuffer
+	{
+		public byte e0;
+	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE::familyKind"]/*' />
 	[FieldOffset(0)]

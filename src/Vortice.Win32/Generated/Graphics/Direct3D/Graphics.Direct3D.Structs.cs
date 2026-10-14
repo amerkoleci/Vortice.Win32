@@ -20,7 +20,13 @@ public partial struct D3D_VERSION_NUMBER
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_VERSION_NUMBER::VersionParts"]/*' />
 	[FieldOffset(0)]
-	public unsafe fixed ushort VersionParts[4];
+	public VersionParts__FixedBuffer VersionParts;
+
+	[InlineArray(4)]
+	public partial struct VersionParts__FixedBuffer
+	{
+		public ushort e0;
+	}
 }
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO"]/*' />
 /// <unmanaged>D3D_SHADER_MACRO</unmanaged>
@@ -49,7 +55,13 @@ public partial struct D3D_SHADER_CACHE_PSDB_PROPERTIES
 public partial struct D3D_SHADER_CACHE_COMPILER_PROPERTIES
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_COMPILER_PROPERTIES::szAdapterFamily"]/*' />
-	public unsafe fixed char szAdapterFamily[128];
+	public szAdapterFamily__FixedBuffer szAdapterFamily;
+
+	[InlineArray(128)]
+	public partial struct szAdapterFamily__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CACHE_COMPILER_PROPERTIES::MinimumABISupportVersion"]/*' />
 	public ulong MinimumABISupportVersion;

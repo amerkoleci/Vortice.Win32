@@ -124,9 +124,9 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface, INativeGuid
 	public HRESULT CheckInterfaceSupport(Guid* InterfaceName, LARGE_INTEGER* pUMDVersion)
 	{
 		return ((delegate* unmanaged[MemberFunction]<IDXGIAdapter*, Guid*, LARGE_INTEGER*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
-    }
+	}
 
-    public interface Interface : IDXGIObject.Interface
+	public interface Interface : IDXGIObject.Interface
 	{
 		[VtblIndex(7)]
 		HRESULT EnumOutputs(uint Output, IDXGIOutput** ppOutput);

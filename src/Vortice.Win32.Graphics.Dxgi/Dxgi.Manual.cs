@@ -12,10 +12,7 @@ public unsafe partial struct DXGI_ADAPTER_DESC
     /// <include file='Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
     public readonly string GetDescription()
     {
-        fixed (char* ptr = Description)
-        {
-            return GetString(ptr, 128) ?? string.Empty;
-        }
+        return GetUtf16Span(in Description[0], 128).GetString() ?? string.Empty;
     }
 }
 
@@ -24,10 +21,7 @@ public unsafe partial struct DXGI_ADAPTER_DESC1
     /// <include file='Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
     public readonly string GetDescription()
     {
-        fixed (char* ptr = Description)
-        {
-            return GetString(ptr, 128) ?? string.Empty;
-        }
+        return GetUtf16Span(in Description[0], 128).GetString() ?? string.Empty;
     }
 }
 
@@ -36,10 +30,7 @@ public unsafe partial struct DXGI_ADAPTER_DESC2
     /// <include file='Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
     public readonly string GetDescription()
     {
-        fixed (char* ptr = Description)
-        {
-            return GetString(ptr, 128) ?? string.Empty;
-        }
+        return GetUtf16Span(in Description[0], 128).GetString() ?? string.Empty;
     }
 }
 

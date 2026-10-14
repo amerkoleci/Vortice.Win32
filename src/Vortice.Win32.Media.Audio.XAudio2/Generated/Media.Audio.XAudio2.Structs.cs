@@ -17,10 +17,22 @@ public partial struct XAPO_REGISTRATION_PROPERTIES
 	public Guid clsid;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::FriendlyName"]/*' />
-	public unsafe fixed char FriendlyName[256];
+	public FriendlyName__FixedBuffer FriendlyName;
+
+	[InlineArray(256)]
+	public partial struct FriendlyName__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::CopyrightInfo"]/*' />
-	public unsafe fixed char CopyrightInfo[256];
+	public CopyrightInfo__FixedBuffer CopyrightInfo;
+
+	[InlineArray(256)]
+	public partial struct CopyrightInfo__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::MajorVersion"]/*' />
 	public uint MajorVersion;
@@ -513,7 +525,13 @@ public partial struct HrtfPosition
 public partial struct HrtfOrientation
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="HrtfOrientation::element"]/*' />
-	public unsafe fixed float element[9];
+	public element__FixedBuffer element;
+
+	[InlineArray(9)]
+	public partial struct element__FixedBuffer
+	{
+		public float e0;
+	}
 }
 
 /// <include file='../XAudio2.xml' path='doc/member[@name="HrtfDirectivity"]/*' />

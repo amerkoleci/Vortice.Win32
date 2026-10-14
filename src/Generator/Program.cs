@@ -2314,37 +2314,24 @@ public static class Program
 
                 if (fieldTypeName == "Array")
                 {
-                    bool canUseFixed = false;
-                    if (field.Type.Child.Kind == "Native")
-                    {
-                        canUseFixed = true;
-                    }
-
                     fieldTypeName = GetTypeName(field.Type.Child);
                     fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
 
-                    if (canUseFixed)
+                    if (isUnion)
                     {
-                        if (isUnion)
-                        {
-                            writer.WriteLine("[FieldOffset(0)]");
-                        }
-
-                        int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
-                        writer.WriteLine($"public unsafe fixed {fieldTypeName} {fieldValueName}[{arraySize}];");
+                        writer.WriteLine("[FieldOffset(0)]");
                     }
-                    else
+
+
+                    writer.WriteLine($"public {fieldValueName}__FixedBuffer {fieldValueName};");
+                    writer.WriteLine();
+
+                    int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
+
+                    writer.WriteLine($"[InlineArray({arraySize})]");
+                    using (writer.PushBlock($"public partial struct {fieldValueName}__FixedBuffer"))
                     {
-                        writer.WriteLine($"public {fieldValueName}__FixedBuffer {fieldValueName};");
-                        writer.WriteLine();
-
-                        int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
-
-                        writer.WriteLine($"[InlineArray({arraySize})]");
-                        using (writer.PushBlock($"public partial struct {fieldValueName}__FixedBuffer"))
-                        {
-                            writer.WriteLine($"public {fieldTypeName} e0;");
-                        }
+                        writer.WriteLine($"public {fieldTypeName} e0;");
                     }
                 }
                 else
@@ -2439,7 +2426,7 @@ public static class Program
                                     writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                                     using (writer.PushBlock("get"))
                                     {
-                                        writer.WriteLine($"return MemoryMarshal.CreateSpan(ref {parentMemberAccess.Name}.{fieldName}[0], {field.Type.Shape.Size});");
+                                        writer.WriteLine($"return {parentMemberAccess.Name}.{fieldName};");
                                     }
                                 }
                             }

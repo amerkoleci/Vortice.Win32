@@ -45,7 +45,13 @@ public partial struct DXGI_MAPPED_RECT
 public partial struct DXGI_ADAPTER_DESC
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
-	public unsafe fixed char Description[128];
+	public Description__FixedBuffer Description;
+
+	[InlineArray(128)]
+	public partial struct Description__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
 	public uint VendorId;
@@ -77,7 +83,13 @@ public partial struct DXGI_ADAPTER_DESC
 public partial struct DXGI_OUTPUT_DESC
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
-	public unsafe fixed char DeviceName[32];
+	public DeviceName__FixedBuffer DeviceName;
+
+	[InlineArray(32)]
+	public partial struct DeviceName__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
 	public Rect DesktopCoordinates;
@@ -151,7 +163,13 @@ public partial struct DXGI_SWAP_CHAIN_DESC
 public partial struct DXGI_ADAPTER_DESC1
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
-	public unsafe fixed char Description[128];
+	public Description__FixedBuffer Description;
+
+	[InlineArray(128)]
+	public partial struct Description__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::VendorId"]/*' />
 	public uint VendorId;
@@ -186,10 +204,22 @@ public partial struct DXGI_ADAPTER_DESC1
 public partial struct DXGI_DISPLAY_COLOR_SPACE
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::PrimaryCoordinates"]/*' />
-	public unsafe fixed float PrimaryCoordinates[16];
+	public PrimaryCoordinates__FixedBuffer PrimaryCoordinates;
+
+	[InlineArray(16)]
+	public partial struct PrimaryCoordinates__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
-	public unsafe fixed float WhitePoints[32];
+	public WhitePoints__FixedBuffer WhitePoints;
+
+	[InlineArray(32)]
+	public partial struct WhitePoints__FixedBuffer
+	{
+		public float e0;
+	}
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
@@ -380,7 +410,13 @@ public partial struct DXGI_PRESENT_PARAMETERS
 public partial struct DXGI_ADAPTER_DESC2
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
-	public unsafe fixed char Description[128];
+	public Description__FixedBuffer Description;
+
+	[InlineArray(128)]
+	public partial struct Description__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::VendorId"]/*' />
 	public uint VendorId;
@@ -472,16 +508,40 @@ public partial struct DXGI_QUERY_VIDEO_MEMORY_INFO
 public partial struct DXGI_HDR_METADATA_HDR10
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
-	public unsafe fixed ushort RedPrimary[2];
+	public RedPrimary__FixedBuffer RedPrimary;
+
+	[InlineArray(2)]
+	public partial struct RedPrimary__FixedBuffer
+	{
+		public ushort e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::GreenPrimary"]/*' />
-	public unsafe fixed ushort GreenPrimary[2];
+	public GreenPrimary__FixedBuffer GreenPrimary;
+
+	[InlineArray(2)]
+	public partial struct GreenPrimary__FixedBuffer
+	{
+		public ushort e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::BluePrimary"]/*' />
-	public unsafe fixed ushort BluePrimary[2];
+	public BluePrimary__FixedBuffer BluePrimary;
+
+	[InlineArray(2)]
+	public partial struct BluePrimary__FixedBuffer
+	{
+		public ushort e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::WhitePoint"]/*' />
-	public unsafe fixed ushort WhitePoint[2];
+	public WhitePoint__FixedBuffer WhitePoint;
+
+	[InlineArray(2)]
+	public partial struct WhitePoint__FixedBuffer
+	{
+		public ushort e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxMasteringLuminance"]/*' />
 	public uint MaxMasteringLuminance;
@@ -501,7 +561,13 @@ public partial struct DXGI_HDR_METADATA_HDR10
 public partial struct DXGI_HDR_METADATA_HDR10PLUS
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
-	public unsafe fixed byte Data[72];
+	public Data__FixedBuffer Data;
+
+	[InlineArray(72)]
+	public partial struct Data__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
@@ -509,7 +575,13 @@ public partial struct DXGI_HDR_METADATA_HDR10PLUS
 public partial struct DXGI_ADAPTER_DESC3
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
-	public unsafe fixed char Description[128];
+	public Description__FixedBuffer Description;
+
+	[InlineArray(128)]
+	public partial struct Description__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
 	public uint VendorId;
@@ -550,7 +622,13 @@ public partial struct DXGI_ADAPTER_DESC3
 public partial struct DXGI_OUTPUT_DESC1
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
-	public unsafe fixed char DeviceName[32];
+	public DeviceName__FixedBuffer DeviceName;
+
+	[InlineArray(32)]
+	public partial struct DeviceName__FixedBuffer
+	{
+		public char e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
 	public Rect DesktopCoordinates;
@@ -571,16 +649,40 @@ public partial struct DXGI_OUTPUT_DESC1
 	public DXGI_COLOR_SPACE_TYPE ColorSpace;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::RedPrimary"]/*' />
-	public unsafe fixed float RedPrimary[2];
+	public RedPrimary__FixedBuffer RedPrimary;
+
+	[InlineArray(2)]
+	public partial struct RedPrimary__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::GreenPrimary"]/*' />
-	public unsafe fixed float GreenPrimary[2];
+	public GreenPrimary__FixedBuffer GreenPrimary;
+
+	[InlineArray(2)]
+	public partial struct GreenPrimary__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BluePrimary"]/*' />
-	public unsafe fixed float BluePrimary[2];
+	public BluePrimary__FixedBuffer BluePrimary;
+
+	[InlineArray(2)]
+	public partial struct BluePrimary__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::WhitePoint"]/*' />
-	public unsafe fixed float WhitePoint[2];
+	public WhitePoint__FixedBuffer WhitePoint;
+
+	[InlineArray(2)]
+	public partial struct WhitePoint__FixedBuffer
+	{
+		public float e0;
+	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MinLuminance"]/*' />
 	public float MinLuminance;

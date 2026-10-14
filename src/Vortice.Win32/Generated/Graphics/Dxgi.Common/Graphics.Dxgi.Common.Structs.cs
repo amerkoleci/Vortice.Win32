@@ -82,7 +82,13 @@ public partial struct DXGI_GAMMA_CONTROL_CAPABILITIES
 	public uint NumGammaControlPoints;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ControlPointPositions"]/*' />
-	public unsafe fixed float ControlPointPositions[1025];
+	public ControlPointPositions__FixedBuffer ControlPointPositions;
+
+	[InlineArray(1025)]
+	public partial struct ControlPointPositions__FixedBuffer
+	{
+		public float e0;
+	}
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC"]/*' />
@@ -113,10 +119,22 @@ public partial struct DXGI_MODE_DESC
 public partial struct DXGI_JPEG_DC_HUFFMAN_TABLE
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeCounts"]/*' />
-	public unsafe fixed byte CodeCounts[12];
+	public CodeCounts__FixedBuffer CodeCounts;
+
+	[InlineArray(12)]
+	public partial struct CodeCounts__FixedBuffer
+	{
+		public byte e0;
+	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeValues"]/*' />
-	public unsafe fixed byte CodeValues[12];
+	public CodeValues__FixedBuffer CodeValues;
+
+	[InlineArray(12)]
+	public partial struct CodeValues__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE"]/*' />
@@ -124,10 +142,22 @@ public partial struct DXGI_JPEG_DC_HUFFMAN_TABLE
 public partial struct DXGI_JPEG_AC_HUFFMAN_TABLE
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeCounts"]/*' />
-	public unsafe fixed byte CodeCounts[16];
+	public CodeCounts__FixedBuffer CodeCounts;
+
+	[InlineArray(16)]
+	public partial struct CodeCounts__FixedBuffer
+	{
+		public byte e0;
+	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeValues"]/*' />
-	public unsafe fixed byte CodeValues[162];
+	public CodeValues__FixedBuffer CodeValues;
+
+	[InlineArray(162)]
+	public partial struct CodeValues__FixedBuffer
+	{
+		public byte e0;
+	}
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE"]/*' />
@@ -135,5 +165,11 @@ public partial struct DXGI_JPEG_AC_HUFFMAN_TABLE
 public partial struct DXGI_JPEG_QUANTIZATION_TABLE
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE::Elements"]/*' />
-	public unsafe fixed byte Elements[64];
+	public Elements__FixedBuffer Elements;
+
+	[InlineArray(64)]
+	public partial struct Elements__FixedBuffer
+	{
+		public byte e0;
+	}
 }
